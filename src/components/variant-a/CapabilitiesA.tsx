@@ -10,14 +10,12 @@ const CAPABILITY_ICONS: readonly LucideIcon[] = [HousePlus, Hammer, PaintRoller,
 
 export function CapabilitiesA(): ReactElement {
   return (
-    <section id="services" aria-labelledby="capabilities-a-heading" className="relative bg-white">
-      <div
-        aria-hidden="true"
-        className="absolute top-0 right-8 bottom-0 hidden w-px bg-action/60 xl:block"
-      >
-        <span className="absolute top-16 -left-[5px] size-2.5 border border-action bg-white" />
-        <span className="absolute bottom-16 -left-[5px] size-2.5 bg-action" />
-      </div>
+    <section id="services" aria-labelledby="capabilities-a-heading" className="a-capabilities relative bg-white">
+      <svg className="a-capability-route" viewBox="0 0 1536 864" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M1212 40H1536M1504 40V286M1416 505V864" />
+        <rect x="1202" y="30" width="20" height="20" />
+        <rect x="1406" y="784" width="20" height="20" />
+      </svg>
 
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-14 lg:py-24">
         <Reveal className="lg:col-span-5">

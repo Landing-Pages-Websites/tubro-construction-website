@@ -7,7 +7,7 @@ import { Reveal } from "@/components/shared/Reveal";
 
 export function GalleryA(): ReactElement {
   return (
-    <section id="work" aria-labelledby="work-a-heading" className="on-dark bg-carbon text-white">
+    <section id="work" aria-labelledby="work-a-heading" className="a-gallery on-dark bg-carbon text-white">
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:grid lg:grid-cols-12 lg:items-center lg:gap-12 lg:py-24">
         <Reveal className="lg:col-span-4">
           <h2
