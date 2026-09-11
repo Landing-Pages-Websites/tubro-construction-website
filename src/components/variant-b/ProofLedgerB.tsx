@@ -10,7 +10,7 @@ export function ProofLedgerB(): ReactElement {
       <div className={styles.proofInner}>
         <h2 id="proof-b-heading" className={styles.proofHeading}><span>A straightforward</span>{" "}<span>foundation for</span>{" "}<span>a major</span>{" "}<span>investment.</span></h2>
         <ol className={styles.ledger}>
-          {PROOF.points.map((point, index) => <li key={point} style={{ "--step": index } as CSSProperties}><span className={styles.ledgerNumber}>0{index + 1}</span><span className={styles.ledgerText}>{point}</span></li>)}
+          {PROOF.points.map((point, index) => <li key={point} style={{ "--step": index } as CSSProperties}><span className={styles.ledgerNumber}>0{index + 1}</span><span data-motion="copy" className={styles.ledgerText}>{point}</span></li>)}
         </ol>
         <p className={styles.proofCaption}><span>{PROOF.captionLead}</span><br /><span>{PROOF.captionAccent} {PROOF.captionTail}</span></p>
       </div>

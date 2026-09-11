@@ -39,42 +39,27 @@ body {
   outline-color: #fff;
 }
 
-/* Scroll reveal — only hides content when scripting is available, with an
-   animation fallback so content can never stay hidden */
-@media (scripting: enabled) {
-  .reveal {
-    opacity: 0;
-    transform: translateY(16px);
-    animation: reveal-fallback 300ms ease-out 900ms forwards;
+/* Motion is progressive enhancement: static content is always readable. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-motion-variant] a svg, [data-motion-variant] button svg {
+    transition: translate 180ms cubic-bezier(.16,1,.3,1);
   }
+  [data-motion-variant] a:is(:hover,:focus-visible) .lucide-arrow-right,
+  [data-motion-variant] button:is(:hover,:focus-visible) .lucide-arrow-right { translate: 3px 0; }
+  [data-motion-variant] button:active { translate: 0 1px; }
 }
-
-.reveal {
-  transition:
-    opacity 220ms ease-out,
-    transform 220ms ease-out;
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: none;
-  animation: none;
-}
-
-@keyframes reveal-fallback {
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
+  html { scroll-behavior: auto; }
+  [data-motion-variant] *, [data-motion-variant] *::before, [data-motion-variant] *::after {
+    animation: none !important; transition: none !important;
   }
 }
+
+/* Survey marks are temporary; the finished photography stays unobstructed. */
+.motion-survey { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; z-index: 1; }
+.motion-survey path { fill: none; stroke: #e8ffe9; stroke-width: 1.5; vector-effect: non-scaling-stroke; opacity: 0; }
+#hero-a-heading > span { display: block; }
+[data-motion='register'] { transform-box: fill-box; transform-origin: center; }
+.a-ruler i { transform-origin: left; }
+
+#hero [data-motion='photo'] { overflow: hidden; }

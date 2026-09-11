@@ -53,7 +53,7 @@ export function CapabilitiesB(): ReactElement {
           </Reveal>
 
           <Reveal className={styles.collage} delayMs={80}>
-            <div className={styles.collageGrid}>
+            <div data-motion="photo" className={styles.collageGrid}>
               <figure className="relative col-span-12 lg:col-span-8">
                 <div className="relative aspect-4/3">
                   <Image

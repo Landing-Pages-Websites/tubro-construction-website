@@ -1,3 +1,4 @@
+import { SiteMotion } from "@/components/shared/SiteMotion";
 import type { Metadata } from "next";
 import type { ReactElement } from "react";
 import "./variant-a.css";
@@ -20,7 +21,8 @@ export const metadata: Metadata = {
 
 export default function VariantAPage(): ReactElement {
   return (
-    <div className="variant-a">
+    <div className="variant-a" data-motion-variant="a">
+      <SiteMotion variant="a" />
       <HeaderA />
       <main>
         <HeroA />

@@ -27,7 +27,7 @@ export function ProcessB(): ReactElement {
             {PROCESS.steps.map((step) => (
               <li
                 key={step.number}
-                className={styles.step}
+                data-motion="step" className={styles.step}
               >
                 <RegMark className={styles.stepMark} />
                 <span className="self-center font-fjalla text-[44px] leading-none text-action sm:text-[52px]">
