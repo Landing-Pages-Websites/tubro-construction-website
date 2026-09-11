@@ -11,6 +11,7 @@ import {
   Phone,
 } from "lucide-react";
 import type { ReactElement } from "react";
+import styles from "./LowerB.module.css";
 import { BRAND, ESTIMATE, PROJECT_TYPES } from "@/lib/content";
 import { useEstimateForm } from "@/hooks/useEstimateForm";
 import { EstimateField } from "@/components/shared/EstimateField";
@@ -25,7 +26,7 @@ export function EstimateB(): ReactElement {
   const form = useEstimateForm("variant-b");
 
   return (
-    <section id="estimate" aria-labelledby="estimate-b-heading" className="bg-mineral">
+    <section id="estimate" aria-labelledby="estimate-b-heading" className={styles.estimate}>
       <div className="border-y border-ink/20">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-2.5 sm:px-8">
           <p className="font-fjalla text-xs tracking-[0.14em] text-ink uppercase">
@@ -38,8 +39,8 @@ export function EstimateB(): ReactElement {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-14 lg:py-20">
-        <div className="lg:col-span-5">
+      <div className={styles.estimateInner}>
+        <div className={styles.estimateCopy}>
           <p className="font-fjalla text-xs tracking-[0.14em] uppercase">
             <span className="text-action">07</span>
             <span className="text-ink/60"> / Estimate</span>
@@ -105,7 +106,7 @@ export function EstimateB(): ReactElement {
           </ul>
         </div>
 
-        <div className="mt-12 border-ink/20 lg:col-span-7 lg:mt-0 lg:border-l lg:pl-14">
+        <div className={styles.estimateForm}>
           <form ref={form.formRef} onSubmit={form.handleSubmit} noValidate>
             <fieldset>
               <legend className="w-full">
@@ -116,8 +117,8 @@ export function EstimateB(): ReactElement {
                   <span aria-hidden="true" className="h-px flex-1 bg-ink/20" />
                 </span>
               </legend>
-              <div className="mt-4 space-y-2.5">
-                {PROJECT_TYPES.map((type, index) => (
+              <div className={styles.projectTypes}>
+                {PROJECT_TYPES.map((type) => (
                   <label
                     key={type}
                     className="flex min-h-13 cursor-pointer items-center gap-4 border-2 border-ink/15 bg-white px-4 py-3 transition-colors has-checked:border-action has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-action"
@@ -126,14 +127,14 @@ export function EstimateB(): ReactElement {
                       type="radio"
                       name="projectType"
                       value={type}
-                      defaultChecked={index === 0}
+
                       className="peer sr-only"
                     />
                     <span
                       aria-hidden="true"
                       className="inline-flex size-6 shrink-0 items-center justify-center rounded-full border-2 border-ink/30 peer-checked:border-action peer-checked:bg-action"
                     >
-                      <Check className="size-3.5 text-white" />
+                      <Check className={`size-3.5 text-white ${styles.projectCheck}`} />
                     </span>
                     <span className="font-poppins text-[15px] text-ink">{type}</span>
                   </label>
@@ -204,7 +205,7 @@ export function EstimateB(): ReactElement {
               <p className="flex items-center gap-2.5 font-poppins text-xs text-ink/70">
                 <MoveRight className="size-4 shrink-0 text-action" aria-hidden="true" />
                 <span>
-                  Form leads route to{" "}
+                  Send your project details to{" "}
                   <span className="font-semibold text-ink">{BRAND.email}</span>
                 </span>
               </p>

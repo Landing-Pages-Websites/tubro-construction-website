@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight, Crop, Target } from "lucide-react";
 import type { ReactElement } from "react";
+import styles from "./LowerB.module.css";
 import { WORK } from "@/lib/content";
 import { IMAGES } from "@/lib/images";
 import { Reveal } from "@/components/shared/Reveal";
@@ -14,15 +15,15 @@ const CONTACT_SHEET = [
 
 export function GalleryB(): ReactElement {
   return (
-    <section id="work" aria-labelledby="work-b-heading" className="on-dark bg-carbon text-white">
-      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:grid lg:grid-cols-12 lg:items-center lg:gap-12 lg:py-24">
-        <Reveal className="lg:col-span-4">
+    <section id="work" aria-labelledby="work-b-heading" className={`on-dark ${styles.gallery}`}>
+      <div className={styles.galleryInner}>
+        <Reveal className={styles.galleryCopy}>
           <p className="font-fjalla text-xl tracking-[0.1em] text-action">06</p>
           <h2
             id="work-b-heading"
             className="mt-4 max-w-sm font-fjalla text-[32px] leading-[1.05] uppercase lg:text-[42px]"
           >
-            {WORK.heading}
+            <span>See what we&apos;ve built</span>{" "}<span>across western</span>{" "}<span>Washington.</span>
           </h2>
           <p className="mt-5 max-w-xs font-poppins text-sm leading-relaxed text-white/75">
             {WORK.body}
@@ -46,8 +47,8 @@ export function GalleryB(): ReactElement {
           </ul>
         </Reveal>
 
-        <Reveal className="mt-12 lg:col-span-8 lg:mt-0" delayMs={80}>
-          <div id="work-gallery" tabIndex={-1} className="grid gap-5 sm:grid-cols-2">
+        <Reveal className={styles.galleryPhotos} delayMs={80}>
+          <div id="work-gallery" tabIndex={-1} className={styles.contactSheet}>
             {CONTACT_SHEET.map((photo) => (
               <figure key={photo.alt} className="bg-white p-2 pb-0 shadow-md">
                 <div className="relative aspect-4/3">

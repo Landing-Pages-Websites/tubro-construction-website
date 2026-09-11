@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactElement } from "react";
+import { Anton } from "next/font/google";
 import { UtilityNav } from "@/components/shared/UtilityNav";
 import { SiteFooter } from "@/components/shared/SiteFooter";
 import { HeroB } from "@/components/variant-b/HeroB";
@@ -11,6 +12,8 @@ import { GalleryB } from "@/components/variant-b/GalleryB";
 import { EstimateB } from "@/components/variant-b/EstimateB";
 import { HERO } from "@/lib/content";
 
+const display = Anton({ subsets: ["latin"], weight: "400", variable: "--font-b-display", display: "swap" });
+
 export const metadata: Metadata = {
   title: "Tubro Construction | Craft Ledger — Remodeling in King & Pierce Counties",
   description: HERO.body,
@@ -19,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function VariantBPage(): ReactElement {
   return (
-    <>
+    <div className={display.variable}>
       <UtilityNav variant="b" />
       <main>
         <HeroB />
@@ -31,6 +34,6 @@ export default function VariantBPage(): ReactElement {
         <EstimateB />
       </main>
       <SiteFooter />
-    </>
+    </div>
   );
 }

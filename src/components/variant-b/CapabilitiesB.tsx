@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
 import type { ReactElement } from "react";
+import styles from "./LowerB.module.css";
 import { CAPABILITIES } from "@/lib/content";
 import { IMAGES } from "@/lib/images";
 import { Reveal } from "@/components/shared/Reveal";
@@ -15,29 +16,22 @@ const PHOTO_TAGS = {
 
 export function CapabilitiesB(): ReactElement {
   return (
-    <section id="services" aria-labelledby="capabilities-b-heading" className="relative bg-mineral">
-      <div
-        aria-hidden="true"
-        className="absolute inset-y-16 right-4 hidden flex-col items-center justify-center gap-2 xl:flex"
-      >
-        {Array.from({ length: DASH_COUNT }, (_, index) => (
-          <span key={index} className="h-2.5 w-px bg-action/60" />
-        ))}
-      </div>
+    <section id="services" aria-labelledby="capabilities-b-heading" className={styles.capabilities}>
+      <div aria-hidden="true" className={styles.capSurvey}><span>04</span></div>
 
-      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
+      <div className={styles.capInner}>
         <p className="font-fjalla text-xs tracking-[0.14em] uppercase">
           <span className="text-action">04</span>
           <span className="text-ink/60"> / Capabilities</span>
         </p>
 
-        <div className="mt-6 lg:grid lg:grid-cols-12 lg:gap-14">
-          <Reveal className="lg:col-span-5">
+        <div className={styles.capGrid}>
+          <Reveal className={styles.capCopy}>
             <h2
               id="capabilities-b-heading"
               className="max-w-md font-fjalla text-[34px] leading-[1.02] text-ink uppercase lg:text-[44px]"
             >
-              {CAPABILITIES.heading}
+              <span>One experienced team</span>{" "}<span>for the whole project.</span>
             </h2>
             <p className="mt-5 max-w-md font-poppins text-sm leading-relaxed text-ink/80">
               {CAPABILITIES.body}
@@ -58,8 +52,8 @@ export function CapabilitiesB(): ReactElement {
             </ul>
           </Reveal>
 
-          <Reveal className="relative mt-12 lg:col-span-7 lg:mt-0" delayMs={80}>
-            <div className="grid grid-cols-12 gap-4">
+          <Reveal className={styles.collage} delayMs={80}>
+            <div className={styles.collageGrid}>
               <figure className="relative col-span-12 lg:col-span-8">
                 <div className="relative aspect-4/3">
                   <Image
