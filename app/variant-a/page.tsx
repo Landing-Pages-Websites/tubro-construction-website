@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import type { ReactElement } from "react";
-import { UtilityNav } from "@/components/shared/UtilityNav";
+import "./variant-a.css";
 import { SiteFooter } from "@/components/shared/SiteFooter";
 import { HeroA } from "@/components/variant-a/HeroA";
+import { HeaderA } from "@/components/variant-a/HeaderA";
 import { ProofRailA } from "@/components/variant-a/ProofRailA";
 import { RoomStoriesA } from "@/components/variant-a/RoomStoriesA";
 import { CapabilitiesA } from "@/components/variant-a/CapabilitiesA";
@@ -19,8 +20,8 @@ export const metadata: Metadata = {
 
 export default function VariantAPage(): ReactElement {
   return (
-    <>
-      <UtilityNav variant="a" />
+    <div className="variant-a">
+      <HeaderA />
       <main>
         <HeroA />
         <ProofRailA />
@@ -31,6 +32,6 @@ export default function VariantAPage(): ReactElement {
         <EstimateA />
       </main>
       <SiteFooter />
-    </>
+    </div>
   );
 }

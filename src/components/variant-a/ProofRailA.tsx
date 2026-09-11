@@ -4,7 +4,7 @@ import { Reveal } from "@/components/shared/Reveal";
 
 export function ProofRailA(): ReactElement {
   return (
-    <section id="trust-bar" aria-labelledby="proof-a-heading" className="relative bg-plaster">
+    <section id="trust-bar" aria-labelledby="proof-a-heading" className="a-proof relative bg-plaster">
       <div className="mx-auto max-w-7xl items-center px-5 py-14 sm:px-8 lg:grid lg:grid-cols-[minmax(0,5fr)_minmax(0,8fr)] lg:gap-14 lg:py-20">
         <Reveal className="relative pl-6 lg:pl-8">
           <span
