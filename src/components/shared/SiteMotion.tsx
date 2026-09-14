@@ -2,43 +2,69 @@
 
 import { useEffect, useLayoutEffect } from "react";
 
-const DISTANCE_PX = 8;
-const DURATION_MS = 320;
 const MAX_DELAY_MS = 80;
-const EASING = "cubic-bezier(.16, 1, .3, 1)";
+const STAGGER_STEP_MS = 60;
 
 const useIsomorphicLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
 
-function reveal(element: HTMLElement): void {
-  const delay = Math.min(Number(element.dataset.motionDelay) || 0, MAX_DELAY_MS);
-  element.style.transition = `opacity ${DURATION_MS}ms ${EASING} ${delay}ms, transform ${DURATION_MS}ms ${EASING} ${delay}ms`;
-  element.style.opacity = "1";
-  element.style.transform = "translateY(0)";
-  element.addEventListener("transitionend", () => element.removeAttribute("style"), { once: true });
+/** Maps each observed trigger to the elements it owns (a wrapper owns itself; a stagger parent owns its items). */
+function collectTargets(root: Element): Map<Element, HTMLElement[]> {
+  const targets = new Map<Element, HTMLElement[]>();
+  root.querySelectorAll<HTMLElement>(".reveal").forEach(wrapper => targets.set(wrapper, [wrapper]));
+  root.querySelectorAll<HTMLElement>("[data-motion-stagger]").forEach(parent => {
+    targets.set(parent, Array.from(parent.children) as HTMLElement[]);
+  });
+  // Triggers at or above the fold stay static; only content below the initial viewport reveals.
+  Array.from(targets.keys())
+    .filter(trigger => trigger.getBoundingClientRect().top <= window.innerHeight)
+    .forEach(trigger => targets.delete(trigger));
+  return targets;
+}
+
+function setPending(trigger: Element, owned: HTMLElement[]): void {
+  const base = Math.min(Number((trigger as HTMLElement).dataset.motionDelay) || 0, MAX_DELAY_MS);
+  const step = trigger.hasAttribute("data-motion-stagger") ? STAGGER_STEP_MS : 0;
+  owned.forEach((element, index) => {
+    const delay = base + index * step;
+    if (delay > 0) element.style.transitionDelay = `${delay}ms`;
+    element.classList.add("motion-pending");
+  });
+}
+
+/** Settling always lands on the default (fully visible) styles, never back to hidden. */
+function settle(element: HTMLElement): void {
+  element.classList.remove("motion-pending", "motion-visible");
+  element.style.removeProperty("transition-delay");
+}
+
+function show(element: HTMLElement): void {
+  element.classList.add("motion-visible");
+  const onTransitionEnd = (event: TransitionEvent): void => {
+    // transitionend bubbles; only the element's own transition may settle it.
+    if (event.target !== element) return;
+    element.removeEventListener("transitionend", onTransitionEnd);
+    settle(element);
+  };
+  element.addEventListener("transitionend", onTransitionEnd);
 }
 
 function observe(root: Element): () => void {
-  // Wrappers already in the initial viewport stay visible; only lower ones enter.
-  const pending = Array.from(root.querySelectorAll<HTMLElement>(".reveal"))
-    .filter(element => element.getBoundingClientRect().top > window.innerHeight);
-  pending.forEach(element => {
-    element.style.opacity = "0";
-    element.style.transform = `translateY(${DISTANCE_PX}px)`;
-  });
+  const targets = collectTargets(root);
+  targets.forEach((owned, trigger) => setPending(trigger, owned));
   const observer = new IntersectionObserver(entries => {
     entries.filter(entry => entry.isIntersecting).forEach(entry => {
       observer.unobserve(entry.target);
-      reveal(entry.target as HTMLElement);
+      targets.get(entry.target)?.forEach(show);
     });
   }, { threshold: 0.08, rootMargin: "0px 0px -3% 0px" });
-  pending.forEach(element => observer.observe(element));
+  targets.forEach((_owned, trigger) => observer.observe(trigger));
   return (): void => {
     observer.disconnect();
-    pending.forEach(element => element.removeAttribute("style"));
+    targets.forEach(owned => owned.forEach(settle));
   };
 }
 
-/** Content stays visible without JavaScript; motion only fades lower `.reveal` wrappers in once. */
+/** Content stays visible without JavaScript; motion only fades lower wrappers/items in once. */
 export function SiteMotion({ variant }: { variant: "a" | "b" }): null {
   useIsomorphicLayoutEffect(() => {
     const root = document.querySelector(`[data-motion-variant='${variant}']`);
