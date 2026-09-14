@@ -1,4 +1,3 @@
-import { BlueprintTrace } from "@/components/shared/BlueprintTrace";
 import Image from "next/image";
 import { ArrowRight, Phone } from "lucide-react";
 import type { ReactElement } from "react";
@@ -21,7 +20,6 @@ export function HeroB(): ReactElement {
       </div>
       <div data-motion="photo" className={styles.heroImage}>
         <Image src={IMAGES.hero.src} alt={IMAGES.hero.alt} fill priority sizes="(min-width: 1024px) 58vw, 100vw" className={styles.image} />
-        <BlueprintTrace />
         <span data-motion="folio" aria-hidden="true" className={styles.heroNumber}>01</span>
         <RegMark className={styles.imageTopMark} tone="ink" /><RegMark className={styles.imageBottomMark} tone="ink" />
       </div>
