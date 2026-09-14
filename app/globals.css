@@ -55,11 +55,4 @@ body {
   }
 }
 
-/* Survey marks are temporary; the finished photography stays unobstructed. */
-.motion-survey { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; z-index: 1; }
-.motion-survey path { fill: none; stroke: #e8ffe9; stroke-width: 1.5; vector-effect: non-scaling-stroke; opacity: 0; }
 #hero-a-heading > span { display: block; }
-[data-motion='register'] { transform-box: fill-box; transform-origin: center; }
-.a-ruler i { transform-origin: left; }
-
-#hero [data-motion='photo'] { overflow: hidden; }
