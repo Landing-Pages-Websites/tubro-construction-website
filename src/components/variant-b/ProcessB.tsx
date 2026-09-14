@@ -25,10 +25,7 @@ export function ProcessB(): ReactElement {
         <Reveal className={styles.staircase} delayMs={60}>
           <ol className={styles.steps}>
             {PROCESS.steps.map((step) => (
-              <li
-                key={step.number}
-                data-motion="step" className={styles.step}
-              >
+              <li key={step.number} className={styles.step}>
                 <RegMark className={styles.stepMark} />
                 <span className="self-center font-fjalla text-[44px] leading-none text-action sm:text-[52px]">
                   {step.number}

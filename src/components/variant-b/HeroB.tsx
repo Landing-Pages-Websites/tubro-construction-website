@@ -11,16 +11,16 @@ export function HeroB(): ReactElement {
     <section id="hero" aria-labelledby="hero-b-heading" className={styles.hero}>
       <div className={styles.heroCopy}>
         <RegMark className={styles.topMark} /><RegMark className={styles.bottomMark} />
-        <p data-motion="copy" className={styles.eyebrow}>{HERO.eyebrow}</p>
-        <h1 id="hero-b-heading" className={styles.heroHeading}><span>Built around</span>{" "}<span>the way you</span>{" "}<span>want to live</span></h1>
-        <p data-motion="copy" className={styles.heroBody}>{HERO.body}</p>
-        <a href="#estimate" className={styles.cta}>{HERO.primaryCta}<ArrowRight size={18} aria-hidden="true" /></a>
-        <a href={BRAND.phoneHref} className={styles.phone}><Phone size={18} aria-hidden="true" />{HERO.secondaryCta}</a>
+        <p data-motion-hero="copy" className={styles.eyebrow}>{HERO.eyebrow}</p>
+        <h1 data-motion-hero="copy" id="hero-b-heading" className={styles.heroHeading}><span>Built around</span>{" "}<span>the way you</span>{" "}<span>want to live</span></h1>
+        <p data-motion-hero="copy" className={styles.heroBody}>{HERO.body}</p>
+        <a data-motion-hero="cta" href="#estimate" className={styles.cta}>{HERO.primaryCta}<ArrowRight size={18} aria-hidden="true" /></a>
+        <a data-motion-hero="cta" href={BRAND.phoneHref} className={styles.phone}><Phone size={18} aria-hidden="true" />{HERO.secondaryCta}</a>
         <div className={styles.photoNote}><RegMark /><div><p>{WORK.photoLabel}</p><p>King &amp; Pierce Counties</p></div></div>
       </div>
-      <div data-motion="photo" className={styles.heroImage}>
+      <div data-motion-hero="image" className={styles.heroImage}>
         <Image src={IMAGES.hero.src} alt={IMAGES.hero.alt} fill priority sizes="(min-width: 1024px) 58vw, 100vw" className={styles.image} />
-        <span data-motion="folio" aria-hidden="true" className={styles.heroNumber}>01</span>
+        <span aria-hidden="true" className={styles.heroNumber}>01</span>
         <RegMark className={styles.imageTopMark} tone="ink" /><RegMark className={styles.imageBottomMark} tone="ink" />
       </div>
     </section>

@@ -15,7 +15,6 @@ export function RegMark({ className, tone = "action" }: RegMarkProps): ReactElem
   return (
     <svg
       aria-hidden="true"
-      data-motion="register"
       className={`${TONE_CLASSES[tone]} ${className ?? ""}`}
       width="16"
       height="16"

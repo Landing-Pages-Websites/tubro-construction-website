@@ -1,3 +1,4 @@
+import { HeroMotionInit } from "@/components/shared/HeroMotionInit";
 import { SiteMotion } from "@/components/shared/SiteMotion";
 import type { Metadata } from "next";
 import type { ReactElement } from "react";
@@ -23,7 +24,8 @@ export const metadata: Metadata = {
 
 export default function VariantBPage(): ReactElement {
   return (
-    <div className={display.variable} data-motion-variant="b">
+    <div className={display.variable} data-motion-variant="b" suppressHydrationWarning>
+      <HeroMotionInit />
       <SiteMotion variant="b" />
       <UtilityNav variant="b" />
       <main>
