@@ -20,15 +20,21 @@ function collect(root: Element): Target[] {
     ["[data-motion='folio']", "folio"],
     [".a-ruler i", "tick"],
   );
-  const explicit = groups.flatMap(([selector, kind]) =>
-    Array.from(root.querySelectorAll(selector), (element, index) => ({
-      element, kind, delay: kind === "line" ? 0 : Math.min(index % 4, 3) * (kind === "headline" ? 110 : 85),
-    })),
-  );
+  const explicit = groups
+    .flatMap(([selector, kind]) =>
+      Array.from(root.querySelectorAll(selector), (element, index) => ({
+        element, kind, delay: kind === "line" ? 0 : Math.min(index % 4, 3) * (kind === "headline" ? 110 : 85),
+      })),
+    )
+    .filter(target => {
+      const wrapper = target.element.closest(".reveal");
+      return !wrapper || wrapper === target.element;
+    });
   const quiet = Array.from(root.querySelectorAll(".reveal"))
-    .filter(element => !explicit.some(target => element.contains(target.element)))
+    .filter(element => !explicit.some(target => element === target.element || element.contains(target.element)))
     .map(element => ({ element, kind: "copy" as const, delay: Number(element.getAttribute("data-motion-delay")) || 0 }));
-  return [...explicit, ...quiet];
+  const unique = new Map([...explicit, ...quiet].map(target => [target.element, target]));
+  return [...unique.values()];
 }
 
 function drawnFrames(target: Target): Keyframe[] {
@@ -64,22 +70,25 @@ function frames(target: Target, variant: "a" | "b", mobile: boolean): Keyframe[]
 }
 
 function duration(kind: MotionKind, mobile: boolean): number {
-  if (kind === "survey") return mobile ? 1300 : 1700;
-  if (kind === "line") return 1400;
-  if (kind === "photo") return mobile ? 850 : 1150;
-  return mobile ? 550 : 800;
+  if (kind === "survey") return mobile ? 900 : 1100;
+  if (kind === "line") return 900;
+  if (kind === "photo") return mobile ? 650 : 800;
+  return mobile ? 400 : 550;
 }
 
 function observe(root: Element, variant: "a" | "b"): () => void {
   const active = new Set<Animation>();
   const targets = new Map(collect(root).map(target => [target.element, target]));
   const mobile = window.matchMedia("(max-width: 767px)").matches;
-  const settle = (): void => { active.forEach(animation => animation.cancel()); active.clear(); };
+  const settle = (): void => {
+    active.forEach(animation => { try { animation.finish(); } catch { animation.cancel(); } });
+    active.clear();
+  };
   const observer = new IntersectionObserver(entries => {
     entries.filter(entry => entry.isIntersecting).forEach(entry => {
-      observer.unobserve(entry.target);
       const target = targets.get(entry.target);
       if (!target || document.hidden) return;
+      observer.unobserve(entry.target);
       const animation = target.element.animate(frames(target, variant, mobile), {
         duration: duration(target.kind, mobile),
         delay: target.delay, easing: EASING, fill: "backwards",
@@ -89,8 +98,7 @@ function observe(root: Element, variant: "a" | "b"): () => void {
     });
   }, { threshold: .08, rootMargin: "0px 0px -3% 0px" });
   targets.forEach(target => observer.observe(target.element));
-  document.addEventListener("visibilitychange", settle);
-  return (): void => { observer.disconnect(); settle(); document.removeEventListener("visibilitychange", settle); };
+  return (): void => { observer.disconnect(); settle(); };
 }
 
 /** Content stays visible without JavaScript; motion never owns the final layout. */
