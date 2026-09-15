@@ -68,9 +68,9 @@
 .a-capabilities li > span:nth-child(2) { height:60px; background:var(--a-green); }
 .a-capabilities li > span:last-child { font-size:clamp(14px,1.45vw,22px); }
 .variant-a .a-capabilities > div:last-child > div:last-child { min-height:46vw; }
-.a-capabilities > div:last-child > div:last-child > div:first-child { width:89%; aspect-ratio:1.37; }
-.a-capabilities > div:last-child > div:last-child > div:nth-child(2) { position:absolute; top:30%; right:-8.5%; width:43%; margin:0; aspect-ratio:1.5; box-shadow:none; border:3px solid white; }
-.a-capabilities > div:last-child > div:last-child > div:nth-child(3) { position:absolute; top:58%; left:35%; width:43%; margin:0; aspect-ratio:1.12; box-shadow:none; border:3px solid white; }
+.a-capabilities .a-cap-paint { width:89%; aspect-ratio:1.37; overflow:hidden; }
+.a-capabilities .a-cap-deck { position:absolute; top:30%; right:-8.5%; width:43%; margin:0; aspect-ratio:1.5; box-shadow:none; border:3px solid white; }
+.a-capabilities .a-cap-stain { position:absolute; top:58%; left:35%; width:43%; margin:0; aspect-ratio:1.12; box-shadow:none; border:3px solid white; }
 .a-process { position:relative; min-height:56.25vw; background:#e8efe8; padding:5.5% 5%; }
 .a-process h2 { max-width:47%; font-size:clamp(42px,6.3vw,97px); line-height:1.02; font-weight:800; letter-spacing:-.04em; }
 .a-process ol { position:relative; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); margin-top:10.8vw; }
@@ -125,7 +125,7 @@
 
   .variant-a .a-proof > div { min-height:0; padding:55px 7%; }.a-proof::before,.a-proof::after { display:none; }.variant-a .a-proof h2 { font-size:29px; max-width:350px; }.variant-a .a-proof p { margin-top:28px;font-size:12px; }
   .a-rooms { aspect-ratio:auto; padding:34px 5% 40px; display:flex; flex-direction:column; gap:24px; }.a-room-route { display:none; }.a-room-intro { position:relative; inset:auto; width:100%; padding:12px 0 12px 16px; border-left:1px solid var(--a-green); }.a-room-intro h2 { font-size:30px; }.a-room-intro > p { font-size:15px; max-width:none; margin-top:12px; }.a-room-kitchen,.a-room-bathroom { position:relative; inset:auto; width:100%; height:auto; aspect-ratio:4/4.3; }.a-room-bathroom { aspect-ratio:3/4; }.a-room-label { padding:14px; max-width:82%; left:4%; bottom:4%; }.a-room-label h3 { font-size:21px; }.a-room-label p { font-size:14px; max-width:210px; }.a-room-cta { position:relative; inset:auto; align-self:flex-end; font-size:16px!important; gap:12px!important; }
-  .variant-a .a-capabilities > div:last-child { padding:35px 7% 40px; }.variant-a .a-capabilities h2 { font-size:35px; max-width:420px; }.variant-a .a-capabilities p { max-width:100%; margin-top:20px; font-size:17px; }.a-capabilities li > span:first-child { width:44px;height:44px; }.a-capabilities li > span:nth-child(2) { height:44px; }.a-capabilities li > span:last-child { font-size:13px; }.a-capabilities li { gap:12px; }.variant-a .a-capabilities > div:last-child > div:last-child { margin-top:30px; min-height:82vw; }.a-capabilities > div:last-child > div:last-child > div:first-child { width:90%; }.a-capabilities > div:last-child > div:last-child > div:nth-child(2) { right:-3%;top:30%; }.a-capabilities > div:last-child > div:last-child > div:nth-child(3) { top:56%;left:33%; }
+  .variant-a .a-capabilities > div:last-child { padding:35px 7% 40px; }.variant-a .a-capabilities h2 { font-size:35px; max-width:420px; }.variant-a .a-capabilities p { max-width:100%; margin-top:20px; font-size:17px; }.a-capabilities li > span:first-child { width:44px;height:44px; }.a-capabilities li > span:nth-child(2) { height:44px; }.a-capabilities li > span:last-child { font-size:13px; }.a-capabilities li { gap:12px; }.variant-a .a-capabilities > div:last-child > div:last-child { margin-top:30px; min-height:82vw; }.a-capabilities .a-cap-paint { width:90%; }.a-capabilities .a-cap-deck { right:-3%;top:30%; }.a-capabilities .a-cap-stain { top:56%;left:33%; }
   .a-process { padding:50px 7%; min-height:0; }.a-process h2 { max-width:100%; font-size:44px; }.a-process-route { display:none; }.a-process ol { margin-top:36px; grid-template-columns:1fr; gap:30px; padding-left:22px; border-left:1px solid var(--a-green); }.a-process li { position:relative; }.a-process li::before { content:""; position:absolute; width:9px;height:9px; background:var(--a-green); border-radius:50%;left:-27px;top:12px; }.a-step-number { width:auto;text-align:left;font-size:72px; }.a-process h3 { font-size:21px;margin-top:12px; }.a-step-body { font-size:18px;margin-top:10px;max-width:330px; }
   .variant-a .a-gallery > div { padding:44px 5%; }.variant-a .a-gallery h2 { font-size:42px;max-width:340px; }.variant-a .a-gallery p { font-size:17px; }.variant-a .a-gallery h2 + div p { font-size:11px; }.variant-a #work-gallery { display:grid; height:78vw;gap:6px; }.variant-a #work-gallery > div:first-child { grid-row:span 2; }.variant-a #work-gallery > div:last-child { gap:6px; }.a-gallery > div > div:last-child { margin-top:30px; }
   .variant-a .a-estimate > div { padding:44px 7%; }.variant-a .a-estimate h2 { font-size:40px;max-width:500px; }.variant-a .a-estimate h2 + p { font-size:18px;max-width:100%; }.variant-a .a-estimate ul { grid-template-columns:1fr 1fr;gap:24px 0; }.a-estimate li:nth-child(3) { border-left:0;padding-left:0; }.variant-a .a-estimate form { padding:22px 18px; }.a-estimate > div > div:last-child { margin-top:34px; }.variant-a .a-estimate fieldset label span { font-size:12px; }.variant-a .a-estimate button { font-size:16px; }.variant-a .a-estimate form > div { gap:12px; }
@@ -171,4 +171,23 @@
 @media (min-width:1024px) {
   .a-hero-photo::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(to bottom,rgba(15,25,20,.65),rgba(15,25,20,.35) 14%,transparent 32%); }
   .a-desktop-navigation a:focus-visible { outline-color:#fff; }
+}
+
+/* Capabilities photo labels — Direction B's explicit tagging in A's cream/green language. */
+.a-cap-label { position:absolute; left:0; bottom:14px; z-index:4; display:flex; align-items:center; gap:10px; max-width:calc(100% - 14px); padding:8px 14px; background:var(--a-cream); border-left:3px solid var(--a-green); box-shadow:0 1px 6px rgba(35,31,32,.16); font-family:var(--font-fjalla),sans-serif; font-size:clamp(11px,1.05vw,16px); line-height:1.25; letter-spacing:.08em; text-transform:uppercase; color:#231f20; }
+.a-cap-label::after { content:""; width:16px; height:10px; flex-shrink:0; background:linear-gradient(var(--a-green),var(--a-green)) left top / 100% 1px no-repeat,repeating-linear-gradient(to right,var(--a-green) 0 1px,transparent 1px 5px) left top / 100% 7px no-repeat; }
+
+/* Tape-measure blade laid across the lead capability photo, matching the green route lines. */
+.a-cap-tape { position:absolute; top:0; left:0; z-index:5; display:block; width:100%; height:auto; pointer-events:none; }
+.a-cap-tape rect { fill:var(--a-cream); stroke:rgba(12,136,61,.4); stroke-width:1; }
+.a-cap-tape-ticks { fill:none; stroke:var(--a-green); stroke-width:1.5; }
+.a-cap-tape-hook { fill:none; stroke:#231f20; stroke-width:3; }
+.a-cap-tape text { fill:var(--a-green); font-family:var(--font-fjalla),sans-serif; font-size:14px; }
+@media (max-width:1023px) {
+  /* Fixed height keeps tick spacing legible on narrow photos; the overflowing blade is clipped by the figure. */
+  .a-cap-tape { width:auto; height:22px; }
+}
+@media (max-width:767px) {
+  .a-cap-label { bottom:10px; gap:8px; padding:6px 10px; letter-spacing:.06em; }
+  .a-cap-label::after { width:12px; }
 }
