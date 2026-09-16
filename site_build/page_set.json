@@ -22,7 +22,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/kitchen-remodeling",
@@ -46,7 +47,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/bathroom-remodeling",
@@ -70,7 +72,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/interior-exterior-painting",
@@ -94,7 +97,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/custom-home-services",
@@ -118,7 +122,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/recent-projects",
@@ -141,7 +146,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/about-us",
@@ -165,7 +171,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-areas",
@@ -189,7 +196,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/blog",
@@ -213,7 +221,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/careers",
@@ -237,7 +246,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/contact",
@@ -261,7 +271,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/schedule-an-estimate",
@@ -285,7 +296,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-maple-valley",
@@ -309,7 +321,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-tacoma",
@@ -333,7 +346,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-covington",
@@ -357,7 +371,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-renton",
@@ -381,7 +396,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-kent",
@@ -405,7 +421,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-auburn",
@@ -429,7 +446,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-ravensdale",
@@ -453,7 +471,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-enumclaw",
@@ -477,7 +496,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-issaquah",
@@ -501,7 +521,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-bellevue",
@@ -525,7 +546,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-newcastle",
@@ -549,7 +571,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-black-diamond",
@@ -573,7 +596,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-fairwood",
@@ -597,7 +621,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-sumner",
@@ -621,7 +646,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-bonney-lake",
@@ -645,7 +671,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-buckley",
@@ -669,7 +696,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-snoqualmie",
@@ -693,7 +721,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-north-bend",
@@ -717,7 +746,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/service-area/home-remodeling-sammamish",
@@ -741,7 +771,8 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     },
     {
       "route": "/privacy",
@@ -761,7 +792,9 @@
       "section_edge_clearance_audited": true,
       "desktop_section_captures": true,
       "mobile_section_captures": true,
-      "qa_verdict": "PENDING"
+      "qa_verdict": "PENDING",
+      "design_surface": "design-refs"
     }
-  ]
+  ],
+  "version": 1
 }
