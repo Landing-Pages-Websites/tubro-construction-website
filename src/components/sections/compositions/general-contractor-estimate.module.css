@@ -1,0 +1,96 @@
+.layout {
+  display: grid;
+  background: white;
+  border: 1px solid color-mix(in srgb, var(--color-ink) 14%, transparent);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(1.5rem, 3.5vw, 3.5rem);
+  background: var(--color-sage);
+}
+
+.heading {
+  max-width: 11ch;
+  font-size: clamp(2.25rem, 3.5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.09;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.description {
+  max-width: 34ch;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: color-mix(in srgb, var(--color-ink) 80%, transparent);
+}
+
+.contact { margin-top: 3rem; }
+.contactHeading { margin-bottom: 1rem; font-size: 1rem; font-weight: 600; }
+.contactRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  padding: 1rem 0;
+  border-top: 1px solid color-mix(in srgb, var(--color-ink) 14%, transparent);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.contactRow svg { flex-shrink: 0; margin-top: 0.2rem; color: var(--color-action-deep); }
+.serviceArea {
+  margin-top: auto;
+  padding-top: 3rem;
+  max-width: 30ch;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--color-ink) 75%, transparent);
+}
+
+.formPanel { min-width: 0; padding: clamp(1.5rem, 3.5vw, 3.5rem); }
+.formPanel form > fieldset > legend,
+.formPanel label[for] {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-ink);
+}
+.formPanel form > fieldset > legend { font-size: 1rem; margin-bottom: 0.5rem; }
+.formPanel fieldset > div { display: grid; gap: 0.625rem; border: 0; }
+.formPanel fieldset label {
+  padding: 0.875rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--color-ink) 20%, transparent);
+  border-radius: 6px;
+  line-height: 1.5;
+}
+.formPanel fieldset label:hover { border-color: var(--color-action-deep); }
+.formPanel fieldset label:has(input:checked) {
+  border-color: var(--color-action-deep);
+  background: var(--color-sage);
+}
+.formPanel input:not([type="radio"]):not([type="checkbox"]),
+.formPanel textarea {
+  min-height: 3rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background: var(--color-plaster);
+  caret-color: var(--color-action-deep);
+}
+.formPanel input::placeholder,
+.formPanel textarea::placeholder { color: color-mix(in srgb, var(--color-ink) 65%, transparent); }
+.formPanel textarea { min-height: 8rem; }
+.formPanel form > button { width: 100%; min-height: 3.25rem; box-shadow: none; }
+
+@media (min-width: 640px) {
+  .formPanel fieldset > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .formPanel fieldset label:last-child { grid-column: 1 / -1; }
+}
+@media (min-width: 1024px) {
+  .layout { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); }
+}

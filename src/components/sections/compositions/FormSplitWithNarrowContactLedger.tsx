@@ -6,6 +6,8 @@ import { ContextLinks } from "@/components/sections/ContextLinks";
 import { LeadForm } from "@/components/sections/LeadForm";
 import { formKeyForSlug } from "@/lib/form-keys";
 import { BRAND } from "@/lib/content";
+import { Clock3, Mail, Phone } from "lucide-react";
+import styles from "./general-contractor-estimate.module.css";
 
 const OFFICE_PHONE = BRAND.phoneDisplay;
 const OFFICE_PHONE_HREF = BRAND.phoneHref;
@@ -82,6 +84,48 @@ export function FormSplitWithNarrowContactLedger({
     section.source_blueprint_sections.includes("application-form") ||
     (slug === "careers" && section.name === "application-form");
   const submitLabel = section.content.cta || "Schedule a Free Estimate";
+  if (slug === "general-contractor") {
+    const Heading = isFirst ? "h1" : "h2";
+    const contactIcons = [Phone, Clock3, Mail];
+    return (
+      <SectionShell section={section} band={band} labelledBy={headingId}>
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className={styles.layout}>
+            <div className={styles.intro}>
+              <Heading id={headingId} className={styles.heading}>{section.content.headline}</Heading>
+              <p className={styles.description}>{section.content.body}</p>
+              <div className={styles.contact}>
+                <h3 className={styles.contactHeading}>Talk with our team</h3>
+                <ul>
+                  {section.content.bullets.map((item, index) => {
+                    const Icon = contactIcons[index] ?? Mail;
+                    return (
+                      <li key={item} className={styles.contactRow}>
+                        <Icon size={19} strokeWidth={1.6} aria-hidden="true" />
+                        <span><LedgerEntry text={item} /></span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+              <ContextLinks links={links} className="mt-6" />
+              <p className={styles.serviceArea}>{section.content.eyebrow}</p>
+            </div>
+            <div className={styles.formPanel}>
+              <LeadForm
+                formKey={formKeyForSlug(slug)}
+                pagePath={path}
+                options={section.content.options}
+                submitLabel={submitLabel}
+                withResume={withResume}
+                idPrefix={section.id}
+              />
+            </div>
+          </div>
+        </div>
+      </SectionShell>
+    );
+  }
   return (
     <SectionShell section={section} band={band} labelledBy={headingId}>
       <RuledField />

@@ -6,6 +6,7 @@ import { CtaLink } from "@/components/sections/CtaLink";
 import { PhoneCta } from "@/components/sections/PhoneCta";
 import { ContextLinks } from "@/components/sections/ContextLinks";
 import { DesignImage } from "@/components/sections/DesignImage";
+import { ResidentialScope } from "@/components/sections/compositions/ResidentialScope";
 
 /** Ruled-paper hairlines that finish the editorial column, per the frames. */
 const TRAILING_RULE_COUNT = 3;
@@ -17,14 +18,18 @@ const TRAILING_RULE_COUNT = 3;
  * when items are empty); bullets otherwise print as the supporting ruled
  * ledger. The occasional shared-evidence photo docks under the ledger.
  */
-export function ContentEditorialIndexToc({
+export function ContentEditorialIndexToc(props: SectionProps): ReactElement {
+  const {
   section,
   images,
   band,
   links,
   ctaTarget,
   isFirst,
-}: SectionProps): ReactElement {
+  } = props;
+  if (props.slug === "general-contractor" && section.name === "scope-index") {
+    return <ResidentialScope {...props} />;
+  }
   const headingId = `${section.id}-heading`;
   const { items, bullets } = section.content;
   const indexRows = items.length > 0 ? items : bullets;
