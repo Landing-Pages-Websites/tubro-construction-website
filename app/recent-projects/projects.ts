@@ -1,0 +1,18 @@
+export type Category = "All work" | "Kitchens" | "Bathrooms" | "Outdoor & exterior";
+export interface Project { id: string; title: string; category: Exclude<Category, "All work">; src: string; alt: string; detail: string }
+const room = "/images/design/recent-projects/02-realwork-labs-portfolio-";
+const outdoor = "/images/design/interior-exterior-painting/04-project-gallery-faq-";
+export const categories: Category[] = ["All work", "Kitchens", "Bathrooms", "Outdoor & exterior"];
+export const projects: Project[] = [
+  { id: "open-kitchen", title: "Room to gather", category: "Kitchens", src: room + "0125047-kitchen-01-jpg.jpg", alt: "Open kitchen with dark-countertop island, gray shaker cabinets, and wide-plank flooring", detail: "A generous island. Gray shaker cabinetry. An open connection to the rest of the home." },
+  { id: "skylit-bath", title: "A little everyday escape", category: "Bathrooms", src: room + "0925012-bathroom-01-jpg.jpg", alt: "Bathroom with glass walk-in shower, freestanding tub, double vanity, and skylight", detail: "A freestanding tub and glass shower share a light-filled room with a double vanity." },
+  { id: "valley-deck", title: "Take the day outside", category: "Outdoor & exterior", src: outdoor + "1221004-deck-01-jpg.jpg", alt: "Wide deck with black metal railing overlooking a residential valley", detail: "Wide deck boards and slim black railings leave room for the view." },
+  { id: "white-kitchen", title: "A brighter daily rhythm", category: "Kitchens", src: room + "0125065-kitchen-01-jpg.jpg", alt: "White kitchen with light counters, farmhouse sink, and skylight", detail: "White cabinetry, a light countertop, and a farmhouse sink beneath natural light." },
+  { id: "dark-bath", title: "Depth in the details", category: "Bathrooms", src: "/images/projects/0128008_bathroom%2002.jpg", alt: "Dark bathroom with black freestanding tub, slatted accent wall, ring pendant lights, and chevron floor tile", detail: "A black freestanding tub, slatted accent wall, and chevron tile bring texture and depth." },
+  { id: "blue-kitchen", title: "Color, with character", category: "Kitchens", src: room + "0126001-kitchen-01-jpg.jpg", alt: "Kitchen with slate-blue cabinetry, white counters, stainless appliances, and dining table", detail: "Slate-blue cabinetry brings definition to white counters and stainless appliances." },
+  { id: "tiled-bath", title: "A clean-lined retreat", category: "Bathrooms", src: room + "0126030-bathroom-01-jpg.jpg", alt: "Bathroom with freestanding tub, glass shower, mosaic shower floor, and subway-tile walls", detail: "Subway tile and a mosaic shower floor frame a freestanding tub and glass enclosure." },
+  { id: "blue-exterior", title: "A fresh first impression", category: "Outdoor & exterior", src: outdoor + "0426023-exterior-paint-01-jpg.jpg", alt: "Two-story home with blue siding, white garage doors, and landscaped yard", detail: "Blue siding and white trim give this home's exterior a crisp, cohesive finish." },
+  { id: "timber-entry", title: "A warmer welcome", category: "Outdoor & exterior", src: outdoor + "0825017-ext-stain-01-jpeg.jpeg", alt: "Home entry with stained timber beams, stone columns, and wood front door", detail: "Stained timber, stone columns, and a wood front door bring natural materials together." },
+  { id: "two-tone-kitchen", title: "Two tones, one inviting space", category: "Kitchens", src: "/images/projects/1124003_kitchen%2002.jpeg", alt: "Kitchen with navy and white cabinetry, a light-countertop island, and wood flooring", detail: "Navy and white cabinetry meet a generous island and the warmth of wood flooring." },
+];
+export const featured = [projects[0], projects[1], projects[2]];
