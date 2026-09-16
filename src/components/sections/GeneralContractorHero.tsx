@@ -10,6 +10,7 @@ function HeroRuler({ vertical = false }: { vertical?: boolean }): ReactElement {
   return (
     <svg
       viewBox={vertical ? "0 0 28 320" : "0 0 320 28"}
+      data-gc-ruler={vertical ? "vertical" : "horizontal"}
       aria-hidden="true"
       focusable="false"
       className={vertical

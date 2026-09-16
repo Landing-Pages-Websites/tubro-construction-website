@@ -20,7 +20,7 @@ interface MountedPhotoProps {
 function ProjectRulers(): ReactElement {
   return (
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden bg-[#eee8db]">
-      <svg viewBox="0 0 560 560" focusable="false" className="absolute -top-24 -right-40 w-[480px] rotate-[18deg] text-action sm:-right-16 sm:w-[640px]">
+      <svg data-gc-ruler="horizontal" viewBox="0 0 560 560" focusable="false" className="absolute -top-24 -right-40 w-[480px] rotate-[18deg] text-action sm:-right-16 sm:w-[640px]">
         <path d="M40 40H500V112H112V500H40Z" fill="currentColor" fillOpacity="0.06" stroke="currentColor" strokeOpacity="0.28" />
         <path d="M60 60H480M60 60V480" fill="none" stroke="currentColor" strokeOpacity="0.2" />
         {Array.from({ length: 43 }, (_, tick) => (
@@ -33,7 +33,7 @@ function ProjectRulers(): ReactElement {
           <text key={unit} x={100 + unit * 50} y="94" fill="currentColor" fillOpacity="0.45" fontSize="13" className="font-fjalla">{unit + 1}</text>
         ))}
       </svg>
-      <svg viewBox="0 0 1200 48" preserveAspectRatio="none" focusable="false" className="absolute inset-x-0 bottom-0 h-12 w-full text-action">
+      <svg data-gc-ruler="horizontal" viewBox="0 0 1200 48" preserveAspectRatio="none" focusable="false" className="absolute inset-x-0 bottom-0 h-12 w-full text-action">
         <path d="M0 47H1200" stroke="currentColor" strokeOpacity="0.5" />
         {Array.from({ length: 121 }, (_, tick) => (
           <path key={tick} d={`M${tick * 10} 48v-${tick % 10 === 0 ? 34 : tick % 5 === 0 ? 22 : 10}`} stroke="currentColor" strokeOpacity={tick % 10 === 0 ? "0.45" : "0.2"} />
