@@ -1,0 +1,118 @@
+.site { background: var(--color-plaster); color: var(--color-ink); }
+.page { max-width: 1600px; margin-inline: auto; }
+.desk { padding: 48px clamp(24px, 5vw, 80px) 24px; }
+.topline, .bottomline { display: flex; justify-content: space-between; gap: 24px; font-family: var(--font-fjalla), sans-serif; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.topline { border-top: 2px solid var(--color-action); padding-top: 15px; color: var(--color-action-deep); }
+.topline > :last-child { color: #686760; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 100px); padding-block: 42px 48px; align-items: start; }
+.intro { padding-top: 10px; }
+.intro h1 { font-size: clamp(48px, 5.3vw, 80px); font-weight: 700; line-height: 1.06; letter-spacing: -.06em; }
+.intro h1 span { color: var(--color-action-deep); }
+.description { max-width: 390px; margin-top: 26px; font-size: 16px; line-height: 1.85; color: #595750; }
+.contacts { margin-top: 38px; }
+.contacts a { display: block; padding: 19px 0; border-top: 1px solid #cccac1; text-decoration: none; }
+.label { display: block; font-family: var(--font-fjalla), sans-serif; font-size: 12px; line-height: 1.5; letter-spacing: .1em; text-transform: uppercase; color: var(--color-action-deep); }
+.contacts a > :last-child { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 8px; }
+.phone > :last-child { font-size: clamp(25px, 2.6vw, 38px); font-weight: 500; letter-spacing: -.045em; }
+.email > :last-child { font-size: clamp(13px, 1.35vw, 20px); overflow-wrap: anywhere; letter-spacing: -.03em; }
+.contacts svg { width: 23px; height: 23px; flex-shrink: 0; color: var(--color-action-deep); }
+.note { display: flex; gap: 18px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #cccac1; }
+.noteNumber { flex-shrink: 0; font-family: var(--font-fjalla), sans-serif; color: var(--color-action-deep); }
+.note p { max-width: 330px; font-size: 13px; line-height: 1.8; color: #686760; }
+.noteCopy p + p { margin-top: 12px; }
+.noteCopy strong { color: var(--color-ink); font-weight: 600; }
+.noteCopy a { color: var(--color-action-deep); text-decoration: underline; text-underline-offset: 3px; }
+.formPanel { position: relative; background: #fff; padding: clamp(24px, 3vw, 44px); border: 1px solid #deded4; box-shadow: 12px 12px 0 var(--color-sage); scroll-margin-top: 100px; }
+.formPanel::before { content: ''; position: absolute; left: -1px; top: -1px; width: 64px; height: 3px; background: var(--color-action); }
+.formHeading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.formHeading > :last-child { font-size: 28px; line-height: 1; color: var(--color-action-deep); }
+.formPanel h2 { margin-top: 15px; font-size: clamp(24px, 2.2vw, 32px); font-weight: 600; line-height: 1.2; letter-spacing: -.045em; }
+.formDescription { margin-top: 12px; margin-bottom: 27px; font-size: 13px; line-height: 1.7; color: #686760; }
+.formPanel form fieldset > div { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+.formPanel form fieldset label { border-bottom: 1px solid #e8e7df; font-size: 12px; line-height: 1.6; }
+.formPanel form fieldset label:last-child { grid-column: 1 / -1; border: 0; }
+.formPanel form input:not([type='radio']):not([type='checkbox']), .formPanel textarea { border-radius: 2px; min-height: 44px; background: #fcfcf9; }
+.formPanel textarea { min-height: 95px; }
+.formPanel form button { width: 100%; border-radius: 2px; box-shadow: none; }
+.bottomline { border-top: 1px solid #cccac1; padding-top: 18px; color: #686760; font-size: 11px; }
+.details { display: grid; grid-template-columns: .85fr 1.2fr 1fr; gap: 30px; padding: 43px clamp(24px, 5vw, 80px); margin-top: 24px; background: var(--color-sage); }
+.detail { display: flex; gap: 15px; }
+.detail + .detail { border-left: 1px solid #bcccbc; padding-left: 30px; }
+.detail > svg { flex-shrink: 0; width: 21px; height: 21px; color: var(--color-action-deep); stroke-width: 1.5; }
+.detail h2 { font-size: 14px; font-weight: 600; line-height: 1.5; }
+.detail p { margin-top: 10px; font-size: 13px; line-height: 1.85; color: #595e56; }
+.detail a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 5px; font-size: 12px; font-weight: 500; color: var(--color-action-deep); text-decoration: underline; text-underline-offset: 4px; }
+.detail a svg { width: 15px; height: 15px; }
+.next { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; padding: 65px clamp(24px, 5vw, 80px) 75px; }
+.next h2 { font-size: clamp(28px, 3vw, 42px); font-weight: 600; letter-spacing: -.05em; line-height: 1.2; margin-top: 16px; }
+.nextLinks a { display: flex; align-items: center; gap: 24px; min-height: 70px; border-top: 1px solid #cccac1; font-size: 16px; }
+.nextLinks a:last-child { border-bottom: 1px solid #cccac1; }
+.indexLabel { display: block; margin-bottom: 20px; font-family: var(--font-fjalla), sans-serif; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-action-deep); }
+.nextEstimate { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 22px; font-size: 14px; font-weight: 500; color: var(--color-action-deep); }
+.nextEstimate svg { width: 18px; height: 18px; }
+.nextLinks a > :first-child { color: var(--color-action-deep); font-family: var(--font-fjalla), sans-serif; font-size: 12px; }
+.nextLinks svg { margin-left: auto; flex-shrink: 0; width: 22px; color: var(--color-action-deep); }
+.contacts a:hover, .nextLinks a:hover { color: var(--color-action-deep); }
+@media (prefers-reduced-motion: no-preference) {
+  .topline { position: relative; border-top-color: transparent; }
+  .topline::before { content: ''; position: absolute; inset: -2px 0 auto; height: 2px; background: var(--color-action); transform-origin: left; animation: drawRule 900ms cubic-bezier(.16, 1, .3, 1) both; }
+  .intro h1 { animation: arrive 720ms cubic-bezier(.16, 1, .3, 1) 70ms both; }
+  .description { animation: arrive 650ms cubic-bezier(.16, 1, .3, 1) 150ms both; }
+  .contacts a { animation: arrive 600ms cubic-bezier(.16, 1, .3, 1) 230ms both; }
+  .contacts a:nth-child(2) { animation-delay: 300ms; }
+  .note { animation: arrive 600ms cubic-bezier(.16, 1, .3, 1) 350ms both; }
+  .formPanel::before { width: 100%; transform: scaleX(.12); transform-origin: left; transition: transform 350ms cubic-bezier(.16, 1, .3, 1); }
+  .formPanel:focus-within::before { transform: scaleX(1); }
+  .formHeading, .formPanel h2, .formDescription { animation: arrive 650ms cubic-bezier(.16, 1, .3, 1) 170ms both; }
+  .page [data-contact-pending] { opacity: 0; transform: translateY(20px); }
+  .page [data-contact-entered] { animation: arrive 700ms cubic-bezier(.16, 1, .3, 1) both; }
+  .detail:nth-child(2), .nextLinks a:nth-of-type(2) { animation-delay: 90ms; }
+  .detail:nth-child(3), .nextLinks a:nth-of-type(3) { animation-delay: 180ms; }
+  .nextLinks a:nth-of-type(4) { animation-delay: 240ms; }
+  .page a svg { transition: transform 220ms cubic-bezier(.16, 1, .3, 1); }
+  .page a:is(:hover, :focus-visible) svg { transform: translate(3px, -3px); }
+  .contacts a, .nextLinks a { position: relative; }
+  .contacts a::after, .nextLinks a::after { content: ''; position: absolute; inset: -1px 0 auto; height: 1px; background: var(--color-action); transform: scaleX(0); transform-origin: left; transition: transform 320ms cubic-bezier(.16, 1, .3, 1); }
+  .contacts a:is(:hover, :focus-visible)::after, .nextLinks a:is(:hover, :focus-visible)::after { transform: scaleX(1); }
+  .formPanel input, .formPanel textarea { transition: background-color 180ms ease, border-color 180ms ease; caret-color: var(--color-action-deep); }
+  .formPanel input:focus, .formPanel textarea:focus { background-color: #fff; }
+  .formPanel form button { transition: background-color 180ms ease, transform 180ms ease; }
+  .formPanel form button:active:not(:disabled) { transform: translateY(2px); }
+  .formPanel [role='alert'], .formPanel [role='status'] { animation: arrive 250ms ease-out; }
+  @keyframes drawRule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes arrive { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+}
+@media (max-width: 1050px) {
+  .layout { gap: 36px; }
+  .formPanel { padding: 24px; }
+  .formPanel form fieldset > div { grid-template-columns: 1fr; }
+  .details { gap: 22px; }
+  .detail + .detail { padding-left: 22px; }
+}
+@media (max-width: 760px) {
+  .desk { padding-top: 30px; }
+  .topline > :last-child, .bottomline > :last-child { display: none; }
+  .layout { grid-template-columns: 1fr; padding-top: 30px; gap: 35px; }
+  .intro h1 { font-size: clamp(47px, 9vw, 68px); }
+  .desktopBreak { display: none; }
+  .description { max-width: 480px; margin-top: 20px; font-size: 15px; }
+  .contacts { margin-top: 24px; }
+  .phone > :last-child { font-size: 30px; }
+  .email > :last-child { font-size: 16px; }
+  .note { margin-top: 22px; }
+  .formPanel { box-shadow: 7px 7px 0 var(--color-sage); }
+  .details { grid-template-columns: 1fr; gap: 24px; padding-block: 32px; margin-top: 8px; }
+  .detail + .detail { border-left: 0; border-top: 1px solid #bcccbc; padding-left: 0; padding-top: 24px; }
+  .next { grid-template-columns: 1fr; gap: 30px; padding-block: 42px 48px; }
+  .next h2 br { display: none; }
+  .nextLinks a { font-size: 14px; gap: 16px; }
+}
+@media (max-width: 380px) {
+  .site > header > div { padding-inline: 12px; }
+  .site > header a[aria-label='Tubro Construction home'] { padding-right: 4px; }
+  .site > header a[aria-label='Tubro Construction home'] img { width: 86px; height: auto; }
+  .site > header a[href='/schedule-an-estimate'] { padding-inline: 10px; font-size: 12px; }
+  .desk, .details, .next { padding-inline: 18px; }
+  .formPanel { padding: 20px 16px; }
+  .email > :last-child { font-size: 14px; gap: 10px; }
+}
