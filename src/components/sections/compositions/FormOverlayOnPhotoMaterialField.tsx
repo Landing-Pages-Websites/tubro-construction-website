@@ -7,6 +7,7 @@ import { ContextLinks } from "@/components/sections/ContextLinks";
 import { DesignImage } from "@/components/sections/DesignImage";
 import { LeadForm } from "@/components/sections/LeadForm";
 import { formKeyForSlug } from "@/lib/form-keys";
+import { BathroomEstimate } from "@/components/sections/BathroomEstimate";
 
 /** Desktop material field: the approved photo(s) fill the section as canvas. */
 function PhotoCanvas({ images, muted }: { images: SectionImage[]; muted: boolean }): ReactElement | null {
@@ -61,6 +62,9 @@ export function FormOverlayOnPhotoMaterialField({
   const headingId = `${section.id}-heading`;
   const submitLabel = section.content.cta || "Schedule a Free Estimate";
   const primaryLabel = images[0]?.label;
+  if (slug === "bathroom-remodeling") {
+    return <BathroomEstimate section={section} images={images} band={band} links={links} slug={slug} path={path} isFirst={isFirst} ctaTarget="" />;
+  }
   return (
     <SectionShell section={section} band={band} bleed labelledBy={headingId}>
       <div className="relative">

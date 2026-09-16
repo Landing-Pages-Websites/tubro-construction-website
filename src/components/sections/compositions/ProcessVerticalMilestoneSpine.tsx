@@ -9,6 +9,7 @@ import { CtaLink } from "@/components/sections/CtaLink";
 import { PhoneCta } from "@/components/sections/PhoneCta";
 import { ContextLinks } from "@/components/sections/ContextLinks";
 import { DesignImage } from "@/components/sections/DesignImage";
+import { BathroomTimeline } from "@/components/sections/compositions/BathroomTimeline";
 
 const TAPE_TICKS = Array.from(
   { length: 21 },
@@ -67,7 +68,11 @@ export function ProcessVerticalMilestoneSpine({
   links,
   ctaTarget,
   isFirst,
+  ...page
 }: SectionProps): ReactElement {
+  if (page.slug === "bathroom-remodeling" && section.name === "process-faq") {
+    return <BathroomTimeline {...page} section={section} images={images} band={band} links={links} ctaTarget={ctaTarget} isFirst={isFirst} />;
+  }
   const headingId = `${section.id}-heading`;
   const steps = milestoneEntries(section.content);
   const bulletsAreSteps = section.content.steps.length === 0 && section.content.items.length === 0;

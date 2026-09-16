@@ -14,6 +14,34 @@ import { FilterableFilmstrip } from "@/components/sections/compositions/Filterab
 /** Blueprint section whose merge requires the real client-side filter bar. */
 const FILTERED_BLUEPRINT = "project-filters";
 
+/** A room-scale lead photograph with four supporting finish references. */
+function BathroomCollage({ images }: { images: SectionImage[] }): ReactElement {
+  return (
+    <div className="grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-x-5 lg:grid-cols-[1.6fr_1fr_1fr] lg:grid-rows-2">
+      {images.map((image, index) => (
+        <figure
+          key={image.src}
+          className={`min-w-0 ${index === 0 ? "col-span-2 lg:col-span-1 lg:row-span-2" : ""}`}
+        >
+          <DesignImage
+            image={image}
+            frameClassName={index === 0
+              ? "aspect-[4/3] bg-plaster lg:aspect-auto lg:h-[calc(100%-2rem)] lg:min-h-[520px]"
+              : "aspect-[4/5] bg-plaster sm:aspect-[5/4] lg:aspect-auto lg:h-[248px]"}
+            sizes={index === 0
+              ? "(min-width: 1280px) 523px, (min-width: 1024px) 43vw, 100vw"
+              : "(min-width: 1280px) 327px, (min-width: 1024px) 27vw, 50vw"}
+            withTab={false}
+          />
+          <figcaption className="mt-3 font-poppins text-xs leading-5 font-semibold text-action-deep sm:text-sm">
+            {image.label}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  );
+}
+
 interface FilmstripBandProps {
   images: SectionImage[];
   dark: boolean;
@@ -59,12 +87,14 @@ export function GalleryHorizontalFilmstripEvidenceBand({
   links,
   ctaTarget,
   isFirst,
+  slug,
 }: SectionProps): ReactElement {
   const headingId = `${section.id}-heading`;
   // The manifest ink band exceeds the BackgroundBand union; own the dark field.
   const dark = section.background === "ink";
   const tone = dark ? "inverse" : "ink";
   const interactive = section.source_blueprint_sections.includes(FILTERED_BLUEPRINT);
+  const bathroomCollage = slug === "bathroom-remodeling" && section.name === "project-gallery";
   return (
     <SectionShell
       section={section}
@@ -82,6 +112,8 @@ export function GalleryHorizontalFilmstripEvidenceBand({
               images={images}
               categories={images.map((image) => sourceCategory(image.source))}
             />
+          ) : bathroomCollage ? (
+            <BathroomCollage images={images} />
           ) : (
             <FilmstripBand images={images} dark={dark} />
           )}
@@ -99,7 +131,16 @@ export function GalleryHorizontalFilmstripEvidenceBand({
             {section.content.secondary_cta && (
               <PhoneCta label={section.content.secondary_cta} tone={tone} />
             )}
-            <ContextLinks links={links} tone={tone} />
+            {bathroomCollage ? (
+              <>
+                {links.filter((link) => link.href === "/recent-projects").map((link) => (
+                  <CtaLink key={link.href} label={link.label} href={link.href} />
+                ))}
+                <ContextLinks links={links.filter((link) => link.href !== "/recent-projects")} tone={tone} />
+              </>
+            ) : (
+              <ContextLinks links={links} tone={tone} />
+            )}
           </div>
         )}
       </div>

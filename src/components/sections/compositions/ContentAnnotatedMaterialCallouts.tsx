@@ -8,6 +8,7 @@ import { PhoneCta } from "@/components/sections/PhoneCta";
 import { ContextLinks } from "@/components/sections/ContextLinks";
 import { DesignImage } from "@/components/sections/DesignImage";
 import { CropCorners } from "@/components/sections/CropCorners";
+import { BathroomPlanning } from "@/components/sections/compositions/BathroomPlanning";
 
 /**
  * Composition owner: content-annotated-material-callouts.
@@ -23,7 +24,11 @@ export function ContentAnnotatedMaterialCallouts({
   links,
   ctaTarget,
   isFirst,
+  ...page
 }: SectionProps): ReactElement {
+  if (page.slug === "bathroom-remodeling" && section.name === "showers-planning-finishes") {
+    return <BathroomPlanning {...page} section={section} images={images} band={band} links={links} ctaTarget={ctaTarget} isFirst={isFirst} />;
+  }
   const headingId = `${section.id}-heading`;
   const { items, bullets } = section.content;
   const callouts = items.length > 0 ? items : bullets;

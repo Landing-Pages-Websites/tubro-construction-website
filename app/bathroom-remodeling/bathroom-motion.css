@@ -1,0 +1,47 @@
+/* Route-scoped, first-paint hero choreography; no JS visibility gate. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-bathroom-motion] #hero img {
+    animation: bathroom-hero-photo 1600ms cubic-bezier(.16, 1, .3, 1) both;
+    transform-origin: 70% 50%;
+  }
+
+  [data-bathroom-motion] #hero h1,
+  [data-bathroom-motion] #hero p,
+  [data-bathroom-motion] #hero a {
+    animation: bathroom-hero-enter 850ms cubic-bezier(.16, 1, .3, 1) both;
+  }
+
+  [data-bathroom-motion] #hero h1 { animation-delay: 80ms; }
+  [data-bathroom-motion] #hero h1 ~ p { animation-delay: 180ms; }
+  [data-bathroom-motion] #hero a { animation-delay: 280ms; }
+  [data-bathroom-motion] #hero a:nth-child(2) { animation-delay: 350ms; }
+  [data-bathroom-motion] #hero a:focus-visible { animation: none; }
+
+  [data-bathroom-motion] #hero > div > span.bg-action {
+    animation: bathroom-hero-rule 1100ms cubic-bezier(.16, 1, .3, 1) 160ms both;
+  }
+
+  [data-bathroom-motion] #hero > div > span.bg-action:nth-of-type(2) {
+    animation-name: bathroom-hero-rule-vertical;
+  }
+}
+
+@keyframes bathroom-hero-enter {
+  from { opacity: 0; translate: 0 24px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@keyframes bathroom-hero-photo {
+  from { scale: 1.09; }
+  to { scale: 1; }
+}
+
+@keyframes bathroom-hero-rule {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes bathroom-hero-rule-vertical {
+  from { clip-path: inset(0 0 100% 0); }
+  to { clip-path: inset(0 0 0 0); }
+}

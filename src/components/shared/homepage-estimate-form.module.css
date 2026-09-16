@@ -1,0 +1,9 @@
+.form { padding: 32px 40px; border-radius: 5px; box-shadow: 0 2px 12px #231f2015; border: 1px solid #231f2010; }
+.form fieldset label { min-height: 44px; padding: 8px 0; }
+.form input[type="radio"] { width: 18px; height: 18px; }
+.form input:not([type="radio"]), .form textarea { border-radius: 2px; font-size: 15px; padding: 10px 12px; }
+.form textarea { height: 86px; min-height: 86px; }
+.form > div { margin-top: 14px; }
+.form > button { margin-top: 20px; border-radius: 2px; box-shadow: none; font-size: clamp(16px, 1.3vw, 20px); }
+@media (max-width: 1023px) { .form { padding: 22px; } }
+@media (max-width: 767px) { .form { padding: 22px 18px; } .form fieldset label span { font-size: 12px; } .form > button { font-size: 16px; } .form > div { gap: 12px; } }

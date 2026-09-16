@@ -1,0 +1,25 @@
+.section { background: var(--color-sage); padding: 88px 32px 0; }
+.layout { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.08fr; gap: clamp(48px, 7vw, 104px); align-items: start; }
+.story { min-width: 0; padding-top: 8px; }
+.heading { font-family: var(--font-fjalla), sans-serif; font-size: clamp(40px, 4.2vw, 64px); font-weight: 400; letter-spacing: -.025em; line-height: 1.08; max-width: 9.5em; text-wrap: balance; }
+.heading span { color: var(--color-action-deep); }
+.description { max-width: 36ch; font-size: 15px; line-height: 1.8; margin-top: 24px; color: var(--color-ink); }
+.project { margin: 36px 24px 0 0; }
+.photo { height: 410px; border-radius: 210px 210px 8px 8px; }
+.caption { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; font-size: 12px; color: var(--color-ink); }
+.links { margin-top: 8px; }
+.panel { min-width: 0; }
+.formIntro { margin-bottom: 28px; }
+.formIntro h3 { font-family: var(--font-fjalla), sans-serif; font-size: 28px; line-height: 1.2; font-weight: 400; letter-spacing: -.015em; }
+.formIntro p { font-size: 13px; line-height: 1.7; margin-top: 10px; color: #595d55; }
+.contact { display: flex; gap: 16px; border-top: 1px solid #d6d9d0; margin-top: 28px; padding-top: 24px; }
+.contact > svg { margin-top: 4px; color: var(--color-action-deep); }
+.contact span { display: block; font-size: 12px; color: #595d55; }
+.contact a { display: inline-block; font-family: var(--font-fjalla), sans-serif; font-size: 24px; margin: 4px 0; text-decoration: underline; text-underline-offset: 5px; text-decoration-color: #a5b5a3; transition: color 180ms; }
+.contact a:hover { color: var(--color-action-deep); }
+.contact p { font-size: 11px; line-height: 1.7; color: #595d55; }
+.footer { max-width: 1200px; margin: 56px auto 0; padding: 24px 0; display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid #bccbbb; font-size: 12px; line-height: 1.6; color: #4e584c; }
+@media (max-width: 1100px) { .layout { gap: 40px; } .photo { height: 390px; } }
+@media (max-width: 899px) { .section { padding: 56px 24px 0; } .layout { grid-template-columns: 1fr; gap: 32px; max-width: 600px; } .heading { max-width: 12em; font-size: clamp(40px, 7vw, 56px); } .description { max-width: 44ch; } .project { margin-right: 0; } .photo { height: 300px; border-radius: 160px 160px 8px 8px; } .footer { max-width: 600px; margin-top: 40px; } }
+@media (max-width: 480px) { .section { padding: 40px 20px 0; } .heading { font-size: 40px; } .formIntro h3 { font-size: 25px; } .photo { height: 280px; } .footer { flex-direction: column; gap: 6px; } }
+@media (prefers-reduced-motion: reduce) { .panel *, .contact a { transition: none; } }
