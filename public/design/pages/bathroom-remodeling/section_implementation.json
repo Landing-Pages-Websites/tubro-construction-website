@@ -1,279 +1,168 @@
 {
-  "route": "/bathroom-remodeling",
-  "slug": "bathroom-remodeling",
-  "generated_by": "scripts/generate-build-artifacts.mjs",
+  "version": 1,
   "sections": [
     {
-      "section_id": "01-hero",
-      "section_name": "hero",
-      "composition": "hero-headline-over-photo-quiet-zone",
-      "owner_component": "src/components/sections/compositions/HeroHeadlineOverPhotoQuietZone.tsx",
-      "owner_export": "HeroHeadlineOverPhotoQuietZone",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/bathroom-remodeling/section_manifest.json ordered_sections[01-hero].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0925012_bathroom 01.jpg",
-              "label": "Bathroom Remodeling",
-              "public_path": "/images/design/bathroom-remodeling/01-hero-0925012-bathroom-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/bathroom-remodeling/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "01-hero-0925012-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Use a protected quiet zone over a finished bath photo so materials lead.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Bathroom Remodeling'; crop and section ownership remain route-specific."
-            }
-          ]
-        },
-        "composition": {
-          "grammar": "headline-over-photo hero with a protected quiet zone",
-          "motif_role": "datum",
-          "focal_point": "A Better Bathroom Starts With a Better Plan",
-          "owner_statement": "Section-specific composition owner HeroHeadlineOverPhotoQuietZone implements \"headline-over-photo hero with a protected quiet zone\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "hero section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "02-project-gallery",
-      "section_name": "project-gallery",
-      "composition": "gallery-horizontal-filmstrip-evidence-band",
-      "owner_component": "src/components/sections/compositions/GalleryHorizontalFilmstripEvidenceBand.tsx",
-      "owner_export": "GalleryHorizontalFilmstripEvidenceBand",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/bathroom-remodeling/section_manifest.json ordered_sections[02-project-gallery].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0925012_bathroom 01.jpg",
-              "label": "Bathroom Remodeling",
-              "public_path": "/images/design/bathroom-remodeling/02-project-gallery-0925012-bathroom-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0126030_bathroom 01.jpg",
-              "label": "Shower Reference",
-              "public_path": "/images/design/bathroom-remodeling/02-project-gallery-0126030-bathroom-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0128008_bathroom 01.jpg",
-              "label": "Bath Project Photo",
-              "public_path": "/images/design/bathroom-remodeling/02-project-gallery-0128008-bathroom-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0128008_bathroom 02.jpg",
-              "label": "Finish Detail",
-              "public_path": "/images/design/bathroom-remodeling/02-project-gallery-0128008-bathroom-02-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0525025_bathroom 02.jpg",
-              "label": "Vanity Detail",
-              "public_path": "/images/design/bathroom-remodeling/02-project-gallery-0525025-bathroom-02-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/bathroom-remodeling/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "02-project-gallery-0925012-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Bathroom Remodeling'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "02-project-gallery-0126030-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro shower reference evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Shower Reference'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-3",
-              "asset_file": "02-project-gallery-0128008-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro bath project photo evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Bath Project Photo'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-4",
-              "asset_file": "02-project-gallery-0128008-bathroom-02-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro finish detail evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Finish Detail'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-5",
-              "asset_file": "02-project-gallery-0525025-bathroom-02-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro vanity detail evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Vanity Detail'; crop and section ownership remain route-specific."
-            }
-          ]
-        },
-        "composition": {
-          "grammar": "horizontal filmstrip or contact-sheet evidence band",
-          "motif_role": "datum",
-          "focal_point": "Bathroom photos make planning tangible.",
-          "owner_statement": "Section-specific composition owner GalleryHorizontalFilmstripEvidenceBand implements \"horizontal filmstrip or contact-sheet evidence band\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "white",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "project-gallery section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "03-showers-planning-finishes",
-      "section_name": "showers-planning-finishes",
-      "composition": "content-annotated-material-callouts",
-      "owner_component": "src/components/sections/compositions/ContentAnnotatedMaterialCallouts.tsx",
-      "owner_export": "ContentAnnotatedMaterialCallouts",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/bathroom-remodeling/section_manifest.json ordered_sections[03-showers-planning-finishes].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0128008_bathroom 01.jpg",
-              "label": "Bathroom Finish Reference",
-              "public_path": "/images/design/bathroom-remodeling/03-showers-planning-finishes-0128008-bathroom-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/bathroom-remodeling/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "03-showers-planning-finishes-0128008-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro bathroom finish reference evidence for Turn material and fixture considerations into annotated details.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Bathroom Finish Reference'; crop and section ownership remain route-specific."
-            }
-          ]
-        },
-        "composition": {
-          "grammar": "alternating annotated details and material callout layout",
-          "motif_role": "crop_mark",
-          "focal_point": "Showers, conversions, fixtures, storage, and finishes need one plan.",
-          "owner_statement": "Section-specific composition owner ContentAnnotatedMaterialCallouts implements \"alternating annotated details and material callout layout\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "white",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "showers-planning-finishes section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "04-process-faq",
-      "section_name": "process-faq",
-      "composition": "process-vertical-milestone-spine",
-      "owner_component": "src/components/sections/compositions/ProcessVerticalMilestoneSpine.tsx",
-      "owner_export": "ProcessVerticalMilestoneSpine",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/bathroom-remodeling/section_manifest.json ordered_sections[04-process-faq].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/bathroom-remodeling/extraction_plan.json",
-          "extract_regions": []
-        },
-        "composition": {
-          "grammar": "vertical milestone/process spine",
-          "motif_role": "process_route",
-          "focal_point": "A better bathroom starts with clearer scope.",
-          "owner_statement": "Section-specific composition owner ProcessVerticalMilestoneSpine implements \"vertical milestone/process spine\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "sage",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "process-faq section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "05-estimate-cta",
-      "section_name": "estimate-cta",
-      "composition": "form-overlay-on-photo-material-field",
-      "owner_component": "src/components/sections/compositions/FormOverlayOnPhotoMaterialField.tsx",
-      "owner_export": "FormOverlayOnPhotoMaterialField",
-      "client_islands": [
-        "src/components/sections/LeadForm.tsx"
+      "frame": "01-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/HeroHeadlineOverPhotoQuietZone.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition hero-headline-over-photo-quiet-zone; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#01-hero",
+      "asset_roles": [
+        "Provide authentic Tubro bathroom remodeling evidence for Use a protected quiet zone over a finished bath photo so materials lead."
       ],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/bathroom-remodeling/section_manifest.json ordered_sections[05-estimate-cta].content via loadManifest(); no transcription from image refs.",
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 01-hero manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0128008_bathroom 02.jpg",
-              "label": "Project Evidence",
-              "public_path": "/images/design/bathroom-remodeling/05-estimate-cta-0128008-bathroom-02-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/bathroom-remodeling/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "05-estimate-cta-0128008-bathroom-02-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Project Evidence'; crop and section ownership remain route-specific."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 1 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "form overlay on a photo/material field",
-          "motif_role": "dimension_bracket",
-          "focal_point": "Request a bathroom remodeling estimate.",
-          "owner_statement": "Section-specific composition owner FormOverlayOnPhotoMaterialField implements \"form overlay on a photo/material field\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The HeroHeadlineOverPhotoQuietZone owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "estimate-cta section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "02-project-gallery",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/GalleryHorizontalFilmstripEvidenceBand.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition gallery-horizontal-filmstrip-evidence-band; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#02-project-gallery",
+      "asset_roles": [
+        "Provide authentic Tubro bathroom remodeling evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery.",
+        "Provide authentic Tubro shower reference evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery.",
+        "Provide authentic Tubro bath project photo evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery.",
+        "Provide authentic Tubro finish detail evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery.",
+        "Provide authentic Tubro vanity detail evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 02-project-gallery manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 5 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The GalleryHorizontalFilmstripEvidenceBand owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "03-showers-planning-finishes",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ContentAnnotatedMaterialCallouts.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition content-annotated-material-callouts; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#03-showers-planning-finishes",
+      "asset_roles": [
+        "Provide authentic Tubro bathroom finish reference evidence for Turn material and fixture considerations into annotated details."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 03-showers-planning-finishes manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 1 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The ContentAnnotatedMaterialCallouts owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "04-process-faq",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ProcessVerticalMilestoneSpine.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition process-vertical-milestone-spine; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#04-process-faq",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 04-process-faq manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The ProcessVerticalMilestoneSpine owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved sage field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "05-estimate-cta",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/FormOverlayOnPhotoMaterialField.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition form-overlay-on-photo-material-field; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#05-estimate-cta",
+      "asset_roles": [
+        "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 05-estimate-cta manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 1 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The FormOverlayOnPhotoMaterialField owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     }
   ]

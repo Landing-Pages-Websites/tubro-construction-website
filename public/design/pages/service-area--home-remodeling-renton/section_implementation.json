@@ -1,310 +1,171 @@
 {
-  "route": "/service-area/home-remodeling-renton",
-  "slug": "service-area--home-remodeling-renton",
-  "generated_by": "scripts/generate-build-artifacts.mjs",
+  "version": 1,
   "sections": [
     {
-      "section_id": "01-local-hero",
-      "section_name": "local-hero",
-      "composition": "hero-architectural-stepped-split",
-      "owner_component": "src/components/sections/compositions/HeroArchitecturalSteppedSplit.tsx",
-      "owner_export": "HeroArchitecturalSteppedSplit",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/service-area--home-remodeling-renton/section_manifest.json ordered_sections[01-local-hero].content via loadManifest(); no transcription from image refs.",
+      "frame": "01-local-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/HeroArchitecturalSteppedSplit.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition hero-architectural-stepped-split; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#01-local-hero",
+      "asset_roles": [
+        "Provide authentic Tubro capability evidence evidence for Confirm Renton service-area relevance without inventing city-specific project proof.",
+        "Provide authentic Tubro bathroom remodeling evidence for Confirm Renton service-area relevance without inventing city-specific project proof.",
+        "Provide authentic Tubro deck & outdoor living evidence for Confirm Renton service-area relevance without inventing city-specific project proof."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 01-local-hero manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0125047_kitchen 01.jpg",
-              "label": "Capability Evidence",
-              "public_path": "/images/design/service-area--home-remodeling-renton/01-local-hero-0125047-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0925012_bathroom 01.jpg",
-              "label": "Bathroom Remodeling",
-              "public_path": "/images/design/service-area--home-remodeling-renton/01-local-hero-0925012-bathroom-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/1221004_deck 01.jpg",
-              "label": "Deck & Outdoor Living",
-              "public_path": "/images/design/service-area--home-remodeling-renton/01-local-hero-1221004-deck-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/service-area--home-remodeling-renton/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "01-local-hero-0125047-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Renton service-area relevance without inventing city-specific project proof.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 01-local-hero; the image does not imply a city-specific project, result, or location."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "01-local-hero-0925012-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Renton service-area relevance without inventing city-specific project proof.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 01-local-hero; the image does not imply a city-specific project, result, or location."
-            },
-            {
-              "id": "photo-3",
-              "asset_file": "01-local-hero-1221004-deck-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Renton service-area relevance without inventing city-specific project proof.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 01-local-hero; the image does not imply a city-specific project, result, or location."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 3 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "architectural split hero with a non-50/50 stepped boundary",
-          "motif_role": "dimension_bracket",
-          "focal_point": "Home Remodeling in Renton, Washington",
-          "owner_statement": "Section-specific composition owner HeroArchitecturalSteppedSplit implements \"architectural split hero with a non-50/50 stepped boundary\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The HeroArchitecturalSteppedSplit owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "local-hero section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "02-verified-local-scope",
-      "section_name": "verified-local-scope",
-      "composition": "gallery-room-scale-single-focal-detail-strip",
-      "owner_component": "src/components/sections/compositions/GalleryRoomScaleSingleFocalDetailStrip.tsx",
-      "owner_export": "GalleryRoomScaleSingleFocalDetailStrip",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/service-area--home-remodeling-renton/section_manifest.json ordered_sections[02-verified-local-scope].content via loadManifest(); no transcription from image refs.",
+      "frame": "02-verified-local-scope",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/GalleryRoomScaleSingleFocalDetailStrip.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition gallery-room-scale-single-focal-detail-strip; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#02-verified-local-scope",
+      "asset_roles": [
+        "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+        "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+        "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+        "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+        "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 02-verified-local-scope manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0125047_kitchen 01.jpg",
-              "label": "Capability Evidence",
-              "public_path": "/images/design/service-area--home-remodeling-renton/02-verified-local-scope-0125047-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0925012_bathroom 01.jpg",
-              "label": "Bathroom Remodeling",
-              "public_path": "/images/design/service-area--home-remodeling-renton/02-verified-local-scope-0925012-bathroom-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/1221004_deck 01.jpg",
-              "label": "Deck & Outdoor Living",
-              "public_path": "/images/design/service-area--home-remodeling-renton/02-verified-local-scope-1221004-deck-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0426023_exterior paint 01.jpg",
-              "label": "Exterior Paint",
-              "public_path": "/images/design/service-area--home-remodeling-renton/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0125065_kitchen 01.jpg",
-              "label": "Kitchen Remodeling",
-              "public_path": "/images/design/service-area--home-remodeling-renton/02-verified-local-scope-0125065-kitchen-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/service-area--home-remodeling-renton/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
-            },
-            {
-              "id": "photo-3",
-              "asset_file": "02-verified-local-scope-1221004-deck-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
-            },
-            {
-              "id": "photo-4",
-              "asset_file": "02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
-            },
-            {
-              "id": "photo-5",
-              "asset_file": "02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 5 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "room-scale gallery as one oversized focal image plus a detail strip",
-          "motif_role": "crop_mark",
-          "focal_point": "Remodeling services available in Renton.",
-          "owner_statement": "Section-specific composition owner GalleryRoomScaleSingleFocalDetailStrip implements \"room-scale gallery as one oversized focal image plus a detail strip\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The GalleryRoomScaleSingleFocalDetailStrip owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "white",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "verified-local-scope section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "03-local-guidance",
-      "section_name": "local-guidance",
-      "composition": "directory-map-list-composition",
-      "owner_component": "src/components/sections/compositions/DirectoryMapList.tsx",
-      "owner_export": "DirectoryMapList",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/service-area--home-remodeling-renton/section_manifest.json ordered_sections[03-local-guidance].content via loadManifest(); no transcription from image refs.",
+      "frame": "03-local-guidance",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/DirectoryMapList.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition directory-map-list-composition; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#03-local-guidance",
+      "asset_roles": [
+        "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 03-local-guidance manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/1221004_deck 01.jpg",
-              "label": "Shared Capability Evidence",
-              "public_path": "/images/design/service-area--home-remodeling-renton/03-local-guidance-1221004-deck-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/service-area--home-remodeling-renton/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "03-local-guidance-1221004-deck-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 03-local-guidance; the image does not imply a city-specific project, result, or location."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 1 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "directory map/list composition",
-          "motif_role": "directory_coordinate",
-          "focal_point": "Start with the project details.",
-          "owner_statement": "Section-specific composition owner DirectoryMapList implements \"directory map/list composition\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The DirectoryMapListComposition owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "sage",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "local-guidance section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved sage field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "04-faq",
-      "section_name": "faq",
-      "composition": "faq-oversized-question-index-ledger",
-      "owner_component": "src/components/sections/compositions/FaqOversizedQuestionIndexLedger.tsx",
-      "owner_export": "FaqOversizedQuestionIndexLedger",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/service-area--home-remodeling-renton/section_manifest.json ordered_sections[04-faq].content via loadManifest(); no transcription from image refs.",
+      "frame": "04-faq",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/FaqOversizedQuestionIndexLedger.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition faq-oversized-question-index-ledger; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#04-faq",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 04-faq manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/service-area--home-remodeling-renton/extraction_plan.json",
-          "extract_regions": []
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "FAQ as oversized question index and ruled ledger",
-          "motif_role": "ledger_rule",
-          "focal_point": "Common questions from Renton homeowners.",
-          "owner_statement": "Section-specific composition owner FaqOversizedQuestionIndexLedger implements \"FAQ as oversized question index and ruled ledger\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The FaqOversizedQuestionIndexLedger owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "white",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "faq section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "05-estimate-cta",
-      "section_name": "estimate-cta",
-      "composition": "cta-centered-estimate-brief-peripheral-proof",
-      "owner_component": "src/components/sections/compositions/CtaCenteredEstimateBriefPeripheralProof.tsx",
-      "owner_export": "CtaCenteredEstimateBriefPeripheralProof",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/service-area--home-remodeling-renton/section_manifest.json ordered_sections[05-estimate-cta].content via loadManifest(); no transcription from image refs.",
+      "frame": "05-estimate-cta",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/CtaCenteredEstimateBriefPeripheralProof.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition cta-centered-estimate-brief-peripheral-proof; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#05-estimate-cta",
+      "asset_roles": [
+        "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+        "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 05-estimate-cta manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0125047_kitchen 01.jpg",
-              "label": "Project Evidence",
-              "public_path": "/images/design/service-area--home-remodeling-renton/05-estimate-cta-0125047-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0925012_bathroom 01.jpg",
-              "label": "Material Detail",
-              "public_path": "/images/design/service-area--home-remodeling-renton/05-estimate-cta-0925012-bathroom-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/service-area--home-remodeling-renton/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "05-estimate-cta-0125047-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 05-estimate-cta; the image does not imply a city-specific project, result, or location."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "05-estimate-cta-0925012-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 05-estimate-cta; the image does not imply a city-specific project, result, or location."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 2 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "centered estimate brief with peripheral proof",
-          "motif_role": "crop_mark",
-          "focal_point": "Request a Renton remodeling estimate.",
-          "owner_statement": "Section-specific composition owner CtaCenteredEstimateBriefPeripheralProof implements \"centered estimate brief with peripheral proof\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The CtaCenteredEstimateBriefPeripheralProof owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "estimate-cta section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     }
   ]

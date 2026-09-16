@@ -15,11 +15,11 @@
     "location": "King and Pierce Counties, Washington",
     "phone": "253-216-2633",
     "email": "workorders@tubroconstruction.com",
-    "hours": "Monday–Friday, 7:00 a.m.–4:00 p.m.",
+    "hours": "Monday\u2013Friday, 7:00 a.m.\u20134:00 p.m.",
     "since": "Founded in 2010",
     "brand_color_from_logo": "#0C883D",
     "palette_guidance": "Lock the real logo green #0C883D and near-black #231F20. Favor bright warm whites, restrained construction neutrals, and authentic wood/stone tones from client project photography. No invented cyan identity, washed-out gradients, stock indigo, or dominant orange discount styling.",
-    "voice": "Professional, warm, plainspoken, confident, and respectful of the homeowner’s investment.",
+    "voice": "Professional, warm, plainspoken, confident, and respectful of the homeowner\u2019s investment.",
     "identity_belief": "A remodel earns trust when homeowners can see the work, understand the path, and know who is accountable from estimate through completion.",
     "visual_metaphor": "A continuous measured construction line travels through the page like a chalk line or plan mark, joining finished spaces, project stages, and the next clear decision.",
     "taglines": [
@@ -67,7 +67,7 @@
       "composition": "hero-contact-ledger",
       "composition_grammar": "contact-first hero organized as a ruled contact ledger",
       "motif_role": "ledger_rule",
-      "focal_point": "Let’s Talk About Your Project",
+      "focal_point": "Let\u2019s Talk About Your Project",
       "eye_path": "Start at the contact-first hero organized as a ruled contact ledger, follow the measured ledger rule, then move through copy, evidence, and action.",
       "weight": "loud",
       "background": "surface",
@@ -75,7 +75,7 @@
       "prompt": "prompts/01-hero.md",
       "content": {
         "eyebrow": "Contact Tubro Construction",
-        "headline": "Let’s Talk About Your Project",
+        "headline": "Let\u2019s Talk About Your Project",
         "body": "Call, email, or send a project question during Tubro's listed office hours.",
         "bullets": [
           "Phone 253-216-2633",
@@ -346,5 +346,22 @@
       "Authentic supplied Tubro photography is used as capability or project evidence without invented facts.",
       "No generated projects, stock imagery, fake people, global nav, or footer appear in refs."
     ]
-  }
+  },
+  "required_sections": [
+    {
+      "id": "01-hero"
+    },
+    {
+      "id": "02-contact-options"
+    },
+    {
+      "id": "03-hours-service-area"
+    },
+    {
+      "id": "04-contact-form"
+    },
+    {
+      "id": "05-service-links"
+    }
+  ]
 }

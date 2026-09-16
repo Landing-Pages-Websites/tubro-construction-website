@@ -15,11 +15,11 @@
     "location": "King and Pierce Counties, Washington",
     "phone": "253-216-2633",
     "email": "workorders@tubroconstruction.com",
-    "hours": "Monday–Friday, 7:00 a.m.–4:00 p.m.",
+    "hours": "Monday\u2013Friday, 7:00 a.m.\u20134:00 p.m.",
     "since": "Founded in 2010",
     "brand_color_from_logo": "#0C883D",
     "palette_guidance": "Lock the real logo green #0C883D and near-black #231F20. Favor bright warm whites, restrained construction neutrals, and authentic wood/stone tones from client project photography. No invented cyan identity, washed-out gradients, stock indigo, or dominant orange discount styling.",
-    "voice": "Professional, warm, plainspoken, confident, and respectful of the homeowner’s investment.",
+    "voice": "Professional, warm, plainspoken, confident, and respectful of the homeowner\u2019s investment.",
     "identity_belief": "A remodel earns trust when homeowners can see the work, understand the path, and know who is accountable from estimate through completion.",
     "visual_metaphor": "A continuous measured construction line travels through the page like a chalk line or plan mark, joining finished spaces, project stages, and the next clear decision.",
     "taglines": [
@@ -175,11 +175,11 @@
         "headline": "Names and roles for the project team.",
         "body": "The team section gives visitors a clear view of the people listed in Tubro's current company information.",
         "bullets": [
-          "Rich Tietjen — Owner",
-          "Chris Sparks — Project Manager",
-          "Scott Griggs, Brandon Provence, and Chris Sparks Jr. — Project Superintendents",
-          "Jon Horner — Estimator",
-          "Tom Hite — Director of Bids and Proposals"
+          "Rich Tietjen \u2014 Owner",
+          "Chris Sparks \u2014 Project Manager",
+          "Scott Griggs, Brandon Provence, and Chris Sparks Jr. \u2014 Project Superintendents",
+          "Jon Horner \u2014 Estimator",
+          "Tom Hite \u2014 Director of Bids and Proposals"
         ],
         "steps": [],
         "cta": "",
@@ -366,5 +366,22 @@
       "Authentic supplied Tubro photography is used as capability or project evidence without invented facts.",
       "No generated projects, stock imagery, fake people, global nav, or footer appear in refs."
     ]
-  }
+  },
+  "required_sections": [
+    {
+      "id": "01-hero"
+    },
+    {
+      "id": "02-company-story"
+    },
+    {
+      "id": "03-team"
+    },
+    {
+      "id": "04-how-we-work-veteran-owned"
+    },
+    {
+      "id": "05-estimate-cta"
+    }
+  ]
 }

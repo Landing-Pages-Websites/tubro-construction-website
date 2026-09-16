@@ -1,310 +1,142 @@
 {
-  "route": "/recent-projects",
-  "slug": "recent-projects",
-  "generated_by": "scripts/generate-build-artifacts.mjs",
+  "version": 1,
   "sections": [
     {
-      "section_id": "01-hero",
-      "section_name": "hero",
-      "composition": "hero-headline-over-photo-quiet-zone",
-      "owner_component": "src/components/sections/compositions/HeroHeadlineOverPhotoQuietZone.tsx",
-      "owner_export": "HeroHeadlineOverPhotoQuietZone",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/recent-projects/section_manifest.json ordered_sections[01-hero].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0125047_kitchen 01.jpg",
-              "label": "Kitchen Remodeling",
-              "public_path": "/images/design/recent-projects/01-hero-0125047-kitchen-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/recent-projects/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "01-hero-0125047-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Start with proof rather than a service pitch.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
-            }
-          ]
-        },
-        "composition": {
-          "grammar": "headline-over-photo hero with a protected quiet zone",
-          "motif_role": "datum",
-          "focal_point": "Recent Remodeling Projects",
-          "owner_statement": "Section-specific composition owner HeroHeadlineOverPhotoQuietZone implements \"headline-over-photo hero with a protected quiet zone\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "hero section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "02-realwork-labs-portfolio",
-      "section_name": "realwork-labs-portfolio",
-      "composition": "gallery-asymmetric-masonry-project-ledger",
-      "owner_component": "src/components/sections/compositions/GalleryAsymmetricMasonryProjectLedger.tsx",
-      "owner_export": "GalleryAsymmetricMasonryProjectLedger",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/recent-projects/section_manifest.json ordered_sections[02-realwork-labs-portfolio].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0125047_kitchen 01.jpg",
-              "label": "Kitchen Remodeling",
-              "public_path": "/images/design/recent-projects/02-realwork-labs-portfolio-0125047-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0125065_kitchen 01.jpg",
-              "label": "Kitchen Project Photo",
-              "public_path": "/images/design/recent-projects/02-realwork-labs-portfolio-0125065-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0126001_kitchen 01.jpg",
-              "label": "Bathroom Remodeling",
-              "public_path": "/images/design/recent-projects/02-realwork-labs-portfolio-0126001-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0925012_bathroom 01.jpg",
-              "label": "Bathroom Renovation",
-              "public_path": "/images/design/recent-projects/02-realwork-labs-portfolio-0925012-bathroom-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0126030_bathroom 01.jpg",
-              "label": "Deck & Outdoor Living",
-              "public_path": "/images/design/recent-projects/02-realwork-labs-portfolio-0126030-bathroom-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0128008_bathroom 01.jpg",
-              "label": "Exterior Paint",
-              "public_path": "/images/design/recent-projects/02-realwork-labs-portfolio-0128008-bathroom-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/recent-projects/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "02-realwork-labs-portfolio-0125047-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Make the portfolio wall the dominant content surface.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "02-realwork-labs-portfolio-0125065-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro kitchen project photo evidence for Make the portfolio wall the dominant content surface.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Kitchen Project Photo'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-3",
-              "asset_file": "02-realwork-labs-portfolio-0126001-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Make the portfolio wall the dominant content surface.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Bathroom Remodeling'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-4",
-              "asset_file": "02-realwork-labs-portfolio-0925012-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro bathroom renovation evidence for Make the portfolio wall the dominant content surface.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Bathroom Renovation'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-5",
-              "asset_file": "02-realwork-labs-portfolio-0126030-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Make the portfolio wall the dominant content surface.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-6",
-              "asset_file": "02-realwork-labs-portfolio-0128008-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro exterior paint evidence for Make the portfolio wall the dominant content surface.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Exterior Paint'; crop and section ownership remain route-specific."
-            }
-          ]
-        },
-        "composition": {
-          "grammar": "asymmetric masonry/project ledger",
-          "motif_role": "crop_mark",
-          "focal_point": "The work is the proof.",
-          "owner_statement": "Section-specific composition owner GalleryAsymmetricMasonryProjectLedger implements \"asymmetric masonry/project ledger\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "ink",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "realwork-labs-portfolio section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "03-filters-review-proof",
-      "section_name": "filters-review-proof",
-      "composition": "gallery-horizontal-filmstrip-evidence-band",
-      "owner_component": "src/components/sections/compositions/GalleryHorizontalFilmstripEvidenceBand.tsx",
-      "owner_export": "GalleryHorizontalFilmstripEvidenceBand",
-      "client_islands": [
-        "src/components/sections/compositions/FilterableFilmstrip.tsx"
+      "frame": "01-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/HeroHeadlineOverPhotoQuietZone.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition hero-headline-over-photo-quiet-zone; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#01-hero",
+      "asset_roles": [
+        "Provide authentic Tubro kitchen remodeling evidence for Start with proof rather than a service pitch."
       ],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/recent-projects/section_manifest.json ordered_sections[03-filters-review-proof].content via loadManifest(); no transcription from image refs.",
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 01-hero manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0125065_kitchen 01.jpg",
-              "label": "Kitchen",
-              "public_path": "/images/design/recent-projects/03-filters-review-proof-0125065-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0126001_kitchen 01.jpg",
-              "label": "Bath",
-              "public_path": "/images/design/recent-projects/03-filters-review-proof-0126001-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0925012_bathroom 01.jpg",
-              "label": "Deck",
-              "public_path": "/images/design/recent-projects/03-filters-review-proof-0925012-bathroom-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0126030_bathroom 01.jpg",
-              "label": "Paint",
-              "public_path": "/images/design/recent-projects/03-filters-review-proof-0126030-bathroom-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0128008_bathroom 01.jpg",
-              "label": "Exterior",
-              "public_path": "/images/design/recent-projects/03-filters-review-proof-0128008-bathroom-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/recent-projects/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "03-filters-review-proof-0125065-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro kitchen evidence for Turn filters into a contact-sheet evidence band.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Kitchen'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "03-filters-review-proof-0126001-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro bath evidence for Turn filters into a contact-sheet evidence band.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Bath'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-3",
-              "asset_file": "03-filters-review-proof-0925012-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro deck evidence for Turn filters into a contact-sheet evidence band.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Deck'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-4",
-              "asset_file": "03-filters-review-proof-0126030-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro paint evidence for Turn filters into a contact-sheet evidence band.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Paint'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-5",
-              "asset_file": "03-filters-review-proof-0128008-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro exterior evidence for Turn filters into a contact-sheet evidence band.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Exterior'; crop and section ownership remain route-specific."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 1 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "horizontal filmstrip or contact-sheet evidence band",
-          "motif_role": "datum",
-          "focal_point": "Find projects by service type.",
-          "owner_statement": "Section-specific composition owner GalleryHorizontalFilmstripEvidenceBand implements \"horizontal filmstrip or contact-sheet evidence band\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The HeroHeadlineOverPhotoQuietZone owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "white",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "filters-review-proof section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "04-estimate-cta",
-      "section_name": "estimate-cta",
-      "composition": "cta-centered-estimate-brief-peripheral-proof",
-      "owner_component": "src/components/sections/compositions/CtaCenteredEstimateBriefPeripheralProof.tsx",
-      "owner_export": "CtaCenteredEstimateBriefPeripheralProof",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/recent-projects/section_manifest.json ordered_sections[04-estimate-cta].content via loadManifest(); no transcription from image refs.",
+      "frame": "02-realwork-labs-portfolio",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/GalleryAsymmetricMasonryProjectLedger.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition gallery-asymmetric-masonry-project-ledger; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#02-realwork-labs-portfolio",
+      "asset_roles": [
+        "Provide authentic Tubro kitchen remodeling evidence for Make the portfolio wall the dominant content surface.",
+        "Provide authentic Tubro kitchen project photo evidence for Make the portfolio wall the dominant content surface.",
+        "Provide authentic Tubro bathroom remodeling evidence for Make the portfolio wall the dominant content surface.",
+        "Provide authentic Tubro bathroom renovation evidence for Make the portfolio wall the dominant content surface.",
+        "Provide authentic Tubro deck & outdoor living evidence for Make the portfolio wall the dominant content surface.",
+        "Provide authentic Tubro exterior paint evidence for Make the portfolio wall the dominant content surface."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 02-realwork-labs-portfolio manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0126030_bathroom 01.jpg",
-              "label": "Project Evidence",
-              "public_path": "/images/design/recent-projects/04-estimate-cta-0126030-bathroom-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0128008_bathroom 01.jpg",
-              "label": "Material Detail",
-              "public_path": "/images/design/recent-projects/04-estimate-cta-0128008-bathroom-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/recent-projects/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "04-estimate-cta-0126030-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Project Evidence'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "04-estimate-cta-0128008-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Material Detail'; crop and section ownership remain route-specific."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 6 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "centered estimate brief with peripheral proof",
-          "motif_role": "crop_mark",
-          "focal_point": "Ready to discuss your project?",
-          "owner_statement": "Section-specific composition owner CtaCenteredEstimateBriefPeripheralProof implements \"centered estimate brief with peripheral proof\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The GalleryAsymmetricMasonryProjectLedger owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "estimate-cta section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved ink field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "03-filters-review-proof",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/GalleryHorizontalFilmstripEvidenceBand.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition gallery-horizontal-filmstrip-evidence-band; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#03-filters-review-proof",
+      "asset_roles": [
+        "Provide authentic Tubro kitchen evidence for Turn filters into a contact-sheet evidence band.",
+        "Provide authentic Tubro bath evidence for Turn filters into a contact-sheet evidence band.",
+        "Provide authentic Tubro deck evidence for Turn filters into a contact-sheet evidence band.",
+        "Provide authentic Tubro paint evidence for Turn filters into a contact-sheet evidence band.",
+        "Provide authentic Tubro exterior evidence for Turn filters into a contact-sheet evidence band."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 03-filters-review-proof manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 5 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The GalleryHorizontalFilmstripEvidenceBand owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "04-estimate-cta",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/CtaCenteredEstimateBriefPeripheralProof.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition cta-centered-estimate-brief-peripheral-proof; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#04-estimate-cta",
+      "asset_roles": [
+        "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+        "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 04-estimate-cta manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 2 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The CtaCenteredEstimateBriefPeripheralProof owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     }
   ]

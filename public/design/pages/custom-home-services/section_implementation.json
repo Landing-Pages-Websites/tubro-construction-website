@@ -1,277 +1,169 @@
 {
-  "route": "/custom-home-services",
-  "slug": "custom-home-services",
-  "generated_by": "scripts/generate-build-artifacts.mjs",
+  "version": 1,
   "sections": [
     {
-      "section_id": "01-hero",
-      "section_name": "hero",
-      "composition": "hero-typographic-manifesto-proof-rail",
-      "owner_component": "src/components/sections/compositions/HeroTypographicManifestoProofRail.tsx",
-      "owner_export": "HeroTypographicManifestoProofRail",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/custom-home-services/section_manifest.json ordered_sections[01-hero].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0426023_exterior paint 01.jpg",
-              "label": "Exterior Paint",
-              "public_path": "/images/design/custom-home-services/01-hero-0426023-exterior-paint-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/1221004_deck 01.jpg",
-              "label": "Deck & Outdoor Living",
-              "public_path": "/images/design/custom-home-services/01-hero-1221004-deck-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0825017_ext stain 01.jpeg",
-              "label": "Exterior Materials",
-              "public_path": "/images/design/custom-home-services/01-hero-0825017-ext-stain-01-jpeg.jpeg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/custom-home-services/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "01-hero-0426023-exterior-paint-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro exterior paint evidence for Open with a planning manifesto and narrow proof rail, separate from the general-contractor hero.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Exterior Paint'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "01-hero-1221004-deck-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Open with a planning manifesto and narrow proof rail, separate from the general-contractor hero.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-3",
-              "asset_file": "01-hero-0825017-ext-stain-01-jpeg.jpeg",
-              "narrative_job": "Provide authentic Tubro exterior materials evidence for Open with a planning manifesto and narrow proof rail, separate from the general-contractor hero.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Exterior Materials'; crop and section ownership remain route-specific."
-            }
-          ]
-        },
-        "composition": {
-          "grammar": "typographic manifesto hero with a narrow photographic proof rail",
-          "motif_role": "ledger_rule",
-          "focal_point": "A Custom Home Shaped Around You",
-          "owner_statement": "Section-specific composition owner HeroTypographicManifestoProofRail implements \"typographic manifesto hero with a narrow photographic proof rail\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "hero section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "02-planning-design-build",
-      "section_name": "planning-design-build",
-      "composition": "content-editorial-index-toc",
-      "owner_component": "src/components/sections/compositions/ContentEditorialIndexToc.tsx",
-      "owner_export": "ContentEditorialIndexToc",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/custom-home-services/section_manifest.json ordered_sections[02-planning-design-build].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/custom-home-services/extraction_plan.json",
-          "extract_regions": []
-        },
-        "composition": {
-          "grammar": "editorial index/table-of-contents composition",
-          "motif_role": "ledger_rule",
-          "focal_point": "Custom-home conversations start with fit, scope, and decisions.",
-          "owner_statement": "Section-specific composition owner ContentEditorialIndexToc implements \"editorial index/table-of-contents composition\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "white",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "planning-design-build section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "03-construction-management",
-      "section_name": "construction-management",
-      "composition": "process-vertical-milestone-spine",
-      "owner_component": "src/components/sections/compositions/ProcessVerticalMilestoneSpine.tsx",
-      "owner_export": "ProcessVerticalMilestoneSpine",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/custom-home-services/section_manifest.json ordered_sections[03-construction-management].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/custom-home-services/extraction_plan.json",
-          "extract_regions": []
-        },
-        "composition": {
-          "grammar": "vertical milestone/process spine",
-          "motif_role": "process_route",
-          "focal_point": "Make the build path accountable before construction starts.",
-          "owner_statement": "Section-specific composition owner ProcessVerticalMilestoneSpine implements \"vertical milestone/process spine\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "sage",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "construction-management section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "04-project-gallery-faq",
-      "section_name": "project-gallery-faq",
-      "composition": "gallery-asymmetric-masonry-project-ledger",
-      "owner_component": "src/components/sections/compositions/GalleryAsymmetricMasonryProjectLedger.tsx",
-      "owner_export": "GalleryAsymmetricMasonryProjectLedger",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/custom-home-services/section_manifest.json ordered_sections[04-project-gallery-faq].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0426023_exterior paint 01.jpg",
-              "label": "Exterior Paint",
-              "public_path": "/images/design/custom-home-services/04-project-gallery-faq-0426023-exterior-paint-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/1221004_deck 01.jpg",
-              "label": "Deck & Outdoor Living",
-              "public_path": "/images/design/custom-home-services/04-project-gallery-faq-1221004-deck-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0825017_ext stain 01.jpeg",
-              "label": "Exterior Stain & Materials",
-              "public_path": "/images/design/custom-home-services/04-project-gallery-faq-0825017-ext-stain-01-jpeg.jpeg"
-            },
-            {
-              "source": "sources/drive/0524016_deck 02.jpg",
-              "label": "Kitchen Remodeling",
-              "public_path": "/images/design/custom-home-services/04-project-gallery-faq-0524016-deck-02-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/custom-home-services/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "04-project-gallery-faq-0426023-exterior-paint-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro exterior paint evidence for Bring broad project evidence in as an asymmetric ledger.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Exterior Paint'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "04-project-gallery-faq-1221004-deck-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Bring broad project evidence in as an asymmetric ledger.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-3",
-              "asset_file": "04-project-gallery-faq-0825017-ext-stain-01-jpeg.jpeg",
-              "narrative_job": "Provide authentic Tubro exterior stain & materials evidence for Bring broad project evidence in as an asymmetric ledger.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Exterior Stain & Materials'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-4",
-              "asset_file": "04-project-gallery-faq-0524016-deck-02-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Bring broad project evidence in as an asymmetric ledger.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
-            }
-          ]
-        },
-        "composition": {
-          "grammar": "asymmetric masonry/project ledger",
-          "motif_role": "crop_mark",
-          "focal_point": "Residential work gives the planning conversation context.",
-          "owner_statement": "Section-specific composition owner GalleryAsymmetricMasonryProjectLedger implements \"asymmetric masonry/project ledger\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "ink",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "project-gallery-faq section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "05-estimate-cta",
-      "section_name": "estimate-cta",
-      "composition": "form-overlay-on-photo-material-field",
-      "owner_component": "src/components/sections/compositions/FormOverlayOnPhotoMaterialField.tsx",
-      "owner_export": "FormOverlayOnPhotoMaterialField",
-      "client_islands": [
-        "src/components/sections/LeadForm.tsx"
+      "frame": "01-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/HeroTypographicManifestoProofRail.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition hero-typographic-manifesto-proof-rail; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#01-hero",
+      "asset_roles": [
+        "Provide authentic Tubro exterior paint evidence for Open with a planning manifesto and narrow proof rail, separate from the general-contractor hero.",
+        "Provide authentic Tubro deck & outdoor living evidence for Open with a planning manifesto and narrow proof rail, separate from the general-contractor hero.",
+        "Provide authentic Tubro exterior materials evidence for Open with a planning manifesto and narrow proof rail, separate from the general-contractor hero."
       ],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/custom-home-services/section_manifest.json ordered_sections[05-estimate-cta].content via loadManifest(); no transcription from image refs.",
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 01-hero manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/1221004_deck 01.jpg",
-              "label": "Project Evidence",
-              "public_path": "/images/design/custom-home-services/05-estimate-cta-1221004-deck-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/custom-home-services/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "05-estimate-cta-1221004-deck-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Project Evidence'; crop and section ownership remain route-specific."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 3 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "form overlay on a photo/material field",
-          "motif_role": "dimension_bracket",
-          "focal_point": "Start planning the custom-home conversation.",
-          "owner_statement": "Section-specific composition owner FormOverlayOnPhotoMaterialField implements \"form overlay on a photo/material field\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The HeroTypographicManifestoProofRail owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "estimate-cta section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "02-planning-design-build",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ContentEditorialIndexToc.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition content-editorial-index-toc; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#02-planning-design-build",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 02-planning-design-build manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The ContentEditorialIndexToc owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "03-construction-management",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ProcessVerticalMilestoneSpine.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition process-vertical-milestone-spine; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#03-construction-management",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 03-construction-management manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The ProcessVerticalMilestoneSpine owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved sage field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "04-project-gallery-faq",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/GalleryAsymmetricMasonryProjectLedger.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition gallery-asymmetric-masonry-project-ledger; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#04-project-gallery-faq",
+      "asset_roles": [
+        "Provide authentic Tubro exterior paint evidence for Bring broad project evidence in as an asymmetric ledger.",
+        "Provide authentic Tubro deck & outdoor living evidence for Bring broad project evidence in as an asymmetric ledger.",
+        "Provide authentic Tubro exterior stain & materials evidence for Bring broad project evidence in as an asymmetric ledger.",
+        "Provide authentic Tubro kitchen remodeling evidence for Bring broad project evidence in as an asymmetric ledger."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 04-project-gallery-faq manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 4 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The GalleryAsymmetricMasonryProjectLedger owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved ink field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "05-estimate-cta",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/FormOverlayOnPhotoMaterialField.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition form-overlay-on-photo-material-field; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#05-estimate-cta",
+      "asset_roles": [
+        "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 05-estimate-cta manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 1 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The FormOverlayOnPhotoMaterialField owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     }
   ]

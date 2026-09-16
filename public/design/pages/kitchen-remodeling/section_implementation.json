@@ -1,299 +1,170 @@
 {
-  "route": "/kitchen-remodeling",
-  "slug": "kitchen-remodeling",
-  "generated_by": "scripts/generate-build-artifacts.mjs",
+  "version": 1,
   "sections": [
     {
-      "section_id": "01-hero",
-      "section_name": "hero",
-      "composition": "hero-architectural-stepped-split",
-      "owner_component": "src/components/sections/compositions/HeroArchitecturalSteppedSplit.tsx",
-      "owner_export": "HeroArchitecturalSteppedSplit",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/kitchen-remodeling/section_manifest.json ordered_sections[01-hero].content via loadManifest(); no transcription from image refs.",
+      "frame": "01-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/HeroArchitecturalSteppedSplit.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition hero-architectural-stepped-split; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#01-hero",
+      "asset_roles": [
+        "Provide authentic Tubro kitchen remodeling evidence for Frame the kitchen as a stepped planning space with image scale first.",
+        "Provide authentic Tubro kitchen layout evidence for Frame the kitchen as a stepped planning space with image scale first."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 01-hero manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0125047_kitchen 01.jpg",
-              "label": "Kitchen Remodeling",
-              "public_path": "/images/design/kitchen-remodeling/01-hero-0125047-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0125065_kitchen 01.jpg",
-              "label": "Kitchen Layout",
-              "public_path": "/images/design/kitchen-remodeling/01-hero-0125065-kitchen-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/kitchen-remodeling/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "01-hero-0125047-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Frame the kitchen as a stepped planning space with image scale first.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "01-hero-0125065-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro kitchen layout evidence for Frame the kitchen as a stepped planning space with image scale first.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Kitchen Layout'; crop and section ownership remain route-specific."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 2 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "architectural split hero with a non-50/50 stepped boundary",
-          "motif_role": "dimension_bracket",
-          "focal_point": "A Kitchen Designed for Real Life",
-          "owner_statement": "Section-specific composition owner HeroArchitecturalSteppedSplit implements \"architectural split hero with a non-50/50 stepped boundary\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The HeroArchitecturalSteppedSplit owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "hero section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "02-project-gallery",
-      "section_name": "project-gallery",
-      "composition": "gallery-room-scale-single-focal-detail-strip",
-      "owner_component": "src/components/sections/compositions/GalleryRoomScaleSingleFocalDetailStrip.tsx",
-      "owner_export": "GalleryRoomScaleSingleFocalDetailStrip",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/kitchen-remodeling/section_manifest.json ordered_sections[02-project-gallery].content via loadManifest(); no transcription from image refs.",
+      "frame": "02-project-gallery",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/GalleryRoomScaleSingleFocalDetailStrip.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition gallery-room-scale-single-focal-detail-strip; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#02-project-gallery",
+      "asset_roles": [
+        "Provide authentic Tubro kitchen remodeling evidence for Let one room-scale photo carry the section while details support it.",
+        "Provide authentic Tubro storage detail evidence for Let one room-scale photo carry the section while details support it.",
+        "Provide authentic Tubro kitchen layout evidence for Let one room-scale photo carry the section while details support it.",
+        "Provide authentic Tubro finish reference evidence for Let one room-scale photo carry the section while details support it.",
+        "Provide authentic Tubro kitchen project photo evidence for Let one room-scale photo carry the section while details support it."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 02-project-gallery manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0125047_kitchen 01.jpg",
-              "label": "Kitchen Remodeling",
-              "public_path": "/images/design/kitchen-remodeling/02-project-gallery-0125047-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0125065_kitchen 01.jpg",
-              "label": "Storage Detail",
-              "public_path": "/images/design/kitchen-remodeling/02-project-gallery-0125065-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0126001_kitchen 01.jpg",
-              "label": "Kitchen Layout",
-              "public_path": "/images/design/kitchen-remodeling/02-project-gallery-0126001-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0325011_kitchen 02.jpg",
-              "label": "Finish Reference",
-              "public_path": "/images/design/kitchen-remodeling/02-project-gallery-0325011-kitchen-02-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/1124003_kitchen 02.jpeg",
-              "label": "Kitchen Project Photo",
-              "public_path": "/images/design/kitchen-remodeling/02-project-gallery-1124003-kitchen-02-jpeg.jpeg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/kitchen-remodeling/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "02-project-gallery-0125047-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Let one room-scale photo carry the section while details support it.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "02-project-gallery-0125065-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro storage detail evidence for Let one room-scale photo carry the section while details support it.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Storage Detail'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-3",
-              "asset_file": "02-project-gallery-0126001-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro kitchen layout evidence for Let one room-scale photo carry the section while details support it.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Kitchen Layout'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-4",
-              "asset_file": "02-project-gallery-0325011-kitchen-02-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro finish reference evidence for Let one room-scale photo carry the section while details support it.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Finish Reference'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-5",
-              "asset_file": "02-project-gallery-1124003-kitchen-02-jpeg.jpeg",
-              "narrative_job": "Provide authentic Tubro kitchen project photo evidence for Let one room-scale photo carry the section while details support it.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Kitchen Project Photo'; crop and section ownership remain route-specific."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 5 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "room-scale gallery as one oversized focal image plus a detail strip",
-          "motif_role": "crop_mark",
-          "focal_point": "Kitchen work should be seen at room scale.",
-          "owner_statement": "Section-specific composition owner GalleryRoomScaleSingleFocalDetailStrip implements \"room-scale gallery as one oversized focal image plus a detail strip\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The GalleryRoomScaleSingleFocalDetailStrip owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "white",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "project-gallery section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "03-planning-details",
-      "section_name": "planning-details",
-      "composition": "content-annotated-material-callouts",
-      "owner_component": "src/components/sections/compositions/ContentAnnotatedMaterialCallouts.tsx",
-      "owner_export": "ContentAnnotatedMaterialCallouts",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/kitchen-remodeling/section_manifest.json ordered_sections[03-planning-details].content via loadManifest(); no transcription from image refs.",
+      "frame": "03-planning-details",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ContentAnnotatedMaterialCallouts.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition content-annotated-material-callouts; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#03-planning-details",
+      "asset_roles": [
+        "Provide authentic Tubro kitchen detail evidence for Annotate practical kitchen decisions directly against a real project photo."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 03-planning-details manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0126001_kitchen 01.jpg",
-              "label": "Kitchen Detail",
-              "public_path": "/images/design/kitchen-remodeling/03-planning-details-0126001-kitchen-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/kitchen-remodeling/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "03-planning-details-0126001-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro kitchen detail evidence for Annotate practical kitchen decisions directly against a real project photo.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Kitchen Detail'; crop and section ownership remain route-specific."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 1 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "alternating annotated details and material callout layout",
-          "motif_role": "crop_mark",
-          "focal_point": "Plan circulation, storage, island use, and finishes together.",
-          "owner_statement": "Section-specific composition owner ContentAnnotatedMaterialCallouts implements \"alternating annotated details and material callout layout\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The ContentAnnotatedMaterialCallouts owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "white",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "planning-details section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "04-process-faq",
-      "section_name": "process-faq",
-      "composition": "process-compact-numbered-strip",
-      "owner_component": "src/components/sections/compositions/ProcessCompactNumberedStrip.tsx",
-      "owner_export": "ProcessCompactNumberedStrip",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/kitchen-remodeling/section_manifest.json ordered_sections[04-process-faq].content via loadManifest(); no transcription from image refs.",
+      "frame": "04-process-faq",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ProcessCompactNumberedStrip.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition process-compact-numbered-strip; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#04-process-faq",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 04-process-faq manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/kitchen-remodeling/extraction_plan.json",
-          "extract_regions": []
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "compact numbered process strip",
-          "motif_role": "process_route",
-          "focal_point": "Know what comes next before demolition starts.",
-          "owner_statement": "Section-specific composition owner ProcessCompactNumberedStrip implements \"compact numbered process strip\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The ProcessCompactNumberedStrip owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "sage",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "process-faq section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved sage field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "05-estimate-cta",
-      "section_name": "estimate-cta",
-      "composition": "cta-centered-estimate-brief-peripheral-proof",
-      "owner_component": "src/components/sections/compositions/CtaCenteredEstimateBriefPeripheralProof.tsx",
-      "owner_export": "CtaCenteredEstimateBriefPeripheralProof",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/kitchen-remodeling/section_manifest.json ordered_sections[05-estimate-cta].content via loadManifest(); no transcription from image refs.",
+      "frame": "05-estimate-cta",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/CtaCenteredEstimateBriefPeripheralProof.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition cta-centered-estimate-brief-peripheral-proof; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#05-estimate-cta",
+      "asset_roles": [
+        "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+        "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 05-estimate-cta manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0325011_kitchen 02.jpg",
-              "label": "Project Evidence",
-              "public_path": "/images/design/kitchen-remodeling/05-estimate-cta-0325011-kitchen-02-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/1124003_kitchen 02.jpeg",
-              "label": "Material Detail",
-              "public_path": "/images/design/kitchen-remodeling/05-estimate-cta-1124003-kitchen-02-jpeg.jpeg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/kitchen-remodeling/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "05-estimate-cta-0325011-kitchen-02-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Project Evidence'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "05-estimate-cta-1124003-kitchen-02-jpeg.jpeg",
-              "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Material Detail'; crop and section ownership remain route-specific."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 2 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "centered estimate brief with peripheral proof",
-          "motif_role": "crop_mark",
-          "focal_point": "Start the kitchen estimate conversation.",
-          "owner_statement": "Section-specific composition owner CtaCenteredEstimateBriefPeripheralProof implements \"centered estimate brief with peripheral proof\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The CtaCenteredEstimateBriefPeripheralProof owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "estimate-cta section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     }
   ]

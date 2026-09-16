@@ -1,220 +1,165 @@
 {
-  "route": "/schedule-an-estimate",
-  "slug": "schedule-an-estimate",
-  "generated_by": "scripts/generate-build-artifacts.mjs",
+  "version": 1,
   "sections": [
     {
-      "section_id": "01-hero",
-      "section_name": "hero",
-      "composition": "hero-centered-estimate-brief",
-      "owner_component": "src/components/sections/compositions/HeroCenteredEstimateBrief.tsx",
-      "owner_export": "HeroCenteredEstimateBrief",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/schedule-an-estimate/section_manifest.json ordered_sections[01-hero].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0125047_kitchen 01.jpg",
-              "label": "Kitchen Remodeling",
-              "public_path": "/images/design/schedule-an-estimate/01-hero-0125047-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0925012_bathroom 01.jpg",
-              "label": "Bathroom Remodeling",
-              "public_path": "/images/design/schedule-an-estimate/01-hero-0925012-bathroom-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/schedule-an-estimate/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "01-hero-0125047-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Make the estimate brief the first visual object.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /schedule-an-estimate for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "01-hero-0925012-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Make the estimate brief the first visual object.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /schedule-an-estimate for the distinct narrative job 'Bathroom Remodeling'; crop and section ownership remain route-specific."
-            }
-          ]
-        },
-        "composition": {
-          "grammar": "centered estimate brief hero with peripheral proof images",
-          "motif_role": "dimension_bracket",
-          "focal_point": "Tell Us What You’re Planning",
-          "owner_statement": "Section-specific composition owner HeroCenteredEstimateBrief implements \"centered estimate brief hero with peripheral proof images\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "hero section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "02-qualification-guidance",
-      "section_name": "qualification-guidance",
-      "composition": "content-editorial-index-toc",
-      "owner_component": "src/components/sections/compositions/ContentEditorialIndexToc.tsx",
-      "owner_export": "ContentEditorialIndexToc",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/schedule-an-estimate/section_manifest.json ordered_sections[02-qualification-guidance].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/schedule-an-estimate/extraction_plan.json",
-          "extract_regions": []
-        },
-        "composition": {
-          "grammar": "editorial index/table-of-contents composition",
-          "motif_role": "ledger_rule",
-          "focal_point": "The right details make follow-up useful.",
-          "owner_statement": "Section-specific composition owner ContentEditorialIndexToc implements \"editorial index/table-of-contents composition\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "white",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "qualification-guidance section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "03-estimate-form",
-      "section_name": "estimate-form",
-      "composition": "form-overlay-on-photo-material-field",
-      "owner_component": "src/components/sections/compositions/FormOverlayOnPhotoMaterialField.tsx",
-      "owner_export": "FormOverlayOnPhotoMaterialField",
-      "client_islands": [
-        "src/components/sections/LeadForm.tsx"
+      "frame": "01-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/HeroCenteredEstimateBrief.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition hero-centered-estimate-brief; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#01-hero",
+      "asset_roles": [
+        "Provide authentic Tubro kitchen remodeling evidence for Make the estimate brief the first visual object.",
+        "Provide authentic Tubro bathroom remodeling evidence for Make the estimate brief the first visual object."
       ],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/schedule-an-estimate/section_manifest.json ordered_sections[03-estimate-form].content via loadManifest(); no transcription from image refs.",
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 01-hero manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0125047_kitchen 01.jpg",
-              "label": "Kitchen Remodeling",
-              "public_path": "/images/design/schedule-an-estimate/03-estimate-form-0125047-kitchen-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/schedule-an-estimate/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "03-estimate-form-0125047-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Use the form overlay as the work-order surface.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /schedule-an-estimate for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 2 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "form overlay on a photo/material field",
-          "motif_role": "dimension_bracket",
-          "focal_point": "Request a free estimate.",
-          "owner_statement": "Section-specific composition owner FormOverlayOnPhotoMaterialField implements \"form overlay on a photo/material field\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The HeroCenteredEstimateBrief owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "estimate-form section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "04-what-happens-next",
-      "section_name": "what-happens-next",
-      "composition": "process-compact-numbered-strip",
-      "owner_component": "src/components/sections/compositions/ProcessCompactNumberedStrip.tsx",
-      "owner_export": "ProcessCompactNumberedStrip",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/schedule-an-estimate/section_manifest.json ordered_sections[04-what-happens-next].content via loadManifest(); no transcription from image refs.",
+      "frame": "02-qualification-guidance",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ContentEditorialIndexToc.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition content-editorial-index-toc; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#02-qualification-guidance",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 02-qualification-guidance manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/schedule-an-estimate/extraction_plan.json",
-          "extract_regions": []
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "compact numbered process strip",
-          "motif_role": "process_route",
-          "focal_point": "Know what happens after you send it.",
-          "owner_statement": "Section-specific composition owner ProcessCompactNumberedStrip implements \"compact numbered process strip\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The ContentEditorialIndexToc owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "sage",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "what-happens-next section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "05-phone-option",
-      "section_name": "phone-option",
-      "composition": "hero-contact-ledger",
-      "owner_component": "src/components/sections/compositions/HeroContactLedger.tsx",
-      "owner_export": "HeroContactLedger",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/schedule-an-estimate/section_manifest.json ordered_sections[05-phone-option].content via loadManifest(); no transcription from image refs.",
+      "frame": "03-estimate-form",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/FormOverlayOnPhotoMaterialField.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition form-overlay-on-photo-material-field; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#03-estimate-form",
+      "asset_roles": [
+        "Provide authentic Tubro kitchen remodeling evidence for Use the form overlay as the work-order surface."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 03-estimate-form manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/schedule-an-estimate/extraction_plan.json",
-          "extract_regions": []
+          "status": "PASS",
+          "evidence": "All 1 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "contact-first hero organized as a ruled contact ledger",
-          "motif_role": "ledger_rule",
-          "focal_point": "Prefer to talk first?",
-          "owner_statement": "Section-specific composition owner HeroContactLedger implements \"contact-first hero organized as a ruled contact ledger\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The FormOverlayOnPhotoMaterialField owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "white",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "phone-option section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "04-what-happens-next",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ProcessCompactNumberedStrip.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition process-compact-numbered-strip; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#04-what-happens-next",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 04-what-happens-next manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The ProcessCompactNumberedStrip owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved sage field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "05-phone-option",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/HeroContactLedger.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition hero-contact-ledger; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#05-phone-option",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 05-phone-option manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The HeroContactLedger owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     }
   ]

@@ -1,332 +1,173 @@
 {
-  "route": "/interior-exterior-painting",
-  "slug": "interior-exterior-painting",
-  "generated_by": "scripts/generate-build-artifacts.mjs",
+  "version": 1,
   "sections": [
     {
-      "section_id": "01-hero",
-      "section_name": "hero",
-      "composition": "hero-image-led-collage-marginal-copy",
-      "owner_component": "src/components/sections/compositions/HeroImageLedCollageMarginalCopy.tsx",
-      "owner_export": "HeroImageLedCollageMarginalCopy",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/interior-exterior-painting/section_manifest.json ordered_sections[01-hero].content via loadManifest(); no transcription from image refs.",
+      "frame": "01-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/HeroImageLedCollageMarginalCopy.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition hero-image-led-collage-marginal-copy; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#01-hero",
+      "asset_roles": [
+        "Provide authentic Tubro exterior paint evidence for Make the service read through surfaces and exterior evidence rather than a standard service hero.",
+        "Provide authentic Tubro exterior stain evidence for Make the service read through surfaces and exterior evidence rather than a standard service hero.",
+        "Provide authentic Tubro deck surface evidence for Make the service read through surfaces and exterior evidence rather than a standard service hero."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 01-hero manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0426023_exterior paint 01.jpg",
-              "label": "Exterior Paint",
-              "public_path": "/images/design/interior-exterior-painting/01-hero-0426023-exterior-paint-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/1221004_deck 01.jpg",
-              "label": "Exterior Stain",
-              "public_path": "/images/design/interior-exterior-painting/01-hero-1221004-deck-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0825017_ext stain 01.jpeg",
-              "label": "Deck Surface",
-              "public_path": "/images/design/interior-exterior-painting/01-hero-0825017-ext-stain-01-jpeg.jpeg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/interior-exterior-painting/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "01-hero-0426023-exterior-paint-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro exterior paint evidence for Make the service read through surfaces and exterior evidence rather than a standard service hero.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Exterior Paint'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "01-hero-1221004-deck-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro exterior stain evidence for Make the service read through surfaces and exterior evidence rather than a standard service hero.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Exterior Stain'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-3",
-              "asset_file": "01-hero-0825017-ext-stain-01-jpeg.jpeg",
-              "narrative_job": "Provide authentic Tubro deck surface evidence for Make the service read through surfaces and exterior evidence rather than a standard service hero.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Deck Surface'; crop and section ownership remain route-specific."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 3 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "image-led collage hero with small marginal copy",
-          "motif_role": "crop_mark",
-          "focal_point": "A Cleaner Finish, Inside and Out",
-          "owner_statement": "Section-specific composition owner HeroImageLedCollageMarginalCopy implements \"image-led collage hero with small marginal copy\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The HeroImageLedCollageMarginalCopy owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "white",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "hero section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "02-interior-exterior",
-      "section_name": "interior-exterior",
-      "composition": "content-surface-color-field-photo-proof",
-      "owner_component": "src/components/sections/compositions/ContentSurfaceColorFieldPhotoProof.tsx",
-      "owner_export": "ContentSurfaceColorFieldPhotoProof",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/interior-exterior-painting/section_manifest.json ordered_sections[02-interior-exterior].content via loadManifest(); no transcription from image refs.",
+      "frame": "02-interior-exterior",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ContentSurfaceColorFieldPhotoProof.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition content-surface-color-field-photo-proof; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#02-interior-exterior",
+      "asset_roles": [
+        "Provide authentic Tubro exterior paint evidence for Use color fields from the approved palette as surface structure, with real photos as proof.",
+        "Provide authentic Tubro exterior stain & materials evidence for Use color fields from the approved palette as surface structure, with real photos as proof.",
+        "Provide authentic Tubro deck & outdoor living evidence for Use color fields from the approved palette as surface structure, with real photos as proof."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 02-interior-exterior manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0426023_exterior paint 01.jpg",
-              "label": "Exterior Paint",
-              "public_path": "/images/design/interior-exterior-painting/02-interior-exterior-0426023-exterior-paint-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/1221004_deck 01.jpg",
-              "label": "Exterior Stain & Materials",
-              "public_path": "/images/design/interior-exterior-painting/02-interior-exterior-1221004-deck-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0825017_ext stain 01.jpeg",
-              "label": "Deck & Outdoor Living",
-              "public_path": "/images/design/interior-exterior-painting/02-interior-exterior-0825017-ext-stain-01-jpeg.jpeg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/interior-exterior-painting/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "02-interior-exterior-0426023-exterior-paint-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro exterior paint evidence for Use color fields from the approved palette as surface structure, with real photos as proof.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Exterior Paint'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "02-interior-exterior-1221004-deck-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro exterior stain & materials evidence for Use color fields from the approved palette as surface structure, with real photos as proof.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Exterior Stain & Materials'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-3",
-              "asset_file": "02-interior-exterior-0825017-ext-stain-01-jpeg.jpeg",
-              "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Use color fields from the approved palette as surface structure, with real photos as proof.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 3 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "surface/color-field grammar anchored by real photos",
-          "motif_role": "datum",
-          "focal_point": "Painting is part of the broader residential construction system.",
-          "owner_statement": "Section-specific composition owner ContentSurfaceColorFieldPhotoProof implements \"surface/color-field grammar anchored by real photos\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The ContentSurfaceColorFieldPhotoProof owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "white",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "interior-exterior section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "03-preparation-process",
-      "section_name": "preparation-process",
-      "composition": "process-compact-numbered-strip",
-      "owner_component": "src/components/sections/compositions/ProcessCompactNumberedStrip.tsx",
-      "owner_export": "ProcessCompactNumberedStrip",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/interior-exterior-painting/section_manifest.json ordered_sections[03-preparation-process].content via loadManifest(); no transcription from image refs.",
+      "frame": "03-preparation-process",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ProcessCompactNumberedStrip.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition process-compact-numbered-strip; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#03-preparation-process",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 03-preparation-process manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/interior-exterior-painting/extraction_plan.json",
-          "extract_regions": []
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "compact numbered process strip",
-          "motif_role": "process_route",
-          "focal_point": "Prep, quote, and finish expectations need clear sequencing.",
-          "owner_statement": "Section-specific composition owner ProcessCompactNumberedStrip implements \"compact numbered process strip\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The ProcessCompactNumberedStrip owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "sage",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "preparation-process section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved sage field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "04-project-gallery-faq",
-      "section_name": "project-gallery-faq",
-      "composition": "gallery-horizontal-filmstrip-evidence-band",
-      "owner_component": "src/components/sections/compositions/GalleryHorizontalFilmstripEvidenceBand.tsx",
-      "owner_export": "GalleryHorizontalFilmstripEvidenceBand",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/interior-exterior-painting/section_manifest.json ordered_sections[04-project-gallery-faq].content via loadManifest(); no transcription from image refs.",
+      "frame": "04-project-gallery-faq",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/GalleryHorizontalFilmstripEvidenceBand.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition gallery-horizontal-filmstrip-evidence-band; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#04-project-gallery-faq",
+      "asset_roles": [
+        "Provide authentic Tubro exterior paint evidence for Use a filmstrip evidence band so painting has its own proof rhythm.",
+        "Provide authentic Tubro deck & outdoor living evidence for Use a filmstrip evidence band so painting has its own proof rhythm.",
+        "Provide authentic Tubro exterior stain evidence for Use a filmstrip evidence band so painting has its own proof rhythm.",
+        "Provide authentic Tubro deck detail evidence for Use a filmstrip evidence band so painting has its own proof rhythm.",
+        "Provide authentic Tubro material exterior evidence for Use a filmstrip evidence band so painting has its own proof rhythm."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 04-project-gallery-faq manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0426023_exterior paint 01.jpg",
-              "label": "Exterior Paint",
-              "public_path": "/images/design/interior-exterior-painting/04-project-gallery-faq-0426023-exterior-paint-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/1221004_deck 01.jpg",
-              "label": "Deck & Outdoor Living",
-              "public_path": "/images/design/interior-exterior-painting/04-project-gallery-faq-1221004-deck-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0825017_ext stain 01.jpeg",
-              "label": "Exterior Stain",
-              "public_path": "/images/design/interior-exterior-painting/04-project-gallery-faq-0825017-ext-stain-01-jpeg.jpeg"
-            },
-            {
-              "source": "sources/drive/0524016_deck 02.jpg",
-              "label": "Deck Detail",
-              "public_path": "/images/design/interior-exterior-painting/04-project-gallery-faq-0524016-deck-02-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0425021_exterior stain 01.jpg",
-              "label": "Material Exterior",
-              "public_path": "/images/design/interior-exterior-painting/04-project-gallery-faq-0425021-exterior-stain-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/interior-exterior-painting/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "04-project-gallery-faq-0426023-exterior-paint-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro exterior paint evidence for Use a filmstrip evidence band so painting has its own proof rhythm.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Exterior Paint'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "04-project-gallery-faq-1221004-deck-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Use a filmstrip evidence band so painting has its own proof rhythm.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-3",
-              "asset_file": "04-project-gallery-faq-0825017-ext-stain-01-jpeg.jpeg",
-              "narrative_job": "Provide authentic Tubro exterior stain evidence for Use a filmstrip evidence band so painting has its own proof rhythm.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Exterior Stain'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-4",
-              "asset_file": "04-project-gallery-faq-0524016-deck-02-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro deck detail evidence for Use a filmstrip evidence band so painting has its own proof rhythm.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Deck Detail'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-5",
-              "asset_file": "04-project-gallery-faq-0425021-exterior-stain-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro material exterior evidence for Use a filmstrip evidence band so painting has its own proof rhythm.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Material Exterior'; crop and section ownership remain route-specific."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 5 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "horizontal filmstrip or contact-sheet evidence band",
-          "motif_role": "datum",
-          "focal_point": "Exterior photos support quote confidence.",
-          "owner_statement": "Section-specific composition owner GalleryHorizontalFilmstripEvidenceBand implements \"horizontal filmstrip or contact-sheet evidence band\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The GalleryHorizontalFilmstripEvidenceBand owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "ink",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "project-gallery-faq section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved ink field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "05-estimate-cta",
-      "section_name": "estimate-cta",
-      "composition": "cta-centered-estimate-brief-peripheral-proof",
-      "owner_component": "src/components/sections/compositions/CtaCenteredEstimateBriefPeripheralProof.tsx",
-      "owner_export": "CtaCenteredEstimateBriefPeripheralProof",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/interior-exterior-painting/section_manifest.json ordered_sections[05-estimate-cta].content via loadManifest(); no transcription from image refs.",
+      "frame": "05-estimate-cta",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/CtaCenteredEstimateBriefPeripheralProof.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition cta-centered-estimate-brief-peripheral-proof; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#05-estimate-cta",
+      "asset_roles": [
+        "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+        "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 05-estimate-cta manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/1221004_deck 01.jpg",
-              "label": "Project Evidence",
-              "public_path": "/images/design/interior-exterior-painting/05-estimate-cta-1221004-deck-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0825017_ext stain 01.jpeg",
-              "label": "Material Detail",
-              "public_path": "/images/design/interior-exterior-painting/05-estimate-cta-0825017-ext-stain-01-jpeg.jpeg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/interior-exterior-painting/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "05-estimate-cta-1221004-deck-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Project Evidence'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "05-estimate-cta-0825017-ext-stain-01-jpeg.jpeg",
-              "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Material Detail'; crop and section ownership remain route-specific."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 2 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "centered estimate brief with peripheral proof",
-          "motif_role": "crop_mark",
-          "focal_point": "Request a painting quote.",
-          "owner_statement": "Section-specific composition owner CtaCenteredEstimateBriefPeripheralProof implements \"centered estimate brief with peripheral proof\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The CtaCenteredEstimateBriefPeripheralProof owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "estimate-cta section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     }
   ]

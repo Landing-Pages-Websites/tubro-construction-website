@@ -1,242 +1,167 @@
 {
-  "route": "/general-contractor",
-  "slug": "general-contractor",
-  "generated_by": "scripts/generate-build-artifacts.mjs",
+  "version": 1,
   "sections": [
     {
-      "section_id": "01-hero",
-      "section_name": "hero",
-      "composition": "hero-cinematic-image-field-inset-slab",
-      "owner_component": "src/components/sections/compositions/HeroCinematicImageFieldInsetSlab.tsx",
-      "owner_export": "HeroCinematicImageFieldInsetSlab",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/general-contractor/section_manifest.json ordered_sections[01-hero].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0426023_exterior paint 01.jpg",
-              "label": "Exterior Paint",
-              "public_path": "/images/design/general-contractor/01-hero-0426023-exterior-paint-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/general-contractor/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "01-hero-0426023-exterior-paint-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro exterior paint evidence for Open with whole-project authority through a cinematic evidence field.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /general-contractor for the distinct narrative job 'Exterior Paint'; crop and section ownership remain route-specific."
-            }
-          ]
-        },
-        "composition": {
-          "grammar": "cinematic image-field hero with an inset editorial copy slab",
-          "motif_role": "crop_mark",
-          "focal_point": "One Experienced Team for the Whole Project",
-          "owner_statement": "Section-specific composition owner HeroCinematicImageFieldInsetSlab implements \"cinematic image-field hero with an inset editorial copy slab\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "hero section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "02-scope-index",
-      "section_name": "scope-index",
-      "composition": "content-editorial-index-toc",
-      "owner_component": "src/components/sections/compositions/ContentEditorialIndexToc.tsx",
-      "owner_export": "ContentEditorialIndexToc",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/general-contractor/section_manifest.json ordered_sections[02-scope-index].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/general-contractor/extraction_plan.json",
-          "extract_regions": []
-        },
-        "composition": {
-          "grammar": "editorial index/table-of-contents composition",
-          "motif_role": "ledger_rule",
-          "focal_point": "One team can carry more of the residential scope.",
-          "owner_statement": "Section-specific composition owner ContentEditorialIndexToc implements \"editorial index/table-of-contents composition\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "surface",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "scope-index section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "03-project-proof",
-      "section_name": "project-proof",
-      "composition": "gallery-asymmetric-masonry-project-ledger",
-      "owner_component": "src/components/sections/compositions/GalleryAsymmetricMasonryProjectLedger.tsx",
-      "owner_export": "GalleryAsymmetricMasonryProjectLedger",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/general-contractor/section_manifest.json ordered_sections[03-project-proof].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/1221004_deck 01.jpg",
-              "label": "Deck & Outdoor Living",
-              "public_path": "/images/design/general-contractor/03-project-proof-1221004-deck-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0825017_ext stain 01.jpeg",
-              "label": "Exterior Stain & Materials",
-              "public_path": "/images/design/general-contractor/03-project-proof-0825017-ext-stain-01-jpeg.jpeg"
-            },
-            {
-              "source": "sources/drive/0524016_deck 02.jpg",
-              "label": "Deck Detail",
-              "public_path": "/images/design/general-contractor/03-project-proof-0524016-deck-02-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0425021_exterior stain 01.jpg",
-              "label": "Exterior Materials",
-              "public_path": "/images/design/general-contractor/03-project-proof-0425021-exterior-stain-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/general-contractor/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "03-project-proof-1221004-deck-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Vary scale with project evidence before the process section.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /general-contractor for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "03-project-proof-0825017-ext-stain-01-jpeg.jpeg",
-              "narrative_job": "Provide authentic Tubro exterior stain & materials evidence for Vary scale with project evidence before the process section.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /general-contractor for the distinct narrative job 'Exterior Stain & Materials'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-3",
-              "asset_file": "03-project-proof-0524016-deck-02-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro deck detail evidence for Vary scale with project evidence before the process section.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /general-contractor for the distinct narrative job 'Deck Detail'; crop and section ownership remain route-specific."
-            },
-            {
-              "id": "photo-4",
-              "asset_file": "03-project-proof-0425021-exterior-stain-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro exterior materials evidence for Vary scale with project evidence before the process section.",
-              "reuse_intent": "The approved reference deliberately reuses this authentic source within /general-contractor for the distinct narrative job 'Exterior Materials'; crop and section ownership remain route-specific."
-            }
-          ]
-        },
-        "composition": {
-          "grammar": "asymmetric masonry/project ledger",
-          "motif_role": "crop_mark",
-          "focal_point": "Residential work shown by service type.",
-          "owner_statement": "Section-specific composition owner GalleryAsymmetricMasonryProjectLedger implements \"asymmetric masonry/project ledger\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "ink",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "project-proof section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "04-process-faq",
-      "section_name": "process-faq",
-      "composition": "process-staggered-path",
-      "owner_component": "src/components/sections/compositions/ProcessStaggeredPath.tsx",
-      "owner_export": "ProcessStaggeredPath",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/general-contractor/section_manifest.json ordered_sections[04-process-faq].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/general-contractor/extraction_plan.json",
-          "extract_regions": []
-        },
-        "composition": {
-          "grammar": "staggered process path, not four equal columns",
-          "motif_role": "process_route",
-          "focal_point": "Clear scope before construction starts.",
-          "owner_statement": "Section-specific composition owner ProcessStaggeredPath implements \"staggered process path, not four equal columns\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "sage",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "process-faq section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "05-estimate-cta",
-      "section_name": "estimate-cta",
-      "composition": "form-split-with-narrow-contact-ledger",
-      "owner_component": "src/components/sections/compositions/FormSplitWithNarrowContactLedger.tsx",
-      "owner_export": "FormSplitWithNarrowContactLedger",
-      "client_islands": [
-        "src/components/sections/LeadForm.tsx"
+      "frame": "01-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/HeroCinematicImageFieldInsetSlab.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition hero-cinematic-image-field-inset-slab; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#01-hero",
+      "asset_roles": [
+        "Provide authentic Tubro exterior paint evidence for Open with whole-project authority through a cinematic evidence field."
       ],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/general-contractor/section_manifest.json ordered_sections[05-estimate-cta].content via loadManifest(); no transcription from image refs.",
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 01-hero manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/general-contractor/extraction_plan.json",
-          "extract_regions": []
+          "status": "PASS",
+          "evidence": "All 1 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "split form with narrow contact ledger",
-          "motif_role": "ledger_rule",
-          "focal_point": "Tell us what you are planning.",
-          "owner_statement": "Section-specific composition owner FormSplitWithNarrowContactLedger implements \"split form with narrow contact ledger\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The HeroCinematicImageFieldInsetSlab owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "estimate-cta section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "02-scope-index",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ContentEditorialIndexToc.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition content-editorial-index-toc; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#02-scope-index",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 02-scope-index manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The ContentEditorialIndexToc owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "03-project-proof",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/GalleryAsymmetricMasonryProjectLedger.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition gallery-asymmetric-masonry-project-ledger; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#03-project-proof",
+      "asset_roles": [
+        "Provide authentic Tubro deck & outdoor living evidence for Vary scale with project evidence before the process section.",
+        "Provide authentic Tubro exterior stain & materials evidence for Vary scale with project evidence before the process section.",
+        "Provide authentic Tubro deck detail evidence for Vary scale with project evidence before the process section.",
+        "Provide authentic Tubro exterior materials evidence for Vary scale with project evidence before the process section."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 03-project-proof manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 4 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The GalleryAsymmetricMasonryProjectLedger owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved ink field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "04-process-faq",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ProcessStaggeredPath.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition process-staggered-path; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#04-process-faq",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 04-process-faq manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The ProcessStaggeredPath owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved sage field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "05-estimate-cta",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/FormSplitWithNarrowContactLedger.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition form-split-with-narrow-contact-ledger; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#05-estimate-cta",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 05-estimate-cta manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The FormSplitWithNarrowContactLedger owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     }
   ]

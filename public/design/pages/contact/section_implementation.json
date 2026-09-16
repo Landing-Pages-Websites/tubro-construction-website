@@ -1,183 +1,164 @@
 {
-  "route": "/contact",
-  "slug": "contact",
-  "generated_by": "scripts/generate-build-artifacts.mjs",
+  "version": 1,
   "sections": [
     {
-      "section_id": "01-hero",
-      "section_name": "hero",
-      "composition": "hero-contact-ledger",
-      "owner_component": "src/components/sections/compositions/HeroContactLedger.tsx",
-      "owner_export": "HeroContactLedger",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/contact/section_manifest.json ordered_sections[01-hero].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/contact/extraction_plan.json",
-          "extract_regions": []
-        },
-        "composition": {
-          "grammar": "contact-first hero organized as a ruled contact ledger",
-          "motif_role": "ledger_rule",
-          "focal_point": "Let’s Talk About Your Project",
-          "owner_statement": "Section-specific composition owner HeroContactLedger implements \"contact-first hero organized as a ruled contact ledger\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "hero section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "02-contact-options",
-      "section_name": "contact-options",
-      "composition": "content-editorial-index-toc",
-      "owner_component": "src/components/sections/compositions/ContentEditorialIndexToc.tsx",
-      "owner_export": "ContentEditorialIndexToc",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/contact/section_manifest.json ordered_sections[02-contact-options].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/contact/extraction_plan.json",
-          "extract_regions": []
-        },
-        "composition": {
-          "grammar": "editorial index/table-of-contents composition",
-          "motif_role": "ledger_rule",
-          "focal_point": "Choose the clearest contact path.",
-          "owner_statement": "Section-specific composition owner ContentEditorialIndexToc implements \"editorial index/table-of-contents composition\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "white",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "contact-options section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "03-hours-service-area",
-      "section_name": "hours-service-area",
-      "composition": "directory-map-list-composition",
-      "owner_component": "src/components/sections/compositions/DirectoryMapList.tsx",
-      "owner_export": "DirectoryMapList",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/contact/section_manifest.json ordered_sections[03-hours-service-area].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/contact/extraction_plan.json",
-          "extract_regions": []
-        },
-        "composition": {
-          "grammar": "directory map/list composition",
-          "motif_role": "directory_coordinate",
-          "focal_point": "Office hours and service-area context.",
-          "owner_statement": "Section-specific composition owner DirectoryMapList implements \"directory map/list composition\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "surface",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "hours-service-area section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "04-contact-form",
-      "section_name": "contact-form",
-      "composition": "form-split-with-narrow-contact-ledger",
-      "owner_component": "src/components/sections/compositions/FormSplitWithNarrowContactLedger.tsx",
-      "owner_export": "FormSplitWithNarrowContactLedger",
-      "client_islands": [
-        "src/components/sections/LeadForm.tsx"
+      "frame": "01-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/HeroContactLedger.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition hero-contact-ledger; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#01-hero",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
       ],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/contact/section_manifest.json ordered_sections[04-contact-form].content via loadManifest(); no transcription from image refs.",
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 01-hero manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/contact/extraction_plan.json",
-          "extract_regions": []
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "split form with narrow contact ledger",
-          "motif_role": "ledger_rule",
-          "focal_point": "Send a project question.",
-          "owner_statement": "Section-specific composition owner FormSplitWithNarrowContactLedger implements \"split form with narrow contact ledger\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The HeroContactLedger owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "sage",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "contact-form section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     },
     {
-      "section_id": "05-service-links",
-      "section_name": "service-links",
-      "composition": "content-editorial-index-toc",
-      "owner_component": "src/components/sections/compositions/ContentEditorialIndexToc.tsx",
-      "owner_export": "ContentEditorialIndexToc",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/contact/section_manifest.json ordered_sections[05-service-links].content via loadManifest(); no transcription from image refs.",
+      "frame": "02-contact-options",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ContentEditorialIndexToc.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition content-editorial-index-toc; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#02-contact-options",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 02-contact-options manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/contact/extraction_plan.json",
-          "extract_regions": []
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "editorial index/table-of-contents composition",
-          "motif_role": "ledger_rule",
-          "focal_point": "Route visitors to the next useful page.",
-          "owner_statement": "Section-specific composition owner ContentEditorialIndexToc implements \"editorial index/table-of-contents composition\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The ContentEditorialIndexToc owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "white",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "service-links section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "03-hours-service-area",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/DirectoryMapList.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition directory-map-list-composition; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#03-hours-service-area",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 03-hours-service-area manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The DirectoryMapListComposition owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "04-contact-form",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/FormSplitWithNarrowContactLedger.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition form-split-with-narrow-contact-ledger; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#04-contact-form",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 04-contact-form manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The FormSplitWithNarrowContactLedger owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved sage field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "05-service-links",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ContentEditorialIndexToc.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition content-editorial-index-toc; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#05-service-links",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 05-service-links manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The ContentEditorialIndexToc owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     }
   ]

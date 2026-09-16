@@ -1,312 +1,171 @@
 {
-  "route": "/service-area/home-remodeling-tacoma",
-  "slug": "service-area--home-remodeling-tacoma",
-  "generated_by": "scripts/generate-build-artifacts.mjs",
+  "version": 1,
   "sections": [
     {
-      "section_id": "01-local-hero",
-      "section_name": "local-hero",
-      "composition": "hero-typographic-manifesto-proof-rail",
-      "owner_component": "src/components/sections/compositions/HeroTypographicManifestoProofRail.tsx",
-      "owner_export": "HeroTypographicManifestoProofRail",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/service-area--home-remodeling-tacoma/section_manifest.json ordered_sections[01-local-hero].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0125047_kitchen 01.jpg",
-              "label": "Capability Evidence",
-              "public_path": "/images/design/service-area--home-remodeling-tacoma/01-local-hero-0125047-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0925012_bathroom 01.jpg",
-              "label": "Bathroom Remodeling",
-              "public_path": "/images/design/service-area--home-remodeling-tacoma/01-local-hero-0925012-bathroom-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/1221004_deck 01.jpg",
-              "label": "Deck & Outdoor Living",
-              "public_path": "/images/design/service-area--home-remodeling-tacoma/01-local-hero-1221004-deck-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/service-area--home-remodeling-tacoma/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "01-local-hero-0125047-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Tacoma service-area relevance without inventing city-specific project proof.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 01-local-hero; the image does not imply a city-specific project, result, or location."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "01-local-hero-0925012-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Tacoma service-area relevance without inventing city-specific project proof.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 01-local-hero; the image does not imply a city-specific project, result, or location."
-            },
-            {
-              "id": "photo-3",
-              "asset_file": "01-local-hero-1221004-deck-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Tacoma service-area relevance without inventing city-specific project proof.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 01-local-hero; the image does not imply a city-specific project, result, or location."
-            }
-          ]
-        },
-        "composition": {
-          "grammar": "typographic manifesto hero with a narrow photographic proof rail",
-          "motif_role": "ledger_rule",
-          "focal_point": "Home Remodeling in Tacoma, Washington",
-          "owner_statement": "Section-specific composition owner HeroTypographicManifestoProofRail implements \"typographic manifesto hero with a narrow photographic proof rail\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "local-hero section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "02-verified-local-scope",
-      "section_name": "verified-local-scope",
-      "composition": "gallery-horizontal-filmstrip-evidence-band",
-      "owner_component": "src/components/sections/compositions/GalleryHorizontalFilmstripEvidenceBand.tsx",
-      "owner_export": "GalleryHorizontalFilmstripEvidenceBand",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/service-area--home-remodeling-tacoma/section_manifest.json ordered_sections[02-verified-local-scope].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0125047_kitchen 01.jpg",
-              "label": "Capability Evidence",
-              "public_path": "/images/design/service-area--home-remodeling-tacoma/02-verified-local-scope-0125047-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0925012_bathroom 01.jpg",
-              "label": "Bathroom Remodeling",
-              "public_path": "/images/design/service-area--home-remodeling-tacoma/02-verified-local-scope-0925012-bathroom-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/1221004_deck 01.jpg",
-              "label": "Deck & Outdoor Living",
-              "public_path": "/images/design/service-area--home-remodeling-tacoma/02-verified-local-scope-1221004-deck-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0426023_exterior paint 01.jpg",
-              "label": "Exterior Paint",
-              "public_path": "/images/design/service-area--home-remodeling-tacoma/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0125065_kitchen 01.jpg",
-              "label": "Kitchen Remodeling",
-              "public_path": "/images/design/service-area--home-remodeling-tacoma/02-verified-local-scope-0125065-kitchen-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/service-area--home-remodeling-tacoma/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
-            },
-            {
-              "id": "photo-3",
-              "asset_file": "02-verified-local-scope-1221004-deck-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
-            },
-            {
-              "id": "photo-4",
-              "asset_file": "02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
-            },
-            {
-              "id": "photo-5",
-              "asset_file": "02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
-            }
-          ]
-        },
-        "composition": {
-          "grammar": "horizontal filmstrip or contact-sheet evidence band",
-          "motif_role": "datum",
-          "focal_point": "Remodeling services available in Tacoma.",
-          "owner_statement": "Section-specific composition owner GalleryHorizontalFilmstripEvidenceBand implements \"horizontal filmstrip or contact-sheet evidence band\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "white",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "verified-local-scope section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "03-local-guidance",
-      "section_name": "local-guidance",
-      "composition": "content-annotated-material-callouts",
-      "owner_component": "src/components/sections/compositions/ContentAnnotatedMaterialCallouts.tsx",
-      "owner_export": "ContentAnnotatedMaterialCallouts",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/service-area--home-remodeling-tacoma/section_manifest.json ordered_sections[03-local-guidance].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/1221004_deck 01.jpg",
-              "label": "Shared Capability Evidence",
-              "public_path": "/images/design/service-area--home-remodeling-tacoma/03-local-guidance-1221004-deck-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/service-area--home-remodeling-tacoma/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "03-local-guidance-1221004-deck-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 03-local-guidance; the image does not imply a city-specific project, result, or location."
-            }
-          ]
-        },
-        "composition": {
-          "grammar": "alternating annotated details and material callout layout",
-          "motif_role": "crop_mark",
-          "focal_point": "Start with the project details.",
-          "owner_statement": "Section-specific composition owner ContentAnnotatedMaterialCallouts implements \"alternating annotated details and material callout layout\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "sage",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "local-guidance section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "04-faq",
-      "section_name": "faq",
-      "composition": "faq-oversized-question-index-ledger",
-      "owner_component": "src/components/sections/compositions/FaqOversizedQuestionIndexLedger.tsx",
-      "owner_export": "FaqOversizedQuestionIndexLedger",
-      "client_islands": [],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/service-area--home-remodeling-tacoma/section_manifest.json ordered_sections[04-faq].content via loadManifest(); no transcription from image refs.",
-        "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [],
-          "reuse_intent_source": "design_assets/pages/service-area--home-remodeling-tacoma/extraction_plan.json",
-          "extract_regions": []
-        },
-        "composition": {
-          "grammar": "FAQ as oversized question index and ruled ledger",
-          "motif_role": "ledger_rule",
-          "focal_point": "Common questions from Tacoma homeowners.",
-          "owner_statement": "Section-specific composition owner FaqOversizedQuestionIndexLedger implements \"FAQ as oversized question index and ruled ledger\"; shared primitives supply mechanics only."
-        },
-        "visual_treatment": {
-          "band": "white",
-          "weight": "quiet",
-          "slot_contract": {
-            "container": "faq section composition owner",
-            "width_share": "live content owns the primary reading field",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "not applicable to code-only section",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
-        },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
-      }
-    },
-    {
-      "section_id": "05-estimate-cta",
-      "section_name": "estimate-cta",
-      "composition": "form-split-with-narrow-contact-ledger",
-      "owner_component": "src/components/sections/compositions/FormSplitWithNarrowContactLedger.tsx",
-      "owner_export": "FormSplitWithNarrowContactLedger",
-      "client_islands": [
-        "src/components/sections/LeadForm.tsx"
+      "frame": "01-local-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/HeroTypographicManifestoProofRail.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition hero-typographic-manifesto-proof-rail; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#01-local-hero",
+      "asset_roles": [
+        "Provide authentic Tubro capability evidence evidence for Confirm Tacoma service-area relevance without inventing city-specific project proof.",
+        "Provide authentic Tubro bathroom remodeling evidence for Confirm Tacoma service-area relevance without inventing city-specific project proof.",
+        "Provide authentic Tubro deck & outdoor living evidence for Confirm Tacoma service-area relevance without inventing city-specific project proof."
       ],
-      "evidence": {
-        "content": "Rendered verbatim from public/design/pages/service-area--home-remodeling-tacoma/section_manifest.json ordered_sections[05-estimate-cta].content via loadManifest(); no transcription from image refs.",
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 01-local-hero manifest content is loaded and rendered through its named owner."
+        },
         "imagery": {
-          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
-          "assets": [
-            {
-              "source": "sources/drive/0125047_kitchen 01.jpg",
-              "label": "Project Evidence",
-              "public_path": "/images/design/service-area--home-remodeling-tacoma/05-estimate-cta-0125047-kitchen-01-jpg.jpg"
-            },
-            {
-              "source": "sources/drive/0925012_bathroom 01.jpg",
-              "label": "Material Detail",
-              "public_path": "/images/design/service-area--home-remodeling-tacoma/05-estimate-cta-0925012-bathroom-01-jpg.jpg"
-            }
-          ],
-          "reuse_intent_source": "design_assets/pages/service-area--home-remodeling-tacoma/extraction_plan.json",
-          "extract_regions": [
-            {
-              "id": "photo-1",
-              "asset_file": "05-estimate-cta-0125047-kitchen-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 05-estimate-cta; the image does not imply a city-specific project, result, or location."
-            },
-            {
-              "id": "photo-2",
-              "asset_file": "05-estimate-cta-0925012-bathroom-01-jpg.jpg",
-              "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
-              "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 05-estimate-cta; the image does not imply a city-specific project, result, or location."
-            }
-          ]
+          "status": "PASS",
+          "evidence": "All 3 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
         },
         "composition": {
-          "grammar": "split form with narrow contact ledger",
-          "motif_role": "ledger_rule",
-          "focal_point": "Request a Tacoma remodeling estimate.",
-          "owner_statement": "Section-specific composition owner FormSplitWithNarrowContactLedger implements \"split form with narrow contact ledger\"; shared primitives supply mechanics only."
+          "status": "PASS",
+          "evidence": "The HeroTypographicManifestoProofRail owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
         },
         "visual_treatment": {
-          "band": "surface",
-          "weight": "loud",
-          "slot_contract": {
-            "container": "estimate-cta section composition owner",
-            "width_share": "dominant media follows the approved frame proportions",
-            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
-            "intended_crop": "retain complete focal room and its strongest architectural anchor",
-            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
-          }
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
         },
-        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "02-verified-local-scope",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/GalleryHorizontalFilmstripEvidenceBand.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition gallery-horizontal-filmstrip-evidence-band; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#02-verified-local-scope",
+      "asset_roles": [
+        "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+        "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+        "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+        "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+        "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 02-verified-local-scope manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 5 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The GalleryHorizontalFilmstripEvidenceBand owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "03-local-guidance",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ContentAnnotatedMaterialCallouts.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition content-annotated-material-callouts; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#03-local-guidance",
+      "asset_roles": [
+        "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 03-local-guidance manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 1 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The ContentAnnotatedMaterialCallouts owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved sage field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "04-faq",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/FaqOversizedQuestionIndexLedger.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition faq-oversized-question-index-ledger; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#04-faq",
+      "asset_roles": [
+        "code-only live semantic composition, typography, controls, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 04-faq manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 0 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The FaqOversizedQuestionIndexLedger owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved white field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
+      }
+    },
+    {
+      "frame": "05-estimate-cta",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/FormSplitWithNarrowContactLedger.tsx",
+      "shared_basis": "Approved frame and manifest specify the reusable named composition form-split-with-narrow-contact-ledger; this owner consumes route-specific content, assets, bands and crop contracts.",
+      "content_source": "section_manifest.json#05-estimate-cta",
+      "asset_roles": [
+        "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+        "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 05-estimate-cta manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "All 2 section-owned authentic client assets and approved crop roles are resolved; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The FormSplitWithNarrowContactLedger owner preserves the frame's focal hierarchy, eye path, quiet zones and motif relationship."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved surface field, Poppins/Fjalla hierarchy, green measured motif and image treatment are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "Desktop 1440\u00d7900 and mobile 390\u00d7844 captures preserve section order, hierarchy, crop and edge clearance without overflow."
+        }
       }
     }
   ]
