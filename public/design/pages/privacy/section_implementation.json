@@ -1,0 +1,42 @@
+{
+  "route": "/privacy",
+  "slug": "privacy",
+  "generated_by": "scripts/generate-build-artifacts.mjs",
+  "sections": [
+    {
+      "section_id": "01-policy-content",
+      "section_name": "policy-content",
+      "composition": "policy-editorial-document",
+      "owner_component": "src/components/sections/compositions/PolicyEditorialDocument.tsx",
+      "owner_export": "PolicyEditorialDocument",
+      "client_islands": [],
+      "evidence": {
+        "content": "Rendered verbatim from public/design/pages/privacy/section_manifest.json ordered_sections[01-policy-content].content via loadManifest(); no transcription from image refs.",
+        "imagery": {
+          "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied.",
+          "assets": [],
+          "reuse_intent_source": "design_assets/pages/privacy/extraction_plan.json",
+          "extract_regions": []
+        },
+        "composition": {
+          "grammar": "quiet policy/editorial document composition",
+          "motif_role": "ledger_rule",
+          "focal_point": "Privacy Policy",
+          "owner_statement": "Section-specific composition owner PolicyEditorialDocument implements \"quiet policy/editorial document composition\"; shared primitives supply mechanics only."
+        },
+        "visual_treatment": {
+          "band": "surface",
+          "weight": "quiet",
+          "slot_contract": {
+            "container": "policy-content section composition owner",
+            "width_share": "live content owns the primary reading field",
+            "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+            "intended_crop": "not applicable to code-only section",
+            "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+          }
+        },
+        "responsive": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      }
+    }
+  ]
+}

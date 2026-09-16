@@ -1,0 +1,370 @@
+{
+  "page": {
+    "slug": "service-areas",
+    "route": "/service-areas",
+    "title": "Home Remodeling Service Areas in Western Washington",
+    "intent": "commercial"
+  },
+  "selected_direction": "a - Measured Living",
+  "page_rhythm_family": "regional index and directory",
+  "service_area_archetype": null,
+  "brand": {
+    "name": "Tubro Construction",
+    "wordmark": "TUBRO CONSTRUCTION",
+    "logo_asset": "brand-assets/tc-logo.png",
+    "location": "King and Pierce Counties, Washington",
+    "phone": "253-216-2633",
+    "email": "workorders@tubroconstruction.com",
+    "hours": "Monday–Friday, 7:00 a.m.–4:00 p.m.",
+    "since": "Founded in 2010",
+    "brand_color_from_logo": "#0C883D",
+    "palette_guidance": "Lock the real logo green #0C883D and near-black #231F20. Favor bright warm whites, restrained construction neutrals, and authentic wood/stone tones from client project photography. No invented cyan identity, washed-out gradients, stock indigo, or dominant orange discount styling.",
+    "voice": "Professional, warm, plainspoken, confident, and respectful of the homeowner’s investment.",
+    "identity_belief": "A remodel earns trust when homeowners can see the work, understand the path, and know who is accountable from estimate through completion.",
+    "visual_metaphor": "A continuous measured construction line travels through the page like a chalk line or plan mark, joining finished spaces, project stages, and the next clear decision.",
+    "taglines": [
+      "Residential Remodeling, Built With Care",
+      "Built Around the Way You Want to Live"
+    ]
+  },
+  "hard_rules": [
+    "Use the real Tubro Construction logo asset as-is. Never redraw, restyle, re-letter, or reinterpret the logo; frames may use a neutral placeholder or plain wordmark only.",
+    "Use authentic supplied Tubro project photography before all generated or stock imagery. Never generate imagery that impersonates a completed client project.",
+    "No van-led hero. A branded vehicle may appear only as secondary brand context and is not required in these homepage refs.",
+    "No dark, boxy, heavy-card redesign; no generic centered service-card grid; no pill-heavy SaaS UI; no gradient text or generic gradient blobs.",
+    "No generic stock families, contractor portraits, invented team members, or generated named people.",
+    "No invented testimonials, ratings, awards, licenses, bonding, insurance, warranties, project counts, project locations, budgets, or timelines.",
+    "Keep the site clearly separate from Tubro Carpet Cleaning and Get Gawn; do not mention those businesses in customer-facing homepage copy.",
+    "Keep the 5% active-duty military and first-responder discount secondary to the free-estimate CTA. Do not add a deadline, urgency claim, or new terms.",
+    "Do not imply direct Buildertrend integration; form leads route to workorders@tubroconstruction.com and office staff enter leads manually.",
+    "Use location names naturally. No repetitive city-name stuffing or doorway-page language.",
+    "Every visual control must have a useful defined outcome. Otherwise render it as static content.",
+    "Design for desktop and mobile accessibility with strong contrast, clear labels, and visible focus intent.",
+    "Customer review and approval are required before public launch.",
+    "Frames cover CONTENT sections only; global nav/footer belong to the built design system and are never rendered into frames."
+  ],
+  "route_metadata": {
+    "target_terms": [
+      "home remodeling service areas King County",
+      "remodeling contractor Pierce County"
+    ],
+    "source": "inferred consolidation hub"
+  },
+  "source_constraints": [
+    "Manifest text wins for build copy.",
+    "Do not invent location-specific projects, team claims, ratings, licenses, timelines, project counts, addresses, or testimonials.",
+    "Use authentic supplied Tubro photography only as project/capability evidence described in this manifest."
+  ],
+  "ordered_sections": [
+    {
+      "id": "01-hero",
+      "name": "hero",
+      "source_blueprint_sections": [
+        "hero"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Introduce geography through a diagonal directory canvas.",
+      "composition": "hero-diagonal-cropped-service-area",
+      "composition_grammar": "diagonal/cropped service-area hero",
+      "motif_role": "directory_coordinate",
+      "focal_point": "Residential Remodeling Across King and Pierce Counties",
+      "eye_path": "Start at the diagonal/cropped service-area hero, follow the measured directory coordinate, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "surface",
+      "frame": "refs/01-hero.png",
+      "prompt": "prompts/01-hero.md",
+      "content": {
+        "eyebrow": "Home Remodeling Service Areas in Western Washington",
+        "headline": "Residential Remodeling Across King and Pierce Counties",
+        "body": "A regional hub for King and Pierce Counties, confirmed service cities, and office-reviewed out-of-area inquiries.",
+        "bullets": [],
+        "steps": [],
+        "cta": "Schedule a Free Estimate",
+        "secondary_cta": "Call 253-216-2633",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0125047_kitchen 01.jpg"
+        ],
+        "labels": [
+          "Kitchen Remodeling"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as diagonal/cropped service-area hero; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "02-county-overview",
+      "name": "county-overview",
+      "source_blueprint_sections": [
+        "county-overview"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Make the hub useful before listing city links.",
+      "composition": "content-editorial-index-toc",
+      "composition_grammar": "editorial index/table-of-contents composition",
+      "motif_role": "ledger_rule",
+      "focal_point": "A service-area hub for clear next steps.",
+      "eye_path": "Start at the editorial index/table-of-contents composition, follow the measured ledger rule, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "white",
+      "frame": "refs/02-county-overview.png",
+      "prompt": "prompts/02-county-overview.md",
+      "content": {
+        "eyebrow": "Home Remodeling Service Areas in Western Washington",
+        "headline": "A service-area hub for clear next steps.",
+        "body": "The hub explains the verified region, confirmed cities, and office-reviewed out-of-area inquiries.",
+        "bullets": [
+          "King and Pierce Counties",
+          "Confirmed service cities",
+          "Out-of-area inquiries receive office review"
+        ],
+        "steps": [],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [
+          "King County",
+          "Pierce County",
+          "Confirmed city pages",
+          "Office-reviewed out-of-area inquiries",
+          "Estimate request path"
+        ],
+        "options": []
+      },
+      "imagery": {
+        "sources": [],
+        "labels": [],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as editorial index/table-of-contents composition; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "03-city-directory",
+      "name": "city-directory",
+      "source_blueprint_sections": [
+        "city-directory"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Render the city list as a coordinate directory, not doorway copy.",
+      "composition": "directory-map-list-composition",
+      "composition_grammar": "directory map/list composition",
+      "motif_role": "directory_coordinate",
+      "focal_point": "Confirmed service cities.",
+      "eye_path": "Start at the directory map/list composition, follow the measured directory coordinate, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "surface",
+      "frame": "refs/03-city-directory.png",
+      "prompt": "prompts/03-city-directory.md",
+      "content": {
+        "eyebrow": "Home Remodeling Service Areas in Western Washington",
+        "headline": "Confirmed service cities.",
+        "body": "Find your city and move into the right local estimate path.",
+        "bullets": [],
+        "steps": [],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [
+          "Maple Valley",
+          "Tacoma",
+          "Covington",
+          "Renton",
+          "Kent",
+          "Auburn",
+          "Ravensdale",
+          "Enumclaw",
+          "Issaquah",
+          "Bellevue",
+          "Newcastle",
+          "Black Diamond",
+          "Fairwood",
+          "Sumner",
+          "Bonney Lake",
+          "Buckley",
+          "Snoqualmie",
+          "North Bend",
+          "Sammamish"
+        ],
+        "options": []
+      },
+      "imagery": {
+        "sources": [],
+        "labels": [],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as directory map/list composition; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "04-project-map-service-fit",
+      "name": "project-map-service-fit",
+      "source_blueprint_sections": [
+        "project-map",
+        "service-fit"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Use project imagery only as capability evidence while the office confirms fit.",
+      "composition": "content-image-as-canvas-editorial-quiet-area",
+      "composition_grammar": "image-as-canvas editorial section with a live-copy-safe quiet area",
+      "motif_role": "dimension_bracket",
+      "focal_point": "Project fit is confirmed through the office.",
+      "eye_path": "Start at the image-as-canvas editorial section with a live-copy-safe quiet area, follow the measured dimension bracket, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "sage",
+      "frame": "refs/04-project-map-service-fit.png",
+      "prompt": "prompts/04-project-map-service-fit.md",
+      "content": {
+        "eyebrow": "Home Remodeling Service Areas in Western Washington",
+        "headline": "Project fit is confirmed through the office.",
+        "body": "Out-of-area inquiries receive office review rather than automatic rejection.",
+        "bullets": [
+          "King and Pierce Counties",
+          "Confirmed city pages in sitemap order",
+          "Free estimate requests reviewed by the office team"
+        ],
+        "steps": [],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/1221004_deck 01.jpg"
+        ],
+        "labels": [
+          "Deck & Outdoor Living"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as image-as-canvas editorial section with a live-copy-safe quiet area; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "05-estimate-cta",
+      "name": "estimate-cta",
+      "source_blueprint_sections": [
+        "estimate-cta"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Convert qualified project interest into a useful office follow-up path.",
+      "composition": "cta-centered-estimate-brief-peripheral-proof",
+      "composition_grammar": "centered estimate brief with peripheral proof",
+      "motif_role": "crop_mark",
+      "focal_point": "Ask whether your project is in range.",
+      "eye_path": "Start at the centered estimate brief with peripheral proof, follow the measured crop mark, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "surface",
+      "frame": "refs/05-estimate-cta.png",
+      "prompt": "prompts/05-estimate-cta.md",
+      "content": {
+        "eyebrow": "Home Remodeling Service Areas in Western Washington",
+        "headline": "Ask whether your project is in range.",
+        "body": "Request a free estimate and give the team enough detail to start a useful conversation.",
+        "bullets": [
+          "Phone 253-216-2633",
+          "Monday-Friday 7:00 a.m.-4:00 p.m.",
+          "Form submissions route to workorders@tubroconstruction.com"
+        ],
+        "steps": [],
+        "cta": "Schedule a Free Estimate",
+        "secondary_cta": "",
+        "items": [],
+        "options": [
+          "Kitchen or bathroom remodel",
+          "Home addition or renovation",
+          "New construction or custom home",
+          "Painting",
+          "Other"
+        ]
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0125047_kitchen 01.jpg",
+          "sources/drive/0925012_bathroom 01.jpg"
+        ],
+        "labels": [
+          "Project Evidence",
+          "Material Detail"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [
+        "Do not promise automated scheduling or direct Buildertrend integration."
+      ],
+      "edge_contracts": {
+        "top": "Enter as centered estimate brief with peripheral proof; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    }
+  ],
+  "page_flow": {
+    "viewport_contract": {
+      "design_frame": "1536x864 primary composition",
+      "target_viewports": [
+        "1440x900",
+        "1536x1024",
+        "390x844"
+      ],
+      "rule": "Primary content is composed for the frame; global nav and footer are excluded from all rendered refs."
+    },
+    "section_weights": {
+      "01-hero": "loud",
+      "02-county-overview": "quiet",
+      "03-city-directory": "quiet",
+      "04-project-map-service-fit": "quiet",
+      "05-estimate-cta": "loud"
+    },
+    "background_progression": [
+      {
+        "section": "01-hero",
+        "band": "surface"
+      },
+      {
+        "section": "02-county-overview",
+        "band": "white"
+      },
+      {
+        "section": "03-city-directory",
+        "band": "surface"
+      },
+      {
+        "section": "04-project-map-service-fit",
+        "band": "sage"
+      },
+      {
+        "section": "05-estimate-cta",
+        "band": "surface"
+      }
+    ],
+    "composition_sequence": [
+      "hero-diagonal-cropped-service-area",
+      "content-editorial-index-toc",
+      "directory-map-list-composition",
+      "content-image-as-canvas-editorial-quiet-area",
+      "cta-centered-estimate-brief-peripheral-proof"
+    ],
+    "motif_continuity": "The approved measured-line vocabulary changes role by section: datum, crop mark, process route, ledger rule, directory coordinate, or dimension bracket.",
+    "rhythm_rules": [
+      "Every section records a design-owner composition ID.",
+      "Route rhythm changes by page purpose; page endings are not one repeated form frame.",
+      "Authentic supplied Tubro photography is used as capability or project evidence without invented facts.",
+      "No generated projects, stock imagery, fake people, global nav, or footer appear in refs."
+    ]
+  }
+}

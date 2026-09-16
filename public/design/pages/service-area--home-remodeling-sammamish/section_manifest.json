@@ -1,0 +1,405 @@
+{
+  "page": {
+    "slug": "service-area--home-remodeling-sammamish",
+    "route": "/service-area/home-remodeling-sammamish",
+    "title": "Home Remodeling in Sammamish, WA",
+    "intent": "transactional"
+  },
+  "selected_direction": "a - Measured Living",
+  "page_rhythm_family": "local-photo-canvas",
+  "service_area_archetype": "local-photo-canvas",
+  "brand": {
+    "name": "Tubro Construction",
+    "wordmark": "TUBRO CONSTRUCTION",
+    "logo_asset": "brand-assets/tc-logo.png",
+    "location": "King and Pierce Counties, Washington",
+    "phone": "253-216-2633",
+    "email": "workorders@tubroconstruction.com",
+    "hours": "Monday–Friday, 7:00 a.m.–4:00 p.m.",
+    "since": "Founded in 2010",
+    "brand_color_from_logo": "#0C883D",
+    "palette_guidance": "Lock the real logo green #0C883D and near-black #231F20. Favor bright warm whites, restrained construction neutrals, and authentic wood/stone tones from client project photography. No invented cyan identity, washed-out gradients, stock indigo, or dominant orange discount styling.",
+    "voice": "Professional, warm, plainspoken, confident, and respectful of the homeowner’s investment.",
+    "identity_belief": "A remodel earns trust when homeowners can see the work, understand the path, and know who is accountable from estimate through completion.",
+    "visual_metaphor": "A continuous measured construction line travels through the page like a chalk line or plan mark, joining finished spaces, project stages, and the next clear decision.",
+    "taglines": [
+      "Residential Remodeling, Built With Care",
+      "Built Around the Way You Want to Live"
+    ]
+  },
+  "hard_rules": [
+    "Use the real Tubro Construction logo asset as-is. Never redraw, restyle, re-letter, or reinterpret the logo; frames may use a neutral placeholder or plain wordmark only.",
+    "Use authentic supplied Tubro project photography before all generated or stock imagery. Never generate imagery that impersonates a completed client project.",
+    "No van-led hero. A branded vehicle may appear only as secondary brand context and is not required in these homepage refs.",
+    "No dark, boxy, heavy-card redesign; no generic centered service-card grid; no pill-heavy SaaS UI; no gradient text or generic gradient blobs.",
+    "No generic stock families, contractor portraits, invented team members, or generated named people.",
+    "No invented testimonials, ratings, awards, licenses, bonding, insurance, warranties, project counts, project locations, budgets, or timelines.",
+    "Keep the site clearly separate from Tubro Carpet Cleaning and Get Gawn; do not mention those businesses in customer-facing homepage copy.",
+    "Keep the 5% active-duty military and first-responder discount secondary to the free-estimate CTA. Do not add a deadline, urgency claim, or new terms.",
+    "Do not imply direct Buildertrend integration; form leads route to workorders@tubroconstruction.com and office staff enter leads manually.",
+    "Use location names naturally. No repetitive city-name stuffing or doorway-page language.",
+    "Every visual control must have a useful defined outcome. Otherwise render it as static content.",
+    "Design for desktop and mobile accessibility with strong contrast, clear labels, and visible focus intent.",
+    "Customer review and approval are required before public launch.",
+    "Frames cover CONTENT sections only; global nav/footer belong to the built design system and are never rendered into frames."
+  ],
+  "route_metadata": {
+    "target_terms": [
+      "home remodeling Sammamish WA",
+      "remodeling contractor Sammamish"
+    ],
+    "source": "current site; unique local evidence required"
+  },
+  "source_constraints": [
+    "Manifest text wins for build copy.",
+    "Do not invent location-specific projects, team claims, ratings, licenses, timelines, project counts, addresses, or testimonials.",
+    "Use authentic supplied Tubro photography only as project/capability evidence described in this manifest."
+  ],
+  "ordered_sections": [
+    {
+      "id": "01-local-hero",
+      "name": "local-hero",
+      "source_blueprint_sections": [
+        "local-hero"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Confirm Sammamish service-area relevance without inventing city-specific project proof.",
+      "composition": "hero-headline-over-photo-quiet-zone",
+      "composition_grammar": "headline-over-photo hero with a protected quiet zone",
+      "motif_role": "datum",
+      "focal_point": "Home Remodeling in Sammamish, Washington",
+      "eye_path": "Start at the headline-over-photo hero with a protected quiet zone, follow the measured datum, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "surface",
+      "frame": "refs/01-local-hero.png",
+      "prompt": "prompts/01-local-hero.md",
+      "content": {
+        "eyebrow": "Service area",
+        "headline": "Home Remodeling in Sammamish, Washington",
+        "body": "Sammamish is a confirmed service area. Homeowners can request estimates for Residential remodeling is in scope through Tubro Construction's office.",
+        "bullets": [
+          "Sammamish is a confirmed service area",
+          "Residential remodeling is in scope"
+        ],
+        "steps": [],
+        "cta": "Schedule a Free Estimate",
+        "secondary_cta": "Call 253-216-2633",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0125047_kitchen 01.jpg",
+          "sources/drive/0925012_bathroom 01.jpg",
+          "sources/drive/1221004_deck 01.jpg"
+        ],
+        "labels": [
+          "Capability Evidence",
+          "Bathroom Remodeling",
+          "Deck & Outdoor Living"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [
+        "No city-specific completed-project evidence is supplied in the current inventory; shared photos are shown only as Tubro capability evidence."
+      ],
+      "edge_contracts": {
+        "top": "Enter as headline-over-photo hero with a protected quiet zone; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "02-verified-local-scope",
+      "name": "verified-local-scope",
+      "source_blueprint_sections": [
+        "local-project-proof",
+        "services"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Show shared capability evidence while the copy stays honest about local proof limits.",
+      "composition": "content-image-as-canvas-editorial-quiet-area",
+      "composition_grammar": "image-as-canvas editorial section with a live-copy-safe quiet area",
+      "motif_role": "dimension_bracket",
+      "focal_point": "Remodeling services available in Sammamish.",
+      "eye_path": "Start at the image-as-canvas editorial section with a live-copy-safe quiet area, follow the measured dimension bracket, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "white",
+      "frame": "refs/02-verified-local-scope.png",
+      "prompt": "prompts/02-verified-local-scope.md",
+      "content": {
+        "eyebrow": "Home Remodeling in Sammamish, WA",
+        "headline": "Remodeling services available in Sammamish.",
+        "body": "Tubro qualifies each request by city, project type, and scope. The documented service set for this page includes Residential remodeling is in scope.",
+        "bullets": [
+          "Sammamish is a confirmed service area",
+          "Residential remodeling is in scope",
+          "Kitchen and bathroom remodeling inquiries",
+          "Renovation, addition, painting, deck, and custom-home questions",
+          "Free estimate requests reviewed by the office team"
+        ],
+        "steps": [],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [
+          "Kitchen or bathroom",
+          "Home addition or renovation",
+          "Painting",
+          "Deck or outdoor living",
+          "Custom-home question"
+        ],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0125047_kitchen 01.jpg",
+          "sources/drive/0925012_bathroom 01.jpg",
+          "sources/drive/1221004_deck 01.jpg",
+          "sources/drive/0426023_exterior paint 01.jpg",
+          "sources/drive/0125065_kitchen 01.jpg"
+        ],
+        "labels": [
+          "Capability Evidence",
+          "Bathroom Remodeling",
+          "Deck & Outdoor Living",
+          "Exterior Paint",
+          "Kitchen Remodeling"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [
+        "No city-specific completed-project evidence is supplied in the current inventory; shared photos are shown only as Tubro capability evidence."
+      ],
+      "edge_contracts": {
+        "top": "Enter as image-as-canvas editorial section with a live-copy-safe quiet area; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "03-local-guidance",
+      "name": "local-guidance",
+      "source_blueprint_sections": [
+        "local-guidance"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Give local visitors a practical route without repetitive city stuffing.",
+      "composition": "process-vertical-milestone-spine",
+      "composition_grammar": "vertical milestone/process spine",
+      "motif_role": "process_route",
+      "focal_point": "Start with the project details.",
+      "eye_path": "Start at the vertical milestone/process spine, follow the measured process route, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "sage",
+      "frame": "refs/03-local-guidance.png",
+      "prompt": "prompts/03-local-guidance.md",
+      "content": {
+        "eyebrow": "Home Remodeling in Sammamish, WA",
+        "headline": "Start with the project details.",
+        "body": "Useful estimate requests include the property city, project type, room or exterior area, current condition, and the homeowner's preferred contact path.",
+        "bullets": [
+          "Confirm the property is in or near the service area",
+          "Share the room or exterior scope",
+          "Use the estimate form or call the office"
+        ],
+        "steps": [
+          {
+            "number": "01",
+            "title": "Confirm city",
+            "copy": "Tell the team what you want to change and where the project is located."
+          },
+          {
+            "number": "02",
+            "title": "Share scope",
+            "copy": "Clarify scope and pricing before the build path is set."
+          },
+          {
+            "number": "03",
+            "title": "Office review",
+            "copy": "Use an assigned point of contact to keep communication coordinated."
+          },
+          {
+            "number": "04",
+            "title": "Follow up",
+            "copy": "Bring the approved plan together through craftsmanship and finishing details."
+          }
+        ],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/1221004_deck 01.jpg"
+        ],
+        "labels": [
+          "Shared Capability Evidence"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [
+        "No city-specific completed-project evidence is supplied in the current inventory; shared photos are shown only as Tubro capability evidence."
+      ],
+      "edge_contracts": {
+        "top": "Enter as vertical milestone/process spine; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "04-faq",
+      "name": "faq",
+      "source_blueprint_sections": [
+        "faq"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Use a ruled question index rather than a repeated FAQ bullet block.",
+      "composition": "faq-oversized-question-index-ledger",
+      "composition_grammar": "FAQ as oversized question index and ruled ledger",
+      "motif_role": "ledger_rule",
+      "focal_point": "Common questions from Sammamish homeowners.",
+      "eye_path": "Start at the FAQ as oversized question index and ruled ledger, follow the measured ledger rule, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "white",
+      "frame": "refs/04-faq.png",
+      "prompt": "prompts/04-faq.md",
+      "content": {
+        "eyebrow": "Home Remodeling in Sammamish, WA",
+        "headline": "Common questions from Sammamish homeowners.",
+        "body": "The FAQ confirms service-area fit, documented services, and the best way to start an estimate conversation.",
+        "bullets": [
+          "Does Tubro serve Sammamish? Sammamish is a confirmed service area.",
+          "What services can I ask about? Residential remodeling is in scope.",
+          "How do I request an estimate? Submit the form or call 253-216-2633."
+        ],
+        "steps": [],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [],
+        "labels": [],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [
+        "No city-specific completed-project evidence is supplied in the current inventory; shared photos are shown only as Tubro capability evidence."
+      ],
+      "edge_contracts": {
+        "top": "Enter as FAQ as oversized question index and ruled ledger; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "05-estimate-cta",
+      "name": "estimate-cta",
+      "source_blueprint_sections": [
+        "estimate-cta"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Convert qualified project interest into a useful office follow-up path.",
+      "composition": "form-overlay-on-photo-material-field",
+      "composition_grammar": "form overlay on a photo/material field",
+      "motif_role": "dimension_bracket",
+      "focal_point": "Request a Sammamish remodeling estimate.",
+      "eye_path": "Start at the form overlay on a photo/material field, follow the measured dimension bracket, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "surface",
+      "frame": "refs/05-estimate-cta.png",
+      "prompt": "prompts/05-estimate-cta.md",
+      "content": {
+        "eyebrow": "Home Remodeling in Sammamish, WA",
+        "headline": "Request a Sammamish remodeling estimate.",
+        "body": "Request a free estimate and give the team enough detail to start a useful conversation.",
+        "bullets": [
+          "Phone 253-216-2633",
+          "Monday-Friday 7:00 a.m.-4:00 p.m.",
+          "Share your project type and property city so the office team can review the fit."
+        ],
+        "steps": [],
+        "cta": "Schedule a Free Estimate",
+        "secondary_cta": "",
+        "items": [],
+        "options": [
+          "Kitchen or bathroom remodel",
+          "Home addition or renovation",
+          "New construction or custom home",
+          "Painting",
+          "Other"
+        ]
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0125047_kitchen 01.jpg",
+          "sources/drive/0925012_bathroom 01.jpg"
+        ],
+        "labels": [
+          "Project Evidence",
+          "Material Detail"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [
+        "Do not promise automated scheduling or direct Buildertrend integration.",
+        "No city-specific completed-project evidence is supplied in the current inventory; shared photos are shown only as Tubro capability evidence."
+      ],
+      "edge_contracts": {
+        "top": "Enter as form overlay on a photo/material field; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    }
+  ],
+  "page_flow": {
+    "viewport_contract": {
+      "design_frame": "1536x864 primary composition",
+      "target_viewports": [
+        "1440x900",
+        "1536x1024",
+        "390x844"
+      ],
+      "rule": "Primary content is composed for the frame; global nav and footer are excluded from all rendered refs."
+    },
+    "section_weights": {
+      "01-local-hero": "loud",
+      "02-verified-local-scope": "quiet",
+      "03-local-guidance": "quiet",
+      "04-faq": "quiet",
+      "05-estimate-cta": "loud"
+    },
+    "background_progression": [
+      {
+        "section": "01-local-hero",
+        "band": "surface"
+      },
+      {
+        "section": "02-verified-local-scope",
+        "band": "white"
+      },
+      {
+        "section": "03-local-guidance",
+        "band": "sage"
+      },
+      {
+        "section": "04-faq",
+        "band": "white"
+      },
+      {
+        "section": "05-estimate-cta",
+        "band": "surface"
+      }
+    ],
+    "composition_sequence": [
+      "hero-headline-over-photo-quiet-zone",
+      "content-image-as-canvas-editorial-quiet-area",
+      "process-vertical-milestone-spine",
+      "faq-oversized-question-index-ledger",
+      "form-overlay-on-photo-material-field"
+    ],
+    "motif_continuity": "The line behaves like a service-area datum and directory coordinate; shared photos remain capability evidence and never imply city-specific completed work.",
+    "rhythm_rules": [
+      "Every section records a design-owner composition ID.",
+      "Route rhythm changes by page purpose; page endings are not one repeated form frame.",
+      "Authentic supplied Tubro photography is used as capability or project evidence without invented facts.",
+      "No generated projects, stock imagery, fake people, global nav, or footer appear in refs."
+    ]
+  }
+}

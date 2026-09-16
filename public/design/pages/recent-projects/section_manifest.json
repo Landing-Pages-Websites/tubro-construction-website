@@ -1,0 +1,321 @@
+{
+  "page": {
+    "slug": "recent-projects",
+    "route": "/recent-projects",
+    "title": "Recent Remodeling Projects | Tubro Construction",
+    "intent": "commercial"
+  },
+  "selected_direction": "a - Measured Living",
+  "page_rhythm_family": "proof-first portfolio wall",
+  "service_area_archetype": null,
+  "brand": {
+    "name": "Tubro Construction",
+    "wordmark": "TUBRO CONSTRUCTION",
+    "logo_asset": "brand-assets/tc-logo.png",
+    "location": "King and Pierce Counties, Washington",
+    "phone": "253-216-2633",
+    "email": "workorders@tubroconstruction.com",
+    "hours": "Monday–Friday, 7:00 a.m.–4:00 p.m.",
+    "since": "Founded in 2010",
+    "brand_color_from_logo": "#0C883D",
+    "palette_guidance": "Lock the real logo green #0C883D and near-black #231F20. Favor bright warm whites, restrained construction neutrals, and authentic wood/stone tones from client project photography. No invented cyan identity, washed-out gradients, stock indigo, or dominant orange discount styling.",
+    "voice": "Professional, warm, plainspoken, confident, and respectful of the homeowner’s investment.",
+    "identity_belief": "A remodel earns trust when homeowners can see the work, understand the path, and know who is accountable from estimate through completion.",
+    "visual_metaphor": "A continuous measured construction line travels through the page like a chalk line or plan mark, joining finished spaces, project stages, and the next clear decision.",
+    "taglines": [
+      "Residential Remodeling, Built With Care",
+      "Built Around the Way You Want to Live"
+    ]
+  },
+  "hard_rules": [
+    "Use the real Tubro Construction logo asset as-is. Never redraw, restyle, re-letter, or reinterpret the logo; frames may use a neutral placeholder or plain wordmark only.",
+    "Use authentic supplied Tubro project photography before all generated or stock imagery. Never generate imagery that impersonates a completed client project.",
+    "No van-led hero. A branded vehicle may appear only as secondary brand context and is not required in these homepage refs.",
+    "No dark, boxy, heavy-card redesign; no generic centered service-card grid; no pill-heavy SaaS UI; no gradient text or generic gradient blobs.",
+    "No generic stock families, contractor portraits, invented team members, or generated named people.",
+    "No invented testimonials, ratings, awards, licenses, bonding, insurance, warranties, project counts, project locations, budgets, or timelines.",
+    "Keep the site clearly separate from Tubro Carpet Cleaning and Get Gawn; do not mention those businesses in customer-facing homepage copy.",
+    "Keep the 5% active-duty military and first-responder discount secondary to the free-estimate CTA. Do not add a deadline, urgency claim, or new terms.",
+    "Do not imply direct Buildertrend integration; form leads route to workorders@tubroconstruction.com and office staff enter leads manually.",
+    "Use location names naturally. No repetitive city-name stuffing or doorway-page language.",
+    "Every visual control must have a useful defined outcome. Otherwise render it as static content.",
+    "Design for desktop and mobile accessibility with strong contrast, clear labels, and visible focus intent.",
+    "Customer review and approval are required before public launch.",
+    "Frames cover CONTENT sections only; global nav/footer belong to the built design system and are never rendered into frames."
+  ],
+  "route_metadata": {
+    "target_terms": [
+      "Tubro Construction projects",
+      "remodeling portfolio western Washington"
+    ],
+    "source": "current site"
+  },
+  "source_constraints": [
+    "Manifest text wins for build copy.",
+    "Do not invent location-specific projects, team claims, ratings, licenses, timelines, project counts, addresses, or testimonials.",
+    "Use authentic supplied Tubro photography only as project/capability evidence described in this manifest."
+  ],
+  "ordered_sections": [
+    {
+      "id": "01-hero",
+      "name": "hero",
+      "source_blueprint_sections": [
+        "hero"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Start with proof rather than a service pitch.",
+      "composition": "hero-headline-over-photo-quiet-zone",
+      "composition_grammar": "headline-over-photo hero with a protected quiet zone",
+      "motif_role": "datum",
+      "focal_point": "Recent Remodeling Projects",
+      "eye_path": "Start at the headline-over-photo hero with a protected quiet zone, follow the measured datum, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "surface",
+      "frame": "refs/01-hero.png",
+      "prompt": "prompts/01-hero.md",
+      "content": {
+        "eyebrow": "Recent Remodeling Projects | Tubro Construction",
+        "headline": "Recent Remodeling Projects",
+        "body": "Completed-project photos, project locations, homeowner feedback, and the RealWork Labs portfolio experience help visitors evaluate the work.",
+        "bullets": [],
+        "steps": [],
+        "cta": "View Recent Projects",
+        "secondary_cta": "Call 253-216-2633",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0125047_kitchen 01.jpg"
+        ],
+        "labels": [
+          "Kitchen Remodeling"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as headline-over-photo hero with a protected quiet zone; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "02-realwork-labs-portfolio",
+      "name": "realwork-labs-portfolio",
+      "source_blueprint_sections": [
+        "realwork-labs-portfolio"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Make the portfolio wall the dominant content surface.",
+      "composition": "gallery-asymmetric-masonry-project-ledger",
+      "composition_grammar": "asymmetric masonry/project ledger",
+      "motif_role": "crop_mark",
+      "focal_point": "The work is the proof.",
+      "eye_path": "Start at the asymmetric masonry/project ledger, follow the measured crop mark, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "ink",
+      "frame": "refs/02-realwork-labs-portfolio.png",
+      "prompt": "prompts/02-realwork-labs-portfolio.md",
+      "content": {
+        "eyebrow": "Recent Remodeling Projects | Tubro Construction",
+        "headline": "The work is the proof.",
+        "body": "Browse the RealWork Labs portfolio experience alongside authentic kitchen, bath, deck, and exterior project photography.",
+        "bullets": [],
+        "steps": [],
+        "cta": "Schedule a Free Estimate",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0125047_kitchen 01.jpg",
+          "sources/drive/0125065_kitchen 01.jpg",
+          "sources/drive/0126001_kitchen 01.jpg",
+          "sources/drive/0925012_bathroom 01.jpg",
+          "sources/drive/0126030_bathroom 01.jpg",
+          "sources/drive/0128008_bathroom 01.jpg"
+        ],
+        "labels": [
+          "Kitchen Remodeling",
+          "Kitchen Project Photo",
+          "Bathroom Remodeling",
+          "Bathroom Renovation",
+          "Deck & Outdoor Living",
+          "Exterior Paint"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as asymmetric masonry/project ledger; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "03-filters-review-proof",
+      "name": "filters-review-proof",
+      "source_blueprint_sections": [
+        "project-filters",
+        "review-proof"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Turn filters into a contact-sheet evidence band.",
+      "composition": "gallery-horizontal-filmstrip-evidence-band",
+      "composition_grammar": "horizontal filmstrip or contact-sheet evidence band",
+      "motif_role": "datum",
+      "focal_point": "Find projects by service type.",
+      "eye_path": "Start at the horizontal filmstrip or contact-sheet evidence band, follow the measured datum, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "white",
+      "frame": "refs/03-filters-review-proof.png",
+      "prompt": "prompts/03-filters-review-proof.md",
+      "content": {
+        "eyebrow": "Recent Remodeling Projects | Tubro Construction",
+        "headline": "Find projects by service type.",
+        "body": "Project-type filters organize kitchen, bath, deck, painting, and custom-home photography without inventing project counts.",
+        "bullets": [
+          "Completed-project photos",
+          "Project locations",
+          "Homeowner feedback",
+          "RealWork Labs portfolio experience",
+          "Kitchen and bathroom projects",
+          "Deck and exterior work",
+          "Portfolio entries and homeowner feedback"
+        ],
+        "steps": [],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0125065_kitchen 01.jpg",
+          "sources/drive/0126001_kitchen 01.jpg",
+          "sources/drive/0925012_bathroom 01.jpg",
+          "sources/drive/0126030_bathroom 01.jpg",
+          "sources/drive/0128008_bathroom 01.jpg"
+        ],
+        "labels": [
+          "Kitchen",
+          "Bath",
+          "Deck",
+          "Paint",
+          "Exterior"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as horizontal filmstrip or contact-sheet evidence band; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "04-estimate-cta",
+      "name": "estimate-cta",
+      "source_blueprint_sections": [
+        "estimate-cta"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Convert qualified project interest into a useful office follow-up path.",
+      "composition": "cta-centered-estimate-brief-peripheral-proof",
+      "composition_grammar": "centered estimate brief with peripheral proof",
+      "motif_role": "crop_mark",
+      "focal_point": "Ready to discuss your project?",
+      "eye_path": "Start at the centered estimate brief with peripheral proof, follow the measured crop mark, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "surface",
+      "frame": "refs/04-estimate-cta.png",
+      "prompt": "prompts/04-estimate-cta.md",
+      "content": {
+        "eyebrow": "Recent Remodeling Projects | Tubro Construction",
+        "headline": "Ready to discuss your project?",
+        "body": "Request a free estimate and give the team enough detail to start a useful conversation.",
+        "bullets": [
+          "Phone 253-216-2633",
+          "Monday-Friday 7:00 a.m.-4:00 p.m.",
+          "Form submissions route to workorders@tubroconstruction.com"
+        ],
+        "steps": [],
+        "cta": "Schedule a Free Estimate",
+        "secondary_cta": "",
+        "items": [],
+        "options": [
+          "Kitchen or bathroom remodel",
+          "Home addition or renovation",
+          "New construction or custom home",
+          "Painting",
+          "Other"
+        ]
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0126030_bathroom 01.jpg",
+          "sources/drive/0128008_bathroom 01.jpg"
+        ],
+        "labels": [
+          "Project Evidence",
+          "Material Detail"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [
+        "Do not promise automated scheduling or direct Buildertrend integration."
+      ],
+      "edge_contracts": {
+        "top": "Enter as centered estimate brief with peripheral proof; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    }
+  ],
+  "page_flow": {
+    "viewport_contract": {
+      "design_frame": "1536x864 primary composition",
+      "target_viewports": [
+        "1440x900",
+        "1536x1024",
+        "390x844"
+      ],
+      "rule": "Primary content is composed for the frame; global nav and footer are excluded from all rendered refs."
+    },
+    "section_weights": {
+      "01-hero": "loud",
+      "02-realwork-labs-portfolio": "loud",
+      "03-filters-review-proof": "quiet",
+      "04-estimate-cta": "loud"
+    },
+    "background_progression": [
+      {
+        "section": "01-hero",
+        "band": "surface"
+      },
+      {
+        "section": "02-realwork-labs-portfolio",
+        "band": "ink"
+      },
+      {
+        "section": "03-filters-review-proof",
+        "band": "white"
+      },
+      {
+        "section": "04-estimate-cta",
+        "band": "surface"
+      }
+    ],
+    "composition_sequence": [
+      "hero-headline-over-photo-quiet-zone",
+      "gallery-asymmetric-masonry-project-ledger",
+      "gallery-horizontal-filmstrip-evidence-band",
+      "cta-centered-estimate-brief-peripheral-proof"
+    ],
+    "motif_continuity": "The approved measured-line vocabulary changes role by section: datum, crop mark, process route, ledger rule, directory coordinate, or dimension bracket.",
+    "rhythm_rules": [
+      "Every section records a design-owner composition ID.",
+      "Route rhythm changes by page purpose; page endings are not one repeated form frame.",
+      "Authentic supplied Tubro photography is used as capability or project evidence without invented facts.",
+      "No generated projects, stock imagery, fake people, global nav, or footer appear in refs."
+    ]
+  }
+}

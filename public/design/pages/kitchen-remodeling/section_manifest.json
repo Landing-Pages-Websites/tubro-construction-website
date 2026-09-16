@@ -1,0 +1,379 @@
+{
+  "page": {
+    "slug": "kitchen-remodeling",
+    "route": "/kitchen-remodeling",
+    "title": "Kitchen Remodeling in King & Pierce Counties",
+    "intent": "transactional"
+  },
+  "selected_direction": "a - Measured Living",
+  "page_rhythm_family": "room-scale visual planning",
+  "service_area_archetype": null,
+  "brand": {
+    "name": "Tubro Construction",
+    "wordmark": "TUBRO CONSTRUCTION",
+    "logo_asset": "brand-assets/tc-logo.png",
+    "location": "King and Pierce Counties, Washington",
+    "phone": "253-216-2633",
+    "email": "workorders@tubroconstruction.com",
+    "hours": "Monday–Friday, 7:00 a.m.–4:00 p.m.",
+    "since": "Founded in 2010",
+    "brand_color_from_logo": "#0C883D",
+    "palette_guidance": "Lock the real logo green #0C883D and near-black #231F20. Favor bright warm whites, restrained construction neutrals, and authentic wood/stone tones from client project photography. No invented cyan identity, washed-out gradients, stock indigo, or dominant orange discount styling.",
+    "voice": "Professional, warm, plainspoken, confident, and respectful of the homeowner’s investment.",
+    "identity_belief": "A remodel earns trust when homeowners can see the work, understand the path, and know who is accountable from estimate through completion.",
+    "visual_metaphor": "A continuous measured construction line travels through the page like a chalk line or plan mark, joining finished spaces, project stages, and the next clear decision.",
+    "taglines": [
+      "Residential Remodeling, Built With Care",
+      "Built Around the Way You Want to Live"
+    ]
+  },
+  "hard_rules": [
+    "Use the real Tubro Construction logo asset as-is. Never redraw, restyle, re-letter, or reinterpret the logo; frames may use a neutral placeholder or plain wordmark only.",
+    "Use authentic supplied Tubro project photography before all generated or stock imagery. Never generate imagery that impersonates a completed client project.",
+    "No van-led hero. A branded vehicle may appear only as secondary brand context and is not required in these homepage refs.",
+    "No dark, boxy, heavy-card redesign; no generic centered service-card grid; no pill-heavy SaaS UI; no gradient text or generic gradient blobs.",
+    "No generic stock families, contractor portraits, invented team members, or generated named people.",
+    "No invented testimonials, ratings, awards, licenses, bonding, insurance, warranties, project counts, project locations, budgets, or timelines.",
+    "Keep the site clearly separate from Tubro Carpet Cleaning and Get Gawn; do not mention those businesses in customer-facing homepage copy.",
+    "Keep the 5% active-duty military and first-responder discount secondary to the free-estimate CTA. Do not add a deadline, urgency claim, or new terms.",
+    "Do not imply direct Buildertrend integration; form leads route to workorders@tubroconstruction.com and office staff enter leads manually.",
+    "Use location names naturally. No repetitive city-name stuffing or doorway-page language.",
+    "Every visual control must have a useful defined outcome. Otherwise render it as static content.",
+    "Design for desktop and mobile accessibility with strong contrast, clear labels, and visible focus intent.",
+    "Customer review and approval are required before public launch.",
+    "Frames cover CONTENT sections only; global nav/footer belong to the built design system and are never rendered into frames."
+  ],
+  "route_metadata": {
+    "target_terms": [
+      "kitchen remodeling King County",
+      "kitchen contractor Pierce County"
+    ],
+    "source": "current site"
+  },
+  "source_constraints": [
+    "Manifest text wins for build copy.",
+    "Do not invent location-specific projects, team claims, ratings, licenses, timelines, project counts, addresses, or testimonials.",
+    "Use authentic supplied Tubro photography only as project/capability evidence described in this manifest."
+  ],
+  "ordered_sections": [
+    {
+      "id": "01-hero",
+      "name": "hero",
+      "source_blueprint_sections": [
+        "hero"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Frame the kitchen as a stepped planning space with image scale first.",
+      "composition": "hero-architectural-stepped-split",
+      "composition_grammar": "architectural split hero with a non-50/50 stepped boundary",
+      "motif_role": "dimension_bracket",
+      "focal_point": "A Kitchen Designed for Real Life",
+      "eye_path": "Start at the architectural split hero with a non-50/50 stepped boundary, follow the measured dimension bracket, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "surface",
+      "frame": "refs/01-hero.png",
+      "prompt": "prompts/01-hero.md",
+      "content": {
+        "eyebrow": "Kitchen Remodeling in King & Pierce Counties",
+        "headline": "A Kitchen Designed for Real Life",
+        "body": "Practical layouts, custom storage, islands, countertops, tile, appliances, and lighting belong in one coordinated kitchen plan.",
+        "bullets": [],
+        "steps": [],
+        "cta": "Schedule a Free Estimate",
+        "secondary_cta": "Call 253-216-2633",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0125047_kitchen 01.jpg",
+          "sources/drive/0125065_kitchen 01.jpg"
+        ],
+        "labels": [
+          "Kitchen Remodeling",
+          "Kitchen Layout"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as architectural split hero with a non-50/50 stepped boundary; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "02-project-gallery",
+      "name": "project-gallery",
+      "source_blueprint_sections": [
+        "project-gallery"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Let one room-scale photo carry the section while details support it.",
+      "composition": "gallery-room-scale-single-focal-detail-strip",
+      "composition_grammar": "room-scale gallery as one oversized focal image plus a detail strip",
+      "motif_role": "crop_mark",
+      "focal_point": "Kitchen work should be seen at room scale.",
+      "eye_path": "Start at the room-scale gallery as one oversized focal image plus a detail strip, follow the measured crop mark, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "white",
+      "frame": "refs/02-project-gallery.png",
+      "prompt": "prompts/02-project-gallery.md",
+      "content": {
+        "eyebrow": "Kitchen Remodeling in King & Pierce Counties",
+        "headline": "Kitchen work should be seen at room scale.",
+        "body": "Supplied Tubro kitchen photography helps homeowners compare layout, storage, island use, and finish decisions.",
+        "bullets": [],
+        "steps": [],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0125047_kitchen 01.jpg",
+          "sources/drive/0125065_kitchen 01.jpg",
+          "sources/drive/0126001_kitchen 01.jpg",
+          "sources/drive/0325011_kitchen 02.jpg",
+          "sources/drive/1124003_kitchen 02.jpeg"
+        ],
+        "labels": [
+          "Kitchen Remodeling",
+          "Storage Detail",
+          "Kitchen Layout",
+          "Finish Reference",
+          "Kitchen Project Photo"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as room-scale gallery as one oversized focal image plus a detail strip; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "03-planning-details",
+      "name": "planning-details",
+      "source_blueprint_sections": [
+        "planning",
+        "cabinetry-storage",
+        "islands-finishes"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Annotate practical kitchen decisions directly against a real project photo.",
+      "composition": "content-annotated-material-callouts",
+      "composition_grammar": "alternating annotated details and material callout layout",
+      "motif_role": "crop_mark",
+      "focal_point": "Plan circulation, storage, island use, and finishes together.",
+      "eye_path": "Start at the alternating annotated details and material callout layout, follow the measured crop mark, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "white",
+      "frame": "refs/03-planning-details.png",
+      "prompt": "prompts/03-planning-details.md",
+      "content": {
+        "eyebrow": "Kitchen Remodeling in King & Pierce Counties",
+        "headline": "Plan circulation, storage, island use, and finishes together.",
+        "body": "The content helps homeowners organize choices before the estimate conversation covers project-specific pricing and timing.",
+        "bullets": [
+          "Practical and modern kitchen layouts",
+          "Custom cabinetry and storage",
+          "Kitchen islands",
+          "Countertops, tile, appliances, and lighting",
+          "Style and functionality should work together"
+        ],
+        "steps": [],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0126001_kitchen 01.jpg"
+        ],
+        "labels": [
+          "Kitchen Detail"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as alternating annotated details and material callout layout; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "04-process-faq",
+      "name": "process-faq",
+      "source_blueprint_sections": [
+        "process",
+        "faq"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Compress the kitchen process into a tight numbered strip after the detail planning section.",
+      "composition": "process-compact-numbered-strip",
+      "composition_grammar": "compact numbered process strip",
+      "motif_role": "process_route",
+      "focal_point": "Know what comes next before demolition starts.",
+      "eye_path": "Start at the compact numbered process strip, follow the measured process route, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "sage",
+      "frame": "refs/04-process-faq.png",
+      "prompt": "prompts/04-process-faq.md",
+      "content": {
+        "eyebrow": "Kitchen Remodeling in King & Pierce Counties",
+        "headline": "Know what comes next before demolition starts.",
+        "body": "Scope, estimate, assigned project management, and completion details are framed as the verified process.",
+        "bullets": [],
+        "steps": [
+          {
+            "number": "01",
+            "title": "Share room",
+            "copy": "Tell the team what you want to change and where the project is located."
+          },
+          {
+            "number": "02",
+            "title": "Estimate",
+            "copy": "Clarify scope and pricing before the build path is set."
+          },
+          {
+            "number": "03",
+            "title": "Coordinate",
+            "copy": "Use an assigned point of contact to keep communication coordinated."
+          },
+          {
+            "number": "04",
+            "title": "Finish",
+            "copy": "Bring the approved plan together through craftsmanship and finishing details."
+          }
+        ],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [],
+        "labels": [],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as compact numbered process strip; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "05-estimate-cta",
+      "name": "estimate-cta",
+      "source_blueprint_sections": [
+        "estimate-cta"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Convert qualified project interest into a useful office follow-up path.",
+      "composition": "cta-centered-estimate-brief-peripheral-proof",
+      "composition_grammar": "centered estimate brief with peripheral proof",
+      "motif_role": "crop_mark",
+      "focal_point": "Start the kitchen estimate conversation.",
+      "eye_path": "Start at the centered estimate brief with peripheral proof, follow the measured crop mark, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "surface",
+      "frame": "refs/05-estimate-cta.png",
+      "prompt": "prompts/05-estimate-cta.md",
+      "content": {
+        "eyebrow": "Kitchen Remodeling in King & Pierce Counties",
+        "headline": "Start the kitchen estimate conversation.",
+        "body": "Request a free estimate and give the team enough detail to start a useful conversation.",
+        "bullets": [
+          "Phone 253-216-2633",
+          "Monday-Friday 7:00 a.m.-4:00 p.m.",
+          "Form submissions route to workorders@tubroconstruction.com"
+        ],
+        "steps": [],
+        "cta": "Schedule a Free Estimate",
+        "secondary_cta": "",
+        "items": [],
+        "options": [
+          "Kitchen or bathroom remodel",
+          "Home addition or renovation",
+          "New construction or custom home",
+          "Painting",
+          "Other"
+        ]
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0325011_kitchen 02.jpg",
+          "sources/drive/1124003_kitchen 02.jpeg"
+        ],
+        "labels": [
+          "Project Evidence",
+          "Material Detail"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [
+        "Do not promise automated scheduling or direct Buildertrend integration."
+      ],
+      "edge_contracts": {
+        "top": "Enter as centered estimate brief with peripheral proof; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    }
+  ],
+  "page_flow": {
+    "viewport_contract": {
+      "design_frame": "1536x864 primary composition",
+      "target_viewports": [
+        "1440x900",
+        "1536x1024",
+        "390x844"
+      ],
+      "rule": "Primary content is composed for the frame; global nav and footer are excluded from all rendered refs."
+    },
+    "section_weights": {
+      "01-hero": "loud",
+      "02-project-gallery": "loud",
+      "03-planning-details": "quiet",
+      "04-process-faq": "quiet",
+      "05-estimate-cta": "loud"
+    },
+    "background_progression": [
+      {
+        "section": "01-hero",
+        "band": "surface"
+      },
+      {
+        "section": "02-project-gallery",
+        "band": "white"
+      },
+      {
+        "section": "03-planning-details",
+        "band": "white"
+      },
+      {
+        "section": "04-process-faq",
+        "band": "sage"
+      },
+      {
+        "section": "05-estimate-cta",
+        "band": "surface"
+      }
+    ],
+    "composition_sequence": [
+      "hero-architectural-stepped-split",
+      "gallery-room-scale-single-focal-detail-strip",
+      "content-annotated-material-callouts",
+      "process-compact-numbered-strip",
+      "cta-centered-estimate-brief-peripheral-proof"
+    ],
+    "motif_continuity": "The approved measured-line vocabulary changes role by section: datum, crop mark, process route, ledger rule, directory coordinate, or dimension bracket.",
+    "rhythm_rules": [
+      "Every section records a design-owner composition ID.",
+      "Route rhythm changes by page purpose; page endings are not one repeated form frame.",
+      "Authentic supplied Tubro photography is used as capability or project evidence without invented facts.",
+      "No generated projects, stock imagery, fake people, global nav, or footer appear in refs."
+    ]
+  }
+}

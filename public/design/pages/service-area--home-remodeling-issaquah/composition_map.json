@@ -1,0 +1,495 @@
+{
+  "frames": [
+    {
+      "frame": "01-local-hero",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "local-hero section composition owner",
+        "width_share": "dominant media follows the approved frame proportions",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "retain complete focal room and its strongest architectural anchor",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Home Remodeling in Issaquah, Washington",
+        "where": "the approved dominant reading field, counterbalanced by authentic imagery",
+        "region_ids": []
+      },
+      "dominance": "authentic project imagery leads; live headline and action counterbalance it",
+      "eye_path": [
+        "Home Remodeling in Issaquah, Washington",
+        "authentic project evidence",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [
+        "live copy and measured rules relate to the media edge without baking text into imagery"
+      ],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the diagonal/cropped service-area hero; do not flatten it into equal cards.",
+      "image_copy_relation": "copy is positioned in deliberate counterpoint to the project imagery, never a generic centered stack",
+      "assembly": {
+        "profile": "anchored-art",
+        "score": 2,
+        "signals": [
+          "authentic project photography"
+        ],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "section-owned project imagery",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "section-owned media"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline",
+          "dominant authentic project image"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": [
+          "retain the focal architectural subject and avoid clipping the primary room context"
+        ]
+      },
+      "invariants": [
+        "preserve the diagonal/cropped service-area hero",
+        "keep Home Remodeling in Issaquah, Washington as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative",
+        "preserve authentic project-photo dominance and the approved crop hierarchy"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    },
+    {
+      "frame": "02-verified-local-scope",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "verified-local-scope section composition owner",
+        "width_share": "dominant media follows the approved frame proportions",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "retain complete focal room and its strongest architectural anchor",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Remodeling services available in Issaquah.",
+        "where": "the approved dominant reading field, counterbalanced by authentic imagery",
+        "region_ids": []
+      },
+      "dominance": "authentic project imagery leads; live headline and action counterbalance it",
+      "eye_path": [
+        "Remodeling services available in Issaquah.",
+        "authentic project evidence",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [
+        "live copy and measured rules relate to the media edge without baking text into imagery"
+      ],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the directory map/list composition; do not flatten it into equal cards.",
+      "image_copy_relation": "copy is positioned in deliberate counterpoint to the project imagery, never a generic centered stack",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [
+          "authentic project photography"
+        ],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "section-owned project imagery",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "section-owned media"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline",
+          "dominant authentic project image"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": [
+          "retain the focal architectural subject and avoid clipping the primary room context"
+        ]
+      },
+      "invariants": [
+        "preserve the directory map/list composition",
+        "keep Remodeling services available in Issaquah. as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative",
+        "preserve authentic project-photo dominance and the approved crop hierarchy"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    },
+    {
+      "frame": "03-local-guidance",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "local-guidance section composition owner",
+        "width_share": "dominant media follows the approved frame proportions",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "retain complete focal room and its strongest architectural anchor",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Start with the project details.",
+        "where": "the approved dominant reading field, counterbalanced by authentic imagery",
+        "region_ids": []
+      },
+      "dominance": "authentic project imagery leads; live headline and action counterbalance it",
+      "eye_path": [
+        "Start with the project details.",
+        "authentic project evidence",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [
+        "live copy and measured rules relate to the media edge without baking text into imagery"
+      ],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the editorial index/table-of-contents composition; do not flatten it into equal cards.",
+      "image_copy_relation": "copy is positioned in deliberate counterpoint to the project imagery, never a generic centered stack",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [
+          "authentic project photography"
+        ],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "section-owned project imagery",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "section-owned media"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline",
+          "dominant authentic project image"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": [
+          "retain the focal architectural subject and avoid clipping the primary room context"
+        ]
+      },
+      "invariants": [
+        "preserve the editorial index/table-of-contents composition",
+        "keep Start with the project details. as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative",
+        "preserve authentic project-photo dominance and the approved crop hierarchy"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    },
+    {
+      "frame": "04-faq",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "faq section composition owner",
+        "width_share": "live content owns the primary reading field",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "not applicable to code-only section",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Common questions from Issaquah homeowners.",
+        "where": "the principal editorial text field",
+        "region_ids": []
+      },
+      "dominance": "typography and information hierarchy lead the quiet section",
+      "eye_path": [
+        "Common questions from Issaquah homeowners.",
+        "supporting live content",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the FAQ as oversized question index and ruled ledger; do not flatten it into equal cards.",
+      "image_copy_relation": "live editorial copy owns the composition; measured rules organize rather than decorate",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "structured supporting information"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": []
+      },
+      "invariants": [
+        "preserve the FAQ as oversized question index and ruled ledger",
+        "keep Common questions from Issaquah homeowners. as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    },
+    {
+      "frame": "05-estimate-cta",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "estimate-cta section composition owner",
+        "width_share": "dominant media follows the approved frame proportions",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "retain complete focal room and its strongest architectural anchor",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Request a Issaquah remodeling estimate.",
+        "where": "the approved dominant reading field, counterbalanced by authentic imagery",
+        "region_ids": []
+      },
+      "dominance": "authentic project imagery leads; live headline and action counterbalance it",
+      "eye_path": [
+        "Request a Issaquah remodeling estimate.",
+        "authentic project evidence",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [
+        "live copy and measured rules relate to the media edge without baking text into imagery"
+      ],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the centered estimate brief with peripheral proof; do not flatten it into equal cards.",
+      "image_copy_relation": "copy is positioned in deliberate counterpoint to the project imagery, never a generic centered stack",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [
+          "authentic project photography"
+        ],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "section-owned project imagery",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "section-owned media"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline",
+          "dominant authentic project image"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": [
+          "retain the focal architectural subject and avoid clipping the primary room context"
+        ]
+      },
+      "invariants": [
+        "preserve the centered estimate brief with peripheral proof",
+        "keep Request a Issaquah remodeling estimate. as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative",
+        "preserve authentic project-photo dominance and the approved crop hierarchy"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    }
+  ]
+}

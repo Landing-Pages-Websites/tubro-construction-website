@@ -1,0 +1,2022 @@
+{
+  "source": "design_assets/pages/<slug>/extraction_plan.json + section_manifest.json",
+  "precedence": "Manifest wins for content. Section refs win for visual language. Page flow wins for transitions. Composition map identifies load-bearing relationships. Extraction plan and NOTES determine image ownership and implementation layers.",
+  "assets": [
+    {
+      "route": "/general-contractor",
+      "public_path": "/images/design/general-contractor/01-hero-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Open with whole-project authority through a cinematic evidence field.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /general-contractor for the distinct narrative job 'Exterior Paint'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/general-contractor",
+      "public_path": "/images/design/general-contractor/03-project-proof-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-project-proof",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Vary scale with project evidence before the process section.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /general-contractor for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/general-contractor",
+      "public_path": "/images/design/general-contractor/03-project-proof-0825017-ext-stain-01-jpeg.jpeg",
+      "section_owner": "03-project-proof",
+      "narrative_job": "Provide authentic Tubro exterior stain & materials evidence for Vary scale with project evidence before the process section.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /general-contractor for the distinct narrative job 'Exterior Stain & Materials'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/general-contractor",
+      "public_path": "/images/design/general-contractor/03-project-proof-0524016-deck-02-jpg.jpg",
+      "section_owner": "03-project-proof",
+      "narrative_job": "Provide authentic Tubro deck detail evidence for Vary scale with project evidence before the process section.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /general-contractor for the distinct narrative job 'Deck Detail'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/general-contractor",
+      "public_path": "/images/design/general-contractor/03-project-proof-0425021-exterior-stain-01-jpg.jpg",
+      "section_owner": "03-project-proof",
+      "narrative_job": "Provide authentic Tubro exterior materials evidence for Vary scale with project evidence before the process section.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /general-contractor for the distinct narrative job 'Exterior Materials'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/kitchen-remodeling",
+      "public_path": "/images/design/kitchen-remodeling/01-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Frame the kitchen as a stepped planning space with image scale first.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/kitchen-remodeling",
+      "public_path": "/images/design/kitchen-remodeling/01-hero-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro kitchen layout evidence for Frame the kitchen as a stepped planning space with image scale first.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Kitchen Layout'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/kitchen-remodeling",
+      "public_path": "/images/design/kitchen-remodeling/02-project-gallery-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-project-gallery",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Let one room-scale photo carry the section while details support it.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/kitchen-remodeling",
+      "public_path": "/images/design/kitchen-remodeling/02-project-gallery-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-project-gallery",
+      "narrative_job": "Provide authentic Tubro storage detail evidence for Let one room-scale photo carry the section while details support it.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Storage Detail'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/kitchen-remodeling",
+      "public_path": "/images/design/kitchen-remodeling/02-project-gallery-0126001-kitchen-01-jpg.jpg",
+      "section_owner": "02-project-gallery",
+      "narrative_job": "Provide authentic Tubro kitchen layout evidence for Let one room-scale photo carry the section while details support it.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Kitchen Layout'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/kitchen-remodeling",
+      "public_path": "/images/design/kitchen-remodeling/02-project-gallery-0325011-kitchen-02-jpg.jpg",
+      "section_owner": "02-project-gallery",
+      "narrative_job": "Provide authentic Tubro finish reference evidence for Let one room-scale photo carry the section while details support it.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Finish Reference'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/kitchen-remodeling",
+      "public_path": "/images/design/kitchen-remodeling/02-project-gallery-1124003-kitchen-02-jpeg.jpeg",
+      "section_owner": "02-project-gallery",
+      "narrative_job": "Provide authentic Tubro kitchen project photo evidence for Let one room-scale photo carry the section while details support it.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Kitchen Project Photo'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/kitchen-remodeling",
+      "public_path": "/images/design/kitchen-remodeling/03-planning-details-0126001-kitchen-01-jpg.jpg",
+      "section_owner": "03-planning-details",
+      "narrative_job": "Provide authentic Tubro kitchen detail evidence for Annotate practical kitchen decisions directly against a real project photo.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Kitchen Detail'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/kitchen-remodeling",
+      "public_path": "/images/design/kitchen-remodeling/05-estimate-cta-0325011-kitchen-02-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Project Evidence'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/kitchen-remodeling",
+      "public_path": "/images/design/kitchen-remodeling/05-estimate-cta-1124003-kitchen-02-jpeg.jpeg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /kitchen-remodeling for the distinct narrative job 'Material Detail'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/bathroom-remodeling",
+      "public_path": "/images/design/bathroom-remodeling/01-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Use a protected quiet zone over a finished bath photo so materials lead.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Bathroom Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/bathroom-remodeling",
+      "public_path": "/images/design/bathroom-remodeling/02-project-gallery-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-project-gallery",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Bathroom Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/bathroom-remodeling",
+      "public_path": "/images/design/bathroom-remodeling/02-project-gallery-0126030-bathroom-01-jpg.jpg",
+      "section_owner": "02-project-gallery",
+      "narrative_job": "Provide authentic Tubro shower reference evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Shower Reference'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/bathroom-remodeling",
+      "public_path": "/images/design/bathroom-remodeling/02-project-gallery-0128008-bathroom-01-jpg.jpg",
+      "section_owner": "02-project-gallery",
+      "narrative_job": "Provide authentic Tubro bath project photo evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Bath Project Photo'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/bathroom-remodeling",
+      "public_path": "/images/design/bathroom-remodeling/02-project-gallery-0128008-bathroom-02-jpg.jpg",
+      "section_owner": "02-project-gallery",
+      "narrative_job": "Provide authentic Tubro finish detail evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Finish Detail'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/bathroom-remodeling",
+      "public_path": "/images/design/bathroom-remodeling/02-project-gallery-0525025-bathroom-02-jpg.jpg",
+      "section_owner": "02-project-gallery",
+      "narrative_job": "Provide authentic Tubro vanity detail evidence for Create a contact-sheet evidence band distinct from kitchen's room-scale gallery.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Vanity Detail'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/bathroom-remodeling",
+      "public_path": "/images/design/bathroom-remodeling/03-showers-planning-finishes-0128008-bathroom-01-jpg.jpg",
+      "section_owner": "03-showers-planning-finishes",
+      "narrative_job": "Provide authentic Tubro bathroom finish reference evidence for Turn material and fixture considerations into annotated details.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Bathroom Finish Reference'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/bathroom-remodeling",
+      "public_path": "/images/design/bathroom-remodeling/05-estimate-cta-0128008-bathroom-02-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /bathroom-remodeling for the distinct narrative job 'Project Evidence'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/interior-exterior-painting",
+      "public_path": "/images/design/interior-exterior-painting/01-hero-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Make the service read through surfaces and exterior evidence rather than a standard service hero.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Exterior Paint'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/interior-exterior-painting",
+      "public_path": "/images/design/interior-exterior-painting/01-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro exterior stain evidence for Make the service read through surfaces and exterior evidence rather than a standard service hero.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Exterior Stain'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/interior-exterior-painting",
+      "public_path": "/images/design/interior-exterior-painting/01-hero-0825017-ext-stain-01-jpeg.jpeg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro deck surface evidence for Make the service read through surfaces and exterior evidence rather than a standard service hero.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Deck Surface'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/interior-exterior-painting",
+      "public_path": "/images/design/interior-exterior-painting/02-interior-exterior-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-interior-exterior",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Use color fields from the approved palette as surface structure, with real photos as proof.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Exterior Paint'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/interior-exterior-painting",
+      "public_path": "/images/design/interior-exterior-painting/02-interior-exterior-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-interior-exterior",
+      "narrative_job": "Provide authentic Tubro exterior stain & materials evidence for Use color fields from the approved palette as surface structure, with real photos as proof.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Exterior Stain & Materials'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/interior-exterior-painting",
+      "public_path": "/images/design/interior-exterior-painting/02-interior-exterior-0825017-ext-stain-01-jpeg.jpeg",
+      "section_owner": "02-interior-exterior",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Use color fields from the approved palette as surface structure, with real photos as proof.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/interior-exterior-painting",
+      "public_path": "/images/design/interior-exterior-painting/04-project-gallery-faq-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "04-project-gallery-faq",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Use a filmstrip evidence band so painting has its own proof rhythm.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Exterior Paint'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/interior-exterior-painting",
+      "public_path": "/images/design/interior-exterior-painting/04-project-gallery-faq-1221004-deck-01-jpg.jpg",
+      "section_owner": "04-project-gallery-faq",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Use a filmstrip evidence band so painting has its own proof rhythm.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/interior-exterior-painting",
+      "public_path": "/images/design/interior-exterior-painting/04-project-gallery-faq-0825017-ext-stain-01-jpeg.jpeg",
+      "section_owner": "04-project-gallery-faq",
+      "narrative_job": "Provide authentic Tubro exterior stain evidence for Use a filmstrip evidence band so painting has its own proof rhythm.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Exterior Stain'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/interior-exterior-painting",
+      "public_path": "/images/design/interior-exterior-painting/04-project-gallery-faq-0524016-deck-02-jpg.jpg",
+      "section_owner": "04-project-gallery-faq",
+      "narrative_job": "Provide authentic Tubro deck detail evidence for Use a filmstrip evidence band so painting has its own proof rhythm.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Deck Detail'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/interior-exterior-painting",
+      "public_path": "/images/design/interior-exterior-painting/04-project-gallery-faq-0425021-exterior-stain-01-jpg.jpg",
+      "section_owner": "04-project-gallery-faq",
+      "narrative_job": "Provide authentic Tubro material exterior evidence for Use a filmstrip evidence band so painting has its own proof rhythm.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Material Exterior'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/interior-exterior-painting",
+      "public_path": "/images/design/interior-exterior-painting/05-estimate-cta-1221004-deck-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Project Evidence'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/interior-exterior-painting",
+      "public_path": "/images/design/interior-exterior-painting/05-estimate-cta-0825017-ext-stain-01-jpeg.jpeg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /interior-exterior-painting for the distinct narrative job 'Material Detail'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/custom-home-services",
+      "public_path": "/images/design/custom-home-services/01-hero-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Open with a planning manifesto and narrow proof rail, separate from the general-contractor hero.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Exterior Paint'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/custom-home-services",
+      "public_path": "/images/design/custom-home-services/01-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Open with a planning manifesto and narrow proof rail, separate from the general-contractor hero.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/custom-home-services",
+      "public_path": "/images/design/custom-home-services/01-hero-0825017-ext-stain-01-jpeg.jpeg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro exterior materials evidence for Open with a planning manifesto and narrow proof rail, separate from the general-contractor hero.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Exterior Materials'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/custom-home-services",
+      "public_path": "/images/design/custom-home-services/04-project-gallery-faq-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "04-project-gallery-faq",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Bring broad project evidence in as an asymmetric ledger.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Exterior Paint'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/custom-home-services",
+      "public_path": "/images/design/custom-home-services/04-project-gallery-faq-1221004-deck-01-jpg.jpg",
+      "section_owner": "04-project-gallery-faq",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Bring broad project evidence in as an asymmetric ledger.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/custom-home-services",
+      "public_path": "/images/design/custom-home-services/04-project-gallery-faq-0825017-ext-stain-01-jpeg.jpeg",
+      "section_owner": "04-project-gallery-faq",
+      "narrative_job": "Provide authentic Tubro exterior stain & materials evidence for Bring broad project evidence in as an asymmetric ledger.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Exterior Stain & Materials'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/custom-home-services",
+      "public_path": "/images/design/custom-home-services/04-project-gallery-faq-0524016-deck-02-jpg.jpg",
+      "section_owner": "04-project-gallery-faq",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Bring broad project evidence in as an asymmetric ledger.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/custom-home-services",
+      "public_path": "/images/design/custom-home-services/05-estimate-cta-1221004-deck-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /custom-home-services for the distinct narrative job 'Project Evidence'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/recent-projects",
+      "public_path": "/images/design/recent-projects/01-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Start with proof rather than a service pitch.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/recent-projects",
+      "public_path": "/images/design/recent-projects/02-realwork-labs-portfolio-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-realwork-labs-portfolio",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Make the portfolio wall the dominant content surface.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/recent-projects",
+      "public_path": "/images/design/recent-projects/02-realwork-labs-portfolio-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-realwork-labs-portfolio",
+      "narrative_job": "Provide authentic Tubro kitchen project photo evidence for Make the portfolio wall the dominant content surface.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Kitchen Project Photo'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/recent-projects",
+      "public_path": "/images/design/recent-projects/02-realwork-labs-portfolio-0126001-kitchen-01-jpg.jpg",
+      "section_owner": "02-realwork-labs-portfolio",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Make the portfolio wall the dominant content surface.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Bathroom Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/recent-projects",
+      "public_path": "/images/design/recent-projects/02-realwork-labs-portfolio-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-realwork-labs-portfolio",
+      "narrative_job": "Provide authentic Tubro bathroom renovation evidence for Make the portfolio wall the dominant content surface.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Bathroom Renovation'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/recent-projects",
+      "public_path": "/images/design/recent-projects/02-realwork-labs-portfolio-0126030-bathroom-01-jpg.jpg",
+      "section_owner": "02-realwork-labs-portfolio",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Make the portfolio wall the dominant content surface.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/recent-projects",
+      "public_path": "/images/design/recent-projects/02-realwork-labs-portfolio-0128008-bathroom-01-jpg.jpg",
+      "section_owner": "02-realwork-labs-portfolio",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Make the portfolio wall the dominant content surface.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Exterior Paint'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/recent-projects",
+      "public_path": "/images/design/recent-projects/03-filters-review-proof-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "03-filters-review-proof",
+      "narrative_job": "Provide authentic Tubro kitchen evidence for Turn filters into a contact-sheet evidence band.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Kitchen'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/recent-projects",
+      "public_path": "/images/design/recent-projects/03-filters-review-proof-0126001-kitchen-01-jpg.jpg",
+      "section_owner": "03-filters-review-proof",
+      "narrative_job": "Provide authentic Tubro bath evidence for Turn filters into a contact-sheet evidence band.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Bath'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/recent-projects",
+      "public_path": "/images/design/recent-projects/03-filters-review-proof-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "03-filters-review-proof",
+      "narrative_job": "Provide authentic Tubro deck evidence for Turn filters into a contact-sheet evidence band.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Deck'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/recent-projects",
+      "public_path": "/images/design/recent-projects/03-filters-review-proof-0126030-bathroom-01-jpg.jpg",
+      "section_owner": "03-filters-review-proof",
+      "narrative_job": "Provide authentic Tubro paint evidence for Turn filters into a contact-sheet evidence band.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Paint'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/recent-projects",
+      "public_path": "/images/design/recent-projects/03-filters-review-proof-0128008-bathroom-01-jpg.jpg",
+      "section_owner": "03-filters-review-proof",
+      "narrative_job": "Provide authentic Tubro exterior evidence for Turn filters into a contact-sheet evidence band.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Exterior'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/recent-projects",
+      "public_path": "/images/design/recent-projects/04-estimate-cta-0126030-bathroom-01-jpg.jpg",
+      "section_owner": "04-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Project Evidence'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/recent-projects",
+      "public_path": "/images/design/recent-projects/04-estimate-cta-0128008-bathroom-01-jpg.jpg",
+      "section_owner": "04-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /recent-projects for the distinct narrative job 'Material Detail'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/about-us",
+      "public_path": "/images/design/about-us/01-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Lead with accountability and project proof using verified work imagery.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /about-us for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/about-us",
+      "public_path": "/images/design/about-us/01-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Lead with accountability and project proof using verified work imagery.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /about-us for the distinct narrative job 'Bathroom Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/about-us",
+      "public_path": "/images/design/about-us/01-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Lead with accountability and project proof using verified work imagery.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /about-us for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/about-us",
+      "public_path": "/images/design/about-us/02-company-story-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-company-story",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Put company story into a quiet copy area over real work.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /about-us for the distinct narrative job 'Bathroom Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/service-areas",
+      "public_path": "/images/design/service-areas/01-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Introduce geography through a diagonal directory canvas.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /service-areas for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/service-areas",
+      "public_path": "/images/design/service-areas/04-project-map-service-fit-1221004-deck-01-jpg.jpg",
+      "section_owner": "04-project-map-service-fit",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Use project imagery only as capability evidence while the office confirms fit.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /service-areas for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/service-areas",
+      "public_path": "/images/design/service-areas/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /service-areas for the distinct narrative job 'Project Evidence'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/service-areas",
+      "public_path": "/images/design/service-areas/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /service-areas for the distinct narrative job 'Material Detail'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/blog",
+      "public_path": "/images/design/blog/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /blog for the distinct narrative job 'Project Evidence'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/blog",
+      "public_path": "/images/design/blog/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /blog for the distinct narrative job 'Material Detail'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/careers",
+      "public_path": "/images/design/careers/01-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Use completed work as culture evidence without fake crew imagery.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /careers for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/careers",
+      "public_path": "/images/design/careers/01-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Use completed work as culture evidence without fake crew imagery.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /careers for the distinct narrative job 'Bathroom Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/careers",
+      "public_path": "/images/design/careers/01-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Use completed work as culture evidence without fake crew imagery.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /careers for the distinct narrative job 'Deck & Outdoor Living'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/careers",
+      "public_path": "/images/design/careers/02-work-environment-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-work-environment",
+      "narrative_job": "Provide authentic Tubro kitchen evidence for Show the kind of work applicants contribute to through an evidence band.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /careers for the distinct narrative job 'Kitchen'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/careers",
+      "public_path": "/images/design/careers/02-work-environment-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-work-environment",
+      "narrative_job": "Provide authentic Tubro bath evidence for Show the kind of work applicants contribute to through an evidence band.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /careers for the distinct narrative job 'Bath'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/careers",
+      "public_path": "/images/design/careers/02-work-environment-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-work-environment",
+      "narrative_job": "Provide authentic Tubro deck evidence for Show the kind of work applicants contribute to through an evidence band.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /careers for the distinct narrative job 'Deck'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/careers",
+      "public_path": "/images/design/careers/02-work-environment-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-work-environment",
+      "narrative_job": "Provide authentic Tubro paint evidence for Show the kind of work applicants contribute to through an evidence band.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /careers for the distinct narrative job 'Paint'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/careers",
+      "public_path": "/images/design/careers/02-work-environment-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-work-environment",
+      "narrative_job": "Provide authentic Tubro material evidence for Show the kind of work applicants contribute to through an evidence band.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /careers for the distinct narrative job 'Material'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/schedule-an-estimate",
+      "public_path": "/images/design/schedule-an-estimate/01-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Make the estimate brief the first visual object.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /schedule-an-estimate for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/schedule-an-estimate",
+      "public_path": "/images/design/schedule-an-estimate/01-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Make the estimate brief the first visual object.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /schedule-an-estimate for the distinct narrative job 'Bathroom Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/schedule-an-estimate",
+      "public_path": "/images/design/schedule-an-estimate/03-estimate-form-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "03-estimate-form",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Use the form overlay as the work-order surface.",
+      "reuse_intent": "The approved reference deliberately reuses this authentic source within /schedule-an-estimate for the distinct narrative job 'Kitchen Remodeling'; crop and section ownership remain route-specific."
+    },
+    {
+      "route": "/service-area/home-remodeling-maple-valley",
+      "public_path": "/images/design/service-area--home-remodeling-maple-valley/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Maple Valley service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-maple-valley 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-maple-valley",
+      "public_path": "/images/design/service-area--home-remodeling-maple-valley/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Maple Valley service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-maple-valley 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-maple-valley",
+      "public_path": "/images/design/service-area--home-remodeling-maple-valley/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Maple Valley service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-maple-valley 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-maple-valley",
+      "public_path": "/images/design/service-area--home-remodeling-maple-valley/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-maple-valley 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-maple-valley",
+      "public_path": "/images/design/service-area--home-remodeling-maple-valley/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-maple-valley 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-maple-valley",
+      "public_path": "/images/design/service-area--home-remodeling-maple-valley/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-maple-valley 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-maple-valley",
+      "public_path": "/images/design/service-area--home-remodeling-maple-valley/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-maple-valley 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-maple-valley",
+      "public_path": "/images/design/service-area--home-remodeling-maple-valley/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-maple-valley 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-maple-valley",
+      "public_path": "/images/design/service-area--home-remodeling-maple-valley/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-maple-valley 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-maple-valley",
+      "public_path": "/images/design/service-area--home-remodeling-maple-valley/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-maple-valley 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-maple-valley",
+      "public_path": "/images/design/service-area--home-remodeling-maple-valley/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-maple-valley 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-tacoma",
+      "public_path": "/images/design/service-area--home-remodeling-tacoma/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Tacoma service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-tacoma",
+      "public_path": "/images/design/service-area--home-remodeling-tacoma/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Tacoma service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-tacoma",
+      "public_path": "/images/design/service-area--home-remodeling-tacoma/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Tacoma service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-tacoma",
+      "public_path": "/images/design/service-area--home-remodeling-tacoma/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-tacoma",
+      "public_path": "/images/design/service-area--home-remodeling-tacoma/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-tacoma",
+      "public_path": "/images/design/service-area--home-remodeling-tacoma/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-tacoma",
+      "public_path": "/images/design/service-area--home-remodeling-tacoma/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-tacoma",
+      "public_path": "/images/design/service-area--home-remodeling-tacoma/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-tacoma",
+      "public_path": "/images/design/service-area--home-remodeling-tacoma/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-tacoma",
+      "public_path": "/images/design/service-area--home-remodeling-tacoma/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-tacoma",
+      "public_path": "/images/design/service-area--home-remodeling-tacoma/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-tacoma 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-covington",
+      "public_path": "/images/design/service-area--home-remodeling-covington/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Covington service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-covington 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-covington",
+      "public_path": "/images/design/service-area--home-remodeling-covington/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Covington service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-covington 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-covington",
+      "public_path": "/images/design/service-area--home-remodeling-covington/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Covington service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-covington 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-covington",
+      "public_path": "/images/design/service-area--home-remodeling-covington/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-covington 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-covington",
+      "public_path": "/images/design/service-area--home-remodeling-covington/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-covington 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-covington",
+      "public_path": "/images/design/service-area--home-remodeling-covington/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-covington 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-covington",
+      "public_path": "/images/design/service-area--home-remodeling-covington/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-covington 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-covington",
+      "public_path": "/images/design/service-area--home-remodeling-covington/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-covington 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-covington",
+      "public_path": "/images/design/service-area--home-remodeling-covington/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-covington 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-covington",
+      "public_path": "/images/design/service-area--home-remodeling-covington/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-covington 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-covington",
+      "public_path": "/images/design/service-area--home-remodeling-covington/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-covington 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-renton",
+      "public_path": "/images/design/service-area--home-remodeling-renton/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Renton service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-renton",
+      "public_path": "/images/design/service-area--home-remodeling-renton/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Renton service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-renton",
+      "public_path": "/images/design/service-area--home-remodeling-renton/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Renton service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-renton",
+      "public_path": "/images/design/service-area--home-remodeling-renton/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-renton",
+      "public_path": "/images/design/service-area--home-remodeling-renton/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-renton",
+      "public_path": "/images/design/service-area--home-remodeling-renton/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-renton",
+      "public_path": "/images/design/service-area--home-remodeling-renton/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-renton",
+      "public_path": "/images/design/service-area--home-remodeling-renton/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-renton",
+      "public_path": "/images/design/service-area--home-remodeling-renton/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-renton",
+      "public_path": "/images/design/service-area--home-remodeling-renton/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-renton",
+      "public_path": "/images/design/service-area--home-remodeling-renton/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-renton 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-kent",
+      "public_path": "/images/design/service-area--home-remodeling-kent/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Kent service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-kent 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-kent",
+      "public_path": "/images/design/service-area--home-remodeling-kent/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Kent service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-kent 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-kent",
+      "public_path": "/images/design/service-area--home-remodeling-kent/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Kent service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-kent 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-kent",
+      "public_path": "/images/design/service-area--home-remodeling-kent/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-kent 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-kent",
+      "public_path": "/images/design/service-area--home-remodeling-kent/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-kent 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-kent",
+      "public_path": "/images/design/service-area--home-remodeling-kent/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-kent 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-kent",
+      "public_path": "/images/design/service-area--home-remodeling-kent/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-kent 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-kent",
+      "public_path": "/images/design/service-area--home-remodeling-kent/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-kent 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-kent",
+      "public_path": "/images/design/service-area--home-remodeling-kent/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-kent 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-kent",
+      "public_path": "/images/design/service-area--home-remodeling-kent/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-kent 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-kent",
+      "public_path": "/images/design/service-area--home-remodeling-kent/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-kent 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-auburn",
+      "public_path": "/images/design/service-area--home-remodeling-auburn/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Auburn service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-auburn 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-auburn",
+      "public_path": "/images/design/service-area--home-remodeling-auburn/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Auburn service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-auburn 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-auburn",
+      "public_path": "/images/design/service-area--home-remodeling-auburn/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Auburn service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-auburn 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-auburn",
+      "public_path": "/images/design/service-area--home-remodeling-auburn/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-auburn 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-auburn",
+      "public_path": "/images/design/service-area--home-remodeling-auburn/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-auburn 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-auburn",
+      "public_path": "/images/design/service-area--home-remodeling-auburn/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-auburn 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-auburn",
+      "public_path": "/images/design/service-area--home-remodeling-auburn/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-auburn 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-auburn",
+      "public_path": "/images/design/service-area--home-remodeling-auburn/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-auburn 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-auburn",
+      "public_path": "/images/design/service-area--home-remodeling-auburn/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-auburn 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-auburn",
+      "public_path": "/images/design/service-area--home-remodeling-auburn/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-auburn 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-auburn",
+      "public_path": "/images/design/service-area--home-remodeling-auburn/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-auburn 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-ravensdale",
+      "public_path": "/images/design/service-area--home-remodeling-ravensdale/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Ravensdale service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-ravensdale 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-ravensdale",
+      "public_path": "/images/design/service-area--home-remodeling-ravensdale/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Ravensdale service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-ravensdale 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-ravensdale",
+      "public_path": "/images/design/service-area--home-remodeling-ravensdale/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Ravensdale service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-ravensdale 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-ravensdale",
+      "public_path": "/images/design/service-area--home-remodeling-ravensdale/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-ravensdale 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-ravensdale",
+      "public_path": "/images/design/service-area--home-remodeling-ravensdale/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-ravensdale 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-ravensdale",
+      "public_path": "/images/design/service-area--home-remodeling-ravensdale/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-ravensdale 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-ravensdale",
+      "public_path": "/images/design/service-area--home-remodeling-ravensdale/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-ravensdale 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-ravensdale",
+      "public_path": "/images/design/service-area--home-remodeling-ravensdale/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-ravensdale 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-ravensdale",
+      "public_path": "/images/design/service-area--home-remodeling-ravensdale/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-ravensdale 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-ravensdale",
+      "public_path": "/images/design/service-area--home-remodeling-ravensdale/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-ravensdale 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-ravensdale",
+      "public_path": "/images/design/service-area--home-remodeling-ravensdale/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-ravensdale 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-enumclaw",
+      "public_path": "/images/design/service-area--home-remodeling-enumclaw/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Enumclaw service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-enumclaw 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-enumclaw",
+      "public_path": "/images/design/service-area--home-remodeling-enumclaw/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Enumclaw service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-enumclaw 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-enumclaw",
+      "public_path": "/images/design/service-area--home-remodeling-enumclaw/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Enumclaw service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-enumclaw 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-enumclaw",
+      "public_path": "/images/design/service-area--home-remodeling-enumclaw/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-enumclaw 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-enumclaw",
+      "public_path": "/images/design/service-area--home-remodeling-enumclaw/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-enumclaw 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-enumclaw",
+      "public_path": "/images/design/service-area--home-remodeling-enumclaw/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-enumclaw 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-enumclaw",
+      "public_path": "/images/design/service-area--home-remodeling-enumclaw/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-enumclaw 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-enumclaw",
+      "public_path": "/images/design/service-area--home-remodeling-enumclaw/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-enumclaw 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-enumclaw",
+      "public_path": "/images/design/service-area--home-remodeling-enumclaw/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-enumclaw 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-enumclaw",
+      "public_path": "/images/design/service-area--home-remodeling-enumclaw/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-enumclaw 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-enumclaw",
+      "public_path": "/images/design/service-area--home-remodeling-enumclaw/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-enumclaw 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-issaquah",
+      "public_path": "/images/design/service-area--home-remodeling-issaquah/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Issaquah service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-issaquah 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-issaquah",
+      "public_path": "/images/design/service-area--home-remodeling-issaquah/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Issaquah service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-issaquah 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-issaquah",
+      "public_path": "/images/design/service-area--home-remodeling-issaquah/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Issaquah service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-issaquah 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-issaquah",
+      "public_path": "/images/design/service-area--home-remodeling-issaquah/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-issaquah 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-issaquah",
+      "public_path": "/images/design/service-area--home-remodeling-issaquah/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-issaquah 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-issaquah",
+      "public_path": "/images/design/service-area--home-remodeling-issaquah/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-issaquah 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-issaquah",
+      "public_path": "/images/design/service-area--home-remodeling-issaquah/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-issaquah 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-issaquah",
+      "public_path": "/images/design/service-area--home-remodeling-issaquah/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-issaquah 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-issaquah",
+      "public_path": "/images/design/service-area--home-remodeling-issaquah/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-issaquah 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-issaquah",
+      "public_path": "/images/design/service-area--home-remodeling-issaquah/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-issaquah 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-issaquah",
+      "public_path": "/images/design/service-area--home-remodeling-issaquah/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-issaquah 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bellevue",
+      "public_path": "/images/design/service-area--home-remodeling-bellevue/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Bellevue service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bellevue 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bellevue",
+      "public_path": "/images/design/service-area--home-remodeling-bellevue/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Bellevue service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bellevue 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bellevue",
+      "public_path": "/images/design/service-area--home-remodeling-bellevue/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Bellevue service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bellevue 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bellevue",
+      "public_path": "/images/design/service-area--home-remodeling-bellevue/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bellevue 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bellevue",
+      "public_path": "/images/design/service-area--home-remodeling-bellevue/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bellevue 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bellevue",
+      "public_path": "/images/design/service-area--home-remodeling-bellevue/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bellevue 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bellevue",
+      "public_path": "/images/design/service-area--home-remodeling-bellevue/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bellevue 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bellevue",
+      "public_path": "/images/design/service-area--home-remodeling-bellevue/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bellevue 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bellevue",
+      "public_path": "/images/design/service-area--home-remodeling-bellevue/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bellevue 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bellevue",
+      "public_path": "/images/design/service-area--home-remodeling-bellevue/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bellevue 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bellevue",
+      "public_path": "/images/design/service-area--home-remodeling-bellevue/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bellevue 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-newcastle",
+      "public_path": "/images/design/service-area--home-remodeling-newcastle/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Newcastle service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-newcastle 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-newcastle",
+      "public_path": "/images/design/service-area--home-remodeling-newcastle/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Newcastle service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-newcastle 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-newcastle",
+      "public_path": "/images/design/service-area--home-remodeling-newcastle/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Newcastle service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-newcastle 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-newcastle",
+      "public_path": "/images/design/service-area--home-remodeling-newcastle/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-newcastle 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-newcastle",
+      "public_path": "/images/design/service-area--home-remodeling-newcastle/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-newcastle 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-newcastle",
+      "public_path": "/images/design/service-area--home-remodeling-newcastle/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-newcastle 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-newcastle",
+      "public_path": "/images/design/service-area--home-remodeling-newcastle/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-newcastle 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-newcastle",
+      "public_path": "/images/design/service-area--home-remodeling-newcastle/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-newcastle 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-newcastle",
+      "public_path": "/images/design/service-area--home-remodeling-newcastle/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-newcastle 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-newcastle",
+      "public_path": "/images/design/service-area--home-remodeling-newcastle/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-newcastle 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-newcastle",
+      "public_path": "/images/design/service-area--home-remodeling-newcastle/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-newcastle 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-black-diamond",
+      "public_path": "/images/design/service-area--home-remodeling-black-diamond/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Black Diamond service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-black-diamond 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-black-diamond",
+      "public_path": "/images/design/service-area--home-remodeling-black-diamond/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Black Diamond service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-black-diamond 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-black-diamond",
+      "public_path": "/images/design/service-area--home-remodeling-black-diamond/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Black Diamond service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-black-diamond 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-black-diamond",
+      "public_path": "/images/design/service-area--home-remodeling-black-diamond/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-black-diamond 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-black-diamond",
+      "public_path": "/images/design/service-area--home-remodeling-black-diamond/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-black-diamond 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-black-diamond",
+      "public_path": "/images/design/service-area--home-remodeling-black-diamond/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-black-diamond 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-black-diamond",
+      "public_path": "/images/design/service-area--home-remodeling-black-diamond/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-black-diamond 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-black-diamond",
+      "public_path": "/images/design/service-area--home-remodeling-black-diamond/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-black-diamond 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-black-diamond",
+      "public_path": "/images/design/service-area--home-remodeling-black-diamond/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-black-diamond 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-black-diamond",
+      "public_path": "/images/design/service-area--home-remodeling-black-diamond/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-black-diamond 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-black-diamond",
+      "public_path": "/images/design/service-area--home-remodeling-black-diamond/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-black-diamond 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-fairwood",
+      "public_path": "/images/design/service-area--home-remodeling-fairwood/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Fairwood service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-fairwood 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-fairwood",
+      "public_path": "/images/design/service-area--home-remodeling-fairwood/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Fairwood service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-fairwood 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-fairwood",
+      "public_path": "/images/design/service-area--home-remodeling-fairwood/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Fairwood service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-fairwood 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-fairwood",
+      "public_path": "/images/design/service-area--home-remodeling-fairwood/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-fairwood 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-fairwood",
+      "public_path": "/images/design/service-area--home-remodeling-fairwood/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-fairwood 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-fairwood",
+      "public_path": "/images/design/service-area--home-remodeling-fairwood/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-fairwood 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-fairwood",
+      "public_path": "/images/design/service-area--home-remodeling-fairwood/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-fairwood 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-fairwood",
+      "public_path": "/images/design/service-area--home-remodeling-fairwood/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-fairwood 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-fairwood",
+      "public_path": "/images/design/service-area--home-remodeling-fairwood/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-fairwood 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-fairwood",
+      "public_path": "/images/design/service-area--home-remodeling-fairwood/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-fairwood 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-fairwood",
+      "public_path": "/images/design/service-area--home-remodeling-fairwood/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-fairwood 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sumner",
+      "public_path": "/images/design/service-area--home-remodeling-sumner/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Sumner service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sumner 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sumner",
+      "public_path": "/images/design/service-area--home-remodeling-sumner/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Sumner service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sumner 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sumner",
+      "public_path": "/images/design/service-area--home-remodeling-sumner/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Sumner service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sumner 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sumner",
+      "public_path": "/images/design/service-area--home-remodeling-sumner/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sumner 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sumner",
+      "public_path": "/images/design/service-area--home-remodeling-sumner/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sumner 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sumner",
+      "public_path": "/images/design/service-area--home-remodeling-sumner/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sumner 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sumner",
+      "public_path": "/images/design/service-area--home-remodeling-sumner/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sumner 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sumner",
+      "public_path": "/images/design/service-area--home-remodeling-sumner/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sumner 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sumner",
+      "public_path": "/images/design/service-area--home-remodeling-sumner/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sumner 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sumner",
+      "public_path": "/images/design/service-area--home-remodeling-sumner/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sumner 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sumner",
+      "public_path": "/images/design/service-area--home-remodeling-sumner/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sumner 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bonney-lake",
+      "public_path": "/images/design/service-area--home-remodeling-bonney-lake/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Bonney Lake service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bonney-lake 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bonney-lake",
+      "public_path": "/images/design/service-area--home-remodeling-bonney-lake/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Bonney Lake service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bonney-lake 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bonney-lake",
+      "public_path": "/images/design/service-area--home-remodeling-bonney-lake/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Bonney Lake service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bonney-lake 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bonney-lake",
+      "public_path": "/images/design/service-area--home-remodeling-bonney-lake/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bonney-lake 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bonney-lake",
+      "public_path": "/images/design/service-area--home-remodeling-bonney-lake/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bonney-lake 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bonney-lake",
+      "public_path": "/images/design/service-area--home-remodeling-bonney-lake/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bonney-lake 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bonney-lake",
+      "public_path": "/images/design/service-area--home-remodeling-bonney-lake/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bonney-lake 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bonney-lake",
+      "public_path": "/images/design/service-area--home-remodeling-bonney-lake/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bonney-lake 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bonney-lake",
+      "public_path": "/images/design/service-area--home-remodeling-bonney-lake/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bonney-lake 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bonney-lake",
+      "public_path": "/images/design/service-area--home-remodeling-bonney-lake/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bonney-lake 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-bonney-lake",
+      "public_path": "/images/design/service-area--home-remodeling-bonney-lake/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-bonney-lake 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-buckley",
+      "public_path": "/images/design/service-area--home-remodeling-buckley/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Buckley service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-buckley 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-buckley",
+      "public_path": "/images/design/service-area--home-remodeling-buckley/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Buckley service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-buckley 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-buckley",
+      "public_path": "/images/design/service-area--home-remodeling-buckley/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Buckley service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-buckley 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-buckley",
+      "public_path": "/images/design/service-area--home-remodeling-buckley/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-buckley 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-buckley",
+      "public_path": "/images/design/service-area--home-remodeling-buckley/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-buckley 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-buckley",
+      "public_path": "/images/design/service-area--home-remodeling-buckley/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-buckley 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-buckley",
+      "public_path": "/images/design/service-area--home-remodeling-buckley/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-buckley 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-buckley",
+      "public_path": "/images/design/service-area--home-remodeling-buckley/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-buckley 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-buckley",
+      "public_path": "/images/design/service-area--home-remodeling-buckley/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-buckley 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-buckley",
+      "public_path": "/images/design/service-area--home-remodeling-buckley/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-buckley 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-buckley",
+      "public_path": "/images/design/service-area--home-remodeling-buckley/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-buckley 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-snoqualmie",
+      "public_path": "/images/design/service-area--home-remodeling-snoqualmie/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Snoqualmie service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-snoqualmie 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-snoqualmie",
+      "public_path": "/images/design/service-area--home-remodeling-snoqualmie/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Snoqualmie service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-snoqualmie 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-snoqualmie",
+      "public_path": "/images/design/service-area--home-remodeling-snoqualmie/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Snoqualmie service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-snoqualmie 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-snoqualmie",
+      "public_path": "/images/design/service-area--home-remodeling-snoqualmie/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-snoqualmie 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-snoqualmie",
+      "public_path": "/images/design/service-area--home-remodeling-snoqualmie/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-snoqualmie 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-snoqualmie",
+      "public_path": "/images/design/service-area--home-remodeling-snoqualmie/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-snoqualmie 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-snoqualmie",
+      "public_path": "/images/design/service-area--home-remodeling-snoqualmie/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-snoqualmie 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-snoqualmie",
+      "public_path": "/images/design/service-area--home-remodeling-snoqualmie/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-snoqualmie 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-snoqualmie",
+      "public_path": "/images/design/service-area--home-remodeling-snoqualmie/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-snoqualmie 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-snoqualmie",
+      "public_path": "/images/design/service-area--home-remodeling-snoqualmie/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-snoqualmie 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-snoqualmie",
+      "public_path": "/images/design/service-area--home-remodeling-snoqualmie/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-snoqualmie 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-north-bend",
+      "public_path": "/images/design/service-area--home-remodeling-north-bend/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm North Bend service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-north-bend 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-north-bend",
+      "public_path": "/images/design/service-area--home-remodeling-north-bend/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm North Bend service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-north-bend 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-north-bend",
+      "public_path": "/images/design/service-area--home-remodeling-north-bend/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm North Bend service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-north-bend 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-north-bend",
+      "public_path": "/images/design/service-area--home-remodeling-north-bend/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-north-bend 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-north-bend",
+      "public_path": "/images/design/service-area--home-remodeling-north-bend/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-north-bend 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-north-bend",
+      "public_path": "/images/design/service-area--home-remodeling-north-bend/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-north-bend 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-north-bend",
+      "public_path": "/images/design/service-area--home-remodeling-north-bend/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-north-bend 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-north-bend",
+      "public_path": "/images/design/service-area--home-remodeling-north-bend/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-north-bend 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-north-bend",
+      "public_path": "/images/design/service-area--home-remodeling-north-bend/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-north-bend 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-north-bend",
+      "public_path": "/images/design/service-area--home-remodeling-north-bend/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-north-bend 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-north-bend",
+      "public_path": "/images/design/service-area--home-remodeling-north-bend/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-north-bend 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sammamish",
+      "public_path": "/images/design/service-area--home-remodeling-sammamish/01-local-hero-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Confirm Sammamish service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sammamish 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sammamish",
+      "public_path": "/images/design/service-area--home-remodeling-sammamish/01-local-hero-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Confirm Sammamish service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sammamish 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sammamish",
+      "public_path": "/images/design/service-area--home-remodeling-sammamish/01-local-hero-1221004-deck-01-jpg.jpg",
+      "section_owner": "01-local-hero",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Confirm Sammamish service-area relevance without inventing city-specific project proof.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sammamish 01-local-hero; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sammamish",
+      "public_path": "/images/design/service-area--home-remodeling-sammamish/02-verified-local-scope-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro capability evidence evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sammamish 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sammamish",
+      "public_path": "/images/design/service-area--home-remodeling-sammamish/02-verified-local-scope-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro bathroom remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sammamish 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sammamish",
+      "public_path": "/images/design/service-area--home-remodeling-sammamish/02-verified-local-scope-1221004-deck-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro deck & outdoor living evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sammamish 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sammamish",
+      "public_path": "/images/design/service-area--home-remodeling-sammamish/02-verified-local-scope-0426023-exterior-paint-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro exterior paint evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sammamish 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sammamish",
+      "public_path": "/images/design/service-area--home-remodeling-sammamish/02-verified-local-scope-0125065-kitchen-01-jpg.jpg",
+      "section_owner": "02-verified-local-scope",
+      "narrative_job": "Provide authentic Tubro kitchen remodeling evidence for Show shared capability evidence while the copy stays honest about local proof limits.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sammamish 02-verified-local-scope; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sammamish",
+      "public_path": "/images/design/service-area--home-remodeling-sammamish/03-local-guidance-1221004-deck-01-jpg.jpg",
+      "section_owner": "03-local-guidance",
+      "narrative_job": "Provide authentic Tubro shared capability evidence evidence for Give local visitors a practical route without repetitive city stuffing.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sammamish 03-local-guidance; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sammamish",
+      "public_path": "/images/design/service-area--home-remodeling-sammamish/05-estimate-cta-0125047-kitchen-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro project evidence evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sammamish 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    },
+    {
+      "route": "/service-area/home-remodeling-sammamish",
+      "public_path": "/images/design/service-area--home-remodeling-sammamish/05-estimate-cta-0925012-bathroom-01-jpg.jpg",
+      "section_owner": "05-estimate-cta",
+      "narrative_job": "Provide authentic Tubro material detail evidence for Convert qualified project interest into a useful office follow-up path.",
+      "reuse_intent": "Approved shared Tubro capability evidence for /service-area/home-remodeling-sammamish 05-estimate-cta; the image does not imply a city-specific project, result, or location."
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "page": {
+    "slug": "privacy",
+    "route": "/privacy",
+    "title": "Privacy Policy | Tubro Construction",
+    "intent": "navigational"
+  },
+  "selected_direction": "a - Measured Living",
+  "page_rhythm_family": "quiet document",
+  "service_area_archetype": null,
+  "brand": {
+    "name": "Tubro Construction",
+    "wordmark": "TUBRO CONSTRUCTION",
+    "logo_asset": "brand-assets/tc-logo.png",
+    "location": "King and Pierce Counties, Washington",
+    "phone": "253-216-2633",
+    "email": "workorders@tubroconstruction.com",
+    "hours": "Monday–Friday, 7:00 a.m.–4:00 p.m.",
+    "since": "Founded in 2010",
+    "brand_color_from_logo": "#0C883D",
+    "palette_guidance": "Lock the real logo green #0C883D and near-black #231F20. Favor bright warm whites, restrained construction neutrals, and authentic wood/stone tones from client project photography. No invented cyan identity, washed-out gradients, stock indigo, or dominant orange discount styling.",
+    "voice": "Professional, warm, plainspoken, confident, and respectful of the homeowner’s investment.",
+    "identity_belief": "A remodel earns trust when homeowners can see the work, understand the path, and know who is accountable from estimate through completion.",
+    "visual_metaphor": "A continuous measured construction line travels through the page like a chalk line or plan mark, joining finished spaces, project stages, and the next clear decision.",
+    "taglines": [
+      "Residential Remodeling, Built With Care",
+      "Built Around the Way You Want to Live"
+    ]
+  },
+  "hard_rules": [
+    "Use the real Tubro Construction logo asset as-is. Never redraw, restyle, re-letter, or reinterpret the logo; frames may use a neutral placeholder or plain wordmark only.",
+    "Use authentic supplied Tubro project photography before all generated or stock imagery. Never generate imagery that impersonates a completed client project.",
+    "No van-led hero. A branded vehicle may appear only as secondary brand context and is not required in these homepage refs.",
+    "No dark, boxy, heavy-card redesign; no generic centered service-card grid; no pill-heavy SaaS UI; no gradient text or generic gradient blobs.",
+    "No generic stock families, contractor portraits, invented team members, or generated named people.",
+    "No invented testimonials, ratings, awards, licenses, bonding, insurance, warranties, project counts, project locations, budgets, or timelines.",
+    "Keep the site clearly separate from Tubro Carpet Cleaning and Get Gawn; do not mention those businesses in customer-facing homepage copy.",
+    "Keep the 5% active-duty military and first-responder discount secondary to the free-estimate CTA. Do not add a deadline, urgency claim, or new terms.",
+    "Do not imply direct Buildertrend integration; form leads route to workorders@tubroconstruction.com and office staff enter leads manually.",
+    "Use location names naturally. No repetitive city-name stuffing or doorway-page language.",
+    "Every visual control must have a useful defined outcome. Otherwise render it as static content.",
+    "Design for desktop and mobile accessibility with strong contrast, clear labels, and visible focus intent.",
+    "Customer review and approval are required before public launch.",
+    "Frames cover CONTENT sections only; global nav/footer belong to the built design system and are never rendered into frames."
+  ],
+  "route_metadata": {
+    "target_terms": [],
+    "source": "current site"
+  },
+  "source_constraints": [
+    "Manifest text wins for build copy.",
+    "Do not invent location-specific projects, team claims, ratings, licenses, timelines, project counts, addresses, or testimonials.",
+    "Use authentic supplied Tubro photography only as project/capability evidence described in this manifest."
+  ],
+  "ordered_sections": [
+    {
+      "id": "01-policy-content",
+      "name": "policy-content",
+      "source_blueprint_sections": [
+        "policy-content"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Keep legal content quiet, readable, and separate from marketing page rhythms.",
+      "composition": "policy-editorial-document",
+      "composition_grammar": "quiet policy/editorial document composition",
+      "motif_role": "ledger_rule",
+      "focal_point": "Privacy Policy",
+      "eye_path": "Start at the quiet policy/editorial document composition, follow the measured ledger rule, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "surface",
+      "frame": "refs/01-policy-content.png",
+      "prompt": "prompts/01-policy-content.md",
+      "content": {
+        "eyebrow": "Privacy",
+        "headline": "Privacy Policy",
+        "body": "Tubro's privacy page is organized around the information visitors share, how requests are handled, and available communication choices.",
+        "bullets": [
+          "Information you provide",
+          "How information is used",
+          "Your choices"
+        ],
+        "steps": [],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [],
+        "labels": [],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [
+        "Full approved policy body was not isolated in the supplied inventory; migration owner must insert current approved text verbatim."
+      ],
+      "edge_contracts": {
+        "top": "Enter as quiet policy/editorial document composition; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    }
+  ],
+  "page_flow": {
+    "viewport_contract": {
+      "design_frame": "1536x864 primary composition",
+      "target_viewports": [
+        "1440x900",
+        "1536x1024",
+        "390x844"
+      ],
+      "rule": "Primary content is composed for the frame; global nav and footer are excluded from all rendered refs."
+    },
+    "section_weights": {
+      "01-policy-content": "quiet"
+    },
+    "background_progression": [
+      {
+        "section": "01-policy-content",
+        "band": "surface"
+      }
+    ],
+    "composition_sequence": [
+      "policy-editorial-document"
+    ],
+    "motif_continuity": "The approved measured-line vocabulary changes role by section: datum, crop mark, process route, ledger rule, directory coordinate, or dimension bracket.",
+    "rhythm_rules": [
+      "Every section records a design-owner composition ID.",
+      "Route rhythm changes by page purpose; page endings are not one repeated form frame.",
+      "Authentic supplied Tubro photography is used as capability or project evidence without invented facts.",
+      "No generated projects, stock imagery, fake people, global nav, or footer appear in refs."
+    ]
+  }
+}

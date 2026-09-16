@@ -12,7 +12,7 @@ const FIELD_CLASSES =
 const LABEL_CLASSES = "font-fjalla text-[11px] tracking-[0.1em] text-ink/70 uppercase";
 
 export function EstimateA(): ReactElement {
-  const form = useEstimateForm("variant-a");
+  const form = useEstimateForm("/");
 
   return (
     <section id="estimate" aria-labelledby="estimate-a-heading" className="a-estimate bg-plaster">
