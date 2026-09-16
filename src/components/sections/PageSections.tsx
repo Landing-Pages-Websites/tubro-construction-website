@@ -3,6 +3,7 @@ import { bandForSection, loadManifest } from "@/lib/manifest";
 import { resolveSectionImages } from "@/lib/section-images";
 import { contextualLinks, ctaHref } from "@/lib/section-links";
 import { COMPOSITION_REGISTRY } from "@/components/sections/registry";
+import { KitchenRemodelingHero } from "@/components/sections/KitchenRemodelingHero";
 
 interface PageSectionsProps {
   slug: string;
@@ -22,7 +23,9 @@ export function PageSections({ slug, path }: PageSectionsProps): ReactElement {
   return (
     <>
       {manifest.ordered_sections.map((section, index) => {
-        const Composition = COMPOSITION_REGISTRY[section.composition];
+        const Composition = slug === "kitchen-remodeling" && index === 0
+          ? KitchenRemodelingHero
+          : COMPOSITION_REGISTRY[section.composition];
         if (!Composition) {
           throw new Error(`No composition owner registered for "${section.composition}" (${slug})`);
         }

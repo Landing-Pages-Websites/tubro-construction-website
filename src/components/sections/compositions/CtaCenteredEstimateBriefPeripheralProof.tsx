@@ -21,22 +21,26 @@ export function CtaCenteredEstimateBriefPeripheralProof({
   links,
   ctaTarget,
   isFirst,
+  slug,
 }: SectionProps): ReactElement {
   const headingId = `${section.id}-heading`;
   const [first, second] = images;
+  const portraitProof = slug === "kitchen-remodeling";
+  // Cover crops need enough source pixels for the full height, not just slot width.
+  const proofSizes = portraitProof ? "720px" : "176px";
   return (
     <SectionShell section={section} band={band} labelledBy={headingId}>
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         {first && (
-          <div className="absolute left-8 top-0 hidden w-44 xl:block">
+          <div className={`absolute left-8 top-0 hidden xl:block ${portraitProof ? "bottom-0 w-60" : "w-44"}`}>
             <CropCorners corners={["tl", "bl"]} className="-m-3" />
-            <DesignImage image={first} frameClassName="aspect-[4/3]" sizes="176px" />
+            <DesignImage image={first} frameClassName={portraitProof ? "h-full" : "aspect-[4/3]"} sizes={proofSizes} objectPosition={portraitProof ? "35% center" : undefined} />
           </div>
         )}
         {second && (
-          <div className="absolute bottom-0 right-8 hidden w-44 xl:block">
+          <div className={`absolute bottom-0 right-8 hidden xl:block ${portraitProof ? "top-0 w-60" : "w-44"}`}>
             <CropCorners corners={["tr", "br"]} className="-m-3" />
-            <DesignImage image={second} frameClassName="aspect-[4/3]" sizes="176px" />
+            <DesignImage image={second} frameClassName={portraitProof ? "h-full" : "aspect-[4/3]"} sizes={proofSizes} />
           </div>
         )}
         <div className="mx-auto max-w-2xl border border-ink/10 bg-white px-6 py-10 shadow-lg shadow-ink/5 sm:px-12 sm:py-14">
@@ -53,7 +57,7 @@ export function CtaCenteredEstimateBriefPeripheralProof({
         {images.length > 0 && (
           <div className="mt-8 grid grid-cols-2 gap-4 xl:hidden">
             {images.slice(0, 2).map((image) => (
-              <DesignImage key={image.src} image={image} frameClassName="aspect-[4/3]" sizes="50vw" />
+              <DesignImage key={image.src} image={image} frameClassName={portraitProof ? "aspect-[3/4]" : "aspect-[4/3]"} sizes={portraitProof ? "80vw" : "50vw"} objectPosition={portraitProof && image === first ? "35% center" : undefined} />
             ))}
           </div>
         )}
