@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design gallery | Tubro Construction</title>
+  <style>
+    :root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #231f20; background: #f0f1ed; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 1440px; margin: auto; padding: 48px 32px 64px; }
+    header { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 32px; border-bottom: 1px solid #d3d7d0; padding-bottom: 24px; }
+    .brand { color: #0a6f33; font-weight: 700; margin: 0 0 12px; }
+    h1 { font-size: clamp(30px, 4vw, 44px); line-height: 1.1; letter-spacing: -1.2px; margin: 0 0 12px; }
+    .intro { color: #555b54; margin: 0; line-height: 1.6; }
+    .count { white-space: nowrap; color: #555b54; font-size: 14px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid #d3d7d0; border-radius: 12px; background: #fafbf8; color: inherit; text-decoration: none; box-shadow: 0 3px 12px #231f2006; }
+    .card:hover { border-color: #0a6f33; box-shadow: 0 6px 20px #231f2012; }
+    .card:focus-visible { outline: 3px solid #0a6f33; outline-offset: 4px; }
+    .preview { height: 260px; overflow: hidden; background: #e8efe8; border-bottom: 1px solid #d3d7d0; }
+    .preview img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .details { display: flex; flex-direction: column; flex: 1; padding: 20px; }
+    h2 { font-size: 19px; line-height: 1.35; margin: 0 0 8px; font-weight: 650; }
+    .url { font-family: Consolas, monospace; font-size: 12px; line-height: 1.6; color: #555b54; overflow-wrap: anywhere; margin-bottom: 20px; }
+    .open { display: flex; justify-content: space-between; margin-top: auto; color: #0a6f33; font-size: 14px; font-weight: 600; }
+    @media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 600px) { main { padding: 32px 16px; } header { display: block; } .count { margin: 16px 0 0; } .grid { grid-template-columns: minmax(0, 1fr); gap: 20px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div><p class="brand">Tubro Construction</p><h1>Design gallery</h1><p class="intro">A preview of each page. Select a card to open the full design in a new tab.</p></div>
+      <p class="count">34 designs</p>
+    </header>
+    <div class="grid">
+      <a class="card" href="design/a/homepage.png" target="_blank" rel="noopener" aria-label="Homepage · Design A — open full image in a new tab">
+        <div class="preview"><img src="design/a/homepage.png" alt="Homepage · Design A design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Homepage · Design A</h2><span class="url">/</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/b/homepage.png" target="_blank" rel="noopener" aria-label="Homepage · Design B — open full image in a new tab">
+        <div class="preview"><img src="design/b/homepage.png" alt="Homepage · Design B design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Homepage · Design B</h2><span class="url">/</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/general-contractor/page.png" target="_blank" rel="noopener" aria-label="General Contractor — open full image in a new tab">
+        <div class="preview"><img src="design/pages/general-contractor/page.png" alt="General Contractor design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>General Contractor</h2><span class="url">/general-contractor</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/kitchen-remodeling/page.png" target="_blank" rel="noopener" aria-label="Kitchen Remodeling — open full image in a new tab">
+        <div class="preview"><img src="design/pages/kitchen-remodeling/page.png" alt="Kitchen Remodeling design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Kitchen Remodeling</h2><span class="url">/kitchen-remodeling</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/bathroom-remodeling/page.png" target="_blank" rel="noopener" aria-label="Bathroom Remodeling — open full image in a new tab">
+        <div class="preview"><img src="design/pages/bathroom-remodeling/page.png" alt="Bathroom Remodeling design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Bathroom Remodeling</h2><span class="url">/bathroom-remodeling</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/interior-exterior-painting/page.png" target="_blank" rel="noopener" aria-label="Interior Exterior Painting — open full image in a new tab">
+        <div class="preview"><img src="design/pages/interior-exterior-painting/page.png" alt="Interior Exterior Painting design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Interior Exterior Painting</h2><span class="url">/interior-exterior-painting</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/custom-home-services/page.png" target="_blank" rel="noopener" aria-label="Custom Home Services — open full image in a new tab">
+        <div class="preview"><img src="design/pages/custom-home-services/page.png" alt="Custom Home Services design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Custom Home Services</h2><span class="url">/custom-home-services</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/recent-projects/page.png" target="_blank" rel="noopener" aria-label="Recent Projects — open full image in a new tab">
+        <div class="preview"><img src="design/pages/recent-projects/page.png" alt="Recent Projects design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Recent Projects</h2><span class="url">/recent-projects</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/about-us/page.png" target="_blank" rel="noopener" aria-label="About Us — open full image in a new tab">
+        <div class="preview"><img src="design/pages/about-us/page.png" alt="About Us design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>About Us</h2><span class="url">/about-us</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-areas/page.png" target="_blank" rel="noopener" aria-label="Service Areas — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-areas/page.png" alt="Service Areas design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Service Areas</h2><span class="url">/service-areas</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/blog/page.png" target="_blank" rel="noopener" aria-label="Blog — open full image in a new tab">
+        <div class="preview"><img src="design/pages/blog/page.png" alt="Blog design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Blog</h2><span class="url">/blog</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/careers/page.png" target="_blank" rel="noopener" aria-label="Careers — open full image in a new tab">
+        <div class="preview"><img src="design/pages/careers/page.png" alt="Careers design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Careers</h2><span class="url">/careers</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/contact/page.png" target="_blank" rel="noopener" aria-label="Contact — open full image in a new tab">
+        <div class="preview"><img src="design/pages/contact/page.png" alt="Contact design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Contact</h2><span class="url">/contact</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/schedule-an-estimate/page.png" target="_blank" rel="noopener" aria-label="Schedule An Estimate — open full image in a new tab">
+        <div class="preview"><img src="design/pages/schedule-an-estimate/page.png" alt="Schedule An Estimate design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Schedule An Estimate</h2><span class="url">/schedule-an-estimate</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-maple-valley/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Maple Valley — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-maple-valley/page.png" alt="Home Remodeling Maple Valley design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Maple Valley</h2><span class="url">/service-area/home-remodeling-maple-valley</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-tacoma/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Tacoma — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-tacoma/page.png" alt="Home Remodeling Tacoma design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Tacoma</h2><span class="url">/service-area/home-remodeling-tacoma</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-covington/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Covington — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-covington/page.png" alt="Home Remodeling Covington design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Covington</h2><span class="url">/service-area/home-remodeling-covington</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-renton/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Renton — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-renton/page.png" alt="Home Remodeling Renton design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Renton</h2><span class="url">/service-area/home-remodeling-renton</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-kent/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Kent — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-kent/page.png" alt="Home Remodeling Kent design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Kent</h2><span class="url">/service-area/home-remodeling-kent</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-auburn/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Auburn — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-auburn/page.png" alt="Home Remodeling Auburn design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Auburn</h2><span class="url">/service-area/home-remodeling-auburn</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-ravensdale/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Ravensdale — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-ravensdale/page.png" alt="Home Remodeling Ravensdale design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Ravensdale</h2><span class="url">/service-area/home-remodeling-ravensdale</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-enumclaw/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Enumclaw — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-enumclaw/page.png" alt="Home Remodeling Enumclaw design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Enumclaw</h2><span class="url">/service-area/home-remodeling-enumclaw</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-issaquah/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Issaquah — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-issaquah/page.png" alt="Home Remodeling Issaquah design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Issaquah</h2><span class="url">/service-area/home-remodeling-issaquah</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-bellevue/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Bellevue — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-bellevue/page.png" alt="Home Remodeling Bellevue design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Bellevue</h2><span class="url">/service-area/home-remodeling-bellevue</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-newcastle/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Newcastle — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-newcastle/page.png" alt="Home Remodeling Newcastle design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Newcastle</h2><span class="url">/service-area/home-remodeling-newcastle</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-black-diamond/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Black Diamond — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-black-diamond/page.png" alt="Home Remodeling Black Diamond design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Black Diamond</h2><span class="url">/service-area/home-remodeling-black-diamond</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-fairwood/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Fairwood — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-fairwood/page.png" alt="Home Remodeling Fairwood design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Fairwood</h2><span class="url">/service-area/home-remodeling-fairwood</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-sumner/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Sumner — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-sumner/page.png" alt="Home Remodeling Sumner design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Sumner</h2><span class="url">/service-area/home-remodeling-sumner</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-bonney-lake/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Bonney Lake — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-bonney-lake/page.png" alt="Home Remodeling Bonney Lake design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Bonney Lake</h2><span class="url">/service-area/home-remodeling-bonney-lake</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-buckley/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Buckley — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-buckley/page.png" alt="Home Remodeling Buckley design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Buckley</h2><span class="url">/service-area/home-remodeling-buckley</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-snoqualmie/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Snoqualmie — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-snoqualmie/page.png" alt="Home Remodeling Snoqualmie design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Snoqualmie</h2><span class="url">/service-area/home-remodeling-snoqualmie</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-north-bend/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling North Bend — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-north-bend/page.png" alt="Home Remodeling North Bend design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling North Bend</h2><span class="url">/service-area/home-remodeling-north-bend</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/service-area--home-remodeling-sammamish/page.png" target="_blank" rel="noopener" aria-label="Home Remodeling Sammamish — open full image in a new tab">
+        <div class="preview"><img src="design/pages/service-area--home-remodeling-sammamish/page.png" alt="Home Remodeling Sammamish design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Home Remodeling Sammamish</h2><span class="url">/service-area/home-remodeling-sammamish</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+      <a class="card" href="design/pages/privacy/page.png" target="_blank" rel="noopener" aria-label="Privacy — open full image in a new tab">
+        <div class="preview"><img src="design/pages/privacy/page.png" alt="Privacy design preview" loading="lazy" decoding="async"></div>
+        <div class="details"><h2>Privacy</h2><span class="url">/privacy</span><span class="open">View full image <span aria-hidden="true">↗</span></span></div>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
