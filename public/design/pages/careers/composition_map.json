@@ -1,0 +1,477 @@
+{
+  "frames": [
+    {
+      "frame": "01-hero",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "hero section composition owner",
+        "width_share": "dominant media follows the approved frame proportions",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "retain complete focal room and its strongest architectural anchor",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Build More Than Projects. Build a Career.",
+        "where": "the approved dominant reading field, counterbalanced by authentic imagery",
+        "region_ids": []
+      },
+      "dominance": "authentic project imagery leads; live headline and action counterbalance it",
+      "eye_path": [
+        "Build More Than Projects. Build a Career.",
+        "authentic project evidence",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [
+        "live copy and measured rules relate to the media edge without baking text into imagery"
+      ],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the image-led collage hero with small marginal copy; do not flatten it into equal cards.",
+      "image_copy_relation": "copy is positioned in deliberate counterpoint to the project imagery, never a generic centered stack",
+      "assembly": {
+        "profile": "anchored-art",
+        "score": 2,
+        "signals": [
+          "authentic project photography"
+        ],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "section-owned project imagery",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "section-owned media"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline",
+          "dominant authentic project image"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": [
+          "retain the focal architectural subject and avoid clipping the primary room context"
+        ]
+      },
+      "invariants": [
+        "preserve the image-led collage hero with small marginal copy",
+        "keep Build More Than Projects. Build a Career. as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative",
+        "preserve authentic project-photo dominance and the approved crop hierarchy"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    },
+    {
+      "frame": "02-work-environment",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "work-environment section composition owner",
+        "width_share": "dominant media follows the approved frame proportions",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "retain complete focal room and its strongest architectural anchor",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Build visible work with respectful leadership.",
+        "where": "the approved dominant reading field, counterbalanced by authentic imagery",
+        "region_ids": []
+      },
+      "dominance": "authentic project imagery leads; live headline and action counterbalance it",
+      "eye_path": [
+        "Build visible work with respectful leadership.",
+        "authentic project evidence",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [
+        "live copy and measured rules relate to the media edge without baking text into imagery"
+      ],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the horizontal filmstrip or contact-sheet evidence band; do not flatten it into equal cards.",
+      "image_copy_relation": "copy is positioned in deliberate counterpoint to the project imagery, never a generic centered stack",
+      "assembly": {
+        "profile": "anchored-art",
+        "score": 2,
+        "signals": [
+          "authentic project photography"
+        ],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "section-owned project imagery",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "section-owned media"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline",
+          "dominant authentic project image"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": [
+          "retain the focal architectural subject and avoid clipping the primary room context"
+        ]
+      },
+      "invariants": [
+        "preserve the horizontal filmstrip or contact-sheet evidence band",
+        "keep Build visible work with respectful leadership. as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative",
+        "preserve authentic project-photo dominance and the approved crop hierarchy"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    },
+    {
+      "frame": "03-benefits-growth",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "benefits-growth section composition owner",
+        "width_share": "live content owns the primary reading field",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "not applicable to code-only section",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Competitive pay and hands-on growth.",
+        "where": "the principal editorial text field",
+        "region_ids": []
+      },
+      "dominance": "typography and information hierarchy lead the quiet section",
+      "eye_path": [
+        "Competitive pay and hands-on growth.",
+        "supporting live content",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the editorial index/table-of-contents composition; do not flatten it into equal cards.",
+      "image_copy_relation": "live editorial copy owns the composition; measured rules organize rather than decorate",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "structured supporting information"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": []
+      },
+      "invariants": [
+        "preserve the editorial index/table-of-contents composition",
+        "keep Competitive pay and hands-on growth. as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    },
+    {
+      "frame": "04-hiring-process",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "hiring-process section composition owner",
+        "width_share": "live content owns the primary reading field",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "not applicable to code-only section",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Make the applicant path clear.",
+        "where": "the principal editorial text field",
+        "region_ids": []
+      },
+      "dominance": "typography and information hierarchy lead the quiet section",
+      "eye_path": [
+        "Make the applicant path clear.",
+        "supporting live content",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the staggered process path, not four equal columns; do not flatten it into equal cards.",
+      "image_copy_relation": "live editorial copy owns the composition; measured rules organize rather than decorate",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "structured supporting information"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": []
+      },
+      "invariants": [
+        "preserve the staggered process path, not four equal columns",
+        "keep Make the applicant path clear. as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    },
+    {
+      "frame": "05-application-form",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "application-form section composition owner",
+        "width_share": "live content owns the primary reading field",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "not applicable to code-only section",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Submit your resume.",
+        "where": "the principal editorial text field",
+        "region_ids": []
+      },
+      "dominance": "typography and information hierarchy lead the quiet section",
+      "eye_path": [
+        "Submit your resume.",
+        "supporting live content",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the split form with narrow contact ledger; do not flatten it into equal cards.",
+      "image_copy_relation": "live editorial copy owns the composition; measured rules organize rather than decorate",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "structured supporting information"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": []
+      },
+      "invariants": [
+        "preserve the split form with narrow contact ledger",
+        "keep Submit your resume. as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    }
+  ]
+}

@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "artifacts": "node scripts/generate-build-artifacts.mjs",
+    "verify": "node scripts/verify-build.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.544.0",

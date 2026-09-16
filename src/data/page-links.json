@@ -1,0 +1,1312 @@
+{
+ "homepage": {
+  "hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "identity-proof": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "featured-projects": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "process": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "reviews": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "service-area": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "general-contractor": {
+  "hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "capabilities": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "renovations-additions": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "outdoor-living": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "process": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "kitchen-remodeling": {
+  "hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "project-gallery": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "planning": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "cabinetry-storage": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "islands-finishes": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "process": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "bathroom-remodeling": {
+  "hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "project-gallery": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "showers-conversions": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "planning-finishes": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "process": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "interior-exterior-painting": {
+  "hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "interior-painting": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "exterior-painting": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "preparation-process": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "project-gallery": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "custom-home-services": {
+  "hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "planning": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "design-build": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "construction-process": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "project-management": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "project-gallery": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "recent-projects": {
+  "hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "realwork-labs-portfolio": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "project-filters": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "review-proof": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "about-us": {
+  "hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "company-story": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "team": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "how-we-work": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "veteran-owned": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-areas": {
+  "hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "county-overview": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "city-directory": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "project-map": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "service-fit": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "blog": {
+  "hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "featured-articles": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "topic-groups": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "recent-articles": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "service-links": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "careers": {
+  "hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "work-environment": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "benefits-growth": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "hiring-process": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "application-form": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Apply Now"
+  }
+ },
+ "contact": {
+  "hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "contact-options": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "hours-service-area": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "contact-form": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "service-links": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  }
+ },
+ "schedule-an-estimate": {
+  "hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "qualification-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-form": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "what-happens-next": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "phone-option": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-maple-valley": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-tacoma": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-covington": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-renton": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-kent": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-auburn": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-ravensdale": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-enumclaw": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-issaquah": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-bellevue": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-newcastle": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-black-diamond": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-fairwood": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-sumner": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-bonney-lake": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-buckley": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-snoqualmie": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-north-bend": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "service-area--home-remodeling-sammamish": {
+  "local-hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Schedule a Free Estimate"
+  },
+  "local-project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "services": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "local-guidance": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate",
+    "/contact"
+   ],
+   "cta": "Contact Us"
+  },
+  "estimate-cta": {
+   "internal_links": [
+    "/contact"
+   ],
+   "cta": "Schedule a Free Estimate"
+  }
+ },
+ "privacy": {
+  "policy-content": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  }
+ }
+}

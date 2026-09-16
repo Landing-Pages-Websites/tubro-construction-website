@@ -1,0 +1,399 @@
+{
+  "page": {
+    "slug": "interior-exterior-painting",
+    "route": "/interior-exterior-painting",
+    "title": "Interior & Exterior Painting in King & Pierce Counties",
+    "intent": "transactional"
+  },
+  "selected_direction": "a - Measured Living",
+  "page_rhythm_family": "surface and color-field evidence",
+  "service_area_archetype": null,
+  "brand": {
+    "name": "Tubro Construction",
+    "wordmark": "TUBRO CONSTRUCTION",
+    "logo_asset": "brand-assets/tc-logo.png",
+    "location": "King and Pierce Counties, Washington",
+    "phone": "253-216-2633",
+    "email": "workorders@tubroconstruction.com",
+    "hours": "Monday\u2013Friday, 7:00 a.m.\u20134:00 p.m.",
+    "since": "Founded in 2010",
+    "brand_color_from_logo": "#0C883D",
+    "palette_guidance": "Lock the real logo green #0C883D and near-black #231F20. Favor bright warm whites, restrained construction neutrals, and authentic wood/stone tones from client project photography. No invented cyan identity, washed-out gradients, stock indigo, or dominant orange discount styling.",
+    "voice": "Professional, warm, plainspoken, confident, and respectful of the homeowner\u2019s investment.",
+    "identity_belief": "A remodel earns trust when homeowners can see the work, understand the path, and know who is accountable from estimate through completion.",
+    "visual_metaphor": "A continuous measured construction line travels through the page like a chalk line or plan mark, joining finished spaces, project stages, and the next clear decision.",
+    "taglines": [
+      "Residential Remodeling, Built With Care",
+      "Built Around the Way You Want to Live"
+    ]
+  },
+  "hard_rules": [
+    "Use the real Tubro Construction logo asset as-is. Never redraw, restyle, re-letter, or reinterpret the logo; frames may use a neutral placeholder or plain wordmark only.",
+    "Use authentic supplied Tubro project photography before all generated or stock imagery. Never generate imagery that impersonates a completed client project.",
+    "No van-led hero. A branded vehicle may appear only as secondary brand context and is not required in these homepage refs.",
+    "No dark, boxy, heavy-card redesign; no generic centered service-card grid; no pill-heavy SaaS UI; no gradient text or generic gradient blobs.",
+    "No generic stock families, contractor portraits, invented team members, or generated named people.",
+    "No invented testimonials, ratings, awards, licenses, bonding, insurance, warranties, project counts, project locations, budgets, or timelines.",
+    "Keep the site clearly separate from Tubro Carpet Cleaning and Get Gawn; do not mention those businesses in customer-facing homepage copy.",
+    "Keep the 5% active-duty military and first-responder discount secondary to the free-estimate CTA. Do not add a deadline, urgency claim, or new terms.",
+    "Do not imply direct Buildertrend integration; form leads route to workorders@tubroconstruction.com and office staff enter leads manually.",
+    "Use location names naturally. No repetitive city-name stuffing or doorway-page language.",
+    "Every visual control must have a useful defined outcome. Otherwise render it as static content.",
+    "Design for desktop and mobile accessibility with strong contrast, clear labels, and visible focus intent.",
+    "Customer review and approval are required before public launch.",
+    "Frames cover CONTENT sections only; global nav/footer belong to the built design system and are never rendered into frames."
+  ],
+  "route_metadata": {
+    "target_terms": [
+      "house painting King County",
+      "interior exterior painting Pierce County"
+    ],
+    "source": "current site"
+  },
+  "source_constraints": [
+    "Manifest text wins for build copy.",
+    "Do not invent location-specific projects, team claims, ratings, licenses, timelines, project counts, addresses, or testimonials.",
+    "Use authentic supplied Tubro photography only as project/capability evidence described in this manifest."
+  ],
+  "ordered_sections": [
+    {
+      "id": "01-hero",
+      "name": "hero",
+      "source_blueprint_sections": [
+        "hero"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Make the service read through surfaces and exterior evidence rather than a standard service hero.",
+      "composition": "hero-image-led-collage-marginal-copy",
+      "composition_grammar": "image-led collage hero with small marginal copy",
+      "motif_role": "crop_mark",
+      "focal_point": "A Cleaner Finish, Inside and Out",
+      "eye_path": "Start at the image-led collage hero with small marginal copy, follow the measured crop mark, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "white",
+      "frame": "refs/01-hero.png",
+      "prompt": "prompts/01-hero.md",
+      "content": {
+        "eyebrow": "Interior & Exterior Painting in King & Pierce Counties",
+        "headline": "A Cleaner Finish, Inside and Out",
+        "body": "Professional interior and exterior painting supports residential refresh, protection, and quote requests through the same clear contact path.",
+        "bullets": [],
+        "steps": [],
+        "cta": "Request a Quote",
+        "secondary_cta": "Call 253-216-2633",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0426023_exterior paint 01.jpg",
+          "sources/drive/1221004_deck 01.jpg",
+          "sources/drive/0825017_ext stain 01.jpeg"
+        ],
+        "labels": [
+          "Exterior Paint",
+          "Exterior Stain",
+          "Deck Surface"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as image-led collage hero with small marginal copy; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "02-interior-exterior",
+      "name": "interior-exterior",
+      "source_blueprint_sections": [
+        "interior-painting",
+        "exterior-painting"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Use color fields from the approved palette as surface structure, with real photos as proof.",
+      "composition": "content-surface-color-field-photo-proof",
+      "composition_grammar": "surface/color-field grammar anchored by real photos",
+      "motif_role": "datum",
+      "focal_point": "Painting is part of the broader residential construction system.",
+      "eye_path": "Start at the surface/color-field grammar anchored by real photos, follow the measured datum, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "white",
+      "frame": "refs/02-interior-exterior.png",
+      "prompt": "prompts/02-interior-exterior.md",
+      "content": {
+        "eyebrow": "Interior & Exterior Painting in King & Pierce Counties",
+        "headline": "Painting is part of the broader residential construction system.",
+        "body": "Interior and exterior painting support the same clear quote path as Tubro's remodeling work.",
+        "bullets": [
+          "Professional interior and exterior painting",
+          "Residential refresh and protection",
+          "Request a quote at 253-216-2633"
+        ],
+        "steps": [],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0426023_exterior paint 01.jpg",
+          "sources/drive/1221004_deck 01.jpg",
+          "sources/drive/0825017_ext stain 01.jpeg"
+        ],
+        "labels": [
+          "Exterior Paint",
+          "Exterior Stain & Materials",
+          "Deck & Outdoor Living"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as surface/color-field grammar anchored by real photos; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "03-preparation-process",
+      "name": "preparation-process",
+      "source_blueprint_sections": [
+        "preparation-process"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Keep the paint process compact and procedural.",
+      "composition": "process-compact-numbered-strip",
+      "composition_grammar": "compact numbered process strip",
+      "motif_role": "process_route",
+      "focal_point": "Prep, quote, and finish expectations need clear sequencing.",
+      "eye_path": "Start at the compact numbered process strip, follow the measured process route, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "sage",
+      "frame": "refs/03-preparation-process.png",
+      "prompt": "prompts/03-preparation-process.md",
+      "content": {
+        "eyebrow": "Interior & Exterior Painting in King & Pierce Counties",
+        "headline": "Prep, quote, and finish expectations need clear sequencing.",
+        "body": "The painting path starts with quote details, then moves through preparation, painting, and final review.",
+        "bullets": [],
+        "steps": [
+          {
+            "number": "01",
+            "title": "Quote",
+            "copy": "Tell the team what you want to change and where the project is located."
+          },
+          {
+            "number": "02",
+            "title": "Prepare",
+            "copy": "Clarify scope and pricing before the build path is set."
+          },
+          {
+            "number": "03",
+            "title": "Paint",
+            "copy": "Use an assigned point of contact to keep communication coordinated."
+          },
+          {
+            "number": "04",
+            "title": "Review",
+            "copy": "Bring the approved plan together through craftsmanship and finishing details."
+          }
+        ],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [],
+        "labels": [],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as compact numbered process strip; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "04-project-gallery-faq",
+      "name": "project-gallery-faq",
+      "source_blueprint_sections": [
+        "project-gallery",
+        "faq"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Use a filmstrip evidence band so painting has its own proof rhythm.",
+      "composition": "gallery-horizontal-filmstrip-evidence-band",
+      "composition_grammar": "horizontal filmstrip or contact-sheet evidence band",
+      "motif_role": "datum",
+      "focal_point": "Exterior photos support quote confidence.",
+      "eye_path": "Start at the horizontal filmstrip or contact-sheet evidence band, follow the measured datum, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "ink",
+      "frame": "refs/04-project-gallery-faq.png",
+      "prompt": "prompts/04-project-gallery-faq.md",
+      "content": {
+        "eyebrow": "Interior & Exterior Painting in King & Pierce Counties",
+        "headline": "Exterior photos support quote confidence.",
+        "body": "Supplied exterior and deck photos show paint, stain, and outdoor-living references for residential projects.",
+        "bullets": [],
+        "steps": [],
+        "cta": "View Recent Projects",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0426023_exterior paint 01.jpg",
+          "sources/drive/1221004_deck 01.jpg",
+          "sources/drive/0825017_ext stain 01.jpeg",
+          "sources/drive/0524016_deck 02.jpg",
+          "sources/drive/0425021_exterior stain 01.jpg"
+        ],
+        "labels": [
+          "Exterior Paint",
+          "Deck & Outdoor Living",
+          "Exterior Stain",
+          "Deck Detail",
+          "Material Exterior"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as horizontal filmstrip or contact-sheet evidence band; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "05-estimate-cta",
+      "name": "estimate-cta",
+      "source_blueprint_sections": [
+        "estimate-cta"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Convert qualified project interest into a useful office follow-up path.",
+      "composition": "cta-centered-estimate-brief-peripheral-proof",
+      "composition_grammar": "centered estimate brief with peripheral proof",
+      "motif_role": "crop_mark",
+      "focal_point": "Request a painting quote.",
+      "eye_path": "Start at the centered estimate brief with peripheral proof, follow the measured crop mark, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "surface",
+      "frame": "refs/05-estimate-cta.png",
+      "prompt": "prompts/05-estimate-cta.md",
+      "content": {
+        "eyebrow": "Interior & Exterior Painting in King & Pierce Counties",
+        "headline": "Request a painting quote.",
+        "body": "Request a free estimate and give the team enough detail to start a useful conversation.",
+        "bullets": [
+          "Phone 253-216-2633",
+          "Monday-Friday 7:00 a.m.-4:00 p.m.",
+          "Form submissions route to workorders@tubroconstruction.com"
+        ],
+        "steps": [],
+        "cta": "Schedule a Free Estimate",
+        "secondary_cta": "",
+        "items": [],
+        "options": [
+          "Kitchen or bathroom remodel",
+          "Home addition or renovation",
+          "New construction or custom home",
+          "Painting",
+          "Other"
+        ]
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/1221004_deck 01.jpg",
+          "sources/drive/0825017_ext stain 01.jpeg"
+        ],
+        "labels": [
+          "Project Evidence",
+          "Material Detail"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [
+        "Do not promise automated scheduling or direct Buildertrend integration."
+      ],
+      "edge_contracts": {
+        "top": "Enter as centered estimate brief with peripheral proof; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    }
+  ],
+  "page_flow": {
+    "viewport_contract": {
+      "design_frame": "1536x864 primary composition",
+      "target_viewports": [
+        "1440x900",
+        "1536x1024",
+        "390x844"
+      ],
+      "rule": "Primary content is composed for the frame; global nav and footer are excluded from all rendered refs."
+    },
+    "section_weights": {
+      "01-hero": "loud",
+      "02-interior-exterior": "quiet",
+      "03-preparation-process": "quiet",
+      "04-project-gallery-faq": "loud",
+      "05-estimate-cta": "loud"
+    },
+    "background_progression": [
+      {
+        "section": "01-hero",
+        "band": "white"
+      },
+      {
+        "section": "02-interior-exterior",
+        "band": "white"
+      },
+      {
+        "section": "03-preparation-process",
+        "band": "sage"
+      },
+      {
+        "section": "04-project-gallery-faq",
+        "band": "ink"
+      },
+      {
+        "section": "05-estimate-cta",
+        "band": "surface"
+      }
+    ],
+    "composition_sequence": [
+      "hero-image-led-collage-marginal-copy",
+      "content-surface-color-field-photo-proof",
+      "process-compact-numbered-strip",
+      "gallery-horizontal-filmstrip-evidence-band",
+      "cta-centered-estimate-brief-peripheral-proof"
+    ],
+    "motif_continuity": "The approved measured-line vocabulary changes role by section: datum, crop mark, process route, ledger rule, directory coordinate, or dimension bracket.",
+    "rhythm_rules": [
+      "Every section records a design-owner composition ID.",
+      "Route rhythm changes by page purpose; page endings are not one repeated form frame.",
+      "Authentic supplied Tubro photography is used as capability or project evidence without invented facts.",
+      "No generated projects, stock imagery, fake people, global nav, or footer appear in refs."
+    ]
+  },
+  "required_sections": [
+    {
+      "id": "01-hero"
+    },
+    {
+      "id": "02-interior-exterior"
+    },
+    {
+      "id": "03-preparation-process"
+    },
+    {
+      "id": "04-project-gallery-faq"
+    },
+    {
+      "id": "05-estimate-cta"
+    }
+  ]
+}

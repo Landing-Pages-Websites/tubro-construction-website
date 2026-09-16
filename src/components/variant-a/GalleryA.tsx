@@ -26,7 +26,7 @@ export function GalleryA(): ReactElement {
             {WORK.body}
           </p>
           <a
-            href="#work-gallery"
+            href="/recent-projects"
             className="group mt-8 inline-flex min-h-12 items-center gap-2.5 rounded-md bg-action px-6 py-3 font-fjalla text-[15px] text-white transition-colors hover:bg-action-deep"
           >
             {WORK.cta}

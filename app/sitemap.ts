@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
+import { SITE_ROUTES } from "@/lib/routes";
 
 const BASE_URL = "https://tubro-construction-website.vercel.app";
 
+/** Exactly the approved public route set, in sitemap.json order, "/" first. */
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    { url: `${BASE_URL}/` },
-    { url: `${BASE_URL}/variant-a` },
-    { url: `${BASE_URL}/variant-b` },
-  ];
+  return SITE_ROUTES.map((route) => ({
+    url: `${BASE_URL}${route.path}`,
+  }));
 }

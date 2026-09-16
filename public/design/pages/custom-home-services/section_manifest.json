@@ -1,0 +1,400 @@
+{
+  "page": {
+    "slug": "custom-home-services",
+    "route": "/custom-home-services",
+    "title": "Custom Home Builder in King & Pierce Counties",
+    "intent": "commercial"
+  },
+  "selected_direction": "a - Measured Living",
+  "page_rhythm_family": "blueprint and sequence grammar",
+  "service_area_archetype": null,
+  "brand": {
+    "name": "Tubro Construction",
+    "wordmark": "TUBRO CONSTRUCTION",
+    "logo_asset": "brand-assets/tc-logo.png",
+    "location": "King and Pierce Counties, Washington",
+    "phone": "253-216-2633",
+    "email": "workorders@tubroconstruction.com",
+    "hours": "Monday\u2013Friday, 7:00 a.m.\u20134:00 p.m.",
+    "since": "Founded in 2010",
+    "brand_color_from_logo": "#0C883D",
+    "palette_guidance": "Lock the real logo green #0C883D and near-black #231F20. Favor bright warm whites, restrained construction neutrals, and authentic wood/stone tones from client project photography. No invented cyan identity, washed-out gradients, stock indigo, or dominant orange discount styling.",
+    "voice": "Professional, warm, plainspoken, confident, and respectful of the homeowner\u2019s investment.",
+    "identity_belief": "A remodel earns trust when homeowners can see the work, understand the path, and know who is accountable from estimate through completion.",
+    "visual_metaphor": "A continuous measured construction line travels through the page like a chalk line or plan mark, joining finished spaces, project stages, and the next clear decision.",
+    "taglines": [
+      "Residential Remodeling, Built With Care",
+      "Built Around the Way You Want to Live"
+    ]
+  },
+  "hard_rules": [
+    "Use the real Tubro Construction logo asset as-is. Never redraw, restyle, re-letter, or reinterpret the logo; frames may use a neutral placeholder or plain wordmark only.",
+    "Use authentic supplied Tubro project photography before all generated or stock imagery. Never generate imagery that impersonates a completed client project.",
+    "No van-led hero. A branded vehicle may appear only as secondary brand context and is not required in these homepage refs.",
+    "No dark, boxy, heavy-card redesign; no generic centered service-card grid; no pill-heavy SaaS UI; no gradient text or generic gradient blobs.",
+    "No generic stock families, contractor portraits, invented team members, or generated named people.",
+    "No invented testimonials, ratings, awards, licenses, bonding, insurance, warranties, project counts, project locations, budgets, or timelines.",
+    "Keep the site clearly separate from Tubro Carpet Cleaning and Get Gawn; do not mention those businesses in customer-facing homepage copy.",
+    "Keep the 5% active-duty military and first-responder discount secondary to the free-estimate CTA. Do not add a deadline, urgency claim, or new terms.",
+    "Do not imply direct Buildertrend integration; form leads route to workorders@tubroconstruction.com and office staff enter leads manually.",
+    "Use location names naturally. No repetitive city-name stuffing or doorway-page language.",
+    "Every visual control must have a useful defined outcome. Otherwise render it as static content.",
+    "Design for desktop and mobile accessibility with strong contrast, clear labels, and visible focus intent.",
+    "Customer review and approval are required before public launch.",
+    "Frames cover CONTENT sections only; global nav/footer belong to the built design system and are never rendered into frames."
+  ],
+  "route_metadata": {
+    "target_terms": [
+      "custom home builder King County",
+      "new home construction Pierce County"
+    ],
+    "source": "current site"
+  },
+  "source_constraints": [
+    "Manifest text wins for build copy.",
+    "Do not invent location-specific projects, team claims, ratings, licenses, timelines, project counts, addresses, or testimonials.",
+    "Use authentic supplied Tubro photography only as project/capability evidence described in this manifest."
+  ],
+  "ordered_sections": [
+    {
+      "id": "01-hero",
+      "name": "hero",
+      "source_blueprint_sections": [
+        "hero"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Open with a planning manifesto and narrow proof rail, separate from the general-contractor hero.",
+      "composition": "hero-typographic-manifesto-proof-rail",
+      "composition_grammar": "typographic manifesto hero with a narrow photographic proof rail",
+      "motif_role": "ledger_rule",
+      "focal_point": "A Custom Home Shaped Around You",
+      "eye_path": "Start at the typographic manifesto hero with a narrow photographic proof rail, follow the measured ledger rule, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "surface",
+      "frame": "refs/01-hero.png",
+      "prompt": "prompts/01-hero.md",
+      "content": {
+        "eyebrow": "Custom Home Builder in King & Pierce Counties",
+        "headline": "A Custom Home Shaped Around You",
+        "body": "Personalized design, quality construction, and custom-home planning start with a clear conversation about goals and scope.",
+        "bullets": [
+          "Personalized design",
+          "Quality construction",
+          "Custom home planning"
+        ],
+        "steps": [],
+        "cta": "Schedule a Free Estimate",
+        "secondary_cta": "Call 253-216-2633",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0426023_exterior paint 01.jpg",
+          "sources/drive/1221004_deck 01.jpg",
+          "sources/drive/0825017_ext stain 01.jpeg"
+        ],
+        "labels": [
+          "Exterior Paint",
+          "Deck & Outdoor Living",
+          "Exterior Materials"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as typographic manifesto hero with a narrow photographic proof rail; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "02-planning-design-build",
+      "name": "planning-design-build",
+      "source_blueprint_sections": [
+        "planning",
+        "design-build"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Use an editorial index as the blueprint for the planning conversation.",
+      "composition": "content-editorial-index-toc",
+      "composition_grammar": "editorial index/table-of-contents composition",
+      "motif_role": "ledger_rule",
+      "focal_point": "Custom-home conversations start with fit, scope, and decisions.",
+      "eye_path": "Start at the editorial index/table-of-contents composition, follow the measured ledger rule, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "white",
+      "frame": "refs/02-planning-design-build.png",
+      "prompt": "prompts/02-planning-design-build.md",
+      "content": {
+        "eyebrow": "Custom Home Builder in King & Pierce Counties",
+        "headline": "Custom-home conversations start with fit, scope, and decisions.",
+        "body": "The planning relationship connects personalized design, quality construction, and a clear next step.",
+        "bullets": [
+          "Personalized design",
+          "Quality construction",
+          "Custom home planning",
+          "Call 253-216-2633 to start planning"
+        ],
+        "steps": [],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [
+          "Personalized design",
+          "Quality construction",
+          "Custom home planning",
+          "Estimate conversation",
+          "Office follow-up"
+        ],
+        "options": []
+      },
+      "imagery": {
+        "sources": [],
+        "labels": [],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as editorial index/table-of-contents composition; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "03-construction-management",
+      "name": "construction-management",
+      "source_blueprint_sections": [
+        "construction-process",
+        "project-management"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Use a vertical construction spine as a blueprint sequence.",
+      "composition": "process-vertical-milestone-spine",
+      "composition_grammar": "vertical milestone/process spine",
+      "motif_role": "process_route",
+      "focal_point": "Make the build path accountable before construction starts.",
+      "eye_path": "Start at the vertical milestone/process spine, follow the measured process route, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "sage",
+      "frame": "refs/03-construction-management.png",
+      "prompt": "prompts/03-construction-management.md",
+      "content": {
+        "eyebrow": "Custom Home Builder in King & Pierce Counties",
+        "headline": "Make the build path accountable before construction starts.",
+        "body": "Assigned project management and upfront pricing help homeowners understand the next step before work begins.",
+        "bullets": [],
+        "steps": [
+          {
+            "number": "01",
+            "title": "Share goals",
+            "copy": "Tell the team what you want to change and where the project is located."
+          },
+          {
+            "number": "02",
+            "title": "Define scope",
+            "copy": "Clarify scope and pricing before the build path is set."
+          },
+          {
+            "number": "03",
+            "title": "Coordinate build",
+            "copy": "Use an assigned point of contact to keep communication coordinated."
+          },
+          {
+            "number": "04",
+            "title": "Complete details",
+            "copy": "Bring the approved plan together through craftsmanship and finishing details."
+          }
+        ],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [],
+        "labels": [],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as vertical milestone/process spine; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "04-project-gallery-faq",
+      "name": "project-gallery-faq",
+      "source_blueprint_sections": [
+        "project-gallery",
+        "faq"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Bring broad project evidence in as an asymmetric ledger.",
+      "composition": "gallery-asymmetric-masonry-project-ledger",
+      "composition_grammar": "asymmetric masonry/project ledger",
+      "motif_role": "crop_mark",
+      "focal_point": "Residential work gives the planning conversation context.",
+      "eye_path": "Start at the asymmetric masonry/project ledger, follow the measured crop mark, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "ink",
+      "frame": "refs/04-project-gallery-faq.png",
+      "prompt": "prompts/04-project-gallery-faq.md",
+      "content": {
+        "eyebrow": "Custom Home Builder in King & Pierce Counties",
+        "headline": "Residential work gives the planning conversation context.",
+        "body": "Supplied portfolio images show exterior, deck, material, and kitchen references for larger residential conversations.",
+        "bullets": [],
+        "steps": [],
+        "cta": "View Recent Projects",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0426023_exterior paint 01.jpg",
+          "sources/drive/1221004_deck 01.jpg",
+          "sources/drive/0825017_ext stain 01.jpeg",
+          "sources/drive/0524016_deck 02.jpg"
+        ],
+        "labels": [
+          "Exterior Paint",
+          "Deck & Outdoor Living",
+          "Exterior Stain & Materials",
+          "Kitchen Remodeling"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as asymmetric masonry/project ledger; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "05-estimate-cta",
+      "name": "estimate-cta",
+      "source_blueprint_sections": [
+        "estimate-cta"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Convert qualified project interest into a useful office follow-up path.",
+      "composition": "form-overlay-on-photo-material-field",
+      "composition_grammar": "form overlay on a photo/material field",
+      "motif_role": "dimension_bracket",
+      "focal_point": "Start planning the custom-home conversation.",
+      "eye_path": "Start at the form overlay on a photo/material field, follow the measured dimension bracket, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "surface",
+      "frame": "refs/05-estimate-cta.png",
+      "prompt": "prompts/05-estimate-cta.md",
+      "content": {
+        "eyebrow": "Custom Home Builder in King & Pierce Counties",
+        "headline": "Start planning the custom-home conversation.",
+        "body": "Request a free estimate and give the team enough detail to start a useful conversation.",
+        "bullets": [
+          "Phone 253-216-2633",
+          "Monday-Friday 7:00 a.m.-4:00 p.m.",
+          "Form submissions route to workorders@tubroconstruction.com"
+        ],
+        "steps": [],
+        "cta": "Schedule a Free Estimate",
+        "secondary_cta": "",
+        "items": [],
+        "options": [
+          "Kitchen or bathroom remodel",
+          "Home addition or renovation",
+          "New construction or custom home",
+          "Painting",
+          "Other"
+        ]
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/1221004_deck 01.jpg"
+        ],
+        "labels": [
+          "Project Evidence",
+          "Material Detail"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [
+        "Do not promise automated scheduling or direct Buildertrend integration."
+      ],
+      "edge_contracts": {
+        "top": "Enter as form overlay on a photo/material field; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    }
+  ],
+  "page_flow": {
+    "viewport_contract": {
+      "design_frame": "1536x864 primary composition",
+      "target_viewports": [
+        "1440x900",
+        "1536x1024",
+        "390x844"
+      ],
+      "rule": "Primary content is composed for the frame; global nav and footer are excluded from all rendered refs."
+    },
+    "section_weights": {
+      "01-hero": "loud",
+      "02-planning-design-build": "quiet",
+      "03-construction-management": "quiet",
+      "04-project-gallery-faq": "loud",
+      "05-estimate-cta": "loud"
+    },
+    "background_progression": [
+      {
+        "section": "01-hero",
+        "band": "surface"
+      },
+      {
+        "section": "02-planning-design-build",
+        "band": "white"
+      },
+      {
+        "section": "03-construction-management",
+        "band": "sage"
+      },
+      {
+        "section": "04-project-gallery-faq",
+        "band": "ink"
+      },
+      {
+        "section": "05-estimate-cta",
+        "band": "surface"
+      }
+    ],
+    "composition_sequence": [
+      "hero-typographic-manifesto-proof-rail",
+      "content-editorial-index-toc",
+      "process-vertical-milestone-spine",
+      "gallery-asymmetric-masonry-project-ledger",
+      "form-overlay-on-photo-material-field"
+    ],
+    "motif_continuity": "The approved measured-line vocabulary changes role by section: datum, crop mark, process route, ledger rule, directory coordinate, or dimension bracket.",
+    "rhythm_rules": [
+      "Every section records a design-owner composition ID.",
+      "Route rhythm changes by page purpose; page endings are not one repeated form frame.",
+      "Authentic supplied Tubro photography is used as capability or project evidence without invented facts.",
+      "No generated projects, stock imagery, fake people, global nav, or footer appear in refs."
+    ]
+  },
+  "required_sections": [
+    {
+      "id": "01-hero"
+    },
+    {
+      "id": "02-planning-design-build"
+    },
+    {
+      "id": "03-construction-management"
+    },
+    {
+      "id": "04-project-gallery-faq"
+    },
+    {
+      "id": "05-estimate-cta"
+    }
+  ]
+}

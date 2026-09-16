@@ -1,0 +1,387 @@
+{
+  "page": {
+    "slug": "general-contractor",
+    "route": "/general-contractor",
+    "title": "Residential General Contractor in Western Washington",
+    "intent": "commercial"
+  },
+  "selected_direction": "a - Measured Living",
+  "page_rhythm_family": "architectural scope narrative",
+  "service_area_archetype": null,
+  "brand": {
+    "name": "Tubro Construction",
+    "wordmark": "TUBRO CONSTRUCTION",
+    "logo_asset": "brand-assets/tc-logo.png",
+    "location": "King and Pierce Counties, Washington",
+    "phone": "253-216-2633",
+    "email": "workorders@tubroconstruction.com",
+    "hours": "Monday\u2013Friday, 7:00 a.m.\u20134:00 p.m.",
+    "since": "Founded in 2010",
+    "brand_color_from_logo": "#0C883D",
+    "palette_guidance": "Lock the real logo green #0C883D and near-black #231F20. Favor bright warm whites, restrained construction neutrals, and authentic wood/stone tones from client project photography. No invented cyan identity, washed-out gradients, stock indigo, or dominant orange discount styling.",
+    "voice": "Professional, warm, plainspoken, confident, and respectful of the homeowner\u2019s investment.",
+    "identity_belief": "A remodel earns trust when homeowners can see the work, understand the path, and know who is accountable from estimate through completion.",
+    "visual_metaphor": "A continuous measured construction line travels through the page like a chalk line or plan mark, joining finished spaces, project stages, and the next clear decision.",
+    "taglines": [
+      "Residential Remodeling, Built With Care",
+      "Built Around the Way You Want to Live"
+    ]
+  },
+  "hard_rules": [
+    "Use the real Tubro Construction logo asset as-is. Never redraw, restyle, re-letter, or reinterpret the logo; frames may use a neutral placeholder or plain wordmark only.",
+    "Use authentic supplied Tubro project photography before all generated or stock imagery. Never generate imagery that impersonates a completed client project.",
+    "No van-led hero. A branded vehicle may appear only as secondary brand context and is not required in these homepage refs.",
+    "No dark, boxy, heavy-card redesign; no generic centered service-card grid; no pill-heavy SaaS UI; no gradient text or generic gradient blobs.",
+    "No generic stock families, contractor portraits, invented team members, or generated named people.",
+    "No invented testimonials, ratings, awards, licenses, bonding, insurance, warranties, project counts, project locations, budgets, or timelines.",
+    "Keep the site clearly separate from Tubro Carpet Cleaning and Get Gawn; do not mention those businesses in customer-facing homepage copy.",
+    "Keep the 5% active-duty military and first-responder discount secondary to the free-estimate CTA. Do not add a deadline, urgency claim, or new terms.",
+    "Do not imply direct Buildertrend integration; form leads route to workorders@tubroconstruction.com and office staff enter leads manually.",
+    "Use location names naturally. No repetitive city-name stuffing or doorway-page language.",
+    "Every visual control must have a useful defined outcome. Otherwise render it as static content.",
+    "Design for desktop and mobile accessibility with strong contrast, clear labels, and visible focus intent.",
+    "Customer review and approval are required before public launch.",
+    "Frames cover CONTENT sections only; global nav/footer belong to the built design system and are never rendered into frames."
+  ],
+  "route_metadata": {
+    "target_terms": [
+      "general contractor King County",
+      "residential contractor Pierce County"
+    ],
+    "source": "current site"
+  },
+  "source_constraints": [
+    "Manifest text wins for build copy.",
+    "Do not invent location-specific projects, team claims, ratings, licenses, timelines, project counts, addresses, or testimonials.",
+    "Use authentic supplied Tubro photography only as project/capability evidence described in this manifest."
+  ],
+  "ordered_sections": [
+    {
+      "id": "01-hero",
+      "name": "hero",
+      "source_blueprint_sections": [
+        "hero"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Open with whole-project authority through a cinematic evidence field.",
+      "composition": "hero-cinematic-image-field-inset-slab",
+      "composition_grammar": "cinematic image-field hero with an inset editorial copy slab",
+      "motif_role": "crop_mark",
+      "focal_point": "One Experienced Team for the Whole Project",
+      "eye_path": "Start at the cinematic image-field hero with an inset editorial copy slab, follow the measured crop mark, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "surface",
+      "frame": "refs/01-hero.png",
+      "prompt": "prompts/01-hero.md",
+      "content": {
+        "eyebrow": "Residential General Contractor in Western Washington",
+        "headline": "One Experienced Team for the Whole Project",
+        "body": "Residential general contracting for remodels, additions, decks, outdoor living, and new construction planning.",
+        "bullets": [],
+        "steps": [],
+        "cta": "Schedule a Free Estimate",
+        "secondary_cta": "Call 253-216-2633",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0426023_exterior paint 01.jpg"
+        ],
+        "labels": [
+          "Exterior Paint"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as cinematic image-field hero with an inset editorial copy slab; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "02-scope-index",
+      "name": "scope-index",
+      "source_blueprint_sections": [
+        "capabilities",
+        "renovations-additions",
+        "outdoor-living"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Turn service breadth into a readable architectural scope index.",
+      "composition": "content-editorial-index-toc",
+      "composition_grammar": "editorial index/table-of-contents composition",
+      "motif_role": "ledger_rule",
+      "focal_point": "One team can carry more of the residential scope.",
+      "eye_path": "Start at the editorial index/table-of-contents composition, follow the measured ledger rule, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "surface",
+      "frame": "refs/02-scope-index.png",
+      "prompt": "prompts/02-scope-index.md",
+      "content": {
+        "eyebrow": "Residential General Contractor in Western Washington",
+        "headline": "One team can carry more of the residential scope.",
+        "body": "The page organizes general contracting as a managed scope conversation, not a menu of disconnected trades.",
+        "bullets": [
+          "New home construction",
+          "Deck and covered outdoor-living construction",
+          "Custom features including storage, flower boxes, and multi-tiered designs",
+          "Project portfolio demonstrates versatility"
+        ],
+        "steps": [],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [
+          "Renovations and additions",
+          "Deck and covered outdoor living",
+          "Custom features",
+          "New home planning",
+          "Portfolio evidence"
+        ],
+        "options": []
+      },
+      "imagery": {
+        "sources": [],
+        "labels": [],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as editorial index/table-of-contents composition; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "03-project-proof",
+      "name": "project-proof",
+      "source_blueprint_sections": [
+        "project-proof"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Vary scale with project evidence before the process section.",
+      "composition": "gallery-asymmetric-masonry-project-ledger",
+      "composition_grammar": "asymmetric masonry/project ledger",
+      "motif_role": "crop_mark",
+      "focal_point": "Residential work shown by service type.",
+      "eye_path": "Start at the asymmetric masonry/project ledger, follow the measured crop mark, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "ink",
+      "frame": "refs/03-project-proof.png",
+      "prompt": "prompts/03-project-proof.md",
+      "content": {
+        "eyebrow": "Residential General Contractor in Western Washington",
+        "headline": "Residential work shown by service type.",
+        "body": "Deck, exterior, material, and remodeling photos act as capability evidence for larger scopes.",
+        "bullets": [],
+        "steps": [],
+        "cta": "View Recent Projects",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/1221004_deck 01.jpg",
+          "sources/drive/0825017_ext stain 01.jpeg",
+          "sources/drive/0524016_deck 02.jpg",
+          "sources/drive/0425021_exterior stain 01.jpg"
+        ],
+        "labels": [
+          "Deck & Outdoor Living",
+          "Exterior Stain & Materials",
+          "Deck Detail",
+          "Exterior Materials"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as asymmetric masonry/project ledger; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "04-process-faq",
+      "name": "process-faq",
+      "source_blueprint_sections": [
+        "process",
+        "faq"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Make the process feel like a route through decisions, not four equal columns.",
+      "composition": "process-staggered-path",
+      "composition_grammar": "staggered process path, not four equal columns",
+      "motif_role": "process_route",
+      "focal_point": "Clear scope before construction starts.",
+      "eye_path": "Start at the staggered process path, not four equal columns, follow the measured process route, then move through copy, evidence, and action.",
+      "weight": "quiet",
+      "background": "sage",
+      "frame": "refs/04-process-faq.png",
+      "prompt": "prompts/04-process-faq.md",
+      "content": {
+        "eyebrow": "Residential General Contractor in Western Washington",
+        "headline": "Clear scope before construction starts.",
+        "body": "The path moves from project details to estimate, assigned project management, and completion.",
+        "bullets": [],
+        "steps": [
+          {
+            "number": "01",
+            "title": "Share scope",
+            "copy": "Tell the team what you want to change and where the project is located."
+          },
+          {
+            "number": "02",
+            "title": "Estimate",
+            "copy": "Clarify scope and pricing before the build path is set."
+          },
+          {
+            "number": "03",
+            "title": "Assign PM",
+            "copy": "Use an assigned point of contact to keep communication coordinated."
+          },
+          {
+            "number": "04",
+            "title": "Complete",
+            "copy": "Bring the approved plan together through craftsmanship and finishing details."
+          }
+        ],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [],
+        "labels": [],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as staggered process path, not four equal columns; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
+      "id": "05-estimate-cta",
+      "name": "estimate-cta",
+      "source_blueprint_sections": [
+        "estimate-cta"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Convert qualified project interest into a useful office follow-up path.",
+      "composition": "form-split-with-narrow-contact-ledger",
+      "composition_grammar": "split form with narrow contact ledger",
+      "motif_role": "ledger_rule",
+      "focal_point": "Tell us what you are planning.",
+      "eye_path": "Start at the split form with narrow contact ledger, follow the measured ledger rule, then move through copy, evidence, and action.",
+      "weight": "loud",
+      "background": "surface",
+      "frame": "refs/05-estimate-cta.png",
+      "prompt": "prompts/05-estimate-cta.md",
+      "content": {
+        "eyebrow": "Residential General Contractor in Western Washington",
+        "headline": "Tell us what you are planning.",
+        "body": "Request a free estimate and give the team enough detail to start a useful conversation.",
+        "bullets": [
+          "Phone 253-216-2633",
+          "Monday-Friday 7:00 a.m.-4:00 p.m.",
+          "Form submissions route to workorders@tubroconstruction.com"
+        ],
+        "steps": [],
+        "cta": "Schedule a Free Estimate",
+        "secondary_cta": "",
+        "items": [],
+        "options": [
+          "Kitchen or bathroom remodel",
+          "Home addition or renovation",
+          "New construction or custom home",
+          "Painting",
+          "Other"
+        ]
+      },
+      "imagery": {
+        "sources": [],
+        "labels": [],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [
+        "Do not promise automated scheduling or direct Buildertrend integration."
+      ],
+      "edge_contracts": {
+        "top": "Enter as split form with narrow contact ledger; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    }
+  ],
+  "page_flow": {
+    "viewport_contract": {
+      "design_frame": "1536x864 primary composition",
+      "target_viewports": [
+        "1440x900",
+        "1536x1024",
+        "390x844"
+      ],
+      "rule": "Primary content is composed for the frame; global nav and footer are excluded from all rendered refs."
+    },
+    "section_weights": {
+      "01-hero": "loud",
+      "02-scope-index": "quiet",
+      "03-project-proof": "loud",
+      "04-process-faq": "quiet",
+      "05-estimate-cta": "loud"
+    },
+    "background_progression": [
+      {
+        "section": "01-hero",
+        "band": "surface"
+      },
+      {
+        "section": "02-scope-index",
+        "band": "surface"
+      },
+      {
+        "section": "03-project-proof",
+        "band": "ink"
+      },
+      {
+        "section": "04-process-faq",
+        "band": "sage"
+      },
+      {
+        "section": "05-estimate-cta",
+        "band": "surface"
+      }
+    ],
+    "composition_sequence": [
+      "hero-cinematic-image-field-inset-slab",
+      "content-editorial-index-toc",
+      "gallery-asymmetric-masonry-project-ledger",
+      "process-staggered-path",
+      "form-split-with-narrow-contact-ledger"
+    ],
+    "motif_continuity": "The approved measured-line vocabulary changes role by section: datum, crop mark, process route, ledger rule, directory coordinate, or dimension bracket.",
+    "rhythm_rules": [
+      "Every section records a design-owner composition ID.",
+      "Route rhythm changes by page purpose; page endings are not one repeated form frame.",
+      "Authentic supplied Tubro photography is used as capability or project evidence without invented facts.",
+      "No generated projects, stock imagery, fake people, global nav, or footer appear in refs."
+    ]
+  },
+  "required_sections": [
+    {
+      "id": "01-hero"
+    },
+    {
+      "id": "02-scope-index"
+    },
+    {
+      "id": "03-project-proof"
+    },
+    {
+      "id": "04-process-faq"
+    },
+    {
+      "id": "05-estimate-cta"
+    }
+  ]
+}

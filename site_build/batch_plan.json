@@ -1,0 +1,28 @@
+{
+  "plan": "Full-site build of the 32 approved non-homepage routes plus promotion of the selected Direction A homepage to /.",
+  "precedence": "Manifest wins for content. Section refs win for visual language. Page flow wins for transitions. Composition map identifies load-bearing relationships. Extraction plan and NOTES determine image ownership and implementation layers. Generic components provide mechanics only.",
+  "batches": [
+    {
+      "id": "B0-infrastructure",
+      "scope": "Shared data layer (manifest loader, image resolver, blueprint links), shared SiteHeader/SiteFooter, route scaffolding (13 core routes, dynamic /service-area/[city], /design-review/[slug] noindex sheets), app/sitemap.ts from the approved route order, homepage promotion, chooser/variant/site-design removal, lead-form hook generalization (form keys, consent, résumé)."
+    },
+    {
+      "id": "B1-composition-owners",
+      "scope": "26 section-specific composition owner components under src/components/sections/compositions/, one per approved composition ID, built against the native refs and composition_map contracts. Client islands: LeadForm (all form compositions), FilterableFilmstrip (recent-projects project filters)."
+    },
+    {
+      "id": "B2-assembly",
+      "scope": "Every route renders its exact manifest through PageSections + the composition registry: exact content, exact page-owned assets, band progression, blueprint contextual links, unique metadata/H1."
+    },
+    {
+      "id": "B3-artifacts",
+      "scope": "public/design/pages/<slug>/section_implementation.json for all 32 pages, site_build/page_set.json, site_build/site_build_contracts.json, scripts/verify-build.mjs deterministic verification."
+    },
+    {
+      "id": "B4-qa",
+      "scope": "typecheck + production build, verify-build static+served checks, Playwright pass over all 33 routes at 1440x900 and 390x844 (status, single H1, titles, section IDs, overflow, broken images, nav/footer, forms, filters), desktop+mobile captures under qa/ (git-ignored), registry booleans set from evidence, code review + design review, P0/P1 fixes."
+    }
+  ],
+  "city_route_strategy": "One dynamic route app/service-area/[city]/page.tsx renders each city's distinct approved manifest (4 archetypes: local-proof-rail, local-ledger-map, local-photo-canvas, local-datum-directory); no copied route files.",
+  "form_routing": "All lead forms submit through the existing gomega submission hook with per-route form keys; leads route to workorders@tubroconstruction.com. No Buildertrend integration or automatic scheduling is claimed."
+}

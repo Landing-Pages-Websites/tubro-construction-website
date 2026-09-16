@@ -1,0 +1,459 @@
+{
+  "frames": [
+    {
+      "frame": "01-hero",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "hero section composition owner",
+        "width_share": "live content owns the primary reading field",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "not applicable to code-only section",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Let\u2019s Talk About Your Project",
+        "where": "the principal editorial text field",
+        "region_ids": []
+      },
+      "dominance": "typography and information hierarchy lead the quiet section",
+      "eye_path": [
+        "Let\u2019s Talk About Your Project",
+        "supporting live content",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the contact-first hero organized as a ruled contact ledger; do not flatten it into equal cards.",
+      "image_copy_relation": "live editorial copy owns the composition; measured rules organize rather than decorate",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "structured supporting information"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": []
+      },
+      "invariants": [
+        "preserve the contact-first hero organized as a ruled contact ledger",
+        "keep Let\u2019s Talk About Your Project as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    },
+    {
+      "frame": "02-contact-options",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "contact-options section composition owner",
+        "width_share": "live content owns the primary reading field",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "not applicable to code-only section",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Choose the clearest contact path.",
+        "where": "the principal editorial text field",
+        "region_ids": []
+      },
+      "dominance": "typography and information hierarchy lead the quiet section",
+      "eye_path": [
+        "Choose the clearest contact path.",
+        "supporting live content",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the editorial index/table-of-contents composition; do not flatten it into equal cards.",
+      "image_copy_relation": "live editorial copy owns the composition; measured rules organize rather than decorate",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "structured supporting information"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": []
+      },
+      "invariants": [
+        "preserve the editorial index/table-of-contents composition",
+        "keep Choose the clearest contact path. as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    },
+    {
+      "frame": "03-hours-service-area",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "hours-service-area section composition owner",
+        "width_share": "live content owns the primary reading field",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "not applicable to code-only section",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Office hours and service-area context.",
+        "where": "the principal editorial text field",
+        "region_ids": []
+      },
+      "dominance": "typography and information hierarchy lead the quiet section",
+      "eye_path": [
+        "Office hours and service-area context.",
+        "supporting live content",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the directory map/list composition; do not flatten it into equal cards.",
+      "image_copy_relation": "live editorial copy owns the composition; measured rules organize rather than decorate",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "structured supporting information"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": []
+      },
+      "invariants": [
+        "preserve the directory map/list composition",
+        "keep Office hours and service-area context. as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    },
+    {
+      "frame": "04-contact-form",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "contact-form section composition owner",
+        "width_share": "live content owns the primary reading field",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "not applicable to code-only section",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Send a project question.",
+        "where": "the principal editorial text field",
+        "region_ids": []
+      },
+      "dominance": "typography and information hierarchy lead the quiet section",
+      "eye_path": [
+        "Send a project question.",
+        "supporting live content",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the split form with narrow contact ledger; do not flatten it into equal cards.",
+      "image_copy_relation": "live editorial copy owns the composition; measured rules organize rather than decorate",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "structured supporting information"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": []
+      },
+      "invariants": [
+        "preserve the split form with narrow contact ledger",
+        "keep Send a project question. as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    },
+    {
+      "frame": "05-service-links",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "mobile_css_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "service-links section composition owner",
+        "width_share": "live content owns the primary reading field",
+        "target_aspect_ratio": "landscape media slots retain the frame crop; code surfaces remain fluid",
+        "intended_crop": "not applicable to code-only section",
+        "fold_requirement": "primary message and action remain visible together at the primary laptop viewport"
+      },
+      "focal_point": {
+        "what": "Route visitors to the next useful page.",
+        "where": "the principal editorial text field",
+        "region_ids": []
+      },
+      "dominance": "typography and information hierarchy lead the quiet section",
+      "eye_path": [
+        "Route visitors to the next useful page.",
+        "supporting live content",
+        "measured green motif",
+        "next action or transition"
+      ],
+      "overlaps": [],
+      "quiet_zones": [
+        "preserve the open field around the headline and between content groups"
+      ],
+      "tension": "Asymmetry and measured-line alignment distinguish the editorial index/table-of-contents composition; do not flatten it into equal cards.",
+      "image_copy_relation": "live editorial copy owns the composition; measured rules organize rather than decorate",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [],
+        "surface": "CSS warm-plaster/white/sage field",
+        "layer_stack": [
+          "CSS surface",
+          "live semantic content",
+          "code-native measured-line motif"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "motif terminates or hands off cleanly at the section boundary"
+        ],
+        "responsive_contract": "recompose into an intentional mobile stack while retaining the same focal hierarchy and crop; omit nonessential line extensions before crowding content"
+      },
+      "content_groups": [
+        "eyebrow + headline + supporting copy",
+        "primary action or evidence",
+        "structured supporting information"
+      ],
+      "space_roles": {
+        "internal_grouping": "keep related text and actions tight",
+        "quiet_space": "protect open space that makes the focal group legible",
+        "section_transition": "entry and exit space may expand without splitting semantic groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native landscape frame translated to a normal laptop viewport, not literal 864px section height",
+        "must_be_simultaneously_visible": [
+          "headline"
+        ],
+        "may_continue_below_fold": [
+          "secondary evidence or lower action when necessary"
+        ],
+        "crop_invariants": []
+      },
+      "invariants": [
+        "preserve the editorial index/table-of-contents composition",
+        "keep Route visitors to the next useful page. as the primary focal message",
+        "keep measured green motif aligned to the composition rather than decorative"
+      ],
+      "free": [
+        "exact responsive font sizes and leading",
+        "accessible nav/control mechanics",
+        "spacing-token calibration",
+        "mobile order where the same focal hierarchy remains clear"
+      ]
+    }
+  ]
+}
