@@ -51,9 +51,9 @@ const DRAWINGS: Record<DrawingKind, { viewBox: string; lines: string[]; guides: 
 export function ConstructionDrawing({ kind, className }: { kind: DrawingKind; className: string }): ReactElement {
   const drawing = DRAWINGS[kind];
   return (
-    <svg viewBox={drawing.viewBox} className={`${styles.drawing} ${className}`} aria-hidden="true" focusable="false" fill="none" stroke="currentColor" strokeWidth="1.15" strokeLinecap="square" strokeLinejoin="miter">
-      <g opacity=".38">{drawing.guides.map(path => <path key={path} d={path} />)}</g>
-      <g>{drawing.lines.map(path => <path key={path} d={path} />)}</g>
+    <svg viewBox={drawing.viewBox} data-construction-drawing={kind} className={`${styles.drawing} ${className}`} aria-hidden="true" focusable="false" fill="none" stroke="currentColor" strokeWidth="1.15" strokeLinecap="square" strokeLinejoin="miter">
+      <g opacity=".38">{drawing.guides.map(path => <path key={path} d={path} pathLength="1" />)}</g>
+      <g>{drawing.lines.map(path => <path key={path} d={path} pathLength="1" />)}</g>
     </svg>
   );
 }
