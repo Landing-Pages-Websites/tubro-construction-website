@@ -1,0 +1,29 @@
+.process { color: var(--color-ink); }
+.intro { display: grid; grid-template-columns: 1.6fr 1fr; gap: 4rem; align-items: end; }
+.heading { max-width: 23ch; font-family: var(--font-fjalla), sans-serif; font-size: clamp(2rem, 3.3vw, 3rem); line-height: 1.15; text-wrap: balance; }
+.description { max-width: 40ch; font-size: 1rem; line-height: 1.8; }
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 3.5rem; padding: 0; list-style: none; }
+.step { min-width: 0; }
+.marker { display: flex; align-items: center; position: relative; }
+.connector { height: 1px; background: var(--color-action-deep); opacity: .55; flex: 1; }
+.number { display: grid; place-items: center; width: 3.5rem; height: 3.5rem; flex-shrink: 0; border: 1px solid var(--color-action-deep); border-radius: 50%; color: var(--color-action-deep); font-family: var(--font-fjalla), sans-serif; font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+.step:first-child .number { background: var(--color-action-deep); color: white; }
+.arrow { position: absolute; right: 1.25rem; width: 1.25rem; height: 1.25rem; color: var(--color-action-deep); }
+.copy { padding: 1.5rem 2rem 0 0; }
+.copy h3 { font-family: var(--font-fjalla), sans-serif; font-size: 1.75rem; line-height: 1.2; }
+.copy p { margin-top: .75rem; max-width: 28ch; font-size: .9375rem; line-height: 1.8; }
+.links { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #0a6f3333; display: flex; flex-wrap: wrap; gap: 1rem 2rem; }
+@media (max-width: 767px) {
+  .intro { grid-template-columns: 1fr; gap: 1.25rem; }
+  .description { max-width: 55ch; }
+  .steps { grid-template-columns: 1fr; margin-top: 2rem; }
+  .step { display: grid; grid-template-columns: 3rem 1fr; column-gap: 1.25rem; }
+  .marker { flex-direction: column; height: 100%; }
+  .number { width: 3rem; height: 3rem; font-size: 1.25rem; }
+  .connector { width: 1px; min-height: 2rem; }
+  .arrow { display: none; }
+  .copy { padding: .375rem 0 2rem; }
+  .copy h3 { font-size: 1.5rem; }
+  .copy p { max-width: 55ch; margin-top: .5rem; }
+  .step:last-child .copy { padding-bottom: 0; }
+}

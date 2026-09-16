@@ -10,6 +10,7 @@ import { PhoneCta } from "@/components/sections/PhoneCta";
 import { ContextLinks } from "@/components/sections/ContextLinks";
 import { DesignImage } from "@/components/sections/DesignImage";
 import { FilterableFilmstrip } from "@/components/sections/compositions/FilterableFilmstrip";
+import { PaintingGallery } from "@/components/sections/compositions/PaintingGallery";
 
 /** Blueprint section whose merge requires the real client-side filter bar. */
 const FILTERED_BLUEPRINT = "project-filters";
@@ -89,6 +90,9 @@ export function GalleryHorizontalFilmstripEvidenceBand({
   isFirst,
   slug,
 }: SectionProps): ReactElement {
+  if (slug === "interior-exterior-painting" && section.name === "project-gallery-faq") {
+    return <PaintingGallery {...{ section, images, band, links, ctaTarget, isFirst, slug }} />;
+  }
   const headingId = `${section.id}-heading`;
   // The manifest ink band exceeds the BackgroundBand union; own the dark field.
   const dark = section.background === "ink";

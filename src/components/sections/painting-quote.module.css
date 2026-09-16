@@ -1,0 +1,36 @@
+.section { padding: clamp(3rem, 6vw, 6rem) 2rem; color: var(--color-ink); }
+.layout { display: grid; grid-template-columns: 1fr 1fr; max-width: 1216px; margin-inline: auto; background: white; }
+.visual { position: relative; min-width: 0; display: flex; flex-direction: column; }
+.photo { flex: 1; min-height: 480px; }
+.caption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem; padding: 1.25rem 1.5rem; background: var(--color-action-deep); color: white; font-size: .75rem; line-height: 1.6; }
+.content { padding: clamp(2rem, 4.5vw, 4.5rem); min-width: 0; }
+.heading { font-family: var(--font-fjalla), sans-serif; font-size: clamp(2.75rem, 4.5vw, 4.5rem); line-height: 1.08; letter-spacing: -.025em; }
+.heading span { color: var(--color-action-deep); }
+.description { max-width: 34ch; margin-top: 1.5rem; font-size: 1rem; line-height: 1.8; }
+.action { margin-top: 2rem; }
+.action a { min-height: 52px; }
+.contact { display: flex; align-items: flex-start; gap: 1rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid color-mix(in srgb, var(--color-ink) 16%, transparent); }
+.contact > svg { margin-top: .25rem; color: var(--color-action-deep); flex-shrink: 0; }
+.contactLabel { font-size: .875rem; }
+.phone { display: inline-block; margin-top: .5rem; font-family: var(--font-fjalla), sans-serif; font-size: 1.75rem; line-height: 1.3; }
+.phone:hover { color: var(--color-action-deep); }
+.hours { margin-top: .5rem; font-size: .75rem; line-height: 1.7; }
+.email { display: flex; align-items: center; gap: .5rem; width: fit-content; margin-top: 1.5rem; font-size: .75rem; text-decoration: underline; text-underline-offset: 4px; }
+.email span { overflow-wrap: anywhere; }
+.email svg { flex-shrink: 0; }
+.links:empty { display: none; }
+.links { margin-top: 1.5rem; }
+.content a:focus-visible { outline: 2px solid var(--color-action-deep); outline-offset: 5px; }
+@media (max-width: 899px) {
+  .layout { grid-template-columns: 1fr; }
+  .photo { min-height: 0; height: 320px; flex: auto; }
+  .content { padding: 2.5rem; }
+}
+@media (max-width: 479px) {
+  .section { padding: 2.5rem 1.25rem; }
+  .photo { height: 240px; }
+  .content { padding: 2rem 1.25rem; }
+  .caption { padding: 1rem 1.25rem; }
+  .heading { font-size: 2.75rem; }
+  .action a { width: 100%; text-align: center; }
+}

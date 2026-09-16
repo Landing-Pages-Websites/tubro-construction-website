@@ -8,6 +8,7 @@ import { PhoneCta } from "@/components/sections/PhoneCta";
 import { ContextLinks } from "@/components/sections/ContextLinks";
 import { DesignImage } from "@/components/sections/DesignImage";
 import { CropCorners } from "@/components/sections/CropCorners";
+import { PaintingQuote } from "@/components/sections/PaintingQuote";
 
 /**
  * Composition owner: cta-centered-estimate-brief-peripheral-proof.
@@ -24,6 +25,9 @@ export function CtaCenteredEstimateBriefPeripheralProof({
   slug,
 }: SectionProps): ReactElement {
   const headingId = `${section.id}-heading`;
+  if (slug === "interior-exterior-painting") {
+    return <PaintingQuote section={section} images={images} band={band} links={links} ctaTarget={ctaTarget} isFirst={isFirst} />;
+  }
   const [first, second] = images;
   const portraitProof = slug === "kitchen-remodeling";
   // Cover crops need enough source pixels for the full height, not just slot width.

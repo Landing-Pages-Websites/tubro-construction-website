@@ -4,6 +4,7 @@ import { SectionShell } from "@/components/sections/SectionShell";
 import { SectionIntro } from "@/components/sections/SectionIntro";
 import { ContextLinks } from "@/components/sections/ContextLinks";
 import { CtaLink } from "@/components/sections/CtaLink";
+import { PaintingProcess } from "./PaintingProcess";
 
 /**
  * Composition owner: process-compact-numbered-strip.
@@ -16,7 +17,11 @@ export function ProcessCompactNumberedStrip({
   links,
   ctaTarget,
   isFirst,
+  ...rest
 }: SectionProps): ReactElement {
+  if (rest.slug === "interior-exterior-painting") {
+    return <PaintingProcess section={section} band={band} links={links} ctaTarget={ctaTarget} isFirst={isFirst} {...rest} />;
+  }
   const headingId = `${section.id}-heading`;
   return (
     <SectionShell section={section} band={band} labelledBy={headingId}>

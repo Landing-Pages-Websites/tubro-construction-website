@@ -7,6 +7,7 @@ import { CtaLink } from "@/components/sections/CtaLink";
 import { PhoneCta } from "@/components/sections/PhoneCta";
 import { ContextLinks } from "@/components/sections/ContextLinks";
 import { DesignImage } from "@/components/sections/DesignImage";
+import { PaintingSurfaces } from "@/components/sections/compositions/PaintingSurfaces";
 
 /**
  * Composition owner: content-surface-color-field-photo-proof.
@@ -22,7 +23,11 @@ export function ContentSurfaceColorFieldPhotoProof({
   links,
   ctaTarget,
   isFirst,
+  ...page
 }: SectionProps): ReactElement {
+  if (page.slug === "interior-exterior-painting") {
+    return <PaintingSurfaces {...page} section={section} images={images} band={band} links={links} ctaTarget={ctaTarget} isFirst={isFirst} />;
+  }
   const headingId = `${section.id}-heading`;
   const [first, second, third] = images;
   return (

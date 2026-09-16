@@ -5,6 +5,7 @@ import { contextualLinks, ctaHref } from "@/lib/section-links";
 import { COMPOSITION_REGISTRY } from "@/components/sections/registry";
 import { GeneralContractorHero } from "@/components/sections/GeneralContractorHero";
 import { KitchenRemodelingHero } from "@/components/sections/KitchenRemodelingHero";
+import { PaintingHero } from "@/components/sections/PaintingHero";
 
 interface PageSectionsProps {
   slug: string;
@@ -28,6 +29,8 @@ export function PageSections({ slug, path }: PageSectionsProps): ReactElement {
           ? GeneralContractorHero
           : slug === "kitchen-remodeling" && index === 0
             ? KitchenRemodelingHero
+          : slug === "interior-exterior-painting" && index === 0
+            ? PaintingHero
           : COMPOSITION_REGISTRY[section.composition];
         if (!Composition) {
           throw new Error(`No composition owner registered for "${section.composition}" (${slug})`);
