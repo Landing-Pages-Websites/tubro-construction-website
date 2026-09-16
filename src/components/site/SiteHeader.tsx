@@ -10,7 +10,7 @@ import { NAV_COMPANY, NAV_SERVICES } from "@/lib/routes";
 
 function closeOnLinkClick(event: MouseEvent<HTMLElement>): void {
   if (!(event.target as HTMLElement).closest("a")) return;
-  event.currentTarget.closest("details")?.removeAttribute("open");
+  (event.target as HTMLElement).closest("details")?.removeAttribute("open");
 }
 
 function closeOnEscape(event: KeyboardEvent<HTMLDetailsElement>): void {
@@ -32,12 +32,25 @@ export function SiteHeader(): ReactElement {
         </Link>
 
         <nav aria-label="Main" className="hidden items-center lg:flex" onClick={closeOnLinkClick}>
-          <details className="group relative" onKeyDown={closeOnEscape}>
+          <details
+            className="group relative"
+            onKeyDown={closeOnEscape}
+            onPointerEnter={(event) => {
+              if (event.pointerType === "mouse") event.currentTarget.open = true;
+            }}
+            onPointerLeave={(event) => {
+              if (event.pointerType !== "mouse") return;
+              if (!event.currentTarget.contains(document.activeElement)) event.currentTarget.open = false;
+            }}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false;
+            }}
+          >
             <summary className={`${DESKTOP_LINK} cursor-pointer list-none gap-1 [&::-webkit-details-marker]:hidden`}>
               Services
               <ChevronDown className="size-3.5 transition-transform group-open:rotate-180" aria-hidden="true" />
             </summary>
-            <ul className="absolute left-0 top-full z-50 mt-1 w-64 rounded-md border border-ink/10 bg-white py-2 shadow-lg shadow-ink/10">
+            <ul className="absolute left-0 top-full z-50 mt-1 w-64 rounded-md border border-ink/10 bg-white py-2 shadow-lg shadow-ink/10 before:absolute before:inset-x-0 before:-top-1.5 before:h-1.5 before:content-['']">
               {NAV_SERVICES.map((item) => (
                 <li key={item.href}>
                   <Link
