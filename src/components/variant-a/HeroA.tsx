@@ -7,7 +7,7 @@ import { IMAGES } from "@/lib/images";
 export function HeroA(): ReactElement {
   return (
     <section id="hero" aria-labelledby="hero-a-heading" className="a-hero">
-      <div data-motion-hero="image" className="a-hero-photo"><Image src={IMAGES.hero.src} alt={IMAGES.hero.alt} fill priority sizes="(min-width: 768px) 65vw, 100vw" className="object-cover" /></div>
+      <figure data-motion-hero="image" className="a-hero-photo"><Image src={IMAGES.hero.src} alt={IMAGES.hero.alt} fill priority sizes="(min-width: 768px) 65vw, 100vw" className="object-cover" /><figcaption className="a-cap-label a-hero-photo-label">Kitchen Remodeling</figcaption></figure>
       <div className="a-hero-foreground" aria-hidden="true" />
       <div className="a-ruler" aria-hidden="true">{[4,20,38,58,70,87,91].map(top => <i key={top} style={{top:`${top}%`}} />)}</div>
       <div className="a-hero-copy">

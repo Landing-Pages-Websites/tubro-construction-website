@@ -84,9 +84,9 @@
 .variant-a .a-gallery h2 + div p { font-size:clamp(10px,.9vw,14px); }
 .variant-a .a-gallery a { border-radius:0; font-size:clamp(17px,1.9vw,29px); }
 .variant-a #work-gallery { grid-template-columns:44% 1fr; grid-template-rows:63% 1fr; gap:10px; height:44.2vw; }
-.variant-a #work-gallery > div { aspect-ratio:auto; min-height:0; }
+.variant-a #work-gallery > * { aspect-ratio:auto; min-height:0; }
 .variant-a #work-gallery > div:last-child { gap:10px; }
-.variant-a #work-gallery > div:last-child > div { aspect-ratio:auto; }
+.variant-a #work-gallery > div:last-child > figure { aspect-ratio:auto; }
 .variant-a .a-estimate > div { max-width:none; padding:4.2% 5.2%; grid-template-columns:49% 47%; gap:4%; }
 .variant-a .a-estimate h2 { font-size:clamp(36px,3.65vw,56px); max-width:none; line-height:1.05; }
 .variant-a .a-estimate h2 + p { font-size:clamp(18px,1.4vw,21px); line-height:1.45; max-width:90%; }
@@ -176,6 +176,15 @@
 /* Capabilities photo labels — Direction B's explicit tagging in A's cream/green language. */
 .a-cap-label { position:absolute; left:0; bottom:14px; z-index:4; display:flex; align-items:center; gap:10px; max-width:calc(100% - 14px); padding:8px 14px; background:var(--a-cream); border-left:3px solid var(--a-green); box-shadow:0 1px 6px rgba(35,31,32,.16); font-family:var(--font-fjalla),sans-serif; font-size:clamp(11px,1.05vw,16px); line-height:1.25; letter-spacing:.08em; text-transform:uppercase; color:#231f20; }
 .a-cap-label::after { content:""; width:16px; height:10px; flex-shrink:0; background:linear-gradient(var(--a-green),var(--a-green)) left top / 100% 1px no-repeat,repeating-linear-gradient(to right,var(--a-green) 0 1px,transparent 1px 5px) left top / 100% 7px no-repeat; }
+
+/* Extend the existing photo labels to the hero and project gallery. */
+.a-hero-photo-label { left:auto; right:24px; bottom:24px; }
+.variant-a #work-gallery > figure:first-child { grid-row:span 2; }
+@media (max-width:767px) {
+  .a-hero-photo-label { right:16px; bottom:16px; }
+  #work-gallery .a-cap-label { bottom:8px; max-width:calc(100% - 6px); padding:6px; gap:4px; font-size:11px; letter-spacing:.02em; }
+  #work-gallery .a-cap-label::after { display:none; }
+}
 
 /* Tape-measure blade laid across the lead capability photo, matching the green route lines. */
 .a-cap-tape { position:absolute; top:0; left:0; z-index:5; display:block; width:100%; height:auto; pointer-events:none; }

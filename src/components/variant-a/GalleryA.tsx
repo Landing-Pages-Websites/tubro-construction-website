@@ -39,7 +39,7 @@ export function GalleryA(): ReactElement {
 
         <Reveal className="mt-12 lg:col-span-8 lg:mt-0" delayMs={80}>
           <div id="work-gallery" tabIndex={-1} className="grid gap-3 sm:grid-cols-2 sm:gap-4">
-            <div className="relative aspect-3/4 sm:row-span-2 sm:aspect-auto sm:min-h-full">
+            <figure className="relative aspect-3/4 sm:row-span-2 sm:aspect-auto sm:min-h-full">
               <Image
                 src={IMAGES.workBathroomDark.src}
                 alt={IMAGES.workBathroomDark.alt}
@@ -47,8 +47,9 @@ export function GalleryA(): ReactElement {
                 sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                 className="object-cover"
               />
-            </div>
-            <div className="relative aspect-4/3">
+              <figcaption className="a-cap-label">Bathroom Remodeling</figcaption>
+            </figure>
+            <figure className="relative aspect-4/3">
               <Image
                 src={IMAGES.workBathroomLight.src}
                 alt={IMAGES.workBathroomLight.alt}
@@ -56,9 +57,10 @@ export function GalleryA(): ReactElement {
                 sizes="(min-width: 1024px) 33vw, 50vw"
                 className="object-cover"
               />
-            </div>
+              <figcaption className="a-cap-label">Tub & Shower</figcaption>
+            </figure>
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              <div className="relative aspect-square">
+              <figure className="relative aspect-square">
                 <Image
                   src={IMAGES.workKitchen.src}
                   alt={IMAGES.workKitchen.alt}
@@ -66,8 +68,9 @@ export function GalleryA(): ReactElement {
                   sizes="(min-width: 1024px) 16vw, 25vw"
                   className="object-cover"
                 />
-              </div>
-              <div className="relative aspect-square">
+                <figcaption className="a-cap-label">Kitchen</figcaption>
+              </figure>
+              <figure className="relative aspect-square">
                 <Image
                   src={IMAGES.workDeck.src}
                   alt={IMAGES.workDeck.alt}
@@ -75,7 +78,8 @@ export function GalleryA(): ReactElement {
                   sizes="(min-width: 1024px) 16vw, 25vw"
                   className="object-cover"
                 />
-              </div>
+                <figcaption className="a-cap-label">Deck</figcaption>
+              </figure>
             </div>
           </div>
         </Reveal>
