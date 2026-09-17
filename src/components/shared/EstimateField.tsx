@@ -13,6 +13,7 @@ interface EstimateFieldProps {
   error?: string;
   invalid?: boolean;
   className?: string;
+  defaultValue?: string;
 }
 
 export function EstimateField({
@@ -28,11 +29,13 @@ export function EstimateField({
   error,
   invalid,
   className,
+  defaultValue,
 }: EstimateFieldProps): ReactElement {
   const isInvalid = invalid ?? Boolean(error);
   const shared = {
     id,
     name,
+    defaultValue,
     placeholder: label,
     "aria-invalid": isInvalid,
     "aria-describedby": isInvalid ? errorId : undefined,

@@ -22,6 +22,8 @@ export interface LeadFormProps {
   /** Careers application: adds the résumé attachment field. */
   withResume?: boolean;
   idPrefix: string;
+  /** Editable initial city on a location-specific estimate page. */
+  defaultCity?: string;
 }
 
 /**
@@ -36,6 +38,7 @@ export function LeadForm({
   submitLabel,
   withResume = false,
   idPrefix,
+  defaultCity,
 }: LeadFormProps): ReactElement {
   const form = useEstimateForm(pagePath, {
     formKey,
@@ -106,6 +109,7 @@ export function LeadForm({
         <EstimateField
           id={`${idPrefix}-city`}
           name="projectCity"
+          defaultValue={defaultCity}
           label={withResume ? "City" : "Project city"}
           errorId={`${idPrefix}-city-error`}
           fieldClassName={FIELD_CLASSES}

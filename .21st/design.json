@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "project": {
+    "name": "tubro-construction-website",
+    "productType": "Residential remodeling website",
+    "stack": [
+      "nextjs",
+      "react",
+      "tailwind-v4"
+    ]
+  },
+  "sources": {
+    "tokens": [
+      "app/globals.css"
+    ],
+    "components": [],
+    "assets": [
+      "public/images"
+    ],
+    "instructions": [
+      "CLAUDE.md"
+    ]
+  },
+  "design": {
+    "colorMode": "light",
+    "colors": {
+      "--color-ink": {
+        "value": "#231f20",
+        "source": "app/globals.css"
+      },
+      "--color-plaster": {
+        "value": "#f7f4ee",
+        "source": "app/globals.css"
+      },
+      "--color-sage": {
+        "value": "#e8efe8",
+        "source": "app/globals.css"
+      },
+      "--color-mineral": {
+        "value": "#f0f1ed",
+        "source": "app/globals.css"
+      },
+      "--color-carbon": {
+        "value": "#1d1b1a",
+        "source": "app/globals.css"
+      },
+      "--color-action": {
+        "value": "#0c883d",
+        "source": "app/globals.css"
+      },
+      "--color-action-deep": {
+        "value": "#0a6f33",
+        "source": "app/globals.css"
+      },
+      "--color-timber": {
+        "value": "#a77b52",
+        "source": "app/globals.css"
+      },
+      "--color-timber-ink": {
+        "value": "#7a552f",
+        "source": "app/globals.css"
+      }
+    },
+    "typography": {
+      "--font-poppins": {
+        "value": "var(--font-poppins), ui-sans-serif, system-ui, sans-serif",
+        "source": "app/globals.css"
+      },
+      "--font-fjalla": {
+        "value": "var(--font-fjalla), ui-sans-serif, system-ui, sans-serif",
+        "source": "app/globals.css"
+      }
+    },
+    "spacing": {},
+    "radius": {},
+    "shadows": {},
+    "motion": {},
+    "density": "unknown"
+  },
+  "components": {
+    "installed": [],
+    "preferredPrimitives": [],
+    "patterns": []
+  },
+  "constraints": {
+    "must": [],
+    "avoid": []
+  },
+  "decisions": [],
+  "evidence": [
+    {
+      "fact": "design.colorMode:light",
+      "source": "app/globals.css"
+    },
+    {
+      "fact": "design.tokens",
+      "source": "app/globals.css"
+    },
+    {
+      "fact": "project.instructions",
+      "source": "CLAUDE.md"
+    },
+    {
+      "fact": "project.stack:nextjs",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:react",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:tailwind-v4",
+      "source": "package.json"
+    }
+  ],
+  "generatedAt": "2026-09-17T14:20:21.921Z",
+  "decisions": [
+    {
+      "scope": "app/service-area",
+      "decision": "One shared city-page composition with curated authentic photographs and city-specific introductions. Preserve Tubro's Poppins/Fjalla fonts, green and plaster palette, architectural image framing, shared navigation and lead form.",
+      "reference": "app/service-area/DESIGN.md"
+    }
+  ]
+}
