@@ -10,6 +10,7 @@ import DetailRail from "./DetailRail";
 import { projects, type Category, type Project } from "./projects";
 import s from "./portfolio.module.css";
 import { useTextEntrances } from "./useTextEntrances";
+import { RealWorkPortfolio } from "./RealWorkPortfolio";
 
 export default function ProjectPortfolio(): ReactElement {
   const entranceRoot = useTextEntrances();
@@ -26,6 +27,7 @@ export default function ProjectPortfolio(): ReactElement {
       <span data-text-enter="body" data-text-delay="200"><Check size={17} /> Remodeling since 2010</span>
     </section>
     <ProjectGallery category={category} onCategory={setCategory} onOpen={open} />
+    <RealWorkPortfolio />
     <ProjectSpotlight onOpen={open} />
     <DetailRail onOpen={open} />
     <ProjectEstimate />

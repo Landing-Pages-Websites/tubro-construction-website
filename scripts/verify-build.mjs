@@ -1,6 +1,9 @@
 import { existsSync, readFileSync, readdirSync } from "fs";
 import path from "path";
 import { CITY_SLUGS, DESIGNED_ROUTES, SITE_ROUTES } from "./site-routes.mjs";
+const blogDirectory = new URL("../src/lib/blog-content/", import.meta.url);
+const blogPosts = readdirSync(blogDirectory).filter((file) => file.endsWith(".json"))
+  .map((file) => JSON.parse(readFileSync(new URL(file, blogDirectory), "utf8")));
 
 /**
  * Deterministic build verification:
@@ -150,8 +153,9 @@ async function checkServed(baseUrl) {
     const sitemapResponse = await fetch(`${baseUrl}/sitemap.xml`);
     const sitemapXml = await sitemapResponse.text();
     const urls = [...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => new URL(match[1]).pathname);
-    const expected = SITE_ROUTES.map((route) => route.path);
-    if (JSON.stringify(urls) !== JSON.stringify(expected)) {
+    const expected = [...SITE_ROUTES.map((route) => route.path), ...blogPosts.map((post) => `/blog/${post.slug}`).sort()];
+    const actual = [...urls.slice(0, SITE_ROUTES.length), ...urls.slice(SITE_ROUTES.length).sort()];
+    if (JSON.stringify(actual) !== JSON.stringify(expected)) {
       fail(`sitemap.xml route set/order mismatch: got ${urls.length} routes ${JSON.stringify(urls.slice(0, 4))}...`);
     }
     if (sitemapXml.includes("variant") || sitemapXml.includes("site-design") || sitemapXml.includes("design-review")) {

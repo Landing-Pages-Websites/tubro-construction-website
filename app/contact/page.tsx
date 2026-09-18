@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import type { ReactElement } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { IMAGES } from "@/lib/images";
 import { ArrowUpRight, Clock3, MapPin, Phone } from "lucide-react";
 import { designedPageMetadata } from "@/components/site/DesignedPage";
 import { SiteHeader } from "@/components/site/SiteHeader";
@@ -53,6 +55,7 @@ export default function Page(): ReactElement {
               </div>
             </div>
             <div className={styles.formPanel} id={form.id}>
+              <Image src={IMAGES.logo.src} alt={IMAGES.logo.alt} className={styles.formLogo} />
               <div className={styles.formHeading}>
                 <span className={styles.label}>Your project starts here</span>
                 <span aria-hidden="true">↘</span>

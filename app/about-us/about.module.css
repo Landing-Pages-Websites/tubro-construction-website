@@ -185,3 +185,11 @@
   .site > header > div > a img { height: 24px; }
   .site > header > div > div > a[href="/schedule-an-estimate"] { font-size: 12px; padding-inline: 9px; }
 }
+.teamProfiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 48px 24px; }
+.portrait { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--color-plaster); }
+.portrait img { object-fit: cover; object-position: center 25%; }
+.teamProfile .teamRole { margin-top: 20px; color: var(--color-action-deep); font-size: 12px; font-weight: 600; }
+.teamProfile h3 { margin: 6px 0 12px; font-size: clamp(23px, 2vw, 29px); letter-spacing: -.035em; line-height: 1.2; }
+.teamProfile > p:last-child { font-size: 14px; line-height: 1.8; }
+@media (max-width: 1099px) { .teamProfiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 599px) { .teamProfiles { grid-template-columns: minmax(0, 1fr); gap: 40px; } .portrait { aspect-ratio: 1; } }

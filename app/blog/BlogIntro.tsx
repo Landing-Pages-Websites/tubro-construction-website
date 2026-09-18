@@ -17,14 +17,14 @@ export default function BlogIntro(): ReactElement {
       <div className={styles.masthead}><span>Tubro field notes</span><span>Ideas for a home well lived in</span></div>
       <div className={styles.titleRow}>
         <h1 id="blog-title">Practical guidance for planning a <span>better remodel.</span></h1>
-        <div className={styles.introAside}><p>Good projects start with good questions. Explore the rooms, choices, and conversations that shape your next remodel.</p><a href="#planning-notes" className={styles.textLink}>Find your starting point <ArrowDown size={18} aria-hidden="true" /></a></div>
+        <div className={styles.introAside}><p>Good projects start with good questions. Explore practical guides to kitchens, bathrooms, painting, decks, additions, and preparing for your remodel.</p><a href="#articles" className={styles.textLink}>Read the latest articles <ArrowDown size={18} aria-hidden="true" /></a></div>
       </div>
       <div className={styles.cover}>
         <figure className={styles.coverFigure}>
           <div className={styles.coverPhoto}><Image src="/images/design/blog/05-estimate-cta-0125047-kitchen-01-jpg.jpg" alt="Tubro kitchen with gray cabinetry, a generous island, and natural light" fill priority sizes="(max-width: 760px) 100vw, 65vw" /></div>
           <figcaption><span>A closer look at everyday living</span><a href="/recent-projects">Explore our work <ArrowUpRight size={16} aria-hidden="true" /></a></figcaption>
         </figure>
-        <div className={styles.coverNote}><span className={styles.label}>Start with the way you live</span><h2>A better kitchen starts before the finishes.</h2><p>Where do people gather? What gets in the way? Start with the daily routines you want your space to support.</p><a href="#kitchen-planning" className={styles.textLink}>Kitchen planning notes <ArrowUpRight size={20} aria-hidden="true" /></a><div className={styles.measure} aria-hidden="true" /><span className={styles.coverFoot}>Thoughtful questions. Clearer decisions.</span></div>
+        <div className={styles.coverNote}><span className={styles.label}>Featured guide / Kitchen planning</span><h2>A better kitchen starts before the finishes.</h2><p>Where do people gather? What gets in the way? Our kitchen planning checklist helps turn your daily routines into a clearer remodeling brief.</p><a href="/blog/kitchen-remodel-planning-checklist" className={styles.textLink}>Read the kitchen planning guide <ArrowUpRight size={20} aria-hidden="true" /></a><div className={styles.measure} aria-hidden="true" /><span className={styles.coverFoot}>Thoughtful questions. Clearer decisions.</span></div>
       </div>
       <nav className={styles.topicNav} aria-label="Planning topics"><span className={styles.label}>In these notes</span><ol>{topics.map(([number, title, id]) => <li key={id}><a href={`#${id}`}><span>{number}</span>{title}<ArrowDown size={14} aria-hidden="true" /></a></li>)}</ol></nav>
     </section>

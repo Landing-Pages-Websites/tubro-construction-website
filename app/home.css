@@ -139,7 +139,14 @@
 
 /* Clearer hero hierarchy and navigation across the photograph. */
 .a-desktop-navigation { display:none; }
-.variant-a .a-hero .a-button { font-size:20px; gap:16px; padding:13px 22px; }
+.variant-a .a-hero .a-button { font-size:clamp(23px,2.1vw,32px); gap:16px; padding:20px 24px; min-height:72px; text-align:left; }
+.a-hero-brand { display:block; width:min(100%, 390px); height:auto; margin-bottom:28px; }
+@media (max-width:359px) {
+  .variant-a > header > div { padding-inline:10px; }
+  .variant-a > header > div > a { padding-right:0; }
+  .variant-a > header > div > a img { height:24px; }
+  .variant-a > header > div > div > a[href="/schedule-an-estimate"] { font-size:12px; padding-inline:9px; }
+}
 .a-hero .a-phone { font-size:21px; }
 .a-hero .a-phone svg { width:22px; height:22px; }
 .a-hero h1 { white-space:normal; }
@@ -153,7 +160,7 @@
   .a-desktop-navigation a:hover { color:#fff; text-decoration:underline; }
   .a-desktop-navigation .a-nav-estimate { padding:0 16px; background:var(--a-green); color:white; text-shadow:none; }
   .a-desktop-navigation .a-nav-estimate:hover { background:#0a6f33; color:white; }
-  .a-hero-copy { padding-top:14%; width:34%; padding-bottom:48px; }
+  .a-hero-copy { padding-top:6%; width:34%; padding-bottom:48px; }
   .a-hero-body { max-width:95%; }
 }
 .variant-a .a-estimate ul { display:grid; grid-template-columns:minmax(0,1fr); gap:0; max-width:490px; margin-top:28px; }
@@ -164,7 +171,9 @@
 .variant-a .a-estimate li p { grid-column:2; margin:4px 0 0; font-size:15px; line-height:1.5; }
 .variant-a .a-estimate li:last-child { overflow-wrap:normal; }
 @media (max-width:767px) {
-  .variant-a .a-hero .a-button { font-size:17px; }
+  .variant-a .a-hero .a-button { font-size:23px; padding:18px 20px; }
+  .a-hero-brand { width:min(88%, 340px); margin-bottom:24px; }
+  .a-hero { padding-top:24px; }
   .variant-a .a-estimate h2 { font-size:34px; }
 }
 
