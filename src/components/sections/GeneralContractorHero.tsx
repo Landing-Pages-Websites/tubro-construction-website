@@ -90,7 +90,10 @@ export function GeneralContractorHero({ section, images, band, links, ctaTarget 
           </div>
           {photo && <figure className="relative min-w-0 border-b-2 border-action pb-4">
             <HeroRuler vertical />
-            <DesignImage image={photo} frameClassName="aspect-[4/3] [clip-path:polygon(0_10%,12%_10%,12%_0,100%_0,100%_84%,88%_84%,88%_100%,0_100%)] lg:aspect-[6/5] lg:[clip-path:polygon(0_14%,14%_14%,14%_0,100%_0,100%_82%,86%_82%,86%_100%,0_100%)]" sizes="(min-width: 1280px) 610px, (min-width: 1024px) 50vw, 100vw" priority withTab={false} objectPosition="52% 48%" />
+            <div className="relative">
+              <DesignImage image={photo} frameClassName="aspect-[4/3] [clip-path:polygon(0_10%,12%_10%,12%_0,100%_0,100%_84%,88%_84%,88%_100%,0_100%)] lg:aspect-[6/5] lg:[clip-path:polygon(0_14%,14%_14%,14%_0,100%_0,100%_82%,86%_82%,86%_100%,0_100%)]" sizes="(min-width: 1280px) 610px, (min-width: 1024px) 50vw, 100vw" priority withTab={false} objectPosition="52% 48%" />
+              <p className="absolute bottom-[12%] left-4 max-w-[72%] bg-ink/90 px-4 py-3 font-fjalla text-xl leading-tight text-white sm:left-6 sm:text-2xl">It all Starts with the Foundation</p>
+            </div>
             <figcaption className="mt-4 flex flex-wrap items-baseline justify-between gap-x-5 gap-y-2 font-fjalla text-sm text-ink/75"><span>{photo.label}</span><span>Tubro Construction</span></figcaption>
           </figure>}
         </div>

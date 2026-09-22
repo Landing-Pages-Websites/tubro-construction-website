@@ -11,7 +11,7 @@ import styles from "./PaintingHero.module.css";
 /** Painting-specific framing keeps the house and its finish visible beside the copy. */
 export function PaintingHero({ section, images, band, links, ctaTarget, isFirst }: SectionProps): ReactElement {
   const headingId = `${section.id}-heading`;
-  const lead = images.find((image) => image.source === "0825017_ext stain 01.jpeg") ?? images[0];
+  const [lead] = images;
   return (
     <SectionShell section={section} band={band} bleed labelledBy={headingId}>
       <div className={styles.hero}>
@@ -27,7 +27,7 @@ export function PaintingHero({ section, images, band, links, ctaTarget, isFirst 
           {lead && <DesignImage image={lead} frameClassName={styles.photo} sizes="(min-width: 1440px) 740px, (min-width: 900px) 54vw, 100vw" priority={isFirst} objectPosition="50% 48%" withTab={false} />}
           <figcaption className={styles.caption}>
             <span>Fresh color. A lasting first impression.</span>
-            <span className={styles.palette} aria-label="Project palette: sage siding, light stone, warm timber">
+            <span className={styles.palette} aria-label="Project palette: green siding, light trim, dark shingles">
               <i /><i /><i />
             </span>
           </figcaption>

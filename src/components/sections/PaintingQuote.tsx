@@ -17,7 +17,7 @@ export function PaintingQuote({ section, images, band, links, ctaTarget, isFirst
       <div className={styles.layout}>
         <div className={styles.visual}>
           {images[0] && <DesignImage image={images[0]} frameClassName={styles.photo} sizes="(min-width: 900px) 48vw, 100vw" withTab={false} />}
-          <div className={styles.caption}><span>Interior & exterior painting</span><span>King & Pierce Counties</span></div>
+          <div className={styles.caption}><span>{images[0]?.label ?? "Interior & exterior painting"}</span><span>King & Pierce Counties</span></div>
         </div>
         <div className={styles.content}>
           <Heading id={headingId} className={styles.heading}>Request a<br />painting <span>quote.</span></Heading>
