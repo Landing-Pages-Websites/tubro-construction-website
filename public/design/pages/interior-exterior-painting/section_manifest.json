@@ -86,14 +86,10 @@
       },
       "imagery": {
         "sources": [
-          "sources/drive/0426023_exterior paint 01.jpg",
-          "sources/drive/1221004_deck 01.jpg",
-          "sources/drive/0825017_ext stain 01.jpeg"
+          "sources/drive/client-2026-09/exterior-paint/1000014481.jpg"
         ],
         "labels": [
-          "Exterior Paint",
-          "Exterior Stain",
-          "Deck Surface"
+          "Exterior Painting"
         ],
         "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
       },
@@ -138,14 +134,14 @@
       },
       "imagery": {
         "sources": [
-          "sources/drive/0426023_exterior paint 01.jpg",
-          "sources/drive/1221004_deck 01.jpg",
-          "sources/drive/0825017_ext stain 01.jpeg"
+          "sources/drive/client-2026-09/exterior-paint/IMG_3358 (1).jpeg",
+          "sources/drive/client-2026-09/deck-stain/IMG_9397.jpeg",
+          "sources/drive/client-2026-09/exterior-stain/IMG_7112.jpeg"
         ],
         "labels": [
-          "Exterior Paint",
-          "Exterior Stain & Materials",
-          "Deck & Outdoor Living"
+          "Exterior Painting",
+          "Deck Staining",
+          "Soffit Staining"
         ],
         "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
       },
@@ -246,18 +242,18 @@
       },
       "imagery": {
         "sources": [
-          "sources/drive/0426023_exterior paint 01.jpg",
-          "sources/drive/1221004_deck 01.jpg",
-          "sources/drive/0825017_ext stain 01.jpeg",
-          "sources/drive/0524016_deck 02.jpg",
-          "sources/drive/0425021_exterior stain 01.jpg"
+          "sources/drive/client-2026-09/exterior-paint/IMG_3578.jpeg",
+          "sources/drive/client-2026-09/deck-stain/IMG_3580.jpeg",
+          "sources/drive/client-2026-09/exterior-stain/1000017042.jpg",
+          "sources/drive/client-2026-09/exterior-paint/IMG_6402.jpeg",
+          "sources/drive/client-2026-09/exterior-stain/IMG_7053 (1).jpeg"
         ],
         "labels": [
-          "Exterior Paint",
-          "Deck & Outdoor Living",
-          "Exterior Stain",
-          "Deck Detail",
-          "Material Exterior"
+          "Exterior Siding & Trim",
+          "Stained Deck & Steps",
+          "Stained Porch Ceiling",
+          "Painted Gables & Trim",
+          "Timber Staining"
         ],
         "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
       },
@@ -307,12 +303,10 @@
       },
       "imagery": {
         "sources": [
-          "sources/drive/1221004_deck 01.jpg",
-          "sources/drive/0825017_ext stain 01.jpeg"
+          "sources/drive/client-2026-09/interior-paint/IMG_8242.jpeg"
         ],
         "labels": [
-          "Project Evidence",
-          "Material Detail"
+          "Interior Painting"
         ],
         "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
       },

@@ -1,0 +1,183 @@
+{
+  "sourceFolder": "https://drive.google.com/drive/folders/1I9oMm6OVgAfDV-CH0nOdyCkhwueTnh8h",
+  "reviewedOn": "2026-09-23",
+  "reviewedPhotos": 93,
+  "reviewedFolders": [
+    "Foundation",
+    "Custom Home",
+    "Exterior Paint",
+    "Interior Paint",
+    "Deck Stain",
+    "Exterior Stain Job"
+  ],
+  "notes": [
+    "Reviewed all 93 photographs, including Drive previews for HEIC sources; five videos were outside the photo request.",
+    "Selected 18 distinct originals. Three Custom Home uploads of 20251006_121538 are duplicates; only one is used.",
+    "Foundation caption is live HTML over the photo: It all Starts with the Foundation.",
+    "Images retain the existing page layouts and CTA routes. Only directly related image captions and gallery descriptions changed."
+  ],
+  "photos": [
+    {
+      "page": "/general-contractor",
+      "section": "01-hero",
+      "originalFilename": "IMG_6761.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1WKULO-PuCLZFn1u9OAbuhtrgb-k3CTc6/view?usp=drivesdk",
+      "asset": "/images/design/general-contractor/01-hero-img-6761-jpg.webp",
+      "label": "Foundation Construction",
+      "alt": "Concrete foundation walls for a residential addition beside an existing home"
+    },
+    {
+      "page": "/general-contractor",
+      "section": "03-project-proof",
+      "originalFilename": "IMG_8106.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1SAjqD4MZGIZKFbLdZzT2CFDeYU_TVinq/view?usp=drivesdk",
+      "asset": "/images/design/general-contractor/03-project-proof-img-8106-jpg.webp",
+      "label": "Home Framing",
+      "alt": "Exposed timber framing and wall sheathing on a wooded residential construction site"
+    },
+    {
+      "page": "/general-contractor",
+      "section": "03-project-proof",
+      "originalFilename": "IMG_7948.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/19VXqGkWYB8lkusuZhWIftHvVa7rSkV3F/view?usp=drivesdk",
+      "asset": "/images/design/general-contractor/03-project-proof-img-7948-jpg.webp",
+      "label": "Project Plans",
+      "alt": "A hand reviewing room layouts and dimensions on a residential floor plan"
+    },
+    {
+      "page": "/general-contractor",
+      "section": "03-project-proof",
+      "originalFilename": "20251006_121538 (1).jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1jKHZxM5gbo4dgEnrPfhTNjDBd3GNoNb2/view?usp=drivesdk",
+      "asset": "/images/design/general-contractor/03-project-proof-20251006-121538-1-jpg.webp",
+      "label": "Custom Home Exterior",
+      "alt": "Custom home with dark siding, a gambrel roof, large windows, and wood entry doors"
+    },
+    {
+      "page": "/general-contractor",
+      "section": "03-project-proof",
+      "originalFilename": "20241216_135126.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1AAO6RsIb2aFDwvcX4jYoAE3M4KElZbU9/view?usp=drivesdk",
+      "asset": "/images/design/general-contractor/03-project-proof-20241216-135126-jpg.webp",
+      "label": "Structural Framing",
+      "alt": "A worker positioning a timber roof frame above exposed wall framing"
+    },
+    {
+      "page": "/custom-home-services",
+      "section": "01-hero",
+      "originalFilename": "IMG_3136.JPG",
+      "sourceUrl": "https://drive.google.com/file/d/1m-NEeWXKchoRRAcjWyZR0RQNL6GQ5EdO/view?usp=drivesdk",
+      "asset": "/images/design/custom-home-services/01-hero-img-3136-jpg.webp",
+      "label": "Custom Home",
+      "alt": "Completed two-story custom home with shingle siding, white trim, a wraparound porch, and landscaped grounds"
+    },
+    {
+      "page": "/custom-home-services",
+      "section": "04-project-gallery-faq",
+      "originalFilename": "Meadows House 9-07 180.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1JIXQ81Kmw0C_nuFJWfjnpvQLUAT-_gZ8/view?usp=drivesdk",
+      "asset": "/images/design/custom-home-services/04-project-gallery-faq-meadows-house-9-07-180-jpg.webp",
+      "label": "Custom Home Framing",
+      "alt": "Two-story custom home under construction with exposed roof trusses and sheathed walls"
+    },
+    {
+      "page": "/custom-home-services",
+      "section": "04-project-gallery-faq",
+      "originalFilename": "20251006_121503.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1OrItBza2HNwlkj--T0KnpMJ2Pfu5TEz9/view?usp=drivesdk",
+      "asset": "/images/design/custom-home-services/04-project-gallery-faq-20251006-121503-jpg.webp",
+      "label": "Exterior Finishes",
+      "alt": "Wood siding, dark window trim, and a metal roof on a custom home under construction"
+    },
+    {
+      "page": "/interior-exterior-painting",
+      "section": "01-hero",
+      "originalFilename": "1000014481.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1VapQUtH4npUh9wQ_QVsMqoGBNSnyoB7v/view?usp=drivesdk",
+      "asset": "/images/design/interior-exterior-painting/01-hero-1000014481-jpg.webp",
+      "label": "Exterior Painting",
+      "alt": "Two-story home with green siding and garage door, light trim, and stone accents"
+    },
+    {
+      "page": "/interior-exterior-painting",
+      "section": "02-interior-exterior",
+      "originalFilename": "IMG_3358 (1).jpeg",
+      "sourceUrl": "https://drive.google.com/file/d/1JQT14aZqgWOR-MlB03Zky704WU9jxGC5/view?usp=drivesdk",
+      "asset": "/images/design/interior-exterior-painting/02-interior-exterior-img-3358-1-jpeg.webp",
+      "label": "Exterior Painting",
+      "alt": "Rear elevation of a home with pale green siding, light trim, and a wood staircase"
+    },
+    {
+      "page": "/interior-exterior-painting",
+      "section": "02-interior-exterior",
+      "originalFilename": "IMG_9397.jpeg",
+      "sourceUrl": "https://drive.google.com/file/d/1ttvUYFfcWiET5EHnfDv7ddBCo4dl1_fB/view?usp=drivesdk",
+      "asset": "/images/design/interior-exterior-painting/02-interior-exterior-img-9397-jpeg.webp",
+      "label": "Deck Staining",
+      "alt": "Stained wood deck boards in sunlight beside a cable railing and trees"
+    },
+    {
+      "page": "/interior-exterior-painting",
+      "section": "02-interior-exterior",
+      "originalFilename": "IMG_7112.jpeg",
+      "sourceUrl": "https://drive.google.com/file/d/1T1M64y7Lf-jGgfmSMWQ-3Ft357TwW5Du/view?usp=drivesdk",
+      "asset": "/images/design/interior-exterior-painting/02-interior-exterior-img-7112-jpeg.webp",
+      "label": "Soffit Staining",
+      "alt": "Stained wood soffit above a covered walkway with adjoining surfaces masked for finishing"
+    },
+    {
+      "page": "/interior-exterior-painting",
+      "section": "04-project-gallery-faq",
+      "originalFilename": "IMG_3578.jpeg",
+      "sourceUrl": "https://drive.google.com/file/d/1vUUlk9R7COyc1nXX0k1CoxAi6a3vk6WC/view?usp=drivesdk",
+      "asset": "/images/design/interior-exterior-painting/04-project-gallery-faq-img-3578-jpeg.webp",
+      "label": "Exterior Siding & Trim",
+      "alt": "Wooded hillside home with dark siding and contrasting red-brown deck trim"
+    },
+    {
+      "page": "/interior-exterior-painting",
+      "section": "04-project-gallery-faq",
+      "originalFilename": "IMG_3580.jpeg",
+      "sourceUrl": "https://drive.google.com/file/d/1n_tu3xF1WKBT4ldXPyiVmnhc5SbGvTwZ/view?usp=drivesdk",
+      "asset": "/images/design/interior-exterior-painting/04-project-gallery-faq-img-3580-jpeg.webp",
+      "label": "Stained Deck & Steps",
+      "alt": "Stained wood walkway and steps beside a home and garden"
+    },
+    {
+      "page": "/interior-exterior-painting",
+      "section": "04-project-gallery-faq",
+      "originalFilename": "1000017042.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1FT-XTRahUdIoRzs3xSVYlo5f025EXz71/view?usp=drivesdk",
+      "asset": "/images/design/interior-exterior-painting/04-project-gallery-faq-1000017042-jpg.webp",
+      "label": "Stained Porch Ceiling",
+      "alt": "Wood porch ceiling and stained timber beams above stone-clad columns"
+    },
+    {
+      "page": "/interior-exterior-painting",
+      "section": "04-project-gallery-faq",
+      "originalFilename": "IMG_6402.jpeg",
+      "sourceUrl": "https://drive.google.com/file/d/1UqxtzZv5D8YbO1h7ct8PxOL2SqkCwTzd/view?usp=drivesdk",
+      "asset": "/images/design/interior-exterior-painting/04-project-gallery-faq-img-6402-jpeg.webp",
+      "label": "Painted Gables & Trim",
+      "alt": "Green lap siding, dark shingle gables, and light painted window and roof trim"
+    },
+    {
+      "page": "/interior-exterior-painting",
+      "section": "04-project-gallery-faq",
+      "originalFilename": "IMG_7053 (1).jpeg",
+      "sourceUrl": "https://drive.google.com/file/d/1cv6n15OD2JWGBse3u9r7x3Ime0NnnzTZ/view?usp=drivesdk",
+      "asset": "/images/design/interior-exterior-painting/04-project-gallery-faq-img-7053-1-jpeg.webp",
+      "label": "Timber Staining",
+      "alt": "Stained timber post and brace beneath roof trim with the stone base masked during finishing"
+    },
+    {
+      "page": "/interior-exterior-painting",
+      "section": "05-estimate-cta",
+      "originalFilename": "IMG_8242.jpeg",
+      "sourceUrl": "https://drive.google.com/file/d/1YQ1JxmLwXKmPwPVEkGvT5yL_6S7TUpdB/view?usp=drivesdk",
+      "asset": "/images/design/interior-exterior-painting/05-estimate-cta-img-8242-jpeg.webp",
+      "label": "Interior Painting",
+      "alt": "Painted hallway with light walls, white doors and trim, recessed lighting, and wood flooring"
+    }
+  ]
+}

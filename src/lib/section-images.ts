@@ -13,10 +13,46 @@ export interface SectionImage {
 }
 
 /**
- * Honest descriptions of the 15 authentic client photographs.
+ * Honest descriptions of the authentic client photographs.
  * Keyed by source basename; never describe unverified locations or results.
  */
 const SOURCE_ALTS: Record<string, string> = {
+  "IMG_6761.jpg":
+    "Concrete foundation walls for a residential addition beside an existing home",
+  "IMG_8106.jpg":
+    "Exposed timber framing and wall sheathing on a wooded residential construction site",
+  "IMG_7948.jpg":
+    "A hand reviewing room layouts and dimensions on a residential floor plan",
+  "20251006_121538 (1).jpg":
+    "Custom home with dark siding, a gambrel roof, large windows, and wood entry doors",
+  "20241216_135126.jpg":
+    "A worker positioning a timber roof frame above exposed wall framing",
+  "IMG_3136.JPG":
+    "Completed two-story custom home with shingle siding, white trim, a wraparound porch, and landscaped grounds",
+  "Meadows House 9-07 180.jpg":
+    "Two-story custom home under construction with exposed roof trusses and sheathed walls",
+  "20251006_121503.jpg":
+    "Wood siding, dark window trim, and a metal roof on a custom home under construction",
+  "1000014481.jpg":
+    "Two-story home with green siding and garage door, light trim, and stone accents",
+  "IMG_3358 (1).jpeg":
+    "Rear elevation of a home with pale green siding, light trim, and a wood staircase",
+  "IMG_9397.jpeg":
+    "Stained wood deck boards in sunlight beside a cable railing and trees",
+  "IMG_7112.jpeg":
+    "Stained wood soffit above a covered walkway with adjoining surfaces masked for finishing",
+  "IMG_3578.jpeg":
+    "Wooded hillside home with dark siding and contrasting red-brown deck trim",
+  "IMG_3580.jpeg":
+    "Stained wood walkway and steps beside a home and garden",
+  "1000017042.jpg":
+    "Wood porch ceiling and stained timber beams above stone-clad columns",
+  "IMG_6402.jpeg":
+    "Green lap siding, dark shingle gables, and light painted window and roof trim",
+  "IMG_7053 (1).jpeg":
+    "Stained timber post and brace beneath roof trim with the stone base masked during finishing",
+  "IMG_8242.jpeg":
+    "Painted hallway with light walls, white doors and trim, recessed lighting, and wood flooring",
   "0125047_kitchen 01.jpg":
     "Remodeled open kitchen with a large dark-countertop island, gray shaker cabinets, and wide-plank flooring",
   "0125065_kitchen 01.jpg":

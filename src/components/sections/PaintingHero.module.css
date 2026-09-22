@@ -24,9 +24,9 @@
 .photo { aspect-ratio: 1.12; margin-right: 16px; }
 .caption { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 20px 16px 0 0; font-family: var(--font-fjalla), sans-serif; font-size: 16px; color: var(--color-ink); }
 .palette { display: flex; flex-shrink: 0; gap: 5px; }
-.palette i { display: block; width: 25px; height: 32px; background: #83816d; }
+.palette i { display: block; width: 25px; height: 32px; background: #8eaa79; }
 .palette i:nth-child(2) { background: #e7e7dc; }
-.palette i:nth-child(3) { background: var(--color-timber); }
+.palette i:nth-child(3) { background: #51483e; }
 
 @media (max-width: 1100px) {
   .hero { padding-inline: 32px; gap: 32px; }

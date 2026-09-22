@@ -90,14 +90,10 @@
       },
       "imagery": {
         "sources": [
-          "sources/drive/0426023_exterior paint 01.jpg",
-          "sources/drive/1221004_deck 01.jpg",
-          "sources/drive/0825017_ext stain 01.jpeg"
+          "sources/drive/client-2026-09/custom-home/IMG_3136.JPG"
         ],
         "labels": [
-          "Exterior Paint",
-          "Deck & Outdoor Living",
-          "Exterior Materials"
+          "Custom Home"
         ],
         "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
       },
@@ -250,16 +246,12 @@
       },
       "imagery": {
         "sources": [
-          "sources/drive/0426023_exterior paint 01.jpg",
-          "sources/drive/1221004_deck 01.jpg",
-          "sources/drive/0825017_ext stain 01.jpeg",
-          "sources/drive/0524016_deck 02.jpg"
+          "sources/drive/client-2026-09/custom-home/Meadows House 9-07 180.jpg",
+          "sources/drive/client-2026-09/custom-home/20251006_121503.jpg"
         ],
         "labels": [
-          "Exterior Paint",
-          "Deck & Outdoor Living",
-          "Exterior Stain & Materials",
-          "Kitchen Remodeling"
+          "Custom Home Framing",
+          "Exterior Finishes"
         ],
         "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
       },
@@ -308,13 +300,8 @@
         ]
       },
       "imagery": {
-        "sources": [
-          "sources/drive/1221004_deck 01.jpg"
-        ],
-        "labels": [
-          "Project Evidence",
-          "Material Detail"
-        ],
+        "sources": [],
+        "labels": [],
         "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
       },
       "source_constraints": [
