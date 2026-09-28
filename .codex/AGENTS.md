@@ -4,7 +4,7 @@
 - Reuse it when available. - Never kill or restart another process.
 - Never use pkill, killall, taskkill, fuser -k, or broad Node process termination.
 - Do not run a production build while this worktree's development server is running.
-- Run lint and typecheck without restarting the server. Do not commit, push, publish, deploy, merge, or modify unrelated pages.
+- Run lint and typecheck without restarting the server. In an interactive local review session, do not commit, push, publish, deploy, merge, or modify unrelated pages. This review-session rule does not restrict build, remediation or launch tasks, which ship through the repository's normal reviewed PR and Git-linked deploy.
 - After implementation:
 - 1. Run lint/typecheck.
 - 2. Open localhost in this worktree's browser.
