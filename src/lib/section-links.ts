@@ -9,7 +9,7 @@ export interface ResolvedLink {
 }
 
 const ROUTE_LABELS: Record<string, string> = {
-  "/schedule-an-estimate": "Schedule a free estimate",
+  "/schedule-an-estimate": "Book Your Free Estimate",
   "/recent-projects": "See recent projects",
   "/contact": "Contact the office",
   "/service-areas": "Browse service areas",
@@ -25,6 +25,7 @@ const ROUTE_LABELS: Record<string, string> = {
 
 const CTA_ROUTES: Record<string, string> = {
   "Schedule a Free Estimate": "/schedule-an-estimate",
+  "Book Your Free Estimate": "/schedule-an-estimate",
   "View Recent Projects": "/recent-projects",
   "Contact Us": "/contact",
   "Request a Quote": "/schedule-an-estimate",

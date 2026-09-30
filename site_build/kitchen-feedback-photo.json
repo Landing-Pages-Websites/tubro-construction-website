@@ -1,0 +1,11 @@
+{
+  "source": "Client feedback attachments",
+  "images": [
+    {
+      "source": "Kitchen 5.pdf",
+      "asset": "/images/projects/kitchen-5.jpg",
+      "usage": "Kitchen gallery and planning detail; replaces 0126001_kitchen 01.jpg"
+    }
+  ],
+  "extraction": "Original embedded JPEG streams; no image generation"
+}

@@ -83,7 +83,7 @@ export function FormSplitWithNarrowContactLedger({
   const withResume =
     section.source_blueprint_sections.includes("application-form") ||
     (slug === "careers" && section.name === "application-form");
-  const submitLabel = section.content.cta || "Schedule a Free Estimate";
+  const submitLabel = section.content.cta || "Book Your Free Estimate";
   if (slug === "general-contractor") {
     const Heading = isFirst ? "h1" : "h2";
     const contactIcons = [Phone, Clock3, Mail];

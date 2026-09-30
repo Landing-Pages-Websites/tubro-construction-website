@@ -81,9 +81,9 @@ export function SiteHeader(): ReactElement {
           </a>
           <Link
             href="/schedule-an-estimate"
-            className="inline-flex min-h-11 items-center whitespace-nowrap rounded-md bg-action px-3.5 font-poppins text-sm font-semibold text-white transition-colors hover:bg-action-deep sm:px-4"
+            className="header-estimate-button inline-flex min-h-11 items-center whitespace-nowrap rounded-md bg-action px-3.5 font-poppins text-sm font-semibold text-white transition-colors hover:bg-action-deep sm:px-4"
           >
-            Free Estimate
+            <span className="hidden sm:inline">Book Your Free Estimate</span><span className="sm:hidden">Free Estimate</span>
           </Link>
 
           <details className="lg:hidden" onKeyDown={closeOnEscape}>
@@ -128,7 +128,7 @@ export function SiteHeader(): ReactElement {
                   href="/schedule-an-estimate"
                   className="inline-flex min-h-12 items-center justify-center rounded-md bg-action px-5 font-poppins text-[15px] font-semibold text-white hover:bg-action-deep"
                 >
-                  Schedule a Free Estimate
+                  Book Your Free Estimate
                 </Link>
                 <a
                   href={BRAND.phoneHref}

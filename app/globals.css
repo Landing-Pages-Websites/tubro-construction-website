@@ -79,3 +79,22 @@ body {
 }
 
 #hero-a-heading > span { display: block; }
+
+/* Keep booking within reach without covering page content or the mobile keyboard. */
+.mobile-estimate-bar { display:none; }
+.service-estimate-prompt { display:flex; align-items:center; justify-content:space-between; gap:32px; padding:40px max(24px,calc((100% - 1216px)/2)); background:var(--color-sage); }
+.service-estimate-prompt > div { max-width:720px; }
+.service-estimate-prompt h2 { font-size:clamp(26px,2.5vw,36px); font-weight:700; line-height:1.2; letter-spacing:-.03em; text-wrap:balance; }
+.service-estimate-prompt p { margin-top:16px; font-size:16px; line-height:1.7; max-width:64ch; }
+.service-estimate-prompt > a { flex-shrink:0; }
+@media(max-width:767px) {
+  body:has(.mobile-estimate-bar) { padding-bottom:calc(80px + env(safe-area-inset-bottom,0px)); }
+  .mobile-estimate-bar { display:block; position:fixed; z-index:45; inset:auto 0 0; padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px)); background:var(--color-plaster); border-top:1px solid #231f2020; }
+  .mobile-estimate-bar a { display:flex; justify-content:center; align-items:center; gap:16px; min-height:48px; padding:10px 16px; background:var(--color-action); color:white; font-size:15px; font-weight:600; border-radius:2px; }
+  .mobile-estimate-bar a:hover { background:var(--color-action-deep); }
+  .mobile-estimate-bar svg { width:20px; height:20px; }
+  .service-estimate-prompt { flex-direction:column; align-items:flex-start; padding:32px 20px; gap:24px; }
+  html { scroll-padding-bottom:90px; }
+}
+
+@media(max-width:359px) { .header-estimate-button { display:none; } }

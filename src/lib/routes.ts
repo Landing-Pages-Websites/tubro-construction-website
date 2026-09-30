@@ -82,6 +82,14 @@ export const CITY_ROUTES: CityRoute[] = CITY_ORDER.map((citySlug) => ({
   citySlug,
 }));
 
+export const SERVICE_CITIES: CityRoute[] = [
+  "Kent", "Auburn", "Renton", "Sumner", "Tacoma", "Buckley", "Bellevue", "Issaquah", "Puyallup", "Covington", "Sammamish", "Snoqualmie", "Black Diamond", "Enumclaw", "North Bend", "Ravensdale", "Bonney Lake", "Maple Valley", "Seattle", "Redmond",
+].map((city) => {
+  const existing = CITY_ROUTES.find((route) => route.city === city);
+  const citySlug = city.toLowerCase().replaceAll(" ", "-");
+  return existing ?? { city, citySlug, path: "/schedule-an-estimate", slug: citySlug, title: "Book a free estimate in " + city };
+});
+
 export const PRIVACY_ROUTE: SiteRoute = {
   path: "/privacy",
   slug: "privacy",
@@ -122,6 +130,6 @@ export const NAV_COMPANY = [
 
 export const NAV_FOOTER_EXTRA = [
   { href: "/careers", label: "Careers" },
-  { href: "/schedule-an-estimate", label: "Schedule an Estimate" },
+  { href: "/schedule-an-estimate", label: "Book Your Free Estimate" },
   { href: "/privacy", label: "Privacy Policy" },
 ] as const;

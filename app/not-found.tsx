@@ -32,7 +32,7 @@ export default function NotFound(): ReactElement {
               href="/schedule-an-estimate"
               className="inline-flex min-h-11 items-center font-poppins text-base font-semibold text-action-deep underline-offset-4 hover:underline"
             >
-              Schedule a Free Estimate
+              Book Your Free Estimate
             </Link>
           </div>
         </div>

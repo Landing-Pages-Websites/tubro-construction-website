@@ -157,6 +157,9 @@ export function resolveSectionImages(slug: string, section: ManifestSection): Se
   const files = listDesignImages(slug);
   return section.imagery.sources.map((source, index) => {
     const base = source.split("/").pop() ?? source;
+    if (slug === "kitchen-remodeling" && base === "0126001_kitchen 01.jpg") {
+      return { src: "/images/projects/kitchen-5.jpg", alt: "Remodeled kitchen with cream cabinetry, a wood island and range hood, and glass pendant lights", label: section.imagery.labels[index] ?? "Kitchen Remodeling", source: "Kitchen 5.pdf" };
+    }
     const wanted = `${section.id}-${slugifySource(source)}`;
     const file = files.find((name) => name.startsWith(wanted));
     if (!file) {

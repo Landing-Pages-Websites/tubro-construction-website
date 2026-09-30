@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+import { ServiceEstimatePrompt } from "./ServiceEstimatePrompt";
 import type { ReactElement } from "react";
 import { bandForSection, loadManifest } from "@/lib/manifest";
 import { resolveSectionImages } from "@/lib/section-images";
@@ -42,8 +44,8 @@ export function PageSections({ slug, path }: PageSectionsProps): ReactElement {
             ? `#${formAnchor}`
             : destination;
         return (
+          <Fragment key={section.id}>
           <Composition
-            key={section.id}
             section={section}
             images={resolveSectionImages(slug, section)}
             band={bandForSection(manifest, section.id)}
@@ -53,6 +55,8 @@ export function PageSections({ slug, path }: PageSectionsProps): ReactElement {
             ctaTarget={ctaTarget}
             isFirst={index === 0}
           />
+          {index === 1 && (slug === "kitchen-remodeling" || slug === "bathroom-remodeling") && <ServiceEstimatePrompt room={slug === "kitchen-remodeling" ? "Kitchen" : "Bathroom"} />}
+          </Fragment>
         );
       })}
     </>

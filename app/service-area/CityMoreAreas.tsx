@@ -1,6 +1,6 @@
 import { ArrowUpRight, MapPin } from "lucide-react";
 import type { ReactElement } from "react";
-import { CITY_ROUTES } from "@/lib/routes";
+import { SERVICE_CITIES } from "@/lib/routes";
 import styles from "./city.module.css";
 
 export function CityMoreAreas({
@@ -22,7 +22,7 @@ export function CityMoreAreas({
         </a>
       </div>
       <nav aria-label="Other service areas">
-        {CITY_ROUTES.filter((route) => route.citySlug !== citySlug).map(
+        {SERVICE_CITIES.filter((route) => route.citySlug !== citySlug).map(
           (route) => (
             <a href={route.path} key={route.citySlug}>
               {route.city}

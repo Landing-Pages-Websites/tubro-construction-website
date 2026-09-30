@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import type { ReactElement, ReactNode } from "react";
 import { Fjalla_One, Poppins } from "next/font/google";
 import "./globals.css";
+import { Suspense } from "react";
+import { MobileEstimateCta } from "@/components/shared/MobileEstimateCta";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -37,7 +39,7 @@ export default function RootLayout({
           defer
         />
       </head>
-      <body>{children}</body>
+      <body>{children}<Suspense fallback={null}><MobileEstimateCta /></Suspense></body>
     </html>
   );
 }

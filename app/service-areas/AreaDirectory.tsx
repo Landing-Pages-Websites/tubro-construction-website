@@ -1,13 +1,13 @@
 import { ArrowRight } from "lucide-react";
 import type { ReactElement } from "react";
-import { CITY_ROUTES } from "@/lib/routes";
+import { SERVICE_CITIES } from "@/lib/routes";
 import { CityLinks } from "./CityLinks";
 import { ConstructionDrawing } from "./ConstructionDrawing";
 import styles from "./service-areas.module.css";
 
-const PIERCE_CITIES = new Set(["tacoma", "sumner", "bonney-lake", "buckley"]);
-const kingCities = CITY_ROUTES.filter(({ citySlug }) => !PIERCE_CITIES.has(citySlug));
-const pierceCities = CITY_ROUTES.filter(({ citySlug }) => PIERCE_CITIES.has(citySlug));
+const PIERCE_CITIES = new Set(["tacoma", "sumner", "bonney-lake", "buckley", "puyallup"]);
+const kingCities = SERVICE_CITIES.filter(({ citySlug }) => !PIERCE_CITIES.has(citySlug));
+const pierceCities = SERVICE_CITIES.filter(({ citySlug }) => PIERCE_CITIES.has(citySlug));
 
 export function AreaDirectory(): ReactElement {
   return (

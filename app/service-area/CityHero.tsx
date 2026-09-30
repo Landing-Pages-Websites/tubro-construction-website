@@ -29,7 +29,7 @@ export function CityHero({
         </h1>
         <p className={styles.heroBody}>{profile.intro}</p>
         <a href="#form" className={styles.button}>
-          Schedule a Free Estimate
+          Book Your Free Estimate
           <ArrowUpRight aria-hidden="true" />
         </a>
         <a href="#services" className={styles.textLink}>

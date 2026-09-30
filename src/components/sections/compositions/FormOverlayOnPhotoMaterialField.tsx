@@ -60,7 +60,7 @@ export function FormOverlayOnPhotoMaterialField({
   isFirst,
 }: SectionProps): ReactElement {
   const headingId = `${section.id}-heading`;
-  const submitLabel = section.content.cta || "Schedule a Free Estimate";
+  const submitLabel = section.content.cta || "Book Your Free Estimate";
   const primaryLabel = images[0]?.label;
   if (slug === "bathroom-remodeling") {
     return <BathroomEstimate section={section} images={images} band={band} links={links} slug={slug} path={path} isFirst={isFirst} ctaTarget="" />;

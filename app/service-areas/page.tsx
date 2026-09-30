@@ -26,8 +26,8 @@ export default function Page(): ReactElement {
         <AreaHero />
         <AreaCoverage />
         <AreaDirectory />
-        <AreaProjects />
         <AreaFit />
+        <AreaProjects />
         <AreaEstimate />
       </main>
       <SiteFooter />

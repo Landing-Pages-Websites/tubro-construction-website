@@ -15,10 +15,11 @@ const LABEL_CLASSES = "font-fjalla text-[11px] tracking-[0.1em] text-ink/70 uppe
 interface HomepageEstimateFormProps {
   form: EstimateForm;
   idPrefix?: string;
+  submitLabel?: string;
 }
 
 /** The same contact form is used on the homepage and bathroom estimate. */
-export function HomepageEstimateForm({ form, idPrefix = "a" }: HomepageEstimateFormProps): ReactElement {
+export function HomepageEstimateForm({ form, idPrefix = "a", submitLabel = ESTIMATE.submitCta }: HomepageEstimateFormProps): ReactElement {
   return (
     <form
       ref={form.formRef}
@@ -102,7 +103,7 @@ export function HomepageEstimateForm({ form, idPrefix = "a" }: HomepageEstimateF
         disabled={form.status === "submitting"}
         className="group mt-7 inline-flex min-h-13 w-full items-center justify-center gap-2.5 rounded-md bg-action px-6 py-3.5 font-poppins text-base font-semibold text-white transition-colors hover:bg-action-deep disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {form.status === "submitting" ? ESTIMATE.submittingCta : ESTIMATE.submitCta}
+        {form.status === "submitting" ? ESTIMATE.submittingCta : submitLabel}
         <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
       </button>
 

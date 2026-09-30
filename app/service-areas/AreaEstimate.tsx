@@ -10,7 +10,7 @@ export function AreaEstimate(): ReactElement {
       <ConstructionDrawing kind="plan" className={styles.estimateDrawing} />
       <div><p className={styles.eyebrow}>Your home. Your next chapter.</p><h2 id="estimate-heading">Let’s start<br />with your plans.</h2><p>Share your project and location. We’ll help you take the next step toward a home that works for you.</p></div>
       <div className={styles.estimateActions}>
-        <a className={styles.button} href="/schedule-an-estimate">Schedule a Free Estimate <ArrowUpRight aria-hidden="true" /></a>
+        <a className={styles.button} href="/schedule-an-estimate">Book Your Free Estimate <ArrowUpRight aria-hidden="true" /></a>
         <a className={styles.estimatePhone} href={BRAND.phoneHref}><Phone aria-hidden="true" />{BRAND.phoneDisplay}</a>
         <p><Clock aria-hidden="true" />{BRAND.hours}</p>
         <span>Free estimates · Assigned project management</span>

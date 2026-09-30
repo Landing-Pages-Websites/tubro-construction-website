@@ -7,5 +7,5 @@ import { formKeyForSlug } from "@/lib/form-keys";
 
 export function BathroomContactForm({ pagePath, idPrefix }: { pagePath: string; idPrefix: string }): ReactElement {
   const form = useEstimateForm(pagePath, { formKey: formKeyForSlug("bathroom-remodeling") });
-  return <HomepageEstimateForm form={form} idPrefix={idPrefix} />;
+  return <HomepageEstimateForm form={form} idPrefix={idPrefix} submitLabel="Book Your Free Estimate" />;
 }

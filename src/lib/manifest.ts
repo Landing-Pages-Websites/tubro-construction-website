@@ -87,6 +87,7 @@ function repairScopeDefect(text: string): string {
 
 function repairKnownDefects(manifest: PageManifest): PageManifest {
   for (const section of manifest.ordered_sections) {
+    if (/^schedule a free estimate$/i.test(section.content.cta)) section.content.cta = "Book Your Free Estimate";
     section.content.body = repairScopeDefect(section.content.body);
     section.content.headline = repairScopeDefect(section.content.headline);
   }

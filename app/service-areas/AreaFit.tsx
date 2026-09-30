@@ -19,7 +19,7 @@ export function AreaFit(): ReactElement {
           <li><MapPin aria-hidden="true" /><div><strong>Your location</strong><span>The city or ZIP code of your project.</span></div></li>
           <li><House aria-hidden="true" /><div><strong>What you have in mind</strong><span>A remodel, addition, new home, or another project.</span></div></li>
         </ul>
-        <a className={styles.button} href="/contact">Ask about your location <ArrowUpRight aria-hidden="true" /></a>
+        <a className={styles.button} href="/schedule-an-estimate">Book Your Free Estimate <ArrowUpRight aria-hidden="true" /></a>
         <p className={styles.fitNote}>Our office will review your location and project scope.</p>
       </div>
     </section>

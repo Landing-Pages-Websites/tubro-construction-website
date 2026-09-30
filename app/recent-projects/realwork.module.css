@@ -14,3 +14,12 @@
 .fallback:hover { color: var(--color-ink); }
 @media (max-width: 767px) { .section { padding: 48px 20px; } .heading { grid-template-columns: 1fr; gap: 20px; } }
 @media (max-width: 599px) { .embed { padding: 16px 10px; } .frame { height: 760px; } }
+
+/* Put project photography within the first screen of the embedded portfolio. */
+.embed :global(.rwlMapContainer), .embed :global(.rwlMapContainer) > div { height:240px !important; min-height:0 !important; }
+.embed :global(.rwlMapLegendAreas) { display:none; }
+.embed :global(div:has(> img[alt="RealWork Logo"])) { display:none; }
+@media(max-width:599px) {
+  .embed :global(.rwlMapContainer), .embed :global(.rwlMapContainer) > div { height:180px !important; }
+  .embed :global(.rwlH1Header), .embed :global(.rwlH2Header), .embed :global(.rwlContentDetails) { display:none; }
+}
