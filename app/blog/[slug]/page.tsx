@@ -6,6 +6,8 @@ import { BlogArticle } from "../BlogArticle";
 
 type Props = { params: Promise<{ slug: string }> };
 
+export const dynamicParams = false;
+
 export function generateStaticParams(): { slug: string }[] {
   return blogPosts.map(({ slug }) => ({ slug }));
 }

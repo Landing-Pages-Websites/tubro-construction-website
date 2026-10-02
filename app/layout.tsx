@@ -4,6 +4,8 @@ import { Fjalla_One, Poppins } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 import { MobileEstimateCta } from "@/components/shared/MobileEstimateCta";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { PostHogProvider } from "@/components/analytics/PostHogProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,7 +22,7 @@ const fjallaOne = Fjalla_One({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tubro-construction-website.vercel.app"),
+  metadataBase: new URL("https://www.tubroconstruction.com"),
   title: "Tubro Construction | Residential Remodeling in King & Pierce Counties",
   description:
     "Tubro Construction brings kitchens, bathrooms, additions, and whole-home renovations to life with clear pricing, careful craftsmanship, and an assigned project manager.",
@@ -32,6 +34,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${fjallaOne.variable}`}>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: `window.MEGA_TAG_CONFIG={siteKey:"9408e00b76f9qp21"};window.API_ENDPOINT="https://optimizer.gomega.ai";window.TRACKING_API_ENDPOINT="https://events-api.gomega.ai";` }} />
+        <script src="https://cdn.gomega.ai/scripts/optimizer.min.js" async />
         <script
           src="https://app.gomega.ai/review-bridge/v7/review-bridge.js"
           integrity="sha384-VTUzMpjogRuXFNsE1df8N2HoJyWhNcCkGaUa7aulmDjCmXVoQ4UpQB1xMTrOp3MJ"
@@ -39,7 +43,7 @@ export default function RootLayout({
           defer
         />
       </head>
-      <body>{children}<Suspense fallback={null}><MobileEstimateCta /></Suspense></body>
+      <body><GoogleAnalytics /><PostHogProvider><Suspense fallback={null}><MobileEstimateCta />{children}</Suspense></PostHogProvider></body>
     </html>
   );
 }

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE_ROUTES } from "@/lib/routes";
 import { blogPosts } from "@/lib/blog-posts";
 
-const BASE_URL = "https://tubro-construction-website.vercel.app";
+const BASE_URL = "https://www.tubroconstruction.com";
 
 /** Core pages retain their order, followed by published articles. */
 export default function sitemap(): MetadataRoute.Sitemap {

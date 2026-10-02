@@ -2,6 +2,7 @@
 
 import { useCallback, useRef, useState } from "react";
 import type { FormEvent, RefObject } from "react";
+import { solveLeadProof } from "@/lib/leadProof";
 
 declare global {
   interface Window {
@@ -11,6 +12,8 @@ declare global {
 
 const SUBMIT_ENDPOINT = "https://analytics.gomega.ai/submission/submit";
 const CUSTOMER_ID = "b002784f-9543-4362-8814-b7da19078f23";
+const SITE_ID = "f28d515e-437b-4f9b-96c4-bc1a79a3357c";
+const SOURCE_PROVIDER = "website-tubroconstruction";
 const DEFAULT_FORM_KEY = "homepage_estimate";
 const TRACKED_PARAMS = [
   "utm_source",
@@ -150,19 +153,24 @@ async function postSubmission(
   pageVariant: string,
   resumeFileName: string | null,
 ): Promise<void> {
-  const response = await fetch(SUBMIT_ENDPOINT, {
+  const payload = {
+    customer_id: CUSTOMER_ID,
+    site_id: SITE_ID,
+    source_provider: SOURCE_PROVIDER,
+    form_key: formKey,
+    form_data: {
+      ...fields,
+      ...(resumeFileName ? { resumeFileName } : {}),
+      page_variant: pageVariant,
+      ...collectTrackingParams(),
+    },
+  };
+  const issued = await fetch("/api/lead", { cache: "no-store" }).then((response) => response.json() as Promise<{ issuedAt: string }>);
+  const proof = await solveLeadProof(payload, issued.issuedAt);
+  const response = await fetch("/api/lead", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      customer_id: CUSTOMER_ID,
-      form_key: formKey,
-      form_data: {
-        ...fields,
-        ...(resumeFileName ? { resumeFileName } : {}),
-        page_variant: pageVariant,
-        ...collectTrackingParams(),
-      },
-    }),
+    body: JSON.stringify({ ...payload, captchaToken: "lead-submit", powIssuedAt: issued.issuedAt, powNonce: proof }),
   });
   if (!response.ok) {
     throw new Error(`Submission failed with status ${response.status}`);

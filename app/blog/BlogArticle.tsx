@@ -9,7 +9,7 @@ import { ArticleBody } from "./ArticleBody";
 import styles from "./articles.module.css";
 import blogStyles from "./blog.module.css";
 
-const SITE_URL = "https://tubro-construction-website.vercel.app";
+const SITE_URL = "https://www.tubroconstruction.com";
 
 export function BlogArticle({ post }: { post: BlogPost }): ReactElement {
   const date = new Date(`${post.publishedDate}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
