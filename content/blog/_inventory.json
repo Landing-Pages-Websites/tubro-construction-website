@@ -1,0 +1,42 @@
+{
+  "old_site_url": "https://www.tubroconstruction.com",
+  "platform": "duda",
+  "discovery_source": "post-sitemap",
+  "status": "migrated",
+  "content_dir": "content/blog",
+  "posts_found": 1,
+  "posts_migrated": 1,
+  "posts_with_item_id": 1,
+  "generated_at": "2026-10-02T21:30:45+00:00",
+  "script_version": "1.1.0",
+  "image_bytes": 0,
+  "notes": [
+    "link to https://www.tubroconstruction.com/schedule-an-estimate had no migrated destination and was left pointing at the old site",
+    "link to https://www.tubroconstruction.com/how-much-does-a-kitchen-remodel-cost-in-maple-valley-wa had no migrated destination and was left pointing at the old site",
+    "link to https://www.tubroconstruction.com/cabinet-refacing-vs-replacement-which-is-right-for-you had no migrated destination and was left pointing at the old site",
+    "link to https://www.tubroconstruction.com/hidden-costs-in-kitchen-and-bathroom-renovations had no migrated destination and was left pointing at the old site",
+    "link to https://www.tubroconstruction.com/schedule-an-estimate had no migrated destination and was left pointing at the old site",
+    "link to https://www.tubroconstruction.com/about-us had no migrated destination and was left pointing at the old site",
+    "link to https://www.tubroconstruction.com/kitchen-remodeling had no migrated destination and was left pointing at the old site",
+    "link to https://www.tubroconstruction.com/do-you-need-permits-for-a-home-remodel-in-maple-valley-wa had no migrated destination and was left pointing at the old site",
+    "link to https://www.tubroconstruction.com/contact had no migrated destination and was left pointing at the old site"
+  ],
+  "pending_redirects": [],
+  "posts": [
+    {
+      "old_url": "https://www.tubroconstruction.com/blog/kitchen-remodel-cost-washington-state",
+      "item_id": "item_q2fvf282v44npyrpr5bgbybjrr",
+      "old_id": null,
+      "title": "Kitchen Remodel Cost Washington State: A Planning Guide",
+      "date": "2026-09-08",
+      "new_slug": "kitchen-remodel-cost-washington-state",
+      "status": "migrated",
+      "reason": null,
+      "images_migrated": 0,
+      "dropped_blocks": [],
+      "word_count": 3106,
+      "redirect_destination": null,
+      "target": "/blog/kitchen-remodel-cost-washington-state"
+    }
+  ]
+}

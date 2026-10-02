@@ -1,6 +1,7 @@
 import kitchenPlanning from "./blog-content/kitchen-remodel-planning-checklist.json";
 import bathroomPlanning from "./blog-content/bathroom-remodel-planning-guide.json";
 import contractorSelection from "./blog-content/choosing-remodeling-contractor-washington.json";
+import kitchenCostWashington from "./blog-content/kitchen-remodel-cost-washington-state.json";
 import estimatePreparation from "./blog-content/preparing-for-remodel-estimate.json";
 import cabinetStorage from "./blog-content/kitchen-cabinet-storage-planning.json";
 import bathroomLighting from "./blog-content/bathroom-lighting-planning.json";
@@ -34,6 +35,7 @@ export const blogPosts: BlogPost[] = [
   estimatePreparation, cabinetStorage, bathroomLighting, exteriorPreparation,
   deckPlanning, additionPlanning, materialSelections, livingDuringRemodel,
   paintingWeather, stainVersusPaint, kitchenPlanning, bathroomPlanning, contractorSelection,
+  kitchenCostWashington,
 ];
 
 const RELATED_ARTICLE_COUNT = 3;
