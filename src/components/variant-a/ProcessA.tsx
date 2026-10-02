@@ -10,6 +10,7 @@ export function ProcessA(): ReactElement {
         {[[1498,155],[169,403],[515,403],[861,403],[1207,422],[1497,560]].map(([cx,cy]) => <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r="6" />)}
       </svg>
       <ol data-motion-stagger>{PROCESS.steps.map(step => <li key={step.number}><p className="a-step-number">{step.number}</p><h3>{step.title}</h3><p className="a-step-body">{step.body}</p></li>)}</ol>
+      <p className="a-process-reassurance"><strong>You don’t need a perfect plan before you contact Tubro. We will help you figure out the next step!</strong></p>
     </section>
   );
 }

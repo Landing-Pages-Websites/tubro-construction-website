@@ -1,8 +1,8 @@
-import { HeroMotionInit } from "@/components/shared/HeroMotionInit";
-import { SiteMotion } from "@/components/shared/SiteMotion";
+import { HomepageMotion } from "@/components/variant-a/HomepageMotion";
 import type { Metadata } from "next";
 import type { ReactElement } from "react";
 import "./home.css";
+import "./home-motion.css";
 import { SiteFooter } from "@/components/shared/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { HeroA } from "@/components/variant-a/HeroA";
@@ -23,9 +23,8 @@ export const metadata: Metadata = {
 /** The customer-selected Direction A "Measured Living" homepage. */
 export default function HomePage(): ReactElement {
   return (
-    <div className="variant-a" data-motion-variant="a" suppressHydrationWarning>
-      <HeroMotionInit />
-      <SiteMotion variant="a" />
+    <div className="variant-a homepage-motion" data-motion-variant="a">
+      <HomepageMotion />
       <SiteHeader />
       <main>
         <HeroA />

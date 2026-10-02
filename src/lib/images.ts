@@ -1,4 +1,4 @@
-import heroKitchen from "../../public/images/projects/0125047_kitchen 01.jpg";
+import heroKitchen from "../../public/images/projects/lake-sawyer-kitchen.jpg";
 import roomsKitchen from "../../public/images/projects/0125065_kitchen 01.jpg";
 import roomsBathroom from "../../public/images/projects/0925012_bathroom 01.jpg";
 import capExteriorPaint from "../../public/images/projects/0426023_exterior paint 01.jpg";
@@ -17,7 +17,7 @@ export const IMAGES = {
   },
   hero: {
     src: heroKitchen,
-    alt: "Remodeled open kitchen with a large dark-countertop island, gray shaker cabinets, and wide-plank flooring",
+    alt: "Lake Sawyer kitchen with a wood island, white cabinetry, wood range hood, and lake views",
   },
   roomsKitchen: {
     src: roomsKitchen,

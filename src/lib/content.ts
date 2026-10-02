@@ -17,7 +17,7 @@ export const HERO = {
   eyebrow: "Residential remodeling across King & Pierce Counties",
   heading: "Built Around the Way You Want to Live",
   body: "Tubro Construction brings kitchens, bathrooms, additions, and whole-home renovations to life with clear pricing, careful craftsmanship, and an assigned project manager.",
-  primaryCta: "Schedule a Free Estimate",
+  primaryCta: "Book Your Free Estimate",
   secondaryCta: "Call 253-216-2633",
 } as const;
 
@@ -88,8 +88,8 @@ export const PROCESS = {
 } as const;
 
 export const WORK = {
-  heading: "See what we’ve built across western Washington.",
-  body: "Explore authentic completed-project photography and the existing RealWork Labs project and review experience where technically feasible.",
+  heading: "Real Projects. Real Homeowners. Real Tubro Results.",
+  body: "See the homes we have remodeled and hear from the homeowners who trusted Tubro with them.",
   cta: "View Recent Projects",
   photoLabel: "Authentic project photography",
 } as const;
@@ -97,7 +97,7 @@ export const WORK = {
 export const ESTIMATE = {
   heading: "Tell us what you’re planning.",
   body: "Request a free estimate and give the team enough detail to start a useful conversation.",
-  submitCta: "Schedule a Free Estimate",
+  submitCta: "Book Your Free Estimate",
   submittingCta: "Sending…",
 } as const;
 
