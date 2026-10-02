@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { MobileEstimateCta } from "@/components/shared/MobileEstimateCta";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { PostHogProvider } from "@/components/analytics/PostHogProvider";
+import { RecaptchaBootstrap } from "@/components/analytics/RecaptchaBootstrap";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -43,7 +44,7 @@ export default function RootLayout({
           defer
         />
       </head>
-      <body><GoogleAnalytics /><PostHogProvider><Suspense fallback={null}><MobileEstimateCta />{children}</Suspense></PostHogProvider></body>
+      <body><GoogleAnalytics /><RecaptchaBootstrap /><PostHogProvider><Suspense fallback={null}><MobileEstimateCta />{children}</Suspense></PostHogProvider></body>
     </html>
   );
 }
