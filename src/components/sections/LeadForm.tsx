@@ -6,6 +6,7 @@ import { useEstimateForm } from "@/hooks/useEstimateForm";
 import { defaultProjectType } from "@/lib/form-keys";
 import { EstimateField } from "@/components/shared/EstimateField";
 import { EstimateStatusNote } from "@/components/shared/EstimateStatusNote";
+import { RecaptchaWidget } from "@/components/shared/RecaptchaWidget";
 
 const FIELD_CLASSES =
   "w-full rounded-md border border-ink/25 bg-white px-3.5 py-2.5 font-poppins text-sm text-ink placeholder:text-ink/70 focus:border-action";
@@ -49,6 +50,7 @@ export function LeadForm({
 
   return (
     <form action="/api/lead" method="post" ref={form.formRef} onSubmit={form.handleSubmit}  aria-label={submitLabel}>
+      <input type="hidden" name="form_key" value={form.formKey} />
       {options.length > 0 && (
         <fieldset>
           <legend className={LABEL_CLASSES}>{withResume ? "Work area" : "Project type"}</legend>
@@ -193,6 +195,7 @@ export function LeadForm({
           </>
         )}
       </button>
+      <RecaptchaWidget ref={form.captchaRef} />
       <EstimateStatusNote errorNote={form.errorMessage}
         status={form.status}
         topic={withResume ? "application" : "estimate request"}

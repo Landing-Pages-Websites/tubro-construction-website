@@ -38,12 +38,3 @@ test("PostHog explicitly captures browser events after loading and navigation", 
   browser.window.location.href += "contact"; api.PostHogProvider({ children: "preserved SSR" }); effect(); await new Promise((resolve) => setTimeout(resolve, 10));
   assert.equal(captured.length, 2); assert.equal(captured[1][1].$current_url, "https://local.test/contact");
 });
-
-test("production client calls Enterprise execute with the provisioned key and lead_submit action", async () => {
-  let execution;
-  const enterprise = { ready: (callback) => callback(), execute: async (...args) => { execution = args; return "minted-local-test-token"; } };
-  const window = { grecaptcha: { enterprise }, setTimeout: (callback, delay) => { const timer = setTimeout(callback, delay); timer.unref(); return timer; }, clearTimeout };
-  const api = loadModule("src/lib/recaptcha-client.ts", { window, document: {}, process: { env: { NEXT_PUBLIC_RECAPTCHA_SITE_KEY: "configured-local-test-key" } } });
-  assert.equal(await api.mintCaptchaToken(), "minted-local-test-token");
-  assert.equal(execution[0], "configured-local-test-key"); assert.equal(execution[1].action, "lead_submit");
-});

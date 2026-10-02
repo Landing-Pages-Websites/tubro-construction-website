@@ -11,7 +11,10 @@ function boundary(env = previewEnv, assessment = {}) {
   const requests = [];
   const fetch = async (url, options) => {
     requests.push({ url, body: JSON.parse(options.body) });
-    if (url.startsWith("https://recaptchaenterprise.googleapis.com/")) return Response.json(assessment);
+    if (url.startsWith("https://recaptchaenterprise.googleapis.com/")) {
+      if (assessment instanceof Error) throw assessment;
+      return assessment instanceof Response ? assessment : Response.json(assessment);
+    }
     assert.equal(url, "https://analytics.gomega.ai/submission/submit");
     return Response.json({ ok: true });
   };
@@ -34,7 +37,7 @@ test("actual handler accepts sanctioned sentinel, fixes identity and sends canon
 test("actual handler rejects malformed, oversized, invalid, spoofed field and cross-origin requests before forwarding", async () => {
   const { post, requests } = boundary();
   for (const body of ["{", "null", "[]", '"string"', "x".repeat(25000)]) assert.equal((await post(body)).status, 400);
-  for (const fields of [{ phone: "55512" }, { email: "me@x" }, { consent: "yes" }, { consent: false }, { name: "" }, { projectDetails: " " }, { projectType: "" }, { projectType: "Invented option" }, { first_name: "duplicate" }, { projectCity: {} }]) {
+  for (const fields of [{ phone: "55512" }, { phone: "+1(757)6855050" }, { phone: "17576855050" }, { email: "me@x" }, { consent: "yes" }, { consent: false }, { name: "" }, { projectDetails: " " }, { projectType: "" }, { projectType: "Invented option" }, { first_name: "duplicate" }, { projectCity: {} }]) {
     assert.equal((await post({ ...valid, form_data: { ...valid.form_data, ...fields } })).status, 422);
   }
   assert.equal((await post(valid, previewHost, { Origin: "https://attacker.test" })).status, 403);
@@ -56,28 +59,4 @@ test("production assessment checks action, hostname and score; never accepts sen
     assert.equal((await api.post({ ...valid, captchaToken: "minted-test-token" }, "www.tubroconstruction.com")).status, 403);
     assert.equal(api.requests.length, 1);
   }
-});
-
-test("production fallback is unavailable without durable replay storage and signing configuration", async () => {
-  const { route } = boundary({ VERCEL_ENV: "production", RECAPTCHA_HOSTNAMES: "www.tubroconstruction.com", NEXT_PUBLIC_RECAPTCHA_SITE_KEY: "test-site-key" });
-  const response = await route.GET(new Request("https://www.tubroconstruction.com/api/lead"));
-  assert.equal(response.status, 503);
-});
-
-test("real proof fallback binds payload and rejects replay at the actual handler", async () => {
-  const { solveLeadProof } = await import("../src/lib/leadProof.ts");
-  const { route, post, requests } = boundary({ VERCEL_ENV: "development", NEXT_PUBLIC_RECAPTCHA_SITE_KEY: "local-enterprise-key" });
-  const issued = await route.GET(new Request("https://localhost/api/lead"));
-  assert.equal(issued.status, 200);
-  const challenge = await issued.json();
-  const { captchaToken: _token, ...payload } = valid;
-  const fields = { ...payload, ...challenge };
-  const powNonce = await solveLeadProof(fields, challenge.powIssuedAt);
-  const remainder = 800 - (Date.now() - Number(challenge.powIssuedAt));
-  if (remainder > 0) await new Promise((resolve) => setTimeout(resolve, remainder));
-  const proved = { ...fields, powNonce };
-  assert.equal((await post({ ...proved, form_data: { ...proved.form_data, name: "Changed payload" } }, "localhost")).status, 403);
-  assert.equal((await post(proved, "localhost")).status, 200);
-  assert.equal((await post(proved, "localhost")).status, 403);
-  assert.equal(requests.length, 1);
 });

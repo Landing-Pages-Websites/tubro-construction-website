@@ -1,4 +1,4 @@
-import { mintCaptchaToken } from "./recaptcha-client";
+import type { RecaptchaHandle } from "./recaptcha-client";
 import { solveLeadProof } from "./leadProof";
 import type { LeadFields } from "./lead-validation";
 
@@ -13,26 +13,33 @@ function collectTracking(): Record<string, string> {
   }));
 }
 
-async function verification(payload: Record<string, unknown>): Promise<Record<string, unknown>> {
-  try { return { captchaToken: await mintCaptchaToken() }; }
-  catch {
+async function fallbackProof(payload: Record<string, unknown>): Promise<Record<string, unknown>> {
+  try {
     const response = await fetch("/api/lead", { cache: "no-store", signal: AbortSignal.timeout(10000) });
     if (!response.ok) throw new Error("Verification couldn't load. Please try again or call our office.");
-    const challenge = await response.json() as { powIssuedAt: string; powChallenge: string; powSignature: string };
-    const fields = { ...payload, ...challenge };
-    const powNonce = await solveLeadProof(fields, challenge.powIssuedAt);
-    const remaining = 800 - (Date.now() - Number(challenge.powIssuedAt));
-    if (remaining > 0) await new Promise((resolve) => window.setTimeout(resolve, remaining));
-    return { ...challenge, powNonce };
-  }
+    const challenge = await response.json() as { issuedAt: string; powChallenge: string; powSignature: string };
+    if (typeof challenge.issuedAt !== "string" || !challenge.powChallenge || !challenge.powSignature) throw new Error("Verification couldn't load. Please retry.");
+    const proof = { powIssuedAt: challenge.issuedAt, powChallenge: challenge.powChallenge, powSignature: challenge.powSignature };
+    const powNonce = await solveLeadProof({ ...payload, ...proof }, proof.powIssuedAt);
+    return { ...proof, powNonce };
+  } catch { throw new Error("Verification couldn't finish. Please try again or call our office."); }
 }
 
-export async function postLead(formKey: string, fields: LeadFields, pageVariant: string): Promise<void> {
+async function send(payload: Record<string, unknown>): Promise<{ ok: boolean; verificationFailed: boolean; error?: string }> {
+  try {
+    const response = await fetch("/api/lead", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload), signal: AbortSignal.timeout(25000) });
+    const result = await response.json() as { ok?: boolean; error?: string; code?: string };
+    return { ok: response.ok && result.ok === true, verificationFailed: response.status === 403 && result.code === "verification_failed", error: result.error };
+  } catch { throw new Error("The connection failed. Please try again."); }
+}
+
+export async function postLead(formKey: string, fields: LeadFields, pageVariant: string, widget: RecaptchaHandle | null): Promise<void> {
   try {
     const payload = { form_key: formKey, form_data: { ...fields, pageVariant, ...collectTracking() } };
-    const proof = await verification(payload);
-    const response = await fetch("/api/lead", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...payload, ...proof }), signal: AbortSignal.timeout(25000) });
-    const result = await response.json() as { ok?: boolean; error?: string };
-    if (!response.ok || result.ok !== true) throw new Error(result.error || "We couldn't send your request. Please try again.");
+    const token = await widget?.getToken();
+    const verified = token ? { ...payload, captchaToken: token } : { ...payload, ...await fallbackProof(payload) };
+    let result = await send(verified);
+    if (token && result.verificationFailed) result = await send({ ...verified, ...await fallbackProof(verified) });
+    if (!result.ok) throw new Error(result.error || "We couldn't send your request. Please try again.");
   } catch (error) { throw error instanceof Error ? error : new Error("The connection failed. Please try again."); }
 }

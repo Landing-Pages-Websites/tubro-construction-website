@@ -1,12 +1,13 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { captchaMode, stagingTokenAccepted } from "../src/lib/lead-policy.ts";
-import { validateLeadFields } from "../src/lib/lead-validation.ts";
+import { validateLeadFields, PHONE_PATTERN, EMAIL_PATTERN } from "../src/lib/lead-validation.ts";
 import { createSubmissionLock } from "../src/lib/submission-lock.ts";
+import { loadModule } from "./module-loader.mjs";
 
 const sentinel = "recaptcha-staging-bypass-key";
 const preview = "tubro-construction-website-example-mega-websites.vercel.app";
-const valid = { name: "Local Test", email: "test@example.com", phone: "+1 (253) 216-2633", projectDetails: "Local intercepted test", projectType: "Kitchen", consent: true };
+const valid = { name: "Local Test", email: "test@example.com", phone: "(253) 216-2633", projectDetails: "Local intercepted test", projectType: "Kitchen", consent: true };
 
 test("staging requires sanctioned exact host, env and key", () => {
   const env = { VERCEL_ENV: "preview", VERCEL_URL: preview, NEXT_PUBLIC_RECAPTCHA_SITE_KEY: sentinel };
@@ -44,7 +45,22 @@ test("submission lock is synchronous and retains success, permits retry after fa
   lock.complete(); assert.equal(lock.acquire(), false); lock.release(); assert.equal(lock.acquire(), false);
 });
 
-const { issueChallenge, validChallenge, consumeChallenge } = await import("../src/lib/lead-challenge.ts");
+test("native v-mode and server patterns accept exactly ten digits and a letter TLD", () => {
+  const native = new RegExp(`^(?:${PHONE_PATTERN})$`, "v");
+  for (const phone of ["7576855050", "(757)6855050", "(757) 685-5050", "757.685.5050", "757 685 5050"]) {
+    assert.equal(native.test(phone), true, phone);
+    assert.equal(validateLeadFields({ ...valid, phone }).phone, undefined, phone);
+  }
+  for (const phone of ["+1(757)6855050", "+1 (757) 685-5050", "17576855050", "1 757 685 5050", "+17576855050", "757685505", "75768550500"]) {
+    assert.equal(native.test(phone), false, phone);
+    assert.ok(validateLeadFields({ ...valid, phone }).phone, phone);
+  }
+  const email = new RegExp(`^(?:${EMAIL_PATTERN})$`, "v");
+  assert.equal(email.test("test@example.co"), true);
+  for (const value of ["test@example.c", "test@example.12"]) assert.equal(email.test(value), false);
+});
+
+const { issueChallenge, validChallenge, consumeChallenge } = loadModule("src/lib/lead-challenge.ts", { process });
 test("fallback issuance is signed, host-bound, age-bound and consumed once", async () => {
   const now = 1_800_000_000_000;
   const challenge = issueChallenge("localhost", "local-test-secret", now);
@@ -52,11 +68,23 @@ test("fallback issuance is signed, host-bound, age-bound and consumed once", asy
   assert.equal(validChallenge(challenge, "attacker.test", "local-test-secret", now + 1000), false);
   assert.equal(validChallenge({ ...challenge, powIssuedAt: String(now + 1000) }, "localhost", "local-test-secret", now + 2000), false);
   assert.equal(validChallenge(challenge, "localhost", "wrong-test-secret", now + 1000), false);
-  assert.equal(validChallenge(challenge, "localhost", "local-test-secret", now), false);
+  assert.equal(validChallenge(challenge, "localhost", "local-test-secret", now), true);
   assert.equal(validChallenge(challenge, "localhost", "local-test-secret", now + 90_001), false);
   const previous = process.env.VERCEL_ENV;
   process.env.VERCEL_ENV = "development";
-  assert.equal(await consumeChallenge(challenge.powChallenge), true);
-  assert.equal(await consumeChallenge(challenge.powChallenge), false);
+  assert.equal(consumeChallenge(challenge.powChallenge, Date.now()), true);
+  assert.equal(consumeChallenge(challenge.powChallenge, Date.now()), false);
   if (previous === undefined) delete process.env.VERCEL_ENV; else process.env.VERCEL_ENV = previous;
+});
+
+test("replay guard stays bounded without forgetting fresh claims, including exact expiry", () => {
+  const { createProofReplayGuard, PROOF_MAX_AGE } = loadModule("src/lib/lead-proof-replay.ts");
+  const guard = createProofReplayGuard(2);
+  const now = 1_800_000_000_000;
+  assert.equal(guard.consume("one", now, now), "claimed");
+  assert.equal(guard.consume("two", now, now), "claimed");
+  assert.equal(guard.consume("three", now, now), "capacity");
+  assert.equal(guard.consume("one", now, now + PROOF_MAX_AGE), "replay");
+  assert.equal(guard.consume("three", now, now + PROOF_MAX_AGE), "capacity");
+  assert.equal(guard.consume("three", now + PROOF_MAX_AGE + 1, now + PROOF_MAX_AGE + 1), "claimed");
 });

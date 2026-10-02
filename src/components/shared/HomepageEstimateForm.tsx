@@ -6,6 +6,7 @@ import { ESTIMATE, PROJECT_TYPES } from "@/lib/content";
 import type { EstimateForm } from "@/hooks/useEstimateForm";
 import { EstimateField } from "./EstimateField";
 import { EstimateStatusNote } from "./EstimateStatusNote";
+import { RecaptchaWidget } from "./RecaptchaWidget";
 import styles from "./homepage-estimate-form.module.css";
 
 const FIELD_CLASSES =
@@ -27,6 +28,7 @@ export function HomepageEstimateForm({ form, idPrefix = "a", submitLabel = ESTIM
 
       className={`${styles.form} rounded-xl bg-white p-6 shadow-lg shadow-ink/10 sm:p-9`}
     >
+      <input type="hidden" name="form_key" value={form.formKey} />
       <fieldset>
         <legend className="font-fjalla text-sm tracking-[0.12em] text-ink uppercase">
           Project type
@@ -108,6 +110,7 @@ export function HomepageEstimateForm({ form, idPrefix = "a", submitLabel = ESTIM
         <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
       </button>
 
+      <RecaptchaWidget ref={form.captchaRef} />
       <EstimateStatusNote errorNote={form.errorMessage} status={form.status} />
     </form>
   );

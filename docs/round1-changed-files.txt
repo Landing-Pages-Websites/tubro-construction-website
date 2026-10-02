@@ -262,6 +262,7 @@ src/components/shared/EstimateField.tsx
 src/components/shared/EstimateStatusNote.tsx
 src/components/shared/HomepageEstimateForm.tsx
 src/components/shared/MobileEstimateCta.tsx
+src/components/shared/RecaptchaWidget.tsx
 src/components/shared/SiteFooter.tsx
 src/components/shared/SiteMotion.tsx
 src/components/shared/homepage-estimate-form.module.css
@@ -278,14 +279,19 @@ src/lib/estimate-fields.ts
 src/lib/lead-challenge.ts
 src/lib/lead-client.ts
 src/lib/lead-policy.ts
+src/lib/lead-proof-replay.ts
 src/lib/lead-server.ts
 src/lib/lead-validation.ts
 src/lib/leadProof.ts
 src/lib/recaptcha-client.ts
+src/lib/recaptcha-loader.ts
 src/lib/seo.ts
 src/lib/submission-lock.ts
 tests/analytics-captcha.test.mjs
+tests/lead-client.test.mjs
+tests/lead-fallback.test.mjs
 tests/lead-route.test.mjs
 tests/lead-security.test.mjs
 tests/migration-identity.test.mjs
 tests/module-loader.mjs
+tests/recaptcha-widget.test.mjs

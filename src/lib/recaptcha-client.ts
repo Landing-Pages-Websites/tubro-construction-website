@@ -1,42 +1,72 @@
 import { STAGING_SENTINEL } from "./lead-policy";
+import { loadRecaptcha, RECAPTCHA_SITE_KEY, type Enterprise } from "./recaptcha-loader";
 
-type Enterprise = { ready: (callback: () => void) => void; execute: (key: string, options: { action: string }) => Promise<string> };
-declare global { interface Window { grecaptcha?: { enterprise?: Enterprise }; } }
-const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
-const LOAD_TIMEOUT = 10_000;
-let loading: Promise<Enterprise> | undefined;
+export type RecaptchaHandle = { getToken: () => Promise<string | null>; reset: () => void };
+type Widget = RecaptchaHandle & { prepare: () => Promise<void>; dispose: () => void };
+type WidgetState = {
+  container: HTMLElement; id: number | null; api?: Enterprise; disposed: boolean;
+  onReady: (ready: boolean) => void; preparing?: Promise<void>; reject?: () => void;
+};
+const ACTION = "lead_submit";
+const EXECUTE_TIMEOUT = 30_000;
 
-function enterpriseLoader(): Promise<Enterprise> {
-  return new Promise((resolve, reject) => {
-    if (!SITE_KEY || SITE_KEY === STAGING_SENTINEL) { reject(new Error("Enterprise verification is not configured.")); return; }
-    const timeout = window.setTimeout(() => reject(new Error("Verification timed out. Please try again.")), LOAD_TIMEOUT);
-    const ready = (): void => {
-      const enterprise = window.grecaptcha?.enterprise;
-      if (!enterprise) return;
-      enterprise.ready(() => { window.clearTimeout(timeout); resolve(enterprise); });
-    };
-    if (window.grecaptcha?.enterprise) { ready(); return; }
-    const script = document.createElement("script");
-    script.id = "tubro-recaptcha-enterprise";
-    script.src = `https://www.google.com/recaptcha/enterprise.js?render=${encodeURIComponent(SITE_KEY)}`;
-    script.async = true;
-    script.onload = ready;
-    script.onerror = () => { window.clearTimeout(timeout); script.remove(); reject(new Error("Verification couldn't load.")); };
-    document.head.appendChild(script);
-  });
+function unavailable(state: WidgetState): void {
+  state.reject?.();
+  if (!state.disposed) state.onReady(false);
 }
 
-export async function loadRecaptcha(): Promise<Enterprise> {
-  try { loading ??= enterpriseLoader(); return await loading; }
-  catch (error) { loading = undefined; document.getElementById("tubro-recaptcha-enterprise")?.remove(); throw error; }
-}
-
-export async function mintCaptchaToken(): Promise<string> {
-  if (SITE_KEY === STAGING_SENTINEL) return STAGING_SENTINEL;
+async function renderWidget(state: WidgetState): Promise<void> {
   try {
-    const enterprise = await loadRecaptcha();
-    const token = await Promise.race([enterprise.execute(SITE_KEY, { action: "lead_submit" }), new Promise<never>((_, reject) => window.setTimeout(() => reject(new Error("Verification timed out.")), LOAD_TIMEOUT))]);
-    if (!token) throw new Error("Verification returned no token.");
+    if (RECAPTCHA_SITE_KEY === STAGING_SENTINEL) { state.onReady(true); return; }
+    const api = await loadRecaptcha();
+    if (state.disposed || !state.container.isConnected) return;
+    state.api = api;
+    let failed = false;
+    const fail = (): void => { failed = true; unavailable(state); };
+    state.id = api.render(state.container, { sitekey: RECAPTCHA_SITE_KEY, size: "invisible", action: ACTION, "error-callback": fail, "expired-callback": fail });
+    state.onReady(!failed);
+  } catch { unavailable(state); }
+}
+
+async function prepareWidget(state: WidgetState): Promise<void> {
+  if (state.disposed || state.id !== null) return;
+  try { state.preparing ??= renderWidget(state); await state.preparing; }
+  catch { unavailable(state); }
+  finally { state.preparing = undefined; }
+}
+
+function resetWidget(state: WidgetState): void {
+  try { if (state.id !== null) state.api?.reset(state.id); }
+  catch { unavailable(state); }
+}
+
+async function getToken(state: WidgetState): Promise<string | null> {
+  if (state.disposed) return null;
+  if (RECAPTCHA_SITE_KEY === STAGING_SENTINEL) return STAGING_SENTINEL;
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  try {
+    await prepareWidget(state);
+    if (state.disposed || !state.container.isConnected || state.id === null || !state.api) return null;
+    state.api.reset(state.id);
+    const failed = new Promise<never>((_, reject) => {
+      state.reject = () => reject(new Error("Verification couldn't finish."));
+      timer = setTimeout(state.reject, EXECUTE_TIMEOUT);
+    });
+    const token = await Promise.race([state.api.execute(state.id, { action: ACTION }), failed]);
+    if (!token || state.disposed) return null;
+    state.onReady(true);
     return token;
-  } catch { throw new Error("Verification is unavailable. Trying the secure fallback."); }
+  } catch { unavailable(state); return null; }
+  finally { clearTimeout(timer); state.reject = undefined; }
+}
+
+/** One explicit invisible widget per mounted form; preparation never mints a token. */
+export function createRecaptchaWidget(container: HTMLElement, onReady: (ready: boolean) => void = () => {}): Widget {
+  const state: WidgetState = { container, id: null, disposed: false, onReady };
+  return {
+    prepare: () => prepareWidget(state),
+    getToken: () => getToken(state),
+    reset: () => resetWidget(state),
+    dispose: () => { state.disposed = true; state.reject?.(); resetWidget(state); state.id = null; },
+  };
 }

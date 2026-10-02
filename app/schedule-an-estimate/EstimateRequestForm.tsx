@@ -7,6 +7,7 @@ import { useEstimateForm } from "@/hooks/useEstimateForm";
 import { formKeyForSlug } from "@/lib/form-keys";
 import { EstimateField } from "@/components/shared/EstimateField";
 import { EstimateStatusNote } from "@/components/shared/EstimateStatusNote";
+import { RecaptchaWidget } from "@/components/shared/RecaptchaWidget";
 import EstimateProjectChoices from "./EstimateProjectChoices";
 import EstimateContactFields from "./EstimateContactFields";
 import s from "./estimate.module.css";
@@ -17,6 +18,7 @@ export default function EstimateRequestForm(): ReactElement {
   return <section id="form" className={s.formPanel} aria-labelledby="request-heading">
     <header className={s.formHeading}><h2 id="request-heading">Tell us what you’re planning.</h2><p>A few details are all we need to start the conversation.</p></header>
     <form action="/api/lead" method="post" ref={form.formRef} onSubmit={form.handleSubmit}  aria-label="Request a free estimate" aria-busy={busy}>
+      <input type="hidden" name="form_key" value={form.formKey} />
       <fieldset className={s.formContents} disabled={busy || form.status === "success"}>
         <EstimateProjectChoices />
         {form.errors.projectType && <p role="alert" className={s.error}>{form.errors.projectType}</p>}
@@ -30,6 +32,7 @@ export default function EstimateRequestForm(): ReactElement {
         {form.errors.consent && <p id="estimate-consent-error" className={s.error}>{form.errors.consent}</p>}
         <button type="button" className={s.submit} onClick={form.validateAndSubmit} disabled={busy || form.status === "success"}>{busy ? <>Sending your request <Loader2 className={s.spinner} size={19} /></> : <>Request my free estimate <ArrowUpRight size={21} /></>}</button>
       </fieldset>
+      <RecaptchaWidget ref={form.captchaRef} />
       <EstimateStatusNote errorNote={form.errorMessage} status={form.status} idleNote="Your request goes to our office team. We’ll follow up during business hours." />
       <p className={s.privacy}>Learn how we handle your information. <Link href="/privacy">Privacy policy</Link></p>
     </form>

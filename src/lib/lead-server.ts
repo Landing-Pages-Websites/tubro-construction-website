@@ -7,6 +7,9 @@ import { SITE_ROUTES } from "./routes";
 import { formKeyForSlug } from "./form-keys";
 
 export type LeadPayload = { form_key: string; form_data: Record<string, unknown>; [key: string]: unknown };
+export type LeadAuthorization = { ok: false } | { ok: true; spamCheck: string | null };
+const SPAM_CHECK_RECAPTCHA = "Passed reCAPTCHA";
+const SPAM_CHECK_FALLBACK = "Unverified: reCAPTCHA did not pass; passed fallback check";
 const MAX_BODY_BYTES = 24_000;
 const CAREER_TYPES = ["Carpentry", "Project support", "Painting", "General construction", "Other"];
 const NO_CONSENT_KEYS = new Set(["homepage_estimate", "estimate_bathroom_remodeling"]);
@@ -65,18 +68,22 @@ async function enterpriseAuthorized(token: string, hostname: string): Promise<bo
   } catch { return false; }
 }
 
-export async function authorizeLead(body: LeadPayload, host: string): Promise<boolean> {
+export async function authorizeLead(body: LeadPayload, host: string): Promise<LeadAuthorization> {
   try {
     const mode = captchaMode(host, process.env);
-    if (mode === "denied") return false;
-    if (mode === "staging") return stagingTokenAccepted(mode, body.captchaToken);
-    if (body.captchaToken) return typeof body.captchaToken === "string" && await enterpriseAuthorized(body.captchaToken, host);
-    if (!proofAvailable() || !validChallenge(body, host) || !await verifyLeadProof(body)) return false;
-    return consumeChallenge(String(body.powChallenge));
-  } catch { return false; }
+    if (mode === "denied") return { ok: false };
+    if (mode === "staging") return stagingTokenAccepted(mode, body.captchaToken) ? { ok: true, spamCheck: null } : { ok: false };
+    if (!process.env.RECAPTCHA_PROJECT_ID || !process.env.RECAPTCHA_API_KEY) return { ok: false };
+    if (typeof body.captchaToken === "string" && await enterpriseAuthorized(body.captchaToken, host)) return { ok: true, spamCheck: SPAM_CHECK_RECAPTCHA };
+    if (!proofAvailable() || !validChallenge(body, host) || !await verifyLeadProof(body)) return { ok: false };
+    if (!consumeChallenge(String(body.powChallenge), Number(body.powIssuedAt))) return { ok: false };
+    return { ok: true, spamCheck: SPAM_CHECK_FALLBACK };
+  } catch { return { ok: false }; }
 }
 
-export function upstreamPayload(body: LeadPayload): Record<string, unknown> {
+export function upstreamPayload(body: LeadPayload, spamCheck: string | null): Record<string, unknown> {
   const formData = Object.fromEntries(FIELD_KEYS.filter((key) => body.form_data[key] !== undefined).map((key) => [key, body.form_data[key]]));
+  formData.phone = String(formData.phone).replace(/\D/g, "");
+  if (spamCheck) formData.spamCheck = spamCheck;
   return { form_key: body.form_key, form_data: formData, customer_id: "b002784f-9543-4362-8814-b7da19078f23", site_id: "f28d515e-437b-4f9b-96c4-bc1a79a3357c", source_provider: "website-tubroconstruction" };
 }
