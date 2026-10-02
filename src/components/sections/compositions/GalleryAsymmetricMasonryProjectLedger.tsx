@@ -96,7 +96,7 @@ export function GalleryAsymmetricMasonryProjectLedger({
           <Eyebrow tone={tone}>{section.content.eyebrow}</Eyebrow>
           <span
             aria-hidden="true"
-            className={`font-fjalla text-xs tracking-[0.12em] uppercase ${dark ? "text-white/70" : "text-ink/60"}`}
+            className={`font-fjalla text-sm tracking-[0.12em] uppercase ${dark ? "text-white/70" : "text-ink/70"}`}
           >
             Project Ledger
           </span>

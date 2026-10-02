@@ -20,9 +20,9 @@ export default function Page(): ReactElement {
   return (
     <div className={styles.page} data-motion-variant="a" data-service-area-page>
       <AreaMotion />
-      <a className={styles.skipLink} href="#city-directory">Skip to service cities</a>
+
       <SiteHeader />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <AreaHero />
         <AreaCoverage />
         <AreaDirectory />

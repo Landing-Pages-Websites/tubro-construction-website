@@ -33,7 +33,7 @@ export function HeroPublicationIndex({
         </div>
         <div className="border border-ink/10 bg-white px-6 pb-10 shadow-md shadow-ink/5 sm:px-8">
           <span aria-hidden="true" className="block h-0.5 bg-action" />
-          <p className="mt-5 font-fjalla text-xs uppercase tracking-[0.12em] text-action-deep">Index</p>
+          <p className="mt-5 font-fjalla text-sm uppercase tracking-[0.12em] text-action-deep">Index</p>
           <ol className="mt-4">
             {section.content.items.map((item, index) => (
               <li key={item} className="flex items-center gap-4 border-t border-ink/15 py-6 sm:gap-5">

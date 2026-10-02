@@ -17,7 +17,7 @@
   border-top: 1px solid #ffffff38;
   padding-top: 18px;
   margin-bottom: 44px;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.7;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -30,15 +30,15 @@
   align-items: start;
 }
 .intro { grid-column: 1 / 6; grid-row: 1; padding: 22px 18px 40px 0; }
-.eyebrow { display: flex; align-items: center; gap: 12px; font-size: 12px; text-transform: uppercase; letter-spacing: .14em; color: #b9d7ae; }
+.eyebrow { display: flex; align-items: center; gap: 12px; font-size: 14px; text-transform: uppercase; letter-spacing: .14em; color: #b9d7ae; }
 .eyebrow::before { content: ""; width: 26px; height: 3px; background: #b9d7ae; }
 .heading { margin-top: 22px; font-family: var(--font-fjalla), sans-serif; font-size: clamp(36px, 4vw, 56px); line-height: 1.12; letter-spacing: -.025em; text-wrap: balance; }
 .body { max-width: 38ch; margin-top: 24px; font-size: 16px; line-height: 1.8; color: #ffffffb8; }
 .cta { margin-top: 28px; }
 .photo { min-width: 0; margin: 0; }
 .frame { width: 100%; aspect-ratio: 4 / 3; background: #ffffff12; }
-.caption { display: flex; align-items: baseline; gap: 12px; padding-top: 14px; font-size: 12px; line-height: 1.6; }
-.number { font-size: 10px; color: #b9d7ae; font-variant-numeric: tabular-nums; }
+.caption { display: flex; align-items: baseline; gap: 12px; padding-top: 14px; font-size: 14px; line-height: 1.6; }
+.number { font-size: 14px; color: #b9d7ae; font-variant-numeric: tabular-nums; }
 .captionLine { height: 1px; background: #ffffff30; flex: 1; align-self: center; }
 .photo1 { grid-column: 6 / 13; grid-row: 1; padding-top: 10px; }
 .photo1 .frame { aspect-ratio: 6 / 5; }
@@ -58,7 +58,7 @@
 .chips i { flex: 1; background: #64745e; }
 .chips i:nth-child(2) { background: #eae5d8; }
 .chips i:nth-child(3) { background: #9b6d4c; }
-.swatch small { font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+.swatch small { font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
 .links { border-top: 1px solid #ffffff30; margin-top: 40px; padding-top: 24px; }
 @media (max-width: 1023px) {
   .measure { left: -26px; }
@@ -87,7 +87,7 @@
   .photo3 .frame { aspect-ratio: 4 / 5; }
   .photo4 { margin-top: -4px; }
   .photo5 { margin-top: 18px; }
-  .caption { gap: 7px; font-size: 11px; padding-top: 10px; }
+  .caption { gap: 7px; font-size: 14px; padding-top: 10px; }
   .captionLine { display: none; }
   .swatch { grid-column: 1 / -1; grid-row: auto; margin: 8px 8px 0; padding: 22px; }
   .swatch > span br { display: none; }

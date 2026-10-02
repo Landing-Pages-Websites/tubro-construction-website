@@ -25,7 +25,7 @@ export default function Page(): ReactElement {
       <SiteMotion variant="a" />
       <CustomHomeMotion />
       <SiteHeader />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <CustomHomeHero section={hero} images={resolveSectionImages(SLUG, hero)} />
         <CustomHomePlanning section={planning} />
         <CustomHomeProcess section={process} />

@@ -37,7 +37,7 @@ function observeMotion(root: HTMLElement): () => void {
 
 export default function BlogMotion(): null {
   useEffect(() => {
-    const root = document.getElementById("blog-content");
+    const root = document.getElementById("main-content");
     if (!root || !window.IntersectionObserver || !Element.prototype.animate) return;
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     let cleanup = (): void => {};

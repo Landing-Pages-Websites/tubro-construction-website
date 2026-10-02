@@ -29,7 +29,7 @@ export function BathroomPlanning({ section, images, band, links, isFirst }: Sect
           {photo && (
             <figure className="min-w-0">
               <DesignImage image={photo} withTab={false} frameClassName="aspect-[4/3] sm:aspect-[6/5] lg:aspect-auto lg:h-[490px]" sizes="(min-width: 1280px) 620px, (min-width: 1024px) 50vw, 100vw" />
-              <figcaption className="flex flex-wrap justify-between gap-x-4 gap-y-2 border-b border-ink/15 py-4 text-xs leading-5 text-ink/70">
+              <figcaption className="flex flex-wrap justify-between gap-x-4 gap-y-2 border-b border-ink/15 py-4 text-sm leading-5 text-ink/70">
                 <span>{photo.label}</span>
                 <span>Bathroom remodeling</span>
               </figcaption>

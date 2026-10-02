@@ -55,7 +55,7 @@ export function SiteHeader(): ReactElement {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="block px-4 py-2.5 font-poppins text-sm text-ink/85 hover:bg-sage hover:text-ink"
+                    className="flex min-h-11 items-center px-4 py-2.5 font-poppins text-sm text-ink/85 hover:bg-sage hover:text-ink"
                   >
                     {item.label}
                   </Link>
@@ -99,11 +99,11 @@ export function SiteHeader(): ReactElement {
               onClick={closeOnLinkClick}
               className="absolute inset-x-0 top-full max-h-[calc(100vh-56px)] overflow-y-auto border-b border-ink/10 bg-white px-5 pb-6 pt-3 shadow-lg shadow-ink/10"
             >
-              <p className="pt-2 font-fjalla text-[11px] uppercase tracking-[0.12em] text-action-deep">Services</p>
+              <p className="pt-2 font-fjalla text-sm uppercase tracking-[0.12em] text-action-deep">Services</p>
               <ul className="mt-1 border-b border-ink/10 pb-3">
                 {NAV_SERVICES.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className="block py-2.5 font-poppins text-[15px] font-medium text-ink">
+                    <Link href={item.href} className="flex min-h-11 items-center py-2.5 font-poppins text-[15px] font-medium text-ink">
                       {item.label}
                     </Link>
                   </li>
@@ -112,13 +112,13 @@ export function SiteHeader(): ReactElement {
               <ul className="mt-2">
                 {NAV_COMPANY.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className="block py-2.5 font-poppins text-[15px] font-medium text-ink">
+                    <Link href={item.href} className="flex min-h-11 items-center py-2.5 font-poppins text-[15px] font-medium text-ink">
                       {item.label}
                     </Link>
                   </li>
                 ))}
                 <li>
-                  <Link href="/careers" className="block py-2.5 font-poppins text-[15px] font-medium text-ink">
+                  <Link href="/careers" className="flex min-h-11 items-center py-2.5 font-poppins text-[15px] font-medium text-ink">
                     Careers
                   </Link>
                 </li>

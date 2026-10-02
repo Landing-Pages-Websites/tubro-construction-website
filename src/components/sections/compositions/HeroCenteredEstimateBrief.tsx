@@ -21,7 +21,7 @@ function RulerStrip(): ReactElement {
           <span key={index} className={`w-px bg-ink/70 ${index % 4 === 0 ? "h-3" : "h-1.5"}`} />
         ))}
       </div>
-      <div className="flex justify-between px-4 font-fjalla text-[10px] leading-none text-ink/70">
+      <div className="flex justify-between px-4 font-fjalla text-sm leading-none text-ink/70">
         {Array.from({ length: RULER_UNITS }, (_, index) => (
           <span key={index}>{index + 1}</span>
         ))}
