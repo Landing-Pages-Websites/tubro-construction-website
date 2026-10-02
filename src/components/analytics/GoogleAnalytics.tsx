@@ -1,35 +1,33 @@
 "use client";
 
 import { useEffect } from "react";
-import { scheduleWhenIdle } from "./scheduleWhenIdle";
+import { usePathname } from "next/navigation";
+import type {} from "@/lib/lead-client";
+let lastLocation = "";
 
-let configured = false;
-
-function queueGoogleAnalytics(id: string): void {
-  const w = window as typeof window & { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void };
-  w.dataLayer = w.dataLayer ?? [];
-  w.gtag = w.gtag ?? ((...args: unknown[]) => w.dataLayer?.push(args));
-  if (configured) return;
-  w.gtag("js", new Date());
-  w.gtag("config", id);
-  configured = true;
-}
-
-function loadGoogleAnalytics(id: string): void {
-  if (document.querySelector(`script[data-ga4="${id}"]`)) return;
+function initialize(id: string): void {
+  if (document.querySelector('script[data-tubro-ga4]')) return;
+  window.dataLayer ??= [];
+  // Google's official forwarding contract requires an Arguments object.
+  window.gtag = function (): void { window.dataLayer?.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", id, { send_page_view: false });
   const script = document.createElement("script");
-  script.async = true;
-  script.dataset.ga4 = id;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+  script.async = true; script.dataset.tubroGa4 = id;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
   document.head.appendChild(script);
 }
 
 export function GoogleAnalytics(): null {
+  const pathname = usePathname();
   useEffect(() => {
     const id = process.env.NEXT_PUBLIC_GA4_ID;
-    if (!id || document.querySelector(`script[data-ga4="${id}"]`)) return;
-    queueGoogleAnalytics(id);
-    return scheduleWhenIdle(() => loadGoogleAnalytics(id));
-  }, []);
+    if (!id || new URLSearchParams(window.location.search).get("embed") === "realwork") return;
+    initialize(id);
+    const location = window.location.href;
+    if (location === lastLocation) return;
+    lastLocation = location;
+    window.gtag?.("event", "page_view", { send_to: id, page_location: location, page_title: document.title });
+  }, [pathname]);
   return null;
 }

@@ -6,4 +6,4 @@
 .form > div { margin-top: 14px; }
 .form > button { margin-top: 20px; border-radius: 2px; box-shadow: none; font-size: clamp(16px, 1.3vw, 20px); }
 @media (max-width: 1023px) { .form { padding: 22px; } }
-@media (max-width: 767px) { .form { padding: 22px 18px; } .form fieldset label span { font-size: 12px; } .form > button { font-size: 16px; } .form > div { gap: 12px; } }
+@media (max-width: 767px) { .form { padding: 22px 18px; } .form fieldset label span { font-size: 14px; } .form > button { font-size: 16px; } .form > div { gap: 12px; } }

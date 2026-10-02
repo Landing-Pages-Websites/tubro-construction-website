@@ -44,25 +44,25 @@ export function EstimateA(): ReactElement {
           <ul className="mt-12 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-ink/15 pt-8 lg:grid-cols-4 lg:gap-x-5">
             <li>
               <MapPin className="size-5 text-action" aria-hidden="true" />
-              <h3 className="mt-2.5 font-fjalla text-[11px] tracking-[0.08em] text-ink uppercase">Service area</h3>
-              <p className="mt-1.5 font-fjalla text-xs leading-relaxed text-ink/70">{BRAND.serviceArea}</p>
+              <h3 className="mt-2.5 font-fjalla text-sm tracking-[0.08em] text-ink uppercase">Service area</h3>
+              <p className="mt-1.5 font-fjalla text-sm leading-relaxed text-ink/70">{BRAND.serviceArea}</p>
             </li>
             <li>
               <Clock className="size-5 text-action" aria-hidden="true" />
-              <h3 className="mt-2.5 font-fjalla text-[11px] tracking-[0.08em] text-ink uppercase">Hours</h3>
-              <p className="mt-1.5 font-fjalla text-xs leading-relaxed text-ink/70">{BRAND.hours}</p>
+              <h3 className="mt-2.5 font-fjalla text-sm tracking-[0.08em] text-ink uppercase">Hours</h3>
+              <p className="mt-1.5 font-fjalla text-sm leading-relaxed text-ink/70">{BRAND.hours}</p>
             </li>
             <li>
               <Shield className="size-5 text-action" aria-hidden="true" />
-              <h3 className="mt-2.5 font-fjalla text-[11px] tracking-[0.08em] text-ink uppercase">
+              <h3 className="mt-2.5 font-fjalla text-sm tracking-[0.08em] text-ink uppercase">
                 Military &amp; first responder discount
               </h3>
-              <p className="mt-1.5 font-fjalla text-xs leading-relaxed text-ink/70">{BRAND.discount}</p>
+              <p className="mt-1.5 font-fjalla text-sm leading-relaxed text-ink/70">{BRAND.discount}</p>
             </li>
             <li>
               <HardHat className="size-5 text-action" aria-hidden="true" />
-              <h3 className="mt-2.5 font-fjalla text-[11px] tracking-[0.08em] text-ink uppercase">Careers</h3>
-              <p className="mt-1.5 font-fjalla text-xs leading-relaxed text-ink/70">
+              <h3 className="mt-2.5 font-fjalla text-sm tracking-[0.08em] text-ink uppercase">Careers</h3>
+              <p className="mt-1.5 font-fjalla text-sm leading-relaxed text-ink/70">
                 {BRAND.careersNote}{" "}
                 <a href={`mailto:${BRAND.email}`} className="text-action-deep underline underline-offset-2">
                   {BRAND.emailUser}@<wbr />

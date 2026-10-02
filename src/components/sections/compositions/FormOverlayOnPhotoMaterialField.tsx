@@ -85,7 +85,7 @@ export function FormOverlayOnPhotoMaterialField({
               />
               <SectionIntro section={section} headingId={headingId} as={isFirst ? "h1" : "h2"} size="quiet" />
               {primaryLabel && (
-                <span className="mt-7 hidden border border-action bg-white px-2.5 py-1 font-poppins text-xs font-semibold text-action-deep lg:inline-flex">
+                <span className="mt-7 hidden border border-action bg-white px-2.5 py-1 font-poppins text-sm font-semibold text-action-deep lg:inline-flex">
                   {primaryLabel}
                 </span>
               )}

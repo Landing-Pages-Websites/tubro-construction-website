@@ -34,7 +34,7 @@ function BathroomCollage({ images }: { images: SectionImage[] }): ReactElement {
               : "(min-width: 1280px) 327px, (min-width: 1024px) 27vw, 50vw"}
             withTab={false}
           />
-          <figcaption className="mt-3 font-poppins text-xs leading-5 font-semibold text-action-deep sm:text-sm">
+          <figcaption className="mt-3 font-poppins text-sm leading-5 font-semibold text-action-deep sm:text-sm">
             {image.label}
           </figcaption>
         </figure>
@@ -64,7 +64,7 @@ function FilmstripBand({ images, dark }: FilmstripBandProps): ReactElement {
           </div>
           <p
             aria-hidden="true"
-            className="mt-2 font-fjalla text-xs tracking-[0.12em] uppercase text-white/80"
+            className="mt-2 font-fjalla text-sm tracking-[0.12em] uppercase text-white/80"
           >
             Frame {String(index + 1).padStart(2, "0")}
           </p>

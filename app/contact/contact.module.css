@@ -1,7 +1,7 @@
 .site { background: var(--color-plaster); color: var(--color-ink); }
 .page { max-width: 1600px; margin-inline: auto; }
 .desk { padding: 48px clamp(24px, 5vw, 80px) 24px; }
-.topline, .bottomline { display: flex; justify-content: space-between; gap: 24px; font-family: var(--font-fjalla), sans-serif; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.topline, .bottomline { display: flex; justify-content: space-between; gap: 24px; font-family: var(--font-fjalla), sans-serif; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
 .topline { border-top: 2px solid var(--color-action); padding-top: 15px; color: var(--color-action-deep); }
 .topline > :last-child { color: #686760; }
 .layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 100px); padding-block: 42px 48px; align-items: start; }
@@ -11,14 +11,14 @@
 .description { max-width: 390px; margin-top: 26px; font-size: 16px; line-height: 1.85; color: #595750; }
 .contacts { margin-top: 38px; }
 .contacts a { display: block; padding: 19px 0; border-top: 1px solid #cccac1; text-decoration: none; }
-.label { display: block; font-family: var(--font-fjalla), sans-serif; font-size: 12px; line-height: 1.5; letter-spacing: .1em; text-transform: uppercase; color: var(--color-action-deep); }
+.label { display: block; font-family: var(--font-fjalla), sans-serif; font-size: 14px; line-height: 1.5; letter-spacing: .1em; text-transform: uppercase; color: var(--color-action-deep); }
 .contacts a > :last-child { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 8px; }
 .phone > :last-child { font-size: clamp(25px, 2.6vw, 38px); font-weight: 500; letter-spacing: -.045em; }
-.email > :last-child { font-size: clamp(13px, 1.35vw, 20px); overflow-wrap: anywhere; letter-spacing: -.03em; }
+.email > :last-child { font-size: clamp(14px, 1.35vw, 20px); overflow-wrap: anywhere; letter-spacing: -.03em; }
 .contacts svg { width: 23px; height: 23px; flex-shrink: 0; color: var(--color-action-deep); }
 .note { display: flex; gap: 18px; margin-top: 40px; padding-top: 20px; border-top: 1px solid #cccac1; }
 .noteNumber { flex-shrink: 0; font-family: var(--font-fjalla), sans-serif; color: var(--color-action-deep); }
-.note p { max-width: 330px; font-size: 13px; line-height: 1.8; color: #686760; }
+.note p { max-width: 330px; font-size: 14px; line-height: 1.8; color: #686760; }
 .noteCopy p + p { margin-top: 12px; }
 .noteCopy strong { color: var(--color-ink); font-weight: 600; }
 .noteCopy a { color: var(--color-action-deep); text-decoration: underline; text-underline-offset: 3px; }
@@ -27,30 +27,30 @@
 .formHeading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .formHeading > :last-child { font-size: 28px; line-height: 1; color: var(--color-action-deep); }
 .formPanel h2 { margin-top: 15px; font-size: clamp(24px, 2.2vw, 32px); font-weight: 600; line-height: 1.2; letter-spacing: -.045em; }
-.formDescription { margin-top: 12px; margin-bottom: 27px; font-size: 13px; line-height: 1.7; color: #686760; }
+.formDescription { margin-top: 12px; margin-bottom: 27px; font-size: 14px; line-height: 1.7; color: #686760; }
 .formPanel form fieldset > div { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
-.formPanel form fieldset label { border-bottom: 1px solid #e8e7df; font-size: 12px; line-height: 1.6; }
+.formPanel form fieldset label { border-bottom: 1px solid #e8e7df; font-size: 14px; line-height: 1.6; }
 .formPanel form fieldset label:last-child { grid-column: 1 / -1; border: 0; }
 .formPanel form input:not([type='radio']):not([type='checkbox']), .formPanel textarea { border-radius: 2px; min-height: 44px; background: #fcfcf9; }
 .formPanel textarea { min-height: 95px; }
 .formPanel form button { width: 100%; border-radius: 2px; box-shadow: none; }
-.bottomline { border-top: 1px solid #cccac1; padding-top: 18px; color: #686760; font-size: 11px; }
+.bottomline { border-top: 1px solid #cccac1; padding-top: 18px; color: #686760; font-size: 14px; }
 .details { display: grid; grid-template-columns: .85fr 1.2fr 1fr; gap: 30px; padding: 43px clamp(24px, 5vw, 80px); margin-top: 24px; background: var(--color-sage); }
 .detail { display: flex; gap: 15px; }
 .detail + .detail { border-left: 1px solid #bcccbc; padding-left: 30px; }
 .detail > svg { flex-shrink: 0; width: 21px; height: 21px; color: var(--color-action-deep); stroke-width: 1.5; }
 .detail h2 { font-size: 14px; font-weight: 600; line-height: 1.5; }
-.detail p { margin-top: 10px; font-size: 13px; line-height: 1.85; color: #595e56; }
-.detail a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 5px; font-size: 12px; font-weight: 500; color: var(--color-action-deep); text-decoration: underline; text-underline-offset: 4px; }
+.detail p { margin-top: 10px; font-size: 14px; line-height: 1.85; color: #595e56; }
+.detail a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 5px; font-size: 14px; font-weight: 500; color: var(--color-action-deep); text-decoration: underline; text-underline-offset: 4px; }
 .detail a svg { width: 15px; height: 15px; }
 .next { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; padding: 65px clamp(24px, 5vw, 80px) 75px; }
 .next h2 { font-size: clamp(28px, 3vw, 42px); font-weight: 600; letter-spacing: -.05em; line-height: 1.2; margin-top: 16px; }
 .nextLinks a { display: flex; align-items: center; gap: 24px; min-height: 70px; border-top: 1px solid #cccac1; font-size: 16px; }
 .nextLinks a:last-child { border-bottom: 1px solid #cccac1; }
-.indexLabel { display: block; margin-bottom: 20px; font-family: var(--font-fjalla), sans-serif; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-action-deep); }
+.indexLabel { display: block; margin-bottom: 20px; font-family: var(--font-fjalla), sans-serif; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-action-deep); }
 .nextEstimate { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 22px; font-size: 14px; font-weight: 500; color: var(--color-action-deep); }
 .nextEstimate svg { width: 18px; height: 18px; }
-.nextLinks a > :first-child { color: var(--color-action-deep); font-family: var(--font-fjalla), sans-serif; font-size: 12px; }
+.nextLinks a > :first-child { color: var(--color-action-deep); font-family: var(--font-fjalla), sans-serif; font-size: 14px; }
 .nextLinks svg { margin-left: auto; flex-shrink: 0; width: 22px; color: var(--color-action-deep); }
 .contacts a:hover, .nextLinks a:hover { color: var(--color-action-deep); }
 @media (prefers-reduced-motion: no-preference) {
@@ -111,7 +111,7 @@
   .site > header > div { padding-inline: 12px; }
   .site > header a[aria-label='Tubro Construction home'] { padding-right: 4px; }
   .site > header a[aria-label='Tubro Construction home'] img { width: 86px; height: auto; }
-  .site > header a[href='/schedule-an-estimate'] { padding-inline: 10px; font-size: 12px; }
+  .site > header a[href='/schedule-an-estimate'] { padding-inline: 10px; font-size: 14px; }
   .desk, .details, .next { padding-inline: 18px; }
   .formPanel { padding: 20px 16px; }
   .email > :last-child { font-size: 14px; gap: 10px; }

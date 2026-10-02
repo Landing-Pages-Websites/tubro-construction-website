@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactElement } from "react";
+import { siteMetadata } from "@/lib/seo";
 import { loadManifest } from "@/lib/manifest";
 import { routeForSlug } from "@/lib/routes";
 import { PageSections } from "@/components/sections/PageSections";
@@ -13,11 +14,7 @@ export function designedPageMetadata(slug: string): Metadata {
   const manifest = loadManifest(slug);
   const hero = manifest.ordered_sections[0];
   const description = hero.content.body || hero.content.headline;
-  return {
-    title: route.title,
-    description,
-    alternates: { canonical: route.path },
-  };
+  return siteMetadata(route.title, description, route.path);
 }
 
 /** Shared frame for every designed non-homepage route. */
@@ -27,7 +24,7 @@ export function DesignedPage({ slug }: { slug: string }): ReactElement {
     <div data-motion-variant="a" suppressHydrationWarning>
       <SiteMotion variant="a" />
       <SiteHeader />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <PageSections slug={slug} path={route.path} />
       </main>
       <SiteFooter />

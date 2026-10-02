@@ -76,7 +76,7 @@ export function ContentEditorialIndexToc(props: SectionProps): ReactElement {
             <ContextLinks links={links} className="mt-8" />
           </div>
           <div className="self-start border border-ink/10 bg-white p-6 shadow-md shadow-ink/5 sm:p-9">
-            <p className="font-fjalla text-xs tracking-[0.12em] uppercase text-action-deep">
+            <p className="font-fjalla text-sm tracking-[0.12em] uppercase text-action-deep">
               Section index
             </p>
             <ol className="mt-4">

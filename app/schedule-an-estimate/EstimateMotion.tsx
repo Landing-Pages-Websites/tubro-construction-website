@@ -20,7 +20,7 @@ export default function EstimateMotion({ children }: { children: ReactNode }): R
         played.add(element);
         observer.unobserve(element);
       });
-    }, { rootMargin: "0px 0px -6% 0px", threshold: 0.08 });
+    }, { rootMargin: "0px 0px -6% 0px", threshold: 0 });
     const configure = (): void => {
       observer.disconnect();
       pending.forEach((animation) => animation.cancel());
@@ -57,5 +57,5 @@ export default function EstimateMotion({ children }: { children: ReactNode }): R
     element?.addEventListener("focusin", revealFocus);
     return () => { disposed = true; observer.disconnect(); pending.forEach((animation) => animation.cancel()); preference.removeEventListener("change", configure); element?.removeEventListener("focusin", revealFocus); };
   }, []);
-  return <main ref={root}>{children}</main>;
+  return <main ref={root} id="main-content" tabIndex={-1}>{children}</main>;
 }

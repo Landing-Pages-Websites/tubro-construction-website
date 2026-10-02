@@ -1,6 +1,7 @@
 const DOMAIN = "lead-pow-v1";
 const DIFFICULTY = 16;
 const MAX_AGE = 90_000;
+const SOLVE_TIMEOUT = 30_000;
 const excluded = new Set(["captchaToken", "turnstileToken", "captchaAction", "powNonce"]);
 
 function prefix(fields: Record<string, unknown>): string {
@@ -20,7 +21,9 @@ async function bits(text: string): Promise<number> {
 
 export async function solveLeadProof(fields: Record<string, unknown>, issuedAt: string): Promise<string> {
   const base = prefix({ ...fields, powIssuedAt: issuedAt });
+  const started = Date.now();
   for (let nonce = 0; nonce < 2 ** 32; nonce += 1) {
+    if (Date.now() - started > SOLVE_TIMEOUT) throw new Error("Verification timed out. Please retry.");
     const value = String(nonce);
     if (await bits(`${base}${value}"]`) >= DIFFICULTY) return value;
     if (nonce % 512 === 0) await new Promise((resolve) => setTimeout(resolve, 0));

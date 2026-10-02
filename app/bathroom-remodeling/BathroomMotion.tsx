@@ -52,7 +52,7 @@ function observeMotion(root: HTMLElement): () => void {
       if (target && !entry.target.contains(document.activeElement)) playTarget(target, active);
       observer.unobserve(entry.target);
     });
-  }, { threshold: 0.12, rootMargin: "0px 0px -24px 0px" });
+  }, { threshold: 0, rootMargin: "0px 0px -24px 0px" });
   targets.forEach(target => {
     // Hydration never moves content already visible, including an anchor landing.
     if (target.element.getBoundingClientRect().top >= window.innerHeight) observer.observe(target.element);

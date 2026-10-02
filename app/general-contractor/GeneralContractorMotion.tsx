@@ -51,7 +51,7 @@ function observeMotion(root: HTMLElement): () => void {
       animations.get(entry.target)?.play();
       observer.unobserve(entry.target);
     });
-  }, { threshold: 0.08 });
+  }, { threshold: 0 });
 
   collectTargets(root).forEach(target => {
     const rect = target.element.getBoundingClientRect();

@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { MobileEstimateCta } from "@/components/shared/MobileEstimateCta";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { PostHogProvider } from "@/components/analytics/PostHogProvider";
+import { siteMetadata, businessSchema } from "@/lib/seo";
 import { RecaptchaBootstrap } from "@/components/analytics/RecaptchaBootstrap";
 
 const poppins = Poppins({
@@ -24,9 +25,8 @@ const fjallaOne = Fjalla_One({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.tubroconstruction.com"),
-  title: "Tubro Construction | Residential Remodeling in King & Pierce Counties",
-  description:
-    "Tubro Construction brings kitchens, bathrooms, additions, and whole-home renovations to life with clear pricing, careful craftsmanship, and an assigned project manager.",
+  ...siteMetadata("Tubro Construction | King & Pierce County Remodeling", "Plan your kitchen, bathroom, addition or whole-home remodel with Tubro Construction. Serving King and Pierce Counties with free estimates.", "/"),
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({
@@ -44,7 +44,12 @@ export default function RootLayout({
           defer
         />
       </head>
-      <body><GoogleAnalytics /><RecaptchaBootstrap /><PostHogProvider><Suspense fallback={null}><MobileEstimateCta />{children}</Suspense></PostHogProvider></body>
+      <body>
+        <nav aria-label="Skip navigation"><a className="skip-link" href="#main-content">Skip to main content</a></nav>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} />
+        <GoogleAnalytics /><RecaptchaBootstrap />
+        <PostHogProvider>{children}<Suspense fallback={null}><MobileEstimateCta /></Suspense></PostHogProvider>
+      </body>
     </html>
   );
 }

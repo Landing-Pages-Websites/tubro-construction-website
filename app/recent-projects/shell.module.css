@@ -2,5 +2,5 @@
   .shell > header > div { padding-inline: 12px; }
   .shell > header a[aria-label="Tubro Construction home"] { padding-right: 4px; }
   .shell > header a[aria-label="Tubro Construction home"] img { width: 96px; height: auto; }
-  .shell > header a[href="/schedule-an-estimate"] { padding-inline: 8px; font-size: 11px; }
+  .shell > header a[href="/schedule-an-estimate"] { padding-inline: 8px; font-size: 14px; }
 }

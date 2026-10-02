@@ -98,3 +98,35 @@ body {
 }
 
 @media(max-width:359px) { .header-estimate-button { display:none; } }
+
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 100; padding: 12px 20px; background: var(--color-action-deep); color: var(--color-plaster); transform: translateY(-160%); }
+.skip-link:focus { transform: none; }
+main:focus { outline: none; }
+form input:not([type="radio"]):not([type="checkbox"]), form select, form button { min-height: 44px; }
+form label:has(input:is([type="radio"], [type="checkbox"])) { min-height: 44px; }
+form a[href^="mailto:"] { display: inline-flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; }
+form fieldset { min-inline-size: 0; }
+.portfolio-controls { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 24px; }
+.portfolio-controls :is(button, a), .portfolio-placeholder button { min-height: 44px; padding: 10px 16px; color: var(--color-action-deep); border: 1px solid currentColor; font-size: 14px; }
+.portfolio-controls :is(button, a):hover, .portfolio-placeholder button:hover { background: var(--color-sage); }
+.portfolio-help { font-size: 14px; line-height: 1.6; margin-block: 12px; }
+.portfolio-placeholder { display: grid; place-items: center; background: var(--color-sage); }
+.deferred-portfolio iframe:focus { outline: 3px solid var(--color-action-deep); outline-offset: 4px; }
+.deferred-portfolio:focus-within { scroll-margin-top: 100px; }
+@media (max-width: 359px) {
+  header > div > a[aria-label="Tubro Construction home"] { flex-shrink: 1; min-width: 0; padding-right: 0; }
+  header > div > a[aria-label="Tubro Construction home"] img { max-width: 100%; height: auto; }
+  header > div { padding-inline: 8px; }
+  .mobile-estimate-bar { padding-inline: 8px; }
+  .mobile-estimate-bar a { padding-inline: 8px; gap: 8px; font-size: 14px; }
+  .mobile-estimate-bar svg { flex-shrink: 0; }
+  footer :is(p, a) { overflow-wrap: anywhere; }
+}
+/* Form intrinsic widths must not set the page width at 200% mobile zoom. */
+form, form input, form textarea, form select { min-width: 0; max-width: 100%; }
+@media (max-width: 359px) {
+  .service-estimate-prompt > a { flex-shrink: 1; }
+  form button { overflow-wrap: anywhere; }
+  .portfolio-controls { display: block; }
+  .portfolio-controls :is(a, button) { display: block; margin-block: 8px; }
+}
