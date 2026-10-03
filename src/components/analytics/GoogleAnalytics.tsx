@@ -22,6 +22,8 @@ function loadTag(id: string): void {
   const script = document.createElement("script");
   script.async = true; script.dataset.tubroGa4 = id;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
+  // A failed transfer must not prevent a later navigation from retrying the tag.
+  script.onerror = () => script.remove();
   document.head.appendChild(script);
 }
 
