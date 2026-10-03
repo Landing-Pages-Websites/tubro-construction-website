@@ -38,7 +38,8 @@ test("PostHog dynamically loads once after paint and retains initial plus early 
   let options; let initializes = 0; let loadAllowed = false; const captured = [];
   const sdk = { __loaded: false, init: (_key, config) => { options = config; initializes++; sdk.__loaded = true; }, capture: (...args) => captured.push(args) };
   const h = harness("src/components/analytics/PostHogProvider.tsx", { NEXT_PUBLIC_POSTHOG_KEY: "test-local-only" });
-  Object.defineProperty(h.moduleMocks, "posthog-js", { get: () => { assert.ok(loadAllowed, "SDK must not be statically imported"); return sdk; } });
+  Object.defineProperty(h.moduleMocks, "posthog-js/dist/module.slim", { get: () => { assert.ok(loadAllowed, "SDK must not be statically imported"); return sdk; } });
+  h.moduleMocks["posthog-js/dist/extension-bundles"] = { AllExtensions: {} };
   assert.equal(h.api.PostHogProvider({ children: "preserved SSR" }), "preserved SSR"); h.run(); h.run();
   h.window.location.href += "contact"; h.api.PostHogProvider({ children: "preserved SSR" }); h.run();
   assert.equal(initializes, 0); assert.equal(captured.length, 0);
@@ -69,7 +70,9 @@ test("analytics stays disabled without provisioned IDs and inside the portfolio 
 test("PostHog import/init failure preserves content and retries queued routes on navigation", async () => {
   let attempts = 0; const captured = [];
   const sdk = { __loaded: false, init: () => { if (++attempts === 1) throw new Error("Unavailable"); sdk.__loaded = true; }, capture: (_event, props) => captured.push(props.$current_url) };
-  const h = harness("src/components/analytics/PostHogProvider.tsx", { NEXT_PUBLIC_POSTHOG_KEY: "test-local-only" }, { "posthog-js": sdk });
+  const h = harness("src/components/analytics/PostHogProvider.tsx", { NEXT_PUBLIC_POSTHOG_KEY: "test-local-only" }, {
+    "posthog-js/dist/module.slim": sdk, "posthog-js/dist/extension-bundles": { AllExtensions: {} },
+  });
   assert.equal(h.api.PostHogProvider({ children: "still visible" }), "still visible"); h.run(); h.scheduled.shift()();
   await new Promise(resolve => setTimeout(resolve, 0));
   assert.equal(captured.length, 0);
