@@ -4,7 +4,7 @@ import { SectionShell } from "@/components/sections/SectionShell";
 import { CtaLink } from "@/components/sections/CtaLink";
 import { PhoneCta } from "@/components/sections/PhoneCta";
 import { ContextLinks } from "@/components/sections/ContextLinks";
-import { DesignImage } from "@/components/sections/DesignImage";
+import Image from "next/image";
 
 function HeroRuler({ vertical = false }: { vertical?: boolean }): ReactElement {
   return (
@@ -91,7 +91,10 @@ export function GeneralContractorHero({ section, images, band, links, ctaTarget 
           {photo && <figure className="relative min-w-0 border-b-2 border-action pb-4">
             <HeroRuler vertical />
             <div className="relative">
-              <DesignImage image={photo} frameClassName="aspect-[4/3] [clip-path:polygon(0_10%,12%_10%,12%_0,100%_0,100%_84%,88%_84%,88%_100%,0_100%)] lg:aspect-[6/5] lg:[clip-path:polygon(0_14%,14%_14%,14%_0,100%_0,100%_82%,86%_82%,86%_100%,0_100%)]" sizes="(min-width: 1280px) 610px, (min-width: 1024px) 50vw, 100vw" priority withTab={false} objectPosition="52% 48%" />
+              <div className="relative overflow-hidden aspect-[4/3] [clip-path:polygon(0_10%,12%_10%,12%_0,100%_0,100%_84%,88%_84%,88%_100%,0_100%)] lg:aspect-[6/5] lg:[clip-path:polygon(0_14%,14%_14%,14%_0,100%_0,100%_82%,86%_82%,86%_100%,0_100%)]">
+                <Image src={photo.src} alt={photo.alt} fill priority fetchPriority="high" className="object-cover" style={{ objectPosition: "52% 48%" }}
+                  sizes="(min-width: 1280px) 614px, (min-width: 1024px) calc(52.5vw - 59px), (min-width: 640px) calc(100vw - 64px), calc(100vw - 40px)" />
+              </div>
               <p className="absolute bottom-[12%] left-4 max-w-[72%] bg-ink/90 px-4 py-3 font-fjalla text-xl leading-tight text-white sm:left-6 sm:text-2xl">It all Starts with the Foundation</p>
             </div>
             <figcaption className="mt-4 flex flex-wrap items-baseline justify-between gap-x-5 gap-y-2 font-fjalla text-sm text-ink/75"><span>{photo.label}</span><span>Tubro Construction</span></figcaption>

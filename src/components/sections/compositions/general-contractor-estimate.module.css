@@ -41,12 +41,15 @@
   line-height: 1.7;
   overflow-wrap: anywhere;
 }
+.contactRow > span { min-width: 0; }
+.contactRow a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; max-width: 100%; }
+.contactRow a:focus-visible { outline: 2px solid var(--color-action-deep); outline-offset: 4px; }
 .contactRow svg { flex-shrink: 0; margin-top: 0.2rem; color: var(--color-action-deep); }
 .serviceArea {
   margin-top: auto;
   padding-top: 3rem;
   max-width: 30ch;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   line-height: 1.7;
   color: color-mix(in srgb, var(--color-ink) 75%, transparent);
 }
@@ -55,7 +58,7 @@
 .formPanel form > fieldset > legend,
 .formPanel label[for] {
   font-family: var(--font-poppins), sans-serif;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0;
   text-transform: none;
