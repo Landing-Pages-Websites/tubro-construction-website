@@ -71,11 +71,7 @@ sourceUrl: "https://www.tubroconstruction.com/Bathroom-Remodels-Kent-WA"
 <a href="/general-contractor"><img alt="Two Tubro Construction workers measuring a wall with tape measures" src="/images/blog/legacy-581fe1b531787c17.jpg"/></a>
 
 <span> <h3>GENERAL CONTRACTOR</h3>
-<p>SERVICES</p><p><strong><span>Learn more</span></strong></p>
-<a href="/general-contractor"> <span> <span></span>
-</span>
-<span></span>
-</a>
+<p>SERVICES</p><p><strong><a href="/general-contractor">Learn more</a></strong></p>
 </span>
 
 
@@ -84,11 +80,7 @@ sourceUrl: "https://www.tubroconstruction.com/Bathroom-Remodels-Kent-WA"
 <a href="/kitchen-remodeling"><img alt="Remodeled kitchen with gray cabinetry, dark countertops, and a large island" src="/images/design/kitchen-remodeling/02-project-gallery-0125047-kitchen-01-jpg.jpg"/></a>
 
 <span> <h3>KITCHEN</h3>
-<p>REMODELING</p><p><strong><span>Learn more</span></strong></p>
-<a href="/kitchen-remodeling"> <span> <span></span>
-</span>
-<span>Learn more</span>
-</a>
+<p>REMODELING</p><p><strong><a href="/kitchen-remodeling">Learn more</a></strong></p>
 </span>
 
 
@@ -97,11 +89,7 @@ sourceUrl: "https://www.tubroconstruction.com/Bathroom-Remodels-Kent-WA"
 <a href="/bathroom-remodeling"><img alt="Remodeled bathroom with a glass shower, freestanding tub, and double vanity" src="/images/design/bathroom-remodeling/02-project-gallery-0925012-bathroom-01-jpg.jpg"/></a>
 
 <span> <h3>BATHROOM</h3>
-<p>REMODELING</p><p><strong><span>Learn more</span></strong></p>
-<a href="/bathroom-remodeling"> <span> <span></span>
-</span>
-<span></span>
-</a>
+<p>REMODELING</p><p><strong><a href="/bathroom-remodeling">Learn more</a></strong></p>
 </span>
 
 
@@ -110,11 +98,7 @@ sourceUrl: "https://www.tubroconstruction.com/Bathroom-Remodels-Kent-WA"
 <a href="/interior-exterior-painting"><img alt="Stained timber entry with a wood front door, stone columns, and landscaping" src="/images/design/interior-exterior-painting/01-hero-0825017-ext-stain-01-jpeg.jpeg"/></a>
 
 <span> <h3>INTERIOR &amp; EXTERIOR</h3>
-<p>PAINTING SERVICE</p><p><strong><span>Learn more</span></strong></p>
-<a href="/interior-exterior-painting"> <span> <span></span>
-</span>
-<span></span>
-</a>
+<p>PAINTING SERVICE</p><p><strong><a href="/interior-exterior-painting">Learn more</a></strong></p>
 </span>
 
 
@@ -123,11 +107,7 @@ sourceUrl: "https://www.tubroconstruction.com/Bathroom-Remodels-Kent-WA"
 <a href="/custom-home-services"><img alt="Completed two-story custom home with a wraparound porch and landscaped grounds" src="/images/design/custom-home-services/01-hero-img-3136-jpg.webp"/></a>
 
 <span> <h3>CUSTOM HOME</h3>
-<p>SERVICES</p><p><span><strong>Learn more</strong></span></p>
-<a href="/custom-home-services"> <span> <span></span>
-</span>
-<span>Learn more</span>
-</a>
+<p>SERVICES</p><p><strong><a href="/custom-home-services">Learn more</a></strong></p>
 </span>
 
 
@@ -162,7 +142,7 @@ sourceUrl: "https://www.tubroconstruction.com/Bathroom-Remodels-Kent-WA"
 <span></span>
 <h2><span><span>Get in Touch with Us to</span>
 </span><span>Start Your Remodeling Project</span></h2>
-<p><span>We are eager to hear from you and discuss how we can bring your remodeling dreams to life. Our dedicated team is ready to answer any questions you may have and provide personalized guidance for your project. To get in touch with us, simply fill out the contact form below or reach out to us directly via phone or email. We look forward to the opportunity to serve you and provide you with an exceptional remodeling experience. </span><span><br/></span></p>
+<p><span>We are eager to hear from you and discuss how we can bring your remodeling dreams to life. Our dedicated team is ready to answer any questions you may have and provide personalized guidance for your project. To get in touch with us, simply follow the quote link below or reach out to us directly via phone or email. We look forward to the opportunity to serve you and provide you with an exceptional remodeling experience. </span><span><br/></span></p>
 <a href="/schedule-an-estimate"> <span> <span></span>
 </span>
 <span>REQUEST A QUOTE</span>
@@ -172,11 +152,7 @@ sourceUrl: "https://www.tubroconstruction.com/Bathroom-Remodels-Kent-WA"
 
 <h2><span>What our CLIENTS are saying</span></h2>
 
-<svg> <circle></circle>
-<circle></circle>
-</svg>
-
-<img alt="Google Logo" src="https://tcml-eks-resources.s3.us-east-1.amazonaws.com/api-googlereviews/src/widgets/google-logo.png"/> <span>Rating</span>
+<p><a href="/recent-projects#realwork-portfolio">Read client reviews</a></p>
 
 
 
@@ -191,59 +167,29 @@ sourceUrl: "https://www.tubroconstruction.com/Bathroom-Remodels-Kent-WA"
 <h3>Areas We Serve</h3>
 All Locations
 
-<span>LIST</span>
-<span> <span></span>
-<span></span>
-</span>
-<span>MAP</span>
+<p><a href="/service-areas">View our service areas</a></p>
 
 
 
 
-<ul> <li> <a> <span></span>
-<span>Maple Valley Black Diamond Rd SE, Maple Valley, WA 98038 USA</span>
-</a>
-</li>
-<li> <a> <span></span>
-<span>Ravensdale, WA 98051, United States of America</span>
-</a>
-</li>
-<li> <a> <span></span>
-<span>Covington, WA 98042, United States of America</span>
-</a>
-</li>
-<li> <a> <span></span>
-<span>Renton, WA 98057, United States of America</span>
-</a>
-</li>
-<li> <a> <span></span>
-<span>Kent, WA 98032, United States of America</span>
-</a>
-</li>
-<li> <a> <span></span>
-<span>Auburn, WA 98001, United States of America</span>
-</a>
-</li>
-<li> <a> <span></span>
-<span>Spanaway, WA 98387, United States of America</span>
-</a>
-</li>
-<li> <a> <span></span>
-<span>Tacoma, WA 98402, United States of America</span>
-</a>
-</li>
-<li> <a> <span></span>
-<span>Bellevue, WA 98004, United States of America</span>
-</a>
-</li>
+<ul>
+<li>Maple Valley Black Diamond Rd SE, Maple Valley, WA 98038 USA</li>
+<li>Ravensdale, WA 98051, United States of America</li>
+<li>Covington, WA 98042, United States of America</li>
+<li>Renton, WA 98057, United States of America</li>
+<li>Kent, WA 98032, United States of America</li>
+<li>Auburn, WA 98001, United States of America</li>
+<li>Spanaway, WA 98387, United States of America</li>
+<li>Tacoma, WA 98402, United States of America</li>
+<li>Bellevue, WA 98004, United States of America</li>
 </ul>
 
 
-<a href="tel:253&#45;216&#45;2633"> <span> <span></span>
+<a href="tel:253-216-2633"> <span> <span></span>
 </span>
 <span>Call Us</span>
 </a>
 
 
-<a>Go to location page</a>
-<a>See all locations</a>
+<a href="/service-area/home-remodeling-kent">Go to location page</a>
+<a href="/service-areas">See all locations</a>
