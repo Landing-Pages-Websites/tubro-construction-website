@@ -27,7 +27,7 @@ export function SiteHeader(): ReactElement {
   return (
     <header className="sticky top-0 z-40 border-b border-ink/10 bg-plaster/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center gap-x-1 px-4 py-2.5 sm:px-8">
-        <Link href="/" className="inline-flex min-h-11 shrink-0 items-center pr-3" aria-label="Tubro Construction home">
+        <Link prefetch={false} href="/" className="inline-flex min-h-11 shrink-0 items-center pr-3" aria-label="Tubro Construction home">
           <Image src={IMAGES.logo.src} alt={IMAGES.logo.alt} className="h-7 w-auto sm:h-8" priority />
         </Link>
 
@@ -53,7 +53,7 @@ export function SiteHeader(): ReactElement {
             <ul className="absolute left-0 top-full z-50 mt-1 w-64 rounded-md border border-ink/10 bg-white py-2 shadow-lg shadow-ink/10 before:absolute before:inset-x-0 before:-top-1.5 before:h-1.5 before:content-['']">
               {NAV_SERVICES.map((item) => (
                 <li key={item.href}>
-                  <Link
+                  <Link prefetch={false}
                     href={item.href}
                     className="flex min-h-11 items-center px-4 py-2.5 font-poppins text-sm text-ink/85 hover:bg-sage hover:text-ink"
                   >
@@ -64,7 +64,7 @@ export function SiteHeader(): ReactElement {
             </ul>
           </details>
           {NAV_COMPANY.map((item) => (
-            <Link key={item.href} href={item.href} className={DESKTOP_LINK}>
+            <Link prefetch={false} key={item.href} href={item.href} className={DESKTOP_LINK}>
               {item.label}
             </Link>
           ))}
@@ -79,7 +79,7 @@ export function SiteHeader(): ReactElement {
             <Phone className="size-4 text-action" aria-hidden="true" />
             <span className="hidden xl:inline">{BRAND.phoneDisplay}</span>
           </a>
-          <Link
+          <Link prefetch={false}
             href="/schedule-an-estimate"
             className="header-estimate-button inline-flex min-h-11 items-center whitespace-nowrap rounded-md bg-action px-3.5 font-poppins text-sm font-semibold text-white transition-colors hover:bg-action-deep sm:px-4"
           >
@@ -103,7 +103,7 @@ export function SiteHeader(): ReactElement {
               <ul className="mt-1 border-b border-ink/10 pb-3">
                 {NAV_SERVICES.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className="flex min-h-11 items-center py-2.5 font-poppins text-[15px] font-medium text-ink">
+                    <Link prefetch={false} href={item.href} className="flex min-h-11 items-center py-2.5 font-poppins text-[15px] font-medium text-ink">
                       {item.label}
                     </Link>
                   </li>
@@ -112,19 +112,19 @@ export function SiteHeader(): ReactElement {
               <ul className="mt-2">
                 {NAV_COMPANY.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className="flex min-h-11 items-center py-2.5 font-poppins text-[15px] font-medium text-ink">
+                    <Link prefetch={false} href={item.href} className="flex min-h-11 items-center py-2.5 font-poppins text-[15px] font-medium text-ink">
                       {item.label}
                     </Link>
                   </li>
                 ))}
                 <li>
-                  <Link href="/careers" className="flex min-h-11 items-center py-2.5 font-poppins text-[15px] font-medium text-ink">
+                  <Link prefetch={false} href="/careers" className="flex min-h-11 items-center py-2.5 font-poppins text-[15px] font-medium text-ink">
                     Careers
                   </Link>
                 </li>
               </ul>
               <div className="mt-3 flex flex-col gap-3 border-t border-ink/10 pt-4">
-                <Link
+                <Link prefetch={false}
                   href="/schedule-an-estimate"
                   className="inline-flex min-h-12 items-center justify-center rounded-md bg-action px-5 font-poppins text-[15px] font-semibold text-white hover:bg-action-deep"
                 >

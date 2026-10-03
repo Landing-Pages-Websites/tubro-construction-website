@@ -11,9 +11,18 @@ import { RecaptchaBootstrap } from "@/components/analytics/RecaptchaBootstrap";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "600", "700", "800"],
   variable: "--font-poppins",
   display: "swap",
+});
+
+// Next 15 emits the same Poppins family for both declarations; keep every real weight.
+const poppinsDeferred = Poppins({
+  subsets: ["latin"],
+  weight: "500",
+  variable: "--font-poppins",
+  display: "swap",
+  preload: false,
 });
 
 const fjallaOne = Fjalla_One({
@@ -33,7 +42,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>): ReactElement {
   return (
-    <html lang="en" className={`${poppins.variable} ${fjallaOne.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${poppinsDeferred.variable} ${fjallaOne.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: `window.MEGA_TAG_CONFIG={siteKey:"9408e00b76f9qp21"};window.API_ENDPOINT="https://optimizer.gomega.ai";window.TRACKING_API_ENDPOINT="https://events-api.gomega.ai";` }} />
         <script src="https://cdn.gomega.ai/scripts/optimizer.min.js" async />
