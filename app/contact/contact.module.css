@@ -21,7 +21,7 @@
 .note p { max-width: 330px; font-size: 14px; line-height: 1.8; color: #686760; }
 .noteCopy p + p { margin-top: 12px; }
 .noteCopy strong { color: var(--color-ink); font-weight: 600; }
-.noteCopy a { color: var(--color-action-deep); text-decoration: underline; text-underline-offset: 3px; }
+.noteCopy a { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-action-deep); text-decoration: underline; text-underline-offset: 3px; }
 .formPanel { position: relative; background: #fff; padding: clamp(24px, 3vw, 44px); border: 1px solid #deded4; box-shadow: 12px 12px 0 var(--color-sage); scroll-margin-top: 100px; }
 .formPanel::before { content: ''; position: absolute; left: -1px; top: -1px; width: 64px; height: 3px; background: var(--color-action); }
 .formHeading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
@@ -64,7 +64,7 @@
   .formPanel::before { width: 100%; transform: scaleX(.12); transform-origin: left; transition: transform 350ms cubic-bezier(.16, 1, .3, 1); }
   .formPanel:focus-within::before { transform: scaleX(1); }
   .formHeading, .formPanel h2, .formDescription { animation: arrive 650ms cubic-bezier(.16, 1, .3, 1) 170ms both; }
-  .page [data-contact-pending] { opacity: 0; transform: translateY(20px); }
+  .page [data-contact-pending] { transform: translateY(20px); }
   .page [data-contact-entered] { animation: arrive 700ms cubic-bezier(.16, 1, .3, 1) both; }
   .detail:nth-child(2), .nextLinks a:nth-of-type(2) { animation-delay: 90ms; }
   .detail:nth-child(3), .nextLinks a:nth-of-type(3) { animation-delay: 180ms; }
@@ -80,7 +80,7 @@
   .formPanel form button:active:not(:disabled) { transform: translateY(2px); }
   .formPanel [role='alert'], .formPanel [role='status'] { animation: arrive 250ms ease-out; }
   @keyframes drawRule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-  @keyframes arrive { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes arrive { from { transform: translateY(20px); } to { transform: translateY(0); } }
 }
 @media (max-width: 1050px) {
   .layout { gap: 36px; }

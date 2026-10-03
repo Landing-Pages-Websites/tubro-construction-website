@@ -1,8 +1,8 @@
-# Tubro go-live blocker repair — staging handoff
+# Tubro combined go-live round1 — controller handoff
 
 Branch: `fix/golive-r1`. Baseline: `fc61cb10d027bb6cb4ce63b115c388798799c47a`. All work stayed in the supplied isolated checkout. No push, PR, merge, deployment, task mutation, DNS change, credential access or real lead submission was performed. Controller retains review and staging deployment ownership.
 
-**The controller-requested lead regressions are repaired and locally verified. Full go-live acceptance remains open.** The supplied Chromium binary works with the supplied library path; no browser/system dependencies were installed. The eleven-route browser sweep ran and found non-form narrow-layout/contrast findings detailed below. Deployed Google assessments, analytics ingest, real lead receipt and Lighthouse remain controller-owned and are not certified here. Existing before screenshots were not modified.
+**All remaining browser residuals are repaired and locally verified across 44 cases. The full combined scope remains intact.** This follow-up starts at `ff69dba59f641956867e1c1a4da578ed84965c11` on the same isolated branch. The supplied Chromium binary works with the supplied library path; no browser/system dependencies were installed. Final browser-repair evidence is recorded below. Deployed Google assessments, analytics ingest, real lead receipt and valid Lighthouse measurements remain controller-owned and are not certified here. Existing before screenshots were not modified.
 
 ## What changed
 
@@ -52,7 +52,7 @@ Manual reuse/simplification and security/data-integrity review were completed be
 
 The requested `simplify` executable/skill is not installed or exposed in this session (direct invocation returned exit 127, `simplify: command not found`; skill/command search found no implementation). The manual pass is documented honestly and is not claimed as a successful invocation of that unavailable command. Independent bot review remains controller owned.
 
-## Controller regression pass — 2026-10-02
+## Controller regression pass — 2026-10-02 (before browser residual repair)
 
 - **Phone/email:** HTML and server use the same v-flag-valid patterns. Exactly ten phone digits; `+1(757)6855050`, all other country-prefix/eleven-digit forms, short phones and one-character/numeric TLDs fail. Only validated ten-digit formatting is normalized before forwarding. Error copy no longer advertises `+1`.
 - **Policy-based CAPTCHA:** ported the supplied Gary explicit/invisible widget contract, with one container per form, shared retryable loader, readiness/error/expiry handling, cleanup after unmount, and fresh reset/execute per submission. Preview sentinel creates no Google script/widget/token execution. The production public key stays environment-driven; no provisioning values changed.
@@ -64,7 +64,7 @@ The requested `simplify` executable/skill is not installed or exposed in this se
 
 References consulted: the supplied `/var/lib/megaclaw/workspace/gary-golive-round4/components/RecaptchaWidget.tsx` and the four local site-starter proof reference files under `/var/lib/megaclaw/workspace/tmp/grey-lead-pow-reference/src/lib/captcha/`. Anonymous public raw GitHub `main`/`master` URLs returned 404 in this environment; no authenticated lookup or credentials were used. The local canonical replay contract explicitly has warm-instance scope, with downstream same-contact deduplication described by that reference. This patch does not claim distributed single-use enforcement or independently verify downstream deduplication.
 
-Final-pass evidence is under `/var/lib/megaclaw/workspace/tubro-evidence/`:
+The following historical evidence describes head `ff69dba` before this browser follow-up. Its remaining browser findings are superseded by the browser-repair evidence below. Evidence is under `/var/lib/megaclaw/workspace/tubro-evidence/`:
 
 - `round1-controller-tests.log`, `round1-controller-build.log`, `round1-controller-typecheck.log`, `round1-controller-ssr.log`.
 - `controller-review/round1-browser.json`: unchanged existing browser checker, 33 desktop/tablet/mobile route checks plus 11 narrow/reduced-motion checks; intercepted success/duplicate check and menu Escape passed. The command exits 1 because of the recorded contrast and narrow overflow findings, not a bootstrap failure.
@@ -75,14 +75,55 @@ Final-pass evidence is under `/var/lib/megaclaw/workspace/tubro-evidence/`:
 - `controller-review/summary.json`: final 44 rendered cases, no visible text below 14 px, no radio/checkbox labels below 44 px, six tokenless verification 403s and zero Google loads. Final stable axe findings are only the same two homepage portfolio controls, at each of the four widths. All other final route/width axe runs have zero violations.
 - `controller-review/final-*.png` and `form-*.png`: final screenshots at the actual CSS widths. `review-contact-sheet.jpg` is a visual-review convenience crop. Authored logo, photography, typography and form composition were inspected; no design or content overhaul was made.
 
-## Remaining acceptance and verification
+## Browser residual repair — 2026-10-03
 
-1. **Outside the narrowed lead/SEO scope:** the required 195 px reduced-motion sweep found horizontal overflow on `/` (241 px document width), `/careers` (235), `/kitchen-remodeling` (289), `/bathroom-remodeling` (217), `/service-area/home-remodeling-maple-valley` (264), and `/privacy` (234). Traces point to non-form content/grids, headings and the city contact strip. All tested 390/834/1440 layouts stayed within viewport width. These findings are recorded rather than concealed with a global overflow clip or changed checker.
-2. **Contrast and touch targets:** the existing browser checker reports dark-green portfolio controls on the homepage's dark background (2.72:1). Its rapid smooth scroll also captures some reveal animations mid-transition; after stable scrolling and settling, the supplemental pass reports only those two homepage controls and no non-contrast axe failures. Confirmed short non-form targets include the mobile estimate-page jump link (21 px high), bathroom telephone link (36 px), recent-projects bathroom link (34 px), blog work link (32 px), and estimate hero-photo link at tablet width (39 px wide). The detail report includes the complete measurements; inline prose links are recorded separately by their actual role. Full browser acceptance is not claimed.
-3. **Deployed performance and analytics:** no new Lighthouse LCP/TBT measurements or actual provisioned GA/PostHog ingest are claimed. Controller owns deployed Lighthouse and exact-Git-preview integration checks. Existing analytics fixes and all migration/content/SEO fixes remain intact.
-4. **Deployed CAPTCHA and lead receipt:** controller must test the configured policy-based key on an allowed hostname and the exact preview sentinel mode, then submit its marked synthetic lead and verify downstream receipt/labels. Real Google and lead delivery were mocked locally; no external submission was sent. The existing signing secret is the only signing dependency; `LEAD_PROOF_SECRET` and `KV_*` are no longer required.
-5. **Careers attachments:** the explicit filename-only/email-follow-up promise remains. Restoring actual document-byte upload would require a separately approved supported integration; it is not claimed by this change.
+All combined browser findings remained in scope throughout this follow-up; no partial shipment or lowered threshold is proposed. Changes are limited to owning CSS/TSX, supplemental browser tests, and this documentation. Existing checker scripts are unchanged.
 
-The dependency audit also reports baseline PostCSS/Next transitive advisories (npm suggests a Next major upgrade). No unrelated framework major upgrade or audit suppression was performed; this is recorded for review, not represented as a new go-live measurement.
+| Repair | Owning sources | Behavior |
+| --- | --- | --- |
+| Intrinsic reflow | `app/home.css`, `app/service-area/city.module.css`, shared `SectionIntro`/`LedgerList`, affected section compositions | Single-column tracks use a zero minimum; narrow headings and the office email wrap. Numbered ledgers and the city trust strip stack below 360px. |
+| Photo captions | `CaptionTab`, `KitchenRemodelingHero`, affected photo/filmstrip compositions, homepage capability photos | Captions stay inside their frames; cramped collages/strips stack only below 360px. Every photograph and caption is retained. The decorative tape SVG remains contained in its original photo frame. |
+| Previously clipped content | `app/blog/blog.module.css`, `app/recent-projects/portfolio.module.css` | At 195px, topic/project selectors, editorial columns, project details, and carousel controls reflow inside the viewport. No global overflow hiding or page scaling was added. |
+| Control contrast and focus | `app/globals.css`, `app/home.css` | Portfolio controls use the existing plaster surface with deep-green text. Their focus ring remains visible after iframe Escape, including when entry began with a pointer. Dark-section focus outlines use cream. |
+| Actual hit areas | Estimate, contact, bathroom-estimate, project and blog CSS | Jump link, photo icon, office-email link, phone link, project link and blog-work link meet 44px. The estimate photo icon cannot flex-shrink below 44px. Radio/checkbox glyphs remain unchanged; associated labels provide the hit area. |
+| Motion readability | Shared motion CSS, homepage, estimate, contact, kitchen, bathroom, city, blog and portfolio motion owners | Text stays opaque while moving into position. Existing drawings, photo masks, transforms, timing and reduced-motion behavior remain. Portfolio text opacity is constrained in its owning CSS while retaining the existing animation hook. |
+| Authored prose | `app/blog/articles.module.css` | Removed the earlier blanket 44px treatment of article-body links. Inline authored prose links retain their normal text flow; the separate article CTA keeps a 44px target and explicit cream text over green. Article bodies/identities and source hashes are unchanged. |
 
-Controller next step: review this exact commit and resolve the remaining browser scope, then use the existing staging workflow and run exact Git-linked preview acceptance. No acceptance threshold was weakened and no checker changed. The narrowed lead/SEO scope was retained; the non-form CSS findings remain unmet and require controller disposition before the complete round can be accepted.
+The supplemental test is `tests/round1-browser-residuals.mjs`. It checks all eleven routes at 195/390/834/1440 CSS pixels, with reduced motion at 195px. It scrolls through the complete page and settles before axe, measures associated labels and actual controls, checks text/control clipping as well as document width, and verifies skip/menu/portfolio keyboard behavior. Inline links inside the original `[data-article-body]` prose are explicitly classified separately. Screen-reader-only counters and text reachable inside native horizontal project rails are reported according to their actual role; neither is concealed or removed from the page.
+
+The completed matrix measures **zero document overflows, zero axe violations, zero short actual controls, zero visible text below 14px, zero clipped text, and zero clipped controls across all 44 cases**. All eleven 195px/reduced-motion documents have `scrollWidth === 195`; 390/834/1440 also equal their viewport widths. The matrix measures 2,161 targets, including 136 radio/checkbox label instances. Five short link instances at 834/1440 are explicitly recorded as inline authored prose exceptions, not navigation or standalone controls. The final supplemental runner exits **0** after explicit page cleanup; it runs the same measurements in two isolated pages and retains every assertion.
+
+| Verification in this follow-up | Measured result |
+| --- | --- |
+| `npm test` | 27 tests passed, zero failed. |
+| `npm run build` | Passed; 196 generated static pages. Every build ran with the Tubro server stopped. |
+| `npm run typecheck` | Passed on the final production build. |
+| Unchanged `scripts/verify-round1-browser.mjs` | Exit 0. All 44 layout cases pass; all 33 motion-enabled axe cases have zero violations. Invalid phone blocked; one intercepted success and exactly one `form_submission`; menu Escape passed. Analytics correctly remains marked unverified without provisioned IDs. |
+| `tests/round1-browser-residuals.mjs` | Exit 0. All 44 stable axe/layout/target/font/text-clipping/control-clipping cases pass; no page errors. Skip link, menu Escape, portfolio entry/Escape and restored focus ring pass. |
+| `python3 scripts/verify-round1.py http://127.0.0.1:3187` | 103 paths passed; no failures in SSR, canonical/schema, native-form or source-body parity checks. |
+| Supplemental interactions | All eleven 360px documents fit. The 195px project dialog has no short/clipped controls and closes with Escape. Estimate jump/photo links work. The article CTA renders cream text on deep green with a 54.5px height. |
+| Portfolio color/focus | Deep green on plaster: **5.74:1**; hover sage: **5.38:1**; cream focus ring on the dark section: **15.63:1**. |
+| Conservation review | Compared existing `controller-review/final-*.png` with new captures. Logos, photos, type families/scales, normal-width composition and green accent remain. Changes visible at normal widths are necessary target padding, readable captions, focus/contrast, and restored inline prose flow. Narrow-only stacking retains every image and caption. |
+| Source review | `git diff --check` passes. No changes to checker scripts, lead/security/replay code, provisioning IDs, source articles/identities, metadata, photos/logos, dependencies or integrations. No new `any`, console logging, debugger, global overflow hiding or page scaling. |
+
+`simplify` was invoked again and returned exit 127 (`command not found`). No matching installed skill was found. The manual simplification/reuse and code review pass is complete; no successful automated simplify run is claimed. Existing long JSX compositions were retained; no new production functions or abstractions were introduced.
+
+Evidence directory: `/var/lib/megaclaw/workspace/tubro-evidence/browser-fixed`:
+
+- `summary.json`, `browser-details.json`, `keyboard.json`: final stable measurements and associated-label/native-glyph rectangles.
+- `round1-browser.json`: unchanged checker output; `interactions.json`, `colors.json`, `ssr.json`: supplemental evidence.
+- `exit-codes.json`, `build.log`, `typecheck.log`, `tests.log`, `ssr.log`, `checker.log`, `supplemental.log`, `simplify.log`.
+- `final-*.png`: all 44 final viewport captures. `mobile-comparison.jpg`, `desktop-comparison.jpg`, `routes-comparison.jpg`, `narrow-contact-sheet.jpg`, `portfolio-controls-focus.png`, `project-dialog-195.png`: visual review artifacts. The original before files remain untouched.
+- `first-pass-*` and diagnostic traces retain earlier findings; final files above supersede them. A complete zero-finding matrix was also saved under `completed-matrix-before-cleanup-*` after its runner returned signal 143 during Chromium cleanup. It is not represented as a clean command exit.
+
+Browser commands use the supplied `CHROMIUM_PATH=/var/lib/megaclaw/user-tools/apt/usr/lib/chromium/chromium`, `LD_LIBRARY_PATH=/var/lib/megaclaw/user-tools/apt/usr/lib/x86_64-linux-gnu`, and Playwright/axe modules from `/var/lib/megaclaw/workspace/gary-postlive-parity/node_modules`. Base URL is `http://127.0.0.1:3187`; evidence goes to `browser-fixed`. The build uses the sanctioned public staging sentinel and `VERCEL_ENV=development`; the local runtime signing value is test-only. No real lead or Google assessment was sent.
+
+## Controller-owned combined acceptance
+
+1. **Git Preview analytics and performance:** run the exact Git-linked preview GA/PostHog ingest checks and valid deployed Lighthouse measurements. This patch does not claim provisioned analytics ingest or a new LCP/TBT result.
+2. **Deployed CAPTCHA and lead receipt:** test the configured policy-based key on an allowed hostname and exact preview sentinel mode, then verify the controller's marked synthetic lead and delivery labels. No real lead was submitted locally. Lead validation, warm-instance replay guard, existing signing-secret contract and migration metadata are unchanged from `ff69dba`; no KV or other storage dependency was introduced.
+3. **Careers:** the filename-only payload and email-follow-up disclosure remain the explicit scope. No document-byte upload or storage integration was invented. The controller owns any subsequent canonical platform-upload parity work.
+
+The dependency audit previously reported baseline PostCSS/Next transitive advisories. This browser repair does not change dependencies or suppress that audit.
+
+Controller next step: review this exact local commit, then use the existing staging workflow for exact Git-linked preview acceptance. No push, PR, merge, deployment, DNS or task write was performed. Full combined go-live acceptance remains with the controller; browser residuals are not excluded from it.

@@ -23,7 +23,7 @@
 .coverPhoto img, .bathPhoto img { object-fit: cover; }
 .coverPhoto img { object-position: center 65%; }
 .coverFigure figcaption { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; padding: 8px 0; font-size: 14px; color: #56554f; }
-.coverFigure figcaption a { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; color: var(--color-action-deep); }
+.coverFigure figcaption a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--color-action-deep); }
 .coverFigure figcaption a:hover { text-decoration: underline; }
 .coverNote { align-self: start; min-height: calc(100% - 48px); padding: 32px 0 24px 40px; display: flex; flex-direction: column; border-top: 1px solid var(--color-action); }
 .label { display: block; color: var(--color-action-deep); font: 14px/1.5 var(--font-fjalla), sans-serif; letter-spacing: .09em; text-transform: uppercase; }
@@ -110,7 +110,7 @@
   @keyframes draw-rule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
   @keyframes photo-open { from { clip-path: inset(0 18% 0 0); } to { clip-path: inset(0 0% 0 0); } }
   @keyframes photo-settle { from { transform: scale(1.16) translateX(-2%); } to { transform: scale(1) translateX(0); } }
-  @keyframes title-arrive { from { opacity: .35; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes title-arrive { from { transform: translateY(24px); } to { transform: translateY(0); } }
   .page main a { transition: color 180ms, background-color 180ms; }
   .page main a svg { transition: transform 180ms; }
   .page main a:is(:hover, :focus-visible) svg { transform: translate(2px, -2px); }
@@ -178,4 +178,12 @@
   .closing h2 { font-size: 48px; }
   .closingRule { display: none; }
   .button { padding: 18px; font-size: 14px; gap: 16px; }
+}
+
+/* At high zoom, the topic index and editorial columns become a single readable track. */
+@media (max-width: 359px) {
+  .page main { overflow-wrap: anywhere; }
+  .topicNav, .topicNav ol, .cover, .roomNotes, .prepareInner, .closing { grid-template-columns: minmax(0, 1fr); }
+  .prepList li > div { min-width: 0; }
+  .button { max-width: 100%; }
 }

@@ -24,7 +24,7 @@ function QaLedger({ rows }: { rows: Array<{ question: string; answer: string }> 
   return (
     <dl className="mt-14 border-t-2 border-action">
       {rows.map((row) => (
-        <div key={row.question} className="grid gap-x-10 gap-y-2 border-b border-ink/15 py-5 sm:grid-cols-[2fr_3fr]">
+        <div key={row.question} className="grid grid-cols-1 gap-x-10 gap-y-2 border-b border-ink/15 py-5 sm:grid-cols-[2fr_3fr]">
           <dt className="font-poppins text-base font-semibold leading-snug text-ink">{row.question}</dt>
           <dd className="font-fjalla text-[15px] leading-relaxed text-ink/75">{row.answer}</dd>
         </div>
@@ -53,17 +53,17 @@ export function ProcessStaggeredPath({
     : [];
   return (
     <SectionShell section={section} band={band} labelledBy={headingId}>
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 max-[359px]:[overflow-wrap:anywhere]">
         <SectionIntro section={section} headingId={headingId} as={isFirst ? "h1" : "h2"} />
         <div className="relative mt-12">
           {/* Mobile fold of the same route: one straight spine, same nodes. */}
           <span aria-hidden="true" className="absolute top-2 bottom-2 left-[7px] w-0.5 bg-action lg:hidden" />
-          <ol className="relative z-10 grid gap-6 lg:grid-cols-4">
+          <ol className="relative z-10 grid grid-cols-1 gap-6 lg:grid-cols-4">
             {section.content.steps.map((step, index) => (
               <li key={step.number} className={`relative pl-9 lg:pl-0 ${CARD_OFFSETS[index % CARD_OFFSETS.length]}`}>
                 <span aria-hidden="true" className="absolute top-5 left-0 size-4 rounded-full bg-action lg:hidden" />
-                <div className="border border-ink/10 bg-white p-6 shadow-md shadow-ink/5">
-                  <div className="flex items-baseline gap-3">
+                <div className="border border-ink/10 bg-white p-6 max-[359px]:p-3 shadow-md shadow-ink/5">
+                  <div className="flex items-baseline gap-3 max-[359px]:flex-wrap">
                     <span aria-hidden="true" className="font-fjalla text-3xl leading-none text-action">
                       {step.number}
                     </span>

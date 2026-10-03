@@ -12,7 +12,7 @@ export function LedgerList({ items, tone = "ink", className }: LedgerListProps):
   return (
     <ul className={`space-y-3 ${className ?? ""}`}>
       {items.map((item) => (
-        <li key={item} className={`flex gap-3 font-fjalla text-[15px] leading-relaxed ${color}`}>
+        <li key={item} className={`flex gap-3 max-[359px]:[overflow-wrap:anywhere] font-fjalla text-[15px] leading-relaxed ${color}`}>
           <span aria-hidden="true" className="mt-2.5 h-0.5 w-5 shrink-0 bg-action" />
           {item}
         </li>

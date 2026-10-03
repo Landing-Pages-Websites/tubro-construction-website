@@ -37,8 +37,8 @@ export function ContentEditorialIndexToc(props: SectionProps): ReactElement {
   const [evidence] = images;
   return (
     <SectionShell section={section} band={band} labelledBy={headingId}>
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-x-14 gap-y-10 lg:grid-cols-[10fr_9fr]">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 max-[359px]:[overflow-wrap:anywhere]">
+        <div className="grid grid-cols-1 gap-x-14 gap-y-10 lg:grid-cols-[10fr_9fr]">
           <div>
             <span aria-hidden="true" className="mb-8 block h-0.5 w-full bg-action" />
             <SectionIntro section={section} headingId={headingId} as={isFirst ? "h1" : "h2"} />
@@ -83,7 +83,7 @@ export function ContentEditorialIndexToc(props: SectionProps): ReactElement {
               {indexRows.map((row, index) => (
                 <li
                   key={row}
-                  className="grid grid-cols-[48px_1fr] items-baseline gap-4 border-b border-ink/15 py-4"
+                  className="grid grid-cols-[48px_minmax(0,1fr)] max-[359px]:grid-cols-1 items-baseline gap-4 border-b border-ink/15 py-4"
                 >
                   <span aria-hidden="true" className="font-fjalla text-2xl leading-none text-action">
                     {String(index + 1).padStart(2, "0")}

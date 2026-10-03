@@ -25,7 +25,7 @@ export function ProcessCompactNumberedStrip({
   const headingId = `${section.id}-heading`;
   return (
     <SectionShell section={section} band={band} labelledBy={headingId}>
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 max-[359px]:[overflow-wrap:anywhere]">
         <SectionIntro section={section} headingId={headingId} as={isFirst ? "h1" : "h2"} />
         <div className="relative mt-12 lg:mt-16">
           {/* The measured process route: one continuous line behind the cards. */}
@@ -33,15 +33,15 @@ export function ProcessCompactNumberedStrip({
             aria-hidden="true"
             className="absolute left-2.5 top-0 h-full w-0.5 bg-action lg:left-0 lg:top-1/2 lg:h-0.5 lg:w-full"
           />
-          <ol className="relative grid gap-6 pl-10 lg:grid-cols-4 lg:gap-5 lg:pl-0">
+          <ol className="relative grid grid-cols-1 gap-6 pl-10 lg:grid-cols-4 lg:gap-5 lg:pl-0">
             {section.content.steps.map((step, index) => (
               <li
                 key={step.number}
-                className={`border border-ink/10 bg-white p-6 shadow-md shadow-ink/5 ${
+                className={`border border-ink/10 bg-white p-6 max-[359px]:p-3 shadow-md shadow-ink/5 ${
                   index % 2 === 0 ? "lg:-translate-y-6" : "lg:translate-y-6"
                 }`}
               >
-                <div className="flex items-baseline gap-3">
+                <div className="flex items-baseline gap-3 max-[359px]:flex-wrap">
                   <span aria-hidden="true" className="font-fjalla text-4xl leading-none text-action">
                     {step.number}
                   </span>

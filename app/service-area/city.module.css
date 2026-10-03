@@ -248,6 +248,9 @@
 .serviceNote a, .breadcrumb a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
 @media (max-width: 359px) {
   .hero h1, .estimateIntro h2 { overflow-wrap: anywhere; }
+  .trust { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .trust > p { padding: 0; }
+  .trust > p + p { border-left: 0; border-top: 1px solid #c8d4c6; padding-top: 16px; }
   .button { white-space: normal; gap: 8px; }
   .contactDetails a { overflow-wrap: anywhere; font-size: 18px; }
   .formWrap { padding-inline: 12px; }

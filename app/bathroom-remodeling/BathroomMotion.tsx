@@ -24,8 +24,8 @@ function collectTargets(root: HTMLElement): MotionTarget[] {
   root.querySelectorAll<HTMLElement>(`main h2, ${DETAIL_SELECTOR}`).forEach(element => {
     const index = element.matches("li") ? Array.from(element.parentElement!.children).indexOf(element) : 0;
     targets.push({ element, duration: 600, delay: Math.min(index, 3) * 70, frames: [
-      { opacity: 0.3, translate: "0 20px" },
-      { opacity: 1, translate: "0 0" },
+      { translate: "0 20px" },
+      { translate: "0 0" },
     ] });
   });
   return targets;

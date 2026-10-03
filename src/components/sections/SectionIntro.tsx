@@ -33,7 +33,7 @@ export function SectionIntro({
       <Eyebrow tone={tone}>{section.content.eyebrow}</Eyebrow>
       <Heading
         id={headingId}
-        className={`mt-4 max-w-2xl font-poppins font-bold tracking-tight ${scale} ${headlineColor}`}
+        className={`mt-4 max-w-2xl max-[359px]:[overflow-wrap:anywhere] font-poppins font-bold tracking-tight ${scale} ${headlineColor}`}
       >
         {section.content.headline}
       </Heading>

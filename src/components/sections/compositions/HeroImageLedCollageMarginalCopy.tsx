@@ -35,7 +35,7 @@ export function HeroImageLedCollageMarginalCopy({
           </div>
           <ContextLinks links={links} className="mt-5" />
         </div>
-        <div className="grid grid-cols-12 gap-x-4 pb-4 sm:gap-x-6">
+        <div className="grid grid-cols-12 max-[359px]:block gap-x-4 pb-4 sm:gap-x-6">
           {lead && (
             <div className="relative col-span-11 row-start-1 sm:col-span-7 sm:col-start-1 sm:row-start-1 sm:row-span-2 sm:mt-10">
               <CropCorners corners={["tl", "bl"]} className="-m-2.5 sm:-m-3" />
@@ -48,7 +48,7 @@ export function HeroImageLedCollageMarginalCopy({
             </div>
           )}
           {upper && (
-            <div className="relative z-10 col-span-7 col-start-6 row-start-2 -mt-5 sm:col-span-5 sm:col-start-8 sm:row-start-1 sm:mt-0">
+            <div className="relative max-[359px]:mt-4 z-10 col-span-7 col-start-6 row-start-2 -mt-5 sm:col-span-5 sm:col-start-8 sm:row-start-1 sm:mt-0">
               <DesignImage
                 image={upper}
                 frameClassName="aspect-[4/3]"
@@ -59,7 +59,7 @@ export function HeroImageLedCollageMarginalCopy({
             </div>
           )}
           {lower && (
-            <div className="relative z-10 col-span-8 col-start-2 row-start-3 -mt-4 sm:col-span-5 sm:col-start-7 sm:row-start-2 sm:mt-8 sm:-ml-8">
+            <div className="relative max-[359px]:mt-4 z-10 col-span-8 col-start-2 row-start-3 -mt-4 sm:col-span-5 sm:col-start-7 sm:row-start-2 sm:mt-8 sm:-ml-8">
               <DesignImage
                 image={lower}
                 frameClassName="aspect-[16/10]"

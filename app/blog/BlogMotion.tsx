@@ -18,9 +18,9 @@ function observeMotion(root: HTMLElement): () => void {
   add(`.${styles.bathPhoto}`, [{ clipPath: "inset(0 22% 0 0)" }, { clipPath: "inset(0 0% 0 0)" }], 1200);
   add(`.${styles.bathPhoto} img`, [{ transform: "scale(1.18) translateX(-2%)" }, { transform: "scale(1) translateX(0)" }], 1500);
   add(`.${styles.measure}, .${styles.closingRule}`, [{ transform: "scaleX(0)" }, { transform: "scaleX(1)" }], 1200);
-  add(`.${styles.noteNumber}, .${styles.prepList} li > span`, [{ opacity: .15, transform: "translate(-22px, 28px)" }, { opacity: 1, transform: "translate(0, 0)" }], 950, true);
-  add(`.${styles.sectionHeading} h2, .${styles.prepare} h2, .${styles.closing} h2, .${styles.kitchenNote} h3, .${styles.bathCopy} h3`, [{ opacity: .3, transform: "translateY(36px)" }, { opacity: 1, transform: "translateY(0)" }], 1000);
-  add(`.${styles.questionList} li, .${styles.prepList} h3`, [{ opacity: .35, transform: "translateX(24px)" }, { opacity: 1, transform: "translateX(0)" }], 850, true);
+  add(`.${styles.noteNumber}, .${styles.prepList} li > span`, [{ transform: "translate(-22px, 28px)" }, { transform: "translate(0, 0)" }], 950, true);
+  add(`.${styles.sectionHeading} h2, .${styles.prepare} h2, .${styles.closing} h2, .${styles.kitchenNote} h3, .${styles.bathCopy} h3`, [{ transform: "translateY(36px)" }, { transform: "translateY(0)" }], 1000);
+  add(`.${styles.questionList} li, .${styles.prepList} h3`, [{ transform: "translateX(24px)" }, { transform: "translateX(0)" }], 850, true);
   add(`.${styles.decision}, .${styles.prepList} li`, [{ transform: "scaleX(0)" }, { transform: "scaleX(1)" }], 1200, false, "::before");
   const observer = new IntersectionObserver(entries => entries.forEach(entry => {
     if (!entry.isIntersecting) return;

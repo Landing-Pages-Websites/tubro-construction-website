@@ -20,7 +20,7 @@ function targetsFor(root: HTMLElement): MotionTarget[] {
       frames: [{ transform: "scale(1.055)" }, { transform: "scale(1)" }] })),
     ...details.map((element) => ({ element, duration: 600,
       delay: element.matches("li") ? Math.min(Array.from(element.parentElement!.children).indexOf(element), 3) * STEP_DELAY : 0,
-      frames: [{ opacity: 0.25, transform: "translateY(20px)" }, { opacity: 1, transform: "translateY(0)" }] })),
+      frames: [{ transform: "translateY(20px)" }, { transform: "translateY(0)" }] })),
   ];
 }
 

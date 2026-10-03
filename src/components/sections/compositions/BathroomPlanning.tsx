@@ -17,8 +17,8 @@ export function BathroomPlanning({ section, images, band, links, isFirst }: Sect
   const [photo] = images;
   return (
     <SectionShell section={section} band={band} labelledBy={headingId}>
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid items-end gap-6 lg:grid-cols-[3fr_2fr] lg:gap-20">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 max-[359px]:[overflow-wrap:anywhere]">
+        <div className="grid grid-cols-1 items-end gap-6 lg:grid-cols-[3fr_2fr] lg:gap-20">
           <Heading id={headingId} className="max-w-3xl text-[32px] leading-[1.15] font-semibold tracking-tight text-balance sm:text-[42px] lg:text-[46px]">
             Showers, conversions, fixtures, storage, and finishes <span className="text-action-deep">need one plan.</span>
           </Heading>

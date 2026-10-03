@@ -33,8 +33,8 @@ export default function EstimateMotion({ children }: { children: ReactNode }): R
         const heading = element.dataset.estimateEnter === "heading";
         const distance = heading && window.innerWidth > 700 ? 22 : 12;
         const animation = element.animate([
-          { opacity: 0, transform: `translateY(${distance}px)` },
-          { opacity: 1, transform: "translateY(0)" },
+          { transform: `translateY(${distance}px)` },
+          { transform: "translateY(0)" },
         ], { duration: heading ? 650 : 500, delay: Number(element.dataset.estimateDelay || 0), easing: EASING, fill: "both" });
         animation.pause();
         animation.onfinish = () => { animation.cancel(); pending.delete(element); };

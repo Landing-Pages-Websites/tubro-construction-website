@@ -22,7 +22,7 @@
 .heroContact > span { color: var(--muted); }
 .heroContact a { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
 .heroContact svg { color: var(--color-action-deep); }
-.mobileStart { display: none; }
+.mobileStart { display: none; min-height: 44px; }
 .formPanel { background: #fffefa; border: 1px solid var(--line); border-top: 3px solid var(--color-action); padding: clamp(25px, 3vw, 44px); box-shadow: 0 14px 35px -25px rgba(35,31,32,.2); }
 .formHeading { margin-bottom: 32px; }
 .formHeading h2 { font-size: 35px; margin-bottom: 12px; }
@@ -215,7 +215,7 @@ textarea.input { min-height: 115px; max-height: 320px; }
 @media (prefers-reduced-motion: no-preference) {
   .introduction h1 > span { display: inline-block; animation: estimate-enter 720ms cubic-bezier(.16,1,.3,1) both; }
   .introduction h1 > span:last-child { animation-delay: 90ms; }
-  .pageLabel { animation: estimate-fade 450ms ease-out both; }
+  .pageLabel { animation: estimate-label-enter 450ms ease-out both; }
   .lead { animation: estimate-enter 600ms cubic-bezier(.16,1,.3,1) 160ms both; }
   .heroPhoto > img { animation: estimate-photo-settle 1000ms cubic-bezier(.16,1,.3,1) both; }
   .heroPhoto figcaption { animation: estimate-enter 600ms cubic-bezier(.16,1,.3,1) 220ms both; }
@@ -238,16 +238,16 @@ textarea.input { min-height: 115px; max-height: 320px; }
 @media (max-width: 540px) and (prefers-reduced-motion: no-preference) {
   .steps li[data-step-visible="true"]::after { animation-name: estimate-line-vertical; }
 }
-@keyframes estimate-enter { from { opacity: .1; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes estimate-fade { from { opacity: .2; } to { opacity: 1; } }
+@keyframes estimate-enter { from { transform: translateY(18px); } to { transform: translateY(0); } }
+@keyframes estimate-label-enter { from { transform: translateY(8px); } to { transform: translateY(0); } }
 @keyframes estimate-photo-settle { from { transform: scale(1.04); } to { transform: scale(1); } }
-@keyframes estimate-answer { from { opacity: .2; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes estimate-answer { from { transform: translateY(-4px); } to { transform: translateY(0); } }
 @keyframes estimate-line-horizontal { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes estimate-line-vertical { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 @keyframes estimate-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .page main *, .page main *::before, .page main *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 
-.heroPhoto figcaption a { width: 44px; height: 44px; }
+.heroPhoto figcaption a { width: 44px; height: 44px; flex-shrink: 0; }
 .heroContact a, .questions a, .privacy a, .workHeading a { display: inline-flex; align-items: center; min-height: 44px; }
 @media (max-width: 359px) {
   .hero, .nextSteps, .questions { padding-inline: 16px; }

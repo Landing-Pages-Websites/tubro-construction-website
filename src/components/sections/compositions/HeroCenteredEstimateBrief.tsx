@@ -79,7 +79,7 @@ export function HeroCenteredEstimateBrief({
           <ContextLinks links={links} className="mt-6" />
         </div>
         {images.length > 0 && (
-          <div className="mt-8 grid grid-cols-2 gap-4 xl:hidden">
+          <div className="mt-8 grid grid-cols-2 max-[359px]:grid-cols-1 gap-4 xl:hidden">
             {images.slice(0, 2).map((image) => (
               <DesignImage key={image.src} image={image} frameClassName="aspect-[4/3]" sizes="50vw" />
             ))}

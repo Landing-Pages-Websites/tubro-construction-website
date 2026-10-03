@@ -59,7 +59,7 @@ export function CtaCenteredEstimateBriefPeripheralProof({
           <ContextLinks links={links} className="mt-6" />
         </div>
         {images.length > 0 && (
-          <div className="mt-8 grid grid-cols-2 gap-4 xl:hidden">
+          <div className="mt-8 grid grid-cols-2 max-[359px]:grid-cols-1 gap-4 xl:hidden">
             {images.slice(0, 2).map((image) => (
               <DesignImage key={image.src} image={image} frameClassName={portraitProof ? "aspect-[3/4]" : "aspect-[4/3]"} sizes={portraitProof ? "80vw" : "50vw"} objectPosition={portraitProof && image === first ? "35% center" : undefined} />
             ))}

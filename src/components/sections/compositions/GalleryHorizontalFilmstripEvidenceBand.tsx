@@ -52,7 +52,7 @@ interface FilmstripBandProps {
 function FilmstripBand({ images, dark }: FilmstripBandProps): ReactElement {
   const field = dark ? "border border-white/15 bg-white/5" : "bg-ink";
   return (
-    <ol className={`grid grid-cols-2 gap-4 p-4 sm:grid-cols-3 sm:p-6 lg:grid-cols-5 ${field}`}>
+    <ol className={`grid grid-cols-2 max-[359px]:grid-cols-1 gap-4 p-4 sm:grid-cols-3 sm:p-6 lg:grid-cols-5 ${field}`}>
       {images.map((image, index) => (
         <li key={image.src}>
           <div className="bg-white p-1.5">

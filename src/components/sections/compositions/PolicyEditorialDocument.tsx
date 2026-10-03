@@ -24,8 +24,8 @@ export function PolicyEditorialDocument({
   const headings = section.content.bullets.length > 0 ? section.content.bullets : section.content.items;
   return (
     <SectionShell section={section} band={band} labelledBy={headingId}>
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-x-16 gap-y-12 lg:grid-cols-[4fr_5fr]">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 max-[359px]:[overflow-wrap:anywhere]">
+        <div className="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-[4fr_5fr]">
           <div>
             <SectionIntro section={section} headingId={headingId} as={isFirst ? "h1" : "h2"} />
             {(section.content.cta || section.content.secondary_cta) && (
@@ -49,7 +49,7 @@ export function PolicyEditorialDocument({
               {headings.map((heading, index) => (
                 <li
                   key={heading}
-                  className="grid grid-cols-[52px_1fr] items-baseline gap-x-4 border-b border-ink/15 py-5 last:border-b-0"
+                  className="grid grid-cols-[52px_minmax(0,1fr)] max-[359px]:grid-cols-1 items-baseline gap-x-4 border-b border-ink/15 py-5 last:border-b-0"
                 >
                   <span aria-hidden="true" className="font-fjalla text-2xl leading-none text-action">
                     {String(index + 1).padStart(2, "0")}

@@ -1,4 +1,6 @@
 .portfolio { --line: rgba(35,31,32,.2); background: var(--color-plaster); overflow: clip; }
+/* Text keeps its contrast while the entrance animation moves it. */
+.portfolio [data-text-enter] { opacity: 1 !important; }
 .portfolio section { scroll-margin-top: 90px; }
 .portfolio h1, .portfolio h2, .portfolio h3 { font-family: var(--font-fjalla), sans-serif; font-weight: 400; letter-spacing: -.025em; line-height: 1.04; }
 .portfolio button, .portfolio a { -webkit-tap-highlight-color: transparent; }
@@ -78,7 +80,7 @@
 .measuredRule { position: absolute; top: 0; left: 0; z-index: 1; width: 100%; height: 2px; background: var(--color-action); transform-origin: left; pointer-events: none; }
 .spotlightCopy dl div { display: grid; grid-template-columns: 90px 1fr; gap: 20px; padding: 15px 0; border-bottom: 1px solid #625d57; font-size: 14px; line-height: 1.7; }
 .spotlightCopy dt { color: #bbb5ad; }
-.spotlightCopy a { display: inline-flex; align-items: center; gap: 20px; font-size: 14px; border-bottom: 1px solid #8a837c; padding-bottom: 12px; }
+.spotlightCopy a { display: inline-flex; min-height: 44px; align-items: center; gap: 20px; font-size: 14px; border-bottom: 1px solid #8a837c; padding-bottom: 12px; }
 .spotlightCopy a:hover { color: #bedcc4; }
 .spotlightCopy a:focus-visible { outline-color: var(--color-plaster); }
 .details { padding-top: 96px; padding-bottom: 96px; }
@@ -188,9 +190,20 @@
   .detailCard:focus-visible img { transform: scale(1.035); }
 }
 @keyframes text-arrive {
-  from { opacity: .08; transform: translateY(22px); clip-path: inset(0 0 12% 0); }
-  to { opacity: 1; transform: translateY(0); clip-path: inset(0); }
+  from { transform: translateY(22px); clip-path: inset(0 0 12% 0); }
+  to { transform: translateY(0); clip-path: inset(0); }
 }
 
 
 .hero a[href="#project-gallery"] { min-height: 44px; display: inline-flex; align-items: center; }
+
+@media (max-width: 359px) {
+  .portfolio { overflow-wrap: anywhere; }
+  .featureNav, .spotlight, .spotlightCopy dl div { grid-template-columns: minmax(0, 1fr); }
+  .spotlightCopy dl div { gap: 8px; }
+  .featureTop { gap: 12px; }
+  .featureTop > span { min-width: 0; }
+  .carouselControls { display: grid; grid-template-columns: repeat(2, 46px); gap: 8px; }
+  .carouselControls > span { grid-column: 1 / -1; grid-row: 1; min-width: 0; }
+  .spotlightImage button { max-width: calc(100% - 56px); gap: 8px; padding-inline: 12px; }
+}
