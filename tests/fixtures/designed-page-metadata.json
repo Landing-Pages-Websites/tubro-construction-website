@@ -1,0 +1,255 @@
+{
+  "provenance": {
+    "head": "889c31bcbf00e72ba3aa47338fca8939135c5ec9",
+    "source": "src/components/site/DesignedPage.tsx",
+    "sourceSha256": "bb0d1ea6f013879954ee39c833ef8fa0c4eb452886e8ba5520820612a88b6a40",
+    "method": "Complete unmodified old-head exports; component imports stubbed, no rendering. Absent optional fields (including robots) remain absent."
+  },
+  "helpers": {
+    "schedule-an-estimate": {
+      "title": "Schedule a Free Remodeling Estimate",
+      "description": "Share your project type, city, contact information, and planning details with Tubro's office team.",
+      "alternates": {
+        "canonical": "/schedule-an-estimate"
+      },
+      "openGraph": {
+        "type": "website",
+        "title": "Schedule a Free Remodeling Estimate",
+        "description": "Share your project type, city, contact information, and planning details with Tubro's office team.",
+        "url": "/schedule-an-estimate",
+        "siteName": "Tubro Construction",
+        "images": [
+          {
+            "url": "/images/tc-logo.png"
+          }
+        ]
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Schedule a Free Remodeling Estimate",
+        "description": "Share your project type, city, contact information, and planning details with Tubro's office team.",
+        "images": [
+          "/images/tc-logo.png"
+        ]
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy | Tubro Construction",
+      "description": "Tubro's privacy page is organized around the information visitors share, how requests are handled, and available communication choices.",
+      "alternates": {
+        "canonical": "/privacy"
+      },
+      "openGraph": {
+        "type": "website",
+        "title": "Privacy Policy | Tubro Construction",
+        "description": "Tubro's privacy page is organized around the information visitors share, how requests are handled, and available communication choices.",
+        "url": "/privacy",
+        "siteName": "Tubro Construction",
+        "images": [
+          {
+            "url": "/images/tc-logo.png"
+          }
+        ]
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Privacy Policy | Tubro Construction",
+        "description": "Tubro's privacy page is organized around the information visitors share, how requests are handled, and available communication choices.",
+        "images": [
+          "/images/tc-logo.png"
+        ]
+      }
+    },
+    "careers": {
+      "title": "Construction Careers | Tubro Construction",
+      "description": "Learn about the work environment and submit an application or resume.",
+      "alternates": {
+        "canonical": "/careers"
+      },
+      "openGraph": {
+        "type": "website",
+        "title": "Construction Careers | Tubro Construction",
+        "description": "Learn about the work environment and submit an application or resume.",
+        "url": "/careers",
+        "siteName": "Tubro Construction",
+        "images": [
+          {
+            "url": "/images/tc-logo.png"
+          }
+        ]
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Construction Careers | Tubro Construction",
+        "description": "Learn about the work environment and submit an application or resume.",
+        "images": [
+          "/images/tc-logo.png"
+        ]
+      }
+    },
+    "kitchen-remodeling": {
+      "title": "Kitchen Remodeling in King & Pierce Counties",
+      "description": "Practical layouts, custom storage, islands, countertops, tile, appliances, and lighting belong in one coordinated kitchen plan.",
+      "alternates": {
+        "canonical": "/kitchen-remodeling"
+      },
+      "openGraph": {
+        "type": "website",
+        "title": "Kitchen Remodeling in King & Pierce Counties",
+        "description": "Practical layouts, custom storage, islands, countertops, tile, appliances, and lighting belong in one coordinated kitchen plan.",
+        "url": "/kitchen-remodeling",
+        "siteName": "Tubro Construction",
+        "images": [
+          {
+            "url": "/images/tc-logo.png"
+          }
+        ]
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Kitchen Remodeling in King & Pierce Counties",
+        "description": "Practical layouts, custom storage, islands, countertops, tile, appliances, and lighting belong in one coordinated kitchen plan.",
+        "images": [
+          "/images/tc-logo.png"
+        ]
+      }
+    },
+    "bathroom-remodeling": {
+      "title": "Bathroom Remodeling in King & Pierce Counties",
+      "description": "Bathroom remodels across King and Pierce Counties can include walk-in showers, tub conversions, renovations, and assigned project management.",
+      "alternates": {
+        "canonical": "/bathroom-remodeling"
+      },
+      "openGraph": {
+        "type": "website",
+        "title": "Bathroom Remodeling in King & Pierce Counties",
+        "description": "Bathroom remodels across King and Pierce Counties can include walk-in showers, tub conversions, renovations, and assigned project management.",
+        "url": "/bathroom-remodeling",
+        "siteName": "Tubro Construction",
+        "images": [
+          {
+            "url": "/images/tc-logo.png"
+          }
+        ]
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Bathroom Remodeling in King & Pierce Counties",
+        "description": "Bathroom remodels across King and Pierce Counties can include walk-in showers, tub conversions, renovations, and assigned project management.",
+        "images": [
+          "/images/tc-logo.png"
+        ]
+      }
+    },
+    "service-area--home-remodeling-auburn": {
+      "title": "Home Remodeling in Auburn, WA",
+      "description": "Auburn is a confirmed service area. Homeowners can request estimates for residential remodeling through Tubro Construction's office.",
+      "alternates": {
+        "canonical": "/service-area/home-remodeling-auburn"
+      },
+      "openGraph": {
+        "type": "website",
+        "title": "Home Remodeling in Auburn, WA",
+        "description": "Auburn is a confirmed service area. Homeowners can request estimates for residential remodeling through Tubro Construction's office.",
+        "url": "/service-area/home-remodeling-auburn",
+        "siteName": "Tubro Construction",
+        "images": [
+          {
+            "url": "/images/tc-logo.png"
+          }
+        ]
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Home Remodeling in Auburn, WA",
+        "description": "Auburn is a confirmed service area. Homeowners can request estimates for residential remodeling through Tubro Construction's office.",
+        "images": [
+          "/images/tc-logo.png"
+        ]
+      }
+    }
+  },
+  "estimate": {
+    "title": "Schedule a Free Remodeling Estimate",
+    "description": "Tell Tubro Construction about your kitchen, bathroom, addition, custom home, or painting project. Request a free remodeling estimate in King and Pierce Counties.",
+    "alternates": {
+      "canonical": "/schedule-an-estimate"
+    },
+    "openGraph": {
+      "type": "website",
+      "title": "Schedule a Free Remodeling Estimate",
+      "description": "Share your project type, city, contact information, and planning details with Tubro's office team.",
+      "url": "/schedule-an-estimate",
+      "siteName": "Tubro Construction",
+      "images": [
+        {
+          "url": "/images/tc-logo.png"
+        }
+      ]
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Schedule a Free Remodeling Estimate",
+      "description": "Share your project type, city, contact information, and planning details with Tubro's office team.",
+      "images": [
+        "/images/tc-logo.png"
+      ]
+    }
+  },
+  "consumers": {
+    "privacy": {
+      "title": "Privacy Policy | Tubro Construction",
+      "description": "Tubro's privacy page is organized around the information visitors share, how requests are handled, and available communication choices.",
+      "alternates": {
+        "canonical": "/privacy"
+      },
+      "openGraph": {
+        "type": "website",
+        "title": "Privacy Policy | Tubro Construction",
+        "description": "Tubro's privacy page is organized around the information visitors share, how requests are handled, and available communication choices.",
+        "url": "/privacy",
+        "siteName": "Tubro Construction",
+        "images": [
+          {
+            "url": "/images/tc-logo.png"
+          }
+        ]
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Privacy Policy | Tubro Construction",
+        "description": "Tubro's privacy page is organized around the information visitors share, how requests are handled, and available communication choices.",
+        "images": [
+          "/images/tc-logo.png"
+        ]
+      }
+    },
+    "careers": {
+      "title": "Construction Careers | Tubro Construction",
+      "description": "Learn about the work environment and submit an application or resume.",
+      "alternates": {
+        "canonical": "/careers"
+      },
+      "openGraph": {
+        "type": "website",
+        "title": "Construction Careers | Tubro Construction",
+        "description": "Learn about the work environment and submit an application or resume.",
+        "url": "/careers",
+        "siteName": "Tubro Construction",
+        "images": [
+          {
+            "url": "/images/tc-logo.png"
+          }
+        ]
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Construction Careers | Tubro Construction",
+        "description": "Learn about the work environment and submit an application or resume.",
+        "images": [
+          "/images/tc-logo.png"
+        ]
+      }
+    }
+  }
+}
