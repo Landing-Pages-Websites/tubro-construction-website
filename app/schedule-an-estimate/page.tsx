@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactElement } from "react";
-import { designedPageMetadata } from "@/components/site/DesignedPage";
+import { designedPageMetadata } from "@/lib/designed-page-metadata";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/shared/SiteFooter";
 import EstimateHero from "./EstimateHero";
