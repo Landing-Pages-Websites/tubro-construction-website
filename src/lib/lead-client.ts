@@ -1,6 +1,10 @@
 import type { RecaptchaHandle } from "./recaptcha-client";
 import { solveLeadProof } from "./leadProof";
 import type { LeadFields } from "./lead-validation";
+import { resumeFileError, type AttachmentStatus } from "./lead-uploads";
+import { uploadResume } from "./resume-upload-client";
+
+export type LeadResult = { attachment: AttachmentStatus };
 
 declare global { interface Window { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void; } }
 const TRACKED_PARAMS = { utm_source: "utmSource", utm_medium: "utmMedium", utm_campaign: "utmCampaign", utm_term: "utmTerm", utm_content: "utmContent", gclid: "gclid", fbclid: "fbclid" };
@@ -33,13 +37,17 @@ async function send(payload: Record<string, unknown>): Promise<{ ok: boolean; ve
   } catch { throw new Error("The connection failed. Please try again."); }
 }
 
-export async function postLead(formKey: string, fields: LeadFields, pageVariant: string, widget: RecaptchaHandle | null): Promise<void> {
+export async function postLead(formKey: string, fields: LeadFields, pageVariant: string, widget: RecaptchaHandle | null, resume?: File): Promise<LeadResult> {
   try {
-    const payload = { form_key: formKey, form_data: { ...fields, pageVariant, ...collectTracking() } };
+    const fileError = resume ? resumeFileError(resume) : null;
+    if (fileError) throw new Error(fileError);
     const token = await widget?.getToken();
+    const claim = resume && token ? await uploadResume(resume, token) : null;
+    const payload = { ...claim, form_key: formKey, form_data: { ...fields, pageVariant, ...collectTracking() } };
     const verified = token ? { ...payload, captchaToken: token } : { ...payload, ...await fallbackProof(payload) };
     let result = await send(verified);
     if (token && result.verificationFailed) result = await send({ ...verified, ...await fallbackProof(verified) });
     if (!result.ok) throw new Error(result.error || "We couldn't send your request. Please try again.");
+    return { attachment: resume ? claim ? "uploaded" : "failed" : "none" };
   } catch (error) { throw error instanceof Error ? error : new Error("The connection failed. Please try again."); }
 }

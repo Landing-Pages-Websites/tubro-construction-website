@@ -2,6 +2,8 @@
 
 Branch: `fix/golive-r1`. Baseline: `fc61cb10d027bb6cb4ce63b115c388798799c47a`. All work stayed in the supplied isolated checkout. No push, PR, merge, deployment, task mutation, DNS change, credential access or real lead submission was performed. Controller retains review and staging deployment ownership.
 
+**Careers résumé-byte delivery is now implemented in this same combined round1.** The later director ruling supersedes the historical filename-only scope below. The form uses MEGA's existing signed-upload endpoint, uploads actual bytes, and forwards only owned, token-bound keys in `form_data._mega_uploads`. See [résumé delivery evidence and controller handoff](round1-resume-delivery.md). No remote submission or platform-persistence result is claimed here.
+
 **All remaining browser residuals are repaired and locally verified across 44 cases. The full combined scope remains intact.** This follow-up starts at `ff69dba59f641956867e1c1a4da578ed84965c11` on the same isolated branch. The supplied Chromium binary works with the supplied library path; no browser/system dependencies were installed. Final browser-repair evidence is recorded below. Deployed Google assessments, analytics ingest, real lead receipt and valid Lighthouse measurements remain controller-owned and are not certified here. Existing before screenshots were not modified.
 
 ## What changed
@@ -122,7 +124,7 @@ Browser commands use the supplied `CHROMIUM_PATH=/var/lib/megaclaw/user-tools/ap
 
 1. **Git Preview analytics and performance:** run the exact Git-linked preview GA/PostHog ingest checks and valid deployed Lighthouse measurements. This patch does not claim provisioned analytics ingest or a new LCP/TBT result.
 2. **Deployed CAPTCHA and lead receipt:** test the configured policy-based key on an allowed hostname and exact preview sentinel mode, then verify the controller's marked synthetic lead and delivery labels. No real lead was submitted locally. Lead validation, warm-instance replay guard, existing signing-secret contract and migration metadata are unchanged from `ff69dba`; no KV or other storage dependency was introduced.
-3. **Careers:** the filename-only payload and email-follow-up disclosure remain the explicit scope. No document-byte upload or storage integration was invented. The controller owns any subsequent canonical platform-upload parity work.
+3. **Careers:** résumé-byte upload is implemented using the existing supported MEGA endpoint. Local tests mock signing, byte PUT and the lead destination; the controller must verify a marked harmless résumé actually persists and is claimed by the application on sanctioned Git-linked Preview. See [the upload handoff](round1-resume-delivery.md). Filename-only delivery no longer meets or describes the accepted scope.
 
 The dependency audit previously reported baseline PostCSS/Next transitive advisories. This browser repair does not change dependencies or suppress that audit.
 

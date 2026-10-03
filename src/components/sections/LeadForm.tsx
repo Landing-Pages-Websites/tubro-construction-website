@@ -3,6 +3,7 @@
 import { ArrowRight, Loader2 } from "lucide-react";
 import type { ReactElement } from "react";
 import { useEstimateForm } from "@/hooks/useEstimateForm";
+import { RESUME_ACCEPT } from "@/lib/lead-uploads";
 import { defaultProjectType } from "@/lib/form-keys";
 import { EstimateField } from "@/components/shared/EstimateField";
 import { EstimateStatusNote } from "@/components/shared/EstimateStatusNote";
@@ -132,30 +133,27 @@ export function LeadForm({
       />
       {withResume && (
         <div className="mt-4">
-          <label htmlFor={`${idPrefix}-resume`} className={LABEL_CLASSES}>
-            Résumé (PDF or Word)
+          <label htmlFor={`${idPrefix}-resume`} className={`${LABEL_CLASSES} flex min-h-11 cursor-pointer items-center`}>
+            Résumé (PDF, Word or TXT)
           </label>
           <input
             id={`${idPrefix}-resume`}
             name="resume" required
             type="file"
-            accept=".pdf,.doc,.docx,.txt,.rtf"
+            accept={RESUME_ACCEPT}
+            disabled={busy || form.status === "success"}
             aria-invalid={Boolean(form.errors.resume)}
-            aria-describedby={form.errors.resume ? `${idPrefix}-resume-error` : undefined}
-            className="mt-1.5 block w-full cursor-pointer font-poppins text-sm text-ink/80 file:mr-3 file:rounded-md file:border file:border-action file:bg-white file:px-3.5 file:py-2 file:font-poppins file:text-sm file:font-semibold file:text-action-deep hover:file:bg-sage"
+            aria-describedby={`${idPrefix}-resume-help${form.errors.resume ? ` ${idPrefix}-resume-error` : ""}`}
+            className="mt-1.5 block min-h-11 w-full min-w-0 cursor-pointer font-poppins text-sm text-ink/80 file:mr-3 file:min-h-11 file:rounded-md file:border file:border-action file:bg-white file:px-3.5 file:py-2 file:font-poppins file:text-sm file:font-semibold file:text-action-deep hover:file:bg-sage"
           />
           {form.errors.resume && (
             <p id={`${idPrefix}-resume-error`} className="mt-1.5 font-poppins text-sm text-red-700">
               {form.errors.resume}
             </p>
           )}
-          <p className="mt-1.5 font-poppins text-sm text-ink/70">
-            Submitting sends your details and résumé filename to the office; the team follows up
-            by email to collect the document. You can also send it to{" "}
-            <a href="mailto:workorders@tubroconstruction.com" className="underline underline-offset-2">
-              workorders@tubroconstruction.com
-            </a>
-            .
+          <p id={`${idPrefix}-resume-help`} className="mt-1.5 font-poppins text-sm text-ink/70">
+            One PDF, Word or TXT file, up to 25 MB. Your résumé uploads with your application.
+            If the upload fails, we’ll send your details and let you know how to email the résumé.
           </p>
         </div>
       )}
@@ -198,6 +196,7 @@ export function LeadForm({
       <RecaptchaWidget ref={form.captchaRef} />
       <EstimateStatusNote errorNote={form.errorMessage}
         status={form.status}
+        attachment={form.attachment}
         topic={withResume ? "application" : "estimate request"}
         idleNote={
           withResume
@@ -205,11 +204,6 @@ export function LeadForm({
             : submitLabel === "Send Message"
               ? "No spam — your message goes straight to the Tubro office."
               : "Free estimate. No spam — your details go straight to the Tubro team."
-        }
-        successNote={
-          withResume
-            ? "Thanks — your application details are in. The office follows up by email to collect your résumé document; you can also send it to workorders@tubroconstruction.com."
-            : undefined
         }
       />
     </form>

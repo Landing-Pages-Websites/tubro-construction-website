@@ -13,7 +13,7 @@ test("client retries rejected assessment with fresh bound proof, without retryin
     };
     const api = loadModule("src/lib/lead-client.ts", {
       fetch, URLSearchParams, window: { location: { search: "" } },
-      moduleMocks: { "./leadProof": { solveLeadProof: async (fields) => { solves++; assert.equal(fields.form_key, "homepage_estimate"); return "123"; } } },
+      moduleMocks: { "./recaptcha-client": { requestUploadToken: async () => { throw new Error("Unexpected upload token request"); } }, "./leadProof": { solveLeadProof: async (fields) => { solves++; assert.equal(fields.form_key, "homepage_estimate"); return "123"; } } },
     });
     const widget = { getToken: async () => "minted-token" };
     if (status !== 403) { await assert.rejects(api.postLead("homepage_estimate", {}, "/", widget)); assert.equal(solves, 0); continue; }
@@ -29,7 +29,7 @@ test("unavailable widget goes straight to first-party proof without emitting a p
   const api = loadModule("src/lib/lead-client.ts", {
     URLSearchParams, window: { location: { search: "" } },
     fetch: async (_url, options = {}) => { requests.push(options); return Response.json(options.method ? { ok: true } : { issuedAt: String(Date.now()), powChallenge: "nonce", powSignature: "signed" }); },
-    moduleMocks: { "./leadProof": { solveLeadProof: async () => "123" } },
+    moduleMocks: { "./recaptcha-client": { requestUploadToken: async () => { throw new Error("Unexpected upload token request"); } }, "./leadProof": { solveLeadProof: async () => "123" } },
   });
   await api.postLead("homepage_estimate", {}, "/", { getToken: async () => null });
   assert.equal(requests.length, 2);

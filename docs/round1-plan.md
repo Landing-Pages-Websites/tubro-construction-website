@@ -20,3 +20,6 @@ Controller regression pass (2026-10-02):
 3. Permit signed, payload-bound proof fallback after all failed Google assessments; distinguish verification labels and retain strict staging/production policy.
 4. Publish the actual stable form key in every form, preserving the careers filename/email-follow-up promise.
 5. Run test/typecheck/build and the supplied working Chromium across the eleven required routes and widths, then simplify, review and commit locally. Controller retains all external writes and deployed performance/integration verification.
+
+
+Careers director follow-through (2026-10-03): the filename/email-follow-up assumptions above are historical and superseded. [The résumé delivery plan](round1-resume-plan.md) implements actual bytes through the existing MEGA upload endpoint, preserves the browser fixes and leaves all remote work with the controller.

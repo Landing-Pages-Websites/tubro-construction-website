@@ -5,6 +5,7 @@ import { validateLeadFields, type FieldRequirements } from "./lead-validation";
 import { PROJECT_TYPES } from "./content";
 import { SITE_ROUTES } from "./routes";
 import { formKeyForSlug } from "./form-keys";
+import { authorizedUploadKeys, consumeUploadClaim } from "./upload-capability";
 
 export type LeadPayload = { form_key: string; form_data: Record<string, unknown>; [key: string]: unknown };
 export type LeadAuthorization = { ok: false } | { ok: true; spamCheck: string | null };
@@ -20,9 +21,9 @@ export function requirementsFor(formKey: string): FieldRequirements {
   return { consent: !NO_CONSENT_KEYS.has(formKey), projectType: true, projectTypes: formKey === "careers_application" ? CAREER_TYPES : PROJECT_TYPES, resume: formKey === "careers_application" };
 }
 
-export async function readLeadPayload(request: Request): Promise<LeadPayload> {
+export async function readLeadPayload(request: Request, maxBytes = MAX_BODY_BYTES): Promise<LeadPayload> {
   if (!request.headers.get("content-type")?.startsWith("application/json")) throw new Error("Send the form as JSON.");
-  if (Number(request.headers.get("content-length")) > MAX_BODY_BYTES) throw new Error("Request is too large.");
+  if (Number(request.headers.get("content-length")) > maxBytes) throw new Error("Request is too large.");
   const reader = request.body?.getReader();
   if (!reader) throw new Error("The form is empty.");
   let bytes = 0;
@@ -32,7 +33,7 @@ export async function readLeadPayload(request: Request): Promise<LeadPayload> {
       const { done, value } = await reader.read();
       if (done) break;
       bytes += value.byteLength;
-      if (bytes > MAX_BODY_BYTES) { await reader.cancel(); throw new Error("Request is too large."); }
+      if (bytes > maxBytes) { await reader.cancel(); throw new Error("Request is too large."); }
       chunks.push(value);
     }
     const parsed: unknown = JSON.parse(Buffer.concat(chunks).toString("utf8"));
@@ -51,7 +52,7 @@ export function payloadErrors(body: LeadPayload): Record<string, string> {
   return validateLeadFields(body.form_data, requirementsFor(body.form_key));
 }
 
-async function enterpriseAuthorized(token: string, hostname: string): Promise<boolean> {
+async function enterpriseAuthorized(token: string, hostname: string, action: "lead_submit" | "lead_upload"): Promise<boolean> {
   if (!token || token === STAGING_SENTINEL || token === "lead-submit" || token.length > 8192) return false;
   const project = process.env.RECAPTCHA_PROJECT_ID;
   const key = process.env.RECAPTCHA_API_KEY;
@@ -59,25 +60,45 @@ async function enterpriseAuthorized(token: string, hostname: string): Promise<bo
   try {
     const response = await fetch(`https://recaptchaenterprise.googleapis.com/v1/projects/${project}/assessments?key=${key}`, {
       method: "POST", headers: { "Content-Type": "application/json" }, signal: AbortSignal.timeout(8000),
-      body: JSON.stringify({ event: { token, siteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, expectedAction: "lead_submit" } }),
+      body: JSON.stringify({ event: { token, siteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, expectedAction: action } }),
     });
     if (!response.ok) return false;
     const assessment = await response.json() as { tokenProperties?: { valid?: boolean; action?: string; hostname?: string }; riskAnalysis?: { score?: number; reasons?: string[] } };
     const properties = assessment.tokenProperties;
-    return Boolean(properties?.valid && properties.action === "lead_submit" && properties.hostname?.toLowerCase() === hostname && (assessment.riskAnalysis?.score ?? 0) >= 0.5 && !assessment.riskAnalysis?.reasons?.length);
+    return Boolean(properties?.valid && properties.action === action && properties.hostname?.toLowerCase() === hostname && (assessment.riskAnalysis?.score ?? 0) >= 0.5 && !assessment.riskAnalysis?.reasons?.length);
   } catch { return false; }
 }
 
-export async function authorizeLead(body: LeadPayload, host: string): Promise<LeadAuthorization> {
+/** Upload signing has no proof fallback and never consumes the submission token. */
+export async function authorizeUpload(token: unknown, host: string): Promise<boolean> {
+  try {
+    const mode = captchaMode(host, process.env);
+    if (mode === "denied") return false;
+    if (mode === "staging") return stagingTokenAccepted(mode, token);
+    return typeof token === "string" && await enterpriseAuthorized(token, host, "lead_upload");
+  } catch { return false; }
+}
+
+async function verifyLead(body: LeadPayload, host: string): Promise<LeadAuthorization> {
   try {
     const mode = captchaMode(host, process.env);
     if (mode === "denied") return { ok: false };
     if (mode === "staging") return stagingTokenAccepted(mode, body.captchaToken) ? { ok: true, spamCheck: null } : { ok: false };
     if (!process.env.RECAPTCHA_PROJECT_ID || !process.env.RECAPTCHA_API_KEY) return { ok: false };
-    if (typeof body.captchaToken === "string" && await enterpriseAuthorized(body.captchaToken, host)) return { ok: true, spamCheck: SPAM_CHECK_RECAPTCHA };
+    if (typeof body.captchaToken === "string" && await enterpriseAuthorized(body.captchaToken, host, "lead_submit")) return { ok: true, spamCheck: SPAM_CHECK_RECAPTCHA };
     if (!proofAvailable() || !validChallenge(body, host) || !await verifyLeadProof(body)) return { ok: false };
     if (!consumeChallenge(String(body.powChallenge), Number(body.powIssuedAt))) return { ok: false };
     return { ok: true, spamCheck: SPAM_CHECK_FALLBACK };
+  } catch { return { ok: false }; }
+}
+
+export async function authorizeLead(body: LeadPayload, host: string): Promise<LeadAuthorization> {
+  try {
+    const keys = authorizedUploadKeys(body);
+    if (!keys || (keys.length && body.form_key !== "careers_application")) return { ok: false };
+    const result = await verifyLead(body, host);
+    if (!result.ok || !consumeUploadClaim(body)) return { ok: false };
+    return result;
   } catch { return { ok: false }; }
 }
 
@@ -85,5 +106,11 @@ export function upstreamPayload(body: LeadPayload, spamCheck: string | null): Re
   const formData = Object.fromEntries(FIELD_KEYS.filter((key) => body.form_data[key] !== undefined).map((key) => [key, body.form_data[key]]));
   formData.phone = String(formData.phone).replace(/\D/g, "");
   if (spamCheck) formData.spamCheck = spamCheck;
+  const keys = body.form_key === "careers_application" ? authorizedUploadKeys(body) : [];
+  if (!keys) throw new Error("Résumé upload authorization expired. Please try again.");
+  if (keys.length) formData._mega_uploads = keys;
+  if (body.form_key === "careers_application") formData.resumeUploadStatus = keys.length
+    ? "Uploaded with application; attachment scanning may delay email availability."
+    : "Résumé not sent. Please request the document directly from the applicant.";
   return { form_key: body.form_key, form_data: formData, customer_id: "b002784f-9543-4362-8814-b7da19078f23", site_id: "f28d515e-437b-4f9b-96c4-bc1a79a3357c", source_provider: "website-tubroconstruction" };
 }

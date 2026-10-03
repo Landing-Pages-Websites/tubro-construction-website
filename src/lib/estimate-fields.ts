@@ -1,4 +1,5 @@
 import { validateLeadFields, type LeadFields, type LeadErrors } from "./lead-validation";
+import { resumeFileError } from "./lead-uploads";
 export type EstimateFormOptions = { formKey?: string; requireConsent?: boolean; requireResume?: boolean };
 
 export function readFields(form: HTMLFormElement): LeadFields {
@@ -17,7 +18,7 @@ export function formErrors(form: HTMLFormElement, options: EstimateFormOptions):
   const projectTypes = Array.from(form.querySelectorAll<HTMLInputElement>('[name="projectType"]')).map((input) => input.value);
   const errors = validateLeadFields(fields, { projectTypes: projectTypes.length ? projectTypes : undefined, consent: options.requireConsent, projectType: Boolean(form.querySelector('[name="projectType"]')), resume: options.requireResume });
   const resume = form.querySelector<HTMLInputElement>('[name="resume"]')?.files?.[0];
-  if (options.requireResume && resume && resume.size > 10 * 1024 * 1024) errors.resume = "Choose a file smaller than 10 MB.";
+  if (resume) { const error = resumeFileError(resume); if (error) errors.resume = error; }
   return errors;
 }
 

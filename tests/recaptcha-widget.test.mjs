@@ -102,3 +102,33 @@ test("disposing during prepare never renders into a removed container", async ()
   assert.equal(renders, 0);
   assert.equal(await widget.getToken(), null);
 });
+
+test("two clean action-specific containers mint distinct tokens without consuming the first", async () => {
+  const { api, calls } = browser();
+  const submitContainer = { isConnected: true };
+  const uploadContainer = { isConnected: true };
+  const submit = api.createRecaptchaWidget(submitContainer);
+  const firstToken = await submit.getToken();
+  const upload = api.createRecaptchaWidget(uploadContainer, () => {}, "lead_upload");
+  const secondToken = await upload.getToken();
+  assert.notEqual(firstToken, secondToken);
+  assert.deepEqual(calls.filter(([call]) => call === "render").map(call => call[2].action), ["lead_submit", "lead_upload"]);
+  assert.deepEqual(calls.filter(([call]) => call === "execute").map(call => call[2].action), ["lead_submit", "lead_upload"]);
+  assert.deepEqual(calls.filter(([call]) => call === "reset").map(call => call[1]), [0, 1]);
+  upload.dispose(); submit.dispose();
+});
+
+test("requestUploadToken disposes its clean container on success and failure", async () => {
+  for (const fails of [false, true]) {
+    const calls = []; const containers = [];
+    const enterprise = { ready: cb => cb(), render: (container, options) => { calls.push(options.action); return 1; }, reset: () => {}, execute: async (_id, options) => { calls.push(options.action); if (fails) throw new Error("Unavailable"); return "fresh-upload-token"; } };
+    const api = loadModule("src/lib/recaptcha-client.ts", {
+      process: { env: { NEXT_PUBLIC_RECAPTCHA_SITE_KEY: "local-key" } },
+      window: { grecaptcha: { enterprise }, setTimeout, clearTimeout },
+      document: { createElement: () => ({ dataset: {}, isConnected: false, remove() { this.isConnected = false; } }), body: { appendChild: container => { containers.push(container); container.isConnected = true; } } },
+    });
+    assert.equal(await api.requestUploadToken(), fails ? null : "fresh-upload-token");
+    assert.deepEqual(calls, ["lead_upload", "lead_upload"]);
+    assert.equal(containers.length, 1); assert.equal(containers[0].isConnected, false);
+  }
+});

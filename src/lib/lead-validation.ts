@@ -17,6 +17,6 @@ export function validateLeadFields(fields: Record<string, unknown>, requirements
   if (requirements.projectType && !text("projectType")) errors.projectType = "Please choose a project type.";
   if (requirements.projectTypes && !requirements.projectTypes.includes(text("projectType"))) errors.projectType = "Please choose one of the listed project types.";
   if (requirements.consent && fields.consent !== true) errors.consent = "Please confirm we may contact you about this request.";
-  if (requirements.resume && !/\.(pdf|docx?|txt|rtf)$/i.test(text("resumeFileName"))) errors.resume = "Choose a PDF, Word or text résumé file.";
+  if (requirements.resume && !/\.(pdf|docx?|txt)$/i.test(text("resumeFileName"))) errors.resume = "Choose a PDF, Word (.doc or .docx), or TXT résumé file. RTF is not supported.";
   return errors;
 }
