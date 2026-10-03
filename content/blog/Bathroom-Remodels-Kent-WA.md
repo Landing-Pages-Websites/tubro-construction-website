@@ -17,13 +17,7 @@ sourceUrl: "https://www.tubroconstruction.com/Bathroom-Remodels-Kent-WA"
 
 
 
-<p><span>REQUEST A</span><span> <span></span>
-</span><span>FREE QUOTE</span></p>
-<h3>REQUEST A FREE QUOTE</h3>
-
-
-Thank you for contacting us.<br/>We will get back to you as soon as possible.
-Oops, there was an error sending your message.<br/>Please try again later.
+<p><a href="/schedule-an-estimate">REQUEST A FREE QUOTE</a></p>
 
 
 
@@ -35,13 +29,7 @@ Oops, there was an error sending your message.<br/>Please try again later.
 <span>253-216-2633</span>
 </a>
 
-<p><span><span>REQUEST A</span>
-</span><span>FREE QUOTE</span></p>
-<h3>REQUEST A FREE QUOTE</h3>
-
-
-Thank you for contacting us.<br/>We will get back to you as soon as possible.
-Oops, there was an error sending your message.<br/>Please try again later.
+<p><a href="/schedule-an-estimate">REQUEST A FREE QUOTE</a></p>
 
 
 
@@ -80,7 +68,7 @@ Oops, there was an error sending your message.<br/>Please try again later.
 </span><span>SERVICES WE OFFER</span></h2>
 <hr/>
 
-<a href="/general-contractor"><img alt="Two men are measuring a wall with tape measures"/></a>
+<a href="/general-contractor"><img alt="Two Tubro Construction workers measuring a wall with tape measures" src="/images/blog/legacy-581fe1b531787c17.jpg"/></a>
 
 <span> <h3>GENERAL CONTRACTOR</h3>
 <p>SERVICES</p><p><strong><span>Learn more</span></strong></p>
@@ -93,7 +81,7 @@ Oops, there was an error sending your message.<br/>Please try again later.
 
 
 
-<a href="/kitchen-remodeling"><img alt="A kitchen with a large island in the middle and a refrigerator."/></a>
+<a href="/kitchen-remodeling"><img alt="Remodeled kitchen with gray cabinetry, dark countertops, and a large island" src="/images/design/kitchen-remodeling/02-project-gallery-0125047-kitchen-01-jpg.jpg"/></a>
 
 <span> <h3>KITCHEN</h3>
 <p>REMODELING</p><p><strong><span>Learn more</span></strong></p>
@@ -106,7 +94,7 @@ Oops, there was an error sending your message.<br/>Please try again later.
 
 
 
-<a href="/bathroom-remodeling"><img alt="A bathroom with two sinks , a bathtub , a mirror and a mural on the wall."/></a>
+<a href="/bathroom-remodeling"><img alt="Remodeled bathroom with a glass shower, freestanding tub, and double vanity" src="/images/design/bathroom-remodeling/02-project-gallery-0925012-bathroom-01-jpg.jpg"/></a>
 
 <span> <h3>BATHROOM</h3>
 <p>REMODELING</p><p><strong><span>Learn more</span></strong></p>
@@ -119,7 +107,7 @@ Oops, there was an error sending your message.<br/>Please try again later.
 
 
 
-<a href="/interior-exterior-painting"><img alt="The front door of a house with a potted plant in front of it."/></a>
+<a href="/interior-exterior-painting"><img alt="Stained timber entry with a wood front door, stone columns, and landscaping" src="/images/design/interior-exterior-painting/01-hero-0825017-ext-stain-01-jpeg.jpeg"/></a>
 
 <span> <h3>INTERIOR &amp; EXTERIOR</h3>
 <p>PAINTING SERVICE</p><p><strong><span>Learn more</span></strong></p>
@@ -132,7 +120,7 @@ Oops, there was an error sending your message.<br/>Please try again later.
 
 
 
-<a href="/custom-home-services"><img alt="A large wooden house is being built in a field."/></a>
+<a href="/custom-home-services"><img alt="Completed two-story custom home with a wraparound porch and landscaped grounds" src="/images/design/custom-home-services/01-hero-img-3136-jpg.webp"/></a>
 
 <span> <h3>CUSTOM HOME</h3>
 <p>SERVICES</p><p><span><strong>Learn more</strong></span></p>
@@ -251,7 +239,7 @@ All Locations
 </ul>
 
 
-<a href="tel:"> <span> <span></span>
+<a href="tel:253&#45;216&#45;2633"> <span> <span></span>
 </span>
 <span>Call Us</span>
 </a>
