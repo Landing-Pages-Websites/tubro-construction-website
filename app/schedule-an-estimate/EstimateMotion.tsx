@@ -3,59 +3,114 @@
 import { useEffect, useRef, type ReactElement, type ReactNode } from "react";
 
 const EASING = "cubic-bezier(.16,1,.3,1)";
+const TARGETS = "[data-estimate-enter], [data-estimate-step]";
+const DESKTOP_WIDTH = 700;
+const HEADING_DURATION = 650;
+const BODY_DURATION = 500;
+const HEADING_DISTANCE = 22;
+const BODY_DISTANCE = 12;
+
+type MotionState = {
+  elements: HTMLElement[];
+  played: WeakSet<HTMLElement>;
+  pending: Map<HTMLElement, Animation>;
+  preference: MediaQueryList;
+  observer: IntersectionObserver | null;
+  disposed: boolean;
+};
+
+function rememberVisible(state: MotionState): void {
+  // Take every geometry read before observing or writing animation styles.
+  const snapshot = state.elements.filter(element => !state.played.has(element))
+    .map(element => ({ element, top: element.getBoundingClientRect().top }));
+  snapshot.forEach(({ element, top }) => {
+    if (top >= window.innerHeight) return;
+    state.played.add(element);
+    state.observer?.unobserve(element);
+  });
+}
+
+function cancelMotion(state: MotionState): void {
+  state.pending.forEach(animation => animation.cancel());
+  state.pending.clear();
+  // The unanimated pseudo-element already renders the complete step line.
+  state.elements.forEach(element => { delete element.dataset.stepVisible; });
+}
+
+function animateEntry(element: HTMLElement, state: MotionState): void {
+  const heading = element.dataset.estimateEnter === "heading";
+  const distance = heading && window.innerWidth > DESKTOP_WIDTH ? HEADING_DISTANCE : BODY_DISTANCE;
+  const animation = element.animate([
+    { transform: `translateY(${distance}px)` },
+    { transform: "translateY(0)" },
+  ], { duration: heading ? HEADING_DURATION : BODY_DURATION,
+    delay: Number(element.dataset.estimateDelay || 0), easing: EASING, fill: "both" });
+  animation.onfinish = () => { animation.cancel(); state.pending.delete(element); };
+  state.pending.set(element, animation);
+}
+
+function revealEntries(entries: IntersectionObserverEntry[], state: MotionState): void {
+  if (state.disposed) return;
+  entries.forEach(({ target, isIntersecting, boundingClientRect }) => {
+    const element = target as HTMLElement;
+    if (state.played.has(element)) return;
+    if (!isIntersecting && boundingClientRect.top >= 0) return;
+    state.played.add(element);
+    state.observer?.unobserve(element);
+    if (!isIntersecting || state.preference.matches) return;
+    if (element.hasAttribute("data-estimate-step")) {
+      element.dataset.stepVisible = "true";
+      return;
+    }
+    animateEntry(element, state);
+  });
+}
+
+function revealFocus(event: FocusEvent, state: MotionState): void {
+  if (!(event.target instanceof HTMLElement)) return;
+  const target = event.target;
+  state.elements.forEach(element => {
+    if (!element.contains(target) && !target.contains(element)) return;
+    state.pending.get(element)?.cancel();
+    state.pending.delete(element);
+    delete element.dataset.stepVisible;
+    state.played.add(element);
+    state.observer?.unobserve(element);
+  });
+}
+
+function observeUnseen(state: MotionState): void {
+  state.elements.forEach(element => {
+    if (!state.played.has(element)) state.observer?.observe(element);
+  });
+}
+
+function setupMotion(root: HTMLElement | null): (() => void) | undefined {
+  if (!root || !("IntersectionObserver" in window)) return;
+  const state: MotionState = {
+    elements: Array.from(root.querySelectorAll<HTMLElement>(TARGETS)),
+    played: new WeakSet(), pending: new Map(), disposed: false, observer: null,
+    preference: window.matchMedia("(prefers-reduced-motion: reduce)"),
+  };
+  state.observer = new IntersectionObserver(entries => revealEntries(entries, state),
+    { rootMargin: "0px 0px -6% 0px", threshold: 0 });
+  const changePreference = (): void => { rememberVisible(state); cancelMotion(state); };
+  const focus = (event: FocusEvent): void => revealFocus(event, state);
+  rememberVisible(state);
+  observeUnseen(state);
+  state.preference.addEventListener("change", changePreference);
+  root.addEventListener("focusin", focus);
+  return () => {
+    state.disposed = true;
+    state.observer?.disconnect();
+    cancelMotion(state);
+    state.preference.removeEventListener("change", changePreference);
+    root.removeEventListener("focusin", focus);
+  };
+}
 
 export default function EstimateMotion({ children }: { children: ReactNode }): ReactElement {
   const root = useRef<HTMLElement>(null);
-  useEffect(() => {
-    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const played = new WeakSet<Element>();
-    const pending = new Map<HTMLElement, Animation>();
-    let disposed = false;
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(({ target, isIntersecting }) => {
-        if (!isIntersecting) return;
-        const element = target as HTMLElement;
-        pending.get(element)?.play();
-        if (element.hasAttribute("data-estimate-step")) element.dataset.stepVisible = "true";
-        played.add(element);
-        observer.unobserve(element);
-      });
-    }, { rootMargin: "0px 0px -6% 0px", threshold: 0 });
-    const configure = (): void => {
-      observer.disconnect();
-      pending.forEach((animation) => animation.cancel());
-      pending.clear();
-      if (preference.matches) return;
-      root.current?.querySelectorAll<HTMLElement>("[data-estimate-enter], [data-estimate-step]").forEach((element) => {
-        if (played.has(element)) return;
-        if (element.hasAttribute("data-estimate-step")) { observer.observe(element); return; }
-        if (element.getBoundingClientRect().top < window.innerHeight) return;
-        const heading = element.dataset.estimateEnter === "heading";
-        const distance = heading && window.innerWidth > 700 ? 22 : 12;
-        const animation = element.animate([
-          { transform: `translateY(${distance}px)` },
-          { transform: "translateY(0)" },
-        ], { duration: heading ? 650 : 500, delay: Number(element.dataset.estimateDelay || 0), easing: EASING, fill: "both" });
-        animation.pause();
-        animation.onfinish = () => { animation.cancel(); pending.delete(element); };
-        pending.set(element, animation);
-        observer.observe(element);
-      });
-    };
-    const revealFocus = (event: FocusEvent): void => {
-      const target = event.target as HTMLElement;
-      const elements = [target.closest<HTMLElement>("[data-estimate-enter]"), ...target.querySelectorAll<HTMLElement>("[data-estimate-enter]")];
-      elements.forEach((element) => {
-        if (!element) return;
-        pending.get(element)?.cancel(); pending.delete(element); played.add(element); observer.unobserve(element);
-      });
-    };
-    configure();
-    void document.fonts.ready.then(() => { if (!disposed) configure(); });
-    preference.addEventListener("change", configure);
-    const element = root.current;
-    element?.addEventListener("focusin", revealFocus);
-    return () => { disposed = true; observer.disconnect(); pending.forEach((animation) => animation.cancel()); preference.removeEventListener("change", configure); element?.removeEventListener("focusin", revealFocus); };
-  }, []);
+  useEffect(() => setupMotion(root.current), []);
   return <main ref={root} id="main-content" tabIndex={-1}>{children}</main>;
 }
