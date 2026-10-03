@@ -21,7 +21,7 @@ function RulerStrip(): ReactElement {
           <span key={index} className={`w-px bg-ink/70 ${index % 4 === 0 ? "h-3" : "h-1.5"}`} />
         ))}
       </div>
-      <div className="flex justify-between px-4 font-fjalla text-[10px] leading-none text-ink/70">
+      <div className="flex justify-between px-4 font-fjalla text-sm leading-none text-ink/70">
         {Array.from({ length: RULER_UNITS }, (_, index) => (
           <span key={index}>{index + 1}</span>
         ))}
@@ -79,7 +79,7 @@ export function HeroCenteredEstimateBrief({
           <ContextLinks links={links} className="mt-6" />
         </div>
         {images.length > 0 && (
-          <div className="mt-8 grid grid-cols-2 gap-4 xl:hidden">
+          <div className="mt-8 grid grid-cols-2 max-[359px]:grid-cols-1 gap-4 xl:hidden">
             {images.slice(0, 2).map((image) => (
               <DesignImage key={image.src} image={image} frameClassName="aspect-[4/3]" sizes="50vw" />
             ))}

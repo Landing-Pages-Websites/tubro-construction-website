@@ -58,7 +58,7 @@ export function PaintingSurfaces({ section, images, band, links }: SectionProps)
               {details.slice(0, 2).map((photo) => (
                 <figure key={photo.src} className="flex min-w-0 flex-col">
                   <DesignImage image={photo} withTab={false} frameClassName="aspect-[4/3] lg:aspect-auto lg:flex-1" sizes="(min-width: 1280px) 225px, (min-width: 1024px) 19vw, 45vw" />
-                  <figcaption className="border-b border-ink/15 py-3 text-xs font-medium leading-5 sm:text-sm">{photo.label}</figcaption>
+                  <figcaption className="border-b border-ink/15 py-3 text-sm font-medium leading-5 sm:text-sm">{photo.label}</figcaption>
                 </figure>
               ))}
             </div>

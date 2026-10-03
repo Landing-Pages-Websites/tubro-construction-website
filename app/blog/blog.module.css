@@ -7,7 +7,7 @@
 .skip:focus { top: 12px; }
 .intro, .notes, .more, .closing { width: min(1280px, calc(100% - 96px)); margin-inline: auto; }
 .intro { padding-top: 48px; }
-.masthead { display: flex; justify-content: space-between; gap: 24px; padding-block: 12px; border-top: 1px solid var(--color-action); border-bottom: 1px solid #231f2029; font: 13px/1.5 var(--font-fjalla), sans-serif; text-transform: uppercase; letter-spacing: .1em; }
+.masthead { display: flex; justify-content: space-between; gap: 24px; padding-block: 12px; border-top: 1px solid var(--color-action); border-bottom: 1px solid #231f2029; font: 14px/1.5 var(--font-fjalla), sans-serif; text-transform: uppercase; letter-spacing: .1em; }
 .masthead span:first-child { color: var(--color-action-deep); }
 .titleRow { display: grid; grid-template-columns: 1.7fr 1fr; gap: 8%; align-items: end; padding-block: 40px 44px; }
 .titleRow h1 { max-width: 800px; font-size: clamp(38px, 4.2vw, 66px); font-weight: 700; line-height: 1.08; letter-spacing: -.055em; }
@@ -22,19 +22,19 @@
 .coverPhoto { position: relative; aspect-ratio: 1.58; overflow: hidden; }
 .coverPhoto img, .bathPhoto img { object-fit: cover; }
 .coverPhoto img { object-position: center 65%; }
-.coverFigure figcaption { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; padding: 8px 0; font-size: 11px; color: #56554f; }
-.coverFigure figcaption a { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; color: var(--color-action-deep); }
+.coverFigure figcaption { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; padding: 8px 0; font-size: 14px; color: #56554f; }
+.coverFigure figcaption a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--color-action-deep); }
 .coverFigure figcaption a:hover { text-decoration: underline; }
 .coverNote { align-self: start; min-height: calc(100% - 48px); padding: 32px 0 24px 40px; display: flex; flex-direction: column; border-top: 1px solid var(--color-action); }
-.label { display: block; color: var(--color-action-deep); font: 12px/1.5 var(--font-fjalla), sans-serif; letter-spacing: .09em; text-transform: uppercase; }
+.label { display: block; color: var(--color-action-deep); font: 14px/1.5 var(--font-fjalla), sans-serif; letter-spacing: .09em; text-transform: uppercase; }
 .coverNote h2 { margin: 22px 0 18px; font-size: clamp(28px, 2.7vw, 42px); font-weight: 600; letter-spacing: -.045em; line-height: 1.16; }
 .coverNote .textLink { margin-top: 16px; align-self: flex-start; }
 .measure { height: 17px; margin-top: 32px; border-top: 1px solid var(--color-action); background: repeating-linear-gradient(90deg, var(--color-action) 0 1px, transparent 1px 24px); mask-image: linear-gradient(to bottom, black 0 7px, transparent 7px); }
-.coverFoot { margin-top: 8px; font: 12px/1.5 var(--font-fjalla), sans-serif; color: #56554f; }
+.coverFoot { margin-top: 8px; font: 14px/1.5 var(--font-fjalla), sans-serif; color: #56554f; }
 .topicNav { display: grid; grid-template-columns: 135px 1fr; align-items: center; gap: 16px; padding: 24px 0; border-bottom: 1px solid #231f2033; margin-top: 16px; }
 .topicNav ol { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; }
-.topicNav a { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 12px; font-weight: 500; }
-.topicNav a span { font: 12px var(--font-fjalla), sans-serif; color: var(--color-action-deep); }
+.topicNav a { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; font-weight: 500; }
+.topicNav a span { font: 14px var(--font-fjalla), sans-serif; color: var(--color-action-deep); }
 .topicNav a:hover { color: var(--color-action-deep); text-decoration: underline; }
 .notes { padding-block: 88px; }
 .sectionHeading { display: flex; justify-content: space-between; gap: 40px; align-items: end; margin-bottom: 40px; }
@@ -43,7 +43,7 @@
 .sectionHeading p { max-width: 320px; font-size: 14px; }
 .roomNotes { display: grid; grid-template-columns: 1fr 1.15fr; gap: 64px; }
 .kitchenNote { padding-top: 18px; border-top: 1px solid var(--color-action); }
-.noteMeta { display: flex; justify-content: space-between; align-items: center; color: var(--color-action-deep); font: 13px var(--font-fjalla), sans-serif; text-transform: uppercase; letter-spacing: .07em; }
+.noteMeta { display: flex; justify-content: space-between; align-items: center; color: var(--color-action-deep); font: 14px var(--font-fjalla), sans-serif; text-transform: uppercase; letter-spacing: .07em; }
 .kitchenNote h3 { margin: 28px 0 20px; font-size: clamp(36px, 3.5vw, 52px); line-height: 1.08; font-weight: 600; letter-spacing: -.045em; }
 .checklist { margin: 20px 0 16px; }
 .checklist li { position: relative; padding: 12px 0 12px 24px; border-bottom: 1px solid #231f201f; font-size: 14px; line-height: 1.7; }
@@ -86,7 +86,7 @@
 .button:hover { background: var(--color-ink); }
 .phone { display: flex; align-items: center; gap: 12px; width: fit-content; min-height: 44px; margin-top: 18px; font-size: 20px; font-weight: 600; color: var(--color-action-deep); }
 .phone:hover { text-decoration: underline; }
-.closingActions p { font-size: 12px; margin-top: 10px; }
+.closingActions p { font-size: 14px; margin-top: 10px; }
 .closingRule { position: absolute; left: -24px; top: 64px; width: 18px; height: 60px; border-top: 1px solid var(--color-action); border-left: 1px solid var(--color-action); }
 /* The compact header retains its estimate and menu controls; phone is also in the page/footer. */
 @media (max-width: 380px) {
@@ -110,7 +110,7 @@
   @keyframes draw-rule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
   @keyframes photo-open { from { clip-path: inset(0 18% 0 0); } to { clip-path: inset(0 0% 0 0); } }
   @keyframes photo-settle { from { transform: scale(1.16) translateX(-2%); } to { transform: scale(1) translateX(0); } }
-  @keyframes title-arrive { from { opacity: .35; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes title-arrive { from { transform: translateY(24px); } to { transform: translateY(0); } }
   .page main a { transition: color 180ms, background-color 180ms; }
   .page main a svg { transition: transform 180ms; }
   .page main a:is(:hover, :focus-visible) svg { transform: translate(2px, -2px); }
@@ -137,7 +137,7 @@
 @media (max-width: 760px) {
   .intro, .notes, .more, .closing, .prepareInner { width: calc(100% - 40px); }
   .intro { padding-top: 24px; }
-  .masthead { font-size: 11px; gap: 16px; letter-spacing: .06em; }
+  .masthead { font-size: 14px; gap: 16px; letter-spacing: .06em; }
   .masthead span:last-child { max-width: 125px; text-align: right; }
   .titleRow { display: block; padding-block: 28px; }
   .titleRow h1 { font-size: clamp(36px, 7.6vw, 55px); }
@@ -145,7 +145,7 @@
   .introAside p { max-width: 520px; font-size: 14px; margin-bottom: 8px; }
   .cover { grid-template-columns: 1fr; }
   .coverPhoto { aspect-ratio: 1.25; }
-  .coverFigure figcaption { font-size: 10px; gap: 8px; }
+  .coverFigure figcaption { font-size: 14px; gap: 8px; }
   .coverFigure figcaption span { max-width: 150px; }
   .coverNote { padding: 24px 0 8px; margin-top: 12px; }
   .coverNote h2 { font-size: 32px; max-width: 430px; }
@@ -153,7 +153,7 @@
   .coverFoot { display: none; }
   .topicNav { margin-top: 12px; }
   .topicNav ol { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; }
-  .topicNav a { font-size: 11px; gap: 6px; }
+  .topicNav a { font-size: 14px; gap: 6px; }
   .topicNav a svg { display: none; }
   .notes { padding-block: 52px; }
   .sectionHeading { display: block; margin-bottom: 30px; }
@@ -177,5 +177,13 @@
   .closing { grid-template-columns: 1fr; gap: 32px; padding-block: 56px; }
   .closing h2 { font-size: 48px; }
   .closingRule { display: none; }
-  .button { padding: 18px; font-size: 13px; gap: 16px; }
+  .button { padding: 18px; font-size: 14px; gap: 16px; }
+}
+
+/* At high zoom, the topic index and editorial columns become a single readable track. */
+@media (max-width: 359px) {
+  .page main { overflow-wrap: anywhere; }
+  .topicNav, .topicNav ol, .cover, .roomNotes, .prepareInner, .closing { grid-template-columns: minmax(0, 1fr); }
+  .prepList li > div { min-width: 0; }
+  .button { max-width: 100%; }
 }

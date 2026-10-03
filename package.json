@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test": "node --test tests/*.test.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -12,16 +13,19 @@
   },
   "dependencies": {
     "lucide-react": "^0.544.0",
+    "marked": "^18.0.14",
     "next": "15.5.25",
     "posthog-js": "^1.435.8",
     "react": "19.1.1",
-    "react-dom": "19.1.1"
+    "react-dom": "19.1.1",
+    "sanitize-html": "^2.18.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.12",
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/sanitize-html": "^2.16.2",
     "tailwindcss": "^4.1.12",
     "typescript": "^5.9.2"
   }

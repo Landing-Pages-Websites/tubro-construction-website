@@ -3,13 +3,15 @@
 import { ArrowRight, Loader2 } from "lucide-react";
 import type { ReactElement } from "react";
 import { useEstimateForm } from "@/hooks/useEstimateForm";
+import { RESUME_ACCEPT } from "@/lib/lead-uploads";
 import { defaultProjectType } from "@/lib/form-keys";
 import { EstimateField } from "@/components/shared/EstimateField";
 import { EstimateStatusNote } from "@/components/shared/EstimateStatusNote";
+import { RecaptchaWidget } from "@/components/shared/RecaptchaWidget";
 
 const FIELD_CLASSES =
-  "w-full rounded-md border border-ink/25 bg-white px-3.5 py-2.5 font-poppins text-sm text-ink placeholder:text-ink/40 focus:border-action";
-const LABEL_CLASSES = "font-fjalla text-[11px] tracking-[0.1em] text-ink/70 uppercase";
+  "w-full rounded-md border border-ink/25 bg-white px-3.5 py-2.5 font-poppins text-sm text-ink placeholder:text-ink/70 focus:border-action";
+const LABEL_CLASSES = "font-fjalla text-sm tracking-[0.1em] text-ink/70 uppercase";
 
 export interface LeadFormProps {
   /** Distinct submission key per route, e.g. "estimate_contact". */
@@ -48,7 +50,8 @@ export function LeadForm({
   const busy = form.status === "submitting";
 
   return (
-    <form ref={form.formRef} onSubmit={form.handleSubmit} noValidate aria-label={submitLabel}>
+    <form action="/api/lead" method="post" ref={form.formRef} onSubmit={form.handleSubmit}  aria-label={submitLabel}>
+      <input type="hidden" name="form_key" value={form.formKey} />
       {options.length > 0 && (
         <fieldset>
           <legend className={LABEL_CLASSES}>{withResume ? "Work area" : "Project type"}</legend>
@@ -60,7 +63,7 @@ export function LeadForm({
               >
                 <input
                   type="radio"
-                  name="projectType"
+                  name="projectType" required
                   value={option}
                   defaultChecked={option === defaultProjectType(pagePath, options)}
                   className="size-4 shrink-0 accent-[#0C883D]"
@@ -86,12 +89,12 @@ export function LeadForm({
           id={`${idPrefix}-phone`}
           name="phone"
           label="Phone"
-          errorId={`${idPrefix}-email-error`}
+          errorId={`${idPrefix}-phone-error`}
           fieldClassName={FIELD_CLASSES}
           labelClassName={LABEL_CLASSES}
           type="tel"
           autoComplete="tel"
-          invalid={Boolean(form.errors.contact)}
+          error={form.errors.phone}
         />
       </div>
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -104,7 +107,7 @@ export function LeadForm({
           labelClassName={LABEL_CLASSES}
           type="email"
           autoComplete="email"
-          error={form.errors.email ?? form.errors.contact}
+          error={form.errors.email}
         />
         <EstimateField
           id={`${idPrefix}-city`}
@@ -130,38 +133,35 @@ export function LeadForm({
       />
       {withResume && (
         <div className="mt-4">
-          <label htmlFor={`${idPrefix}-resume`} className={LABEL_CLASSES}>
-            Résumé (PDF or Word)
+          <label htmlFor={`${idPrefix}-resume`} className={`${LABEL_CLASSES} flex min-h-11 cursor-pointer items-center`}>
+            Résumé (PDF, Word or TXT)
           </label>
           <input
             id={`${idPrefix}-resume`}
-            name="resume"
+            name="resume" required
             type="file"
-            accept=".pdf,.doc,.docx,.txt,.rtf"
+            accept={RESUME_ACCEPT}
+            disabled={busy || form.status === "success"}
             aria-invalid={Boolean(form.errors.resume)}
-            aria-describedby={form.errors.resume ? `${idPrefix}-resume-error` : undefined}
-            className="mt-1.5 block w-full cursor-pointer font-poppins text-sm text-ink/80 file:mr-3 file:rounded-md file:border file:border-action file:bg-white file:px-3.5 file:py-2 file:font-poppins file:text-sm file:font-semibold file:text-action-deep hover:file:bg-sage"
+            aria-describedby={`${idPrefix}-resume-help${form.errors.resume ? ` ${idPrefix}-resume-error` : ""}`}
+            className="mt-1.5 block min-h-11 w-full min-w-0 cursor-pointer font-poppins text-sm text-ink/80 file:mr-3 file:min-h-11 file:rounded-md file:border file:border-action file:bg-white file:px-3.5 file:py-2 file:font-poppins file:text-sm file:font-semibold file:text-action-deep hover:file:bg-sage"
           />
           {form.errors.resume && (
-            <p id={`${idPrefix}-resume-error`} className="mt-1.5 font-poppins text-xs text-red-700">
+            <p id={`${idPrefix}-resume-error`} className="mt-1.5 font-poppins text-sm text-red-700">
               {form.errors.resume}
             </p>
           )}
-          <p className="mt-1.5 font-poppins text-xs text-ink/60">
-            Submitting sends your details and résumé filename to the office; the team follows up
-            by email to collect the document. You can also send it to{" "}
-            <a href="mailto:workorders@tubroconstruction.com" className="underline underline-offset-2">
-              workorders@tubroconstruction.com
-            </a>
-            .
+          <p id={`${idPrefix}-resume-help`} className="mt-1.5 font-poppins text-sm text-ink/70">
+            One PDF, Word or TXT file, up to 25 MB. Your résumé uploads with your application.
+            If the upload fails, we’ll send your details and let you know how to email the résumé.
           </p>
         </div>
       )}
       <div className="mt-5">
-        <label className="flex cursor-pointer gap-3 font-poppins text-xs leading-relaxed text-ink/75">
+        <label className="flex cursor-pointer gap-3 font-poppins text-sm leading-relaxed text-ink/75">
           <input
             type="checkbox"
-            name="consent"
+            name="consent" required
             aria-invalid={Boolean(form.errors.consent)}
             aria-describedby={form.errors.consent ? `${idPrefix}-consent-error` : undefined}
             className="mt-0.5 size-4 shrink-0 accent-[#0C883D]"
@@ -169,15 +169,16 @@ export function LeadForm({
           Tubro Construction may contact me about this request by phone or email.
         </label>
         {form.errors.consent && (
-          <p id={`${idPrefix}-consent-error`} className="mt-1.5 font-poppins text-xs text-red-700">
+          <p id={`${idPrefix}-consent-error`} className="mt-1.5 font-poppins text-sm text-red-700">
             {form.errors.consent}
           </p>
         )}
       </div>
+      {form.errors.projectType && <p role="alert" className="mt-3 text-sm text-red-800">{form.errors.projectType}</p>}
       <button
         type="button"
         onClick={form.validateAndSubmit}
-        disabled={busy}
+        disabled={busy || form.status === "success"}
         className="group mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2.5 rounded-md bg-action px-6 py-3 font-poppins text-[15px] font-semibold text-white shadow-md shadow-action/25 transition-colors hover:bg-action-deep disabled:cursor-wait disabled:opacity-75 sm:w-auto"
       >
         {busy ? (
@@ -192,8 +193,10 @@ export function LeadForm({
           </>
         )}
       </button>
-      <EstimateStatusNote
+      <RecaptchaWidget ref={form.captchaRef} />
+      <EstimateStatusNote errorNote={form.errorMessage}
         status={form.status}
+        attachment={form.attachment}
         topic={withResume ? "application" : "estimate request"}
         idleNote={
           withResume
@@ -201,11 +204,6 @@ export function LeadForm({
             : submitLabel === "Send Message"
               ? "No spam — your message goes straight to the Tubro office."
               : "Free estimate. No spam — your details go straight to the Tubro team."
-        }
-        successNote={
-          withResume
-            ? "Thanks — your application details are in. The office follows up by email to collect your résumé document; you can also send it to workorders@tubroconstruction.com."
-            : undefined
         }
       />
     </form>

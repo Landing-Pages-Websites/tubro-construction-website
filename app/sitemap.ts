@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_ROUTES } from "@/lib/routes";
-import { blogPosts } from "@/lib/blog-posts";
+import { blogPosts, legacyPages } from "@/lib/blog-posts";
 
 const BASE_URL = "https://www.tubroconstruction.com";
 
@@ -8,5 +8,5 @@ const BASE_URL = "https://www.tubroconstruction.com";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [...SITE_ROUTES.map((route) => ({
     url: `${BASE_URL}${route.path}`,
-  })), ...blogPosts.map((post) => ({ url: `${BASE_URL}/blog/${post.slug}` }))];
+  })), ...[...blogPosts, ...legacyPages].map((post) => ({ url: `${BASE_URL}${post.canonicalPath}` }))];
 }

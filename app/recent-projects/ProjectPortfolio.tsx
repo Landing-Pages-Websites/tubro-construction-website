@@ -18,7 +18,7 @@ export default function ProjectPortfolio(): ReactElement {
   const [selected, setSelected] = useState<number | null>(null);
   function open(project: Project): void { setSelected(projects.findIndex((item) => item.id === project.id)); }
   function step(delta: number): void { setSelected((current) => current === null ? null : (current + delta + projects.length) % projects.length); }
-  return <main ref={entranceRoot} className={s.portfolio}>
+  return <main ref={entranceRoot} className={s.portfolio} id="main-content" tabIndex={-1}>
     <FeaturedProjects onOpen={open} />
     <section id="our-foundation" className={s.foundation} aria-label="Our foundation">
       <p data-text-enter="heading">Built here.<br /><strong>Made for living.</strong></p>

@@ -37,8 +37,8 @@ export function ContentEditorialIndexToc(props: SectionProps): ReactElement {
   const [evidence] = images;
   return (
     <SectionShell section={section} band={band} labelledBy={headingId}>
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-x-14 gap-y-10 lg:grid-cols-[10fr_9fr]">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 max-[359px]:[overflow-wrap:anywhere]">
+        <div className="grid grid-cols-1 gap-x-14 gap-y-10 lg:grid-cols-[10fr_9fr]">
           <div>
             <span aria-hidden="true" className="mb-8 block h-0.5 w-full bg-action" />
             <SectionIntro section={section} headingId={headingId} as={isFirst ? "h1" : "h2"} />
@@ -76,14 +76,14 @@ export function ContentEditorialIndexToc(props: SectionProps): ReactElement {
             <ContextLinks links={links} className="mt-8" />
           </div>
           <div className="self-start border border-ink/10 bg-white p-6 shadow-md shadow-ink/5 sm:p-9">
-            <p className="font-fjalla text-xs tracking-[0.12em] uppercase text-action-deep">
+            <p className="font-fjalla text-sm tracking-[0.12em] uppercase text-action-deep">
               Section index
             </p>
             <ol className="mt-4">
               {indexRows.map((row, index) => (
                 <li
                   key={row}
-                  className="grid grid-cols-[48px_1fr] items-baseline gap-4 border-b border-ink/15 py-4"
+                  className="grid grid-cols-[48px_minmax(0,1fr)] max-[359px]:grid-cols-1 items-baseline gap-4 border-b border-ink/15 py-4"
                 >
                   <span aria-hidden="true" className="font-fjalla text-2xl leading-none text-action">
                     {String(index + 1).padStart(2, "0")}

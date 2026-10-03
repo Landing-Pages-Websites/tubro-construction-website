@@ -12,13 +12,12 @@ import { CapabilitiesA } from "@/components/variant-a/CapabilitiesA";
 import { ProcessA } from "@/components/variant-a/ProcessA";
 import { GalleryA } from "@/components/variant-a/GalleryA";
 import { EstimateA } from "@/components/variant-a/EstimateA";
-import { HERO } from "@/lib/content";
+import { siteMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Residential Remodeling in King & Pierce Counties | Tubro Construction",
-  description: HERO.body,
-  alternates: { canonical: "/" },
-};
+export const metadata: Metadata = siteMetadata(
+  "Residential Remodeling in King & Pierce Counties | Tubro",
+  "Plan your kitchen, bathroom, addition or whole-home remodel with Tubro Construction. Clear pricing, careful craftsmanship and assigned project management.", "/",
+);
 
 /** The customer-selected Direction A "Measured Living" homepage. */
 export default function HomePage(): ReactElement {
@@ -26,7 +25,7 @@ export default function HomePage(): ReactElement {
     <div className="variant-a homepage-motion" data-motion-variant="a">
       <HomepageMotion />
       <SiteHeader />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <HeroA />
         <ProofRailA />
         <RoomStoriesA />

@@ -24,7 +24,7 @@ export default function Page(): ReactElement {
   return (
     <div className={styles.site}>
       <SiteHeader />
-      <main className={styles.page}>
+      <main className={styles.page} id="main-content" tabIndex={-1}>
         <ContactMotion />
         <section className={styles.desk} aria-labelledby="contact-heading">
           <div className={styles.topline}>

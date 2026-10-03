@@ -1,10 +1,11 @@
 "use client";
 
-const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "";
+import { useEffect } from "react";
+const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
 
 export function RecaptchaBootstrap(): null {
-  if (typeof document !== "undefined" && SITE_KEY) {
+  useEffect(() => {
     document.documentElement.dataset.recaptchaSitekey = SITE_KEY;
-  }
+  }, []);
   return null;
 }

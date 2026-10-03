@@ -22,7 +22,7 @@ export function BathroomTimeline({ section, band, links, isFirst }: SectionProps
   const Heading = isFirst ? "h1" : "h2";
   return (
     <SectionShell section={section} band={band} labelledBy={headingId}>
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:gap-14 sm:px-8 lg:grid-cols-[.85fr_1.15fr] lg:gap-20">
+      <div className="mx-auto grid grid-cols-1 max-[359px]:[overflow-wrap:anywhere] max-w-7xl gap-10 px-5 sm:gap-14 sm:px-8 lg:grid-cols-[.85fr_1.15fr] lg:gap-20">
         <div className="lg:pt-5">
           <Heading id={headingId} className="max-w-lg text-[34px] leading-[1.15] font-semibold tracking-tight text-balance sm:text-[44px] lg:text-[48px]">
             A better bathroom starts with <span className="text-action-deep">clearer scope.</span>
@@ -37,7 +37,7 @@ export function BathroomTimeline({ section, band, links, isFirst }: SectionProps
             const Icon = stepIcons[index % stepIcons.length];
             const isLast = index === steps.length - 1;
             return (
-              <li key={step.number} className={`relative grid grid-cols-[48px_1fr] gap-x-5 sm:grid-cols-[56px_1fr] sm:gap-x-8 ${isLast ? "" : "pb-8 sm:pb-10"}`}>
+              <li key={step.number} className={`relative grid grid-cols-[48px_minmax(0,1fr)] gap-x-5 sm:grid-cols-[56px_1fr] sm:gap-x-8 ${isLast ? "" : "pb-8 sm:pb-10"}`}>
                 {!isLast && <span aria-hidden="true" className="absolute top-12 bottom-0 left-[23px] w-px bg-action-deep/35 sm:top-14 sm:left-[27px]" />}
                 <div className="relative flex size-12 items-center justify-center sm:size-14">
                   <svg aria-hidden="true" viewBox="0 0 56 56" className="absolute inset-0 size-full text-action-deep" fill="none">
@@ -47,7 +47,7 @@ export function BathroomTimeline({ section, band, links, isFirst }: SectionProps
                   <span aria-hidden="true" className={`relative text-base font-semibold tabular-nums ${isLast ? "text-white" : "text-action-deep"}`}>{step.number}</span>
                 </div>
                 <div className={`min-w-0 pt-2 sm:pt-3 ${isLast ? "" : "border-b border-action-deep/20 pb-7 sm:pb-8"}`}>
-                  <div className="flex items-center justify-between gap-3">
+                  <div className="flex items-center justify-between gap-3 max-[359px]:flex-wrap">
                     <h3 className="text-xl leading-7 font-semibold tracking-tight sm:text-2xl">{step.title}</h3>
                     <Icon aria-hidden="true" className="size-6 shrink-0 text-action-deep" strokeWidth={1.5} />
                   </div>

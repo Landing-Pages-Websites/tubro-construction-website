@@ -3,12 +3,12 @@
 .heroStage img { object-fit: cover; object-position: center 56%; }
 .lightboxStage img { object-fit: contain; }
 .lightboxStage .incoming { background: var(--color-ink); }
-.caption > span { font-size: 12px; }
+.caption > span { font-size: 14px; }
 .incoming { opacity: 0; }
 .ready { opacity: 1; }
 .photoError { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%,-50%); min-width: 210px; padding: 20px 24px; background: var(--color-ink); color: var(--color-plaster); text-align: center; pointer-events: auto; }
-.photoError p { font-size: 13px; margin: 0 0 12px; }
-.photoError button { min-height: 44px; padding: 10px 18px; border: 1px solid var(--color-plaster); font-size: 12px; }
+.photoError p { font-size: 14px; margin: 0 0 12px; }
+.photoError button { min-height: 44px; padding: 10px 18px; border: 1px solid var(--color-plaster); font-size: 14px; }
 .photoError button:hover { background: var(--color-action-deep); }
 .photoError button:focus-visible { outline-color: var(--color-plaster); }
 .nav { position: relative; }

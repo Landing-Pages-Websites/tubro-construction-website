@@ -65,7 +65,7 @@ export function FilterableFilmstrip({ images, categories }: FilterableFilmstripP
               </div>
               <p
                 aria-hidden="true"
-                className="mt-2 font-fjalla text-xs tracking-[0.12em] uppercase text-white/80"
+                className="mt-2 font-fjalla text-sm tracking-[0.12em] uppercase text-white/80"
               >
                 Frame {String(index + 1).padStart(2, "0")}
               </p>

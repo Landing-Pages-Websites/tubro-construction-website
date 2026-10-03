@@ -24,8 +24,8 @@ function collectTargets(root: HTMLElement): MotionTarget[] {
   root.querySelectorAll<HTMLElement>(`main h2, ${DETAIL_SELECTOR}`).forEach(element => {
     const index = element.matches("li") ? Array.from(element.parentElement!.children).indexOf(element) : 0;
     targets.push({ element, duration: 600, delay: Math.min(index, 3) * 70, frames: [
-      { opacity: 0.3, translate: "0 20px" },
-      { opacity: 1, translate: "0 0" },
+      { translate: "0 20px" },
+      { translate: "0 0" },
     ] });
   });
   return targets;
@@ -52,7 +52,7 @@ function observeMotion(root: HTMLElement): () => void {
       if (target && !entry.target.contains(document.activeElement)) playTarget(target, active);
       observer.unobserve(entry.target);
     });
-  }, { threshold: 0.12, rootMargin: "0px 0px -24px 0px" });
+  }, { threshold: 0, rootMargin: "0px 0px -24px 0px" });
   targets.forEach(target => {
     // Hydration never moves content already visible, including an anchor landing.
     if (target.element.getBoundingClientRect().top >= window.innerHeight) observer.observe(target.element);

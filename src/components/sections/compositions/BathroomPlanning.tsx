@@ -17,8 +17,8 @@ export function BathroomPlanning({ section, images, band, links, isFirst }: Sect
   const [photo] = images;
   return (
     <SectionShell section={section} band={band} labelledBy={headingId}>
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid items-end gap-6 lg:grid-cols-[3fr_2fr] lg:gap-20">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 max-[359px]:[overflow-wrap:anywhere]">
+        <div className="grid grid-cols-1 items-end gap-6 lg:grid-cols-[3fr_2fr] lg:gap-20">
           <Heading id={headingId} className="max-w-3xl text-[32px] leading-[1.15] font-semibold tracking-tight text-balance sm:text-[42px] lg:text-[46px]">
             Showers, conversions, fixtures, storage, and finishes <span className="text-action-deep">need one plan.</span>
           </Heading>
@@ -29,7 +29,7 @@ export function BathroomPlanning({ section, images, band, links, isFirst }: Sect
           {photo && (
             <figure className="min-w-0">
               <DesignImage image={photo} withTab={false} frameClassName="aspect-[4/3] sm:aspect-[6/5] lg:aspect-auto lg:h-[490px]" sizes="(min-width: 1280px) 620px, (min-width: 1024px) 50vw, 100vw" />
-              <figcaption className="flex flex-wrap justify-between gap-x-4 gap-y-2 border-b border-ink/15 py-4 text-xs leading-5 text-ink/70">
+              <figcaption className="flex flex-wrap justify-between gap-x-4 gap-y-2 border-b border-ink/15 py-4 text-sm leading-5 text-ink/70">
                 <span>{photo.label}</span>
                 <span>Bathroom remodeling</span>
               </figcaption>

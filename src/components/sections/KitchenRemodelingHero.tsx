@@ -25,13 +25,13 @@ export function KitchenRemodelingHero({ section, images, band, links, ctaTarget,
           <ContextLinks links={links} className="mt-4" />
         </div>
         {primary && (
-          <div className="relative min-w-0 pb-12 sm:pb-16">
-            <div className="relative ml-6 sm:ml-10">
+          <div className="relative min-w-0 pb-12 max-[359px]:pb-0 sm:pb-16">
+            <div className="relative ml-6 max-[359px]:ml-0 sm:ml-10">
               <CropCorners corners={["tl", "tr"]} className="-m-2 sm:-m-3" />
               <DesignImage image={primary} frameClassName="aspect-[4/3] lg:aspect-[6/5]" sizes="(min-width: 1280px) 584px, (min-width: 1024px) 48vw, (min-width: 640px) 85vw, 90vw" priority={isFirst} tabPosition="top-left" objectPosition="50% 60%" />
             </div>
             {secondary && (
-              <div className="absolute bottom-0 left-0 w-[48%] border-r-[6px] border-t-[6px] border-plaster sm:w-[46%] sm:border-r-8 sm:border-t-8">
+              <div className="absolute max-[359px]:relative max-[359px]:mt-4 max-[359px]:w-full max-[359px]:border-0 bottom-0 left-0 w-[48%] border-r-[6px] border-t-[6px] border-plaster sm:w-[46%] sm:border-r-8 sm:border-t-8">
                 <DesignImage image={secondary} frameClassName="aspect-[4/3]" sizes="(min-width: 1280px) 280px, (min-width: 1024px) 24vw, 44vw" priority={isFirst} objectPosition="50% 65%" />
               </div>
             )}

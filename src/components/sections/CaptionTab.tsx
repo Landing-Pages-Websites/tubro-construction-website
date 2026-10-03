@@ -17,7 +17,7 @@ const POSITIONS: Record<NonNullable<CaptionTabProps["position"]>, string> = {
 export function CaptionTab({ label, position = "bottom-left", className }: CaptionTabProps): ReactElement {
   return (
     <span
-      className={`absolute ${POSITIONS[position]} border border-action bg-white px-2.5 py-1 font-poppins text-xs font-semibold text-action-deep shadow-sm ${className ?? ""}`}
+      className={`absolute max-w-[calc(100%-24px)] max-[359px]:[overflow-wrap:anywhere] ${POSITIONS[position]} border border-action bg-white px-2.5 py-1 font-poppins text-sm font-semibold text-action-deep shadow-sm ${className ?? ""}`}
     >
       {label}
     </span>

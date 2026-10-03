@@ -6,13 +6,23 @@ import { Suspense } from "react";
 import { MobileEstimateCta } from "@/components/shared/MobileEstimateCta";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { PostHogProvider } from "@/components/analytics/PostHogProvider";
+import { siteMetadata, businessSchema } from "@/lib/seo";
 import { RecaptchaBootstrap } from "@/components/analytics/RecaptchaBootstrap";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "600", "700", "800"],
   variable: "--font-poppins",
   display: "swap",
+});
+
+// Next 15 emits the same Poppins family for both declarations; keep every real weight.
+const poppinsDeferred = Poppins({
+  subsets: ["latin"],
+  weight: "500",
+  variable: "--font-poppins",
+  display: "swap",
+  preload: false,
 });
 
 const fjallaOne = Fjalla_One({
@@ -24,16 +34,15 @@ const fjallaOne = Fjalla_One({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.tubroconstruction.com"),
-  title: "Tubro Construction | Residential Remodeling in King & Pierce Counties",
-  description:
-    "Tubro Construction brings kitchens, bathrooms, additions, and whole-home renovations to life with clear pricing, careful craftsmanship, and an assigned project manager.",
+  ...siteMetadata("Tubro Construction | King & Pierce County Remodeling", "Plan your kitchen, bathroom, addition or whole-home remodel with Tubro Construction. Serving King and Pierce Counties with free estimates.", "/"),
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>): ReactElement {
   return (
-    <html lang="en" className={`${poppins.variable} ${fjallaOne.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${poppinsDeferred.variable} ${fjallaOne.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: `window.MEGA_TAG_CONFIG={siteKey:"9408e00b76f9qp21"};window.API_ENDPOINT="https://optimizer.gomega.ai";window.TRACKING_API_ENDPOINT="https://events-api.gomega.ai";` }} />
         <script src="https://cdn.gomega.ai/scripts/optimizer.min.js" async />
@@ -44,7 +53,12 @@ export default function RootLayout({
           defer
         />
       </head>
-      <body><GoogleAnalytics /><RecaptchaBootstrap /><PostHogProvider><Suspense fallback={null}><MobileEstimateCta />{children}</Suspense></PostHogProvider></body>
+      <body>
+        <nav aria-label="Skip navigation"><a className="skip-link" href="#main-content">Skip to main content</a></nav>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} />
+        <GoogleAnalytics /><RecaptchaBootstrap />
+        <PostHogProvider>{children}<Suspense fallback={null}><MobileEstimateCta /></Suspense></PostHogProvider>
+      </body>
     </html>
   );
 }

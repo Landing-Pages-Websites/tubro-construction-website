@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 export default function Page(): ReactElement {
   return (
     <div className={styles.page}>
-      <a className={styles.skip} href="#hero">Skip to main content</a>
+
       <SiteHeader />
-      <main id="blog-content">
+      <main id="main-content" tabIndex={-1}>
         <BlogMotion />
         <BlogIntro />
         <BlogGrid />

@@ -20,7 +20,7 @@ export default function EstimateMotion({ children }: { children: ReactNode }): R
         played.add(element);
         observer.unobserve(element);
       });
-    }, { rootMargin: "0px 0px -6% 0px", threshold: 0.08 });
+    }, { rootMargin: "0px 0px -6% 0px", threshold: 0 });
     const configure = (): void => {
       observer.disconnect();
       pending.forEach((animation) => animation.cancel());
@@ -33,8 +33,8 @@ export default function EstimateMotion({ children }: { children: ReactNode }): R
         const heading = element.dataset.estimateEnter === "heading";
         const distance = heading && window.innerWidth > 700 ? 22 : 12;
         const animation = element.animate([
-          { opacity: 0, transform: `translateY(${distance}px)` },
-          { opacity: 1, transform: "translateY(0)" },
+          { transform: `translateY(${distance}px)` },
+          { transform: "translateY(0)" },
         ], { duration: heading ? 650 : 500, delay: Number(element.dataset.estimateDelay || 0), easing: EASING, fill: "both" });
         animation.pause();
         animation.onfinish = () => { animation.cancel(); pending.delete(element); };
@@ -57,5 +57,5 @@ export default function EstimateMotion({ children }: { children: ReactNode }): R
     element?.addEventListener("focusin", revealFocus);
     return () => { disposed = true; observer.disconnect(); pending.forEach((animation) => animation.cancel()); preference.removeEventListener("change", configure); element?.removeEventListener("focusin", revealFocus); };
   }, []);
-  return <main ref={root}>{children}</main>;
+  return <main ref={root} id="main-content" tabIndex={-1}>{children}</main>;
 }

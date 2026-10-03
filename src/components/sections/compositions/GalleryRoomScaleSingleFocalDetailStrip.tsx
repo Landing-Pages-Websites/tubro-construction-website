@@ -27,8 +27,8 @@ export function GalleryRoomScaleSingleFocalDetailStrip({
   const [focal, ...details] = images;
   return (
     <SectionShell section={section} band={band} labelledBy={headingId}>
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-6 lg:grid-cols-[13fr_7fr]">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 max-[359px]:[overflow-wrap:anywhere]">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[13fr_7fr]">
           {focal && (
             <DesignImage
               image={focal}
@@ -37,7 +37,7 @@ export function GalleryRoomScaleSingleFocalDetailStrip({
               priority={isFirst}
             />
           )}
-          <div className="relative border border-ink/10 bg-plaster p-7 sm:p-9">
+          <div className="relative border border-ink/10 bg-plaster p-7 max-[359px]:p-3 sm:p-9">
             <CropCorners corners={["tr", "br"]} className="-m-2" />
             <SectionIntro section={section} headingId={headingId} as={isFirst ? "h1" : "h2"} />
             {section.content.bullets.length > 0 && (
@@ -55,7 +55,7 @@ export function GalleryRoomScaleSingleFocalDetailStrip({
         {details.length > 0 && (
           <div className="relative mt-6">
             <CropCorners corners={["bl"]} className="-m-2" />
-            <ul className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <ul className="grid grid-cols-2 max-[359px]:grid-cols-1 gap-4 sm:grid-cols-4">
               {details.map((image) => (
                 <li key={image.src}>
                   <DesignImage

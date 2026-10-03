@@ -25,6 +25,6 @@ Research, SEO planning, and writing were delegated separately. Articles use orig
 
 ## Adding an article
 
-Store each article as a JSON file in `src/lib/blog-content/`, then import it into the typed `blogPosts` array in `src/lib/blog-posts.ts`. The listing, static route params, article metadata, related links, and XML sitemap derive from that registry. Related reading prioritizes the current article's category and is capped at three suggestions. Keep each article's category mapped to its relevant service in `ArticleBody.tsx`. Do not add articles to `DESIGNED_ROUTES`, which requires separate page-design manifests.
+Store each article as an item-id-bearing Markdown file in `content/blog/`. The actual server-side reader is `src/lib/blog-posts.ts`; see `content/blog/README.md` for the migration and identity contract. The listing, routes, related reading and sitemap derive from those files. The JSON directory is retained only as provenance.
 
 Check source links and jurisdiction-specific guidance before publishing, use a truthful publication date, and use an image with verified provenance. The article template supplies a canonical URL, social preview, `BlogPosting` structured data, contents links, source list, and estimate CTA. It inherits the site's current canonical host; changing domains belongs to the site-wide launch configuration.

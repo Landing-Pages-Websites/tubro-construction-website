@@ -1,5 +1,6 @@
 import type { ReactElement } from "react";
 import { BRAND } from "@/lib/content";
+import type { AttachmentStatus } from "@/lib/lead-uploads";
 import type { EstimateStatus } from "@/hooks/useEstimateForm";
 
 interface EstimateStatusNoteProps {
@@ -10,6 +11,8 @@ interface EstimateStatusNoteProps {
   idleNote?: string;
   /** Full success sentence override (must stay honest about what was sent). */
   successNote?: string;
+  errorNote?: string;
+  attachment?: AttachmentStatus;
 }
 
 export function EstimateStatusNote({
@@ -17,25 +20,28 @@ export function EstimateStatusNote({
   topic = "estimate request",
   idleNote = "Free estimate. No spam — your details go straight to the Tubro team.",
   successNote,
+  errorNote,
+  attachment = "none",
 }: EstimateStatusNoteProps): ReactElement {
   return (
     <div aria-live="polite" className="mt-4 font-poppins text-sm">
       {status === "success" && (
         <p role="status" className="rounded-md border border-action/40 bg-sage px-4 py-3 text-action-deep">
-          {successNote ??
-            `Thanks — your ${topic} is in. The team follows up during business hours, ${BRAND.hours}.`}
+          {attachment === "uploaded" ? "Thanks — your résumé uploaded with your application. Attachment scanning may delay its availability by email."
+            : attachment === "failed" ? <>Your application details were sent, but your résumé was not sent. Please email it to{" "}
+              <a href="mailto:workorders@tubroconstruction.com" className="inline-flex min-h-11 max-w-full items-center break-all font-semibold underline underline-offset-2">workorders@tubroconstruction.com</a>.
+            </> : successNote ?? `Thanks — your ${topic} is in. The team follows up during business hours, ${BRAND.hours}.`}
         </p>
       )}
       {status === "error" && (
         <p role="alert" className="rounded-md border border-red-300 bg-red-50 px-4 py-3 text-red-800">
-          Something went wrong sending your request. Please try again, or call{" "}
-          <a href={BRAND.phoneHref} className="font-semibold underline underline-offset-2">
+          {errorNote || "Something went wrong sending your request. Please try again."} Call{" "}
+          <a href={BRAND.phoneHref} className="inline-flex min-h-11 items-center font-semibold underline underline-offset-2">
             {BRAND.phoneDisplay}
-          </a>
-          .
+          </a>.
         </p>
       )}
-      {status === "idle" && <p className="text-center text-xs text-ink/70">{idleNote}</p>}
+      {status === "idle" && <p className="text-center text-sm text-ink/70">{idleNote}</p>}
     </div>
   );
 }

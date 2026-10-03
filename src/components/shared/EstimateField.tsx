@@ -1,3 +1,4 @@
+import { EMAIL_PATTERN, PHONE_PATTERN } from "@/lib/lead-validation";
 import type { ReactElement } from "react";
 
 interface EstimateFieldProps {
@@ -36,6 +37,8 @@ export function EstimateField({
     id,
     name,
     defaultValue,
+    required: ["name", "email", "phone", "projectDetails"].includes(name),
+    maxLength: name === "projectDetails" ? 5000 : name === "email" ? 254 : 150,
     placeholder: label,
     "aria-invalid": isInvalid,
     "aria-describedby": isInvalid ? errorId : undefined,
@@ -50,10 +53,10 @@ export function EstimateField({
       {multiline ? (
         <textarea {...shared} rows={4} className={`${shared.className} resize-y`} />
       ) : (
-        <input {...shared} type={type} autoComplete={autoComplete} />
+        <input {...shared} type={type} autoComplete={autoComplete} pattern={type === "email" ? EMAIL_PATTERN : type === "tel" ? PHONE_PATTERN : undefined} />
       )}
       {error && (
-        <p id={errorId} className="mt-1.5 font-poppins text-xs text-red-700">
+        <p id={errorId} className="mt-1.5 font-poppins text-sm text-red-700">
           {error}
         </p>
       )}

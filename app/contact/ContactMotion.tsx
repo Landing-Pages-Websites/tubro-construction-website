@@ -26,7 +26,7 @@ export function ContactMotion(): null {
           seen.add(target);
           observer?.unobserve(target);
         });
-      }, { threshold: 0.12 });
+      }, { threshold: 0 });
       targets.forEach((target) => {
         if (seen.has(target)) return;
         if (target.getBoundingClientRect().top < window.innerHeight) {

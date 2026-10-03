@@ -24,8 +24,8 @@ export function PolicyEditorialDocument({
   const headings = section.content.bullets.length > 0 ? section.content.bullets : section.content.items;
   return (
     <SectionShell section={section} band={band} labelledBy={headingId}>
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-x-16 gap-y-12 lg:grid-cols-[4fr_5fr]">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 max-[359px]:[overflow-wrap:anywhere]">
+        <div className="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-[4fr_5fr]">
           <div>
             <SectionIntro section={section} headingId={headingId} as={isFirst ? "h1" : "h2"} />
             {(section.content.cta || section.content.secondary_cta) && (
@@ -44,17 +44,17 @@ export function PolicyEditorialDocument({
           </div>
           <div className="relative border border-ink/10 bg-white px-6 py-8 shadow-lg shadow-ink/5 sm:px-10 sm:py-10">
             <span aria-hidden="true" className="absolute top-0 right-0 h-0.5 w-1/2 bg-action" />
-            <p className="font-fjalla text-xs tracking-[0.12em] text-action-deep uppercase">Policy sections</p>
+            <p className="font-fjalla text-sm tracking-[0.12em] text-action-deep uppercase">Policy sections</p>
             <ol className="mt-4">
               {headings.map((heading, index) => (
                 <li
                   key={heading}
-                  className="grid grid-cols-[52px_1fr] items-baseline gap-x-4 border-b border-ink/15 py-5 last:border-b-0"
+                  className="grid grid-cols-[52px_minmax(0,1fr)] max-[359px]:grid-cols-1 items-baseline gap-x-4 border-b border-ink/15 py-5 last:border-b-0"
                 >
                   <span aria-hidden="true" className="font-fjalla text-2xl leading-none text-action">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="font-poppins text-base font-semibold leading-snug text-ink">{heading}</h3>
+                  <h2 className="font-poppins text-base font-semibold leading-snug text-ink">{heading}</h2>
                 </li>
               ))}
             </ol>
