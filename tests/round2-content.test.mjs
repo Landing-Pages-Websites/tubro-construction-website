@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
 import { readFileSync, readdirSync } from "node:fs";
 import test from "node:test";
 
@@ -17,8 +18,9 @@ const BROKEN = [
   "https://www.cgmimm.com/maple-valley/custom-home-builder/tubro-construction",
 ];
 
-test("Kent description, telephone destination and text change only the three obsolete phone occurrences", () => {
-  const source = read("content/blog/Bathroom-Remodels-Kent-WA.md");
+test("historical round2 Kent phone repair changed only the three obsolete phone occurrences", () => {
+  const source = execFileSync("git", ["show",
+    "2f21f130fd37d4b8013713ea1b6451b3e97c5bf6:content/blog/Bathroom-Remodels-Kent-WA.md"], { encoding: "utf8" });
   assert.equal(source.includes("253-352-4578"), false);
   assert.equal(source.match(/253-216-2633/g)?.length, 3);
   assert.equal(hash(source.replaceAll("253-216-2633", "253-352-4578")),
