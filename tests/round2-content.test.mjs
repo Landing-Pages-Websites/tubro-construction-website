@@ -13,6 +13,8 @@ const BROKEN = [
   "https://globalcatalog.com/tubroconstruction.us",
   "https://teleadreson.com/tubro-construction,26828-maple-valley-black-diamond-rd-se-pmb,-maple-valley,wa-98038-ovKRAKLykQA.html",
   "https://www.announceamerica.com/maple-valley/home-and-garden/tubro-construction",
+  "https://www.bizmaker.org/business-services/tubro-construction",
+  "https://www.cgmimm.com/maple-valley/custom-home-builder/tubro-construction",
 ];
 
 test("Kent description, telephone destination and text change only the three obsolete phone occurrences", () => {
@@ -23,7 +25,7 @@ test("Kent description, telephone destination and text change only the three obs
     "cfd8e880d8bc7919f23643f2ae87bafac4dcd632e855c18c969bc70072a26deb");
 });
 
-test("seven broken destinations become exact plain text; every other backlink byte is preserved", () => {
+test("nine broken destinations become exact plain text; every other backlink byte is preserved", () => {
   let source = read("content/blog/backlinks.md");
   for (const url of BROKEN) {
     assert.equal(source.includes(`href="${url}"`), false, url);

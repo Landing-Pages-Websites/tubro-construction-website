@@ -72,7 +72,7 @@ sourceUrl: "https://www.tubroconstruction.com/backlinks"
 </li>
 <li> https://teleadreson.com/tubro-construction,26828-maple-valley-black-diamond-rd-se-pmb,-maple-valley,wa-98038-ovKRAKLykQA.html
 </li>
-<li> <a href="https://www.cgmimm.com/maple-valley/custom-home-builder/tubro-construction">https://www.cgmimm.com/maple-valley/custom-home-builder/tubro-construction</a>
+<li> https://www.cgmimm.com/maple-valley/custom-home-builder/tubro-construction
 </li>
 <li> <a href="https://www.dewalist.com/services/property-maintenance/property-maintenance-services/tubro-construction-maple-valley-307616.html">https://www.dewalist.com/services/property-maintenance/property-maintenance-services/tubro-construction-maple-valley-307616.html</a>
 </li>
@@ -82,7 +82,7 @@ sourceUrl: "https://www.tubroconstruction.com/backlinks"
 </li>
 <li> <a href="https://freebusinessdirectory.com//search_res_show.php?co=546272&amp;s=CA2449UG01149AC0479FN01237IS06RF19&amp;p=1&amp;n=10&amp;f=">https://freebusinessdirectory.com//search_res_show.php?co=546272&amp;s=CA2449UG01149AC0479FN01237IS06RF19&amp;p=1&amp;n=10&amp;f=</a>
 </li>
-<li> <a href="https://www.bizmaker.org/business-services/tubro-construction">https://www.bizmaker.org/business-services/tubro-construction</a>
+<li> https://www.bizmaker.org/business-services/tubro-construction
 </li>
 <li> <a href="https://maple-valley-wa.opendi.us/8248785.html">https://maple-valley-wa.opendi.us/8248785.html</a>
 </li>

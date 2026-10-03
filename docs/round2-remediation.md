@@ -1,6 +1,8 @@
 # Tubro combined go-live remediation
 
-This is a commit-only staging candidate from `153879ade7a68702dc065a35a5a9764a2cf85be4` on `fix/tubro-golive-r2`. No push, PR, merge, deployment, DNS change, provider configuration access, or task update was performed. Independent review, immutable Preview verification, deployed performance, analytics receipt and lead delivery remain with the controller.
+This is a commit-only staging candidate from `153879ade7a68702dc065a35a5a9764a2cf85be4` on `fix/tubro-golive-r2`. The builder performed no remote actions. The controller has opened PR #19, which is not merged. Independent review, immutable Preview verification, deployed performance, analytics receipt and lead delivery remain with the controller.
+
+The browser, build and performance results below describe the prior candidate at `32e0c4fec2e976d76800925178e1777aca89376d`; they were not rerun for the two-link follow-up documented at the end of this report.
 
 ## Bounded changes
 
@@ -10,7 +12,7 @@ This is a commit-only staging candidate from `153879ade7a68702dc065a35a5a9764a2c
 | Small text | `general-contractor-estimate.module.css`: service-area text and form labels increase from 13 to 14 px. `painting-quote.module.css`: caption, hours and email increase from 12 to 14 px. Existing hierarchy, copy and responsive rules remain. |
 | Contact and article targets | General office links and painting phone/email use real minimum 44 px anchor boxes. Article prose anchors are inline blocks with minimum 44 × 44 px, bounded wrapping and vertical padding in normal flow; adjacent hit areas cannot overlap. Focus/hover styles remain visible. De-anchored long URL text also wraps in list items. No prose-link exception, invisible overlay, negative margin or checker alteration was used. |
 | Legacy company phone | Exactly three `253-352-4578` occurrences in `Bathroom-Remodels-Kent-WA.md` become `253-216-2633`: description, `tel:` href and visible number. Every other byte and the stable identity/path remain unchanged. |
-| Broken backlink destinations | Exactly the seven supplied links in `backlinks.md` become their original visible plain text. All 47 other links, entry order, visible text and identity remain unchanged. `/backlinks` still returns 200. |
+| Broken backlink destinations | Exactly nine supplied links in `backlinks.md` become their original visible plain text: the original seven plus the two newly sampled 404 destinations. All 45 remaining links, entry order, visible text and identity remain unchanged. Prior candidate verification returned 200 for `/backlinks`. |
 | General-contractor startup | `GeneralContractorMotion.tsx` defers animation creation and SVG path measurement to first intersection. Observer-provided rectangles replace synchronous geometry reads. The route-owned hero uses the same Next Image, original photograph, default quality, crop, sizing geometry and preload, with an explicit high fetch priority and accurate responsive `sizes`. Shared image/loading components are untouched. |
 
 The design remains the approved residential service-page composition: Poppins/drafting/foundation imagery for general contracting, Fjalla/project photography/palette and office quote path for painting, and authentic long-form article content. Visible changes are limited to text legibility, normal-flow link spacing and safe wrapping. There is no new design direction or asset transformation.
@@ -50,10 +52,10 @@ All local numeric targets pass. These are supporting local results, **not certif
 
 ## Regression coverage and preservation
 
-- New `tests/round2-content.test.mjs` checks the palette representation and scoped typography, reverses only the three phone substitutions and seven de-anchorings to prove the original whole-file hashes, and locks the inventory and every other Markdown article to their baseline bytes.
+- New `tests/round2-content.test.mjs` checks the palette representation and scoped typography, reverses only the three phone substitutions and nine de-anchorings to prove the original whole-file hashes, and locks the inventory and every other Markdown article to their baseline bytes. The follow-up adds only the two newly reported URLs and updates the test name; the original hash is unchanged.
 - New `tests/general-motion.test.mjs` executes the actual TypeScript boundary with observer/animation mocks. It covers zero eager geometry/path/animation work, authored motion timing and frames, once-only entry, initially visible text, zero-size/already-passed eligibility, reduced-motion toggling, focus, disposal and the no-observer fallback.
 - New `tests/round2-browser.mjs` measures actual anchor and associated label rectangles, target overlap, computed font size, keyboard focus, radio activation, normal/reduced-motion behavior, page errors and document overflow. It does not import or use the existing prose exclusion. The primary matrix covers general, painting and `/blog/kitchen-remodel-cost-washington-state` at 320/390/834/1440. Additional wrapping checks cover `/backlinks`, `/Bathroom-Remodels-Kent-WA` and the Pierce County kitchen-cost article at all four widths. Full axe scans and nine AFTER screenshots cover the three primary pages at 390/834/1440, 900 px viewport height and DPR 1.
-- The existing tests and checker scripts remain unchanged. The new content tests initially failed four expected residual assertions; the motion tests initially failed four eager/preference/focus assertions. Their red outputs are retained outside Git.
+- Tests predating round2 and all checker scripts remain unchanged. The new content tests initially failed four expected residual assertions; the motion tests initially failed four eager/preference/focus assertions. Their red outputs are retained outside Git.
 - All **102 unique sitemap routes** returned direct 200 responses with no redirects. Existing identity tests retain **54 migrated + 13 authored articles**. Inventory provenance is unchanged. A separate baseline comparison proves 46 analytics, library and API source files unchanged, including the complete lead/CAPTCHA/upload/notification boundaries.
 - No lead was sent. Local browser lead requests are aborted. Existing unit tests exercise the real handlers with isolated/intercepted external dependencies. No external backlinks were replaced with invented destinations.
 
@@ -84,3 +86,18 @@ Read the supplied customer-website-delivery, frontend-design, verify/ship guidan
 No installed `superpowers`, `simplify` or slash `code-review` entry point was found in the supplied skills root. Per the task's permitted fallback, manual simplify/reuse and code-quality review were performed. The motion code has one observer and one lifecycle; it reuses existing selectors and motion frames instead of adding a parallel animation system. Shared providers, forms, image component, dependencies and routes are untouched. New/rewritten helpers are at most 30 lines, have explicit TypeScript return types where applicable, and stay below 500 lines per file. Async test runners report contextual failures. No `any`, debug logging, debugger, dead code, hidden content or security bypass was added.
 
 Visual review compared the supplied desktop BEFORE screenshots with AFTER general/painting captures and inspected mobile/tablet views and article link crops. Photography, logos, copy hierarchy, drafting marks, ledger/process geometry and page signatures remain intact. Contact rows and article links have the intended extra space; long text wraps within its container. This is the builder's self-review, not the controller's independent review or a deployed QA verdict.
+
+## Two-link external-crawl follow-up
+
+The controller's canonical sweep at `/var/lib/megaclaw/workspace/tubro-evidence/r2-feature-sweep.json`, graded at `2026-10-03T11:27:31Z`, records two more 404 destinations on the immutable Git feature Preview `https://tubro-construction-website-1rfalguqj-mega-websites.vercel.app`:
+
+- `https://www.bizmaker.org/business-services/tubro-construction`
+- `https://www.cgmimm.com/maple-valley/custom-home-builder/tubro-construction`
+
+The controller reports these were newly included in the 40-link sample after the original seven removals. This is the same external-links residual. The sweep records passing NAP consistency across 102 checked routes; the controller also reports 25 passing feature browser cases. Those results precede this follow-up and are not a fresh deployed verdict for it.
+
+Only `content/blog/backlinks.md`, `tests/round2-content.test.mjs` and this report change from `32e0c4fec2e976d76800925178e1777aca89376d`. Exactly two anchor wrappers are removed, retaining their exact visible text and every other body byte. The original seven remain plain text; all 45 remaining hrefs and their order are unchanged. The expanded test reverses all nine removals to the unchanged original SHA-256 `8590cbafad00a653dc5fe4432c24fba6eda6c9c265464b1bd19ef76aa3544ca6`, independently confirmed against the genuine file at `153879ade7a68702dc065a35a5a9764a2cf85be4`.
+
+The expanded regression failed as expected before the two content edits. Manual simplify and code review confirmed the existing reversal loop needs only the two new URLs and the updated test name; no helper, checker, source-code, performance-test, inventory or identity changes are needed. No build or browser rerun was performed for this Markdown-only repair. Work remains local and commit-only under `--no-remote`; the controller owns the push, Git deployment checks and re-request to `website-pr-review-mega` on the exact committed head.
+
+Follow-up validation: `npm test` exits 0 with all 93 tests passing, including the nine-link original-hash reversal. A separate byte comparison confirms exactly the two requested anchor removals and preservation of the remaining 45 hrefs and their order. `git diff --check` exits 0.
