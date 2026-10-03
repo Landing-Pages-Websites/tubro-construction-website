@@ -3,91 +3,138 @@
 import { useEffect, useRef, type ReactElement, type ReactNode } from "react";
 
 const EASING = "cubic-bezier(0.16, 1, 0.3, 1)";
+const TEXT_DURATION = 650;
+const IMAGE_DURATION = 900;
+const RULER_DURATION = 1100;
+const PATH_DURATION = 1000;
+const TEXT_STAGGER = 75;
+const IMAGE_STAGGER = 65;
+const RULER_DELAY = 80;
+const MAX_TEXT_STAGGER = 4;
+const MAX_IMAGE_STAGGER = 3;
 
 interface MotionTarget {
   element: Element;
-  frames: Keyframe[];
+  frames: () => Keyframe[];
   duration: number;
   delay: number;
   decorative?: boolean;
+  observed?: boolean;
 }
 
-function collectTargets(root: HTMLElement): MotionTarget[] {
-  const targets: MotionTarget[] = [];
-  root.querySelectorAll("main h2, #scope-index li, #process-faq ol > li").forEach(element => {
+interface MotionState {
+  targets: Map<Element, MotionTarget>;
+  animations: Map<Element, Animation>;
+  observer: IntersectionObserver;
+  preference: MediaQueryList;
+  active: boolean;
+}
+
+function textTargets(root: HTMLElement): MotionTarget[] {
+  return Array.from(root.querySelectorAll("main h2, #scope-index li, #process-faq ol > li"), element => {
     const index = element.matches("li") ? Array.from(element.parentElement!.children).indexOf(element) : 0;
-    targets.push({ element, duration: 650, delay: Math.min(index, 4) * 75, frames: [
+    return { element, duration: TEXT_DURATION, delay: Math.min(index, MAX_TEXT_STAGGER) * TEXT_STAGGER, frames: () => [
       { opacity: 0.2, transform: "translateY(24px)" },
       { opacity: 1, transform: "translateY(0)" },
-    ] });
+    ] };
   });
-  root.querySelectorAll("#hero img, #project-proof img").forEach((element, index) => {
-    targets.push({ element, duration: 900, delay: Math.min(index, 3) * 65, decorative: true, frames: [
-      { transform: "scale(1.065)" }, { transform: "scale(1)" },
-    ] });
-  });
-  root.querySelectorAll<SVGElement>("[data-gc-ruler]").forEach(element => {
-    const vertical = element.dataset.gcRuler === "vertical";
-    targets.push({ element, duration: 1100, delay: 80, decorative: true, frames: [
-      { clipPath: vertical ? "inset(0 0 100% 0)" : "inset(0 100% 0 0)" },
-      { clipPath: "inset(0 0 0 0)" },
-    ] });
-  });
-  root.querySelectorAll<SVGPathElement>("#process-faq svg > path").forEach(element => {
-    const length = element.getTotalLength();
-    targets.push({ element, duration: 1000, delay: 0, decorative: true, frames: [
-      { strokeDasharray: `${length}`, strokeDashoffset: `${length}` },
-      { strokeDasharray: `${length}`, strokeDashoffset: "0" },
-    ] });
-  });
-  return targets;
 }
 
-function observeMotion(root: HTMLElement): () => void {
-  const animations = new Map<Element, Animation>();
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      animations.get(entry.target)?.play();
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0 });
+function imageTargets(root: HTMLElement): MotionTarget[] {
+  return Array.from(root.querySelectorAll("#hero img, #project-proof img"), (element, index) => ({
+    element, duration: IMAGE_DURATION, delay: Math.min(index, MAX_IMAGE_STAGGER) * IMAGE_STAGGER,
+    decorative: true, frames: () => [{ transform: "scale(1.065)" }, { transform: "scale(1)" }],
+  }));
+}
 
-  collectTargets(root).forEach(target => {
-    const rect = target.element.getBoundingClientRect();
-    if (!rect.width || !rect.height || rect.bottom <= 0) return;
-    const inView = rect.top < window.innerHeight;
-    // Never pull already-painted reading content out of place on hydration.
-    if (inView && !target.decorative) return;
-    const animation = target.element.animate(target.frames, {
-      duration: target.duration, delay: target.delay, easing: EASING, fill: "both",
-    });
-    animations.set(target.element, animation);
-    animation.onfinish = () => {
-      animation.cancel();
-      animations.delete(target.element);
-    };
-    if (!inView) {
-      animation.pause();
-      observer.observe(target.element);
-    }
+function rulerTargets(root: HTMLElement): MotionTarget[] {
+  return Array.from(root.querySelectorAll<SVGElement>("[data-gc-ruler]"), element => ({
+    element, duration: RULER_DURATION, delay: RULER_DELAY, decorative: true, frames: () => [
+      { clipPath: element.dataset.gcRuler === "vertical" ? "inset(0 0 100% 0)" : "inset(0 100% 0 0)" },
+      { clipPath: "inset(0 0 0 0)" },
+    ],
+  }));
+}
+
+function pathTargets(root: HTMLElement): MotionTarget[] {
+  return Array.from(root.querySelectorAll<SVGPathElement>("#process-faq svg > path"), element => ({
+    element, duration: PATH_DURATION, delay: 0, decorative: true, frames: () => {
+      const length = `${element.getTotalLength()}`;
+      return [
+        { strokeDasharray: length, strokeDashoffset: length },
+        { strokeDasharray: length, strokeDashoffset: "0" },
+      ];
+    },
+  }));
+}
+
+function forgetTarget(state: MotionState, element: Element): void {
+  state.targets.delete(element);
+  state.observer.unobserve(element);
+}
+
+function playTarget(state: MotionState, target: MotionTarget): void {
+  const animation = target.element.animate(target.frames(), {
+    duration: target.duration, delay: target.delay, easing: EASING, fill: "both",
   });
-
-  const revealFocused = (event: FocusEvent): void => {
-    if (!(event.target instanceof Node)) return;
-    animations.forEach((animation, element) => {
-      if (element.contains(event.target as Node)) {
-        animation.cancel();
-        observer.unobserve(element);
-        animations.delete(element);
-      }
-    });
+  state.animations.set(target.element, animation);
+  animation.onfinish = () => {
+    animation.cancel();
+    state.animations.delete(target.element);
   };
-  root.addEventListener("focusin", revealFocused);
+}
+
+function enterTarget(state: MotionState, entry: IntersectionObserverEntry): void {
+  const target = state.targets.get(entry.target);
+  if (!state.active || !target) return;
+  const firstObservation = !target.observed;
+  target.observed = true;
+  const { width, height, bottom } = entry.boundingClientRect;
+  if (!width || !height || bottom <= 0) return forgetTarget(state, entry.target);
+  if (!entry.isIntersecting) return;
+  forgetTarget(state, entry.target);
+  // Keep already-painted text still. Observer geometry avoids synchronous layout reads.
+  if (state.preference.matches || (firstObservation && !target.decorative)) return;
+  playTarget(state, target);
+}
+
+function cancelAnimations(state: MotionState): void {
+  state.animations.forEach(animation => animation.cancel());
+  state.animations.clear();
+}
+
+function revealFocused(state: MotionState, event: FocusEvent): void {
+  const focused = event.target;
+  if (!(focused instanceof Node)) return;
+  const related = (element: Element): boolean => element.contains(focused) || focused.contains(element);
+  state.targets.forEach(({ element }) => {
+    if (related(element)) forgetTarget(state, element);
+  });
+  state.animations.forEach((animation, element) => {
+    if (!related(element)) return;
+    animation.cancel();
+    state.animations.delete(element);
+  });
+}
+
+function observeMotion(root: HTMLElement, preference: MediaQueryList): () => void {
+  const targets = [...textTargets(root), ...imageTargets(root), ...rulerTargets(root), ...pathTargets(root)];
+  const state: MotionState = {
+    targets: new Map(targets.map(target => [target.element, target])), animations: new Map(), preference, active: true,
+    observer: new IntersectionObserver(entries => entries.forEach(entry => enterTarget(state, entry)), { threshold: 0 }),
+  };
+  const focus = (event: FocusEvent): void => revealFocused(state, event);
+  const change = (): void => { if (preference.matches) cancelAnimations(state); };
+  targets.forEach(({ element }) => state.observer.observe(element));
+  root.addEventListener("focusin", focus);
+  preference.addEventListener("change", change);
   return () => {
-    observer.disconnect();
-    animations.forEach(animation => animation.cancel());
-    root.removeEventListener("focusin", revealFocused);
+    state.active = false;
+    state.observer.disconnect();
+    state.targets.clear();
+    cancelAnimations(state);
+    root.removeEventListener("focusin", focus);
+    preference.removeEventListener("change", change);
   };
 }
 
@@ -95,16 +142,8 @@ function observeMotion(root: HTMLElement): () => void {
 export function GeneralContractorMotion({ children }: { children: ReactNode }): ReactElement {
   const root = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (!window.IntersectionObserver || !Element.prototype.animate) return;
-    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let cleanup = (): void => {};
-    const sync = (): void => {
-      cleanup();
-      cleanup = root.current && !preference.matches ? observeMotion(root.current) : (): void => {};
-    };
-    sync();
-    preference.addEventListener("change", sync);
-    return () => { cleanup(); preference.removeEventListener("change", sync); };
+    if (!root.current || !window.IntersectionObserver || !Element.prototype.animate) return;
+    return observeMotion(root.current, window.matchMedia("(prefers-reduced-motion: reduce)"));
   }, []);
   return <div ref={root}>{children}</div>;
 }

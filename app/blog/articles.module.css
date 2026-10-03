@@ -34,7 +34,7 @@
 .body p, .body li { font-size: 16px; line-height: 1.9; color: #484842; }
 .body p + p { margin-top: 18px; }
 .body ul { padding-left: 22px; list-style: disc; margin-top: 20px; }
-.body li { padding-left: 6px; margin-bottom: 10px; }
+.body li { padding-left: 6px; margin-bottom: 10px; overflow-wrap: anywhere; }
 .sources { padding-top: 28px; border-top: 1px solid #231f2033; }
 .sources h2 { font-size: 23px; }
 .sources a { color: var(--color-action-deep); text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
@@ -54,7 +54,7 @@
 .body h2 { scroll-margin-top: 100px; margin-top: 40px; }
 .body h3 { font-size: 23px; font-weight: 600; line-height: 1.4; margin-block: 28px 16px; }
 .body h4 { font-size: 19px; font-weight: 600; margin-block: 24px 12px; }
-.body a { color: var(--color-action-deep); text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.body a { display: inline-block; min-height: 44px; min-width: 44px; max-width: 100%; padding-block: 7px; vertical-align: baseline; color: var(--color-action-deep); text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
 .body table { width: 100%; border-collapse: collapse; margin-block: 24px; table-layout: fixed; }
 .body :is(td, th) { padding: 12px; border: 1px solid #231f2040; text-align: left; overflow-wrap: anywhere; font-size: 14px; }
 .body img { max-width: 100%; height: auto; margin-block: 24px; }
@@ -69,3 +69,6 @@
 }
 
 .breadcrumb a { min-width: 44px; }
+
+.body a:hover { text-decoration-thickness: 2px; }
+.body a:focus-visible { outline: 2px solid var(--color-action-deep); outline-offset: 2px; }
