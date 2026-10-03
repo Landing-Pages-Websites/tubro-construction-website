@@ -87,3 +87,14 @@ test("preview still requires exact sentinel even when a valid fallback proof is 
   assert.equal((await api.post({ ...proved, captchaToken: "recaptcha-staging-bypass-key" }, preview)).status, 200);
   assert.equal(api.forwarded[0].form_data.spamCheck, undefined);
 });
+
+test("signed proofs on malformed envelopes fail fields safely and remain bound and single-use", async () => {
+  const api = boundary();
+  for (const malformed of [{}, { form_key: "schedule_estimate", form_data: null }, { form_key: "schedule_estimate", form_data: [] }]) {
+    const body = await proof(api, malformed);
+    assert.equal((await api.post({ ...body, form_data: payload.form_data })).status, 403);
+    assert.equal((await api.post(body)).status, 422);
+    assert.equal((await api.post(body)).status, 403);
+  }
+  assert.equal(api.forwarded.length, 0);
+});

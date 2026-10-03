@@ -35,8 +35,8 @@ def inspect(path):
                 if not form.select_one('[name="'+key+'"]').get('pattern'): errors.append('Pattern '+key)
             if form.select('[type="submit"]'): errors.append('Raw submit control')
         article = soup.select_one('[data-article-body]')
-        record = next((p for p in INVENTORY['posts'] if p['path'] == path), None)
-        if record and record['status'] == 'migrated':
+        record = next((p for p in INVENTORY['legacy_url_records'] if p['path'] == path), None)
+        if record and record['type'] in ('article', 'compatibility_alias'):
             if result['schemaTypes'].count('BlogPosting') != 1: errors.append('Article schema count')
             text = normalize(' '.join(article.stripped_strings)) if article else ''
             result['bodyHash'] = hashlib.sha256(text.encode()).hexdigest()
@@ -52,7 +52,7 @@ def inspect(path):
 def main():
     sitemap = ET.fromstring(urllib.request.urlopen(BASE + '/sitemap.xml').read())
     sitemap_paths = [urllib.parse.urlparse(e.text).path for e in sitemap.iter() if e.tag.endswith('loc')]
-    paths = sorted(set(sitemap_paths + KEY_ROUTES + [p['path'] for p in INVENTORY['posts']] + [p['target'] for p in INVENTORY['authored_exports']]))
+    paths = sorted(set(sitemap_paths + KEY_ROUTES + [p['path'] for p in INVENTORY['legacy_url_records']] + [p['path'] for p in INVENTORY['posts']]))
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: results = list(pool.map(inspect, paths))
     EVIDENCE.mkdir(exist_ok=True); (EVIDENCE/'round1-ssr.json').write_text(json.dumps(results,indent=2))
     failures = [r for r in results if r['errors']]

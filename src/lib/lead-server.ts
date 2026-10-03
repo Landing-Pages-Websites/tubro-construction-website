@@ -79,7 +79,7 @@ export async function authorizeUpload(token: unknown, host: string): Promise<boo
   } catch { return false; }
 }
 
-async function verifyLead(body: LeadPayload, host: string): Promise<LeadAuthorization> {
+export async function verifyLead(body: LeadPayload, host: string): Promise<LeadAuthorization> {
   try {
     const mode = captchaMode(host, process.env);
     if (mode === "denied") return { ok: false };
@@ -92,14 +92,13 @@ async function verifyLead(body: LeadPayload, host: string): Promise<LeadAuthoriz
   } catch { return { ok: false }; }
 }
 
-export async function authorizeLead(body: LeadPayload, host: string): Promise<LeadAuthorization> {
+/** Claim attachments only after authenticity and field validation succeed. */
+export function authorizeLeadUploads(body: LeadPayload): boolean {
   try {
     const keys = authorizedUploadKeys(body);
-    if (!keys || (keys.length && body.form_key !== "careers_application")) return { ok: false };
-    const result = await verifyLead(body, host);
-    if (!result.ok || !consumeUploadClaim(body)) return { ok: false };
-    return result;
-  } catch { return { ok: false }; }
+    if (!keys || (keys.length && body.form_key !== "careers_application")) return false;
+    return consumeUploadClaim(body);
+  } catch { return false; }
 }
 
 export function upstreamPayload(body: LeadPayload, spamCheck: string | null): Record<string, unknown> {

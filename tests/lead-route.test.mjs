@@ -60,3 +60,38 @@ test("production assessment checks action, hostname and score; never accepts sen
     assert.equal(api.requests.length, 1);
   }
 });
+
+test("tokenless JSON envelopes fail authenticity before form validation without forwarding", async () => {
+  const { post, requests } = boundary();
+  const envelopes = [valid.form_data, { formData: valid.form_data }, { form_data: valid.form_data }, {}, { form_key: "homepage_estimate" }, { form_key: "estimate_bathroom_remodeling", form_data: [] }, { form_key: {}, form_data: null }];
+  for (const body of [...envelopes, { ...valid, captchaToken: undefined }]) {
+    const response = await post(body);
+    assert.equal(response.status, 403, JSON.stringify(body));
+    assert.equal((await response.json()).code, "verification_failed");
+  }
+  assert.equal(requests.length, 0);
+});
+
+test("authenticated malformed envelopes stay 422 and invalid tokens never reach field logic or delivery", async () => {
+  const { post, requests } = boundary();
+  for (const body of [{}, { formData: valid.form_data }, { form_data: null }, { form_key: "homepage_estimate", form_data: [] }, { form_key: {}, form_data: valid.form_data }]) {
+    assert.equal((await post({ ...body, captchaToken: sentinel })).status, 422);
+    assert.equal((await post({ ...body, captchaToken: "invalid-full-token" })).status, 403);
+  }
+  assert.equal(requests.length, 0);
+});
+
+test("real assessment authentication precedes field validation and only valid fields reach mocked delivery", async () => {
+  const hostname = "www.tubroconstruction.com";
+  const env = { VERCEL_ENV: "production", RECAPTCHA_HOSTNAMES: hostname, NEXT_PUBLIC_RECAPTCHA_SITE_KEY: "test-key", RECAPTCHA_PROJECT_ID: "local", RECAPTCHA_API_KEY: "local" };
+  const assessment = { tokenProperties: { valid: true, action: "lead_submit", hostname }, riskAnalysis: { score: 0.9 } };
+  const api = boundary(env, assessment);
+  const body = { ...valid, captchaToken: "mock-authenticated-token" };
+  assert.equal((await api.post({ ...body, form_data: { ...valid.form_data, phone: "55512" } }, hostname)).status, 422);
+  assert.equal(api.requests.length, 1); assert.ok(api.requests[0].url.includes("recaptchaenterprise"));
+  assert.equal((await api.post(body, hostname)).status, 200);
+  assert.equal(api.requests.filter(request => request.url.endsWith("/submission/submit")).length, 1);
+  const rejected = boundary(env, { tokenProperties: { valid: false } });
+  assert.equal((await rejected.post(body, hostname)).status, 403);
+  assert.equal(rejected.requests.length, 1); assert.ok(rejected.requests[0].url.includes("recaptchaenterprise"));
+});

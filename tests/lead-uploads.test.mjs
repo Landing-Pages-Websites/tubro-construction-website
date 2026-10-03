@@ -100,6 +100,17 @@ test("tampering, other-token binding, unsigned keys and replay are refused; fail
   assert.match(api.calls.at(-1).body.form_data.resumeUploadStatus, /not sent/);
 });
 
+test("field validation precedes ownership claims so an invalid form cannot spend its attachment", async () => {
+  const api = boundary(); const attachment = await claim(api);
+  const invalid = { ...leadBody, ...attachment, form_data: { ...leadBody.form_data, phone: "55512" } };
+  assert.equal((await api.lead({ ...invalid, captchaToken: undefined })).status, 403);
+  assert.equal((await api.lead(invalid)).status, 422);
+  assert.equal((await api.lead({ ...invalid, uploadCapability: "invalid" })).status, 422);
+  assert.equal(api.calls.filter(call => call.url.endsWith("/submission/submit")).length, 0);
+  assert.equal((await api.lead({ ...leadBody, ...attachment })).status, 200);
+  assert.equal((await api.lead({ ...leadBody, ...attachment })).status, 403);
+});
+
 test("proof fallback keeps owned claims bound to the actual submit token and cannot replay them", async () => {
   const hostname = "www.tubroconstruction.com";
   const api = boundary({ VERCEL_ENV: "production", RECAPTCHA_HOSTNAMES: hostname, NEXT_PUBLIC_RECAPTCHA_SITE_KEY: "local-key", RECAPTCHA_PROJECT_ID: "local", RECAPTCHA_API_KEY: "local" }, { uploads: [signed] }, event => ({ tokenProperties: { valid: event.token === "upload-token", action: "lead_upload", hostname }, riskAnalysis: { score: 0.9 } }));

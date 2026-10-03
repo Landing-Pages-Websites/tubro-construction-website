@@ -2,6 +2,8 @@
 
 Branch: `fix/golive-r1`. Baseline: `fc61cb10d027bb6cb4ce63b115c388798799c47a`. All work stayed in the supplied isolated checkout. No push, PR, merge, deployment, task mutation, DNS change, credential access or real lead submission was performed. Controller retains review and staging deployment ownership.
 
+**Latest inventory/authentication correction, after résumé commit `962bb8f`:** the genuine inventory classification/count defects and lead authentication ordering are fixed. All 50 unit tests, build, typecheck, 103-path SSR parity and 11 résumé browser cases pass locally. The unmodified canonical five-check suite reports **4 pass / 1 fail, `CHANGES_REQUIRED`**: `blog.post-ids` rejects preserved root article paths because its legacy-path exception requires two path segments. Exact evidence and the unchanged checker location are recorded at the end of this report; no routing or checker workaround was made.
+
 **Careers résumé-byte delivery is now implemented in this same combined round1.** The later director ruling supersedes the historical filename-only scope below. The form uses MEGA's existing signed-upload endpoint, uploads actual bytes, and forwards only owned, token-bound keys in `form_data._mega_uploads`. See [résumé delivery evidence and controller handoff](round1-resume-delivery.md). No remote submission or platform-persistence result is claimed here.
 
 **All remaining browser residuals are repaired and locally verified across 44 cases. The full combined scope remains intact.** This follow-up starts at `ff69dba59f641956867e1c1a4da578ed84965c11` on the same isolated branch. The supplied Chromium binary works with the supplied library path; no browser/system dependencies were installed. Final browser-repair evidence is recorded below. Deployed Google assessments, analytics ingest, real lead receipt and valid Lighthouse measurements remain controller-owned and are not certified here. Existing before screenshots were not modified.
@@ -129,3 +131,56 @@ Browser commands use the supplied `CHROMIUM_PATH=/var/lib/megaclaw/user-tools/ap
 The dependency audit previously reported baseline PostCSS/Next transitive advisories. This browser repair does not change dependencies or suppress that audit.
 
 Controller next step: review this exact local commit, then use the existing staging workflow for exact Git-linked preview acceptance. No push, PR, merge, deployment, DNS or task write was performed. Full combined go-live acceptance remains with the controller; browser residuals are not excluded from it.
+
+## Remaining inventory and authentication corrections — 2026-10-03
+
+This continues the same combined scope on `fix/golive-r1`, after the completed résumé engine commit `962bb8f`. Read the supplied premerge sweep, inventory, this report, the delivery/design skills, and the complete canonical inventory validator through line 8435, including identity and exclusion rules. The existing isolated checkout was retained. The implementation sequence was failing contract tests, metadata/authentication correction, fresh build and verification, then simplification and diff review. No UI, source article, image, canonical, slug, ID, production configuration or remote action changed.
+
+### Inventory contract
+
+`content/blog/_inventory.json` now records **67 distinct articles** in `posts`: **54 migrated legacy articles + 13 authored articles**. `posts_found=67`, `posts_migrated=54`, and `posts_with_item_id=54` follow the canonical definitions. `legacy_article_count=54` and `total_unique_article_ids=67` explain the separate populations. Every authored record has `status: authored`, `old_url: null`, its existing ID, `new_slug`, source JSON, served path/target and canonical. The original `authored_exports` provenance is retained unchanged.
+
+`legacy_url_records` retains **all 87 URL records: 86 outgoing sitemap URLs plus the required Washington root alias**, classified as 54 `article`, 32 `page`, and 1 `compatibility_alias`, with `http_status: 200`. Page/alias records use `status: preserved`; they are neither excluded blog posts nor additional migrated articles. Every original URL, path, target, reason, source hash, body hash, link count, table count and other non-classification field is preserved. No redirect is asserted or introduced. The Washington article appears once in `posts`, at `/blog/kitchen-remodel-cost-washington-state`, retaining `item_q2fvf282v44npyrpr5bgbybjrr`; both its canonical URL and required root alias retain the same complete body and canonical.
+
+The permitted `scripts/verify-round1.py` edit only reads the moved URL manifest and selects its article/alias records for the existing body assertions. Every body-hash, link-count, table-count, schema, SEO and native-form assertion is retained. It still covers 103 paths, all 87 manifest URLs and both Washington article URLs. No canonical checker was edited.
+
+### Lead security order
+
+The route now performs trusted host/origin checks and bounded JSON reading, then CAPTCHA/signed-proof authentication, then envelope/field validation, then upload ownership/claim checks and forwarding. The small `src/lib/lead-server.ts` extraction exposes the existing `verifyLead` unchanged and separates the existing upload checks into `authorizeLeadUploads`; this is necessary to place validation between those stages. The upload signing/capability helpers, exact host/sentinel policy, Enterprise token checks, signed payload binding and replay guards are unchanged.
+
+Tokenless or invalid-token JSON objects now return `403` / `verification_failed` regardless of flat, `formData`, `form_data`, missing-key or malformed-field envelopes. Authenticated invalid envelopes/fields still return `422`; malformed/oversized/non-object JSON remains `400` under the unchanged reader. A valid proof over malformed fields is safely rejected by validation and cannot replay; altering its fields invalidates the proof. Invalid fields cannot consume a valid attachment claim. Only authenticated, validated, owned payloads reach the mocked destination with `200`. The client hidden `form_key`, native required/pattern contracts, form payload schema and browser flows are unchanged.
+
+### Verification and authoritative residual
+
+Fresh evidence directory: `/var/lib/megaclaw/workspace/tubro-evidence/inventory-auth-order/`.
+
+| Check | Actual result |
+| --- | --- |
+| Failing regression run before implementation | 8 new assertions failed on the original inventory/auth order; `tests-red.log`. |
+| `npm test` | Exit 0: 50 pass, 0 fail; `tests.log`. Includes malformed/tokenless envelopes, real mocked Enterprise authentication before invalid-field validation, proof binding/replay, and attachment ownership/retry. |
+| `npm run build` | Exit 0: 197 generated pages/boundaries; `build.log`. No Tubro server ran during the build. Used `VERCEL_ENV=development` and the sanctioned public CAPTCHA sentinel. |
+| `npm run typecheck` | Exit 0 after the fresh production build; `typecheck.log`. |
+| Canonical five-check suite | Exit 1: `form.lead-fields`, `form.lead-captcha`, `form.lead-fallback`, `form.lead-endpoint` pass; `blog.post-ids` fails. Unaltered receipts: `canonical-five.json`, `canonical-five.log`. |
+| `python3 scripts/verify-round1.py http://127.0.0.1:3187` | Exit 0: 103 paths, zero failures; `ssr.log`, `ssr.json`. Additional receipt confirms all 103 return direct 200, every manifest path is present, and all 55 article/alias URLs retain body-hash parity; `preservation.json`. |
+| Local HTTP authentication | Two fresh string `issuedAt` challenges, different nonces, `Cache-Control: no-store`; five tokenless envelope probes return verification 403; `local-auth-http.json`. No successful real submission attempted. |
+| Existing `tests/careers-upload-browser.mjs` | Exit 0: all 11 cases at 195/390/834/1440, 15 axe audits, zero violations/page errors. Success, failed PUT, retry, signing refusal and short signing response passed; exact 79-byte PUTs, single-attempt guards and success-only conversions retained. `browser.log`, `resume-browser/browser-results.json`, `resume-browser/summary.json` and screenshots. All signing/PUT/delivery intercepted; external requests blocked. Prior résumé evidence was backed up and restored. |
+| Preservation/scope | All 1,678 recorded protected files retain their bytes; original editorial Markdown/JSON, UI/browser/upload fixes, images and logos are unchanged. Canonical checker SHA-256 unchanged. URL/source metadata comparison retained every original non-classification field. |
+
+Exact canonical command, without patches, skips, overrides or suspect flags:
+
+```sh
+python3 /var/lib/megaclaw/workspace/skills/golive-qa/scripts/golive_sweep.py \
+  --base-url http://127.0.0.1:3187 --mode staging \
+  --only blog.post-ids,form.lead-captcha,form.lead-fields,form.lead-fallback,form.lead-endpoint \
+  --blog-inventory /var/lib/megaclaw/workspace/tubro-golive-r1/content/blog/_inventory.json \
+  --public-dir /var/lib/megaclaw/workspace/tubro-golive-r1/public \
+  --out /var/lib/megaclaw/workspace/tubro-evidence/inventory-auth-order/canonical-five.json
+```
+
+The remaining failure names `posts[0]` and `/10-remodeling-myths-debunked-what-homeowners-must-know` as “not a post path”. In the read-only `golive_sweep.py`, `_post_path_fault` **lines 8534–8536** evaluates `len(segments) >= 2 and (...)`, placing its own-legacy-path exception inside the two-segment requirement. The exact `target` equals the outgoing `old_url` path, and the unchanged `_is_legacy_path` returns true, but the one-segment root still fails. This affects 53 preserved root articles. `canonical-root-path-diagnostic.json` records the exact example, helper result, checker hash and location. The validator's wording promises the post's own legacy path; its condition refuses this valid root-path case. The authoritative verdict remains `CHANGES_REQUIRED`; this report does not regrade it as a pass. No source URL, target, canonical or route was altered to evade that condition.
+
+### Simplification, review and handoff
+
+`simplify` was invoked and returned exit 127 (`command not found`), with no installed skill/command found; `simplify.log`. Manual simplification and security/data-integrity review checked the single authenticity stage, shared verification-failure response, unchanged bounded parser, exact host/token rules, validation before attachment claims, and full URL/source parity. The changed TypeScript files' functions remain at most 20 lines. `git diff --check` passed. The only verification-script change is the explicitly authorized inventory-consumption update described above.
+
+The local server used port 3187 and a test-only signing value. No browser/system dependency was installed. Controller retains bot review, staging merge/deployment and remote persisted-lead acceptance. No push, PR, merge, deployment, task mutation, production/DNS/ID change or remote submission was performed. Source fixes are ready for that review; the canonical root-path discrepancy is reported for the checker owner, with its original failing receipt intact.
