@@ -96,11 +96,11 @@
 }
 
 @keyframes placeCopy {
-  from { opacity: .3; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { transform: translateY(18px); }
+  to { transform: translateY(0); }
 }
 
 @keyframes placeCaption {
-  from { opacity: .35; transform: translateX(-12px); }
-  to { opacity: 1; transform: translateX(0); }
+  from { transform: translateX(-12px); }
+  to { transform: translateX(0); }
 }
