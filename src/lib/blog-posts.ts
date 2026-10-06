@@ -13,6 +13,7 @@ import materialSelections from "./blog-content/remodeling-material-selection-che
 import livingDuringRemodel from "./blog-content/living-at-home-during-remodel.json";
 import paintingWeather from "./blog-content/exterior-painting-weather-window.json";
 import stainVersusPaint from "./blog-content/exterior-stain-vs-paint.json";
+import smallBathroomIdeas from "./blog-content/small-bathroom-ideas";
 
 export type BlogSection = {
   heading: string;
@@ -39,7 +40,7 @@ export const blogPosts: BlogPost[] = [
   estimatePreparation, cabinetStorage, bathroomLighting, exteriorPreparation,
   deckPlanning, additionPlanning, materialSelections, livingDuringRemodel,
   paintingWeather, stainVersusPaint, kitchenPlanning, bathroomPlanning, contractorSelection,
-  kitchenCostWashington, outdoorLivingWesternWashington,
+  kitchenCostWashington, outdoorLivingWesternWashington, smallBathroomIdeas,
 ];
 
 const RELATED_ARTICLE_COUNT = 3;
