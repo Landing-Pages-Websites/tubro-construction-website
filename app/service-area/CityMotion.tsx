@@ -29,7 +29,7 @@ function primeSteps(root: Element): Entrance[] {
     target.style.setProperty("--city-step-delay", `${index * 100}ms`);
     target.classList.add(motion.stepRule, motion.rulePending);
     const animations = Array.from(target.querySelectorAll(`.${styles.stepNumber}, h3`)).map(element =>
-      prime(element, [{ opacity: .35, transform: "translateY(16px)" }, { opacity: 1, transform: "translateY(0)" }], 750, index * 100),
+      prime(element, [{ transform: "translateY(16px)" }, { transform: "translateY(0)" }], 750, index * 100),
     );
     entrances.push({ target, animations, rule: target });
   });
@@ -56,8 +56,8 @@ function primeServices(root: Element): Entrance[] {
   root.querySelectorAll<HTMLElement>(`.${styles.serviceList} > a`).forEach((target, index) => {
     if (!offscreen(target)) return;
     const animations = Array.from(target.children).map(element => prime(element, [
-      { opacity: .35, transform: "translateX(18px)" },
-      { opacity: 1, transform: "translateX(0)" },
+      { transform: "translateX(18px)" },
+      { transform: "translateX(0)" },
     ], 700, Math.min(index * 60, 240)));
     entrances.push({ target, animations });
   });
@@ -69,7 +69,7 @@ function primePanels(root: Element): Entrance[] {
   root.querySelectorAll<HTMLElement>(`.${styles.formWrap}`).forEach(target => {
     if (!offscreen(target)) return;
     // Opacity does not change the panel's geometry; fields arrive together.
-    entrances.push({ target, animations: [prime(target, [{ opacity: .45 }, { opacity: 1 }], 700)] });
+    entrances.push({ target, animations: [prime(target, [{ opacity: 1 }, { opacity: 1 }], 700)] });
   });
   return entrances;
 }

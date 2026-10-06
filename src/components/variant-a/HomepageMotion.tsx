@@ -4,8 +4,8 @@ import { useLayoutEffect } from "react";
 
 const EASE = "cubic-bezier(.16, 1, .3, 1)";
 const ARRIVE: Keyframe[] = [
-  { opacity: 0, transform: "translateY(18px)" },
-  { opacity: 1, transform: "none" },
+  { transform: "translateY(18px)" },
+  { transform: "none" },
 ];
 const UNMASK: Keyframe[] = [
   { clipPath: "inset(0 100% 0 0)" },
