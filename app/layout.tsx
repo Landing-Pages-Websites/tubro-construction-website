@@ -36,6 +36,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.tubroconstruction.com"),
   ...siteMetadata("Tubro Construction | King & Pierce County Remodeling", "Plan your kitchen, bathroom, addition or whole-home remodel with Tubro Construction. Serving King and Pierce Counties with free estimates.", "/"),
   manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/apple-icon.png", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({

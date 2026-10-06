@@ -142,7 +142,9 @@ function readPost(file: string): BlogPost {
 }
 
 const legacyContent = readdirSync(CONTENT_DIR).filter((file) => /\.mdx?$/.test(file) && file !== "README.md").map(readPost);
-const allContent = [...structuredPosts.map(normalizeStructured), ...legacyContent];
+// Migration content owns any slug already present in the source inventory. Newer
+// structured guides are appended without replacing that parity-checked record.
+const allContent = [...legacyContent, ...structuredPosts.map(normalizeStructured)];
 const uniqueContent = allContent.filter((post, index, posts) => posts.findIndex((candidate) => candidate.slug === post.slug) === index);
 export const blogPosts: BlogPost[] = uniqueContent.filter((post) => post.kind === "article");
 export const legacyPages: BlogPost[] = uniqueContent.filter((post) => post.kind === "page");
