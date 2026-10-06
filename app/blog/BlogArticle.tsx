@@ -13,7 +13,8 @@ const SITE_URL = "https://www.tubroconstruction.com";
 
 export function BlogArticle({ post }: { post: BlogPost }): ReactElement {
   const date = new Date(`${post.publishedDate}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
-  const schema = { "@context": "https://schema.org", "@type": "BlogPosting", headline: post.title, description: post.description, image: new URL(post.image, SITE_URL).href, datePublished: post.publishedDate, author: { "@type": "Organization", name: "Tubro Construction", url: `${SITE_URL}/about-us` }, publisher: { "@type": "Organization", name: "Tubro Construction", logo: { "@type": "ImageObject", url: `${SITE_URL}/images/tc-logo.png` } }, mainEntityOfPage: `${SITE_URL}/blog/${post.slug}` };
+  const blogPosting = { "@type": "BlogPosting", headline: post.title, description: post.description, image: new URL(post.image, SITE_URL).href, datePublished: post.publishedDate, author: { "@type": "Organization", name: "Tubro Construction", url: `${SITE_URL}/about-us` }, publisher: { "@type": "Organization", name: "Tubro Construction", logo: { "@type": "ImageObject", url: `${SITE_URL}/images/tc-logo.png` } }, mainEntityOfPage: `${SITE_URL}/blog/${post.slug}` };
+  const schema = post.faq?.length ? { "@context": "https://schema.org", "@graph": [blogPosting, { "@type": "FAQPage", mainEntity: post.faq.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) }] } : { "@context": "https://schema.org", ...blogPosting };
   return <div className={styles.article}>
     <a href="#article" className={blogStyles.skip}>Skip to article</a><SiteHeader />
     <main id="article"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />

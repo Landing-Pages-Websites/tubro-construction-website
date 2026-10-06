@@ -13,6 +13,11 @@ const SERVICES: Record<string, { href: string; label: string }> = {
 
 export function ArticleBody({ post }: { post: BlogPost }): ReactElement {
   const service = SERVICES[post.category] || { href: "/general-contractor", label: "Explore general contracting" };
+  if (post.bodyHtml) {
+    return <div className={styles.body}>
+      <div dangerouslySetInnerHTML={{ __html: post.bodyHtml }} />
+    </div>;
+  }
   return <div className={styles.body}>
     {post.sections.map((section, index) => <section key={section.heading} id={`section-${index + 1}`} aria-labelledby={`heading-${index + 1}`}>
       <h2 id={`heading-${index + 1}`}>{section.heading}</h2>

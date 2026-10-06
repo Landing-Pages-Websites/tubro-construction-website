@@ -1,4 +1,5 @@
 import kitchenPlanning from "./blog-content/kitchen-remodel-planning-checklist.json";
+import outdoorLivingWesternWashington from "./blog-content/outdoor-living-space-western-washington.json";
 import bathroomPlanning from "./blog-content/bathroom-remodel-planning-guide.json";
 import contractorSelection from "./blog-content/choosing-remodeling-contractor-washington.json";
 import kitchenCostWashington from "./blog-content/kitchen-remodel-cost-washington-state.json";
@@ -22,12 +23,15 @@ export type BlogSection = {
 export type BlogPost = {
   slug: string;
   title: string;
+  metaTitle?: string;
   description: string;
   category: string;
   image: string;
   imageAlt: string;
   publishedDate: string;
   sections: BlogSection[];
+  bodyHtml?: string;
+  faq?: { question: string; answer: string }[];
   sources: { title: string; url: string }[];
 };
 
@@ -35,7 +39,7 @@ export const blogPosts: BlogPost[] = [
   estimatePreparation, cabinetStorage, bathroomLighting, exteriorPreparation,
   deckPlanning, additionPlanning, materialSelections, livingDuringRemodel,
   paintingWeather, stainVersusPaint, kitchenPlanning, bathroomPlanning, contractorSelection,
-  kitchenCostWashington,
+  kitchenCostWashington, outdoorLivingWesternWashington,
 ];
 
 const RELATED_ARTICLE_COUNT = 3;
