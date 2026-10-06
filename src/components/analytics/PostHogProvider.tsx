@@ -1,35 +1,56 @@
 "use client";
 
 import { useEffect, type ReactNode } from "react";
-import { scheduleWhenIdle } from "./scheduleWhenIdle";
+import { usePathname } from "next/navigation";
+import type { PostHog } from "posthog-js/dist/module.slim";
+import { afterCriticalPaint } from "@/lib/analytics-idle";
 
-async function initializePostHog(key: string, isActive: () => boolean): Promise<void> {
-  try {
-    const { default: posthog } = await import("posthog-js");
-    if (!isActive() || posthog.__loaded) return;
-    posthog.init(key, {
-      api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com",
-      capture_pageview: true,
-      capture_pageleave: true,
-      person_profiles: "identified_only",
-    });
-  } catch (error) {
-    console.error("Unable to initialize PostHog analytics.", error);
+let client: PostHog | undefined;
+let loading: Promise<void> | undefined;
+let lastLocation = "";
+const pendingPages: { location: string; timestamp: Date }[] = [];
+
+function flushPages(): void {
+  if (!client) return;
+  while (pendingPages.length) {
+    const { location, timestamp } = pendingPages[0];
+    client.capture("$pageview", { $current_url: location, $pathname: new URL(location).pathname }, { send_instantly: true, timestamp });
+    pendingPages.shift();
   }
 }
 
+async function loadClient(key: string): Promise<void> {
+  try {
+    // Separate supported entrypoints bound each parse task without dropping features.
+    const { default: posthog } = await import("posthog-js/dist/module.slim");
+    const { AllExtensions } = await import("posthog-js/dist/extension-bundles");
+    if (!posthog.__loaded) posthog.init(key, {
+      __extensionClasses: AllExtensions,
+      api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com",
+      capture_pageview: false, capture_pageleave: true, person_profiles: "identified_only",
+      opt_out_useragent_filter: true, disable_surveys: true,
+    });
+    client = posthog;
+    flushPages();
+  } catch {
+    // Keep queued routes for a later navigation retry; analytics cannot block the site.
+    loading = undefined;
+  }
+}
+
+/** No context consumers: keep children mounted and initialize one SDK only when idle. */
 export function PostHogProvider({ children }: { children: ReactNode }): ReactNode {
+  const pathname = usePathname();
   useEffect(() => {
     const key = process.env.NEXT_PUBLIC_POSTHOG_KEY;
-    if (!key) return;
-    let active = true;
-    const cancel = scheduleWhenIdle(() => {
-      void initializePostHog(key, () => active);
-    });
-    return () => {
-      active = false;
-      cancel();
-    };
-  }, []);
+    if (!key || new URLSearchParams(window.location.search).get("embed") === "realwork") return;
+    const location = window.location.href;
+    if (lastLocation !== location) { pendingPages.push({ location, timestamp: new Date() }); lastLocation = location; }
+    if (client) {
+      try { flushPages(); } catch { /* Preserve queued events if the SDK is unavailable. */ }
+      return;
+    }
+    return afterCriticalPaint(() => { loading ??= loadClient(key); });
+  }, [pathname]);
   return children;
 }

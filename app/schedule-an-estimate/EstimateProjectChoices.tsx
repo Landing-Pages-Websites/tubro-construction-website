@@ -14,7 +14,7 @@ export default function EstimateProjectChoices(): ReactElement {
   return <fieldset className={s.formSection}>
     <legend><span>01</span>What are you planning?</legend>
     <div className={s.choices}>{choices.map(({ value, label, Icon }, index) => <label key={value} className={s.choice}>
-      <input type="radio" name="projectType" value={value} defaultChecked={index === 0} />
+      <input type="radio" name="projectType" required value={value} defaultChecked={index === 0} />
       <Icon size={20} aria-hidden="true" /><span>{label}</span><Check className={s.choiceCheck} size={16} aria-hidden="true" />
     </label>)}</div>
   </fieldset>;

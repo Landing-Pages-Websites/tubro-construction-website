@@ -11,9 +11,9 @@ export function BlogGrid(): ReactElement {
       <div className={styles.gridHeading}><div><p className={styles.label}>The remodeling journal</p><h2 id="articles-heading">A clearer plan starts here.</h2></div><p>Practical guides for homeowners in King and Pierce Counties, from the first ideas to the right questions.</p></div>
       <div className={styles.grid}>{blogPosts.map((post) => (
         <article key={post.slug} className={styles.card}>
-          <Link href={`/blog/${post.slug}`} className={styles.cardLink}>
-            <div className={styles.cardImage}><Image src={post.image} alt={post.imageAlt} fill sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 90vw" /></div>
-            <div className={styles.cardCopy}><p className={styles.label}>{post.category}</p><time className={styles.cardDate} dateTime={post.publishedDate}>{new Date(`${post.publishedDate}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}</time><h3>{post.title}</h3><p>{post.description}</p><span className={styles.readLink}>Read the guide <ArrowUpRight size={20} aria-hidden="true" /></span></div>
+          <Link href={post.canonicalPath} className={styles.cardLink}>
+            {post.image && <div className={styles.cardImage}><Image src={post.image} alt={post.imageAlt} fill sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 90vw" /></div>}
+            <div className={styles.cardCopy}><p className={styles.label}>{post.category}</p><h3>{post.title}</h3><p>{post.description}</p><span className={styles.readLink}>Read the guide <ArrowUpRight size={20} aria-hidden="true" /></span></div>
           </Link>
         </article>
       ))}</div>

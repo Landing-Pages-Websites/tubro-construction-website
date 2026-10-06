@@ -10,6 +10,7 @@ interface EstimateStatusNoteProps {
   idleNote?: string;
   /** Full success sentence override (must stay honest about what was sent). */
   successNote?: string;
+  errorNote?: string;
 }
 
 export function EstimateStatusNote({
@@ -17,6 +18,7 @@ export function EstimateStatusNote({
   topic = "estimate request",
   idleNote = "Free estimate. No spam — your details go straight to the Tubro team.",
   successNote,
+  errorNote,
 }: EstimateStatusNoteProps): ReactElement {
   return (
     <div aria-live="polite" className="mt-4 font-poppins text-sm">
@@ -28,14 +30,14 @@ export function EstimateStatusNote({
       )}
       {status === "error" && (
         <p role="alert" className="rounded-md border border-red-300 bg-red-50 px-4 py-3 text-red-800">
-          Something went wrong sending your request. Please try again, or call{" "}
-          <a href={BRAND.phoneHref} className="font-semibold underline underline-offset-2">
+          {errorNote || "Something went wrong sending your request. Please try again."} Call{" "}
+          <a href={BRAND.phoneHref} className="inline-flex min-h-11 items-center font-semibold underline underline-offset-2">
             {BRAND.phoneDisplay}
           </a>
           .
         </p>
       )}
-      {status === "idle" && <p className="text-center text-xs text-ink/70">{idleNote}</p>}
+      {status === "idle" && <p className="text-center text-sm text-ink/70">{idleNote}</p>}
     </div>
   );
 }

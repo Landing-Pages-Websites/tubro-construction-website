@@ -18,11 +18,9 @@ export function CityPageLayout({ route }: { route: CityRoute }): ReactElement {
   const profile = CITY_PROFILES[route.citySlug];
   return (
     <div className={styles.frame} data-motion-variant="a">
-      <a className={styles.skipLink} href="#city-main">
-        Skip to content
-      </a>
+
       <SiteHeader />
-      <main id="city-main" className={styles.page} data-city-page>
+      <main className={styles.page} data-city-page id="main-content" tabIndex={-1}>
         <CityMotion key={route.citySlug} />
         <CityHero route={route} profile={profile} />
         <CityTrust />

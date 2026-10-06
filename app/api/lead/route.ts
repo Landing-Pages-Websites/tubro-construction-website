@@ -1,43 +1,34 @@
 import { NextResponse } from "next/server";
-import { verifyLeadProof } from "@/lib/leadProof";
+import { captchaMode } from "@/lib/lead-policy";
+import { issueChallenge, proofAvailable } from "@/lib/lead-challenge";
+import { authorizeLead, payloadErrors, readLeadPayload, upstreamPayload } from "@/lib/lead-server";
 
-const STAGING_BYPASS = "recaptcha-staging-bypass-key";
-const HOSTNAMES = (process.env.RECAPTCHA_HOSTNAMES ?? "").split(",").map((value) => value.trim().toLowerCase()).filter(Boolean);
+export const runtime = "nodejs";
 
-function validHost(request: Request): boolean {
+function validOrigin(request: Request): boolean {
+  const origin = request.headers.get("origin");
+  return !origin || origin === new URL(request.url).origin;
+}
+
+export async function GET(request: Request): Promise<NextResponse> {
   const host = new URL(request.url).hostname.toLowerCase();
-  return HOSTNAMES.length === 0 || HOSTNAMES.includes(host);
-}
-
-async function verifyRecaptcha(token: string, hostname: string): Promise<boolean> {
-  const project = process.env.RECAPTCHA_PROJECT_ID;
-  const apiKey = process.env.RECAPTCHA_API_KEY;
-  if (!project || !apiKey) return false;
-  const response = await fetch(`https://recaptchaenterprise.googleapis.com/v1/projects/${project}/assessments?key=${apiKey}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ event: { token, siteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, expectedAction: "lead_submit", userAgent: "", userIpAddress: "", } }),
-  });
-  if (!response.ok) return false;
-  const assessment = await response.json() as { tokenProperties?: { valid?: boolean; action?: string; hostname?: string }; riskAnalysis?: { reasons?: string[] } };
-  const properties = assessment.tokenProperties;
-  return Boolean(properties?.valid && properties.action === "lead_submit" && properties.hostname?.toLowerCase() === hostname && !assessment.riskAnalysis?.reasons?.length);
-}
-
-export async function GET(): Promise<NextResponse> {
-  return NextResponse.json({ issuedAt: String(Date.now()) }, { headers: { "Cache-Control": "no-store" } });
+  if (!validOrigin(request) || captchaMode(host, process.env) === "denied") return NextResponse.json({ error: "Invalid hostname" }, { status: 403 });
+  if (!proofAvailable()) return NextResponse.json({ error: "Verification fallback is unavailable. Please retry verification or contact our office." }, { status: 503 });
+  return NextResponse.json(issueChallenge(host), { headers: { "Cache-Control": "no-store" } });
 }
 
 export async function POST(request: Request): Promise<NextResponse> {
-  if (!validHost(request)) return NextResponse.json({ error: "Invalid hostname" }, { status: 403 });
-  const body = await request.json() as { captchaToken?: string; form_data?: Record<string, unknown>; [key: string]: unknown };
-  const hostname = new URL(request.url).hostname.toLowerCase();
-  const staging = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY === STAGING_BYPASS;
-  const proofAuthorized = await verifyLeadProof(body);
-  const authorized = proofAuthorized || (staging ? Boolean(body.captchaToken) : await verifyRecaptcha(String(body.captchaToken ?? ""), hostname));
-  if (!authorized) return NextResponse.json({ error: "Captcha verification failed" }, { status: 403 });
-  const response = await fetch("https://analytics.gomega.ai/submission/submit", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ customer_id: "b002784f-9543-4362-8814-b7da19078f23", site_id: "f28d515e-437b-4f9b-96c4-bc1a79a3357c", source_provider: "website-tubroconstruction", ...body }) });
-  if (!response.ok) return NextResponse.json({ error: "Submission failed" }, { status: 502 });
-  return NextResponse.json({ ok: true });
+  const host = new URL(request.url).hostname.toLowerCase();
+  if (!validOrigin(request) || captchaMode(host, process.env) === "denied") return NextResponse.json({ error: "Invalid hostname" }, { status: 403 });
+  let body;
+  try { body = await readLeadPayload(request); }
+  catch { return NextResponse.json({ error: "Unable to read this form. Check its size and format, then try again." }, { status: 400 }); }
+  const errors = payloadErrors(body);
+  if (Object.keys(errors).length) return NextResponse.json({ error: "Please check the highlighted fields.", errors }, { status: 422 });
+  if (!await authorizeLead(body, host)) return NextResponse.json({ error: "Verification failed. Please try again or contact our office." }, { status: 403 });
+  try {
+    const response = await fetch("https://analytics.gomega.ai/submission/submit", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(upstreamPayload(body)), signal: AbortSignal.timeout(15000) });
+    if (!response.ok) return NextResponse.json({ error: "We couldn't send your request. Please try again." }, { status: 502 });
+    return NextResponse.json({ ok: true });
+  } catch { return NextResponse.json({ error: "The office connection is unavailable. Please try again or call 253-216-2633." }, { status: 502 }); }
 }
-

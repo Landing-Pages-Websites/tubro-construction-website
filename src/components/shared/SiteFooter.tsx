@@ -7,8 +7,8 @@ import { IMAGES } from "@/lib/images";
 import { NAV_COMPANY, NAV_FOOTER_EXTRA, NAV_SERVICES } from "@/lib/routes";
 
 const FOOTER_LINK =
-  "inline-flex min-h-9 items-center font-poppins text-sm text-ink/70 transition-colors hover:text-ink";
-const COLUMN_TITLE = "font-fjalla text-[11px] uppercase tracking-[0.12em] text-action-deep";
+  "inline-flex min-h-11 min-w-11 items-center font-poppins text-sm text-ink/70 transition-colors hover:text-ink";
+const COLUMN_TITLE = "font-fjalla text-sm uppercase tracking-[0.12em] text-action-deep";
 
 /** Shared site footer: reaches every core route and the service-area hub. */
 export function SiteFooter(): ReactElement {
@@ -21,7 +21,7 @@ export function SiteFooter(): ReactElement {
             Veteran-owned residential remodeling and general contracting, founded in 2010 and
             serving {BRAND.region}.
           </p>
-          <p className="mt-4 max-w-xs font-poppins text-xs leading-relaxed text-ink/60">
+          <p className="mt-4 max-w-xs font-poppins text-sm leading-relaxed text-ink/70">
             {BRAND.discount}
           </p>
         </div>
@@ -61,13 +61,13 @@ export function SiteFooter(): ReactElement {
           <ul className="mt-3 space-y-2.5 font-poppins text-sm text-ink/75">
             <li className="flex items-center gap-2.5">
               <Phone className="size-4 shrink-0 text-action" aria-hidden="true" />
-              <a href={BRAND.phoneHref} className="font-semibold text-ink hover:text-action-deep">
+              <a href={BRAND.phoneHref} className="inline-flex min-h-11 items-center font-semibold text-ink hover:text-action-deep">
                 {BRAND.phoneDisplay}
               </a>
             </li>
             <li className="flex items-center gap-2.5">
               <Mail className="size-4 shrink-0 text-action" aria-hidden="true" />
-              <a href={`mailto:${BRAND.email}`} className="hover:text-ink">
+              <a href={`mailto:${BRAND.email}`} className="inline-flex min-h-11 items-center break-all hover:text-ink">
                 {BRAND.email}
               </a>
             </li>
@@ -83,7 +83,7 @@ export function SiteFooter(): ReactElement {
         </div>
       </div>
       <div className="border-t border-ink/10">
-        <p className="mx-auto max-w-7xl px-5 py-5 font-poppins text-xs text-ink/60 sm:px-8">
+        <p className="mx-auto max-w-7xl px-5 py-5 font-poppins text-sm text-ink/70 sm:px-8">
           Veteran-owned · Founded in 2010 · © 2026 {BRAND.name}
         </p>
       </div>

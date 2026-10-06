@@ -8,9 +8,9 @@ export default function NotFound(): ReactElement {
   return (
     <div data-motion-variant="a">
       <SiteHeader />
-      <main className="bg-plaster">
+      <main className="bg-plaster" id="main-content" tabIndex={-1}>
         <div className="mx-auto flex min-h-[50vh] max-w-7xl flex-col items-start justify-center px-5 py-20 sm:px-8">
-          <p className="flex items-center gap-2.5 font-fjalla text-xs uppercase tracking-[0.12em] text-action-deep">
+          <p className="flex items-center gap-2.5 font-fjalla text-sm uppercase tracking-[0.12em] text-action-deep">
             <span aria-hidden="true" className="h-0.5 w-6 bg-action" />
             Page not found
           </p>

@@ -56,7 +56,7 @@ function observe(root: Element): () => void {
       observer.unobserve(entry.target);
       targets.get(entry.target)?.forEach(show);
     });
-  }, { threshold: 0.08, rootMargin: "0px 0px -3% 0px" });
+  }, { threshold: 0, rootMargin: "0px 0px -3% 0px" });
   targets.forEach((_owned, trigger) => observer.observe(trigger));
   return (): void => {
     observer.disconnect();

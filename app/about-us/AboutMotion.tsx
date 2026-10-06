@@ -15,7 +15,7 @@ function observeEntrances(root: HTMLElement, seen: WeakSet<Element>): () => void
       }
       observer.unobserve(target);
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0 });
   root.querySelectorAll(TARGETS.map((name) => `.${name}`).join(",")).forEach((target) => {
     if (seen.has(target)) return;
     const bounds = target.getBoundingClientRect();

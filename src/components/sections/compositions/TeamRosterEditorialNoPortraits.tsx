@@ -60,7 +60,7 @@ export function TeamRosterEditorialNoPortraits({
           </div>
           <div className="relative border border-ink/10 bg-white px-6 py-8 shadow-lg shadow-ink/5 sm:px-10 sm:py-10">
             <span aria-hidden="true" className="absolute top-0 right-0 h-0.5 w-1/2 bg-action" />
-            <p className="font-fjalla text-xs tracking-[0.12em] text-action-deep uppercase">Roster</p>
+            <p className="font-fjalla text-sm tracking-[0.12em] text-action-deep uppercase">Roster</p>
             <ol className="mt-4">
               {entries.map((entry, index) => (
                 <RosterRow key={entry} entry={entry} index={index} />

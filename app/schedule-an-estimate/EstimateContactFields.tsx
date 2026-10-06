@@ -10,9 +10,9 @@ export default function EstimateContactFields({ errors }: { errors: EstimateErro
     <div className={s.fields}>
       <EstimateField {...field} id="estimate-name" name="name" label="Your name" autoComplete="name" errorId="estimate-name-error" error={errors.name} />
       <EstimateField {...field} id="estimate-city" name="projectCity" label="Project city (optional)" autoComplete="address-level2" errorId="estimate-city-error" />
-      <EstimateField {...field} id="estimate-email" name="email" type="email" label="Email address" autoComplete="email" errorId="estimate-email-error" error={errors.email ?? errors.contact} />
-      <EstimateField {...field} id="estimate-phone" name="phone" type="tel" label="Phone number" autoComplete="tel" errorId="estimate-email-error" invalid={Boolean(errors.contact)} />
+      <EstimateField {...field} id="estimate-email" name="email" type="email" label="Email address" autoComplete="email" errorId="estimate-email-error" error={errors.email} />
+      <EstimateField {...field} id="estimate-phone" name="phone" type="tel" label="Phone number" autoComplete="tel" errorId="estimate-phone-error" error={errors.phone} />
     </div>
-    <p className={s.fieldHint}>Share an email address or phone number so we can follow up.</p>
+    <p className={s.fieldHint}>Share your email address and phone number so we can follow up.</p>
   </fieldset>;
 }

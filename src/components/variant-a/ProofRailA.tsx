@@ -25,7 +25,7 @@ export function ProofRailA(): ReactElement {
           <ul className="hidden items-end justify-between gap-4 lg:flex">
             {PROOF.points.map((point) => (
               <li key={point} className="flex max-w-[130px] flex-col items-center text-center">
-                <span className="mb-2 font-fjalla text-[11px] leading-tight tracking-[0.06em] text-ink uppercase">
+                <span className="mb-2 font-fjalla text-sm leading-tight tracking-[0.06em] text-ink uppercase">
                   {point}
                 </span>
                 <span aria-hidden="true" className="h-3 w-px bg-action" />
@@ -37,7 +37,7 @@ export function ProofRailA(): ReactElement {
 
           <ul className="space-y-3 border-l-2 border-action pl-5 lg:hidden">
             {PROOF.points.map((point) => (
-              <li key={point} className="relative font-fjalla text-[13px] tracking-[0.06em] text-ink uppercase">
+              <li key={point} className="relative font-fjalla text-sm tracking-[0.06em] text-ink uppercase">
                 <span
                   aria-hidden="true"
                   className="absolute top-1.5 -left-[26px] size-2 rounded-full bg-action"
@@ -47,7 +47,7 @@ export function ProofRailA(): ReactElement {
             ))}
           </ul>
 
-          <p className="mt-8 font-fjalla text-xs tracking-[0.06em] text-ink uppercase lg:mt-6">
+          <p className="mt-8 font-fjalla text-sm tracking-[0.06em] text-ink uppercase lg:mt-6">
             {PROOF.captionLead}{" "}
             <span className="text-action-deep">{PROOF.captionAccent}</span> {PROOF.captionTail}
           </p>

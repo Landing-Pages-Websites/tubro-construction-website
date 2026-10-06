@@ -48,7 +48,7 @@ function observeMotion(root: HTMLElement): () => void {
       animations.add(animation);
       animation.onfinish = () => { animations.delete(animation); };
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0 });
   targets.forEach(target => {
     const rect = target.element.getBoundingClientRect();
     // Already-visible copy stays put during hydration and restored scroll positions.
