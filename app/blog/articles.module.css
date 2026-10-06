@@ -50,3 +50,13 @@
 @media (max-width: 899px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .gridHeading { align-items: start; flex-direction: column; gap: 20px; } .articleLayout { display: block; } .contents { position: static; margin-bottom: 40px; } .contents nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; } }
 @media (max-width: 599px) { .gridSection, .article main { width: calc(100% - 40px); } .gridSection { padding-block: 48px 64px; } .grid { grid-template-columns: minmax(0, 1fr); gap: 40px; } .articleImage { aspect-ratio: 4 / 3; margin-block: 32px; } .contents nav { grid-template-columns: 1fr; } .nextStep { padding: 24px; } }
 @media (max-width: 359px) { .article > header > div { padding-inline: 10px; } .article > header > div > a { padding-right: 0; } .article > header > div > a img { height: 24px; } .article > header > div > div > a[href="/schedule-an-estimate"] { font-size: 12px; padding-inline: 9px; } }
+.body > div > h3 { font-size: 21px; line-height: 1.35; letter-spacing: -.02em; font-weight: 600; margin: 28px 0 12px; }
+.body > div > a, .body > div > p a { color: var(--color-action-deep); text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.body > div > table { width: 100%; border-collapse: collapse; margin: 28px 0 36px; font-size: 14px; line-height: 1.65; }
+.body > div > table th, .body > div > table td { border: 1px solid #231f2040; padding: 14px 12px; text-align: left; vertical-align: top; }
+.body > div > table th { background: #e3e8df; color: var(--color-ink); font-weight: 700; }
+.body > div > p[data-mega-cta] { margin: 24px 0 32px; font-weight: 700; }
+.body > div > p[data-mega-cta] a { display: inline-flex; align-items: center; min-height: 44px; padding: 12px 18px; background: var(--color-action-deep); color: #fff; text-decoration: none; font-weight: 700; }
+.body > div > p[data-mega-cta] a:hover { background: var(--color-ink); }
+@media (max-width: 599px) { .body > div > table { display: block; overflow-x: auto; } .body > div > table th, .body > div > table td { min-width: 150px; } }
+.cardDate { display: block; margin-top: 8px; color: #56554f; font-size: 12px; line-height: 1.5; }
