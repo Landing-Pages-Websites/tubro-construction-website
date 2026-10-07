@@ -247,7 +247,7 @@ textarea.input { min-height: 115px; max-height: 320px; }
 @keyframes estimate-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .page main *, .page main *::before, .page main *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 
-.heroPhoto figcaption a { width: 44px; height: 44px; }
+.heroPhoto figcaption a { width: 44px; min-width: 44px; height: 44px; min-height: 44px; flex-shrink: 0; }
 .heroContact a, .questions a, .privacy a, .workHeading a { display: inline-flex; align-items: center; min-height: 44px; }
 @media (max-width: 359px) {
   .hero, .nextSteps, .questions { padding-inline: 16px; }

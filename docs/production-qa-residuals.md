@@ -106,3 +106,22 @@ Validation on the final application source:
 - `simplify` was attempted and unavailable (exit 127); manual simplification/code review retained one small presence helper, one shared refusal response and the heading-only allowlist. No unrelated UI, dependencies, forwarding, CAPTCHA assessment, origin or host-policy changes.
 
 Local logs, browser click/axe results, screenshots, checker result/hash and isolated build are under ignored `qa/final-safety/`. These results establish local behavior, not production integration acceptance.
+
+## Tablet estimate project-link hitbox
+
+Base: `e2b4c88f75ded5a595a229d3982870af8a25ce8d`. The only application change adds `min-width: 44px`, `min-height: 44px` and `flex-shrink: 0` to the existing 44px `.heroPhoto figcaption a` rule. The actual anchor retains its circular border, 23px icon, caption, palette and destination; no other controls or prior repairs changed.
+
+`tests/estimate-project-hitbox-browser.mjs` reproduced the tablet failure before the repair, then passed all three viewports against a fresh production build of the current tree:
+
+| Viewport width | Before: actual anchor | After: actual anchor |
+| --- | --- | --- |
+| 390px | 44 × 44px | 44 × 44px |
+| 834px | 39.03125 × 44px | 44 × 44px |
+| 1440px | 44 × 44px | 44 × 44px |
+
+- Browser regression: **3 passed**. Native `elementFromPoint` hits reach the anchor at its center and four edges; an edge click and Tab/Enter both navigate to `/recent-projects`. Keyboard focus is visible with the existing 2px solid outline. No pseudo-element target or horizontal overflow. Circle border, icon dimensions and caption are asserted. Screenshots reviewed at all three widths with reduced motion for stable comparisons: mobile/desktop are pixel-identical; tablet changes only within the anchor's 44 × 44px bounds `(263, 914)–(307, 958)`.
+- `node --test tests/*.test.mjs`: **64 passed**. `npm run typecheck`, `npm run build` (**198 pages**) and `git diff --check`: passed. `npm run verify`: still **FAILED (310 pre-existing artifact-schema errors)**; verifier, route registry, `public/design` and `site_build` remain byte-unchanged from the base.
+- Validation used the byte-checked source copy at ignored `qa/tablet-hitbox/build`, port **43190**, existing dependencies and original cached font binaries through an offline Next font fixture. External browser/server requests were blocked; no leads submitted. Controller port **3278** remained untouched. Logs and screenshots are under `qa/tablet-hitbox/`; the additional normal-motion axe process could not launch because temporary browser artifact storage returned `ENOSPC`, so no axe result is claimed for this repair.
+- `simplify` was attempted (unavailable, exit 127); manual simplification/code review retained one targeted CSS rule and a standalone behavioral browser regression. No dependencies, checkers or unrelated artifacts changed. The controller owns PR26, fresh org review of the final head, push, merge and deployment.
+
+Re-run the browser regression with `TEST_BASE_URL` pointing to an independent local server, `PLAYWRIGHT_MODULE` and `CHROMIUM_PATH` pointing to the supplied installed tools, and the supplied `LD_LIBRARY_PATH`; run `node --test tests/estimate-project-hitbox-browser.mjs`. Optional `EVIDENCE_DIR` saves screenshots.
