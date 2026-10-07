@@ -86,10 +86,48 @@ test("production fails closed for absent/invalid proofs, forbidden keys and hone
     assert.equal((await api.post({ ...payload, ...change }, host)).status, 403);
   }
   for (const change of [{ form_key: "unsupported" }, { form_key: "estimate_privacy" }, { form_key: "estimate_blog" }, { form_key: "estimate_homepage" }, { proof_claim: {} }, { attempt_id: "supplied" }, { token: claimToken }]) {
-    assert.equal((await api.post({ ...payload, ...change }, host)).status, 422);
+    assert.equal((await api.post({ ...payload, captchaToken: sentinel, ...change }, host)).status, 422);
   }
   assert.equal((await api.post(prove({ ...payload, website: "spam.test" }), host)).status, 403);
   assert.equal(api.requests.length, 0);
+});
+
+test("missing verification refuses canonical and foreign JSON before schema disclosure or external calls", async () => {
+  const api = boundary({ ...productionEnv, RECAPTCHA_PROJECT_ID: "test", RECAPTCHA_API_KEY: "test" });
+  const foreign = { ...payload.form_data, form_key: "contact-form", company: "", context: { url: `https://${host}/contact` }, utm_source: null, captchaAction: "lead_submit" };
+  for (const body of [payload, { ...payload, website: "" }, {}, foreign, { ...foreign, form_data: { ...payload.form_data, form_key: "contact-form" } }]) {
+    for (const material of [{}, { captchaToken: "" }, { captchaToken: " \t" }, { captchaToken: null }, { captchaToken: {} }, { powIssuedAt: String(Date.now()) }, { powNonce: "0" }, { powIssuedAt: "", powNonce: "0" }]) {
+      const response = await api.post({ ...body, ...material }, host);
+      assert.equal(response.status, 403);
+      const result = await response.json();
+      assert.equal(result.code, "verification_failed");
+      assert.equal("errors" in result, false);
+      assert.equal(api.requests.length, 0, "no assessment or delivery on refusal");
+    }
+  }
+});
+
+test("purported verification never bypasses strict fields, defaults or honeypots", async () => {
+  const assessment = { tokenProperties: { valid: true, action: "lead_submit", hostname: host }, riskAnalysis: { score: 0.9, reasons: [] } };
+  const api = boundary({ ...productionEnv, RECAPTCHA_PROJECT_ID: "test", RECAPTCHA_API_KEY: "test" }, assessment);
+  const invalidProof = { ...payload, powIssuedAt: "0000000000000", powNonce: "0" };
+  const validProof = prove(payload);
+  const verifiedBodies = [{ ...payload, captchaToken: "minted-test-token" }, invalidProof, validProof];
+  for (const body of verifiedBodies) {
+    for (const change of [{ context: {} }, { form_key: "contact-form" }, { form_key: "defaultkey" }, { form_data: { ...payload.form_data, first_name: "duplicate" } }, { form_data: { ...payload.form_data, form_key: payload.form_key } }]) {
+      const candidate = { ...body, ...change };
+      const response = await api.post(body === validProof ? prove(candidate) : candidate, host);
+      assert.equal(response.status, 422);
+      assert.ok((await response.json()).errors.form);
+      assert.equal(api.requests.length, 0, "fields are checked before Enterprise or forwarding");
+    }
+  }
+  for (const body of [invalidProof, { ...payload, captchaToken: sentinel }, { ...payload, captchaToken: "lead-submit" }, { ...payload, captchaToken: "minted-test-token", website: "spam.test" }, prove({ ...payload, website: "spam.test" })]) {
+    const response = await api.post(body, host);
+    assert.equal(response.status, 403);
+    assert.equal((await response.json()).code, "verification_failed");
+    assert.equal(api.requests.length, 0, "missing/filled honeypot cannot authorize invalid material");
+  }
 });
 
 test("fallback verifies exact payload, age and proof, then claims at the existing receiver", async () => {

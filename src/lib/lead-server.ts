@@ -50,6 +50,12 @@ export function payloadErrors(body: LeadPayload): Record<string, string> {
   return validateLeadFields(body.form_data, requirementsFor(body.form_key));
 }
 
+/** Presence only: field validation and full authorization must still succeed. */
+export function hasLeadVerification(body: LeadPayload): boolean {
+  const nonempty = (value: unknown): boolean => typeof value === "string" && value.trim().length > 0;
+  return nonempty(body.captchaToken) || (nonempty(body.powIssuedAt) && nonempty(body.powNonce));
+}
+
 async function enterpriseAuthorized(token: string, hostname: string): Promise<boolean> {
   if (!token || token === STAGING_SENTINEL || token === "lead-submit" || token.length > 8192) return false;
   const project = process.env.RECAPTCHA_PROJECT_ID;

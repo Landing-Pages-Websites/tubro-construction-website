@@ -58,6 +58,24 @@ function schemas(doc) {
   return attr(doc, "type", "application/ld+json").map((node) => JSON.parse(textContent(node)));
 }
 
+function inspectAuthoredContents(doc, body, row) {
+  if (!["outdoor-living-space-western-washington", "small-bathroom-ideas"].includes(row.new_slug)) return;
+  const markdown = readFileSync(`content/blog/${row.new_slug}.md`, "utf8");
+  const contents = JSON.parse(JSON.parse(markdown.match(/^contents: (.+)$/m)[1]));
+  const nav = attr(doc, "aria-label", "Article contents");
+  assert.equal(nav.length, 1, row.target);
+  const links = tags(nav[0], "a");
+  assert.deepEqual(links.map((node) => node.attribs.href), contents.map((section) => `#${section.id}`));
+  for (const link of links) {
+    const id = link.attribs.href.slice(1);
+    assert.equal(attr(doc, "id", id).length, 1, `${row.target}: unique ${id}`);
+    const headings = attr(body, "id", id);
+    assert.equal(headings.length, 1, `${row.target}: owned ${id}`);
+    assert.ok(["h2", "h3"].includes(headings[0].name));
+    assert.equal(textContent(headings[0]), textContent(link));
+  }
+}
+
 function inspectArticle(doc, row) {
   const schema = schemas(doc).filter((value) => ["Article", "BlogPosting"].includes(value["@type"]));
   assert.equal(schema.length, 1, `${row.target}: one article schema`);
@@ -65,6 +83,7 @@ function inspectArticle(doc, row) {
   const bodies = nodes(doc, (node) => node.attribs && "data-article-body" in node.attribs);
   assert.equal(bodies.length, 1, `${row.target}: rendered body`);
   const body = bodies[0];
+  inspectAuthoredContents(doc, body, row);
   assert.equal(tags(body, "script").length, 0, `${row.target}: no inline duplicate schema`);
   assert.doesNotMatch(textContent(body), /<\/?(?:h[1-6]|p|script)\b|```|^#{1,6} /m, row.target);
   if (row.body_sha256) {

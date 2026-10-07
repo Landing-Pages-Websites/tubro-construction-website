@@ -17,8 +17,12 @@ for (const slug of slugs) test(`${slug}: complete owning article preserves sourc
   assert.match(row.item_id || '', /^item_[0-9a-hjkmnp-tv-z]{25}[048cgmrw]$/);
   assert.equal(row.item_id, fileIds[slugs.indexOf(slug)], 'stable assigned file identity');
   const source = original(slug);
+  const anchoredBody = source.bodyHtml.replace(/<h2>([\s\S]*?)<\/h2>/g, (heading, text) => {
+    const index = source.sections.findIndex(section => section.heading === text);
+    return index < 0 ? heading : `<h2 id="section-${index + 1}">${text}</h2>`;
+  });
   const markdown = readFileSync(`content/blog/${slug}.md`, 'utf8');
-  assert.ok(markdown.includes(source.bodyHtml), 'full original HTML, not an excerpt');
+  assert.ok(markdown.includes(anchoredBody), 'full original HTML with only the declared navigation IDs restored');
   assert.ok(markdown.includes(`rendererId: "structured_${slug}"`));
   assert.ok(markdown.includes(`sourceUrl: "repository:${row.source}"`));
   assert.equal(row.source_sha256, createHash('sha256').update(readFileSync(row.source)).digest('hex'));
@@ -30,7 +34,7 @@ for (const slug of slugs) test(`${slug}: complete owning article preserves sourc
   assert.equal(post.canonicalPath, `/blog/${slug}`);
   assert.equal(textContent(parseDocument(post.bodyHtml)), textContent(parseDocument(source.bodyHtml)));
   for (const tag of ['h2', 'h3', 'li', 'table', 'a']) {
-    assert.deepEqual(nodes(post.bodyHtml, tag).map(node => [textContent(node), node.attribs]), nodes(source.bodyHtml, tag).map(node => [textContent(node), node.attribs]), tag);
+    assert.deepEqual(nodes(post.bodyHtml, tag).map(node => [textContent(node), node.attribs]), nodes(anchoredBody, tag).map(node => [textContent(node), node.attribs]), tag);
   }
   assert.deepEqual(JSON.parse(JSON.stringify(post.sections)), Array.from(source.sections, (section, index) => ({id:`section-${index + 1}`,heading:section.heading})));
   for (const link of source.sources) assert.ok(markdown.includes(link.url));

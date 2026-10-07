@@ -36,6 +36,7 @@ function wireFromMarkup(html) {
 
 test('all 27 actual SSR forms declare exactly their client identity and canonical required fields', async () => {
   assert.equal(cases.length, 27);
+  const { payloadErrors } = loadModule('src/lib/lead-server.ts');
   const route = loadModule('app/api/lead/route.ts', {process:{env:{VERCEL_ENV:'production',RECAPTCHA_HOSTNAMES:'www.tubroconstruction.com',NEXT_PUBLIC_RECAPTCHA_SITE_KEY:'isolated-production-site-key'}},fetch:async () => {throw new Error('Tokenless tests must never forward');}});
   for (const [key, Component, props] of cases) {
     const html = renderToStaticMarkup(createElement(Component, props));
@@ -45,6 +46,7 @@ test('all 27 actual SSR forms declare exactly their client identity and canonica
     assert.equal(identity[0].attribs.value,key,key);
     const payload = wireFromMarkup(html);
     assert.ok(!('form_key' in payload.form_data));
+    assert.equal(Object.keys(payloadErrors(payload)).length, 0, `${key}: canonical fields remain valid`);
     const response = await route.POST(new Request('https://www.tubroconstruction.com/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}));
     const result = await response.json();
     assert.equal(response.status,403,`${key}: ${JSON.stringify(result)}`);
@@ -54,7 +56,7 @@ test('all 27 actual SSR forms declare exactly their client identity and canonica
 
 test('SSR identity stays outside form_data; unknown keys and duplicate identity are rejected', async () => {
   const route = loadModule('app/api/lead/route.ts', {process:{env:{VERCEL_ENV:'production',RECAPTCHA_HOSTNAMES:'www.tubroconstruction.com',NEXT_PUBLIC_RECAPTCHA_SITE_KEY:'isolated-production-site-key'}},fetch:async () => {throw new Error('No forwarding expected');}});
-  const payload = wireFromMarkup(renderToStaticMarkup(createElement(EstimateRequestForm)));
+  const payload = { ...wireFromMarkup(renderToStaticMarkup(createElement(EstimateRequestForm))), captchaToken: 'invalid-test-token' };
   const invalid = [
     ...['contact-form','defaultkey','unsupported'].map(form_key => ({...payload,form_key})),
     {...payload,form_data:{...payload.form_data,form_key:payload.form_key}},

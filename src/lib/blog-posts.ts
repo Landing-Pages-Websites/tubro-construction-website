@@ -121,7 +121,7 @@ function renderLegacyBody(markdown: string): { bodyHtml: string; sections: BlogS
 function renderAuthoredBody(markdown: string, contents: string): { bodyHtml: string; sections: BlogSection[] } {
   const bodyHtml = sanitizeHtml(markdown.trim(), {
     allowedTags: [...sanitizeHtml.defaults.allowedTags, "img"],
-    allowedAttributes: { a: ["href", "title", "rel", "target"], p: ["data-mega-cta"], img: ["src", "alt", "title"], th: ["colspan", "rowspan", "scope"], td: ["colspan", "rowspan"], ol: ["start"] },
+    allowedAttributes: { h2: ["id"], h3: ["id"], a: ["href", "title", "rel", "target"], p: ["data-mega-cta"], img: ["src", "alt", "title"], th: ["colspan", "rowspan", "scope"], td: ["colspan", "rowspan"], ol: ["start"] },
     allowedSchemes: ["https", "http", "mailto", "tel"],
   });
   return { bodyHtml, sections: JSON.parse(contents) as BlogSection[] };
