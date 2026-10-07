@@ -10,17 +10,18 @@ export type EstimateStatus = "idle" | "submitting" | "success" | "error";
 export type EstimateErrors = LeadErrors;
 export type { EstimateFormOptions } from "@/lib/estimate-fields";
 export interface EstimateForm {
+  formKey: string;
   formRef: RefObject<HTMLFormElement | null>; status: EstimateStatus; errors: EstimateErrors;
   errorMessage: string; validateAndSubmit: () => void;
   handleSubmit: (event: FormEvent<HTMLFormElement>) => Promise<void>; focusFirstField: () => void;
 }
-type SubmitContext = { lock: SubmissionLock; options: EstimateFormOptions; pageVariant: string; setStatus: (status: EstimateStatus) => void; setMessage: (message: string) => void };
+type SubmitContext = { lock: SubmissionLock; formKey: string; pageVariant: string; setStatus: (status: EstimateStatus) => void; setMessage: (message: string) => void };
 
 async function submit(form: HTMLFormElement, context: SubmitContext): Promise<void> {
   if (!context.lock.acquire()) return;
   context.setStatus("submitting"); context.setMessage("");
   try {
-    await postLead(context.options.formKey || "homepage_estimate", readFields(form), context.pageVariant);
+    await postLead(context.formKey, readFields(form), context.pageVariant);
     context.lock.complete();
     window.dataLayer ??= [];
     window.dataLayer.push({ event: "form_submission" });
@@ -32,6 +33,7 @@ async function submit(form: HTMLFormElement, context: SubmitContext): Promise<vo
 }
 
 export function useEstimateForm(pageVariant: string, options: EstimateFormOptions = {}): EstimateForm {
+  const formKey = options.formKey || "homepage_estimate";
   const formRef = useRef<HTMLFormElement>(null);
   const lock = useRef(createSubmissionLock());
   const [status, setStatus] = useState<EstimateStatus>("idle");
@@ -49,8 +51,8 @@ export function useEstimateForm(pageVariant: string, options: EstimateFormOption
   const handleSubmit = async (event: FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault();
     if (!validate(event.currentTarget)) return;
-    await submit(event.currentTarget, { lock: lock.current, options, pageVariant, setStatus, setMessage });
+    await submit(event.currentTarget, { lock: lock.current, formKey, pageVariant, setStatus, setMessage });
   };
   const focusFirstField = (): void => { formRef.current?.querySelector<HTMLElement>('[name="name"]')?.focus(); };
-  return { formRef, status, errors, errorMessage, validateAndSubmit, handleSubmit, focusFirstField };
+  return { formKey, formRef, status, errors, errorMessage, validateAndSubmit, handleSubmit, focusFirstField };
 }

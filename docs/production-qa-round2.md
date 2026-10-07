@@ -1,5 +1,7 @@
 # Production QA round 2 — local repair record
 
+This records the preceding repair at `cc3a33e`. See [the residual repair record](production-qa-residuals.md) for the subsequent two full authored exports (71 Markdown files, still 69 articles), form declarations, remaining probe-contract finding, and current validation.
+
 Scope: `fix/tubro-production-qa-round2-20261007`, based on `e2da0b0d2b0dfe4de0600271bd0cd10fedb4abfa`. Local commit only. No push, PR, review request, deployment, provisioning, notification change, external lead submission or credential access was performed. The controller owns remote delivery and production verification.
 
 ## Repair plan and design constraint

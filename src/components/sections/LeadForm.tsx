@@ -2,7 +2,7 @@
 
 import { LeadHoneypot } from "@/components/shared/LeadHoneypot";
 import { ArrowRight, Loader2 } from "lucide-react";
-import type { ReactElement } from "react";
+import type { ChangeEvent, ReactElement } from "react";
 import { useEstimateForm } from "@/hooks/useEstimateForm";
 import { defaultProjectType } from "@/lib/form-keys";
 import { EstimateField } from "@/components/shared/EstimateField";
@@ -11,6 +11,11 @@ import { EstimateStatusNote } from "@/components/shared/EstimateStatusNote";
 const FIELD_CLASSES =
   "w-full rounded-md border border-ink/25 bg-white px-3.5 py-2.5 font-poppins text-sm text-ink placeholder:text-ink/70 focus:border-action";
 const LABEL_CLASSES = "font-fjalla text-sm tracking-[0.1em] text-ink/70 uppercase";
+
+function declareResumeFileName(event: ChangeEvent<HTMLInputElement>): void {
+  const declaration = event.currentTarget.form?.elements.namedItem("resumeFileName");
+  if (declaration instanceof HTMLInputElement) declaration.value = event.currentTarget.files?.[0]?.name ?? "";
+}
 
 export interface LeadFormProps {
   /** Distinct submission key per route, e.g. "estimate_contact". */
@@ -50,6 +55,7 @@ export function LeadForm({
 
   return (
     <form action="/api/lead" method="post" ref={form.formRef} onSubmit={form.handleSubmit}  aria-label={submitLabel}>
+      <input type="hidden" name="form_key" value={form.formKey} />
       <LeadHoneypot />
       {options.length > 0 && (
         <fieldset>
@@ -132,6 +138,7 @@ export function LeadForm({
       />
       {withResume && (
         <div className="mt-4">
+          <input type="hidden" name="resumeFileName" defaultValue="" required />
           <label htmlFor={`${idPrefix}-resume`} className={LABEL_CLASSES}>
             Résumé (PDF or Word)
           </label>
@@ -139,6 +146,7 @@ export function LeadForm({
             id={`${idPrefix}-resume`}
             name="resume" required
             type="file"
+            onChange={declareResumeFileName}
             accept=".pdf,.doc,.docx,.txt,.rtf"
             aria-invalid={Boolean(form.errors.resume)}
             aria-describedby={form.errors.resume ? `${idPrefix}-resume-error` : undefined}

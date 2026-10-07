@@ -28,6 +28,7 @@ export function HomepageEstimateForm({ form, idPrefix = "a", submitLabel = ESTIM
 
       className={`${styles.form} rounded-xl bg-white p-6 shadow-lg shadow-ink/10 sm:p-9`}
     >
+      <input type="hidden" name="form_key" value={form.formKey} />
       <LeadHoneypot />
       <fieldset>
         <legend className="font-fjalla text-sm tracking-[0.12em] text-ink uppercase">

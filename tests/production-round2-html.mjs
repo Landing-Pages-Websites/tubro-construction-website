@@ -5,6 +5,7 @@ import { createHash } from "node:crypto";
 import { parseDocument } from "htmlparser2";
 import { findAll, textContent } from "domutils";
 import { SITE_ROUTES } from "../scripts/site-routes.mjs";
+import { formKeyForSlug } from "../src/lib/form-keys.ts";
 import { EMAIL_PATTERN, PHONE_PATTERN } from "../src/lib/lead-validation.ts";
 
 const base = process.env.TEST_BASE_URL || "http://127.0.0.1:3278";
@@ -37,10 +38,16 @@ function inspectForms(doc, path) {
       assert.ok("required" in controls[0].attribs, path);
     }
     for (const control of nodes(form, (node) => ["input", "textarea", "select"].includes(node.name))) {
+      if (control.attribs.type === "hidden") continue;
       const label = attr(form, "for", control.attribs.id);
       const enclosed = control.parent?.name === "label";
       assert.ok(label.length || enclosed, `${path}: label for ${control.attribs.name}`);
     }
+    const identity = attr(form, "name", "form_key");
+    assert.equal(identity.length, 1, `${path}: unique form identity`);
+    const expectedKey = path === "/" ? "homepage_estimate" : formKeyForSlug(SITE_ROUTES.find((route) => route.path === path).slug);
+    assert.equal(identity[0].attribs.type, "hidden", path);
+    assert.equal(identity[0].attribs.value, expectedKey, path);
     assert.equal(attr(form, "name", "website").length, 1, `${path}: honeypot`);
     assert.equal(attr(form, "type", "submit").length, 0, `${path}: raw submit`);
     for (const button of tags(form, "button")) assert.equal(button.attribs.type, "button", path);
@@ -109,9 +116,9 @@ async function checkLinksAndImage() {
   assert.ok(!links.some((href) => href.includes("/keys-open-communication-with-your-contractor")));
   await get("/keys-to-open-communication-with-your-contractor");
   const backlinks = pages.get("/backlinks");
-  const removed = /travelful\.net|about\.me|companylistingnyc\.com|ebusinesspages\.com|globalcatalog\.com|teleadreson\.com|announceamerica\.com/;
+  const removed = /travelful\.net|about\.me|companylistingnyc\.com|ebusinesspages\.com|globalcatalog\.com|teleadreson\.com|announceamerica\.com|bizmaker\.org|cgmimm\.com/;
   assert.ok(!tags(backlinks, "a").some((node) => removed.test(node.attribs.href || "")));
-  for (const label of ["Travelful", "About.me", "Company Listing NYC", "eBusinessPages", "GlobalCatalog", "Teleadreson", "Announce America"]) assert.ok(textContent(backlinks).includes(label));
+  for (const label of ["Travelful", "About.me", "Company Listing NYC", "eBusinessPages", "GlobalCatalog", "Teleadreson", "Announce America", "BizMaker", "CGMIMM"]) assert.ok(textContent(backlinks).includes(label));
   const small = pages.get("/blog/small-bathroom-ideas");
   const source = tags(small, "img").find((node) => node.attribs.src.includes("299609"));
   assert.ok(source, "Existing small-bathroom image is rendered");
@@ -129,7 +136,7 @@ async function main() {
   assert.equal(results.reduce((total, row) => total + row.forms, 0), 27);
   const sitemapRoutes = await checkMigration();
   const image = await checkLinksAndImage();
-  const summary = { routes: results.length, forms: 27, articles: inventory.posts.length, sitemapRoutes, ...image, browser: "screenshots unavailable — bootstrap gap (libnspr4.so)", results };
+  const summary = { routes: results.length, forms: 27, articles: inventory.posts.length, sitemapRoutes, ...image, browser: "not run by this HTML-only check", results };
   mkdirSync(".next/qa-round2", { recursive: true });
   writeFileSync(".next/qa-round2/served-html.json", JSON.stringify(summary, null, 2));
   process.stdout.write(JSON.stringify({ ...summary, results: undefined }) + "\n");

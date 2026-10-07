@@ -8,7 +8,7 @@ const source = (slug) => readFileSync(`content/blog/${slug}.md`, "utf8");
 test("every recovered and authored article has a unique stable source identity", () => {
   const ids = files.map((file) => /^id: "?(item_[0-9a-hjkmnp-tv-z]{25}[048cgmrw])"?$/m.exec(readFileSync(`content/blog/${file}`, "utf8"))?.[1]);
   assert.ok(ids.every(Boolean)); assert.equal(new Set(ids).size, files.length);
-  assert.equal(files.length, 69);
+  assert.equal(files.length, 71);
   assert.ok(source("kitchen-remodel-cost-washington-state").includes("item_q2fvf282v44npyrpr5bgbybjrr"));
 });
 
@@ -31,7 +31,12 @@ test("authoritative article counts and every original source record remain truth
   assert.equal(inventory.posts_with_item_id, 54);
   assert.equal(legacy.length, 54);
   assert.equal(inventory.posts.filter((row) => row.status === "authored").length, 15);
-  assert.equal(inventory.posts.filter((row) => row.item_id).length, 67);
+  assert.equal(inventory.posts.filter((row) => row.item_id).length, 69);
+  assert.equal(inventory.counts.article_item_ids, 69);
+  assert.equal(inventory.counts.existing_article_item_ids, 67);
+  assert.equal(inventory.counts.new_file_article_item_ids, 2);
+  assert.equal(inventory.counts.legacy_page_item_ids, 2);
+  assert.equal(inventory.counts.markdown_files, files.length);
   assert.equal(inventory.retained_pages.length, 32);
   assert.equal(inventory.aliases.length, 1);
   assert.equal(new Set(inventory.posts.map((row) => row.new_slug)).size, 69);
@@ -56,7 +61,10 @@ test("retained pages and canonical alias describe actual 200 routes without fict
 });
 
 test("all 13 JSON exports retain complete authored sections, sources, dates and slugs", () => {
-  for (const row of inventory.authored_exports) {
+  const priorExports = inventory.authored_exports.filter((row) => !row.renderer_id);
+  assert.equal(priorExports.length, 13);
+  assert.equal(inventory.authored_exports.length, 15);
+  for (const row of priorExports) {
     const original = JSON.parse(readFileSync(row.source, "utf8"));
     const markdown = source(row.slug);
     assert.ok(markdown.includes(original.publishedDate));

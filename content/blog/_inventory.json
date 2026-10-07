@@ -1199,7 +1199,11 @@
       "target": "/blog/outdoor-living-space-western-washington",
       "status": "authored",
       "renderer_id": "structured_outdoor-living-space-western-washington",
-      "source": "src/lib/blog-content/outdoor-living-space-western-washington.json"
+      "source": "src/lib/blog-content/outdoor-living-space-western-washington.json",
+      "item_id": "item_29fa1hpj5b0xv6ffkkp63hjy04",
+      "source_sha256": "5d5769de9a890e2430c137d5430fc4feec28bbce2ae07d03c728a1549beecb10",
+      "id_seed_url": "https://www.tubroconstruction.com/outdoor-living-space-western-washington",
+      "id_provenance": "New file identity: blogmig.stableid.item_id_from_entropy(SHA-256(id_seed_url)[:16]); same root-URL seed convention as the 13 prior authored exports. Source has no item ID; renderer_id is retained, not represented as a published MEGA item."
     },
     {
       "old_url": null,
@@ -1207,7 +1211,11 @@
       "target": "/blog/small-bathroom-ideas",
       "status": "authored",
       "renderer_id": "structured_small-bathroom-ideas",
-      "source": "src/lib/blog-content/small-bathroom-ideas.ts"
+      "source": "src/lib/blog-content/small-bathroom-ideas.ts",
+      "item_id": "item_m1q0rt1gex1q3n6yr4ttsffjbg",
+      "source_sha256": "9322ce2d613fc2ec449810d7b097dcf4a9dc5ba1519328ee0eeb5813368c55ac",
+      "id_seed_url": "https://www.tubroconstruction.com/small-bathroom-ideas",
+      "id_provenance": "New file identity: blogmig.stableid.item_id_from_entropy(SHA-256(id_seed_url)[:16]); same root-URL seed convention as the 13 prior authored exports. Source has no item ID; renderer_id is retained, not represented as a published MEGA item."
     }
   ],
   "authored_exports": [
@@ -1288,6 +1296,26 @@
       "item_id": "item_600rax75hwh53rj3n7ee59mw8r",
       "source": "src/lib/blog-content/home-addition-planning-checklist.json",
       "target": "/blog/home-addition-planning-checklist"
+    },
+    {
+      "slug": "outdoor-living-space-western-washington",
+      "item_id": "item_29fa1hpj5b0xv6ffkkp63hjy04",
+      "source": "src/lib/blog-content/outdoor-living-space-western-washington.json",
+      "target": "/blog/outdoor-living-space-western-washington",
+      "renderer_id": "structured_outdoor-living-space-western-washington",
+      "source_sha256": "5d5769de9a890e2430c137d5430fc4feec28bbce2ae07d03c728a1549beecb10",
+      "id_seed_url": "https://www.tubroconstruction.com/outdoor-living-space-western-washington",
+      "id_provenance": "New file identity: blogmig.stableid.item_id_from_entropy(SHA-256(id_seed_url)[:16]); same root-URL seed convention as the 13 prior authored exports. Source has no item ID; renderer_id is retained, not represented as a published MEGA item."
+    },
+    {
+      "slug": "small-bathroom-ideas",
+      "item_id": "item_m1q0rt1gex1q3n6yr4ttsffjbg",
+      "source": "src/lib/blog-content/small-bathroom-ideas.ts",
+      "target": "/blog/small-bathroom-ideas",
+      "renderer_id": "structured_small-bathroom-ideas",
+      "source_sha256": "9322ce2d613fc2ec449810d7b097dcf4a9dc5ba1519328ee0eeb5813368c55ac",
+      "id_seed_url": "https://www.tubroconstruction.com/small-bathroom-ideas",
+      "id_provenance": "New file identity: blogmig.stableid.item_id_from_entropy(SHA-256(id_seed_url)[:16]); same root-URL seed convention as the 13 prior authored exports. Source has no item ID; renderer_id is retained, not represented as a published MEGA item."
     }
   ],
   "images": [
@@ -2293,7 +2321,10 @@
     "redirected_exclusions": 0,
     "authored_articles": 15,
     "total_articles": 69,
-    "article_item_ids": 67,
-    "legacy_page_item_ids": 2
+    "article_item_ids": 69,
+    "legacy_page_item_ids": 2,
+    "existing_article_item_ids": 67,
+    "new_file_article_item_ids": 2,
+    "markdown_files": 71
   }
 }
