@@ -21,7 +21,7 @@
 .note p { max-width: 330px; font-size: 14px; line-height: 1.8; color: #686760; }
 .noteCopy p + p { margin-top: 12px; }
 .noteCopy strong { color: var(--color-ink); font-weight: 600; }
-.noteCopy a { color: var(--color-action-deep); text-decoration: underline; text-underline-offset: 3px; }
+.noteCopy a { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-action-deep); text-decoration: underline; text-underline-offset: 3px; }
 .formPanel { position: relative; background: #fff; padding: clamp(24px, 3vw, 44px); border: 1px solid #deded4; box-shadow: 12px 12px 0 var(--color-sage); scroll-margin-top: 100px; }
 .formPanel::before { content: ''; position: absolute; left: -1px; top: -1px; width: 64px; height: 3px; background: var(--color-action); }
 .formHeading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }

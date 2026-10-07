@@ -1,7 +1,8 @@
 "use client";
 
+import { LeadHoneypot } from "@/components/shared/LeadHoneypot";
 import { ArrowRight, Loader2 } from "lucide-react";
-import type { ReactElement } from "react";
+import type { ChangeEvent, ReactElement } from "react";
 import { useEstimateForm } from "@/hooks/useEstimateForm";
 import { defaultProjectType } from "@/lib/form-keys";
 import { EstimateField } from "@/components/shared/EstimateField";
@@ -10,6 +11,11 @@ import { EstimateStatusNote } from "@/components/shared/EstimateStatusNote";
 const FIELD_CLASSES =
   "w-full rounded-md border border-ink/25 bg-white px-3.5 py-2.5 font-poppins text-sm text-ink placeholder:text-ink/70 focus:border-action";
 const LABEL_CLASSES = "font-fjalla text-sm tracking-[0.1em] text-ink/70 uppercase";
+
+function declareResumeFileName(event: ChangeEvent<HTMLInputElement>): void {
+  const declaration = event.currentTarget.form?.elements.namedItem("resumeFileName");
+  if (declaration instanceof HTMLInputElement) declaration.value = event.currentTarget.files?.[0]?.name ?? "";
+}
 
 export interface LeadFormProps {
   /** Distinct submission key per route, e.g. "estimate_contact". */
@@ -49,6 +55,8 @@ export function LeadForm({
 
   return (
     <form action="/api/lead" method="post" ref={form.formRef} onSubmit={form.handleSubmit}  aria-label={submitLabel}>
+      <input type="hidden" name="form_key" value={form.formKey} />
+      <LeadHoneypot />
       {options.length > 0 && (
         <fieldset>
           <legend className={LABEL_CLASSES}>{withResume ? "Work area" : "Project type"}</legend>
@@ -130,6 +138,7 @@ export function LeadForm({
       />
       {withResume && (
         <div className="mt-4">
+          <input type="hidden" name="resumeFileName" defaultValue="" required />
           <label htmlFor={`${idPrefix}-resume`} className={LABEL_CLASSES}>
             Résumé (PDF or Word)
           </label>
@@ -137,6 +146,7 @@ export function LeadForm({
             id={`${idPrefix}-resume`}
             name="resume" required
             type="file"
+            onChange={declareResumeFileName}
             accept=".pdf,.doc,.docx,.txt,.rtf"
             aria-invalid={Boolean(form.errors.resume)}
             aria-describedby={form.errors.resume ? `${idPrefix}-resume-error` : undefined}
@@ -150,7 +160,7 @@ export function LeadForm({
           <p className="mt-1.5 font-poppins text-sm text-ink/70">
             Submitting sends your details and résumé filename to the office; the team follows up
             by email to collect the document. You can also send it to{" "}
-            <a href="mailto:workorders@tubroconstruction.com" className="underline underline-offset-2">
+            <a href="mailto:workorders@tubroconstruction.com" className="inline-flex min-h-11 items-center underline underline-offset-2">
               workorders@tubroconstruction.com
             </a>
             .
@@ -158,7 +168,7 @@ export function LeadForm({
         </div>
       )}
       <div className="mt-5">
-        <label className="flex cursor-pointer gap-3 font-poppins text-sm leading-relaxed text-ink/75">
+        <label className="flex min-h-11 cursor-pointer gap-3 font-poppins text-sm leading-relaxed text-ink/75">
           <input
             type="checkbox"
             name="consent" required

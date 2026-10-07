@@ -52,7 +52,7 @@
 .input[aria-invalid="true"] { border-color: #a63224; }
 textarea.input { min-height: 115px; max-height: 320px; }
 .fieldHint { color: var(--muted); font-size: 14px; line-height: 1.8; margin-top: 10px; }
-.consent { display: flex; gap: 10px; align-items: start; font-size: 14px; line-height: 1.8; cursor: pointer; }
+.consent { display: flex; min-height: 44px; gap: 10px; align-items: start; font-size: 14px; line-height: 1.8; cursor: pointer; }
 .consent input { flex-shrink: 0; width: 17px; height: 17px; margin-top: 2px; accent-color: var(--color-action-deep); }
 .error { color: #a63224; font-size: 14px; line-height: 1.7; margin-top: 8px; }
 .submit { margin-top: 23px; min-height: 53px; padding: 15px 20px; width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; background: var(--color-action-deep); color: var(--color-plaster); border: 1px solid transparent; font-size: 14px; font-weight: 600; }
@@ -143,7 +143,7 @@ textarea.input { min-height: 115px; max-height: 320px; }
   .heroPhoto figcaption > span { font-size: 18px; }
   .location { font-size: 14px; padding-block: 17px; }
   .heroContact { display: none; }
-  .mobileStart { display: inline-flex; align-items: center; gap: 20px; margin: 0 0 20px; font-size: 14px; font-weight: 600; color: var(--color-action-deep); }
+  .mobileStart { display: inline-flex; min-height: 44px; align-items: center; gap: 20px; margin: 0 0 20px; font-size: 14px; font-weight: 600; color: var(--color-action-deep); }
   .choices { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .formPanel { padding: 32px; }
   .trust { flex-wrap: wrap; margin-inline: 24px; justify-content: start; gap: 20px 28px; }
@@ -247,7 +247,7 @@ textarea.input { min-height: 115px; max-height: 320px; }
 @keyframes estimate-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .page main *, .page main *::before, .page main *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 
-.heroPhoto figcaption a { width: 44px; height: 44px; }
+.heroPhoto figcaption a { width: 44px; min-width: 44px; height: 44px; min-height: 44px; flex-shrink: 0; }
 .heroContact a, .questions a, .privacy a, .workHeading a { display: inline-flex; align-items: center; min-height: 44px; }
 @media (max-width: 359px) {
   .hero, .nextSteps, .questions { padding-inline: 16px; }

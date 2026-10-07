@@ -1,7 +1,6 @@
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import kitchenPlanning from "./blog-content/kitchen-remodel-planning-checklist.json";
-import outdoorLivingWesternWashington from "./blog-content/outdoor-living-space-western-washington.json";
 import bathroomPlanning from "./blog-content/bathroom-remodel-planning-guide.json";
 import contractorSelection from "./blog-content/choosing-remodeling-contractor-washington.json";
 import kitchenCostWashington from "./blog-content/kitchen-remodel-cost-washington-state.json";
@@ -15,13 +14,13 @@ import materialSelections from "./blog-content/remodeling-material-selection-che
 import livingDuringRemodel from "./blog-content/living-at-home-during-remodel.json";
 import paintingWeather from "./blog-content/exterior-painting-weather-window.json";
 import stainVersusPaint from "./blog-content/exterior-stain-vs-paint.json";
-import smallBathroomIdeas from "./blog-content/small-bathroom-ideas";
 import { marked } from "marked";
 import sanitizeHtml from "sanitize-html";
 
 export type BlogSection = { heading: string; id: string };
 export type BlogPost = {
   id: string;
+  rendererId?: string;
   slug: string;
   title: string;
   description: string;
@@ -57,7 +56,7 @@ const structuredPosts: StructuredPost[] = [
   estimatePreparation, cabinetStorage, bathroomLighting, exteriorPreparation,
   deckPlanning, additionPlanning, materialSelections, livingDuringRemodel,
   paintingWeather, stainVersusPaint, kitchenPlanning, bathroomPlanning, contractorSelection,
-  kitchenCostWashington, outdoorLivingWesternWashington, smallBathroomIdeas,
+  kitchenCostWashington,
 ];
 
 function escapeHtml(value: string): string {
@@ -118,6 +117,16 @@ function renderLegacyBody(markdown: string): { bodyHtml: string; sections: BlogS
   return { bodyHtml, sections };
 }
 
+/** Full authored HTML exports keep their original contents navigation and attributes. */
+function renderAuthoredBody(markdown: string, contents: string): { bodyHtml: string; sections: BlogSection[] } {
+  const bodyHtml = sanitizeHtml(markdown.trim(), {
+    allowedTags: [...sanitizeHtml.defaults.allowedTags, "img"],
+    allowedAttributes: { h2: ["id"], h3: ["id"], a: ["href", "title", "rel", "target"], p: ["data-mega-cta"], img: ["src", "alt", "title"], th: ["colspan", "rowspan", "scope"], td: ["colspan", "rowspan"], ol: ["start"] },
+    allowedSchemes: ["https", "http", "mailto", "tel"],
+  });
+  return { bodyHtml, sections: JSON.parse(contents) as BlogSection[] };
+}
+
 function readPost(file: string): BlogPost {
   const source = readFileSync(path.join(CONTENT_DIR, file), "utf8");
   const match = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/.exec(source);
@@ -126,6 +135,7 @@ function readPost(file: string): BlogPost {
   if (!/^item_[0-9a-hjkmnp-tv-z]{25}[048cgmrw]$/.test(meta.id)) throw new Error(`Invalid article identity: ${file}`);
   return {
     id: meta.id,
+    rendererId: meta.rendererId,
     slug: meta.slug,
     title: meta.title,
     description: meta.description,
@@ -137,11 +147,13 @@ function readPost(file: string): BlogPost {
     canonicalPath: meta.canonicalPath,
     author: meta.author || "Tubro Construction",
     kind: meta.kind,
-    ...renderLegacyBody(match[2]),
+    ...(meta.rendererId ? renderAuthoredBody(match[2], meta.contents) : renderLegacyBody(match[2])),
   };
 }
 
-const legacyContent = readdirSync(CONTENT_DIR).filter((file) => /\.mdx?$/.test(file) && file !== "README.md").map(readPost);
+// Keep the former structured guides after the original files, preserving listings and related links.
+const legacyContent = readdirSync(CONTENT_DIR).filter((file) => /\.mdx?$/.test(file) && file !== "README.md").map(readPost)
+  .sort((first, second) => Number(Boolean(first.rendererId)) - Number(Boolean(second.rendererId)));
 // Migration content owns any slug already present in the source inventory. Newer
 // structured guides are appended without replacing that parity-checked record.
 const allContent = [...legacyContent, ...structuredPosts.map(normalizeStructured)];

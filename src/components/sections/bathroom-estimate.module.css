@@ -15,7 +15,7 @@
 .contact { display: flex; gap: 16px; border-top: 1px solid #d6d9d0; margin-top: 28px; padding-top: 24px; }
 .contact > svg { margin-top: 4px; color: var(--color-action-deep); }
 .contact span { display: block; font-size: 14px; color: #595d55; }
-.contact a { display: inline-block; font-family: var(--font-fjalla), sans-serif; font-size: 24px; margin: 4px 0; text-decoration: underline; text-underline-offset: 5px; text-decoration-color: #a5b5a3; transition: color 180ms; }
+.contact a { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--font-fjalla), sans-serif; font-size: 24px; margin: 4px 0; text-decoration: underline; text-underline-offset: 5px; text-decoration-color: #a5b5a3; transition: color 180ms; }
 .contact a:hover { color: var(--color-action-deep); }
 .contact p { font-size: 14px; line-height: 1.7; color: #595d55; }
 .footer { max-width: 1200px; margin: 56px auto 0; padding: 24px 0; display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid #bccbbb; font-size: 14px; line-height: 1.6; color: #4e584c; }

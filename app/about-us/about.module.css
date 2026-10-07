@@ -73,7 +73,7 @@
 .estimateCopy > p:not(.eyebrow) { margin-top: 24px; max-width: 37ch; }
 .office { display: flex; flex-direction: column; align-items: start; gap: 12px; margin-top: 48px; padding-top: 28px; border-top: 1px solid color-mix(in srgb, var(--color-ink) 25%, transparent); }
 .office h3 { font-size: 18px; font-weight: 600; }
-.office > a { max-width: 100%; overflow-wrap: anywhere; font-size: 14px; min-height: 32px; }
+.office > a { max-width: 100%; overflow-wrap: anywhere; font-size: 14px; display: inline-flex; align-items: center; min-height: 44px; }
 .office p { font-size: 14px; }
 .estimateCopy .location { font-family: var(--font-fjalla), sans-serif; font-size: 14px; }
 .formPanel { background: var(--color-plaster); padding: 40px; border-top: 2px solid var(--color-action); }

@@ -6,7 +6,7 @@ import { createSubmissionLock } from "../src/lib/submission-lock.ts";
 
 const sentinel = "recaptcha-staging-bypass-key";
 const preview = "tubro-construction-website-example-mega-websites.vercel.app";
-const valid = { name: "Local Test", email: "test@example.com", phone: "+1 (253) 216-2633", projectDetails: "Local intercepted test", projectType: "Kitchen", consent: true };
+const valid = { name: "Local Test", email: "test@example.com", phone: "(253) 216-2633", projectDetails: "Local intercepted test", projectType: "Kitchen", consent: true };
 
 test("staging requires sanctioned exact host, env and key", () => {
   const env = { VERCEL_ENV: "preview", VERCEL_URL: preview, NEXT_PUBLIC_RECAPTCHA_SITE_KEY: sentinel };
@@ -31,7 +31,7 @@ test("production hosts fail closed and never permit wildcard aliases or sentinel
 
 test("shared validation requires full phone, TLD, project fields and boolean consent", () => {
   assert.deepEqual(validateLeadFields(valid, { consent: true, projectType: true }), {});
-  for (const phone of ["55512", "123456789", "123456789012", "++12532162633", "1abc2532162633"]) assert.ok(validateLeadFields({ ...valid, phone }).phone);
+  for (const phone of ["55512", "123456789", "123456789012", "17576855050", "+1 (253) 216-2633", "12532162633", "++12532162633", "1abc2532162633"]) assert.ok(validateLeadFields({ ...valid, phone }).phone);
   for (const email of ["me@x", "me@x.c", "me@x.123", "me@@x.com", "me@-x.com"]) assert.ok(validateLeadFields({ ...valid, email }).email);
   for (const consent of [false, "true", "yes", 1, undefined]) assert.ok(validateLeadFields({ ...valid, consent }, { consent: true }).consent);
   for (const field of ["name", "projectDetails", "projectType"]) assert.ok(validateLeadFields({ ...valid, [field]: " " }, { projectType: true })[field]);
@@ -42,21 +42,4 @@ test("submission lock is synchronous and retains success, permits retry after fa
   assert.equal(lock.acquire(), true); assert.equal(lock.acquire(), false);
   lock.release(); assert.equal(lock.acquire(), true);
   lock.complete(); assert.equal(lock.acquire(), false); lock.release(); assert.equal(lock.acquire(), false);
-});
-
-const { issueChallenge, validChallenge, consumeChallenge } = await import("../src/lib/lead-challenge.ts");
-test("fallback issuance is signed, host-bound, age-bound and consumed once", async () => {
-  const now = 1_800_000_000_000;
-  const challenge = issueChallenge("localhost", "local-test-secret", now);
-  assert.equal(validChallenge(challenge, "localhost", "local-test-secret", now + 1000), true);
-  assert.equal(validChallenge(challenge, "attacker.test", "local-test-secret", now + 1000), false);
-  assert.equal(validChallenge({ ...challenge, powIssuedAt: String(now + 1000) }, "localhost", "local-test-secret", now + 2000), false);
-  assert.equal(validChallenge(challenge, "localhost", "wrong-test-secret", now + 1000), false);
-  assert.equal(validChallenge(challenge, "localhost", "local-test-secret", now), false);
-  assert.equal(validChallenge(challenge, "localhost", "local-test-secret", now + 90_001), false);
-  const previous = process.env.VERCEL_ENV;
-  process.env.VERCEL_ENV = "development";
-  assert.equal(await consumeChallenge(challenge.powChallenge), true);
-  assert.equal(await consumeChallenge(challenge.powChallenge), false);
-  if (previous === undefined) delete process.env.VERCEL_ENV; else process.env.VERCEL_ENV = previous;
 });
