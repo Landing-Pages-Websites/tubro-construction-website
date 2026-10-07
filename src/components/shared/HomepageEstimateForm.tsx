@@ -1,5 +1,6 @@
 "use client";
 
+import { LeadHoneypot } from "@/components/shared/LeadHoneypot";
 import { ArrowRight } from "lucide-react";
 import type { ReactElement } from "react";
 import { ESTIMATE, PROJECT_TYPES } from "@/lib/content";
@@ -27,6 +28,7 @@ export function HomepageEstimateForm({ form, idPrefix = "a", submitLabel = ESTIM
 
       className={`${styles.form} rounded-xl bg-white p-6 shadow-lg shadow-ink/10 sm:p-9`}
     >
+      <LeadHoneypot />
       <fieldset>
         <legend className="font-fjalla text-sm tracking-[0.12em] text-ink uppercase">
           Project type

@@ -3,7 +3,7 @@ export type EstimateFormOptions = { formKey?: string; requireConsent?: boolean; 
 
 export function readFields(form: HTMLFormElement): LeadFields {
   const data = new FormData(form);
-  const keys = ["projectType", "name", "email", "phone", "projectDetails", "projectCity"];
+  const keys = ["projectType", "name", "email", "phone", "projectDetails", "projectCity", "website"];
   const fields: LeadFields = Object.fromEntries(keys.map((key) => [key, String(data.get(key) ?? "").trim()]));
   const consent = form.querySelector<HTMLInputElement>('[name="consent"]');
   if (consent) fields.consent = consent.checked;

@@ -1,5 +1,6 @@
 "use client";
 
+import { LeadHoneypot } from "@/components/shared/LeadHoneypot";
 import Link from "next/link";
 import { ArrowUpRight, Loader2 } from "lucide-react";
 import type { ReactElement } from "react";
@@ -17,6 +18,7 @@ export default function EstimateRequestForm(): ReactElement {
   return <section id="form" className={s.formPanel} aria-labelledby="request-heading">
     <header className={s.formHeading}><h2 id="request-heading">Tell us what you’re planning.</h2><p>A few details are all we need to start the conversation.</p></header>
     <form action="/api/lead" method="post" ref={form.formRef} onSubmit={form.handleSubmit}  aria-label="Request a free estimate" aria-busy={busy}>
+      <LeadHoneypot />
       <fieldset className={s.formContents} disabled={busy || form.status === "success"}>
         <EstimateProjectChoices />
         {form.errors.projectType && <p role="alert" className={s.error}>{form.errors.projectType}</p>}

@@ -14,7 +14,7 @@ const OFFICE_PHONE_HREF = BRAND.phoneHref;
 const EMAIL_PATTERN = /[^\s]+@[^\s.,][^\s,]*/;
 const RULE_COUNT = 7;
 const LINK_CLASSES =
-  "underline decoration-action/50 underline-offset-4 transition-colors hover:text-action-deep";
+  "inline-flex min-h-11 items-center underline decoration-action/50 underline-offset-4 transition-colors hover:text-action-deep";
 
 /** Ledger entry text with the office phone or an email address linked inline. */
 function LedgerEntry({ text }: { text: string }): ReactElement {

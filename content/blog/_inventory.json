@@ -5,19 +5,10 @@
   "status": "migrated",
   "content_dir": "content/blog",
   "outgoing_urls": 87,
-  "posts_found": 54,
+  "posts_found": 69,
   "posts_migrated": 54,
-  "posts_with_item_id": 67,
+  "posts_with_item_id": 54,
   "posts": [
-    {
-      "old_url": "https://www.tubroconstruction.com",
-      "path": "/",
-      "target": "/",
-      "redirect_destination": null,
-      "source_sha256": "f3ae93a62aba9a02ec6dbc250c703fdc8996807eadf3f1bbbddad4d4f4e118cf",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
     {
       "old_url": "https://www.tubroconstruction.com/10-remodeling-myths-debunked-what-homeowners-must-know",
       "path": "/10-remodeling-myths-debunked-what-homeowners-must-know",
@@ -79,15 +70,6 @@
       "tables": 0
     },
     {
-      "old_url": "https://www.tubroconstruction.com/Bathroom-Remodels-Kent-WA",
-      "path": "/Bathroom-Remodels-Kent-WA",
-      "target": "/Bathroom-Remodels-Kent-WA",
-      "redirect_destination": null,
-      "source_sha256": "d1b4ea20861630a4541852cd9562163d7684bbc76e22e71c488b0e5874aad5f6",
-      "status": "excluded",
-      "reason": "Not a blog article: full legacy page content retained at its original path."
-    },
-    {
       "old_url": "https://www.tubroconstruction.com/a-step-by-step-guide-to-bathroom-remodels-in-renton-what-to-expect",
       "path": "/a-step-by-step-guide-to-bathroom-remodels-in-renton-what-to-expect",
       "target": "/a-step-by-step-guide-to-bathroom-remodels-in-renton-what-to-expect",
@@ -108,24 +90,6 @@
       "tables": 0
     },
     {
-      "old_url": "https://www.tubroconstruction.com/about-us",
-      "path": "/about-us",
-      "target": "/about-us",
-      "redirect_destination": null,
-      "source_sha256": "8671f924bb586c6bacec846217a029d8155b4746b15af5981900184726622dba",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/backlinks",
-      "path": "/backlinks",
-      "target": "/backlinks",
-      "redirect_destination": null,
-      "source_sha256": "1ae82b397dd4051784636793040abc8905764caf8f44d61fcc33e4418c43b333",
-      "status": "excluded",
-      "reason": "Not a blog article: full legacy page content retained at its original path."
-    },
-    {
       "old_url": "https://www.tubroconstruction.com/bathroom-remodel-cost-in-western-washington",
       "path": "/bathroom-remodel-cost-in-western-washington",
       "target": "/bathroom-remodel-cost-in-western-washington",
@@ -144,15 +108,6 @@
       "word_count": 2490,
       "links": 6,
       "tables": 0
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/bathroom-remodeling",
-      "path": "/bathroom-remodeling",
-      "target": "/bathroom-remodeling",
-      "redirect_destination": null,
-      "source_sha256": "fb783aa29c5ebf12e0c59047ae60acc92fa3b9f53dbf81a86b7bdf69502e5999",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
     },
     {
       "old_url": "https://www.tubroconstruction.com/bathroom-remodeling-benefits-of-replacing-your-fiberglass-shower-with-a-tile-shower",
@@ -215,15 +170,6 @@
       "tables": 0
     },
     {
-      "old_url": "https://www.tubroconstruction.com/blog",
-      "path": "/blog",
-      "target": "/blog",
-      "redirect_destination": null,
-      "source_sha256": "35075c574223edb5e57b01c8eb5d03064d4175b37d72044626e4cd098231dd77",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
       "old_url": "https://www.tubroconstruction.com/blog/kitchen-remodel-cost-washington-state",
       "path": "/blog/kitchen-remodel-cost-washington-state",
       "target": "/blog/kitchen-remodel-cost-washington-state",
@@ -262,15 +208,6 @@
       "word_count": 1794,
       "links": 1,
       "tables": 0
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/careers",
-      "path": "/careers",
-      "target": "/careers",
-      "redirect_destination": null,
-      "source_sha256": "2e05171683a413d44c9d7e0a490a2a578d87ea7a828bfcae624b0eec27b8ec45",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
     },
     {
       "old_url": "https://www.tubroconstruction.com/choosing-the-perfect-vanity-for-your-bathroom-remodel",
@@ -313,15 +250,6 @@
       "tables": 0
     },
     {
-      "old_url": "https://www.tubroconstruction.com/contact",
-      "path": "/contact",
-      "target": "/contact",
-      "redirect_destination": null,
-      "source_sha256": "bbeddc425c6d1e901bc053b4eaddc4fa6e10c647914e8fc32518d29a54114664",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
       "old_url": "https://www.tubroconstruction.com/cost-effective-upgrades-for-older-homes-in-bonney-lake",
       "path": "/cost-effective-upgrades-for-older-homes-in-bonney-lake",
       "target": "/cost-effective-upgrades-for-older-homes-in-bonney-lake",
@@ -340,15 +268,6 @@
       "word_count": 653,
       "links": 2,
       "tables": 0
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/custom-home-services",
-      "path": "/custom-home-services",
-      "target": "/custom-home-services",
-      "redirect_destination": null,
-      "source_sha256": "895197039de005c6dd83d1d2c1a3b6384f7f64a75627d4fd5283f3df70988baa",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
     },
     {
       "old_url": "https://www.tubroconstruction.com/deck-cost-king-county-wa-composite-vs-lumber",
@@ -429,15 +348,6 @@
       "word_count": 1439,
       "links": 2,
       "tables": 0
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/general-contractor",
-      "path": "/general-contractor",
-      "target": "/general-contractor",
-      "redirect_destination": null,
-      "source_sha256": "601b6582284fbdcecf51a1a18a10c523b79559c45a304f04316694e55913c436",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
     },
     {
       "old_url": "https://www.tubroconstruction.com/granite-countertops-and-butcher-block-countertops",
@@ -860,15 +770,6 @@
       "tables": 0
     },
     {
-      "old_url": "https://www.tubroconstruction.com/interior-exterior-painting",
-      "path": "/interior-exterior-painting",
-      "target": "/interior-exterior-painting",
-      "redirect_destination": null,
-      "source_sha256": "8474a781af9c2b1a35363054d24fd7f0919924162b5acd0db98011c82827e35e",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
       "old_url": "https://www.tubroconstruction.com/keys-to-open-communication-with-your-contractor",
       "path": "/keys-to-open-communication-with-your-contractor",
       "target": "/keys-to-open-communication-with-your-contractor",
@@ -907,35 +808,6 @@
       "word_count": 1923,
       "links": 6,
       "tables": 0
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/kitchen-remodel-cost-washington-state",
-      "path": "/kitchen-remodel-cost-washington-state",
-      "target": "/kitchen-remodel-cost-washington-state",
-      "redirect_destination": null,
-      "source_sha256": "35ff67fb35514f1552e4864e19244983d8c1d458211f2e212b4795a5aeceff0f",
-      "status": "migrated",
-      "reason": "Canonical alias; same complete article.",
-      "item_id": "item_q2fvf282v44npyrpr5bgbybjrr",
-      "old_id": null,
-      "title": "Kitchen Remodel Cost Washington State: A Planning Guide",
-      "date": "2026-09-08T15:21:22",
-      "new_slug": "kitchen-remodel-cost-washington-state",
-      "canonical": "/blog/kitchen-remodel-cost-washington-state",
-      "body_selector": ".postPageExtRoot > .blog-post-row",
-      "body_sha256": "f83725717b278fd6af976fab5473842cb1f609d9dd2619aa5f7ae2655aad4f5f",
-      "word_count": 3016,
-      "links": 9,
-      "tables": 1
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/kitchen-remodeling",
-      "path": "/kitchen-remodeling",
-      "target": "/kitchen-remodeling",
-      "redirect_destination": null,
-      "source_sha256": "4b4dc8475b52577715a392f76a5548ce9299f1d6d393f8180ee4b5e6d2f8e58f",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
     },
     {
       "old_url": "https://www.tubroconstruction.com/maximizing-space-tips-for-home-additions",
@@ -998,15 +870,6 @@
       "tables": 0
     },
     {
-      "old_url": "https://www.tubroconstruction.com/recent-projects",
-      "path": "/recent-projects",
-      "target": "/recent-projects",
-      "redirect_destination": null,
-      "source_sha256": "0fcdf34f821501ca81b2a71196eece4248d308cd7f5a62f4dc6492164de762f6",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
       "old_url": "https://www.tubroconstruction.com/renovation-budget-planning-tips-that-prevent-cost-overruns",
       "path": "/renovation-budget-planning-tips-that-prevent-cost-overruns",
       "target": "/renovation-budget-planning-tips-that-prevent-cost-overruns",
@@ -1025,177 +888,6 @@
       "word_count": 982,
       "links": 0,
       "tables": 0
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-auburn",
-      "path": "/service-area/home-remodeling-auburn",
-      "target": "/service-area/home-remodeling-auburn",
-      "redirect_destination": null,
-      "source_sha256": "954c94cf773b3312c6269efb540dc732e6c04ae44a5c909f3e6e3a09242cc063",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-bellevue",
-      "path": "/service-area/home-remodeling-bellevue",
-      "target": "/service-area/home-remodeling-bellevue",
-      "redirect_destination": null,
-      "source_sha256": "d86e1181835a8fb90fccc5312abe44d8328df651493ef41f87a8c61355c2596d",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-black-diamond",
-      "path": "/service-area/home-remodeling-black-diamond",
-      "target": "/service-area/home-remodeling-black-diamond",
-      "redirect_destination": null,
-      "source_sha256": "4fdd79a9bbfec60bf1db4a2e81415b6b139e812fc809ff06039b5534b7c48dcc",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-bonney-lake",
-      "path": "/service-area/home-remodeling-bonney-lake",
-      "target": "/service-area/home-remodeling-bonney-lake",
-      "redirect_destination": null,
-      "source_sha256": "2d17c1c34502ccd0fe50a49c1e3c1d03aee49ba6fa207655c55933275dbac44e",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-buckley",
-      "path": "/service-area/home-remodeling-buckley",
-      "target": "/service-area/home-remodeling-buckley",
-      "redirect_destination": null,
-      "source_sha256": "3079e67f69e9dbd446a09c1a9fd07f9263a3c8d488b0a440484c4bc07f8aa7a6",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-covington",
-      "path": "/service-area/home-remodeling-covington",
-      "target": "/service-area/home-remodeling-covington",
-      "redirect_destination": null,
-      "source_sha256": "f853ac1f0a0bc22851478c6a21c5c26457b55a5fae2fad6b6f167dac77aeaf64",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-enumclaw",
-      "path": "/service-area/home-remodeling-enumclaw",
-      "target": "/service-area/home-remodeling-enumclaw",
-      "redirect_destination": null,
-      "source_sha256": "d706d05676f53faf195b601c8ba39480415361cf11f8886ff96a32d7c15cdea6",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-fairwood",
-      "path": "/service-area/home-remodeling-fairwood",
-      "target": "/service-area/home-remodeling-fairwood",
-      "redirect_destination": null,
-      "source_sha256": "7f85fe9c76c56599c41f292d170a8550703d955190794ce09cc2596fc36d9110",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-issaquah",
-      "path": "/service-area/home-remodeling-issaquah",
-      "target": "/service-area/home-remodeling-issaquah",
-      "redirect_destination": null,
-      "source_sha256": "cca6b6ac2a72e004a210ab61959a992f7ebfc9f0d3e7331b3c7712256884a5e6",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-kent",
-      "path": "/service-area/home-remodeling-kent",
-      "target": "/service-area/home-remodeling-kent",
-      "redirect_destination": null,
-      "source_sha256": "1c0a3131b43dce160b4633235c7e152d1a157a2e37b31846800621626e6f989f",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-maple-valley",
-      "path": "/service-area/home-remodeling-maple-valley",
-      "target": "/service-area/home-remodeling-maple-valley",
-      "redirect_destination": null,
-      "source_sha256": "4b08942484af876c3862ed516fc9fd19ebcafaaa98d112c906ef29b9b63d5421",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-newcastle",
-      "path": "/service-area/home-remodeling-newcastle",
-      "target": "/service-area/home-remodeling-newcastle",
-      "redirect_destination": null,
-      "source_sha256": "0489be512008bb5c3eea36c5d3476478a6837385c33f2abe028c48ccb3a26ef0",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-north-bend",
-      "path": "/service-area/home-remodeling-north-bend",
-      "target": "/service-area/home-remodeling-north-bend",
-      "redirect_destination": null,
-      "source_sha256": "d4c9f0ec7da20940007f40eea9b5c6d5ff44b4098c70be199e2b8e7b972241a2",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-ravensdale",
-      "path": "/service-area/home-remodeling-ravensdale",
-      "target": "/service-area/home-remodeling-ravensdale",
-      "redirect_destination": null,
-      "source_sha256": "55471ba6bd4b8b37cf5dbbabb80b8e35dec747d3a506317f8b8f05bf5a40f9ea",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-renton",
-      "path": "/service-area/home-remodeling-renton",
-      "target": "/service-area/home-remodeling-renton",
-      "redirect_destination": null,
-      "source_sha256": "93448d610bf75ab4810fbb69bf2679f60242e1cba2b885f997eac4d3513a04f3",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-sammamish",
-      "path": "/service-area/home-remodeling-sammamish",
-      "target": "/service-area/home-remodeling-sammamish",
-      "redirect_destination": null,
-      "source_sha256": "eed057327e9871de22b2caf0c0691d3a91b03a96ffd6e8ed9179a87c70963c73",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-snoqualmie",
-      "path": "/service-area/home-remodeling-snoqualmie",
-      "target": "/service-area/home-remodeling-snoqualmie",
-      "redirect_destination": null,
-      "source_sha256": "d84c4b7823c1d6ea64542daba4369b250833f20fc9076fa5e93af9494ccfdd18",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-sumner",
-      "path": "/service-area/home-remodeling-sumner",
-      "target": "/service-area/home-remodeling-sumner",
-      "redirect_destination": null,
-      "source_sha256": "f35a35aa73b711a2e22918543ba5202a5388f928e3ee7d63308b0a0d020c95e9",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
-    },
-    {
-      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-tacoma",
-      "path": "/service-area/home-remodeling-tacoma",
-      "target": "/service-area/home-remodeling-tacoma",
-      "redirect_destination": null,
-      "source_sha256": "47d53882c028f360643163cd74973ba20f8bfc2d07e5c4e7ac7945906673e1c7",
-      "status": "excluded",
-      "reason": "Not a blog article: existing authored page preserves the same public route."
     },
     {
       "old_url": "https://www.tubroconstruction.com/stay-on-budget-during-home-construction-top-money-saving-tips",
@@ -1396,6 +1088,126 @@
       "word_count": 589,
       "links": 4,
       "tables": 0
+    },
+    {
+      "old_url": null,
+      "new_slug": "preparing-for-remodel-estimate",
+      "target": "/blog/preparing-for-remodel-estimate",
+      "status": "authored",
+      "item_id": "item_2je0yx7vzkh1mhdqdcsaa1z6ew",
+      "source": "src/lib/blog-content/preparing-for-remodel-estimate.json"
+    },
+    {
+      "old_url": null,
+      "new_slug": "remodeling-material-selection-checklist",
+      "target": "/blog/remodeling-material-selection-checklist",
+      "status": "authored",
+      "item_id": "item_vkyyyvyg3wmj7bha7z4n0yrx2c",
+      "source": "src/lib/blog-content/remodeling-material-selection-checklist.json"
+    },
+    {
+      "old_url": null,
+      "new_slug": "exterior-painting-preparation",
+      "target": "/blog/exterior-painting-preparation",
+      "status": "authored",
+      "item_id": "item_hefmfvnhe43vpyf52pz4gd0fdg",
+      "source": "src/lib/blog-content/exterior-painting-preparation.json"
+    },
+    {
+      "old_url": null,
+      "new_slug": "bathroom-remodel-planning-guide",
+      "target": "/blog/bathroom-remodel-planning-guide",
+      "status": "authored",
+      "item_id": "item_nhj4crkxmwrwdzbhmp0pth9pa0",
+      "source": "src/lib/blog-content/bathroom-remodel-planning-guide.json"
+    },
+    {
+      "old_url": null,
+      "new_slug": "choosing-remodeling-contractor-washington",
+      "target": "/blog/choosing-remodeling-contractor-washington",
+      "status": "authored",
+      "item_id": "item_dtmmmttkmcyhz6rmnf4rfkahfc",
+      "source": "src/lib/blog-content/choosing-remodeling-contractor-washington.json"
+    },
+    {
+      "old_url": null,
+      "new_slug": "bathroom-lighting-planning",
+      "target": "/blog/bathroom-lighting-planning",
+      "status": "authored",
+      "item_id": "item_0j2k9ktrrevrwanf8bzf6g2x9c",
+      "source": "src/lib/blog-content/bathroom-lighting-planning.json"
+    },
+    {
+      "old_url": null,
+      "new_slug": "kitchen-cabinet-storage-planning",
+      "target": "/blog/kitchen-cabinet-storage-planning",
+      "status": "authored",
+      "item_id": "item_mh4z20ync8391a80vmc0wdsnfr",
+      "source": "src/lib/blog-content/kitchen-cabinet-storage-planning.json"
+    },
+    {
+      "old_url": null,
+      "new_slug": "kitchen-remodel-planning-checklist",
+      "target": "/blog/kitchen-remodel-planning-checklist",
+      "status": "authored",
+      "item_id": "item_dttck2f0w39w7d4m1pb6wer2tw",
+      "source": "src/lib/blog-content/kitchen-remodel-planning-checklist.json"
+    },
+    {
+      "old_url": null,
+      "new_slug": "exterior-stain-vs-paint",
+      "target": "/blog/exterior-stain-vs-paint",
+      "status": "authored",
+      "item_id": "item_2y4jp7x9650qfxhmb9z19814km",
+      "source": "src/lib/blog-content/exterior-stain-vs-paint.json"
+    },
+    {
+      "old_url": null,
+      "new_slug": "deck-remodel-planning",
+      "target": "/blog/deck-remodel-planning",
+      "status": "authored",
+      "item_id": "item_fyagewrxceewc2cgyf1wep84g4",
+      "source": "src/lib/blog-content/deck-remodel-planning.json"
+    },
+    {
+      "old_url": null,
+      "new_slug": "exterior-painting-weather-window",
+      "target": "/blog/exterior-painting-weather-window",
+      "status": "authored",
+      "item_id": "item_xnvqdvnr39kwzmd5f057r8exw0",
+      "source": "src/lib/blog-content/exterior-painting-weather-window.json"
+    },
+    {
+      "old_url": null,
+      "new_slug": "living-at-home-during-remodel",
+      "target": "/blog/living-at-home-during-remodel",
+      "status": "authored",
+      "item_id": "item_vp1xd135fcdn8n5cg9xzey73k4",
+      "source": "src/lib/blog-content/living-at-home-during-remodel.json"
+    },
+    {
+      "old_url": null,
+      "new_slug": "home-addition-planning-checklist",
+      "target": "/blog/home-addition-planning-checklist",
+      "status": "authored",
+      "item_id": "item_600rax75hwh53rj3n7ee59mw8r",
+      "source": "src/lib/blog-content/home-addition-planning-checklist.json"
+    },
+    {
+      "old_url": null,
+      "new_slug": "outdoor-living-space-western-washington",
+      "target": "/blog/outdoor-living-space-western-washington",
+      "status": "authored",
+      "renderer_id": "structured_outdoor-living-space-western-washington",
+      "source": "src/lib/blog-content/outdoor-living-space-western-washington.json"
+    },
+    {
+      "old_url": null,
+      "new_slug": "small-bathroom-ideas",
+      "target": "/blog/small-bathroom-ideas",
+      "status": "authored",
+      "renderer_id": "structured_small-bathroom-ideas",
+      "source": "src/lib/blog-content/small-bathroom-ideas.ts"
     }
   ],
   "authored_exports": [
@@ -2051,8 +1863,437 @@
     }
   ],
   "notes": [
-    "Excluded means excluded from article migration, not dropped: all listed targets serve preserved pages.",
+    "The prior record used excluded for nonarticles. Round 2 corrects these to already_present in retained_pages: their original public routes continue serving preserved pages.",
     "Body selector excludes Duda older/newer navigation and related-article widgets. Semantic formatting, links and tables retained; layout scripts/styles removed.",
-    "The existing Washington kitchen article retains item_q2fvf282v44npyrpr5bgbybjrr and canonical /blog/kitchen-remodel-cost-washington-state. Its required root alias serves directly."
-  ]
+    "The existing Washington kitchen article retains item_q2fvf282v44npyrpr5bgbybjrr and canonical /blog/kitchen-remodel-cost-washington-state. Its required root alias serves directly.",
+    "Round 2: posts contains distinct articles only (54 legacy plus 15 authored). posts_found counts all 69 rows; posts_migrated and posts_with_item_id count the 54 legacy parity rows per the standard loader. All 87 source records are retained across posts (54), retained_pages (32) and aliases (1), with source URLs and hashes unchanged.",
+    "Retained nonarticle pages are already_present at HTTP 200; they are not excluded articles and no redirect is invented. The Washington kitchen-cost root alias also remains HTTP 200 with its existing canonical and identity. There are no redirected exclusions.",
+    "The 13 authored Markdown exports retain their MEGA item IDs. Two additional authored structured articles retain their existing renderer identities; no replacement MEGA identity is invented."
+  ],
+  "schema_version": 2,
+  "retained_pages": [
+    {
+      "old_url": "https://www.tubroconstruction.com",
+      "path": "/",
+      "target": "/",
+      "redirect_destination": null,
+      "source_sha256": "f3ae93a62aba9a02ec6dbc250c703fdc8996807eadf3f1bbbddad4d4f4e118cf",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/Bathroom-Remodels-Kent-WA",
+      "path": "/Bathroom-Remodels-Kent-WA",
+      "target": "/Bathroom-Remodels-Kent-WA",
+      "redirect_destination": null,
+      "source_sha256": "d1b4ea20861630a4541852cd9562163d7684bbc76e22e71c488b0e5874aad5f6",
+      "status": "already_present",
+      "reason": "Not a blog article: full legacy page content retained at its original path.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200,
+      "item_id": "item_ptnrv0nzhbtdxx73yr7pde8z9w"
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/about-us",
+      "path": "/about-us",
+      "target": "/about-us",
+      "redirect_destination": null,
+      "source_sha256": "8671f924bb586c6bacec846217a029d8155b4746b15af5981900184726622dba",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/backlinks",
+      "path": "/backlinks",
+      "target": "/backlinks",
+      "redirect_destination": null,
+      "source_sha256": "1ae82b397dd4051784636793040abc8905764caf8f44d61fcc33e4418c43b333",
+      "status": "already_present",
+      "reason": "Not a blog article: full legacy page content retained at its original path.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200,
+      "item_id": "item_qgv6bvbdpkh95hjt8e1jdenh2c"
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/bathroom-remodeling",
+      "path": "/bathroom-remodeling",
+      "target": "/bathroom-remodeling",
+      "redirect_destination": null,
+      "source_sha256": "fb783aa29c5ebf12e0c59047ae60acc92fa3b9f53dbf81a86b7bdf69502e5999",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/blog",
+      "path": "/blog",
+      "target": "/blog",
+      "redirect_destination": null,
+      "source_sha256": "35075c574223edb5e57b01c8eb5d03064d4175b37d72044626e4cd098231dd77",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/careers",
+      "path": "/careers",
+      "target": "/careers",
+      "redirect_destination": null,
+      "source_sha256": "2e05171683a413d44c9d7e0a490a2a578d87ea7a828bfcae624b0eec27b8ec45",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/contact",
+      "path": "/contact",
+      "target": "/contact",
+      "redirect_destination": null,
+      "source_sha256": "bbeddc425c6d1e901bc053b4eaddc4fa6e10c647914e8fc32518d29a54114664",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/custom-home-services",
+      "path": "/custom-home-services",
+      "target": "/custom-home-services",
+      "redirect_destination": null,
+      "source_sha256": "895197039de005c6dd83d1d2c1a3b6384f7f64a75627d4fd5283f3df70988baa",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/general-contractor",
+      "path": "/general-contractor",
+      "target": "/general-contractor",
+      "redirect_destination": null,
+      "source_sha256": "601b6582284fbdcecf51a1a18a10c523b79559c45a304f04316694e55913c436",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/interior-exterior-painting",
+      "path": "/interior-exterior-painting",
+      "target": "/interior-exterior-painting",
+      "redirect_destination": null,
+      "source_sha256": "8474a781af9c2b1a35363054d24fd7f0919924162b5acd0db98011c82827e35e",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/kitchen-remodeling",
+      "path": "/kitchen-remodeling",
+      "target": "/kitchen-remodeling",
+      "redirect_destination": null,
+      "source_sha256": "4b4dc8475b52577715a392f76a5548ce9299f1d6d393f8180ee4b5e6d2f8e58f",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/recent-projects",
+      "path": "/recent-projects",
+      "target": "/recent-projects",
+      "redirect_destination": null,
+      "source_sha256": "0fcdf34f821501ca81b2a71196eece4248d308cd7f5a62f4dc6492164de762f6",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-auburn",
+      "path": "/service-area/home-remodeling-auburn",
+      "target": "/service-area/home-remodeling-auburn",
+      "redirect_destination": null,
+      "source_sha256": "954c94cf773b3312c6269efb540dc732e6c04ae44a5c909f3e6e3a09242cc063",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-bellevue",
+      "path": "/service-area/home-remodeling-bellevue",
+      "target": "/service-area/home-remodeling-bellevue",
+      "redirect_destination": null,
+      "source_sha256": "d86e1181835a8fb90fccc5312abe44d8328df651493ef41f87a8c61355c2596d",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-black-diamond",
+      "path": "/service-area/home-remodeling-black-diamond",
+      "target": "/service-area/home-remodeling-black-diamond",
+      "redirect_destination": null,
+      "source_sha256": "4fdd79a9bbfec60bf1db4a2e81415b6b139e812fc809ff06039b5534b7c48dcc",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-bonney-lake",
+      "path": "/service-area/home-remodeling-bonney-lake",
+      "target": "/service-area/home-remodeling-bonney-lake",
+      "redirect_destination": null,
+      "source_sha256": "2d17c1c34502ccd0fe50a49c1e3c1d03aee49ba6fa207655c55933275dbac44e",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-buckley",
+      "path": "/service-area/home-remodeling-buckley",
+      "target": "/service-area/home-remodeling-buckley",
+      "redirect_destination": null,
+      "source_sha256": "3079e67f69e9dbd446a09c1a9fd07f9263a3c8d488b0a440484c4bc07f8aa7a6",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-covington",
+      "path": "/service-area/home-remodeling-covington",
+      "target": "/service-area/home-remodeling-covington",
+      "redirect_destination": null,
+      "source_sha256": "f853ac1f0a0bc22851478c6a21c5c26457b55a5fae2fad6b6f167dac77aeaf64",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-enumclaw",
+      "path": "/service-area/home-remodeling-enumclaw",
+      "target": "/service-area/home-remodeling-enumclaw",
+      "redirect_destination": null,
+      "source_sha256": "d706d05676f53faf195b601c8ba39480415361cf11f8886ff96a32d7c15cdea6",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-fairwood",
+      "path": "/service-area/home-remodeling-fairwood",
+      "target": "/service-area/home-remodeling-fairwood",
+      "redirect_destination": null,
+      "source_sha256": "7f85fe9c76c56599c41f292d170a8550703d955190794ce09cc2596fc36d9110",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-issaquah",
+      "path": "/service-area/home-remodeling-issaquah",
+      "target": "/service-area/home-remodeling-issaquah",
+      "redirect_destination": null,
+      "source_sha256": "cca6b6ac2a72e004a210ab61959a992f7ebfc9f0d3e7331b3c7712256884a5e6",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-kent",
+      "path": "/service-area/home-remodeling-kent",
+      "target": "/service-area/home-remodeling-kent",
+      "redirect_destination": null,
+      "source_sha256": "1c0a3131b43dce160b4633235c7e152d1a157a2e37b31846800621626e6f989f",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-maple-valley",
+      "path": "/service-area/home-remodeling-maple-valley",
+      "target": "/service-area/home-remodeling-maple-valley",
+      "redirect_destination": null,
+      "source_sha256": "4b08942484af876c3862ed516fc9fd19ebcafaaa98d112c906ef29b9b63d5421",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-newcastle",
+      "path": "/service-area/home-remodeling-newcastle",
+      "target": "/service-area/home-remodeling-newcastle",
+      "redirect_destination": null,
+      "source_sha256": "0489be512008bb5c3eea36c5d3476478a6837385c33f2abe028c48ccb3a26ef0",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-north-bend",
+      "path": "/service-area/home-remodeling-north-bend",
+      "target": "/service-area/home-remodeling-north-bend",
+      "redirect_destination": null,
+      "source_sha256": "d4c9f0ec7da20940007f40eea9b5c6d5ff44b4098c70be199e2b8e7b972241a2",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-ravensdale",
+      "path": "/service-area/home-remodeling-ravensdale",
+      "target": "/service-area/home-remodeling-ravensdale",
+      "redirect_destination": null,
+      "source_sha256": "55471ba6bd4b8b37cf5dbbabb80b8e35dec747d3a506317f8b8f05bf5a40f9ea",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-renton",
+      "path": "/service-area/home-remodeling-renton",
+      "target": "/service-area/home-remodeling-renton",
+      "redirect_destination": null,
+      "source_sha256": "93448d610bf75ab4810fbb69bf2679f60242e1cba2b885f997eac4d3513a04f3",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-sammamish",
+      "path": "/service-area/home-remodeling-sammamish",
+      "target": "/service-area/home-remodeling-sammamish",
+      "redirect_destination": null,
+      "source_sha256": "eed057327e9871de22b2caf0c0691d3a91b03a96ffd6e8ed9179a87c70963c73",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-snoqualmie",
+      "path": "/service-area/home-remodeling-snoqualmie",
+      "target": "/service-area/home-remodeling-snoqualmie",
+      "redirect_destination": null,
+      "source_sha256": "d84c4b7823c1d6ea64542daba4369b250833f20fc9076fa5e93af9494ccfdd18",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-sumner",
+      "path": "/service-area/home-remodeling-sumner",
+      "target": "/service-area/home-remodeling-sumner",
+      "redirect_destination": null,
+      "source_sha256": "f35a35aa73b711a2e22918543ba5202a5388f928e3ee7d63308b0a0d020c95e9",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    },
+    {
+      "old_url": "https://www.tubroconstruction.com/service-area/home-remodeling-tacoma",
+      "path": "/service-area/home-remodeling-tacoma",
+      "target": "/service-area/home-remodeling-tacoma",
+      "redirect_destination": null,
+      "source_sha256": "47d53882c028f360643163cd74973ba20f8bfc2d07e5c4e7ac7945906673e1c7",
+      "status": "already_present",
+      "reason": "Not a blog article: existing authored page preserves the same public route.",
+      "previous_status": "excluded",
+      "kind": "page",
+      "http_status": 200
+    }
+  ],
+  "aliases": [
+    {
+      "old_url": "https://www.tubroconstruction.com/kitchen-remodel-cost-washington-state",
+      "path": "/kitchen-remodel-cost-washington-state",
+      "target": "/kitchen-remodel-cost-washington-state",
+      "redirect_destination": null,
+      "source_sha256": "35ff67fb35514f1552e4864e19244983d8c1d458211f2e212b4795a5aeceff0f",
+      "status": "already_present",
+      "reason": "Canonical alias; same complete article.",
+      "item_id": "item_q2fvf282v44npyrpr5bgbybjrr",
+      "old_id": null,
+      "title": "Kitchen Remodel Cost Washington State: A Planning Guide",
+      "date": "2026-09-08T15:21:22",
+      "new_slug": "kitchen-remodel-cost-washington-state",
+      "canonical": "/blog/kitchen-remodel-cost-washington-state",
+      "body_selector": ".postPageExtRoot > .blog-post-row",
+      "body_sha256": "f83725717b278fd6af976fab5473842cb1f609d9dd2619aa5f7ae2655aad4f5f",
+      "word_count": 3016,
+      "links": 9,
+      "tables": 1,
+      "previous_status": "migrated",
+      "http_status": 200,
+      "alias_of": "/blog/kitchen-remodel-cost-washington-state"
+    }
+  ],
+  "counts": {
+    "legacy_source_records": 87,
+    "legacy_article_records": 55,
+    "distinct_legacy_articles": 54,
+    "retained_nonarticle_pages": 32,
+    "served_article_aliases": 1,
+    "redirected_exclusions": 0,
+    "authored_articles": 15,
+    "total_articles": 69,
+    "article_item_ids": 67,
+    "legacy_page_item_ids": 2
+  }
 }

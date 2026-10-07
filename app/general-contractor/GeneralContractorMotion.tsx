@@ -17,10 +17,15 @@ function collectTargets(root: HTMLElement): MotionTarget[] {
   root.querySelectorAll("main h2, #scope-index li, #process-faq ol > li").forEach(element => {
     const index = element.matches("li") ? Array.from(element.parentElement!.children).indexOf(element) : 0;
     targets.push({ element, duration: 650, delay: Math.min(index, 4) * 75, frames: [
-      { opacity: 0.2, transform: "translateY(24px)" },
-      { opacity: 1, transform: "translateY(0)" },
+      { transform: "translateY(24px)" },
+      { transform: "translateY(0)" },
     ] });
   });
+  return [...targets, ...decorativeTargets(root)];
+}
+
+function decorativeTargets(root: HTMLElement): MotionTarget[] {
+  const targets: MotionTarget[] = [];
   root.querySelectorAll("#hero img, #project-proof img").forEach((element, index) => {
     targets.push({ element, duration: 900, delay: Math.min(index, 3) * 65, decorative: true, frames: [
       { transform: "scale(1.065)" }, { transform: "scale(1)" },
@@ -43,6 +48,37 @@ function collectTargets(root: HTMLElement): MotionTarget[] {
   return targets;
 }
 
+function startTarget(target: MotionTarget, animations: Map<Element, Animation>, observer: IntersectionObserver): void {
+  const rect = target.element.getBoundingClientRect();
+  if (!rect.width || !rect.height || rect.bottom <= 0) return;
+  const inView = rect.top < window.innerHeight;
+  // Never pull already-painted reading content out of place on hydration.
+  if (inView && !target.decorative) return;
+  const animation = target.element.animate(target.frames, {
+    duration: target.duration, delay: target.delay, easing: EASING, fill: "both",
+  });
+  animations.set(target.element, animation);
+  animation.onfinish = () => {
+    animation.cancel();
+    animations.delete(target.element);
+  };
+  if (!inView) {
+    animation.pause();
+    observer.observe(target.element);
+  }
+}
+
+function revealFocused(event: FocusEvent, animations: Map<Element, Animation>, observer: IntersectionObserver): void {
+  if (!(event.target instanceof Node)) return;
+  animations.forEach((animation, element) => {
+    if (element.contains(event.target as Node)) {
+      animation.cancel();
+      observer.unobserve(element);
+      animations.delete(element);
+    }
+  });
+}
+
 function observeMotion(root: HTMLElement): () => void {
   const animations = new Map<Element, Animation>();
   const observer = new IntersectionObserver(entries => {
@@ -53,41 +89,14 @@ function observeMotion(root: HTMLElement): () => void {
     });
   }, { threshold: 0 });
 
-  collectTargets(root).forEach(target => {
-    const rect = target.element.getBoundingClientRect();
-    if (!rect.width || !rect.height || rect.bottom <= 0) return;
-    const inView = rect.top < window.innerHeight;
-    // Never pull already-painted reading content out of place on hydration.
-    if (inView && !target.decorative) return;
-    const animation = target.element.animate(target.frames, {
-      duration: target.duration, delay: target.delay, easing: EASING, fill: "both",
-    });
-    animations.set(target.element, animation);
-    animation.onfinish = () => {
-      animation.cancel();
-      animations.delete(target.element);
-    };
-    if (!inView) {
-      animation.pause();
-      observer.observe(target.element);
-    }
-  });
+  collectTargets(root).forEach(target => startTarget(target, animations, observer));
 
-  const revealFocused = (event: FocusEvent): void => {
-    if (!(event.target instanceof Node)) return;
-    animations.forEach((animation, element) => {
-      if (element.contains(event.target as Node)) {
-        animation.cancel();
-        observer.unobserve(element);
-        animations.delete(element);
-      }
-    });
-  };
-  root.addEventListener("focusin", revealFocused);
+  const onFocus = (event: FocusEvent): void => revealFocused(event, animations, observer);
+  root.addEventListener("focusin", onFocus);
   return () => {
     observer.disconnect();
     animations.forEach(animation => animation.cancel());
-    root.removeEventListener("focusin", revealFocused);
+    root.removeEventListener("focusin", onFocus);
   };
 }
 

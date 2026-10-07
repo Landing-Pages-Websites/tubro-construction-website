@@ -12,17 +12,47 @@ test("every recovered and authored article has a unique stable source identity",
   assert.ok(source("kitchen-remodel-cost-washington-state").includes("item_q2fvf282v44npyrpr5bgbybjrr"));
 });
 
-test("full sitemap inventory includes precise destinations for all exclusions and required root aliases", () => {
-  assert.equal(inventory.posts.length, 87); assert.equal(inventory.posts_found, 54);
-  assert.equal(inventory.authored_exports.length, 13);
-  for (const row of inventory.posts) {
-    assert.equal(row.target, row.path); assert.equal(row.redirect_destination, null);
-    if (row.status === "excluded") assert.ok(row.reason);
-    if (row.status === "migrated") assert.ok(source(row.new_slug).includes(row.item_id));
+test("authoritative article counts and every original source record remain truthful", () => {
+  const original = JSON.parse(readFileSync("tests/fixtures/legacy-source-records.json", "utf8"));
+  const legacy = inventory.posts.filter((row) => row.old_url);
+  const records = [...legacy, ...inventory.retained_pages, ...inventory.aliases];
+  assert.equal(records.length, 87);
+  assert.equal(new Set(records.map((row) => row.old_url)).size, 87);
+  for (const before of original) {
+    const after = records.find((row) => row.old_url === before.old_url);
+    assert.ok(after, before.old_url);
+    for (const [key, value] of Object.entries(before)) {
+      assert.deepEqual(key === "status" ? after.previous_status ?? after.status : after[key], value, `${before.path}: ${key}`);
+    }
   }
-  for (const slug of ["how-long-does-a-bathroom-remodel-take-in-washington", "kitchen-remodel-cost-pierce-county-a-homeowner-guide", "kitchen-remodel-cost-washington-state"]) {
-    assert.ok(inventory.posts.find((row) => row.path === `/${slug}` && row.status === "migrated"));
+  assert.equal(inventory.posts.length, 69);
+  assert.equal(inventory.posts_found, 69);
+  assert.equal(inventory.posts_migrated, 54);
+  assert.equal(inventory.posts_with_item_id, 54);
+  assert.equal(legacy.length, 54);
+  assert.equal(inventory.posts.filter((row) => row.status === "authored").length, 15);
+  assert.equal(inventory.posts.filter((row) => row.item_id).length, 67);
+  assert.equal(inventory.retained_pages.length, 32);
+  assert.equal(inventory.aliases.length, 1);
+  assert.equal(new Set(inventory.posts.map((row) => row.new_slug)).size, 69);
+  for (const row of inventory.posts.filter((row) => row.item_id)) assert.ok(source(row.new_slug).includes(row.item_id));
+});
+
+test("retained pages and canonical alias describe actual 200 routes without fictional exclusions", () => {
+  for (const row of [...inventory.retained_pages, ...inventory.aliases]) {
+    assert.equal(row.status, "already_present");
+    assert.equal(row.http_status, 200);
+    assert.equal(row.target, row.path);
+    assert.equal(row.redirect_destination, null);
+    assert.ok(row.reason);
   }
+  assert.equal(inventory.posts.filter((row) => row.status === "excluded").length, 0);
+  assert.equal(inventory.counts.redirected_exclusions, 0);
+  const alias = inventory.aliases[0];
+  const owner = inventory.posts.find((row) => row.target === alias.alias_of);
+  assert.equal(owner.item_id, alias.item_id);
+  assert.equal(owner.new_slug, alias.new_slug);
+  assert.equal(alias.alias_of, "/blog/kitchen-remodel-cost-washington-state");
 });
 
 test("all 13 JSON exports retain complete authored sections, sources, dates and slugs", () => {

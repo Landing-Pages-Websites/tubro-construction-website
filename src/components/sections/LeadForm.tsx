@@ -1,5 +1,6 @@
 "use client";
 
+import { LeadHoneypot } from "@/components/shared/LeadHoneypot";
 import { ArrowRight, Loader2 } from "lucide-react";
 import type { ReactElement } from "react";
 import { useEstimateForm } from "@/hooks/useEstimateForm";
@@ -49,6 +50,7 @@ export function LeadForm({
 
   return (
     <form action="/api/lead" method="post" ref={form.formRef} onSubmit={form.handleSubmit}  aria-label={submitLabel}>
+      <LeadHoneypot />
       {options.length > 0 && (
         <fieldset>
           <legend className={LABEL_CLASSES}>{withResume ? "Work area" : "Project type"}</legend>
@@ -150,7 +152,7 @@ export function LeadForm({
           <p className="mt-1.5 font-poppins text-sm text-ink/70">
             Submitting sends your details and résumé filename to the office; the team follows up
             by email to collect the document. You can also send it to{" "}
-            <a href="mailto:workorders@tubroconstruction.com" className="underline underline-offset-2">
+            <a href="mailto:workorders@tubroconstruction.com" className="inline-flex min-h-11 items-center underline underline-offset-2">
               workorders@tubroconstruction.com
             </a>
             .
@@ -158,7 +160,7 @@ export function LeadForm({
         </div>
       )}
       <div className="mt-5">
-        <label className="flex cursor-pointer gap-3 font-poppins text-sm leading-relaxed text-ink/75">
+        <label className="flex min-h-11 cursor-pointer gap-3 font-poppins text-sm leading-relaxed text-ink/75">
           <input
             type="checkbox"
             name="consent" required
