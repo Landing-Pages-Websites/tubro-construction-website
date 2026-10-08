@@ -57,7 +57,7 @@ textarea.input { min-height: 115px; max-height: 320px; }
 .error { color: #a63224; font-size: 14px; line-height: 1.7; margin-top: 8px; }
 .submit { margin-top: 23px; min-height: 53px; padding: 15px 20px; width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; background: var(--color-action-deep); color: var(--color-plaster); border: 1px solid transparent; font-size: 14px; font-weight: 600; }
 .submit:hover { background: var(--color-ink); }
-.submit:disabled { cursor: wait; opacity: .65; }
+.submit:disabled { cursor: wait; }
 .privacy { color: var(--muted); font-size: 14px; line-height: 1.8; text-align: center; margin-top: 12px; }
 .privacy a { text-decoration: underline; }
 .trust { max-width: 1312px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 32px 0; }
@@ -212,10 +212,11 @@ textarea.input { min-height: 115px; max-height: 320px; }
   .page > header a[aria-label="Tubro Construction home"] img { width: 96px; height: auto; }
   .page > header a[href="/schedule-an-estimate"] { padding-inline: 8px; font-size: 14px; }
 }
+/* Keep script-driven text reveals opaque while retaining their transforms. */
+.page [data-estimate-enter] { opacity: 1 !important; }
 @media (prefers-reduced-motion: no-preference) {
   .introduction h1 > span { display: inline-block; animation: estimate-enter 720ms cubic-bezier(.16,1,.3,1) both; }
   .introduction h1 > span:last-child { animation-delay: 90ms; }
-  .pageLabel { animation: estimate-fade 450ms ease-out both; }
   .lead { animation: estimate-enter 600ms cubic-bezier(.16,1,.3,1) 160ms both; }
   .heroPhoto > img { animation: estimate-photo-settle 1000ms cubic-bezier(.16,1,.3,1) both; }
   .heroPhoto figcaption { animation: estimate-enter 600ms cubic-bezier(.16,1,.3,1) 220ms both; }
@@ -238,10 +239,9 @@ textarea.input { min-height: 115px; max-height: 320px; }
 @media (max-width: 540px) and (prefers-reduced-motion: no-preference) {
   .steps li[data-step-visible="true"]::after { animation-name: estimate-line-vertical; }
 }
-@keyframes estimate-enter { from { opacity: .1; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes estimate-fade { from { opacity: .2; } to { opacity: 1; } }
+@keyframes estimate-enter { from { transform: translateY(18px); } to { transform: translateY(0); } }
 @keyframes estimate-photo-settle { from { transform: scale(1.04); } to { transform: scale(1); } }
-@keyframes estimate-answer { from { opacity: .2; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes estimate-answer { from { transform: translateY(-4px); } to { transform: translateY(0); } }
 @keyframes estimate-line-horizontal { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes estimate-line-vertical { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 @keyframes estimate-spin { to { transform: rotate(360deg); } }

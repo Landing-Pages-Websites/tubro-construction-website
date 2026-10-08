@@ -7,8 +7,54 @@ import { verifyLeadProof } from "../src/lib/leadProof.ts";
 
 // Shape-only fixture, not a provisioned Google key.
 const siteKey = "6L0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_-";
-const invalidKeys = [undefined, "", "recaptcha-staging-bypass-key", "unconfigured-key", siteKey.slice(1), `${siteKey}A`, `5L${siteKey.slice(2)}`, `${siteKey.slice(0, -1)}!`, ` ${siteKey}`, `${siteKey}\n`, ...["\n", "\r", "\u2028", "\u2029"].map(ending => `${siteKey.slice(0, -1)}${ending}`)];
+const publicSiteKey = "6Lez5tstAAAAAD5rZmsQj-68Gl_De9ZNvnC8XWC6";
+const disallowedCharacters = ["\n", "\r", "\u2028", "\u2029", " ", "\t", "\0", "!", "+", "/", "=", "é", "Ａ", "\ud800"];
+const replacedKeys = disallowedCharacters.flatMap(character => [
+  `${siteKey.slice(0, 20)}${character}${siteKey.slice(21)}`,
+  `${siteKey.slice(0, -1)}${character}`,
+]);
+const invalidKeys = [undefined, "", "recaptcha-staging-bypass-key", "unconfigured-key", siteKey.slice(1), `${siteKey}A`, `5L${siteKey.slice(2)}`, `${siteKey.slice(0, -1)}!`, ` ${siteKey}`, `${siteKey}\n`, ...["\n", "\r", "\u2028", "\u2029"].map(ending => `${siteKey.slice(0, -1)}${ending}`),
+  ...replacedKeys, ...disallowedCharacters.map(character => `${siteKey}${character}`)];
 const fields = { name: "Local Test", email: "local@example.com", phone: "2532162633", projectDetails: "Intercepted only", projectType: "Kitchen or bathroom remodel", consent: true };
+
+test("direct key guard accepts both exact-length valid fixtures and rejects exact-length replacements", () => {
+  const { isEnterpriseSiteKey } = clientBrowser(siteKey).load("src/lib/recaptcha-client.ts");
+  for (const key of [siteKey, publicSiteKey]) {
+    assert.equal(key.length, 40);
+    assert.equal(isEnterpriseSiteKey(key), true);
+  }
+  for (const key of replacedKeys) {
+    assert.equal(key.length, 40, "replacement must reach character validation, not just length validation");
+    assert.equal(isEnterpriseSiteKey(key), false, JSON.stringify(key));
+  }
+  for (const key of invalidKeys) assert.equal(isEnterpriseSiteKey(key ?? ""), false, JSON.stringify(key));
+});
+
+test("direct key guard enforces the ASCII alphabet for every UTF-16 code unit, embedded and trailing", () => {
+  const { isEnterpriseSiteKey } = clientBrowser(siteKey).load("src/lib/recaptcha-client.ts");
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-";
+  for (let code = 0; code <= 0xffff; code++) {
+    const character = String.fromCharCode(code);
+    for (const position of [2, 39]) {
+      const key = siteKey.slice(0, position) + character + siteKey.slice(position + 1);
+      assert.equal(isEnterpriseSiteKey(key), alphabet.includes(character), `U+${code.toString(16)} at ${position}`);
+    }
+  }
+});
+
+test("direct key guard checks every position without trimming or normalizing", () => {
+  const { isEnterpriseSiteKey } = clientBrowser(siteKey).load("src/lib/recaptcha-client.ts");
+  for (const character of disallowedCharacters) {
+    for (let position = 0; position < siteKey.length; position++) {
+      const key = siteKey.slice(0, position) + character + siteKey.slice(position + 1);
+      assert.equal(key.length, 40);
+      assert.equal(isEnterpriseSiteKey(key), false, `${JSON.stringify(character)} at ${position}`);
+    }
+  }
+  for (const prefix of ["6l", "5L", "L6", "AL", "66"]) {
+    assert.equal(isEnterpriseSiteKey(prefix + siteKey.slice(2)), false, prefix);
+  }
+});
 
 function clientBrowser(key, { loaded = true, executeFails = false, emptyToken = false, loadFails = false, timesOut = false } = {}) {
   const scripts = []; const executions = []; const listeners = new Map(); const cache = new Map(); let effect;
