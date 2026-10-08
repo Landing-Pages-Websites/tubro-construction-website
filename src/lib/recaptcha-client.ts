@@ -7,7 +7,7 @@ let loading: Promise<Enterprise> | undefined;
 
 /** Format guard only; Google and the server still verify the key and token. */
 export function isEnterpriseSiteKey(siteKey: string): boolean {
-  return siteKey.length === ENTERPRISE_SITE_KEY_LENGTH && /^6L[A-Za-z0-9_-]+$/.test(siteKey);
+  return siteKey.length === ENTERPRISE_SITE_KEY_LENGTH && siteKey.startsWith("6L") && !/[^A-Za-z0-9_-]/.test(siteKey);
 }
 
 function enterpriseLoader(): Promise<Enterprise> {
