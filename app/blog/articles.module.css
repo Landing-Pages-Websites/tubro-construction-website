@@ -39,8 +39,8 @@
 .sources h2 { font-size: 23px; }
 .sources a { color: var(--color-action-deep); text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
 .nextStep { padding: 32px; background: var(--color-sage); }
-.nextStep a { display: inline-flex; align-items: center; gap: 16px; margin-top: 20px; background: var(--color-action-deep); color: white; padding: 16px 20px; font-size: 15px; font-weight: 600; }
-.nextStep a:hover { background: var(--color-ink); }
+.body .nextStep a { display: inline-flex; align-items: center; gap: 16px; margin-top: 20px; background: var(--color-action-deep); color: white; padding: 16px 20px; font-size: 15px; font-weight: 600; }
+.body .nextStep a:hover { background: var(--color-ink); }
 .related { padding-top: 36px; border-top: 1px solid #231f2033; }
 .related h2 { margin-bottom: 20px; font-size: 26px; font-weight: 600; }
 .related nav { display: flex; flex-wrap: wrap; gap: 16px 28px; }
