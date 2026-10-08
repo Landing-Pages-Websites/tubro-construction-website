@@ -23,6 +23,7 @@ export type BlogPost = {
   rendererId?: string;
   slug: string;
   title: string;
+  metaTitle?: string;
   description: string;
   category: string;
   image: string;
@@ -81,6 +82,7 @@ function normalizeStructured(post: StructuredPost): BlogPost {
     id: `structured_${post.slug}`,
     slug: post.slug,
     title: post.title,
+    metaTitle: post.metaTitle,
     description: post.description,
     category: post.category,
     image: post.image,
@@ -138,6 +140,7 @@ function readPost(file: string): BlogPost {
     rendererId: meta.rendererId,
     slug: meta.slug,
     title: meta.title,
+    metaTitle: meta.metaTitle || undefined,
     description: meta.description,
     category: meta.category || "Tubro Construction",
     image: meta.image || "",
