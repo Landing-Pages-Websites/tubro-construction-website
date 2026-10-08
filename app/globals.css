@@ -94,7 +94,7 @@ body {
   .mobile-estimate-bar a:hover { background:var(--color-action-deep); }
   .mobile-estimate-bar svg { width:20px; height:20px; }
   .service-estimate-prompt { flex-direction:column; align-items:flex-start; padding:32px 20px; gap:24px; }
-  html { scroll-padding-bottom:90px; }
+  html { scroll-padding-top:73px; scroll-padding-bottom:90px; }
 }
 
 @media(max-width:359px) { .header-estimate-button { display:none; } }
