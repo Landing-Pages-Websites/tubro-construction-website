@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactElement } from "react";
-import { designedPageMetadata } from "@/components/site/DesignedPage";
+import { siteMetadata } from "@/lib/seo";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/shared/SiteFooter";
 import { SiteMotion } from "@/components/shared/SiteMotion";
@@ -16,7 +16,11 @@ import styles from "./custom-home.module.css";
 
 const SLUG = "custom-home-services";
 
-export const metadata: Metadata = designedPageMetadata(SLUG);
+export const metadata: Metadata = siteMetadata(
+  "Custom Home Construction in King & Pierce Counties | Tubro",
+  "Plan your custom home with Tubro Construction in Western Washington. Get a free estimate, clear scope, upfront pricing, and assigned project management.",
+  "/custom-home-services",
+);
 
 export default function Page(): ReactElement {
   const [hero, planning, process, gallery, estimate] = loadManifest(SLUG).ordered_sections;
