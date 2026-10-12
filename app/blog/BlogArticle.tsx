@@ -18,6 +18,7 @@ export function BlogArticle({ post }: { post: BlogPost }): ReactElement {
     <main id="main-content" tabIndex={-1}>{post.kind === "article" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />}
       <nav className={styles.breadcrumb} aria-label="Breadcrumb"><Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/blog">Blog</Link><span aria-hidden="true">/</span><span aria-current="page">{post.category}</span></nav>
       <article><header className={styles.articleHeader}><p className={styles.label}>{post.category}</p><h1>{post.title}</h1><p className={styles.dek}>{post.description}</p>{post.publishedDate && <div className={styles.byline}><span>By {post.author}</span><time dateTime={post.publishedDate}>{date}</time></div>}</header>
+        {post.kind === "article" && <aside className={styles.bookingTop} aria-label="Book your free estimate"><p>Ready to talk about your project?</p><Link href="/schedule-an-estimate">Book Your Free Estimate</Link></aside>}
         {post.image && <div className={styles.articleImage}><Image src={post.image} alt={post.imageAlt} fill priority sizes="(min-width: 1400px) 1280px, 95vw" /></div>}
         <div className={styles.articleLayout}><aside className={styles.contents}><h2>In this guide</h2><nav aria-label="Article contents">{post.sections.map((section) => <a key={section.id} href={`#${section.id}`} dangerouslySetInnerHTML={{ __html: section.heading }} />)}</nav></aside><ArticleBody post={post} /></div>
       </article>
