@@ -55,7 +55,9 @@ export function PageSections({ slug, path }: PageSectionsProps): ReactElement {
             ctaTarget={ctaTarget}
             isFirst={index === 0}
           />
-          {index === 1 && (slug === "kitchen-remodeling" || slug === "bathroom-remodeling") && <ServiceEstimatePrompt room={slug === "kitchen-remodeling" ? "Kitchen" : "Bathroom"} />}
+          {index === 1 && (slug === "kitchen-remodeling" || slug === "bathroom-remodeling") && (slug === "bathroom-remodeling"
+            ? <ServiceEstimatePrompt room="Bathroom" heading="Ready to Build the Bathroom You Have Been Imagining?" body="Tell us what you are considering. We will help you understand the possibilities, scope, and next steps." />
+            : <ServiceEstimatePrompt room="Kitchen" />)}
           </Fragment>
         );
       })}
