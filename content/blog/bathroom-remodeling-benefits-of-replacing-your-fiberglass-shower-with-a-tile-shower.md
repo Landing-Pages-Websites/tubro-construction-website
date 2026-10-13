@@ -25,7 +25,7 @@ kind: "article"
 
 <p><span><span>When it comes to home renovation projects,</span>
 </span><a href="/bathroom-remodeling#dm">bathroom remodeling</a><span> <span>is often part of the equation. As one of the most frequently used spaces in any household, the bathroom deserves serious consideration.</span>
-</span></p><p><span><br/></span></p><p><span>Whether you're looking to enhance the functionality, aesthetics, or both, upgrading your bathroom can make a significant impact on the overall appeal and value of your home. Many homes in the Pacific Northwest are originally built with fiberglass shower.<br/></span></p><p><span>             </span></p><p><span> At Tubro Construction, we have remodeled bathrooms all over King and Pierce County. So, if you're ready to transform your bathroom into a luxurious retreat or simply want to give it a fresh new look, consider these facts about upgrading your fiberglass shower to a new tile shower<br/></span></p>
+</span></p><p><span><br/></span></p><p><span>Whether you're looking to enhance the functionality, aesthetics, or both, upgrading your bathroom can make a significant impact on the overall appeal and value of your home. Many homes in Western Washington are originally built with fiberglass shower.<br/></span></p><p><span>             </span></p><p><span> At Tubro Construction, we have remodeled bathrooms all over King and Pierce County. So, if you're ready to transform your bathroom into a luxurious retreat or simply want to give it a fresh new look, consider these facts about upgrading your fiberglass shower to a new tile shower<br/></span></p>
 
 
 
@@ -44,7 +44,7 @@ kind: "article"
 <p><span><span>Unlike fiberglass showers, which may show signs of wear and tear over time, tile showers offer a long-lasting solution that can withstand daily use without compromising its appearance or functionality.</span>
 </span></p><p><span><br/></span></p><p><span><span>The use of high-quality tiles and grout ensures that your shower will maintain its pristine condition for years to come. At Tubro Construction, we utilize a waterproofing system underneath our tile shower installations called Wedi from</span>
 </span><a href="http://wedicorp.com">wedicorp.com</a></p><p><span><br/></span></p><p><span><span>Their products are crafted using top-notch closed cell extruded polystyrene foam, making them 100% waterproof. This ensures that water cannot penetrate behind the tiles, preventing any potential damage, mold growth, or costly repairs down the line. We have certified installers of the Wedi system on our crew to ensure proper installation every time. For more on choosing the right contractor, check out</span>
-</span><a href="/the-benefits-of-hiring-a-professional-home-remodeling-contractor">The Benefits of Hiring a Professional Home Remodeling Contractor in Washington</a><span>.</span></p>
+</span><a href="/the-benefits-of-hiring-a-professional-home-remodeling-contractor">The Benefits of Hiring a Professional Home Remodeling Contractor in Western Washington</a><span>.</span></p>
 
 <img alt="aesthetic tile bathroom" src="/images/blog/legacy-4943fe6dfd3e8688.jpg"/>
 

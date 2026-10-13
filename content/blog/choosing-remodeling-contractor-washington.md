@@ -1,6 +1,6 @@
 ---
 slug: "choosing-remodeling-contractor-washington"
-title: "How to Choose a Remodeling Contractor in Washington"
+title: "How to Choose a Remodeling Contractor in Western Washington"
 description: "Learn what to ask a remodeling contractor, how to verify Washington registration, and how to compare scope, communication, and written estimates."
 category: "Planning your remodel"
 image: "/images/projects/1221004_deck 01.jpg"

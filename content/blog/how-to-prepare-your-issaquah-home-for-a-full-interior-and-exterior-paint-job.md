@@ -21,7 +21,7 @@ kind: "article"
 
 <h2><strong>Why Preparation Matters</strong></h2>
 
-<p><span>Painting may seem straightforward, but the quality of the prep work directly impacts the final result. For Issaquah homeowners, where damp Pacific Northwest weather can affect surfaces, prep becomes even more important.</span></p> <ul><li><span>Proper prep ensures paint adheres evenly.<br/></span></li><li><span>It reduces the risk of peeling, bubbling, or cracking later.<br/></span></li><li><span>Preparation protects your furniture, landscaping, and other finishes.<br/></span></li><li><span>A clean, organized job site helps painters work efficiently, saving you time and money.<br/></span></li></ul>
+<p><span>Painting may seem straightforward, but the quality of the prep work directly impacts the final result. For Issaquah homeowners, where damp Western Washington weather can affect surfaces, prep becomes even more important.</span></p> <ul><li><span>Proper prep ensures paint adheres evenly.<br/></span></li><li><span>It reduces the risk of peeling, bubbling, or cracking later.<br/></span></li><li><span>Preparation protects your furniture, landscaping, and other finishes.<br/></span></li><li><span>A clean, organized job site helps painters work efficiently, saving you time and money.<br/></span></li></ul>
 
 
 <img alt="Brown-sided house with four white-framed windows; trees in the background and brown roof." src="/images/blog/legacy-ed06ee226de6f754.jpg" title="Brown-sided house with four white-framed windows; trees in the background and brown roof."/>
@@ -36,7 +36,7 @@ kind: "article"
 <p><span>Fill nail holes, cracks, or dents with spackle and sand smooth. Painters can help with larger repairs, but handling small ones in advance speeds up the process.</span></p> <ul><li><strong>Plan for Ventilation</strong></li></ul>
 <p><span>Keep windows open or fans running to ensure proper air circulation, especially if low-VOC or traditional paints are used.</span></p><p><br/></p> <h2><span>Exterior Preparation Tips</span></h2>
 <p><span>The outside of your Issaquah home requires special attention because of the region’s wet climate and natural wear. These steps help create a strong foundation for exterior painting.</span></p> <ul><li><strong>Power Wash the Surfaces</strong></li></ul>
-<p><span>Dirt, mildew, and moss build up quickly in the Pacific Northwest. Power washing removes these contaminants and ensures the paint bonds properly.</span></p> <ul><li><strong>Trim Back Landscaping</strong></li></ul>
+<p><span>Dirt, mildew, and moss build up quickly in Western Washington. Power washing removes these contaminants and ensures the paint bonds properly.</span></p> <ul><li><strong>Trim Back Landscaping</strong></li></ul>
 <p><span>Cut back bushes, shrubs, and tree branches near the house. This gives painters room to work and keeps leaves from sticking to fresh paint.</span></p> <ul><li><strong>Repair Damaged Surfaces</strong></li></ul>
 <p><span>Replace or repair any rotting wood, cracked siding, or loose trim. Painting over damaged surfaces shortens the lifespan of the finish.</span></p> <ul><li><strong>Check for Moisture</strong></li></ul>
 <p><span>Make sure surfaces are dry before painting. Painting over damp areas leads to bubbling and peeling, especially in Issaquah’s rainy climate.</span></p> <ul><li><strong>Protect Windows, Doors, and Fixtures</strong></li></ul>

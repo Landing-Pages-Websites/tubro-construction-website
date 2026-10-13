@@ -70,7 +70,7 @@ Oops, there was an error sending your message.<br/>Please try again later.
 </span><span>in KENT, WA</span></h2>
 
 <p><a href="/">Tubro Construction</a><span> <span></span>
-</span><span>is the unrivaled leading custom home remodeling company that offers services and solutions to the esteemed communities of King and Pierce Counties in Washington. With an unwavering commitment to innovation and an unrelenting focus on making our customers completely satisfied, we redefine what it means to transform your living spaces.</span></p><p><span><br/>We believe that your home should be a reflection of your unique personality and aspirations, which is why we approach every home remodeling project with a fresh perspective and a dedication to crafting spaces that truly resonate with your vision.</span></p>
+</span><span>is the unrivaled leading custom home remodeling company that offers services and solutions to the esteemed communities of King and Pierce Counties in Western Washington. With an unwavering commitment to innovation and an unrelenting focus on making our customers completely satisfied, we redefine what it means to transform your living spaces.</span></p><p><span><br/>We believe that your home should be a reflection of your unique personality and aspirations, which is why we approach every home remodeling project with a fresh perspective and a dedication to crafting spaces that truly resonate with your vision.</span></p>
 
 <img alt="There is a large island in the middle of the kitchen." src="/images/blog/legacy-7eeefde88039e470.jpg"/>
 
@@ -234,10 +234,6 @@ All Locations
 </li>
 <li> <a> <span></span>
 <span>Auburn, WA 98001, United States of America</span>
-</a>
-</li>
-<li> <a> <span></span>
-<span>Spanaway, WA 98387, United States of America</span>
 </a>
 </li>
 <li> <a> <span></span>
