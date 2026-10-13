@@ -23,6 +23,7 @@ export type BlogPost = {
   rendererId?: string;
   slug: string;
   title: string;
+  metaTitle?: string;
   description: string;
   category: string;
   image: string;
@@ -138,6 +139,7 @@ function readPost(file: string): BlogPost {
     rendererId: meta.rendererId,
     slug: meta.slug,
     title: meta.title,
+    metaTitle: meta.metaTitle,
     description: meta.description,
     category: meta.category || "Tubro Construction",
     image: meta.image || "",
