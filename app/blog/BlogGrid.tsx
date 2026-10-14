@@ -13,7 +13,7 @@ export function BlogGrid(): ReactElement {
         <article key={post.slug} className={styles.card}>
           <Link href={post.canonicalPath} className={styles.cardLink}>
             {post.image && <div className={styles.cardImage}><Image src={post.image} alt={post.imageAlt} fill sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 90vw" /></div>}
-            <div className={styles.cardCopy}><p className={styles.label}>{post.category}</p><h3>{post.title}</h3><p>{post.description}</p>{post.publishedDate && <time dateTime={post.publishedDate} className={styles.label}>{new Date(post.publishedDate.length === 10 ? `${post.publishedDate}T12:00:00Z` : post.publishedDate).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}</time>}<span className={styles.readLink}>Read the guide <ArrowUpRight size={20} aria-hidden="true" /></span></div>
+            <div className={styles.cardCopy}><p className={styles.label}>{post.category}</p><h3>{post.title}</h3><p>{post.description}</p>{post.publishedDate && <time className={styles.cardDate} dateTime={post.publishedDate}>{new Date(`${post.publishedDate}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}</time>}<span className={styles.readLink}>Read the guide <ArrowUpRight size={20} aria-hidden="true" /></span></div>
           </Link>
         </article>
       ))}</div>
