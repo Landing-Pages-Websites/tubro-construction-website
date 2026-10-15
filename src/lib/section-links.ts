@@ -9,8 +9,11 @@ export interface ResolvedLink {
 }
 
 const ROUTE_LABELS: Record<string, string> = {
+  "/blog/home-addition-planning-checklist": "Home addition planning checklist",
+  "/maximizing-space-tips-for-home-additions": "Ways to maximize space with a home addition",
+  "/planning-a-home-addition-in-covington-what-you-need-to-know": "Planning a home addition in Covington",
   "/schedule-an-estimate": "Book Your Free Estimate",
-  "/recent-projects": "See recent projects",
+  "/recent-projects": "View Recent Projects",
   "/contact": "Contact the office",
   "/service-areas": "Browse service areas",
   "/general-contractor": "General contractor services",

@@ -1308,5 +1308,71 @@
    ],
    "cta": ""
   }
+ },
+ "home-additions": {
+  "hero": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Book Your Free Estimate"
+  },
+  "scope": {
+   "internal_links": [
+    "/blog/home-addition-planning-checklist",
+    "/maximizing-space-tips-for-home-additions"
+   ],
+   "cta": ""
+  },
+  "addition-types": {
+   "internal_links": [
+    "/blog/home-addition-planning-checklist",
+    "/maximizing-space-tips-for-home-additions"
+   ],
+   "cta": ""
+  },
+  "management": {
+   "internal_links": [
+    "/general-contractor",
+    "/custom-home-services"
+   ],
+   "cta": ""
+  },
+  "feasibility": {
+   "internal_links": [
+    "/planning-a-home-addition-in-covington-what-you-need-to-know",
+    "/service-areas"
+   ],
+   "cta": ""
+  },
+  "cost": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "process": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": ""
+  },
+  "project-proof": {
+   "internal_links": [
+    "/recent-projects"
+   ],
+   "cta": "View Recent Projects"
+  },
+  "faq": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Book Your Free Estimate"
+  },
+  "estimate": {
+   "internal_links": [
+    "/schedule-an-estimate"
+   ],
+   "cta": "Book Your Free Estimate"
+  }
  }
 }
