@@ -38,6 +38,7 @@ const CITY_NAMES: Record<string, string> = {
 export const CORE_ROUTES_BEFORE_CITIES: SiteRoute[] = [
   { path: "/", slug: "homepage", title: "Residential Remodeling in King & Pierce Counties | Tubro Construction" },
   { path: "/general-contractor", slug: "general-contractor", title: "Residential General Contractor in Western Washington" },
+  { path: "/home-additions", slug: "home-additions", title: "Home Addition Contractors in King and Pierce Counties" },
   { path: "/kitchen-remodeling", slug: "kitchen-remodeling", title: "Kitchen Remodeling in King & Pierce Counties" },
   { path: "/bathroom-remodeling", slug: "bathroom-remodeling", title: "Bathroom Remodeling in King & Pierce Counties" },
   { path: "/interior-exterior-painting", slug: "interior-exterior-painting", title: "Interior & Exterior Painting in King & Pierce Counties" },
@@ -114,6 +115,7 @@ export function routeForSlug(slug: string): SiteRoute {
 
 export const NAV_SERVICES = [
   { href: "/general-contractor", label: "General Contractor" },
+  { href: "/home-additions", label: "Home Additions" },
   { href: "/kitchen-remodeling", label: "Kitchen Remodeling" },
   { href: "/bathroom-remodeling", label: "Bathroom Remodeling" },
   { href: "/interior-exterior-painting", label: "Interior & Exterior Painting" },
