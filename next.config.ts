@@ -14,6 +14,25 @@ const nextConfig: NextConfig = {
       search: "",
     }],
   },
+  async redirects() {
+    return [
+      {
+        source: "/how-much-does-it-cost-to-replace-kitchen-cabinets",
+        destination: "/how-much-do-kitchen-cabinets-cost",
+        statusCode: 301,
+      },
+      {
+        source: "/do-you-need-permits-for-a-home-remodel-in-maple-valley-wa",
+        destination: "/do-i-need-permits-for-a-home-remodel-in-maple-valley-wa",
+        statusCode: 301,
+      },
+      {
+        source: "/Bathroom-Remodels-Kent-WA",
+        destination: "/bathroom-remodeling",
+        statusCode: 301,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

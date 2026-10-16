@@ -176,7 +176,7 @@ to understand the available project scope and start a conversation about your ho
 <h3>How long does a kitchen remodel take?</h3>
 <p>Tubro Construction notes that kitchen remodeling projects may take from a few weeks to a few months. The range depends on the design, selections, material availability, permits, inspections, layout changes, and conditions behind the walls. Ask for schedule assumptions and decision deadlines during the estimate.</p>
 <h3>Do I need permits for a kitchen remodel in Western Washington?</h3>
-<p>Permit needs depend on the work, location, and local jurisdiction. Structural changes and changes to plumbing, electrical, or other building systems may require review, while some cosmetic work may not. Ask your contractor which permits and inspections apply to your scope, and confirm the responsibilities before work begins. Tubro's <a href="/do-you-need-permits-for-a-home-remodel-in-maple-valley-wa">home remodeling permit guide</a>
+<p>Permit needs depend on the work, location, and local jurisdiction. Structural changes and changes to plumbing, electrical, or other building systems may require review, while some cosmetic work may not. Ask your contractor which permits and inspections apply to your scope, and confirm the responsibilities before work begins. Tubro's <a href="/do-i-need-permits-for-a-home-remodel-in-maple-valley-wa">home remodeling permit guide</a>
 provides additional local planning context.</p>
 <p> <strong>Ready to replace guesswork with a project-specific plan? <a href="/contact">Contact Tubro Construction</a>
 to discuss your kitchen remodel and request a free estimate.</strong>
