@@ -95,6 +95,15 @@ function normalizeStructured(post: StructuredPost): BlogPost {
   };
 }
 
+const BLOG_PATH_PREFIX = "/blog/";
+
+/** Site-relative canonical path. Publisher-written posts may carry an absolute URL or omit the field. */
+function canonicalPathFor(value: string | undefined, slug: string): string {
+  if (!value) return `${BLOG_PATH_PREFIX}${slug}`;
+  if (/^https?:\/\//i.test(value)) return new URL(value).pathname.replace(/\/+$/, "") || `${BLOG_PATH_PREFIX}${slug}`;
+  return value.startsWith("/") ? value : `${BLOG_PATH_PREFIX}${value}`;
+}
+
 function readHeader(header: string): Record<string, string> {
   return Object.fromEntries(header.split("\n").filter(Boolean).map((line) => {
     const colon = line.indexOf(":");
@@ -146,7 +155,7 @@ function readPost(file: string): BlogPost {
     imageAlt: meta.imageAlt || meta.title,
     publishedDate: meta.date || "",
     dateModified: meta.dateModified || meta.date || "",
-    canonicalPath: meta.canonicalPath,
+    canonicalPath: canonicalPathFor(meta.canonicalPath, meta.slug),
     author: meta.author || "Tubro Construction",
     kind: meta.kind,
     ...(meta.rendererId ? renderAuthoredBody(match[2], meta.contents) : renderLegacyBody(match[2])),
