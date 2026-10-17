@@ -40,7 +40,7 @@ export const CORE_ROUTES_BEFORE_CITIES: SiteRoute[] = [
   { path: "/general-contractor", slug: "general-contractor", title: "Residential General Contractor in Western Washington" },
   { path: "/home-additions", slug: "home-additions", title: "Home Addition Contractors in King and Pierce Counties" },
   { path: "/kitchen-remodeling", slug: "kitchen-remodeling", title: "Kitchen Remodeling in King & Pierce Counties" },
-  { path: "/bathroom-remodeling", slug: "bathroom-remodeling", title: "Bathroom Remodeling in King & Pierce Counties" },
+  { path: "/bathroom-remodeling", slug: "bathroom-remodeling", title: "Bathroom Remodeling in King & Pierce Counties | Tubro" },
   { path: "/interior-exterior-painting", slug: "interior-exterior-painting", title: "Interior & Exterior Painting in King & Pierce Counties" },
   { path: "/custom-home-services", slug: "custom-home-services", title: "Custom Home Builder in King & Pierce Counties | Tubro Construction" },
   { path: "/recent-projects", slug: "recent-projects", title: "Recent Remodeling Projects | Tubro Construction" },
