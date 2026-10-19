@@ -25,7 +25,13 @@ export async function generateMetadata({
     (entry) => entry.path === `/service-area/${city}`,
   );
   if (!route) return {};
-  return siteMetadata(route.title, `Plan your home remodel in ${route.city}, Washington with Tubro Construction. Explore local kitchen, bathroom and renovation services and request a free estimate.`, route.path);
+  const title = route.citySlug === "maple-valley"
+    ? "Maple Valley Home Remodeling Contractor | Tubro Construction"
+    : route.title;
+  const description = route.citySlug === "maple-valley"
+    ? "Plan your Maple Valley remodel with Tubro Construction. Explore kitchen, bathroom, painting, and custom home services with upfront pricing and free estimates."
+    : `Plan your home remodel in ${route.city}, Washington with Tubro Construction. Explore local kitchen, bathroom and renovation services and request a free estimate.`;
+  return siteMetadata(title, description, route.path);
 }
 
 export default async function CityPage({
