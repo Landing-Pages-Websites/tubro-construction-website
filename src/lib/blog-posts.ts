@@ -33,6 +33,7 @@ export type BlogPost = {
   canonicalPath: string;
   author: string;
   kind: string;
+  excludeFromPublicCollections?: boolean;
   bodyHtml: string;
   sections: BlogSection[];
 };
@@ -158,6 +159,7 @@ function readPost(file: string): BlogPost {
     canonicalPath: canonicalPathFor(meta.canonicalPath, meta.slug),
     author: meta.author || "Tubro Construction",
     kind: meta.kind,
+    excludeFromPublicCollections: meta.excludeFromPublicCollections === "true" || undefined,
     ...(meta.rendererId ? renderAuthoredBody(match[2], meta.contents) : renderLegacyBody(match[2])),
   };
 }
@@ -169,8 +171,9 @@ const legacyContent = readdirSync(CONTENT_DIR).filter((file) => /\.mdx?$/.test(f
 // structured guides are appended without replacing that parity-checked record.
 const allContent = [...legacyContent, ...structuredPosts.map(normalizeStructured)];
 const uniqueContent = allContent.filter((post, index, posts) => posts.findIndex((candidate) => candidate.slug === post.slug) === index);
-export const blogPosts: BlogPost[] = uniqueContent.filter((post) => post.kind === "article");
-export const legacyPages: BlogPost[] = uniqueContent.filter((post) => post.kind === "page");
+const publicContent = uniqueContent.filter((post) => !post.excludeFromPublicCollections);
+export const blogPosts: BlogPost[] = publicContent.filter((post) => post.kind === "article");
+export const legacyPages: BlogPost[] = publicContent.filter((post) => post.kind === "page");
 export const rootPosts: BlogPost[] = uniqueContent.filter((post) => !post.canonicalPath.startsWith("/blog/") || post.slug === "kitchen-remodel-cost-washington-state");
 
 export function relatedBlogPosts(post: BlogPost): BlogPost[] {
