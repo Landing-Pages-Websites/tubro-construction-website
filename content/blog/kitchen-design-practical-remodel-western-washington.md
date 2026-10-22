@@ -34,7 +34,7 @@ This information gives a contractor and designer a practical starting point, eve
 
 Think of the kitchen as a series of work areas rather than a picture-perfect triangle. Common zones include food storage, washing, preparation, cooking, serving, and cleanup. The exact arrangement depends on the room, openings, appliances, and household habits. The aim is to keep related tasks convenient without forcing people to crowd one another or walk through active work areas.
 
-For example, a useful preparation area needs a clear surface near the sink and the tools or ingredients used there. Pots and cooking utensils are easier to use when stored near the range, while dishes and flatware are often most convenient near the dishwasher or serving area. This zone-based approach is consistent with the National Museum of American History's account of Julia Child organizing her kitchen around work zones and placing tools near the surfaces where they were used ([Julia's Kitchen by Design](https://americanhistory.si.edu/explore/exhibitions/food/online/julia-childs-kitchen/julias-kitchen-design)).
+For example, a useful preparation area needs a clear surface near the sink and the tools or ingredients used there. Pots and cooking utensils are easier to use when stored near the range, while dishes and flatware are often most convenient near the dishwasher or serving area. This zone-based approach is consistent with the National Museum of American History's account of Julia Child organizing her kitchen around work zones and placing tools near the surfaces where they were used (Julia's Kitchen by Design).
 
 Map the activities that matter to your household, then consider the following:
 

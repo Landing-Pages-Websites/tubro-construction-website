@@ -59,5 +59,5 @@ For the estimate, bring photos, your priorities, and notes about leaks, ventilat
 
 Consult the relevant authority for requirements specific to your property and project.
 
-- [EPA: Remodeling your home and indoor air quality](https://www.epa.gov/indoor-air-quality-iaq/remodeling-your-home-and-indoor-air-quality)
-- [Pierce County: Residential permit resources](https://www.piercecountywa.gov/4536/Residential)
+- EPA: Remodeling your home and indoor air quality
+- Pierce County: Residential permit resources

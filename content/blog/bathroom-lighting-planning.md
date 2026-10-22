@@ -58,4 +58,4 @@ For your first planning conversation with Tubro Construction, bring photos of th
 
 Consult the relevant authority for requirements specific to your property and project.
 
-- [U.S. Department of Energy: Understanding energy-efficient light bulb specifications](https://www.energy.gov/cmei/femp/purchasing-energy-efficient-light-bulbs)
+- U.S. Department of Energy: Understanding energy-efficient light bulb specifications

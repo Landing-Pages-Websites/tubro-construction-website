@@ -53,4 +53,4 @@ At the end of each phase, reassess whether the arrangement still works. Allow ro
 
 Consult the relevant authority for requirements specific to your property and project.
 
-- [EPA: Renovation, Repair and Painting Program for consumers](https://www.epa.gov/lead/renovation-repair-and-painting-rrp-program-consumers)
+- EPA: Renovation, Repair and Painting Program for consumers

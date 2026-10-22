@@ -58,4 +58,4 @@ If you are preparing a remodel in King or Pierce County, bring your first select
 
 Consult the relevant authority for requirements specific to your property and project.
 
-- [Cosentino: Silestone maintenance and surface care](https://www.cosentino.com/silestone/maintenance/)
+- Cosentino: Silestone maintenance and surface care

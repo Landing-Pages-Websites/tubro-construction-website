@@ -53,6 +53,6 @@ At completion, walk through the agreed scope together. Keep the product names, c
 
 Consult the relevant authority for requirements specific to your property and project.
 
-- [Sherwin-Williams: Exterior surface preparation](https://www.sherwin-williams.com/homeowners/how-to/painting/exterior-painting-how-tos/exterior-preparing/sw-article-dir-ext_surfaceprep)
-- [Sherwin-Williams: Peeling due to exterior moisture](https://www.sherwin-williams.com/architects-specifiers-designers/resources/SW-ARTICLE-PRO-EXTPEELDUEMOI)
-- [EPA: Lead-safe renovations for homeowners](https://www.epa.gov/lead/lead-safe-renovations-diyers)
+- Sherwin-Williams: Exterior surface preparation
+- Sherwin-Williams: Peeling due to exterior moisture
+- EPA: Lead-safe renovations for homeowners

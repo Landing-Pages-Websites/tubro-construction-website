@@ -62,5 +62,5 @@ Gather a few room photos, your three priority lists, any appliance details, and 
 
 Consult the relevant authority for requirements specific to your property and project.
 
-- [King County: Permits and jurisdiction](https://kingcounty.gov/en/dept/local-services/certificates-permits-licenses/permits)
-- [Pierce County: Residential permit resources](https://www.piercecountywa.gov/4536/Residential)
+- King County: Permits and jurisdiction
+- Pierce County: Residential permit resources

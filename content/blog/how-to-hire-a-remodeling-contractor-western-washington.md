@@ -31,13 +31,13 @@ Also note whether you will live in the home during construction, whether there a
 
 ## Verify licensing, insurance, and local experience
 
-Credentials are the first trust check, not the last. In Washington, homeowners can use the state Department of Labor and Industries resources to [verify a contractor, tradesperson, or business](https://lni.wa.gov/licensing-permits/contractors/hiring-a-contractor/verify-contractor-tradesperson-business). Review the business name, registration details, license status, and any information the state provides about bonding or insurance. Use the official source rather than relying only on a badge, screenshot, or verbal assurance.
+Credentials are the first trust check, not the last. In Washington, homeowners can use the state Department of Labor and Industries resources to verify a contractor, tradesperson, or business. Review the business name, registration details, license status, and any information the state provides about bonding or insurance. Use the official source rather than relying only on a badge, screenshot, or verbal assurance.
 
-You can also review Washington's [contractor verification search](https://secure.lni.wa.gov/verify/) when checking a company's record. Ask the contractor which legal business name should be used in the search. A mismatch between a brand name and the registered entity is not automatically a problem, but it should be explained before you sign.
+You can also review Washington's contractor verification search when checking a company's record. Ask the contractor which legal business name should be used in the search. A mismatch between a brand name and the registered entity is not automatically a problem, but it should be explained before you sign.
 
 Ask for current proof of insurance and ask what types of work the policy covers. The contractor should be able to explain how the company handles damage, injuries, and subcontractor relationships. You do not need to become an insurance expert, but you should not be pressured to accept vague answers.
 
-Local experience matters because remodeling is affected by jurisdiction, permits, inspections, older housing stock, weather, and the practical realities of working in occupied homes. A contractor serving Western Washington should be able to discuss the areas they regularly serve, the kinds of homes they understand, and how they coordinate local requirements. The [Washington L\&I Hire Smart guide](https://lni.wa.gov/licensing-permits/contractors/hiring-a-contractor/hire-smart-step-by-step) is a useful starting point for additional state guidance.
+Local experience matters because remodeling is affected by jurisdiction, permits, inspections, older housing stock, weather, and the practical realities of working in occupied homes. A contractor serving Western Washington should be able to discuss the areas they regularly serve, the kinds of homes they understand, and how they coordinate local requirements. The Washington L\&I Hire Smart guide is a useful starting point for additional state guidance.
 
 Do not treat a license as a guarantee of a perfect project. Treat it as one part of a larger review. A strong decision combines verified credentials with relevant experience, a clear written scope, references or reviews, and a communication process you can understand.
 

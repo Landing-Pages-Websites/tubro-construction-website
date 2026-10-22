@@ -53,6 +53,6 @@ At the estimate, bring your timing constraints, known wet areas, and a list of t
 
 Consult the relevant authority for requirements specific to your property and project.
 
-- [Benjamin Moore: Temperature guide for exterior painting](https://www.benjaminmoore.com/en-ca/interior-exterior-paints-stains/how-to-advice/exteriors/temperature)
-- [Sherwin-Williams: Exterior product application questions](https://www.sherwin-williams.com/home-builders/color/resources/faqs/exterior-product-application-faqs)
-- [Benjamin Moore: Painting a home exterior](https://www.benjaminmoore.com/en-us/interior-exterior-paints-stains/how-to-advice/exteriors/painting-home-exterior)
+- Benjamin Moore: Temperature guide for exterior painting
+- Sherwin-Williams: Exterior product application questions
+- Benjamin Moore: Painting a home exterior

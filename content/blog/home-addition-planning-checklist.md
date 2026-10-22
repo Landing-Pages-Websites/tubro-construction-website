@@ -53,5 +53,5 @@ Also discuss site access, material storage, weather protection, and the point wh
 
 Consult the relevant authority for requirements specific to your property and project.
 
-- [King County: Permits and jurisdiction](https://kingcounty.gov/en/dept/local-services/certificates-permits-licenses/permits)
-- [EPA: Remodeling your home and indoor air quality](https://www.epa.gov/indoor-air-quality-iaq/remodeling-your-home-and-indoor-air-quality)
+- King County: Permits and jurisdiction
+- EPA: Remodeling your home and indoor air quality

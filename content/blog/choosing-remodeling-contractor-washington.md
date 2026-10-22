@@ -59,5 +59,5 @@ Finally, review what completion means, how remaining items are recorded, and wha
 
 Consult the relevant authority for requirements specific to your property and project.
 
-- [Washington L&I: Verify a contractor, tradesperson, or business](https://www.lni.wa.gov/licensing-permits/contractors/hiring-a-contractor/verify-contractor-tradesperson-business)
-- [Washington L&I: Hire Smart, step by step](https://www.lni.wa.gov/licensing-permits/contractors/hiring-a-contractor/hire-smart-step-by-step)
+- Washington L&I: Verify a contractor, tradesperson, or business
+- Washington L&I: Hire Smart, step by step

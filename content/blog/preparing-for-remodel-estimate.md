@@ -53,4 +53,4 @@ Washington L&I advises comparing written bids carefully and reviewing the work, 
 
 Consult the relevant authority for requirements specific to your property and project.
 
-- [Washington L&I: Hire Smart, step by step](https://www.lni.wa.gov/licensing-permits/contractors/hiring-a-contractor/hire-smart-step-by-step)
+- Washington L&I: Hire Smart, step by step

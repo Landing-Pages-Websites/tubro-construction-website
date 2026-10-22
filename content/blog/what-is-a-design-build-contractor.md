@@ -23,7 +23,7 @@ This guide explains what design-build means, where it differs from traditional b
 
 ## What Does a Design-Build Contractor Do?
 
-A design-build contractor brings design coordination and construction under one contracting relationship. The central idea is not that one person performs every task. Rather, the homeowner has one lead organization responsible for coordinating the agreed design and construction work. With employees, design professionals, consultants, or trade subcontractors involved as the project requires. A U.S. federal definition describes the method as combining design and construction in one contract with one contractor ([Federal Acquisition Regulation, 36.102](https://www.acquisition.gov/far/36.102)).
+A design-build contractor brings design coordination and construction under one contracting relationship. The central idea is not that one person performs every task. Rather, the homeowner has one lead organization responsible for coordinating the agreed design and construction work. With employees, design professionals, consultants, or trade subcontractors involved as the project requires. A U.S. federal definition describes the method as combining design and construction in one contract with one contractor (Federal Acquisition Regulation, 36.102).
 
 For a homeowner, the process often starts with a conversation about the goals, existing conditions, scope, and budget priorities. The team then develops a design direction and construction plan, clarifies selections and responsibilities, and documents what is included in the agreement. Once the scope is approved, construction can proceed with the lead contractor coordinating the work and communicating with the homeowner. The specific sequence varies, and some decisions may continue during preconstruction as details become clearer.
 
@@ -34,7 +34,7 @@ For a homeowner, the process often starts with a conversation about the goals, e
 * How are estimates, allowances, exclusions, and changes documented?
 * Who answers questions and communicates progress during construction?
 
-These are not universal tasks automatically included in every design-build agreement. The contract and scope define what the provider is responsible for. In public procurement, the design-builder may take responsibility for most design work and construction. But a residential homeowner should still confirm exactly what a particular firm is providing ([Federal Highway Administration](https://www.fhwa.dot.gov/ipd/alternative_project_delivery/defined/new_build_facilities/design_build.aspx)).
+These are not universal tasks automatically included in every design-build agreement. The contract and scope define what the provider is responsible for. In public procurement, the design-builder may take responsibility for most design work and construction. But a residential homeowner should still confirm exactly what a particular firm is providing (Federal Highway Administration).
 
 Design-build is also different from assuming that all design services are performed by in-house architects. A design-build entity may be organized as one firm or as a team assembled for a project. Ask who will prepare or review any plans that your project needs and how that person's work connects with the builder. For an overview of other questions homeowners can ask before signing, see [questions to ask a general contractor](https://www.tubroconstruction.com/what-to-ask-a-general-contractor-before-signing-a-contract).
 
@@ -42,7 +42,7 @@ In short, design-build gives a homeowner a coordinated route from planning to co
 
 ## How Design-Build Differs From Traditional Bid-and-Build
 
-The main difference is when the homeowner hires the design and construction providers, and how those providers are contractually connected. In traditional design-bid-build, design and construction are separate and sequential. With design-build, the two services are combined under one lead contract ([FAR definitions](https://www.acquisition.gov/far/36.102)).
+The main difference is when the homeowner hires the design and construction providers, and how those providers are contractually connected. In traditional design-bid-build, design and construction are separate and sequential. With design-build, the two services are combined under one lead contract (FAR definitions).
 
 | Question                      | Design-build                                                                              | Traditional design-bid-build                                                                                              |
 | ----------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -58,7 +58,7 @@ Both approaches require decisions about goals, materials, scope, approvals, and 
 
 Bid-and-build may suit an owner who wants to complete design work first and then compare construction bids against a more defined set of plans. That comparison is useful only when the bids cover comparable scope and assumptions. Design-build may appeal to someone who wants the builder involved earlier and prefers a lead organization to coordinate the phases. Neither structure guarantees a lower price or better result.
 
-Evidence comparing delivery methods needs context. A [University of Washington construction research summary](https://cerc.be.uw.edu/2019/06/08/comparing-performance-of-construction-projects-delivered-through-different-delivery-methods/) notes that comparisons can be difficult to generalize when project characteristics differ. Evaluate the fit for your home and agreement rather than relying on a blanket claim about one method. For questions about evaluating a contractor or contract terms, see our separate [contract-question guide](https://www.tubroconstruction.com/what-to-ask-a-general-contractor-before-signing-a-contract).
+Evidence comparing delivery methods needs context. A University of Washington construction research summary notes that comparisons can be difficult to generalize when project characteristics differ. Evaluate the fit for your home and agreement rather than relying on a blanket claim about one method. For questions about evaluating a contractor or contract terms, see our separate [contract-question guide](https://www.tubroconstruction.com/what-to-ask-a-general-contractor-before-signing-a-contract).
 
 ## When Can a Design-Build Contractor Be a Good Fit?
 
@@ -78,7 +78,7 @@ You may prefer separate contracts if you want to retain a designer. This may als
 
 Before choosing, ask for a plain-language explanation of the workflow from initial meeting through closeout. Request clarity on who prepares plans and what level of detail the estimate assumes. Ask when material choices are finalized, how unknown conditions are handled, and who can authorize a change. Compare proposals by scope and assumptions, not just by the headline total.
 
-There is no universal winner. A [University of Washington research summary](https://cerc.be.uw.edu/2019/06/08/comparing-performance-of-construction-projects-delivered-through-different-delivery-methods/) cautions that comparisons of construction delivery methods may not generalize when project characteristics vary. For a homeowner, the practical question is whether the team's process, communication style, design responsibilities, and written scope match the project and your preferred level of involvement. You can also review our [contractor selection guide](https://www.tubroconstruction.com/how-to-choose-the-right-general-contractor-near-bellevue-and-tacoma) for provider-evaluation considerations distinct from the delivery-method decision.
+There is no universal winner. A University of Washington research summary cautions that comparisons of construction delivery methods may not generalize when project characteristics vary. For a homeowner, the practical question is whether the team's process, communication style, design responsibilities, and written scope match the project and your preferred level of involvement. You can also review our [contractor selection guide](https://www.tubroconstruction.com/how-to-choose-the-right-general-contractor-near-bellevue-and-tacoma) for provider-evaluation considerations distinct from the delivery-method decision.
 
 ## Is Design-Build More Expensive Than Traditional Contracting?
 

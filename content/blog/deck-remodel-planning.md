@@ -53,6 +53,6 @@ At handover, review the completed scope, any required inspection signoffs, and c
 
 Consult the relevant authority for requirements specific to your property and project.
 
-- [Pierce County: Deck project guide](https://www.piercecountywa.gov/DocumentCenter/View/96950)
-- [King County: Permits and jurisdiction](https://kingcounty.gov/en/dept/local-services/certificates-permits-licenses/permits)
-- [American Wood Council: Residential wood deck construction guide, 2015 IRC basis](https://web-media.awc.org/wp-content/uploads/2022/02/17210514/AWC-DCA62015-DeckGuide-1804.pdf)
+- Pierce County: Deck project guide
+- King County: Permits and jurisdiction
+- American Wood Council: Residential wood deck construction guide, 2015 IRC basis

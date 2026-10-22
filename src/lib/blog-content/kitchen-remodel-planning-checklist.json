@@ -62,14 +62,5 @@
       ]
     }
   ],
-  "sources": [
-    {
-      "title": "King County: Permits and jurisdiction",
-      "url": "https://kingcounty.gov/en/dept/local-services/certificates-permits-licenses/permits"
-    },
-    {
-      "title": "Pierce County: Residential permit resources",
-      "url": "https://www.piercecountywa.gov/4536/Residential"
-    }
-  ]
+  "sources": []
 }

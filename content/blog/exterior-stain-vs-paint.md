@@ -53,6 +53,6 @@ Bring your existing finish information and preferred reference photos to a free 
 
 Consult the relevant authority for requirements specific to your property and project.
 
-- [Benjamin Moore: Choosing a wood stain and opacity](https://www.benjaminmoore.com/en-us/interior-exterior-paints-stains/how-to-advice/exteriors/choose-wood-stain-color)
-- [Sherwin-Williams: Exterior surface preparation](https://www.sherwin-williams.com/homeowners/how-to/painting/exterior-painting-how-tos/exterior-preparing/sw-article-dir-ext_surfaceprep)
-- [EPA: Lead-safe renovation planning](https://www.epa.gov/lead/steps-lead-safe-renovation-repair-and-painting)
+- Benjamin Moore: Choosing a wood stain and opacity
+- Sherwin-Williams: Exterior surface preparation
+- EPA: Lead-safe renovation planning

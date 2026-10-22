@@ -58,4 +58,4 @@ For a kitchen remodel in King or Pierce County, bring your inventory, measuremen
 
 Consult the relevant authority for requirements specific to your property and project.
 
-- [Blum: ORGA-LINE storage accessories and dividing systems](https://www.blum.com/eu/en/products/innerdividingsystems/orga-line/programme/)
+- Blum: ORGA-LINE storage accessories and dividing systems

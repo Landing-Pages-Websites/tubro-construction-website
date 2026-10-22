@@ -50,8 +50,5 @@
       ]
     }
   ],
-  "sources": [
-    { "title": "King County: Permits and jurisdiction", "url": "https://kingcounty.gov/en/dept/local-services/certificates-permits-licenses/permits" },
-    { "title": "EPA: Remodeling your home and indoor air quality", "url": "https://www.epa.gov/indoor-air-quality-iaq/remodeling-your-home-and-indoor-air-quality" }
-  ]
+  "sources": []
 }
