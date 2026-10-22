@@ -43,7 +43,7 @@ export const CORE_ROUTES_BEFORE_CITIES: SiteRoute[] = [
   { path: "/bathroom-remodeling", slug: "bathroom-remodeling", title: "Bathroom Remodeling in King & Pierce Counties" },
   { path: "/interior-exterior-painting", slug: "interior-exterior-painting", title: "Interior & Exterior Painting in King & Pierce Counties" },
   { path: "/custom-home-services", slug: "custom-home-services", title: "Custom Home Builder in King & Pierce Counties | Tubro Construction" },
-  { path: "/recent-projects", slug: "recent-projects", title: "Recent Remodeling Projects | Tubro Construction" },
+  { path: "/recent-projects", slug: "recent-projects", title: "Remodeling Projects in Western Washington | Tubro Construction" },
   { path: "/about-us", slug: "about-us", title: "Meet the Tubro Construction Team" },
   { path: "/service-areas", slug: "service-areas", title: "Home Remodeling Service Areas in Western Washington" },
   { path: "/blog", slug: "blog", title: "Remodeling Tips & Articles | Tubro Construction" },
