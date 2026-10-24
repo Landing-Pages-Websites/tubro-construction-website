@@ -24,6 +24,9 @@ const ROUTE_LABELS: Record<string, string> = {
   "/about-us": "Meet the team",
   "/blog": "Remodeling tips & articles",
   "/careers": "Construction careers",
+  "/bathroom-remodel-cost-in-western-washington": "Bathroom remodel cost guide",
+  "/how-long-does-a-bathroom-remodel-take-in-washington": "Bathroom remodeling timeline",
+  "/a-step-by-step-guide-to-bathroom-remodels-in-renton-what-to-expect": "Bathroom remodel process in Renton",
 };
 
 const CTA_ROUTES: Record<string, string> = {
