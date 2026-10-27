@@ -16,6 +16,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { legacySlug } = await params;
   const post = rootPosts.find((item) => item.slug === legacySlug);
   if (!post) notFound();
+  if (legacySlug === "how-much-does-it-cost-to-replace-kitchen-cabinets") {
+    return {
+      ...articleMetadata(post),
+      title: "Tubro Construction | Kitchen Cabinet Installation",
+      description:
+        "Learn what affects kitchen cabinet installation costs, from cabinet type to labor, and request a free estimate from Tubro Construction in Western Washington.",
+    };
+  }
   if (legacySlug === "how-much-does-kitchen-cabinet-refacing-cost") {
     return {
       ...articleMetadata(post),
