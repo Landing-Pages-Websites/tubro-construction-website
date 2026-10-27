@@ -25,6 +25,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: "Compare cabinet refacing and replacement costs for kitchens in King and Pierce Counties, with a guide to options; book a free estimate from Tubro Construction.",
     };
   }
+  if (slug === "preparing-for-remodel-estimate") {
+    return {
+      ...metadata,
+      title: "How to Estimate a Remodeling Job: Home Renovation Checklist",
+      description: "Prepare for a remodeling estimate with a renovation checklist for scope, photos, budget, and site access in King and Pierce Counties. Book a free estimate.",
+    };
+  }
   return metadata;
 
 }
