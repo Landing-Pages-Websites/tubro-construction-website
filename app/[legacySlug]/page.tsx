@@ -16,6 +16,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { legacySlug } = await params;
   const post = rootPosts.find((item) => item.slug === legacySlug);
   if (!post) notFound();
+  if (legacySlug === "how-much-does-kitchen-cabinet-refacing-cost") {
+    return {
+      ...articleMetadata(post),
+      title: "Cabinet Refacing vs Replacement Cost | King and Pierce",
+      description: "Compare cabinet refacing and replacement costs for kitchens in King and Pierce Counties, with a guide to options; book a free estimate from Tubro Construction.",
+    };
+  }
   return articleMetadata(post);
 }
 
