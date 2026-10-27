@@ -1,7 +1,8 @@
 ---
 slug: "preparing-for-remodel-estimate"
 title: "How to Prepare for a Remodeling Estimate"
-description: "Make your remodeling estimate more useful with a clear project brief, room photos, budget priorities, and questions about scope and next steps."
+metaTitle: "How to Estimate a Remodeling Job: Home Renovation Checklist"
+description: "Prepare for a remodeling estimate with a renovation checklist for scope, photos, budget, and site access in King and Pierce Counties. Book a free estimate."
 category: "Planning your remodel"
 image: "/images/projects/0126001_kitchen 01.jpg"
 imageAlt: "Kitchen with blue-gray cabinets, a small dining table, and stainless steel refrigerator"
