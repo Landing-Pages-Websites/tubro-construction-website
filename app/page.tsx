@@ -15,8 +15,8 @@ import { EstimateA } from "@/components/variant-a/EstimateA";
 import { siteMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = siteMetadata(
-  "Residential Remodeling in King & Pierce Counties | Tubro",
-  "Plan your kitchen, bathroom, addition or whole-home remodel with Tubro Construction. Clear pricing, careful craftsmanship and assigned project management.", "/",
+  "Tubro Construction | The Estimate-Request Step",
+  "Learn the estimate-request step with Tubro Construction in King and Pierce Counties. Explore kitchen, bathroom, and home remodeling, then book a free estimate.", "/",
 );
 
 /** The customer-selected Direction A "Measured Living" homepage. */
