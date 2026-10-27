@@ -15,7 +15,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   const { embed } = await searchParams;
   return {
     ...designedPageMetadata(SLUG),
-    description: "Explore Tubro Construction’s recent kitchen, bathroom, deck, and exterior work. Find inspiration for your next home remodel in King and Pierce Counties.",
+    description: "See Tubro Construction remodeling projects across Western Washington. Explore quality design-build work and request a free estimate.",
     ...(embed === "realwork" ? { robots: { index: false, follow: false } } : {}),
   };
 }
