@@ -51,8 +51,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: `window.MEGA_TAG_CONFIG={siteKey:"9408e00b76f9qp21"};window.API_ENDPOINT="https://optimizer.gomega.ai";window.TRACKING_API_ENDPOINT="https://events-api.gomega.ai";` }} />
         <script src="https://cdn.gomega.ai/scripts/optimizer.min.js" async />
         <script
-          src="https://app.gomega.ai/review-bridge/v7/review-bridge.js"
-          integrity="sha384-VTUzMpjogRuXFNsE1df8N2HoJyWhNcCkGaUa7aulmDjCmXVoQ4UpQB1xMTrOp3MJ"
+          src="https://app.gomega.ai/review-bridge/latest/review-bridge.js"
           crossOrigin="anonymous"
           defer
         />

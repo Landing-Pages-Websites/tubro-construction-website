@@ -120,7 +120,7 @@ async function checkServedRoute(baseUrl, route) {
   if (!/<title>[^<]+<\/title>/.test(html)) fail(`${route.path}: missing title`);
   if (!html.includes('aria-label="Main"')) fail(`${route.path}: missing global nav`);
   if (!html.includes("<footer")) fail(`${route.path}: missing footer`);
-  if (!html.includes("app.gomega.ai/review-bridge/v7/review-bridge.js")) {
+  if (!html.includes("app.gomega.ai/review-bridge/latest/review-bridge.js")) {
     fail(`${route.path}: review bridge missing from initial HTML`);
   }
   if (route.path !== "/") {
