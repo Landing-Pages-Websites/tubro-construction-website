@@ -35,9 +35,9 @@ export default function ProjectPortfolio(): ReactElement {
           <p>For property owners and businesses</p>
           <h2 id="commercial-remodeling-heading">Commercial remodeling, built around your business.</h2>
           <p>Planning a commercial remodel or interior fit-out in Western Washington? Tubro Construction helps property owners and businesses clarify the scope, plan the work, and move toward a clear estimate. Tell us what you’re considering and we’ll discuss the right next step.</p>
-          <p><Link href="/schedule-an-estimate">Request a commercial remodeling estimate <ArrowUpRight size={18} /></Link></p>
+          <p><Link className={s.commercialLink} href="/schedule-an-estimate">Request a commercial remodeling estimate <ArrowUpRight size={18} /></Link></p>
           <p>A submitted form starts an estimate inquiry; it does not reserve an appointment.</p>
-          <p><Link href="/general-contractor">Explore general contracting <ArrowUpRight size={18} /></Link></p>
+          <p><Link className={s.commercialLink} href="/general-contractor">Explore general contracting <ArrowUpRight size={18} /></Link></p>
         </div>
       </div>
     </section>
