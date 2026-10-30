@@ -44,6 +44,12 @@
 .coverage nav a:hover { color: var(--area-deep); }
 .coverage nav svg { width: 15px; height: 15px; color: var(--area-deep); }
 .coverageNote { font-family: var(--font-fjalla), sans-serif; font-size: 14px; color: var(--area-deep); border-left: 1px solid #bccbbb; padding-left: 30px; }
+.commercial { display: grid; grid-template-columns: 1.1fr .9fr; gap: 8%; align-items: center; background: #e8efe8; border-bottom: 1px solid #d1dbcf; }
+.commercialCopy { max-width: 640px; }
+.commercialCopy h2 { margin: 18px 0 22px; }
+.commercialCopy > p:not(.eyebrow) { max-width: 580px; color: var(--area-muted); font-size: 15px; line-height: 1.85; }
+.commercialActions { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
+.commercialActions .button { width: 100%; max-width: 360px; }
 .directory { background: #fdfcf9; }
 .sectionHeading { display: flex; justify-content: space-between; align-items: flex-end; gap: 50px; margin-bottom: 50px; }
 .sectionHeading h2 { margin-top: 18px; }
@@ -158,6 +164,8 @@
   .coverage > p { width: 100%; }
   .coverage nav { margin-left: 30px; gap: 24px; }
   .coverage nav a { font-size: 14px; gap: 10px; }
+  .commercial { grid-template-columns: 1fr; gap: 32px; }
+  .commercialCopy > p:not(.eyebrow) { font-size: 14px; }
   .sectionHeading { display: block; margin-bottom: 32px; }
   .sectionHeading > p { max-width: 430px; margin-top: 20px; font-size: 14px; }
   .counties { grid-template-columns: 1fr; gap: 36px; }
