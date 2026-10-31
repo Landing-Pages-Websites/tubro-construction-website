@@ -158,10 +158,23 @@ test("K12 script is inline, eval-free, network-free, ES5-safe", () => {
 // whenever that path exists (next/dist/lib/find-pages-dir.js) and <root>/src/app
 // otherwise. Without <app>/layout.tsx the root layouts are the route groups'
 // (<app>/(en)/layout.tsx): each renders <html> itself, or returns a shell it
-// imports by a relative path from a .tsx file that renders it.
+// imports by a relative path from a .tsx file that renders it. <app>/global-not-found
+// (a URL nothing matches) replaces every root layout, so it is one of them too:
+// its own <html>, or the shell it returns. global-error is a client component
+// Next shows only when the root layout threw; the kit does not wire it.
 const HTML_ELEMENT = /<html[\s>]/;
 const ROUTE_GROUP = /^\([^/()]+\)$/;
-const RELATIVE_IMPORT = /\bfrom\s+"(\.\.?\/[^"]+)"/g;
+const RELATIVE_IMPORT = /\bfrom\s+(["'])(\.\.?\/[^"']+)\1/g;
+const GLOBAL_NOT_FOUND = ["tsx", "jsx", "js", "ts"].map((ext) => `global-not-found.${ext}`);
+
+// `file` itself when it renders <html>, otherwise the one shell it imports that does.
+function documentOf(file) {
+  const text = readFileSync(file, "utf8");
+  if (HTML_ELEMENT.test(text)) return file;
+  const shells = [...new Set([...text.matchAll(RELATIVE_IMPORT)].map((m) => path.resolve(path.dirname(file), `${m[2]}.tsx`)))].filter((shell) => existsSync(shell) && HTML_ELEMENT.test(readFileSync(shell, "utf8")));
+  assert.equal(shells.length, 1, `${file} renders no <html> and imports ${shells.length} shells that do`);
+  return shells[0];
+}
 
 function servedRootLayouts() {
   const kit = path.dirname(fileURLToPath(import.meta.url));
@@ -170,18 +183,12 @@ function servedRootLayouts() {
   const rootApp = path.join(root, "app");
   const app = existsSync(rootApp) ? rootApp : path.join(root, "src", "app");
   const single = path.join(app, "layout.tsx");
-  if (existsSync(single)) return [single];
+  const notFound = GLOBAL_NOT_FOUND.map((name) => path.join(app, name)).filter((file) => existsSync(file));
+  assert.ok(notFound.length <= 1, `more than one global-not-found: ${notFound.join(", ")}`);
+  if (existsSync(single)) return [...new Set([single, ...notFound.map(documentOf)])];
   const groups = readdirSync(app).filter((name) => ROUTE_GROUP.test(name) && existsSync(path.join(app, name, "layout.tsx")));
   assert.ok(groups.length > 0, `no root layout: neither ${single} nor a route-group layout.tsx`);
-  const files = groups.map((group) => {
-    const layout = path.join(app, group, "layout.tsx");
-    const text = readFileSync(layout, "utf8");
-    if (HTML_ELEMENT.test(text)) return layout;
-    const shells = [...new Set([...text.matchAll(RELATIVE_IMPORT)].map((m) => path.resolve(path.dirname(layout), `${m[1]}.tsx`)))].filter((file) => existsSync(file) && HTML_ELEMENT.test(readFileSync(file, "utf8")));
-    assert.equal(shells.length, 1, `${layout} renders no <html> and imports ${shells.length} shells that do`);
-    return shells[0];
-  });
-  return [...new Set(files)];
+  return [...new Set([...groups.map((group) => documentOf(path.join(app, group, "layout.tsx"))), ...notFound.map(documentOf)])];
 }
 
 test("K13 layout renders the script only through the preview-mode gate, in head", () => {
