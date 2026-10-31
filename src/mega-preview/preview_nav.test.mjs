@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import test from "node:test";
 import vm from "node:vm";
@@ -152,26 +152,47 @@ test("K12 script is inline, eval-free, network-free, ES5-safe", () => {
   assert.doesNotThrow(() => new vm.Script(s));
 });
 
-// The root layout Next serves. The kit sits where the site's "@/*" alias points
-// (<root>/mega-preview or <root>/src/mega-preview); <root> is the nearer of the
-// two that holds package.json. Next serves <root>/app whenever that path exists
-// (next/dist/lib/find-pages-dir.js) and <root>/src/app otherwise.
-function servedRootLayout() {
+// The files that render the <html> of every page Next serves. The kit sits where
+// the site's "@/*" alias points (<root>/mega-preview or <root>/src/mega-preview);
+// <root> is the nearer of the two that holds package.json. Next serves <root>/app
+// whenever that path exists (next/dist/lib/find-pages-dir.js) and <root>/src/app
+// otherwise. Without <app>/layout.tsx the root layouts are the route groups'
+// (<app>/(en)/layout.tsx): each renders <html> itself, or returns a shell it
+// imports by a relative path from a .tsx file that renders it.
+const HTML_ELEMENT = /<html[\s>]/;
+const ROUTE_GROUP = /^\([^/()]+\)$/;
+const RELATIVE_IMPORT = /\bfrom\s+"(\.\.?\/[^"]+)"/g;
+
+function servedRootLayouts() {
   const kit = path.dirname(fileURLToPath(import.meta.url));
   const root = [path.dirname(kit), path.dirname(path.dirname(kit))].find((dir) => existsSync(path.join(dir, "package.json")));
   assert.ok(root, "no package.json above the kit");
   const rootApp = path.join(root, "app");
   const app = existsSync(rootApp) ? rootApp : path.join(root, "src", "app");
-  return path.join(app, "layout.tsx");
+  const single = path.join(app, "layout.tsx");
+  if (existsSync(single)) return [single];
+  const groups = readdirSync(app).filter((name) => ROUTE_GROUP.test(name) && existsSync(path.join(app, name, "layout.tsx")));
+  assert.ok(groups.length > 0, `no root layout: neither ${single} nor a route-group layout.tsx`);
+  const files = groups.map((group) => {
+    const layout = path.join(app, group, "layout.tsx");
+    const text = readFileSync(layout, "utf8");
+    if (HTML_ELEMENT.test(text)) return layout;
+    const shells = [...new Set([...text.matchAll(RELATIVE_IMPORT)].map((m) => path.resolve(path.dirname(layout), `${m[1]}.tsx`)))].filter((file) => existsSync(file) && HTML_ELEMENT.test(readFileSync(file, "utf8")));
+    assert.equal(shells.length, 1, `${layout} renders no <html> and imports ${shells.length} shells that do`);
+    return shells[0];
+  });
+  return [...new Set(files)];
 }
 
 test("K13 layout renders the script only through the preview-mode gate, in head", () => {
-  const layout = readFileSync(servedRootLayout(), "utf8");
-  assert.match(layout, /import \{ megaPreviewNavScript \} from "@\/mega-preview\/preview_nav\.mjs"/);
-  assert.match(layout, /const navScript = megaPreviewNavScript\(\);/);
-  const head = layout.slice(layout.indexOf("<head>"), layout.indexOf("</head>"));
-  assert.match(head, /navScript \? <script dangerouslySetInnerHTML=\{\{ __html: navScript \}\} \/> : null/);
-  assert.doesNotMatch(layout, /MEGA_PREVIEW_NAV_SCRIPT/);
+  for (const file of servedRootLayouts()) {
+    const layout = readFileSync(file, "utf8");
+    assert.match(layout, /import \{ megaPreviewNavScript \} from "@\/mega-preview\/preview_nav\.mjs"/, file);
+    assert.match(layout, /const navScript = megaPreviewNavScript\(\);/, file);
+    const head = layout.slice(layout.indexOf("<head>"), layout.indexOf("</head>"));
+    assert.match(head, /navScript \? <script dangerouslySetInnerHTML=\{\{ __html: navScript \}\} \/> : null/, file);
+    assert.doesNotMatch(layout, /MEGA_PREVIEW_NAV_SCRIPT/, file);
+  }
   assert.equal(megaPreviewNavScript({}), null);
   assert.equal(megaPreviewNavScript({ MEGA_PREVIEW_MODE: "0" }), null);
 });
