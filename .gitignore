@@ -29,3 +29,6 @@ next-env.d.ts
 
 # QA captures (not published)
 /qa
+
+# MEGA preview mode: written by the preview tooling in the saved worktree
+.mega-preview-identity.json

@@ -8,7 +8,8 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "artifacts": "node scripts/generate-build-artifacts.mjs",
-    "verify": "node scripts/verify-build.mjs"
+    "verify": "node scripts/verify-build.mjs",
+    "test:mega-preview": "node --test --experimental-strip-types src/mega-preview/*.test.mjs scripts/preview-wiring.test.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.544.0",

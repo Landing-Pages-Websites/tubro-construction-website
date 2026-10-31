@@ -8,6 +8,7 @@ import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { PostHogProvider } from "@/components/analytics/PostHogProvider";
 import { siteMetadata, businessSchema } from "@/lib/seo";
 import { RecaptchaBootstrap } from "@/components/analytics/RecaptchaBootstrap";
+import { megaPreviewNavScript } from "@/mega-preview/preview_nav.mjs";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -45,9 +46,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>): ReactElement {
+  const navScript = megaPreviewNavScript();
   return (
     <html lang="en" className={`${poppins.variable} ${poppinsDeferred.variable} ${fjallaOne.variable}`}>
       <head>
+        {navScript ? <script dangerouslySetInnerHTML={{ __html: navScript }} /> : null}
         <script dangerouslySetInnerHTML={{ __html: `window.MEGA_TAG_CONFIG={siteKey:"9408e00b76f9qp21"};window.API_ENDPOINT="https://optimizer.gomega.ai";window.TRACKING_API_ENDPOINT="https://events-api.gomega.ai";` }} />
         <script src="https://cdn.gomega.ai/scripts/optimizer.min.js" async />
         <script
