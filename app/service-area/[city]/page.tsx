@@ -27,10 +27,14 @@ export async function generateMetadata({
   if (!route) return {};
   const title = route.citySlug === "maple-valley"
     ? "Maple Valley Home Remodeling Contractor | Tubro Construction"
-    : route.title;
+    : route.citySlug === "kent"
+      ? "Home Remodeling Kent, WA | Tubro Construction"
+      : route.title;
   const description = route.citySlug === "maple-valley"
     ? "Plan your Maple Valley remodel with Tubro Construction. Explore kitchen, bathroom, painting, and custom home services with upfront pricing and free estimates."
-    : `Plan your home remodel in ${route.city}, Washington with Tubro Construction. Explore local kitchen, bathroom and renovation services and request a free estimate.`;
+    : route.citySlug === "kent"
+      ? "Plan your home remodeling project in Kent with Tubro Construction. Explore kitchen, bathroom, additions, and renovations, then request a free estimate."
+      : `Plan your home remodel in ${route.city}, Washington with Tubro Construction. Explore local kitchen, bathroom and renovation services and request a free estimate.`;
   return siteMetadata(title, description, route.path);
 }
 
