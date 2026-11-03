@@ -75,11 +75,11 @@
       "prompt": "prompts/01-hero.md",
       "content": {
         "eyebrow": "Bathroom Remodeling in King & Pierce Counties",
-        "headline": "A Better Bathroom Starts With a Better Plan",
-        "body": "Bathroom remodels across King and Pierce Counties can include walk-in showers, tub conversions, renovations, and assigned project management.",
+        "headline": "Bathroom Remodeling in King and Pierce Counties",
+        "body": "Bathroom remodeling in King and Pierce Counties with clear scope, free estimates, walk-in showers, tub conversions, and an assigned project manager.",
         "bullets": [],
         "steps": [],
-        "cta": "Schedule a Free Estimate",
+        "cta": "Book Your Free Estimate",
         "secondary_cta": "Call 253-216-2633",
         "items": [],
         "options": []
@@ -290,7 +290,7 @@
           "Form submissions route to workorders@tubroconstruction.com"
         ],
         "steps": [],
-        "cta": "Schedule a Free Estimate",
+        "cta": "Book Your Free Estimate",
         "secondary_cta": "",
         "items": [],
         "options": [
