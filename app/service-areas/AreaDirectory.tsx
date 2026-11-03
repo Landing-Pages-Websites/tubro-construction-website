@@ -1,20 +1,22 @@
 import { ArrowRight } from "lucide-react";
 import type { ReactElement } from "react";
-import { SERVICE_CITIES } from "@/lib/routes";
+import { CITY_ROUTES } from "@/lib/routes";
 import { CityLinks } from "./CityLinks";
 import { ConstructionDrawing } from "./ConstructionDrawing";
 import styles from "./service-areas.module.css";
 
-const PIERCE_CITIES = new Set(["tacoma", "sumner", "bonney-lake", "buckley", "puyallup"]);
-const kingCities = SERVICE_CITIES.filter(({ citySlug }) => !PIERCE_CITIES.has(citySlug));
-const pierceCities = SERVICE_CITIES.filter(({ citySlug }) => PIERCE_CITIES.has(citySlug));
+// Pierce County cities that already have a local remodeling page.
+// Seattle, Redmond, and Puyallup stay off this directory until a city page exists.
+const PIERCE_CITIES = new Set(["tacoma", "sumner", "bonney-lake", "buckley"]);
+const kingCities = CITY_ROUTES.filter(({ citySlug }) => !PIERCE_CITIES.has(citySlug));
+const pierceCities = CITY_ROUTES.filter(({ citySlug }) => PIERCE_CITIES.has(citySlug));
 
 export function AreaDirectory(): ReactElement {
   return (
     <section id="city-directory" className={`${styles.section} ${styles.directory}`} aria-labelledby="directory-heading">
       <div className={styles.sectionHeading}>
         <div><p className={styles.eyebrow}>Our communities</p><h2 id="directory-heading">Good work starts<br />in your neighborhood.</h2></div>
-        <p>Find your community below to explore local remodeling services and take the next step with Tubro.</p>
+        <p>Each city below has its own remodeling page, with kitchen, bathroom, addition, painting, and general contracting work. Pick your community to see local services and request a free estimate.</p>
       </div>
       <div className={styles.counties}>
         <div id="king-county" className={styles.county}>
