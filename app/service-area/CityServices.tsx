@@ -53,8 +53,21 @@ export function CityServices({
           <em>Your kind of home.</em>
         </h2>
         <p>
-          Explore what Tubro can help you plan. We’ll confirm the fit for your{" "}
-          {city} property when we review your request.
+          {profile.servicesIntroVariant === "contractor" ? (
+            <>
+              Explore home remodeling services for Auburn properties, including
+              kitchens, bathrooms, additions, painting, and custom homes. For
+              broader project coordination, learn about Tubro’s{" "}
+              <a href="/general-contractor">general contracting services</a>.
+              We’ll review your project details and confirm the right fit when
+              you submit an estimate request.
+            </>
+          ) : (
+            <>
+              Explore what Tubro can help you plan. We’ll confirm the fit for your{" "}
+              {city} property when we review your request.
+            </>
+          )}
         </p>
         <figure className={styles.serviceFigure}>
           <div className={styles.servicePhoto}>
@@ -74,7 +87,14 @@ export function CityServices({
       </div>
       <div className={styles.serviceList}>
         {SERVICES.map((service) => (
-          <a href={service.href} key={service.href}>
+          <a
+            href={
+              service.title === "Additions & home renovations" && profile.additionsHref
+                ? profile.additionsHref
+                : service.href
+            }
+            key={service.title}
+          >
             <div>
               <h3>{service.title}</h3>
               <p>{service.body}</p>

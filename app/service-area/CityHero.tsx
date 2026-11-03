@@ -23,13 +23,17 @@ export function CityHero({
           <span aria-current="page">{route.city}</span>
         </nav>
         <h1 id="city-heading">
-          Home remodeling
-          <br />
-          <span>in {route.city}.</span>
+          {profile.heroHeading ?? (
+            <>
+              Home remodeling
+              <br />
+              <span>in {route.city}.</span>
+            </>
+          )}
         </h1>
         <p className={styles.heroBody}>{profile.intro}</p>
         <a href="#form" className={styles.button}>
-          Book Your Free Estimate
+          {profile.heroCtaLabel ?? "Book Your Free Estimate"}
           <ArrowUpRight aria-hidden="true" />
         </a>
         <a href="#services" className={styles.textLink}>

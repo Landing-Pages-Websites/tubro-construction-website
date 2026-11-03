@@ -48,6 +48,10 @@ export interface CityProfile {
   planningTitle: string;
   planningBody: string;
   photos: readonly [PhotoKey, PhotoKey, PhotoKey, PhotoKey];
+  heroHeading?: string;
+  heroCtaLabel?: string;
+  servicesIntroVariant?: "contractor";
+  additionsHref?: string;
 }
 
 export const CITY_PROFILES: Record<string, CityProfile> = {
@@ -93,11 +97,15 @@ export const CITY_PROFILES: Record<string, CityProfile> = {
   },
   auburn: {
     intro:
-      "From the first conversation to the finishing details, your home deserves a thoughtful plan. Explore residential remodeling with Tubro in Auburn and tell us what you have in mind.",
+      "Tubro Construction helps Auburn homeowners plan thoughtful remodels, from kitchens and bathrooms to additions, painting, and broader home renovations. Share what you want to change and request a free estimate for your property.",
     planningTitle: "Let’s start with your property.",
     planningBody:
       "Auburn spans King and Pierce Counties. Include your project city and the room or exterior area you want to change so the team can review the location and scope together.",
     photos: ["island", "dark", "shaker", "deck"],
+    heroHeading: "Home Remodeling Contractors Serving Auburn, WA",
+    heroCtaLabel: "Request Your Free Estimate",
+    servicesIntroVariant: "contractor",
+    additionsHref: "/home-additions",
   },
   ravensdale: {
     intro:
