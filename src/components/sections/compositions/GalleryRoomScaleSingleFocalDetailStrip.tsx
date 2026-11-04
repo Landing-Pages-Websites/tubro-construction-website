@@ -26,7 +26,7 @@ export function GalleryRoomScaleSingleFocalDetailStrip({
   const headingId = `${section.id}-heading`;
   const [focal, ...details] = images;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="gallery" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-6 lg:grid-cols-[13fr_7fr]">
           {focal && (

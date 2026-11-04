@@ -11,7 +11,7 @@ const decisions = [
 
 export default function PlanningNotes(): ReactElement {
   return (
-    <section id="planning-notes" className={styles.notes} aria-labelledby="notes-title">
+    <section data-mega-section="planning-notes" id="planning-notes" className={styles.notes} aria-labelledby="notes-title">
       <div className={styles.sectionHeading}><h2 id="notes-title">Start with your space.<br /><span>Then work through the details.</span></h2><p>Planning notes to bring to the table, whether you’re gathering ideas or ready to talk.</p></div>
       <div className={styles.roomNotes}>
         <article id="kitchen-planning" className={styles.kitchenNote}><div className={styles.noteMeta}><span>01 / Kitchen planning</span><ArrowUpRight size={22} aria-hidden="true" /></div><h3>Make room for<br />your real life.</h3><p>Before choosing cabinets or countertops, take a closer look at how you use your kitchen. Note what works, what feels crowded, and what you reach for every day.</p><ul className={styles.checklist}><li>Think about cooking, cleanup, and gathering.</li><li>List the storage you use and the storage you’re missing.</li><li>Bring photos of the details you’re drawn to.</li></ul><a className={styles.textLink} href="/kitchen-remodeling">Explore kitchen remodeling <ArrowUpRight size={18} aria-hidden="true" /></a><div className={styles.marginNote}>A place to start: what would make an ordinary morning easier?</div></article>

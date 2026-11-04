@@ -25,7 +25,7 @@ export function HeroImageLedCollageMarginalCopy({
   const headingId = `${section.id}-heading`;
   const [lead, upper, lower] = images;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="hero" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto grid max-w-7xl gap-y-12 px-5 sm:px-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,3fr)] lg:gap-x-14">
         <div className="lg:order-last lg:border-l-2 lg:border-action lg:pl-8 xl:pl-10">
           <SectionIntro section={section} headingId={headingId} as={isFirst ? "h1" : "h2"} size="quiet" />

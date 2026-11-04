@@ -8,7 +8,7 @@ import styles from "./city.module.css";
 
 export function CityEstimate({ route }: { route: CityRoute }): ReactElement {
   return (
-    <section
+    <section data-mega-section="form"
       id="form"
       className={`${styles.section} ${styles.estimate}`}
       aria-labelledby="estimate-heading"

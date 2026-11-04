@@ -31,7 +31,7 @@ export function ContentSurfaceColorFieldPhotoProof({
   const headingId = `${section.id}-heading`;
   const [first, second, third] = images;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="content" section={section} band={band} labelledBy={headingId}>
       {/* Upper color field; the band supplies the lower field. */}
       <div aria-hidden="true" className="absolute inset-x-0 top-0 h-[55%] bg-plaster" />
       <div className="relative mx-auto grid max-w-7xl gap-x-16 gap-y-12 px-5 sm:px-8 lg:grid-cols-[8fr_9fr]">

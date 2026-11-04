@@ -3,7 +3,7 @@ import { PROCESS } from "@/lib/content";
 
 export function ProcessA(): ReactElement {
   return (
-    <section id="how-it-works" aria-labelledby="process-a-heading" className="a-process">
+    <section data-mega-section="how-it-works" id="how-it-works" aria-labelledby="process-a-heading" className="a-process">
       <h2 id="process-a-heading">{PROCESS.heading}</h2>
       <svg className="a-process-route" viewBox="0 0 1536 864" preserveAspectRatio="none" aria-hidden="true">
         <path d="M1498 155H916Q900 155 900 171V315Q900 332 884 332H185Q169 332 169 348V403M531 332Q515 332 515 348V403M845 332Q861 332 861 348V403M1207 422V410Q1207 394 1223 394H1385Q1401 394 1401 410V544Q1401 560 1417 560H1497" />

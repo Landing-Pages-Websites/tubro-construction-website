@@ -11,7 +11,7 @@ export function PaintingSurfaces({ section, images, band, links }: SectionProps)
   const [primary, ...details] = images;
 
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="painting-surfaces" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid items-end gap-6 border-t border-ink/20 pt-8 lg:grid-cols-[3fr_2fr] lg:gap-20">
           <h2 id={headingId} className="max-w-[23ch] text-balance font-fjalla text-[clamp(2rem,3.5vw,3.25rem)] leading-[1.15] tracking-[-0.02em]">

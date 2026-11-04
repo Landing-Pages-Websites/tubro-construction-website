@@ -36,7 +36,7 @@ export function ContentEditorialIndexToc(props: SectionProps): ReactElement {
   const ledgerRows = items.length > 0 ? bullets : [];
   const [evidence] = images;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="content" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-x-14 gap-y-10 lg:grid-cols-[10fr_9fr]">
           <div>

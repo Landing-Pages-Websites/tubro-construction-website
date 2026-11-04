@@ -48,7 +48,7 @@ export function HeroCenteredEstimateBrief({
   const headingId = `${section.id}-heading`;
   const [first, second] = images;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="hero" section={section} band={band} labelledBy={headingId}>
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         {/* Dimension frame linking the peripheral proof around the brief. */}
         <span aria-hidden="true" className="absolute top-10 bottom-0 left-0 hidden w-0.5 bg-action xl:block" />

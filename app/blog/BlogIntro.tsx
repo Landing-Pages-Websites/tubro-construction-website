@@ -13,7 +13,7 @@ const topics = [
 
 export default function BlogIntro(): ReactElement {
   return (
-    <section id="hero" className={styles.intro} aria-labelledby="blog-title">
+    <section data-mega-section="hero" id="hero" className={styles.intro} aria-labelledby="blog-title">
       <div className={styles.masthead}><span>Tubro field notes</span><span>Ideas for a home well lived in</span></div>
       <div className={styles.titleRow}>
         <h1 id="blog-title">Practical guidance for planning a <span>better remodel.</span></h1>

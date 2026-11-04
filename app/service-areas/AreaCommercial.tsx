@@ -4,7 +4,7 @@ import styles from "./service-areas.module.css";
 
 export function AreaCommercial(): ReactElement {
   return (
-    <section id="commercial-projects" className={`${styles.section} ${styles.commercial}`} aria-labelledby="commercial-heading">
+    <section data-mega-section="commercial-projects" id="commercial-projects" className={`${styles.section} ${styles.commercial}`} aria-labelledby="commercial-heading">
       <div className={styles.commercialCopy}>
         <p className={styles.eyebrow}>For property owners and businesses</p>
         <h2 id="commercial-heading">Commercial projects, planned around your operation.</h2>

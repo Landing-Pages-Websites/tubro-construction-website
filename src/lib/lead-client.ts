@@ -2,11 +2,10 @@ import { mintCaptchaToken } from "./recaptcha-client";
 import { solveLeadProof } from "./leadProof";
 import type { LeadFields } from "./lead-validation";
 
-declare global { interface Window { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void; } }
 const TRACKED_PARAMS = { utm_source: "utmSource", utm_medium: "utmMedium", utm_campaign: "utmCampaign", utm_term: "utmTerm", utm_content: "utmContent", gclid: "gclid", fbclid: "fbclid" };
 const POST_TIMEOUT_MS = 60_000; // Two bounded receiver attempts can take 25 seconds each.
 type Verification = { captchaToken: string } | { powIssuedAt: string; powNonce: string };
-type LeadResult = { ok?: boolean; code?: string; error?: string };
+export type LeadResult = { ok?: boolean; ignored?: boolean; code?: string; error?: string };
 
 function collectTracking(): Record<string, string> {
   const params = new URLSearchParams(window.location.search);
@@ -38,7 +37,8 @@ async function send(payload: Record<string, unknown>, proof: Verification): Prom
   } catch { throw new Error("We couldn't confirm delivery. Please retry or contact our office."); }
 }
 
-export async function postLead(formKey: string, fields: LeadFields, pageVariant: string): Promise<void> {
+/** Resolves to the route's confirmed answer ({ok:true}); throws on every other outcome. */
+export async function postLead(formKey: string, fields: LeadFields, pageVariant: string): Promise<LeadResult> {
   try {
     const { website = "", ...formFields } = fields;
     const payload = { form_key: formKey, form_data: { ...formFields, pageVariant, ...collectTracking() }, website };
@@ -48,5 +48,6 @@ export async function postLead(formKey: string, fields: LeadFields, pageVariant:
       outcome = await send(payload, await fallback(payload));
     }
     if (!outcome.response.ok || outcome.result.ok !== true) throw new Error(outcome.result.error || "We couldn't send your request. Please try again.");
+    return outcome.result;
   } catch (error) { throw error instanceof Error ? error : new Error("The connection failed. Please try again."); }
 }

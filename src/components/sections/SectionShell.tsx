@@ -9,6 +9,8 @@ const BAND_CLASSES: Record<BackgroundBand, string> = {
 
 interface SectionShellProps {
   section: ManifestSection;
+  /** Literal kebab data-mega-section label naming the composition's role. */
+  megaSection: string;
   band: BackgroundBand;
   children: ReactNode;
   /** Full-bleed frames (photo-canvas heroes) own their vertical rhythm. */
@@ -24,6 +26,7 @@ interface SectionShellProps {
  */
 export function SectionShell({
   section,
+  megaSection,
   band,
   children,
   bleed = false,
@@ -36,6 +39,7 @@ export function SectionShell({
   const rhythm = bleed ? "" : "py-12 sm:py-14 lg:py-16";
   return (
     <section
+      data-mega-section={megaSection}
       id={section.name}
       data-section-id={section.id}
       aria-labelledby={labelledBy}

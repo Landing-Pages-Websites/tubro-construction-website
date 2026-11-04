@@ -84,7 +84,7 @@ export function GalleryAsymmetricMasonryProjectLedger({
       ? bullets.map(splitQuestion)
       : null;
   return (
-    <SectionShell
+    <SectionShell megaSection="gallery"
       section={section}
       band={dark ? "white" : band}
       className={dark ? "bg-ink!" : ""}

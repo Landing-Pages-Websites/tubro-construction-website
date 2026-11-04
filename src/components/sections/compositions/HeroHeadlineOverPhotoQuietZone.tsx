@@ -25,7 +25,7 @@ export function HeroHeadlineOverPhotoQuietZone({
   const headingId = `${section.id}-heading`;
   const [photo] = images;
   return (
-    <SectionShell section={section} band={band} bleed labelledBy={headingId}>
+    <SectionShell megaSection="hero" section={section} band={band} bleed labelledBy={headingId}>
       <div className="relative flex min-h-[520px] items-center overflow-hidden lg:min-h-[620px]">
         {photo && (
           <div className="absolute inset-0">

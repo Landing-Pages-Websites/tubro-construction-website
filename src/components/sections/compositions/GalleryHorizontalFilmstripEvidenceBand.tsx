@@ -100,7 +100,7 @@ export function GalleryHorizontalFilmstripEvidenceBand({
   const interactive = section.source_blueprint_sections.includes(FILTERED_BLUEPRINT);
   const bathroomCollage = slug === "bathroom-remodeling" && section.name === "project-gallery";
   return (
-    <SectionShell
+    <SectionShell megaSection="gallery"
       section={section}
       band={dark ? "white" : band}
       className={dark ? "bg-ink!" : ""}

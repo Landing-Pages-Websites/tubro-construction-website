@@ -9,7 +9,7 @@ export function CityMoreAreas({
   citySlug: string;
 }): ReactElement {
   return (
-    <section
+    <section data-mega-section="more-areas"
       className={`${styles.section} ${styles.moreAreas}`}
       aria-labelledby="more-areas-heading"
     >

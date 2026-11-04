@@ -52,7 +52,7 @@ export function ProcessStaggeredPath({
     ? section.content.bullets.filter((bullet) => bullet.includes("?")).map(splitQuestion)
     : [];
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="process" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionIntro section={section} headingId={headingId} as={isFirst ? "h1" : "h2"} />
         <div className="relative mt-12">

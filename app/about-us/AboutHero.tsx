@@ -5,7 +5,7 @@ import styles from "./about.module.css";
 
 export function AboutHero(): ReactElement {
   return (
-    <section id="hero" aria-labelledby="about-heading" className={`${styles.container} ${styles.hero}`}>
+    <section data-mega-section="hero" id="hero" aria-labelledby="about-heading" className={`${styles.container} ${styles.hero}`}>
       <div className={styles.heroIntro}>
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>About Tubro Construction</p>

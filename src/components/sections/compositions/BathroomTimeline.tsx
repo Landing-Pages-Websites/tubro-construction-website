@@ -21,7 +21,7 @@ export function BathroomTimeline({ section, band, links, isFirst }: SectionProps
   const headingId = `${section.id}-heading`;
   const Heading = isFirst ? "h1" : "h2";
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="bathroom-timeline" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:gap-14 sm:px-8 lg:grid-cols-[.85fr_1.15fr] lg:gap-20">
         <div className="lg:pt-5">
           <Heading id={headingId} className="max-w-lg text-[34px] leading-[1.15] font-semibold tracking-tight text-balance sm:text-[44px] lg:text-[48px]">

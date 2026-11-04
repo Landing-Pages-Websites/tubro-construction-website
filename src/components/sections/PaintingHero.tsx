@@ -13,7 +13,7 @@ export function PaintingHero({ section, images, band, links, ctaTarget, isFirst 
   const headingId = `${section.id}-heading`;
   const [lead] = images;
   return (
-    <SectionShell section={section} band={band} bleed labelledBy={headingId}>
+    <SectionShell megaSection="hero" section={section} band={band} bleed labelledBy={headingId}>
       <div className={styles.hero}>
         <div className={styles.copy}>
           <SectionIntro section={section} headingId={headingId} as={isFirst ? "h1" : "h2"} size="loud" className={styles.intro} />

@@ -13,7 +13,7 @@ export function PaintingQuote({ section, images, band, links, ctaTarget, isFirst
   const Heading = isFirst ? "h1" : "h2";
   const headingId = `${section.id}-heading`;
   return (
-    <SectionShell section={section} band={band} bleed labelledBy={headingId} className={styles.section}>
+    <SectionShell megaSection="painting-quote" section={section} band={band} bleed labelledBy={headingId} className={styles.section}>
       <div className={styles.layout}>
         <div className={styles.visual}>
           {images[0] && <DesignImage image={images[0]} frameClassName={styles.photo} sizes="(min-width: 900px) 48vw, 100vw" withTab={false} />}

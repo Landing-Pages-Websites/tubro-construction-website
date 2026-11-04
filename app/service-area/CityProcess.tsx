@@ -18,7 +18,7 @@ const STEPS = [
 
 export function CityProcess(): ReactElement {
   return (
-    <section
+    <section data-mega-section="how-it-works"
       id="how-it-works"
       className={`${styles.section} ${styles.process}`}
       aria-labelledby="process-heading"

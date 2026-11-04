@@ -41,7 +41,7 @@ export function CityServices({
 }): ReactElement {
   const photo = CITY_PHOTOS[profile.photos[1]];
   return (
-    <section
+    <section data-mega-section="services"
       id="services"
       className={`${styles.section} ${styles.services}`}
       aria-labelledby="services-heading"
@@ -110,7 +110,7 @@ export function CityServices({
           </a>
         ))}
         <p className={styles.serviceNote}>
-          Have something else in mind? <a href="#form">Tell us about it.</a>
+          Have something else in mind? <a data-mega-cta="city-services-form" href="#form">Tell us about it.</a>
         </p>
       </div>
     </section>

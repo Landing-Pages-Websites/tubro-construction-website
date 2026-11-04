@@ -13,7 +13,7 @@ export function KitchenRemodelingHero({ section, images, band, links, ctaTarget,
   const headingId = `${section.id}-heading`;
   const [primary, secondary] = images;
   return (
-    <SectionShell section={section} band={band} bleed labelledBy={headingId}>
+    <SectionShell megaSection="hero" section={section} band={band} bleed labelledBy={headingId}>
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-10 sm:gap-12 sm:px-8 sm:py-14 lg:grid-cols-[5fr_6fr] lg:gap-12 lg:py-16 xl:gap-16">
         <div className="min-w-0">
           <SectionIntro section={section} headingId={headingId} as={isFirst ? "h1" : "h2"} size="loud"

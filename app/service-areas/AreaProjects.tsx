@@ -8,7 +8,7 @@ import styles from "./service-areas.module.css";
 
 export function AreaProjects(): ReactElement {
   return (
-    <section id="project-map" className={`${styles.section} ${styles.projects}`} aria-labelledby="projects-heading">
+    <section data-mega-section="project-map" id="project-map" className={`${styles.section} ${styles.projects}`} aria-labelledby="projects-heading">
       <div className={styles.projectIntro}>
         <p className={styles.eyebrow}>The places we call home</p>
         <h2 id="projects-heading">Made for life<br />in the Northwest.</h2>

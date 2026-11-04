@@ -21,7 +21,7 @@ export function HeroPublicationIndex({
 }: SectionProps): ReactElement {
   const headingId = `${section.id}-heading`;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="hero" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto grid max-w-7xl items-start gap-y-12 px-5 sm:px-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-x-16">
         <div className="border border-ink/10 bg-white px-7 py-10 shadow-md shadow-ink/5 sm:px-10 sm:py-12">
           <SectionIntro section={section} headingId={headingId} as={isFirst ? "h1" : "h2"} size="quiet" />

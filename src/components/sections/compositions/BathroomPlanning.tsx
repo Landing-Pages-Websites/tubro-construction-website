@@ -16,7 +16,7 @@ export function BathroomPlanning({ section, images, band, links, isFirst }: Sect
   const Heading = isFirst ? "h1" : "h2";
   const [photo] = images;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="bathroom-planning" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid items-end gap-6 lg:grid-cols-[3fr_2fr] lg:gap-20">
           <Heading id={headingId} className="max-w-3xl text-[32px] leading-[1.15] font-semibold tracking-tight text-balance sm:text-[42px] lg:text-[46px]">

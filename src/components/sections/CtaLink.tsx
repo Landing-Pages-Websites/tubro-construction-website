@@ -15,6 +15,7 @@ export function CtaLink({ label, href, className }: CtaLinkProps): ReactElement 
   return (
     <Link
       href={destination}
+      data-mega-cta={label}
       className={`group inline-flex min-h-12 items-center gap-2.5 rounded-md bg-action px-6 py-3 font-poppins text-[15px] font-semibold text-white shadow-md shadow-action/25 transition-colors hover:bg-action-deep ${className ?? ""}`}
     >
       {label}

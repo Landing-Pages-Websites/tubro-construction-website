@@ -13,7 +13,7 @@ export function BathroomEstimate({ section, images, band, links, path, isFirst }
   const Heading = isFirst ? "h1" : "h2";
   const headingId = `${section.id}-heading`;
   return (
-    <SectionShell section={section} band={band} bleed labelledBy={headingId} className={styles.section}>
+    <SectionShell megaSection="estimate-form" section={section} band={band} bleed labelledBy={headingId} className={styles.section}>
       <div className={styles.layout}>
         <div className={styles.story}>
           <Heading id={headingId} className={styles.heading}>Request a bathroom remodeling <span>estimate.</span></Heading>

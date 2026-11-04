@@ -74,7 +74,7 @@ export function GeneralContractorHero({ section, images, band, links, ctaTarget 
   const headingId = `${section.id}-heading`;
   const [photo] = images;
   return (
-    <SectionShell section={section} band={band} bleed labelledBy={headingId}>
+    <SectionShell megaSection="hero" section={section} band={band} bleed labelledBy={headingId}>
       <DraftingBackground />
       <div className="relative mx-auto max-w-7xl px-5 pb-10 pt-10 sm:px-8 sm:pb-14 sm:pt-14 lg:py-20">
         <div className="grid items-center gap-9 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">

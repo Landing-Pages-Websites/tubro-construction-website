@@ -1,44 +1,53 @@
 "use client";
 
-import { useEffect } from "react";
-import { usePathname } from "next/navigation";
-import { afterCriticalPaint } from "@/lib/analytics-idle";
-import type {} from "@/lib/lead-client";
-let lastLocation = "";
-let initialized = false;
+import Script from "next/script";
+import { useEffect, type ReactElement } from "react";
+import { useConsent } from "@/components/consent/useConsent";
+import { analyticsAllowedNow, gaConsentLevelNow } from "@/lib/consent";
+import { TRACKING_ENABLED } from "@/lib/tracking/enabled";
+import { applyGaConsent, configureGaOnce, ensureGaConsentDefault, ga4LoadId } from "@/lib/tracking/ga";
+import { GA_HIT_DROPPED_EVENT, setGaDropReporter } from "@/lib/tracking/ga-transport";
+import { enqueueOrCapture } from "@/lib/tracking/queue";
 
-function initialize(id: string): void {
-  if (initialized) return;
-  window.dataLayer ??= [];
-  // Google's official forwarding contract requires an Arguments object.
-  window.gtag = function (): void { window.dataLayer?.push(arguments); };
-  window.gtag("js", new Date());
-  window.gtag("config", id, { send_page_view: false });
-  initialized = true;
-}
+const GA4_ID = ga4LoadId();
 
-function loadTag(id: string): void {
-  if (document.querySelector('script[data-tubro-ga4]')) return;
-  const script = document.createElement("script");
-  script.async = true; script.dataset.tubroGa4 = id;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
-  // A failed transfer must not prevent a later navigation from retrying the tag.
-  script.onerror = () => script.remove();
-  document.head.appendChild(script);
-}
+// A GA4 hit the scrubber could not read is not sent; PostHog hears about it once per page (reason only, consent-gated).
+setGaDropReporter((reason) => {
+  if (TRACKING_ENABLED && analyticsAllowedNow()) enqueueOrCapture(GA_HIT_DROPPED_EVENT, { reason });
+});
 
-export function GoogleAnalytics(): null {
-  const pathname = usePathname();
+/**
+ * GA4 gtag loader. Renders nothing until NEXT_PUBLIC_GA4_ID is set (by the
+ * provisioning bot), tracking is enabled for this build (ga4LoadId), AND consent
+ * allows analytics. The consent default is
+ * queued before the Script renders. gtag.js is configured in
+ * onReady, once per page, only if consent still allows it then: a decline that
+ * lands while gtag.js is loading never configures GA.
+ */
+export function GoogleAnalytics(): ReactElement | null {
+  const { analyticsAllowed } = useConsent();
+
+  // Unmounting the Script does not stop a gtag.js that already loaded, so the
+  // property is disabled whenever the consent store does not allow it now.
+  // analyticsAllowed is also false during hydration, so it is not used here.
   useEffect(() => {
-    const id = process.env.NEXT_PUBLIC_GA4_ID;
-    if (!id || new URLSearchParams(window.location.search).get("embed") === "realwork") return;
-    initialize(id);
-    const location = window.location.href;
-    if (location !== lastLocation) {
-      lastLocation = location;
-      window.gtag?.("event", "page_view", { send_to: id, page_location: location, page_title: document.title });
-    }
-    return afterCriticalPaint(() => loadTag(id));
-  }, [pathname]);
-  return null;
+    if (GA4_ID && !analyticsAllowedNow()) applyGaConsent(window, GA4_ID, "none");
+  }, [analyticsAllowed]);
+
+  if (!GA4_ID || !analyticsAllowed) {
+    return null;
+  }
+
+  // In the app router <Script> preloads gtag.js while it renders, so the
+  // consent default goes into the dataLayer here, before the Script below can
+  // render, ahead of anything another script queued. Idempotent per page.
+  if (typeof window !== "undefined") ensureGaConsentDefault(window, GA4_ID, gaConsentLevelNow);
+
+  return (
+    <Script
+      src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
+      strategy="afterInteractive"
+      onReady={() => configureGaOnce(window, GA4_ID, gaConsentLevelNow)}
+    />
+  );
 }

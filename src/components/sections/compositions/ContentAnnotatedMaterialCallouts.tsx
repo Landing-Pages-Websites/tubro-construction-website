@@ -35,7 +35,7 @@ export function ContentAnnotatedMaterialCallouts({
   const supporting = items.length > 0 ? bullets : [];
   const [photo] = images;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="content" section={section} band={band} labelledBy={headingId}>
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <CropCorners corners={["br"]} />
         <div className="grid gap-x-14 gap-y-8 lg:grid-cols-[10fr_9fr]">

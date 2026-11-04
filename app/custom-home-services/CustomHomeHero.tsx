@@ -10,7 +10,7 @@ import styles from "./custom-home.module.css";
 export function CustomHomeHero({ section, images }: { section: ManifestSection; images: SectionImage[] }): ReactElement {
   return (
     <>
-      <section id="hero" className={styles.hero} aria-labelledby="custom-home-heading">
+      <section data-mega-section="hero" id="hero" className={styles.hero} aria-labelledby="custom-home-heading">
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>{section.content.eyebrow}</p>
           <h1 id="custom-home-heading">A Custom Home<br /><span>Shaped <br />Around You.</span></h1>

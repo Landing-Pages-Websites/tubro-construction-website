@@ -23,7 +23,7 @@ export function PolicyEditorialDocument({
   const headingId = `${section.id}-heading`;
   const headings = section.content.bullets.length > 0 ? section.content.bullets : section.content.items;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="policy" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-x-16 gap-y-12 lg:grid-cols-[4fr_5fr]">
           <div>

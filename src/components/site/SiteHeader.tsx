@@ -81,6 +81,7 @@ export function SiteHeader(): ReactElement {
           </a>
           <Link prefetch={false}
             href="/schedule-an-estimate"
+            data-mega-cta="header-estimate"
             className="header-estimate-button inline-flex min-h-11 items-center whitespace-nowrap rounded-md bg-action px-3.5 font-poppins text-sm font-semibold text-white transition-colors hover:bg-action-deep sm:px-4"
           >
             <span className="hidden sm:inline">Book Your Free Estimate</span><span className="sm:hidden">Free Estimate</span>
@@ -126,6 +127,7 @@ export function SiteHeader(): ReactElement {
               <div className="mt-3 flex flex-col gap-3 border-t border-ink/10 pt-4">
                 <Link prefetch={false}
                   href="/schedule-an-estimate"
+                  data-mega-cta="mobile-menu-estimate"
                   className="inline-flex min-h-12 items-center justify-center rounded-md bg-action px-5 font-poppins text-[15px] font-semibold text-white hover:bg-action-deep"
                 >
                   Book Your Free Estimate
