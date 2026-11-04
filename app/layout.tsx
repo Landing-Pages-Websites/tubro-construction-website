@@ -4,8 +4,7 @@ import { Fjalla_One, Poppins } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 import { MobileEstimateCta } from "@/components/shared/MobileEstimateCta";
-import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
-import { PostHogProvider } from "@/components/analytics/PostHogProvider";
+import { SiteTracking } from "@/components/analytics/SiteTracking";
 import { siteMetadata, businessSchema } from "@/lib/seo";
 import { RecaptchaBootstrap } from "@/components/analytics/RecaptchaBootstrap";
 import { megaPreviewNavScript } from "@/mega-preview/preview_nav.mjs";
@@ -62,8 +61,10 @@ export default function RootLayout({
       <body>
         <nav aria-label="Skip navigation"><a className="skip-link" href="#main-content">Skip to main content</a></nav>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} />
-        <GoogleAnalytics /><RecaptchaBootstrap />
-        <PostHogProvider>{children}<Suspense fallback={null}><MobileEstimateCta /></Suspense></PostHogProvider>
+        <RecaptchaBootstrap />
+        {children}
+        <Suspense fallback={null}><MobileEstimateCta /></Suspense>
+        <Suspense fallback={null}><SiteTracking /></Suspense>
       </body>
     </html>
   );

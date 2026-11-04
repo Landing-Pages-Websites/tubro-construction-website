@@ -15,9 +15,9 @@ import s from "./estimate.module.css";
 export default function EstimateRequestForm(): ReactElement {
   const form = useEstimateForm("/schedule-an-estimate", { formKey: formKeyForSlug("schedule-an-estimate"), requireConsent: true });
   const busy = form.status === "submitting";
-  return <section id="form" className={s.formPanel} aria-labelledby="request-heading">
+  return <section data-mega-section="form" id="form" className={s.formPanel} aria-labelledby="request-heading">
     <header className={s.formHeading}><h2 id="request-heading">Tell us what you’re planning.</h2><p>A few details are all we need to start the conversation.</p></header>
-    <form action="/api/lead" method="post" ref={form.formRef} onSubmit={form.handleSubmit}  aria-label="Request a free estimate" aria-busy={busy}>
+    <form action="/api/lead" method="post" ref={form.formRef} onSubmit={form.handleSubmit} aria-label="Request a free estimate" aria-busy={busy} data-mega-form={form.formKey}>
       <input type="hidden" name="form_key" value={form.formKey} />
       <LeadHoneypot />
       <fieldset className={s.formContents} disabled={busy || form.status === "success"}>
@@ -31,7 +31,7 @@ export default function EstimateRequestForm(): ReactElement {
         </fieldset>
         <label className={s.consent}><input type="checkbox" name="consent" required aria-invalid={Boolean(form.errors.consent)} aria-describedby={form.errors.consent ? "estimate-consent-error" : undefined} /><span>Tubro Construction may contact me about this request by phone or email.</span></label>
         {form.errors.consent && <p id="estimate-consent-error" className={s.error}>{form.errors.consent}</p>}
-        <button type="button" className={s.submit} onClick={form.validateAndSubmit} disabled={busy || form.status === "success"}>{busy ? <>Sending your request <Loader2 className={s.spinner} size={19} /></> : <>Request my free estimate <ArrowUpRight size={21} /></>}</button>
+        <button type="button" className={s.submit} onClick={form.validateAndSubmit} data-mega-cta="schedule-estimate-submit" disabled={busy || form.status === "success"}>{busy ? <>Sending your request <Loader2 className={s.spinner} size={19} /></> : <>Request my free estimate <ArrowUpRight size={21} /></>}</button>
       </fieldset>
       <EstimateStatusNote errorNote={form.errorMessage} status={form.status} idleNote="Your request goes to our office team. We’ll follow up during business hours." />
       <p className={s.privacy}>Learn how we handle your information. <Link href="/privacy">Privacy policy</Link></p>

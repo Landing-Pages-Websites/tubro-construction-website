@@ -14,7 +14,7 @@ export default function ProjectGallery({ category, onCategory, onOpen }: Props):
     onCategory(next);
   }
   const visible = projects.filter((project) => category === "All work" || project.category === category);
-  return <section id="project-gallery" className={s.gallery}>
+  return <section data-mega-section="project-gallery" id="project-gallery" className={s.gallery}>
     <div className={s.sectionHeading}>
       <div><h2 data-text-enter="heading">Spaces with a story.</h2><p data-text-enter="body" data-text-delay="100">Find your inspiration in our recent work. Select a photograph to take a closer look.</p></div>
       <span className={s.galleryCount} aria-live="polite">{visible.length} photographs</span>

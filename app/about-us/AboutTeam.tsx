@@ -15,7 +15,7 @@ const TEAM = [
 
 export function AboutTeam(): ReactElement {
   return (
-    <section id="team" aria-labelledby="team-heading" className={styles.team}>
+    <section data-mega-section="team" id="team" aria-labelledby="team-heading" className={styles.team}>
       <div className={styles.container}>
         <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>Meet the team</p><h2 id="team-heading">Real people.<br />Shared responsibility.</h2></div><p>Get to know the names behind the estimates, project planning, and work on your home.</p></div>
         <div className={styles.teamProfiles}>{TEAM.map((person) => <article key={person.name} className={styles.teamProfile}>

@@ -11,7 +11,7 @@ const work = [
 ];
 
 export default function EstimateWork(): ReactElement {
-  return <section id="recent-work" className={s.work}>
+  return <section data-mega-section="recent-work" id="recent-work" className={s.work}>
     <div className={s.workHeading}><div><h2 data-estimate-enter="heading">Big ideas.<br />Real homes.</h2><p data-estimate-enter="body" data-estimate-delay="100">A few possibilities, from work we’ve already brought to life.</p></div><Link data-estimate-enter="body" data-estimate-delay="160" href="/recent-projects">Explore recent projects <ArrowUpRight size={19} /></Link></div>
     <div className={s.workGrid}>{work.map((item) => <Link href="/recent-projects" key={item.src} className={s.workCard}><div className={s.workImage}><Image src={item.src} alt={item.alt} fill sizes="(max-width: 700px) 90vw, 40vw" /><ArrowUpRight size={22} /></div><span>{item.category}</span><h3 data-estimate-enter="heading">{item.label}</h3></Link>)}</div>
   </section>;

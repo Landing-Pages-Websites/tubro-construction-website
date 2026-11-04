@@ -4,7 +4,7 @@ import styles from "./service-areas.module.css";
 
 export function AreaCoverage(): ReactElement {
   return (
-    <section id="county-overview" className={styles.coverage} aria-label="Our service region">
+    <section data-mega-section="county-overview" id="county-overview" className={styles.coverage} aria-label="Our service region">
       <p><MapPin aria-hidden="true" /><span>Rooted in Western Washington</span></p>
       <nav aria-label="Browse service counties">
         <a href="#king-county">King County <ArrowDown aria-hidden="true" /></a>

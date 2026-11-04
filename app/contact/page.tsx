@@ -26,7 +26,7 @@ export default function Page(): ReactElement {
       <SiteHeader />
       <main className={styles.page} id="main-content" tabIndex={-1}>
         <ContactMotion />
-        <section className={styles.desk} aria-labelledby="contact-heading">
+        <section data-mega-section="contact-desk" className={styles.desk} aria-labelledby="contact-heading">
           <div className={styles.topline}>
             <span>Contact Tubro Construction</span>
             <span aria-hidden="true">A good place to begin / 01</span>
@@ -67,7 +67,7 @@ export default function Page(): ReactElement {
           </div>
           <div className={styles.bottomline} aria-hidden="true"><span>Good work begins with a conversation.</span><span>Tubro / Washington</span></div>
         </section>
-        <section className={styles.details} id="03-hours-service-area" aria-label="Office hours and service area">
+        <section data-mega-section="hours-service-area" className={styles.details} id="03-hours-service-area" aria-label="Office hours and service area">
           <div className={styles.detail}>
             <Clock3 aria-hidden="true" />
             <div><h2>Office hours</h2><p>Monday–Friday<br />7:00 a.m.–4:00 p.m.</p></div>
@@ -86,7 +86,7 @@ export default function Page(): ReactElement {
             <span className={styles.label}>Contact Tubro Construction</span>
             <h2>Route visitors to the next useful page.</h2>
             <p className={styles.description}>Service links help visitors choose estimate, services, service areas, or recent projects.</p>
-            <Link className={styles.nextEstimate} href="/schedule-an-estimate">Book Your Free Estimate <ArrowUpRight aria-hidden="true" /></Link>
+            <Link data-mega-cta="contact-next-estimate" className={styles.nextEstimate} href="/schedule-an-estimate">Book Your Free Estimate <ArrowUpRight aria-hidden="true" /></Link>
           </div>
           <div className={styles.nextLinks}>
             <span className={styles.indexLabel}>Section index</span>

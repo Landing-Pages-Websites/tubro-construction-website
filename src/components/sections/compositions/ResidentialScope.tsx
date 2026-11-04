@@ -10,7 +10,7 @@ const SCOPE_ICONS = [House, Trees, Hammer, Ruler, Images];
 export function ResidentialScope({ section, band, links }: SectionProps): ReactElement {
   const headingId = `${section.id}-heading`;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="residential-scope" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid items-end gap-6 lg:grid-cols-[3fr_2fr] lg:gap-20">
           <h2 id={headingId} className="max-w-[19ch] text-balance font-poppins text-3xl leading-[1.12] font-bold tracking-tight text-ink sm:text-4xl lg:text-5xl">

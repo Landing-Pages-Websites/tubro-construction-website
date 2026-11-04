@@ -9,13 +9,15 @@
     "typecheck": "tsc --noEmit",
     "artifacts": "node scripts/generate-build-artifacts.mjs",
     "verify": "node scripts/verify-build.mjs",
+    "test": "node --test --experimental-strip-types tests/*.test.mjs src/mega-preview/*.test.mjs scripts/preview-wiring.test.mjs && npm run test:tracking",
+    "test:tracking": "tsx --test \"src/**/*.test.ts\"",
     "test:mega-preview": "node --test --experimental-strip-types src/mega-preview/*.test.mjs scripts/preview-wiring.test.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.544.0",
     "marked": "^18.0.14",
     "next": "15.5.25",
-    "posthog-js": "^1.435.8",
+    "posthog-js": "^1.396.6",
     "react": "19.1.1",
     "react-dom": "19.1.1",
     "sanitize-html": "^2.18.0"
@@ -27,6 +29,7 @@
     "@types/react-dom": "^19",
     "@types/sanitize-html": "^2.16.2",
     "tailwindcss": "^4.1.12",
+    "tsx": "^4.23.11",
     "typescript": "^5.9.2"
   }
 }

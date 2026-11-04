@@ -10,7 +10,7 @@ import styles from "./PaintingProcess.module.css";
 export function PaintingProcess({ section, band, links, ctaTarget }: SectionProps): ReactElement {
   const headingId = `${section.id}-heading`;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="process" section={section} band={band} labelledBy={headingId}>
       <div className={`mx-auto max-w-7xl px-5 sm:px-8 ${styles.process}`}>
         <div className={styles.intro}>
           <h2 id={headingId} className={styles.heading}>{section.content.headline}</h2>

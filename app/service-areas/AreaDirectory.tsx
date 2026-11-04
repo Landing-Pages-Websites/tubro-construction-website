@@ -13,7 +13,7 @@ const pierceCities = CITY_ROUTES.filter(({ citySlug }) => PIERCE_CITIES.has(city
 
 export function AreaDirectory(): ReactElement {
   return (
-    <section id="city-directory" className={`${styles.section} ${styles.directory}`} aria-labelledby="directory-heading">
+    <section data-mega-section="city-directory" id="city-directory" className={`${styles.section} ${styles.directory}`} aria-labelledby="directory-heading">
       <div className={styles.sectionHeading}>
         <div><p className={styles.eyebrow}>Our communities</p><h2 id="directory-heading">Good work starts<br />in your neighborhood.</h2></div>
         <p>Each city below has its own remodeling page, with kitchen, bathroom, addition, painting, and general contracting work. Pick your community to see local services and request a free estimate.</p>

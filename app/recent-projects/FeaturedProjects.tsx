@@ -12,7 +12,7 @@ export default function FeaturedProjects({ onOpen }: { onOpen: (project: Project
   function step(delta: number): void { setDirection(delta); setIndex((current) => (current + delta + featured.length) % featured.length); }
   function select(next: number): void { setDirection(next < index ? -1 : 1); setIndex(next); }
   const project = featured[index];
-  return <section id="hero" className={s.hero} aria-label="Featured projects">
+  return <section data-mega-section="hero" id="hero" className={s.hero} aria-label="Featured projects">
     <div className={s.heroHeading}><h1><span data-text-hero="first">Good work.</span><br /><span data-text-hero="second">Real homes.</span></h1><div><p data-text-hero="copy">Explore Tubro Construction’s residential projects, then learn how our team approaches commercial remodeling and interior fit-outs in Western Washington.</p><a data-text-hero="link" href="#project-gallery">Explore our recent projects <ArrowDown size={17} /></a></div></div>
     <div className={s.feature} role="region" aria-roledescription="carousel" aria-label="Featured project photographs">
       <AnimatedProjectPhoto project={project} mode="hero" direction={direction} priority sizes="(max-width: 700px) 100vw, 92vw" />

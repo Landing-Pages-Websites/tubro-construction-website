@@ -12,7 +12,7 @@ export function PaintingGallery({ section, images, links, ctaTarget, isFirst }: 
   const Heading = isFirst ? "h1" : "h2";
 
   return (
-    <SectionShell section={section} band="white" labelledBy={headingId} className={styles.section}>
+    <SectionShell megaSection="gallery" section={section} band="white" labelledBy={headingId} className={styles.section}>
       <div className={styles.drafting} aria-hidden="true">
         <svg data-painting-drawing className={styles.measure} width="72" height="1600" viewBox="0 0 72 1600" fill="none" focusable="false">
           <path d="M36 0V1600" />

@@ -7,7 +7,7 @@ import styles from "./articles.module.css";
 
 export function BlogGrid(): ReactElement {
   return (
-    <section id="articles" className={styles.gridSection} aria-labelledby="articles-heading">
+    <section data-mega-section="articles" id="articles" className={styles.gridSection} aria-labelledby="articles-heading">
       <div className={styles.gridHeading}><div><p className={styles.label}>The remodeling journal</p><h2 id="articles-heading">A clearer plan starts here.</h2></div><p>Practical guides for homeowners in King and Pierce Counties, from the first ideas to the right questions.</p></div>
       <div className={styles.grid}>{blogPosts.map((post) => (
         <article key={post.slug} className={styles.card}>

@@ -66,7 +66,7 @@ export function FormOverlayOnPhotoMaterialField({
     return <BathroomEstimate section={section} images={images} band={band} links={links} slug={slug} path={path} isFirst={isFirst} ctaTarget="" />;
   }
   return (
-    <SectionShell section={section} band={band} bleed labelledBy={headingId}>
+    <SectionShell megaSection="estimate-form" section={section} band={band} bleed labelledBy={headingId}>
       <div className="relative">
         {/* The approved bathroom frame runs this dark canvas desaturated. */}
         <PhotoCanvas images={images} muted={slug === "bathroom-remodeling"} />

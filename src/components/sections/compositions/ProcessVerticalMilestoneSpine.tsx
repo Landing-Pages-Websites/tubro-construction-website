@@ -82,7 +82,7 @@ export function ProcessVerticalMilestoneSpine({
   const introBullets = bulletsAreSteps || faqRows.length > 0 ? [] : section.content.bullets;
   const [photo] = images;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="process" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-x-16 gap-y-12 lg:grid-cols-[2fr_3fr]">
           <div>

@@ -4,7 +4,7 @@ import styles from "./city.module.css";
 
 export function CityTrust(): ReactElement {
   return (
-    <section
+    <section data-mega-section="trust-bar"
       id="trust-bar"
       className={styles.trust}
       aria-label="Why homeowners choose Tubro"

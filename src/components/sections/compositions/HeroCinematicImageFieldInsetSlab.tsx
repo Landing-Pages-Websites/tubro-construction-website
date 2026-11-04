@@ -26,7 +26,7 @@ export function HeroCinematicImageFieldInsetSlab({
   const headingId = `${section.id}-heading`;
   const [photo] = images;
   return (
-    <SectionShell section={section} band={band} bleed labelledBy={headingId}>
+    <SectionShell megaSection="hero" section={section} band={band} bleed labelledBy={headingId}>
       <div className="relative overflow-hidden">
         {photo && (
           <div className="absolute inset-0">

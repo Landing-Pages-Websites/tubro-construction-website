@@ -30,7 +30,7 @@ export function HeroContactLedger({
   const headingId = `${section.id}-heading`;
   const facts = section.content.items.length > 0 ? section.content.items : section.content.bullets;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="hero" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         {/* Ledger-rule motif: opening rule with a short closing dash. */}
         <div aria-hidden="true" className="flex items-center justify-between gap-6">

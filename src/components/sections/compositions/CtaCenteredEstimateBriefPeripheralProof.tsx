@@ -33,7 +33,7 @@ export function CtaCenteredEstimateBriefPeripheralProof({
   // Cover crops need enough source pixels for the full height, not just slot width.
   const proofSizes = portraitProof ? "720px" : "176px";
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="estimate-cta" section={section} band={band} labelledBy={headingId}>
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         {first && (
           <div className={`absolute left-8 top-0 hidden xl:block ${portraitProof ? "bottom-0 w-60" : "w-44"}`}>

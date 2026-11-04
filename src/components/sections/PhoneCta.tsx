@@ -15,6 +15,7 @@ export function PhoneCta({ label, tone = "ink", className }: PhoneCtaProps): Rea
   return (
     <a
       href={BRAND.phoneHref}
+      data-mega-cta="call-now"
       className={`inline-flex min-h-11 items-center gap-2 font-poppins text-base font-semibold ${color} ${className ?? ""}`}
     >
       <Phone className="size-4.5" aria-hidden="true" />

@@ -24,7 +24,7 @@ export function HeroArchitecturalSteppedSplit({
   const headingId = `${section.id}-heading`;
   const [primary, secondary] = images;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="hero" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto grid max-w-7xl items-center gap-x-14 gap-y-10 px-5 sm:px-8 lg:grid-cols-[11fr_9fr]">
         <div>
           <div className="border-l-2 border-action pl-5 sm:pl-7">

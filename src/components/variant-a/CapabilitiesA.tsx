@@ -58,7 +58,7 @@ function MeasureTape(): ReactElement {
 
 export function CapabilitiesA(): ReactElement {
   return (
-    <section id="services" aria-labelledby="capabilities-a-heading" className="a-capabilities relative bg-white">
+    <section data-mega-section="services" id="services" aria-labelledby="capabilities-a-heading" className="a-capabilities relative bg-white">
       <svg className="a-capability-route" viewBox="0 0 1536 864" preserveAspectRatio="none" aria-hidden="true">
         <path d="M1212 40H1536M1504 40V286M1416 505V864" />
         <rect x="1202" y="30" width="20" height="20" />

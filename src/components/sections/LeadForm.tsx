@@ -54,7 +54,7 @@ export function LeadForm({
   const busy = form.status === "submitting";
 
   return (
-    <form action="/api/lead" method="post" ref={form.formRef} onSubmit={form.handleSubmit}  aria-label={submitLabel}>
+    <form action="/api/lead" method="post" ref={form.formRef} onSubmit={form.handleSubmit} aria-label={submitLabel} data-mega-form={form.formKey}>
       <input type="hidden" name="form_key" value={form.formKey} />
       <LeadHoneypot />
       {options.length > 0 && (
@@ -188,6 +188,7 @@ export function LeadForm({
       <button
         type="button"
         onClick={form.validateAndSubmit}
+        data-mega-cta="lead-form-submit"
         disabled={busy || form.status === "success"}
         className="group mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2.5 rounded-md bg-action px-6 py-3 font-poppins text-[15px] font-semibold text-white shadow-md shadow-action/25 transition-colors hover:bg-action-deep disabled:cursor-wait disabled:opacity-75 sm:w-auto"
       >

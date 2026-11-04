@@ -30,6 +30,7 @@ export default function NotFound(): ReactElement {
             </Link>
             <Link
               href="/schedule-an-estimate"
+              data-mega-cta="not-found-estimate"
               className="inline-flex min-h-11 items-center font-poppins text-base font-semibold text-action-deep underline-offset-4 hover:underline"
             >
               Book Your Free Estimate

@@ -26,7 +26,7 @@ export function ContentImageAsCanvasEditorialQuietArea({
   const headingId = `${section.id}-heading`;
   const [canvas] = images;
   return (
-    <SectionShell section={section} band={band} bleed labelledBy={headingId}>
+    <SectionShell megaSection="content" section={section} band={band} bleed labelledBy={headingId}>
       <div className="relative lg:min-h-[620px]">
         {canvas && (
           <div className="absolute inset-0">

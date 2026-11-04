@@ -37,7 +37,7 @@ export function CityQuestions({
     },
   ];
   return (
-    <section
+    <section data-mega-section="faq"
       id="faq"
       className={`${styles.section} ${styles.questions}`}
       aria-labelledby="faq-heading"
@@ -45,7 +45,7 @@ export function CityQuestions({
       <div className={styles.planning}>
         <h2>{profile.planningTitle}</h2>
         <p>{profile.planningBody}</p>
-        <a href="#form" className={styles.textLink}>
+        <a data-mega-cta="city-faq-form" href="#form" className={styles.textLink}>
           Let’s talk about your home
           <ArrowUpRight aria-hidden="true" />
         </a>

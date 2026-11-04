@@ -11,7 +11,7 @@ export function CityProjects({
 }): ReactElement {
   const photos = profile.photos.slice(2).map((key) => CITY_PHOTOS[key]);
   return (
-    <section
+    <section data-mega-section="projects"
       id="projects"
       className={`${styles.section} ${styles.projects}`}
       aria-labelledby="projects-heading"

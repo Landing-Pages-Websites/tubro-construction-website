@@ -33,7 +33,7 @@ export function HeroDiagonalCroppedServiceArea({
   const headingId = `${section.id}-heading`;
   const [photo] = images;
   return (
-    <SectionShell section={section} band={band} bleed labelledBy={headingId}>
+    <SectionShell megaSection="hero" section={section} band={band} bleed labelledBy={headingId}>
       <div aria-hidden="true" className="px-5 pt-6 sm:px-8">
         <span className="block h-0.5 bg-action" />
         <div className="flex justify-between px-[8%]">

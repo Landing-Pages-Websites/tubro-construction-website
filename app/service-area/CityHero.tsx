@@ -15,7 +15,7 @@ export function CityHero({
 }): ReactElement {
   const photo = CITY_PHOTOS[profile.photos[0]];
   return (
-    <section id="hero" className={styles.hero} aria-labelledby="city-heading">
+    <section data-mega-section="hero" id="hero" className={styles.hero} aria-labelledby="city-heading">
       <div className={`${styles.heroCopy} ${motion.copy}`}>
         <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
           <a href="/service-areas">Service areas</a>
@@ -32,7 +32,7 @@ export function CityHero({
           )}
         </h1>
         <p className={styles.heroBody}>{profile.intro}</p>
-        <a href="#form" className={styles.button}>
+        <a data-mega-cta="city-hero-form" href="#form" className={styles.button}>
           {profile.heroCtaLabel ?? "Book Your Free Estimate"}
           <ArrowUpRight aria-hidden="true" />
         </a>

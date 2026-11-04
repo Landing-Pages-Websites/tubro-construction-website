@@ -23,7 +23,7 @@ export default function DetailRail({ onOpen }: { onOpen: (project: Project) => v
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     rail.current?.scrollBy({ left: direction * rail.current.clientWidth * 0.8, behavior: reduced ? "instant" : "smooth" });
   }
-  return <section id="closer-look" className={s.details}>
+  return <section data-mega-section="closer-look" id="closer-look" className={s.details}>
     <div className={s.sectionHeading}>
       <div><h2 data-text-enter="heading">It’s all in the details.</h2><p data-text-enter="body" data-text-delay="100">The materials, the finish, the way it all comes together.</p></div>
       <div className={s.carouselControls}>

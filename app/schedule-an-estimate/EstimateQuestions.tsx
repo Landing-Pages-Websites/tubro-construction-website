@@ -11,5 +11,5 @@ const questions = [
 ];
 
 export default function EstimateQuestions(): ReactElement {
-  return <section id="questions" className={s.questions}><div><h2 data-estimate-enter="heading">A few things<br />you might be wondering.</h2><p data-estimate-enter="body" data-estimate-delay="100">Have something else in mind?<br /><Link href="/contact">Talk with our team.</Link></p></div><div className={s.questionList}>{questions.map(([question, answer]) => <details key={question}><summary>{question}<Plus size={20} aria-hidden="true" /></summary><p>{answer}</p></details>)}</div></section>;
+  return <section data-mega-section="questions" id="questions" className={s.questions}><div><h2 data-estimate-enter="heading">A few things<br />you might be wondering.</h2><p data-estimate-enter="body" data-estimate-delay="100">Have something else in mind?<br /><Link href="/contact">Talk with our team.</Link></p></div><div className={s.questionList}>{questions.map(([question, answer]) => <details key={question}><summary>{question}<Plus size={20} aria-hidden="true" /></summary><p>{answer}</p></details>)}</div></section>;
 }

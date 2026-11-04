@@ -70,10 +70,10 @@ function structuredBody(post: StructuredPost): { bodyHtml: string; sections: Blo
   const html = post.sections.map((section, index) => {
     const paragraphs = (section.paragraphs ?? []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
     const bullets = section.bullets?.length ? `<ul>${section.bullets.map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join("")}</ul>` : "";
-    return `<section><h2 id="${sections[index].id}">${escapeHtml(section.heading)}</h2>${paragraphs}${bullets}</section>`;
+    return `<section data-mega-section="article-section"><h2 id="${sections[index].id}">${escapeHtml(section.heading)}</h2>${paragraphs}${bullets}</section>`;
   }).join("");
-  const sources = post.sources.length ? `<section><h2 id="sources">Sources &amp; further reading</h2><p>Consult the relevant authority for requirements specific to your property and project.</p><ul>${post.sources.map((source) => `<li><a href="${escapeHtml(source.url)}">${escapeHtml(source.title)}</a></li>`).join("")}</ul></section>` : "";
-  const faq = post.faq?.length ? `<section><h2 id="faq">Frequently asked questions</h2>${post.faq.map((item) => `<h3>${escapeHtml(item.question)}</h3><p>${escapeHtml(item.answer)}</p>`).join("")}</section>` : "";
+  const sources = post.sources.length ? `<section data-mega-section="article-sources"><h2 id="sources">Sources &amp; further reading</h2><p>Consult the relevant authority for requirements specific to your property and project.</p><ul>${post.sources.map((source) => `<li><a href="${escapeHtml(source.url)}">${escapeHtml(source.title)}</a></li>`).join("")}</ul></section>` : "";
+  const faq = post.faq?.length ? `<section data-mega-section="article-faq"><h2 id="faq">Frequently asked questions</h2>${post.faq.map((item) => `<h3>${escapeHtml(item.question)}</h3><p>${escapeHtml(item.answer)}</p>`).join("")}</section>` : "";
   return { bodyHtml: `${html}${sources}${faq}`, sections };
 }
 

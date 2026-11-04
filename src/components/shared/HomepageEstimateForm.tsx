@@ -25,7 +25,7 @@ export function HomepageEstimateForm({ form, idPrefix = "a", submitLabel = ESTIM
     <form action="/api/lead" method="post"
       ref={form.formRef}
       onSubmit={form.handleSubmit}
-
+      data-mega-form={form.formKey}
       className={`${styles.form} rounded-xl bg-white p-6 shadow-lg shadow-ink/10 sm:p-9`}
     >
       <input type="hidden" name="form_key" value={form.formKey} />
@@ -104,6 +104,7 @@ export function HomepageEstimateForm({ form, idPrefix = "a", submitLabel = ESTIM
       <button
         type="button"
         onClick={form.validateAndSubmit}
+        data-mega-cta="estimate-form-submit"
         disabled={form.status === "submitting" || form.status === "success"}
         className="group mt-7 inline-flex min-h-13 w-full items-center justify-center gap-2.5 rounded-md bg-action px-6 py-3.5 font-poppins text-base font-semibold text-white transition-colors hover:bg-action-deep disabled:cursor-not-allowed disabled:opacity-60"
       >

@@ -22,7 +22,7 @@ export function FaqOversizedQuestionIndexLedger({
   const headingId = `${section.id}-heading`;
   const rows = section.content.bullets.map(splitQuestion);
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="faq" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div aria-hidden="true" className="mb-10 h-0.5 w-full bg-action sm:mb-14" />
         <div className="grid gap-x-16 gap-y-10 lg:grid-cols-[2fr_3fr]">

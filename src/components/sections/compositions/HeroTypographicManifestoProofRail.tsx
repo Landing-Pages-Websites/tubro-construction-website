@@ -25,7 +25,7 @@ export function HeroTypographicManifestoProofRail({
 }: SectionProps): ReactElement {
   const headingId = `${section.id}-heading`;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="hero" section={section} band={band} labelledBy={headingId}>
       {/* Sage strip behind the proof rail, running the full section height. */}
       <span aria-hidden="true" className="absolute inset-y-0 right-0 hidden w-20 bg-sage lg:block xl:w-28" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">

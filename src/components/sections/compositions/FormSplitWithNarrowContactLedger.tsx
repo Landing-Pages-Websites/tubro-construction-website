@@ -88,7 +88,7 @@ export function FormSplitWithNarrowContactLedger({
     const Heading = isFirst ? "h1" : "h2";
     const contactIcons = [Phone, Clock3, Mail];
     return (
-      <SectionShell section={section} band={band} labelledBy={headingId}>
+      <SectionShell megaSection="estimate-form" section={section} band={band} labelledBy={headingId}>
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className={styles.layout}>
             <div className={styles.intro}>
@@ -127,7 +127,7 @@ export function FormSplitWithNarrowContactLedger({
     );
   }
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="estimate-form" section={section} band={band} labelledBy={headingId}>
       <RuledField />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         {/* Sage gutter strip spans the full sheet height, into the shell padding. */}

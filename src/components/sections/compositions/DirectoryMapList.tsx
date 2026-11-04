@@ -69,7 +69,7 @@ export function DirectoryMapList({
   const introBullets = section.content.items.length > 0 ? section.content.bullets : [];
   const columns = items.length > 12 ? 3 : 2;
   return (
-    <SectionShell section={section} band={band} labelledBy={headingId}>
+    <SectionShell megaSection="service-area-directory" section={section} band={band} labelledBy={headingId}>
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         {/* Top datum rule with survey ticks — the map edge of the directory. */}
         <div aria-hidden="true" className="relative mb-10 sm:mb-14">
