@@ -76,3 +76,14 @@
 .bookingTop p { margin: 0; font-weight: 600; }
 .bookingTop a { display: inline-flex; align-items: center; background: var(--color-action-deep); color: white; padding: 12px 20px; font-size: 15px; font-weight: 600; }
 .bookingTop a:hover { background: var(--color-ink); }
+
+/* Keep the article CTA label readable after the body-link rules above. */
+.nextStep a { color: white; }
+
+@media (max-width: 599px) {
+  /* Let comparison tables remain readable on narrow screens instead of squeezing three columns together. */
+  .body table { display: block; width: 100%; min-width: 0; overflow-x: auto; table-layout: auto; }
+  .body table thead,
+  .body table tbody { display: table; width: max-content; min-width: 720px; table-layout: auto; }
+  .body table :is(td, th) { min-width: 220px; vertical-align: top; }
+}
