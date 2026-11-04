@@ -53,7 +53,14 @@ export function CityServices({
           <em>Your kind of home.</em>
         </h2>
         <p>
-          {profile.servicesIntroVariant === "contractor" ? (
+          {profile.servicesIntroVariant === "kitchen" ? (
+            <>
+              Explore kitchen remodeling in Renton with Tubro Construction, including layout planning, cabinetry, countertops, and finishes. Compare our{" "}
+              <a href="/kitchen-remodeling">Kitchen remodeling</a> service with{" "}
+              <a href="/bathroom-remodeling">Bathroom remodeling</a>, and learn about{" "}
+              <a href="/general-contractor">General contracting</a> when your project needs broader coordination. When you submit an estimate request, we’ll review your Renton property and project details to confirm fit.
+            </>
+          ) : profile.servicesIntroVariant === "contractor" ? (
             <>
               Explore home remodeling services for Auburn properties, including
               kitchens, bathrooms, additions, painting, and custom homes. For

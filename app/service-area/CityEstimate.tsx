@@ -49,7 +49,11 @@ export function CityEstimate({ route }: { route: CityRoute }): ReactElement {
           formKey={formKeyForSlug(route.slug)}
           pagePath={route.path}
           options={[...PROJECT_TYPES]}
-          submitLabel={route.citySlug === "auburn" ? "Send Estimate Request" : "Book Your Free Estimate"}
+          submitLabel={
+            route.citySlug === "auburn" || route.citySlug === "renton"
+              ? "Send Estimate Request"
+              : "Book Your Free Estimate"
+          }
           idPrefix={`city-${route.citySlug}`}
           defaultCity={route.city}
         />

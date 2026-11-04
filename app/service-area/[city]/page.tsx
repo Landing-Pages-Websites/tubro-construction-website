@@ -31,6 +31,8 @@ export async function generateMetadata({
       ? "Home Remodeling Kent | Upfront Pricing | Tubro Construction"
       : route.citySlug === "auburn"
         ? "Home Remodeling Contractors in Auburn, WA | Tubro Construction"
+        : route.citySlug === "renton"
+          ? "Kitchen Remodeling in Renton, WA | Tubro Construction"
         : route.title;
   const description = route.citySlug === "maple-valley"
     ? "Plan your Maple Valley remodel with Tubro Construction. Explore kitchen, bathroom, painting, and custom home services with upfront pricing and free estimates."
@@ -38,6 +40,8 @@ export async function generateMetadata({
       ? "Home remodeling Kent homeowners can plan with Tubro Construction: kitchens, bathrooms, upfront pricing and a personal project manager. Request a free estimate."
       : route.citySlug === "auburn"
         ? "Looking for home remodeling contractors in Auburn, WA? Tubro Construction plans kitchens, bathrooms, additions and more with free estimates."
+        : route.citySlug === "renton"
+          ? "Plan your Renton kitchen remodel with Tubro Construction. Explore thoughtful design, upfront pricing, and request a free estimate for your home."
         : `Plan your home remodel in ${route.city}, Washington with Tubro Construction. Explore local kitchen, bathroom and renovation services and request a free estimate.`;
   return siteMetadata(title, description, route.path);
 }
