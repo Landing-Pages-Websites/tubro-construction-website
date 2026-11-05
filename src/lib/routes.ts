@@ -120,6 +120,7 @@ export const NAV_SERVICES = [
   { href: "/bathroom-remodeling", label: "Bathroom Remodeling" },
   { href: "/interior-exterior-painting", label: "Interior & Exterior Painting" },
   { href: "/custom-home-services", label: "Custom Home Services" },
+  { href: "/handyman", label: "Handyman" },
 ] as const;
 
 export const NAV_COMPANY = [
