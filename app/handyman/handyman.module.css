@@ -14,9 +14,13 @@
 .primary svg { width: 18px; height: 18px; flex-shrink: 0; }
 .primary:hover { background: #085a29; }
 .primary:active { transform: translateY(1px); }
+.holiday { display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 14px 24px; border-radius: 4px; background: var(--color-timber); color: #fffaf4; font-size: 16px; font-weight: 700; letter-spacing: .01em; box-shadow: 0 1px 2px #231f201f, 0 8px 20px -8px #7a552f80; transition: background-color 180ms ease, transform 180ms ease; }
+.holiday svg { width: 18px; height: 18px; flex-shrink: 0; }
+.holiday:hover { background: #8d6238; }
+.holiday:active { transform: translateY(1px); }
 .secondary { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 16px; font-weight: 500; color: var(--color-ink); text-decoration: underline; text-decoration-color: var(--color-timber); text-underline-offset: 5px; overflow-wrap: anywhere; transition: color 180ms ease; }
 .secondary:hover { color: var(--color-action-deep); }
-.primary:focus-visible, .secondary:focus-visible { outline: 3px solid var(--color-action-deep); outline-offset: 4px; }
+.primary:focus-visible, .holiday:focus-visible, .secondary:focus-visible { outline: 3px solid var(--color-action-deep); outline-offset: 4px; }
 .office { display: grid; gap: 24px; border-left: 1px solid #cfc9bd; padding-left: 32px; }
 .office p { font-size: 15px; line-height: 1.6; color: #4f4d47; }
 .office span { display: block; margin-bottom: 4px; font-family: var(--font-fjalla), sans-serif; font-size: 15px; color: var(--color-timber-ink); }
@@ -46,8 +50,8 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .rule { transform-origin: left; animation: measure 900ms cubic-bezier(.16, 1, .3, 1) both; }
-  .primary svg { transition: transform 200ms cubic-bezier(.16, 1, .3, 1); }
-  .primary:is(:hover, :focus-visible) svg { transform: translate(3px, -3px); }
+  .primary svg, .holiday svg { transition: transform 200ms cubic-bezier(.16, 1, .3, 1); }
+  .primary:is(:hover, :focus-visible) svg, .holiday:is(:hover, :focus-visible) svg { transform: translate(3px, -3px); }
   @keyframes measure { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 }
 @media (max-width: 900px) {
@@ -60,7 +64,7 @@
   .hero { padding-block: 56px 48px; }
   .lede { font-size: 16px; margin-top: 24px; }
   .actions { margin-top: 32px; }
-  .primary { width: 100%; justify-content: center; }
+  .primary, .holiday { width: 100%; justify-content: center; }
   .office { grid-template-columns: 1fr; }
   .details { padding-block: 48px; }
   .detailList > div { grid-template-columns: 1fr; }

@@ -13,6 +13,7 @@ import styles from "./handyman.module.css";
 
 const PATH = "/handyman";
 const REQUEST_ANCHOR = "#form";
+const HOLIDAY_ANCHOR = "#holiday-special";
 const REQUEST_OPTIONS = ["Handyman"];
 
 export const metadata: Metadata = siteMetadata(
@@ -45,6 +46,9 @@ export default function Page(): ReactElement {
             <h1 id="handyman-heading">Have a smaller home project in mind?</h1>
             <p className={styles.lede}>Tell us what needs attention and where you are. Our team can discuss the scope and next steps.</p>
             <div className={styles.actions}>
+              <Link data-mega-cta="handyman-holiday-special" className={styles.holiday} href={HOLIDAY_ANCHOR}>
+                Holiday Special <ArrowUpRight aria-hidden="true" />
+              </Link>
               <Link data-mega-cta="handyman-hero-contact" className={styles.primary} href={REQUEST_ANCHOR}>
                 Book a Handyman today! <ArrowUpRight aria-hidden="true" />
               </Link>
