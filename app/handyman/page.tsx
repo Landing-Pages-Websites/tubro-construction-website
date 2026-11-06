@@ -24,6 +24,12 @@ const DETAILS = [
   { title: "Photos, if you have them", body: "Pictures of the area help the team understand the project before following up." },
 ] as const;
 
+const HOLIDAY_SPECIAL = [
+  { title: "Trip fee", body: "Our $250 trip fee is waived." },
+  { title: "First hour", body: "$150 for the first hour, plus materials." },
+  { title: "Projects like", body: "Small repairs, drywall patching, fixture or door installs, and deck or fence repairs." },
+] as const;
+
 export default function Page(): ReactElement {
   return (
     <div className={styles.site}>
@@ -46,6 +52,21 @@ export default function Page(): ReactElement {
             <p><span>Office hours</span>{BRAND.hours}</p>
             <p><span>Serving</span>{BRAND.region}</p>
           </aside>
+        </section>
+
+        <section data-mega-section="holiday-special" id="holiday-special" className={styles.details} aria-labelledby="holiday-special-heading">
+          <div className={styles.detailsIntro}>
+            <h2 id="holiday-special-heading">Holiday Special</h2>
+            <p>Have a few smaller items on your list? Here’s our Holiday Special for handyman projects.</p>
+          </div>
+          <dl className={styles.detailList}>
+            {HOLIDAY_SPECIAL.map((item) => (
+              <div key={item.title}>
+                <dt>{item.title}</dt>
+                <dd>{item.body}</dd>
+              </div>
+            ))}
+          </dl>
         </section>
 
         <section data-mega-section="inquiry-details" id="what-to-share" className={styles.details} aria-labelledby="details-heading">
