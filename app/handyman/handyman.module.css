@@ -21,7 +21,9 @@
 .office p { font-size: 15px; line-height: 1.6; color: #4f4d47; }
 .office span { display: block; margin-bottom: 4px; font-family: var(--font-fjalla), sans-serif; font-size: 15px; color: var(--color-timber-ink); }
 
-.details { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(40px, 6vw, 96px); padding: 72px var(--gutter); background: var(--color-sage); }
+/* Details and request share one grid so the form lines up with the lists above it. */
+.details, .request { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(40px, 6vw, 96px); }
+.details { padding: 72px var(--gutter); background: var(--color-sage); }
 .detailsIntro h2 { font-size: clamp(28px, 3vw, 40px); font-weight: 600; line-height: 1.15; letter-spacing: -.04em; text-wrap: balance; }
 .detailsIntro p { max-width: 40ch; margin-top: 16px; font-size: 16px; line-height: 1.65; color: #4c5249; }
 .detailList > div { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 8px 32px; padding-block: 24px; border-top: 1px solid #b9c8b9; }
@@ -29,9 +31,18 @@
 .detailList dt { font-size: 18px; font-weight: 600; letter-spacing: -.02em; }
 .detailList dd { font-size: 16px; line-height: 1.65; color: #4c5249; }
 
-.contact { padding: 80px var(--gutter) 96px; }
-.contact h2 { max-width: 18ch; font-size: clamp(32px, 4vw, 56px); font-weight: 700; line-height: 1.08; letter-spacing: -.05em; }
-.contact > p { max-width: 52ch; margin-top: 16px; font-size: 16px; line-height: 1.65; color: #4f4d47; }
+.request { align-items: start; padding: 88px var(--gutter); }
+.requestIntro h2 { max-width: 14ch; text-wrap: balance; }
+.requestIntro > p { max-width: 40ch; }
+.requestAlternatives { display: grid; justify-items: start; gap: 8px; margin-top: 40px; padding-top: 24px; border-top: 1px solid #cfc9bd; }
+.requestAlternatives p { font-family: var(--font-fjalla), sans-serif; font-size: 15px; color: var(--color-timber-ink); }
+.formPanel { padding: 40px; border-top: 2px solid var(--color-timber); border-radius: 0 0 4px 4px; background: #fdfcf9; box-shadow: 0 1px 2px #231f2014, 0 24px 48px -32px #231f2040; }
+
+.contact { padding: 80px var(--gutter) 96px; border-top: 1px solid #cfc9bd; }
+.contact h2 { max-width: 18ch; }
+.requestIntro h2, .contact h2 { font-size: clamp(32px, 4vw, 56px); font-weight: 700; line-height: 1.08; letter-spacing: -.05em; }
+.contact > p { max-width: 52ch; }
+.requestIntro > p, .contact > p { margin-top: 16px; font-size: 16px; line-height: 1.65; color: #4f4d47; }
 
 @media (prefers-reduced-motion: no-preference) {
   .rule { transform-origin: left; animation: measure 900ms cubic-bezier(.16, 1, .3, 1) both; }
@@ -40,7 +51,7 @@
   @keyframes measure { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 }
 @media (max-width: 900px) {
-  .hero, .details { grid-template-columns: 1fr; }
+  .hero, .details, .request { grid-template-columns: 1fr; }
   .hero { gap: 40px; padding-top: 64px; }
   .office { grid-template-columns: 1fr 1fr; border-left: 0; border-top: 1px solid #cfc9bd; padding: 24px 0 0; }
 }
@@ -53,5 +64,7 @@
   .office { grid-template-columns: 1fr; }
   .details { padding-block: 48px; }
   .detailList > div { grid-template-columns: 1fr; }
+  .request { padding-block: 56px; }
+  .formPanel { padding: 24px 20px; }
   .contact { padding-block: 56px 72px; }
 }

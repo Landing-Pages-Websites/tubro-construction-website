@@ -5,12 +5,15 @@ import { ArrowUpRight } from "lucide-react";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/shared/SiteFooter";
 import { PhoneCta } from "@/components/sections/PhoneCta";
+import { LeadForm } from "@/components/sections/LeadForm";
 import { BRAND } from "@/lib/content";
+import { formKeyForSlug } from "@/lib/form-keys";
 import { siteMetadata } from "@/lib/seo";
 import styles from "./handyman.module.css";
 
 const PATH = "/handyman";
-const CONTACT_PATH = "/contact";
+const REQUEST_ANCHOR = "#form";
+const REQUEST_OPTIONS = ["Handyman"];
 
 export const metadata: Metadata = siteMetadata(
   "Handyman Projects | Tubro Construction",
@@ -42,7 +45,7 @@ export default function Page(): ReactElement {
             <h1 id="handyman-heading">Have a smaller home project in mind?</h1>
             <p className={styles.lede}>Tell us what needs attention and where you are. Our team can discuss the scope and next steps.</p>
             <div className={styles.actions}>
-              <Link data-mega-cta="handyman-hero-contact" className={styles.primary} href={CONTACT_PATH}>
+              <Link data-mega-cta="handyman-hero-contact" className={styles.primary} href={REQUEST_ANCHOR}>
                 Tell us about your project <ArrowUpRight aria-hidden="true" />
               </Link>
               <PhoneCta />
@@ -84,11 +87,26 @@ export default function Page(): ReactElement {
           </dl>
         </section>
 
+        <section data-mega-section="handyman-request" id="form" className={styles.request} aria-labelledby="request-heading">
+          <div className={styles.requestIntro}>
+            <h2 id="request-heading">Request Handyman service</h2>
+            <p>Tell us what needs attention and the city your home is in. Your request goes to the Tubro office, and the team follows up during business hours.</p>
+            <div className={styles.requestAlternatives}>
+              <p>Prefer to talk it through?</p>
+              <PhoneCta />
+              <a className={styles.secondary} href={`mailto:${BRAND.email}`}>Email {BRAND.email}</a>
+            </div>
+          </div>
+          <div className={styles.formPanel}>
+            <LeadForm formKey={formKeyForSlug("handyman")} pagePath={PATH} options={REQUEST_OPTIONS} submitLabel="Send Message" idPrefix="handyman-request" />
+          </div>
+        </section>
+
         <section data-mega-section="contact" id="contact" className={styles.contact} aria-labelledby="contact-heading">
           <h2 id="contact-heading">Ready to tell us about it?</h2>
-          <p>Send a project question through the contact page, or call the office during business hours.</p>
+          <p>Send a Handyman service request on this page, or call the office during business hours.</p>
           <div className={styles.actions}>
-            <Link data-mega-cta="handyman-footer-contact" className={styles.primary} href={CONTACT_PATH}>
+            <Link data-mega-cta="handyman-footer-contact" className={styles.primary} href={REQUEST_ANCHOR}>
               Tell us about your project <ArrowUpRight aria-hidden="true" />
             </Link>
             <a className={styles.secondary} href={`mailto:${BRAND.email}`}>Email {BRAND.email}</a>
