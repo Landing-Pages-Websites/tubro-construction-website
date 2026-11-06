@@ -46,7 +46,7 @@ export default function Page(): ReactElement {
             <p className={styles.lede}>Tell us what needs attention and where you are. Our team can discuss the scope and next steps.</p>
             <div className={styles.actions}>
               <Link data-mega-cta="handyman-hero-contact" className={styles.primary} href={REQUEST_ANCHOR}>
-                Tell us about your project <ArrowUpRight aria-hidden="true" />
+                Book a Handyman today! <ArrowUpRight aria-hidden="true" />
               </Link>
               <PhoneCta />
             </div>
