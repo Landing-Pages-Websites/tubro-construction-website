@@ -1,22 +1,51 @@
 import { ArrowRight } from "lucide-react";
 import type { ReactElement } from "react";
-import { CITY_ROUTES } from "@/lib/routes";
+import { CITY_ROUTES, type CityRoute } from "@/lib/routes";
 import { CityLinks } from "./CityLinks";
 import { ConstructionDrawing } from "./ConstructionDrawing";
 import styles from "./service-areas.module.css";
 
-// Pierce County cities that already have a local remodeling page.
-// Seattle, Redmond, and Puyallup stay off this directory until a city page exists.
-const PIERCE_CITIES = new Set(["tacoma", "sumner", "bonney-lake", "buckley"]);
-const kingCities = CITY_ROUTES.filter(({ citySlug }) => !PIERCE_CITIES.has(citySlug));
-const pierceCities = CITY_ROUTES.filter(({ citySlug }) => PIERCE_CITIES.has(citySlug));
+// Rich's confirmed service cities, November 6, 2026. Newcastle and Fairwood
+// have local pages but are outside this list, so they stay off the directory.
+// Seattle, Redmond, and Puyallup are confirmed cities with no local page yet,
+// so they appear as plain text until a verified destination exists.
+const CONFIRMED_PAGE_SLUGS = new Set([
+  "kent",
+  "auburn",
+  "renton",
+  "sumner",
+  "tacoma",
+  "buckley",
+  "bellevue",
+  "issaquah",
+  "covington",
+  "sammamish",
+  "snoqualmie",
+  "black-diamond",
+  "enumclaw",
+  "north-bend",
+  "ravensdale",
+  "bonney-lake",
+  "maple-valley",
+]);
+const PLAIN_TEXT_CITIES: CityRoute[] = [
+  { city: "Redmond", citySlug: "redmond", path: "", slug: "redmond", title: "" },
+  { city: "Seattle", citySlug: "seattle", path: "", slug: "seattle", title: "" },
+  { city: "Puyallup", citySlug: "puyallup", path: "", slug: "puyallup", title: "" },
+];
+
+const PIERCE_CITIES = new Set(["tacoma", "sumner", "bonney-lake", "buckley", "puyallup"]);
+const confirmedRoutes = CITY_ROUTES.filter(({ citySlug }) => CONFIRMED_PAGE_SLUGS.has(citySlug));
+const directoryCities = [...confirmedRoutes, ...PLAIN_TEXT_CITIES];
+const kingCities = directoryCities.filter(({ citySlug }) => !PIERCE_CITIES.has(citySlug));
+const pierceCities = directoryCities.filter(({ citySlug }) => PIERCE_CITIES.has(citySlug));
 
 export function AreaDirectory(): ReactElement {
   return (
     <section data-mega-section="city-directory" id="city-directory" className={`${styles.section} ${styles.directory}`} aria-labelledby="directory-heading">
       <div className={styles.sectionHeading}>
         <div><p className={styles.eyebrow}>Our communities</p><h2 id="directory-heading">Good work starts<br />in your neighborhood.</h2></div>
-        <p>Each city below has its own remodeling page, with kitchen, bathroom, addition, painting, and general contracting work. Pick your community to see local services and request a free estimate.</p>
+        <p>Each linked city has its own remodeling page, with kitchen, bathroom, addition, painting, and general contracting work. Pick your community to see local services and request a free estimate.</p>
       </div>
       <div className={styles.counties}>
         <div id="king-county" className={styles.county}>
