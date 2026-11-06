@@ -8,14 +8,23 @@ import { formKeyForSlug } from "./form-keys";
 export type LeadPayload = { form_key: string; form_data: Record<string, unknown>; [key: string]: unknown };
 const MAX_BODY_BYTES = 24_000;
 const CAREER_TYPES = ["Carpentry", "Project support", "Painting", "General construction", "Other"];
+/** /handyman is not a sitemap route, so its request form is allowlisted on its own with a single project type. */
+const HANDYMAN_FORM_KEY = formKeyForSlug("handyman");
+const HANDYMAN_TYPES = ["Handyman"];
 const NO_CONSENT_KEYS = new Set(["homepage_estimate", "estimate_bathroom_remodeling"]);
 const FORM_SLUGS = new Set(["about-us", "bathroom-remodeling", "careers", "contact", "general-contractor", "custom-home-services", "schedule-an-estimate"]);
-const FORM_KEYS = new Set(["homepage_estimate", ...SITE_ROUTES.filter((route) => FORM_SLUGS.has(route.slug) || route.path.startsWith("/service-area/")).map((route) => formKeyForSlug(route.slug))]);
+const FORM_KEYS = new Set(["homepage_estimate", HANDYMAN_FORM_KEY, ...SITE_ROUTES.filter((route) => FORM_SLUGS.has(route.slug) || route.path.startsWith("/service-area/")).map((route) => formKeyForSlug(route.slug))]);
 const PAYLOAD_KEYS = new Set(["form_key", "form_data", "captchaToken", "powIssuedAt", "powNonce", "website", "customer_id", "site_id", "source_provider"]);
 const FIELD_KEYS = ["name", "email", "phone", "projectDetails", "projectType", "projectCity", "consent", "resumeFileName", "pageVariant", "utmSource", "utmMedium", "utmCampaign", "utmTerm", "utmContent", "gclid", "fbclid"];
 
+function projectTypesFor(formKey: string): readonly string[] {
+  if (formKey === "careers_application") return CAREER_TYPES;
+  if (formKey === HANDYMAN_FORM_KEY) return HANDYMAN_TYPES;
+  return PROJECT_TYPES;
+}
+
 export function requirementsFor(formKey: string): FieldRequirements {
-  return { consent: !NO_CONSENT_KEYS.has(formKey), projectType: true, projectTypes: formKey === "careers_application" ? CAREER_TYPES : PROJECT_TYPES, resume: formKey === "careers_application" };
+  return { consent: !NO_CONSENT_KEYS.has(formKey), projectType: true, projectTypes: projectTypesFor(formKey), resume: formKey === "careers_application" };
 }
 
 export async function readLeadPayload(request: Request): Promise<LeadPayload> {
