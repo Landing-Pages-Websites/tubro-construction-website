@@ -54,6 +54,12 @@
   .primary:is(:hover, :focus-visible) svg, .holiday:is(:hover, :focus-visible) svg { transform: translate(3px, -3px); }
   @keyframes measure { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 }
+/* Desktop: Holiday Special lifts out of the CTA row to the hero's upper-right, below the rule, in a vivid amber. */
+@media (min-width: 901px) {
+  .holiday { position: absolute; top: 48px; right: var(--gutter); background: #f5a524; color: var(--color-ink); box-shadow: 0 1px 2px #231f201f, 0 10px 24px -8px #c9760f99; }
+  .holiday:hover { background: #ffb53d; box-shadow: 0 1px 2px #231f201f, 0 14px 28px -8px #c9760fb3; }
+  .holiday:focus-visible { outline-color: var(--color-ink); }
+}
 @media (max-width: 900px) {
   .hero, .details, .request { grid-template-columns: 1fr; }
   .hero { gap: 40px; padding-top: 64px; }
