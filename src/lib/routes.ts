@@ -23,7 +23,6 @@ const CITY_NAMES: Record<string, string> = {
   enumclaw: "Enumclaw",
   issaquah: "Issaquah",
   bellevue: "Bellevue",
-  newcastle: "Newcastle",
   "black-diamond": "Black Diamond",
   fairwood: "Fairwood",
   sumner: "Sumner",
@@ -64,7 +63,6 @@ const CITY_ORDER = [
   "enumclaw",
   "issaquah",
   "bellevue",
-  "newcastle",
   "black-diamond",
   "fairwood",
   "sumner",
@@ -97,7 +95,7 @@ export const PRIVACY_ROUTE: SiteRoute = {
   title: "Privacy Policy | Tubro Construction",
 };
 
-/** All 33 public routes in exact sitemap.json order. */
+/** Public routes in sitemap.json order, with Newcastle removed from the served set. */
 export const SITE_ROUTES: SiteRoute[] = [
   ...CORE_ROUTES_BEFORE_CITIES,
   ...CITY_ROUTES,

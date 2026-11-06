@@ -5,8 +5,8 @@ import { CityLinks } from "./CityLinks";
 import { ConstructionDrawing } from "./ConstructionDrawing";
 import styles from "./service-areas.module.css";
 
-// Rich's confirmed service cities, November 6, 2026. Newcastle and Fairwood
-// have local pages but are outside this list, so they stay off the directory.
+// Rich's confirmed service cities, November 6, 2026. Newcastle is no longer a
+// served city, and Fairwood has a local page but stays off this directory.
 // Seattle, Redmond, and Puyallup are confirmed cities with no local page yet,
 // so they appear as plain text until a verified destination exists.
 const CONFIRMED_PAGE_SLUGS = new Set([

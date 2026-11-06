@@ -13,7 +13,6 @@ export const CITY_SLUGS = [
   "enumclaw",
   "issaquah",
   "bellevue",
-  "newcastle",
   "black-diamond",
   "fairwood",
   "sumner",

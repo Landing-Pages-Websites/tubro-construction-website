@@ -941,46 +941,6 @@
    "cta": "Schedule a Free Estimate"
   }
  },
- "service-area--home-remodeling-newcastle": {
-  "local-hero": {
-   "internal_links": [
-    "/schedule-an-estimate"
-   ],
-   "cta": "Schedule a Free Estimate"
-  },
-  "local-project-proof": {
-   "internal_links": [
-    "/recent-projects"
-   ],
-   "cta": "View Recent Projects"
-  },
-  "services": {
-   "internal_links": [
-    "/schedule-an-estimate"
-   ],
-   "cta": ""
-  },
-  "local-guidance": {
-   "internal_links": [
-    "/schedule-an-estimate",
-    "/contact"
-   ],
-   "cta": "Contact Us"
-  },
-  "faq": {
-   "internal_links": [
-    "/schedule-an-estimate",
-    "/contact"
-   ],
-   "cta": "Contact Us"
-  },
-  "estimate-cta": {
-   "internal_links": [
-    "/contact"
-   ],
-   "cta": "Schedule a Free Estimate"
-  }
- },
  "service-area--home-remodeling-black-diamond": {
   "local-hero": {
    "internal_links": [

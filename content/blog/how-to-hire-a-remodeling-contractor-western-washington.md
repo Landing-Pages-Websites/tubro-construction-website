@@ -142,7 +142,7 @@ The estimate is also a useful test of organization. A proposal that is easy to f
 
 Western Washington is not one uniform market. A contractor may serve King County and Pierce County but focus on certain communities, project sizes, or service lines. Confirm that the company regularly works in your area and that your project fits its capabilities.
 
-Tubro Construction serves homeowners across King and Pierce Counties, including communities such as Maple Valley, Ravensdale, Black Diamond, Bonney Lake, Snoqualmie, North Bend, Auburn, Bellevue, Kent, Enumclaw, Renton, Issaquah, Fairwood, Newcastle, Sammamish, Covington, Buckley, Sumner, Tacoma, and Federal Way. The right fit still depends on the actual scope and the team's current ability to take on the work.
+Tubro Construction serves homeowners across King and Pierce Counties, including communities such as Maple Valley, Ravensdale, Black Diamond, Bonney Lake, Snoqualmie, North Bend, Auburn, Bellevue, Kent, Enumclaw, Renton, Issaquah, Sammamish, Covington, Buckley, Sumner, and Tacoma. The right fit still depends on the actual scope and the team's current ability to take on the work.
 
 Ask whether the contractor handles the kind of project you are planning. A company that is strong in kitchen and bathroom remodeling may also handle painting, decks, drywall, outdoor living, or broader general contracting, but you should confirm which services are included in your proposal. If the project combines several types of work, ask who coordinates the complete sequence.
 

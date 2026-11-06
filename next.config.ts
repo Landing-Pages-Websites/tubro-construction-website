@@ -49,6 +49,7 @@ const nextConfig: NextConfig = {
       // Approved articles link to these paths; the posts live at the destinations.
       { source: "/how-to-hire-a-remodeling-contractor-western-washington", destination: "/blog/how-to-hire-a-remodeling-contractor-western-washington", permanent: true },
       { source: "/bathroom-remodel-cost-western-washington", destination: "/bathroom-remodel-cost-in-western-washington", permanent: true },
+      { source: "/service-area/home-remodeling-newcastle", destination: "/service-areas", permanent: true },
       TRAILING_SLASH_REDIRECT,
     ];
   },

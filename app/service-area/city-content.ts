@@ -142,14 +142,6 @@ export const CITY_PROFILES: Record<string, CityProfile> = {
       "For your Bellevue home, describe what you want the finished space to make easier. Layout, storage, lighting, and material preferences are all helpful starting points for reviewing the scope.",
     photos: ["dark", "shaker", "bath", "bright"],
   },
-  newcastle: {
-    intro:
-      "Your next home improvement starts with what matters to you. Tubro welcomes residential remodeling inquiries from Newcastle homeowners, from early ideas to a more defined brief.",
-    planningTitle: "Connect the ideas, then define the work.",
-    planningBody:
-      "If you are considering changes to more than one room in Newcastle, tell us how they relate. We will review your proposed scope with you before the project moves forward.",
-    photos: ["bath", "island", "bright", "deck"],
-  },
   "black-diamond": {
     intro:
       "Make your home fit the way you want to live. Tubro helps Black Diamond homeowners begin a residential remodeling project with a useful conversation and a free estimate.",

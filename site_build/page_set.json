@@ -550,31 +550,6 @@
       "design_surface": "design-refs"
     },
     {
-      "route": "/service-area/home-remodeling-newcastle",
-      "slug": "service-area--home-remodeling-newcastle",
-      "title": "Home Remodeling in Newcastle, WA",
-      "intent": "transactional",
-      "service_area_archetype": "local-photo-canvas",
-      "sections": [
-        "01-local-hero",
-        "02-verified-local-scope",
-        "03-local-guidance",
-        "04-faq",
-        "05-estimate-cta"
-      ],
-      "design_refs_approved": true,
-      "decomposition_complete": true,
-      "review_sheet_published": true,
-      "build_complete": true,
-      "viewport_normalized": true,
-      "primary_laptop_capture": true,
-      "section_edge_clearance_audited": true,
-      "desktop_section_captures": true,
-      "mobile_section_captures": true,
-      "qa_verdict": "PENDING",
-      "design_surface": "design-refs"
-    },
-    {
       "route": "/service-area/home-remodeling-black-diamond",
       "slug": "service-area--home-remodeling-black-diamond",
       "title": "Home Remodeling in Black Diamond, WA",
