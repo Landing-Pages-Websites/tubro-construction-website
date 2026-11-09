@@ -11,7 +11,7 @@ export function CityQuestions({
   city: string;
   profile: CityProfile;
 }): ReactElement {
-  const questions = [
+  const questions: Array<{ question: string; answer: string | ReactElement }> = [
     {
       question: `Does Tubro serve ${city}?`,
       answer: `Yes. ${city} is part of Tubro’s service area. Share your property location and project details so we can confirm the fit for the work you have in mind.`,
@@ -36,6 +36,21 @@ export function CityQuestions({
       answer: `Your request goes to the Tubro team, who follow up during office hours: ${BRAND.hours} Sending the form starts a conversation; it does not book an appointment automatically.`,
     },
   ];
+  if (city === "Issaquah") {
+    questions.push({
+      question: "Do you need a permit to remodel a kitchen in Issaquah?",
+      answer: (
+        <>
+          For a single-family or duplex interior remodel in Issaquah, yes: the City of Issaquah says a remodel permit is required. Your project may also need plumbing or mechanical information depending on the scope, so confirm the current requirements with the City before work begins. If you are still shaping the project, read{" "}
+          <a href="/blog/kitchen-design-practical-remodel-western-washington">
+            Kitchen design: practical remodeling ideas for Western Washington
+          </a>{" "}
+          for planning ideas, then{" "}
+          <a href="/schedule-an-estimate">request a free estimate</a> to share your goals and project details. A free-estimate request starts a conversation and does not book an appointment automatically.
+        </>
+      ),
+    });
+  }
   return (
     <section data-mega-section="faq"
       id="faq"
