@@ -12,6 +12,7 @@ import { CityEstimate } from "./CityEstimate";
 import { CityMoreAreas } from "./CityMoreAreas";
 import { CityMotion } from "./CityMotion";
 import { CITY_PROFILES } from "./city-content";
+import { BonneyLakeSchema } from "./BonneyLakeSchema";
 import styles from "./city.module.css";
 
 const BONNEY_LAKE_SCHEMA = {
@@ -96,6 +97,7 @@ export function CityPageLayout({ route }: { route: CityRoute }): ReactElement {
       ) : null}
       <main className={styles.page} data-city-page id="main-content" tabIndex={-1}>
         <CityMotion key={route.citySlug} />
+        {route.citySlug === "bonney-lake" ? <BonneyLakeSchema /> : null}
         <CityHero route={route} profile={profile} />
         <CityTrust />
         <CityProcess />
