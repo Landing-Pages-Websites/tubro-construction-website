@@ -48,6 +48,7 @@ export default function Page(): ReactElement {
             <div className={styles.actions}>
               <Link data-mega-cta="handyman-holiday-special" className={styles.holiday} href={HOLIDAY_ANCHOR}>
                 Holiday Special <ArrowUpRight aria-hidden="true" />
+                <span className={styles.holidayOffer}>$250 trip fee waived · $150 first hour plus materials</span>
               </Link>
               <Link data-mega-cta="handyman-hero-contact" className={styles.primary} href={REQUEST_ANCHOR}>
                 Book a Handyman today! <ArrowUpRight aria-hidden="true" />
