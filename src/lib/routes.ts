@@ -119,6 +119,7 @@ export const NAV_SERVICES = [
   { href: "/interior-exterior-painting", label: "Interior & Exterior Painting" },
   { href: "/custom-home-services", label: "Custom Home Services" },
   { href: "/handyman", label: "Handyman" },
+  { href: "/aging-in-place", label: "Aging in Place & Accessibility" },
 ] as const;
 
 export const NAV_COMPANY = [

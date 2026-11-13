@@ -4,7 +4,7 @@ import { blogPosts, legacyPages } from "@/lib/blog-posts";
 import { SITE_URL as BASE_URL } from "@/lib/seo";
 
 /** Added outside SITE_ROUTES, which is bound to the generated design-artifact set. */
-const EXTRA_PATHS = ["/handyman"];
+const EXTRA_PATHS = ["/handyman", "/aging-in-place"];
 
 /** Core pages retain their order, followed by published articles. */
 export default function sitemap(): MetadataRoute.Sitemap {
