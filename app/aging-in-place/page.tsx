@@ -18,16 +18,25 @@ export const metadata: Metadata = siteMetadata(
   PATH,
 );
 
+const INTRO =
+  "Most people don\u2019t want to leave their home \u2014 they just need it to work for them again. Tubro Construction designs and builds accessibility upgrades across King and Pierce County that make everyday life easier and safer: step-free showers you can roll into, doors and hallways wide enough for a walker or wheelchair, and entries without stairs. One licensed team, clear pricing, and an assigned project manager from first visit to final walkthrough.";
+
+const FUNDING =
+  "Many of our clients pay for this work with help from WA Cares, Medicaid (COPES), VA home-improvement grants (HISA/SAH), or King County housing repair programs.";
+
+const VISIT =
+  "30-minute visit: we walk the home with you, flag the fall and access risks, and leave a written, itemized quote. No pressure, no obligation.";
+
 const SERVICES = [
-  "Roll-in and curbless showers",
-  "Walk-in tubs and tub-to-shower conversions",
-  "Door widening to a 36″ clear opening",
-  "Hallway widening",
-  "Ramps and zero-step entries",
-  "Grab bars, railings and lever handles",
-  "Accessible kitchens",
-  "Improved lighting and flooring transitions",
-] as const;
+  { title: "Roll-in & curbless showers", detail: "Zero-threshold entries, grab bars, handheld showerheads, built-in seating" },
+  { title: "Walk-in tubs & tub-to-shower conversions" },
+  { title: "Door widening", detail: "To a full 36\u2033 clear opening for wheelchairs and walkers" },
+  { title: "Hallway widening & layout changes", detail: "For turning radius and circulation" },
+  { title: "Ramps & zero-step entries", detail: "Permanent wood/concrete or modular aluminum" },
+  { title: "Grab bars, railings & lever handles", detail: "Throughout the home" },
+  { title: "Accessible kitchens", detail: "Lowered/varied counter heights, pull-out storage, clear floor space" },
+  { title: "Improved lighting & flooring transitions", detail: "To cut fall risk" },
+] as const satisfies readonly { title: string; detail?: string }[];
 
 function AssessmentCta({ cta }: { cta: string }): ReactElement {
   return (
@@ -51,12 +60,11 @@ export default function Page(): ReactElement {
           <div className={styles.heroCopy}>
             <p className={styles.kicker}>Aging in Place &amp; Accessibility Remodeling</p>
             <h1 id="aging-in-place-heading">Stay in the home you love — safely, and on your terms.</h1>
-            <p className={styles.lede}>
-              {CTA_LEAD}, call {BRAND.phoneDisplay}. We serve homeowners across {BRAND.serviceArea}.
-            </p>
+            <p className={styles.lede}>{INTRO}</p>
             <div className={styles.actions}>
               <AssessmentCta cta="aging-in-place-hero-call" />
             </div>
+            <p className={styles.visit}>{VISIT}</p>
           </div>
           <aside className={styles.office} aria-label="Office details">
             <p><span>Office hours</span>{BRAND.hours}</p>
@@ -67,12 +75,16 @@ export default function Page(): ReactElement {
         <section data-mega-section="services" id="services" className={styles.services} aria-labelledby="services-heading">
           <div className={styles.servicesIntro}>
             <h2 id="services-heading">Accessibility remodeling services</h2>
+            <p>{FUNDING}</p>
           </div>
           <ul className={styles.serviceList}>
             {SERVICES.map((service) => (
-              <li key={service}>
+              <li key={service.title}>
                 <Check aria-hidden="true" />
-                {service}
+                <span>
+                  {service.title}
+                  {"detail" in service ? <span className={styles.serviceDetail}>{service.detail}</span> : null}
+                </span>
               </li>
             ))}
           </ul>
@@ -94,7 +106,7 @@ export default function Page(): ReactElement {
 
         <section data-mega-section="contact" id="contact" className={styles.contact} aria-labelledby="contact-heading">
           <h2 id="contact-heading">{CTA_LEAD}</h2>
-          <p>Call {BRAND.phoneDisplay} during office hours.</p>
+          <p>{VISIT}</p>
           <div className={styles.actions}>
             <AssessmentCta cta="aging-in-place-footer-call" />
           </div>

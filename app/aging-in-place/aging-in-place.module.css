@@ -57,3 +57,5 @@
   .serviceList li { font-size: 17px; }
   .contact { padding-block: 56px 72px; }
 }
+.visit { max-width: 48ch; margin-top: 16px; font-size: 15px; line-height: 1.6; color: #4f4d47; }
+.serviceDetail { display: block; margin-top: 4px; font-size: 16px; font-weight: 400; line-height: 1.55; letter-spacing: 0; color: #4c5249; }
