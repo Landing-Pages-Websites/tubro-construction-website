@@ -1,0 +1,59 @@
+.site { background: var(--color-plaster); color: var(--color-ink); }
+.page { --gutter: clamp(24px, 5vw, 80px); max-width: 1600px; margin-inline: auto; overflow-x: clip; }
+
+/* Hero: the same timber tape-measure rule as the other hand-built service pages. */
+.hero { position: relative; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(40px, 6vw, 96px); align-items: end; padding: 88px var(--gutter) 72px; }
+.rule { position: absolute; inset: 0 var(--gutter) auto; height: 24px; border-top: 2px solid var(--color-timber); background:
+  repeating-linear-gradient(90deg, var(--color-timber-ink) 0 1px, transparent 1px 64px) top left / 100% 16px no-repeat,
+  repeating-linear-gradient(90deg, var(--color-timber) 0 1px, transparent 1px 16px) top left / 100% 8px no-repeat; }
+.kicker { font-family: var(--font-fjalla), sans-serif; font-size: 16px; letter-spacing: .02em; color: var(--color-timber-ink); }
+.heroCopy h1 { max-width: 17ch; margin-top: 16px; font-size: clamp(40px, 5.4vw, 84px); font-weight: 700; line-height: 1.04; letter-spacing: -.05em; text-wrap: balance; }
+.lede { max-width: 48ch; margin-top: 32px; font-size: 18px; line-height: 1.65; color: #4f4d47; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 40px; }
+.primary { display: inline-flex; align-items: center; gap: 14px; min-height: 52px; padding: 14px 24px; border-radius: 4px; background: var(--color-action-deep); color: #fdfcf9; font-size: 17px; font-weight: 600; line-height: 1.3; box-shadow: 0 1px 2px #231f201f, 0 8px 20px -8px #0a6f3366; transition: background-color 180ms ease, transform 180ms ease; }
+.primary svg { width: 20px; height: 20px; flex-shrink: 0; }
+.ctaPhone { display: block; margin-top: 2px; font-size: 15px; font-weight: 500; opacity: .9; }
+.primary:hover { background: #085a29; }
+.primary:active { transform: translateY(1px); }
+.primary:focus-visible, .cityList a:focus-visible { outline: 3px solid var(--color-action-deep); outline-offset: 4px; }
+.office { display: grid; gap: 24px; border-left: 1px solid #cfc9bd; padding-left: 32px; }
+.office p { font-size: 15px; line-height: 1.6; color: #4f4d47; }
+.office span { display: block; margin-bottom: 4px; font-family: var(--font-fjalla), sans-serif; font-size: 15px; color: var(--color-timber-ink); }
+
+/* Services and service area share one grid so their lists line up. */
+.services, .area { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(40px, 6vw, 96px); padding: 72px var(--gutter); }
+.services { background: var(--color-sage); }
+.servicesIntro h2 { font-size: clamp(28px, 3vw, 40px); font-weight: 600; line-height: 1.15; letter-spacing: -.04em; text-wrap: balance; }
+.servicesIntro p { max-width: 40ch; margin-top: 16px; font-size: 16px; line-height: 1.65; color: #4c5249; }
+.serviceList { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; border-bottom: 1px solid #b9c8b9; }
+.serviceList li { display: flex; align-items: flex-start; gap: 12px; padding-block: 20px; border-top: 1px solid #b9c8b9; font-size: 18px; font-weight: 600; line-height: 1.4; letter-spacing: -.015em; }
+.serviceList svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: 3px; color: var(--color-action-deep); }
+.cityList { display: flex; flex-wrap: wrap; gap: 8px 12px; align-content: start; }
+.cityList a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 16px; border: 1px solid #cfc9bd; border-radius: 999px; font-size: 15px; font-weight: 500; transition: border-color 180ms ease, color 180ms ease; }
+.cityList a:hover { border-color: var(--color-action-deep); color: var(--color-action-deep); }
+
+.contact { padding: 80px var(--gutter) 96px; border-top: 1px solid #cfc9bd; }
+.contact h2 { max-width: 20ch; font-size: clamp(32px, 4vw, 56px); font-weight: 700; line-height: 1.08; letter-spacing: -.05em; text-wrap: balance; }
+.contact > p { max-width: 52ch; margin-top: 16px; font-size: 16px; line-height: 1.65; color: #4f4d47; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .rule { transform-origin: left; animation: measure 900ms cubic-bezier(.16, 1, .3, 1) both; }
+  @keyframes measure { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+}
+@media (max-width: 900px) {
+  .hero, .services, .area { grid-template-columns: 1fr; }
+  .hero { gap: 40px; padding-top: 64px; }
+  .office { grid-template-columns: 1fr 1fr; border-left: 0; border-top: 1px solid #cfc9bd; padding: 24px 0 0; }
+}
+@media (max-width: 560px) {
+  .page { --gutter: 20px; }
+  .hero { padding-block: 56px 48px; }
+  .lede { font-size: 16px; margin-top: 24px; }
+  .actions { margin-top: 32px; }
+  .primary { width: 100%; }
+  .office { grid-template-columns: 1fr; }
+  .services, .area { padding-block: 48px; }
+  .serviceList { grid-template-columns: 1fr; }
+  .serviceList li { font-size: 17px; }
+  .contact { padding-block: 56px 72px; }
+}
