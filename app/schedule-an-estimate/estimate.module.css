@@ -111,7 +111,7 @@ textarea.input { min-height: 115px; max-height: 320px; }
 .contactLinks a:last-child { font-size: 14px; border-top: 1px solid var(--line); }
 .contactLinks a span { flex: 1; overflow-wrap: anywhere; }
 .contactLinks a svg { flex-shrink: 0; color: var(--color-action-deep); }
-@media (min-width: 1100px) { .introduction { position: sticky; top: 95px; } }
+@media (min-width: 1100px) { .introduction { position: sticky; top: var(--site-header-offset); } }
 @media (max-width: 1392px) { .trust { margin-inline: 40px; } }
 @media (max-width: 1100px) {
   .hero { padding-inline: 28px; gap: 32px; grid-template-columns: .85fr 1.15fr; }

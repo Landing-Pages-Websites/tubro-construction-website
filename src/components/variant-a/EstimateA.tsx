@@ -55,7 +55,7 @@ export function EstimateA(): ReactElement {
             <li>
               <Shield className="size-5 text-action" aria-hidden="true" />
               <h3 className="mt-2.5 font-fjalla text-sm tracking-[0.08em] text-ink uppercase">
-                Military &amp; first responder discount
+                Veteran, military &amp; first responder discounts
               </h3>
               <p className="mt-1.5 font-fjalla text-sm leading-relaxed text-ink/70">{BRAND.discount}</p>
             </li>

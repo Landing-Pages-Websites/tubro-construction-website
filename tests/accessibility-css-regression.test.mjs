@@ -30,11 +30,17 @@ function assertOpaqueMotion(root, names) {
 }
 
 test("mobile focus keeps both header and fixed booking bar scroll clearance", () => {
-  const mobile = css("app/globals.css").nodes.find(node => node.name === "media" && node.params.replaceAll(" ", "") === "(max-width:767px)");
+  const root = css("app/globals.css");
+  const documentRule = root.nodes.find(node => node.type === "rule" && node.selector === "html");
+  assert.ok(documentRule, "document scroll clearance exists");
+  const documentDeclarations = Object.fromEntries(documentRule.nodes.filter(node => node.type === "decl").map(node => [node.prop, node.value]));
+  assert.equal(documentDeclarations["scroll-padding-top"], "var(--site-header-offset)");
+  assert.ok(parseFloat(documentDeclarations["--site-header-offset"]) >= 112, "clear the header and veterans banner");
+  const mobile = root.nodes.find(node => node.name === "media" && node.params.replaceAll(" ", "") === "(max-width:767px)");
   assert.ok(mobile, "mobile viewport rule exists");
   const html = rule(mobile, "html");
   const declarations = Object.fromEntries(html.nodes.map(node => [node.prop, node.value]));
-  assert.equal(declarations["scroll-padding-top"], "73px");
+  assert.equal(declarations["scroll-padding-top"], undefined, "retain document header clearance on mobile");
   assert.equal(declarations["scroll-padding-bottom"], "90px");
 });
 
