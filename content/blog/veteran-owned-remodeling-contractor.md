@@ -45,9 +45,9 @@ A trustworthy contractor does not promise that every project will be free of sur
 
 These are not exclusively military traits. They are professional habits any homeowner should look for. Veteran ownership can provide context for the owner's approach, while the company's actual process shows how that approach works in practice.
 
-## The 5% Military and First Responder Discount Explained
+## Veteran, Military and First Responder Discounts Explained
 
-Tubro Construction offers a 5% discount for active-duty military members and first responders. This offer is especially relevant for homeowners connected to military or public-safety communities who are already considering a remodeling project. Ask about eligibility when you schedule your estimate so the team can explain how the offer applies to your project.
+Tubro Construction offers a 10% discount for veterans and a 5% discount for active-duty military members and first responders. These offers are especially relevant for homeowners connected to military or public-safety communities who are already considering a remodeling project. Ask about eligibility when you schedule your estimate so the team can explain how the discount applies to your project.
 
 The discount should be considered alongside the full scope of work, not as the only reason to choose a contractor. A useful estimate should still explain what is included, which selections are allowances, how changes are handled, and what the project team expects from the homeowner. Comparing the complete scope helps you understand the value of the proposal rather than focusing on one line item.
 
@@ -59,7 +59,7 @@ For any contractor, ask these questions before you rely on a special offer:
 * Does it apply to the full project scope or only defined work?
 * Who should I contact if I have a question about the offer?
 
-Keeping the offer specific protects everyone from confusion. Tubro's stated offer is for active-duty military members and first responders. It should not be broadened to groups or situations that have not been confirmed.
+Keeping the offers specific protects everyone from confusion. Veterans receive 10% off; active-duty military members and first responders receive 5% off. Ask the team to confirm eligibility and how the discount applies to your project.
 
 ## Serving the JBLM Community in Pierce County
 

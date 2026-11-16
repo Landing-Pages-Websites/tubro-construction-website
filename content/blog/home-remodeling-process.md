@@ -119,6 +119,6 @@ Call the project manager named for your job. At Tubro Construction, that person 
 
 ### Does requesting an estimate book a start date?
 
-No. The estimate request asks Tubro Construction to review your project and follow up. It does not reserve a construction date or an appointment slot. Active-duty military members and first responders can ask about the 5 percent discount when you talk with the team. The offer is limited to those two groups.
+No. The estimate request asks Tubro Construction to review your project and follow up. It does not reserve a construction date or an appointment slot. Veterans receive a 10% discount, while active-duty military members and first responders receive 5%. Ask about eligibility when you talk with the team.
 
 When your scope, budget, and room list are written down, call Tubro Construction at [(253) 216-2633](tel:+12532162633) or [request a free estimate](https://www.tubroconstruction.com/schedule-an-estimate). You will reach a person who can price the project you described. The form does not book an appointment.

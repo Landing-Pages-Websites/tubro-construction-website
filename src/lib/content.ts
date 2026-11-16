@@ -1,3 +1,5 @@
+export const VETERANS_DISCOUNT = "10%";
+
 export const BRAND = {
   name: "Tubro Construction",
   region: "King and Pierce Counties, Washington",
@@ -9,7 +11,7 @@ export const BRAND = {
   hours: "Monday–Friday, 7:00 a.m.–4:00 p.m.",
   serviceArea: "King and Pierce Counties",
   discount:
-    "Active-duty military members and first responders receive 5% off.",
+    `Veterans receive ${VETERANS_DISCOUNT} off. Active-duty military members and first responders receive 5% off.`,
   careersNote: "Looking to build a career? Resumes are welcome by email at",
 } as const;
 

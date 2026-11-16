@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import type { KeyboardEvent, MouseEvent, ReactElement } from "react";
-import { BRAND } from "@/lib/content";
+import { BRAND, VETERANS_DISCOUNT } from "@/lib/content";
 import { IMAGES } from "@/lib/images";
 import { NAV_COMPANY, NAV_SERVICES } from "@/lib/routes";
 
@@ -26,6 +26,11 @@ const DESKTOP_LINK =
 export function SiteHeader(): ReactElement {
   return (
     <header className="sticky top-0 z-40 border-b border-ink/10 bg-plaster/95 backdrop-blur-sm">
+      <div className="mx-auto flex max-w-7xl justify-end px-4 pt-2 sm:px-8">
+        <p className="inline-flex items-center gap-1.5 rounded-sm bg-sage px-2.5 py-1 font-poppins text-xs font-medium leading-4 text-action-deep">
+          Veterans save <strong className="font-semibold">{VETERANS_DISCOUNT}</strong>
+        </p>
+      </div>
       <div className="mx-auto flex max-w-7xl items-center gap-x-1 px-4 py-2.5 sm:px-8">
         <Link prefetch={false} href="/" className="inline-flex min-h-11 shrink-0 items-center pr-3" aria-label="Tubro Construction home">
           <Image src={IMAGES.logo.src} alt={IMAGES.logo.alt} className="h-7 w-auto sm:h-8" priority />
@@ -98,7 +103,7 @@ export function SiteHeader(): ReactElement {
             <nav
               aria-label="Mobile"
               onClick={closeOnLinkClick}
-              className="absolute inset-x-0 top-full max-h-[calc(100vh-56px)] overflow-y-auto border-b border-ink/10 bg-white px-5 pb-6 pt-3 shadow-lg shadow-ink/10"
+              className="site-header-menu absolute inset-x-0 top-full overflow-y-auto border-b border-ink/10 bg-white px-5 pb-6 pt-3 shadow-lg shadow-ink/10"
             >
               <p className="pt-2 font-fjalla text-sm uppercase tracking-[0.12em] text-action-deep">Services</p>
               <ul className="mt-1 border-b border-ink/10 pb-3">
