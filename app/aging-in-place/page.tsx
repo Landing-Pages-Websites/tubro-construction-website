@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactElement } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Check, Phone } from "lucide-react";
 import { SiteHeader } from "@/components/site/SiteHeader";
@@ -7,6 +8,9 @@ import { SiteFooter } from "@/components/shared/SiteFooter";
 import { BRAND } from "@/lib/content";
 import { SERVICE_CITIES } from "@/lib/routes";
 import { siteMetadata } from "@/lib/seo";
+import curblessShower from "../../public/images/aging-in-place/curbless-shower.jpg";
+import grabBars from "../../public/images/aging-in-place/grab-bars.jpg";
+import rampEntry from "../../public/images/aging-in-place/ramp-zero-step-entry.jpg";
 import styles from "./aging-in-place.module.css";
 
 const PATH = "/aging-in-place";
@@ -26,6 +30,12 @@ const FUNDING =
 
 const VISIT =
   "30-minute visit: we walk the home with you, flag the fall and access risks, and leave a written, itemized quote. No pressure, no obligation.";
+
+const PHOTOS = [
+  { src: curblessShower, caption: "Curbless shower", alt: "Curbless walk-in shower with a glass panel and a level tile floor that runs straight into the shower" },
+  { src: grabBars, caption: "Grab bars", alt: "Glass walk-in shower with grab bars and a handheld shower on a slide bar" },
+  { src: rampEntry, caption: "Ramp / zero-step entry", alt: "Composite wood ramp with black railings leading up to a back-door landing" },
+] as const;
 
 const SERVICES = [
   { title: "Roll-in & curbless showers", detail: "Zero-threshold entries, grab bars, handheld showerheads, built-in seating" },
@@ -66,10 +76,20 @@ export default function Page(): ReactElement {
             </div>
             <p className={styles.visit}>{VISIT}</p>
           </div>
-          <aside className={styles.office} aria-label="Office details">
-            <p><span>Office hours</span>{BRAND.hours}</p>
-            <p><span>Serving</span>King and Pierce County</p>
-          </aside>
+          <div className={styles.heroAside}>
+            <div className={styles.photos}>
+              {PHOTOS.map((photo, index) => (
+                <figure key={photo.caption} className={styles.photo}>
+                  <Image src={photo.src} alt={photo.alt} fill priority={index === 0} sizes={index === 0 ? "(min-width: 901px) 40vw, 100vw" : "(min-width: 901px) 20vw, 50vw"} />
+                  <figcaption className={styles.photoLabel}>{photo.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+            <aside className={styles.office} aria-label="Office details">
+              <p><span>Office hours</span>{BRAND.hours}</p>
+              <p><span>Serving</span>King and Pierce County</p>
+            </aside>
+          </div>
         </section>
 
         <section data-mega-section="services" id="services" className={styles.services} aria-labelledby="services-heading">
