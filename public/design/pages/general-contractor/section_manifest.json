@@ -152,6 +152,51 @@
       }
     },
     {
+      "id": "03-coordination",
+      "name": "coordination",
+      "source_blueprint_sections": [
+        "general-contractor-coordination"
+      ],
+      "functional_goal": "Clarify the coordination role of a residential general contractor.",
+      "narrative_job": "Explain how project scope, planning, permits, materials, and communication stay coordinated.",
+      "composition": "content-annotated-material-callouts",
+      "composition_grammar": "text-only annotated coordination callouts",
+      "motif_role": "ledger_rule",
+      "focal_point": "What a general contractor coordinates for your home",
+      "eye_path": "Start with the coordination explanation, then move through the five project callouts before continuing to project proof.",
+      "weight": "quiet",
+      "background": "surface",
+      "frame": "refs/02-scope-index.png",
+      "prompt": "prompts/02-scope-index.md",
+      "content": {
+        "eyebrow": "",
+        "headline": "What a general contractor coordinates for your home",
+        "body": "A general contractor brings the moving parts of a residential project into one clear plan. Tubro helps coordinate remodeling, additions, and new construction planning so you can understand the next steps and have an assigned point of contact as the work moves forward.",
+        "bullets": [],
+        "steps": [],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [
+          "For a kitchen, bathroom, or broader home remodeling project, we help define the scope, sequence the work, and keep project conversations centered on how you want your home to function.",
+          "For an addition or new-construction project, we help connect the spaces you want with the practical decisions that shape the build, from early scope through construction planning.",
+          "We help identify permit and preconstruction considerations for your project and keep the required steps visible before construction begins. Requirements depend on the project and jurisdiction.",
+          "We help coordinate material selections, construction details, and the work needed across the project so decisions are carried through in the right order.",
+          "An assigned project manager gives you a clear point of contact for questions, updates, and coordination as the approved work moves toward completion."
+        ],
+        "options": []
+      },
+      "imagery": {
+        "sources": [],
+        "labels": [],
+        "rule": "Text-only section; no new imagery or project claims are introduced."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter after the existing residential scope section; exclude global navigation.",
+        "bottom": "Exit cleanly into project proof; no footer or global chrome."
+      }
+    },
+    {
       "id": "03-project-proof",
       "name": "project-proof",
       "source_blueprint_sections": [
@@ -326,6 +371,7 @@
     "section_weights": {
       "01-hero": "loud",
       "02-scope-index": "quiet",
+      "03-coordination": "quiet",
       "03-project-proof": "loud",
       "04-process-faq": "quiet",
       "05-estimate-cta": "loud"
@@ -337,6 +383,10 @@
       },
       {
         "section": "02-scope-index",
+        "band": "surface"
+      },
+      {
+        "section": "03-coordination",
         "band": "surface"
       },
       {
@@ -355,6 +405,7 @@
     "composition_sequence": [
       "hero-cinematic-image-field-inset-slab",
       "content-editorial-index-toc",
+      "content-annotated-material-callouts",
       "gallery-asymmetric-masonry-project-ledger",
       "process-staggered-path",
       "form-split-with-narrow-contact-ledger"
@@ -373,6 +424,9 @@
     },
     {
       "id": "02-scope-index"
+    },
+    {
+      "id": "03-coordination"
     },
     {
       "id": "03-project-proof"

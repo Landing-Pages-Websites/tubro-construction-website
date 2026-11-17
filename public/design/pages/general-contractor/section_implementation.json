@@ -66,6 +66,38 @@
       }
     },
     {
+      "frame": "03-coordination",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/sections/compositions/ContentAnnotatedMaterialCallouts.tsx",
+      "shared_basis": "The approved text-only coordination section uses the existing reusable content-annotated-material-callouts composition without adding imagery.",
+      "content_source": "section_manifest.json#03-coordination",
+      "asset_roles": [
+        "code-only live semantic composition, typography, callouts, and measured-line motif"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "The exact approved 03-coordination manifest content is loaded and rendered through its named owner."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "This text-only section introduces no new imagery; code-only layers remain live."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "The ContentAnnotatedMaterialCallouts owner preserves the text hierarchy and callout treatment."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "The existing surface field, Poppins/Fjalla hierarchy, and green measured motif are retained."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "The existing callout composition supports the approved desktop and mobile section layout without overflow."
+        }
+      }
+    },
+    {
       "frame": "03-project-proof",
       "implementation_kind": "shared-designed",
       "implementation_owner": "src/components/sections/compositions/GalleryAsymmetricMasonryProjectLedger.tsx",
