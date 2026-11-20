@@ -16,6 +16,7 @@ import paintingWeather from "./blog-content/exterior-painting-weather-window.jso
 import stainVersusPaint from "./blog-content/exterior-stain-vs-paint.json";
 import { marked } from "marked";
 import sanitizeHtml from "sanitize-html";
+import { takesBrandStamp } from "./blog-image-branding";
 
 export type BlogSection = { heading: string; id: string };
 export type BlogPost = {
@@ -113,14 +114,12 @@ function readHeader(header: string): Record<string, string> {
   }));
 }
 
-/** Decorative or third-party body graphics that are not photos and take no logo stamp. */
-const UNSTAMPED_BODY_IMAGES = new Set(["/images/blog/legacy-23e50d70eadffc2b.png"]);
 const LOCAL_BODY_IMAGE = /<img\b[^>]*\bsrc="(\/images\/[^"]+)"[^>]*>/g;
 
 /** Wraps each local body photo so the Tubro logo is stamped in its lower-right corner. */
 function stampBodyPhotos(html: string): string {
   return html.replace(LOCAL_BODY_IMAGE, (tag: string, src: string) =>
-    UNSTAMPED_BODY_IMAGES.has(src) ? tag : `<span class="brand-stamped">${tag}<span class="brand-stamp" aria-hidden="true"></span></span>`);
+    !takesBrandStamp(src) ? tag : `<span class="brand-stamped">${tag}<span class="brand-stamp" aria-hidden="true"></span></span>`);
 }
 
 function renderLegacyBody(markdown: string): { bodyHtml: string; sections: BlogSection[] } {

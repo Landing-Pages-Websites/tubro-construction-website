@@ -22,7 +22,7 @@ export default function BlogIntro(): ReactElement {
       </div>
       <div className={styles.cover}>
         <figure className={styles.coverFigure}>
-          <div className={styles.coverPhoto}><Image src="/images/design/blog/05-estimate-cta-0125047-kitchen-01-jpg.jpg" alt="Tubro kitchen with gray cabinetry, a generous island, and natural light" fill priority sizes="(max-width: 760px) 100vw, 65vw" /><BrandStamp /></div>
+          <div className={styles.coverPhoto}><Image src="/images/design/blog/05-estimate-cta-0125047-kitchen-01-jpg.jpg" alt="Tubro kitchen with gray cabinetry, a generous island, and natural light" fill priority sizes="(max-width: 760px) 100vw, 65vw" /><BrandStamp src="/images/design/blog/05-estimate-cta-0125047-kitchen-01-jpg.jpg" /></div>
           <figcaption><span>A closer look at everyday living</span><a href="/recent-projects">Explore our work <ArrowUpRight size={16} aria-hidden="true" /></a></figcaption>
         </figure>
         <div className={styles.coverNote}><span className={styles.label}>Featured guide / Kitchen planning</span><h2>A better kitchen starts before the finishes.</h2><p>Where do people gather? What gets in the way? Our kitchen planning checklist helps turn your daily routines into a clearer remodeling brief.</p><a href="/blog/kitchen-remodel-planning-checklist" className={styles.textLink}>Read the kitchen planning guide <ArrowUpRight size={20} aria-hidden="true" /></a><div className={styles.measure} aria-hidden="true" /><span className={styles.coverFoot}>Thoughtful questions. Clearer decisions.</span></div>
