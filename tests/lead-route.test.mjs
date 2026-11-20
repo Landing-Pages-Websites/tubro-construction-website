@@ -64,43 +64,41 @@ test("production assessment checks action, hostname and score; never accepts sen
 });
 
 const host = "www.tubroconstruction.com";
-const claimToken = "a".repeat(64);
-const productionEnv = { VERCEL_ENV: "production", RECAPTCHA_HOSTNAMES: host, NEXT_PUBLIC_RECAPTCHA_SITE_KEY: "test-site-key", LEAD_PROOF_CLAIM_TOKEN: ` ${claimToken}\n` };
+const productionEnv = { VERCEL_ENV: "production", RECAPTCHA_HOSTNAMES: host, NEXT_PUBLIC_RECAPTCHA_SITE_KEY: "test-site-key" };
+const verifiedEnv = { ...productionEnv, RECAPTCHA_PROJECT_ID: "test", RECAPTCHA_API_KEY: "test" };
+const passing = { tokenProperties: { valid: true, action: "lead_submit", hostname: host }, riskAnalysis: { score: 0.9, reasons: [] } };
 const { captchaToken: _token, ...payload } = valid;
-const claimed = () => Response.json({ ok: true, proof_claim: "claimed", id: "local-lead-id" });
+const minted = { ...payload, captchaToken: "minted-test-token" };
 
-test("standard GET issues only a fresh 13-digit timestamp without signing or KV prerequisites", async () => {
-  const { route } = boundary({ ...productionEnv, LEAD_PROOF_CLAIM_TOKEN: undefined });
-  const response = await route.GET(new Request(`https://${host}/api/lead`));
-  assert.equal(response.status, 200);
-  assert.equal(response.headers.get("cache-control"), "no-store");
-  const result = await response.json();
-  assert.deepEqual(Object.keys(result), ["issuedAt"]);
-  assert.match(result.issuedAt, /^\d{13}$/);
-  assert.ok(Math.abs(Date.now() - Number(result.issuedAt)) < 1000);
+test("the retired proof-of-work challenge is no longer served", () => {
+  const { route } = boundary(productionEnv);
+  assert.equal(route.GET, undefined);
 });
 
-test("production fails closed for absent/invalid proofs, forbidden keys and honeypots", async () => {
-  const api = boundary(productionEnv, {}, claimed);
+test("production fails closed for absent/invalid tokens, forbidden keys and honeypots", async () => {
+  const api = boundary(productionEnv);
   for (const change of [{}, { captchaToken: sentinel }, { captchaToken: "lead-submit" }, { captchaToken: "random" }, { powIssuedAt: String(Date.now()), powNonce: "0" }]) {
     assert.equal((await api.post({ ...payload, ...change }, host)).status, 403);
   }
-  for (const change of [{ form_key: "unsupported" }, { form_key: "estimate_privacy" }, { form_key: "estimate_blog" }, { form_key: "estimate_homepage" }, { proof_claim: {} }, { attempt_id: "supplied" }, { token: claimToken }]) {
+  for (const change of [{ form_key: "unsupported" }, { form_key: "estimate_privacy" }, { form_key: "estimate_blog" }, { form_key: "estimate_homepage" }, { proof_claim: {} }, { attempt_id: "supplied" }, { token: "a".repeat(64) }]) {
     assert.equal((await api.post({ ...payload, captchaToken: sentinel, ...change }, host)).status, 422);
   }
-  assert.equal((await api.post(prove({ ...payload, website: "spam.test" }), host)).status, 403);
   assert.equal(api.requests.length, 0);
+  const verified = boundary(verifiedEnv, passing);
+  assert.equal((await verified.post({ ...minted, website: "spam.test" }, host)).status, 403);
+  assert.equal(verified.requests.length, 0, "a filled honeypot is refused before any assessment");
 });
 
 test("missing verification refuses canonical and foreign JSON before schema disclosure or external calls", async () => {
-  const api = boundary({ ...productionEnv, RECAPTCHA_PROJECT_ID: "test", RECAPTCHA_API_KEY: "test" });
+  const api = boundary(verifiedEnv);
   const foreign = { ...payload.form_data, form_key: "contact-form", company: "", context: { url: `https://${host}/contact` }, utm_source: null, captchaAction: "lead_submit" };
   for (const body of [payload, { ...payload, website: "" }, {}, foreign, { ...foreign, form_data: { ...payload.form_data, form_key: "contact-form" } }]) {
-    for (const material of [{}, { captchaToken: "" }, { captchaToken: " \t" }, { captchaToken: null }, { captchaToken: {} }, { powIssuedAt: String(Date.now()) }, { powNonce: "0" }, { powIssuedAt: "", powNonce: "0" }]) {
+    for (const material of [{}, { captchaToken: "" }, { captchaToken: " \t" }, { captchaToken: null }, { captchaToken: {} }, { powIssuedAt: String(Date.now()) }, { powNonce: "0" }, { powIssuedAt: "", powNonce: "0" }, { powIssuedAt: String(Date.now()), powNonce: "0" }]) {
       const response = await api.post({ ...body, ...material }, host);
       assert.equal(response.status, 403);
       const result = await response.json();
       assert.equal(result.code, "verification_failed");
+      assert.match(result.error, /refresh the page and try again/);
       assert.equal("errors" in result, false);
       assert.equal(api.requests.length, 0, "no assessment or delivery on refusal");
     }
@@ -108,112 +106,51 @@ test("missing verification refuses canonical and foreign JSON before schema disc
 });
 
 test("purported verification never bypasses strict fields, defaults or honeypots", async () => {
-  const assessment = { tokenProperties: { valid: true, action: "lead_submit", hostname: host }, riskAnalysis: { score: 0.9, reasons: [] } };
-  const api = boundary({ ...productionEnv, RECAPTCHA_PROJECT_ID: "test", RECAPTCHA_API_KEY: "test" }, assessment);
-  const invalidProof = { ...payload, powIssuedAt: "0000000000000", powNonce: "0" };
-  const validProof = prove(payload);
-  const verifiedBodies = [{ ...payload, captchaToken: "minted-test-token" }, invalidProof, validProof];
-  for (const body of verifiedBodies) {
-    for (const change of [{ context: {} }, { form_key: "contact-form" }, { form_key: "defaultkey" }, { form_data: { ...payload.form_data, first_name: "duplicate" } }, { form_data: { ...payload.form_data, form_key: payload.form_key } }]) {
-      const candidate = { ...body, ...change };
-      const response = await api.post(body === validProof ? prove(candidate) : candidate, host);
-      assert.equal(response.status, 422);
-      assert.ok((await response.json()).errors.form);
-      assert.equal(api.requests.length, 0, "fields are checked before Enterprise or forwarding");
-    }
+  const api = boundary(verifiedEnv, passing);
+  for (const change of [{ context: {} }, { form_key: "contact-form" }, { form_key: "defaultkey" }, { form_data: { ...payload.form_data, first_name: "duplicate" } }, { form_data: { ...payload.form_data, form_key: payload.form_key } }]) {
+    const response = await api.post({ ...minted, ...change }, host);
+    assert.equal(response.status, 422);
+    assert.ok((await response.json()).errors.form);
+    assert.equal(api.requests.length, 0, "fields are checked before Enterprise or forwarding");
   }
-  for (const body of [invalidProof, { ...payload, captchaToken: sentinel }, { ...payload, captchaToken: "lead-submit" }, { ...payload, captchaToken: "minted-test-token", website: "spam.test" }, prove({ ...payload, website: "spam.test" })]) {
+  for (const body of [{ ...payload, captchaToken: sentinel }, { ...payload, captchaToken: "lead-submit" }, { ...minted, website: "spam.test" }]) {
     const response = await api.post(body, host);
     assert.equal(response.status, 403);
     assert.equal((await response.json()).code, "verification_failed");
-    assert.equal(api.requests.length, 0, "missing/filled honeypot cannot authorize invalid material");
+    assert.equal(api.requests.length, 0, "a filled honeypot or sentinel never reaches Enterprise");
   }
 });
 
-test("fallback verifies exact payload, age and proof, then claims at the existing receiver", async () => {
-  const proved = prove({ ...payload, form_data: { ...payload.form_data, email: " Test@Example.com ", utmSource: "qa", gclid: "local-click" } });
-  const api = boundary(productionEnv, {}, claimed);
-  for (const field of ["name", "email", "phone", "projectDetails", "utmSource"]) {
-    const changed = { ...proved, form_data: { ...proved.form_data, [field]: field === "email" ? "other@example.com" : field === "phone" ? "2532162634" : "Changed" } };
-    assert.equal((await api.post(changed, host)).status, 403, field);
+test("a solved proof of work no longer delivers a lead, with or without a failed reCAPTCHA token", async () => {
+  for (const [assessment, body] of [[{}, prove(payload)], [{ tokenProperties: { valid: false } }, prove({ ...payload, captchaToken: "failed-real-token" })], [{ ...passing, riskAnalysis: { score: 0.1 } }, prove({ ...payload, captchaToken: "low-score-token" })]]) {
+    const api = boundary(verifiedEnv, assessment);
+    const response = await api.post(body, host);
+    assert.equal(response.status, 403);
+    assert.equal((await response.json()).code, "verification_failed");
+    assert.ok(api.requests.every((request) => !request.url.startsWith("https://analytics.gomega.ai/")), "nothing is forwarded to the CRM");
   }
-  for (const issuedAt of [String(Date.now() - 90_001), String(Date.now() + 10_000)]) {
-    assert.equal((await api.post(prove(payload, issuedAt), host)).status, 403);
-  }
-  const response = await api.post(proved, host);
+});
+
+test("a verified lead is forwarded once, labelled as passing reCAPTCHA, without verification material", async () => {
+  const api = boundary(verifiedEnv, passing, () => Response.json({ ok: true, id: "local-lead-id" }));
+  const response = await api.post({ ...minted, form_data: { ...payload.form_data, utmSource: "qa", gclid: "local-click" } }, host);
   assert.equal(response.status, 200);
   assert.deepEqual(await response.json(), { ok: true, id: "local-lead-id" });
-  assert.equal(api.requests.length, 1);
-  const request = api.requests[0];
-  assert.equal(request.headers["x-mega-proof-claim-token"], claimToken);
-  assert.deepEqual(request.body.proof_claim, { issued_at: proved.powIssuedAt, nonce: proved.powNonce, email: " Test@Example.com ", attempt_id: request.body.proof_claim.attempt_id });
-  assert.match(request.body.proof_claim.attempt_id, /^[a-f0-9-]{36}$/);
-  assert.equal(request.body.form_data.email, request.body.proof_claim.email);
-  assert.equal(request.body.form_data.spamCheck, "Unverified: reCAPTCHA did not pass; passed fallback check");
-  assert.equal(request.body.form_data.utmSource, "qa");
-  assert.equal(request.body.form_data.gclid, "local-click");
-  assert.equal(request.body.customer_id, "b002784f-9543-4362-8814-b7da19078f23");
-  assert.equal(request.body.site_id, "f28d515e-437b-4f9b-96c4-bc1a79a3357c");
-  assert.equal(request.body.source_provider, "website-tubroconstruction");
-  for (const key of ["captchaToken", "powIssuedAt", "powNonce", "recipients", "token"]) assert.equal(key in request.body, false);
-});
-
-test("durable receiver rejects replay across handler instances and permanent refusals never retry", async () => {
-  const proved = prove(payload);
-  let delivered = false;
-  const receiver = () => {
-    if (delivered) return Response.json({ ok: false }, { status: 409 });
-    delivered = true;
-    return claimed();
-  };
-  assert.equal((await boundary(productionEnv, {}, receiver).post(proved, host)).status, 200);
-  const replay = boundary(productionEnv, {}, receiver);
-  assert.equal((await replay.post(proved, host)).status, 403);
-  assert.equal(replay.requests.length, 1);
-  for (const status of [400, 401, 403, 409]) {
-    const api = boundary(productionEnv, {}, () => Response.json({ ok: false }, { status }));
-    assert.notEqual((await api.post(proved, host)).status, 200);
-    assert.equal(api.requests.length, 1);
-  }
-});
-
-test("fallback fails closed without claim token or a marked JSON success; malformed success is never retried", async () => {
-  const proved = prove(payload);
-  for (const token of [undefined, "", "placeholder"]) {
-    const api = boundary({ ...productionEnv, LEAD_PROOF_CLAIM_TOKEN: token }, {}, claimed);
-    assert.equal((await api.post(proved, host)).status, 502);
-    assert.equal(api.requests.length, 0);
-  }
-  for (const result of [{ ok: true }, { ok: false, proof_claim: "claimed" }, { ok: true, proof_claim: "unknown" }, { ok: true, proof_claim: ["claimed"] }, { ok: true, proof_claim: null }, "not JSON"]) {
-    const api = boundary(productionEnv, {}, () => typeof result === "string" ? new Response(result) : Response.json(result));
-    assert.equal((await api.post(proved, host)).status, 502);
-    assert.equal(api.requests.length, 1);
-  }
-});
-
-test("bounded timeout/5xx retries reuse identical bytes and attempt identity; independent inbound requests mint new IDs", async () => {
-  const proved = prove(payload);
-  for (const failure of [() => { throw new Error("timeout"); }, () => Response.json({}, { status: 503 })]) {
-    let calls = 0;
-    const api = boundary(productionEnv, {}, () => ++calls === 1 ? failure() : Response.json({ ok: true, proof_claim: "retry", id: "same-lead" }));
-    assert.equal((await api.post(proved, host)).status, 200);
-    assert.equal(api.requests.length, 2);
-    assert.equal(api.requests[0].bytes, api.requests[1].bytes);
-    assert.deepEqual(api.requests[0].headers, api.requests[1].headers);
-    await api.post(proved, host);
-    assert.notEqual(api.requests[1].body.proof_claim.attempt_id, api.requests[2].body.proof_claim.attempt_id);
-  }
-  const api = boundary(productionEnv, {}, () => Response.json({}, { status: 500 }));
-  assert.equal((await api.post(proved, host)).status, 502);
   assert.equal(api.requests.length, 2);
+  const delivered = api.requests[1];
+  assert.equal(delivered.body.form_data.spamCheck, "Passed reCAPTCHA");
+  assert.equal(delivered.body.form_data.utmSource, "qa");
+  assert.equal(delivered.body.form_data.gclid, "local-click");
+  assert.equal(JSON.stringify(delivered.headers), JSON.stringify({ "Content-Type": "application/json" }));
+  for (const key of ["captchaToken", "powIssuedAt", "powNonce", "proof_claim", "recipients", "token"]) assert.equal(key in delivered.body, false);
 });
 
-test("failed real CAPTCHA can use a valid fallback without passing the bad token onward", async () => {
-  const api = boundary({ ...productionEnv, RECAPTCHA_PROJECT_ID: "test", RECAPTCHA_API_KEY: "test" }, { tokenProperties: { valid: false } }, claimed);
-  assert.equal((await api.post(prove({ ...payload, captchaToken: "failed-real-token" }), host)).status, 200);
-  assert.equal(api.requests.length, 2);
-  assert.equal(api.requests[1].body.form_data.spamCheck, "Unverified: reCAPTCHA did not pass; passed fallback check");
-  assert.equal("captchaToken" in api.requests[1].body, false);
+test("receiver failures are reported once and never retried as a second lead", async () => {
+  for (const upstream of [() => { throw new Error("timeout"); }, () => Response.json({}, { status: 503 }), () => Response.json({ ok: false }, { status: 409 }), () => Response.json({ ok: false }), () => new Response("not JSON")]) {
+    const api = boundary(verifiedEnv, passing, upstream);
+    assert.equal((await api.post(minted, host)).status, 502);
+    assert.equal(api.requests.filter((request) => request.url.startsWith("https://analytics.gomega.ai/")).length, 1);
+  }
 });
 
 test("all shared and custom form contracts enforce required fields and consent before authorization", async () => {

@@ -1,5 +1,4 @@
 import { captchaMode, stagingTokenAccepted, STAGING_SENTINEL } from "./lead-policy";
-import { verifyLeadProof } from "./leadProof";
 import { validateLeadFields, type FieldRequirements } from "./lead-validation";
 import { PROJECT_TYPES } from "./content";
 import { ADDED_CITY_ROUTES, SITE_ROUTES } from "./routes";
@@ -14,6 +13,7 @@ const HANDYMAN_TYPES = ["Handyman"];
 const NO_CONSENT_KEYS = new Set(["homepage_estimate", "estimate_bathroom_remodeling"]);
 const FORM_SLUGS = new Set(["about-us", "bathroom-remodeling", "careers", "contact", "general-contractor", "custom-home-services", "schedule-an-estimate"]);
 const FORM_KEYS = new Set(["homepage_estimate", HANDYMAN_FORM_KEY, ...[...SITE_ROUTES, ...ADDED_CITY_ROUTES].filter((route) => FORM_SLUGS.has(route.slug) || route.path.startsWith("/service-area/")).map((route) => formKeyForSlug(route.slug))]);
+/** powIssuedAt/powNonce are still accepted from pages cached before the proof-of-work fallback was retired, so they get the same 403 as any unverified post. */
 const PAYLOAD_KEYS = new Set(["form_key", "form_data", "captchaToken", "powIssuedAt", "powNonce", "website", "customer_id", "site_id", "source_provider"]);
 const FIELD_KEYS = ["name", "email", "phone", "projectDetails", "projectType", "projectCity", "consent", "resumeFileName", "pageVariant", "utmSource", "utmMedium", "utmCampaign", "utmTerm", "utmContent", "gclid", "fbclid"];
 
@@ -61,8 +61,7 @@ export function payloadErrors(body: LeadPayload): Record<string, string> {
 
 /** Presence only: field validation and full authorization must still succeed. */
 export function hasLeadVerification(body: LeadPayload): boolean {
-  const nonempty = (value: unknown): boolean => typeof value === "string" && value.trim().length > 0;
-  return nonempty(body.captchaToken) || (nonempty(body.powIssuedAt) && nonempty(body.powNonce));
+  return typeof body.captchaToken === "string" && body.captchaToken.trim().length > 0;
 }
 
 async function enterpriseAuthorized(token: string, hostname: string): Promise<boolean> {
@@ -82,21 +81,23 @@ async function enterpriseAuthorized(token: string, hostname: string): Promise<bo
   } catch { return false; }
 }
 
-export type LeadAuthorization = "captcha" | "fallback";
-
-export async function authorizeLead(body: LeadPayload, host: string): Promise<LeadAuthorization | null> {
+/**
+ * Only a passed reCAPTCHA (or the sanctioned sentinel on a staging host) delivers a lead.
+ * The proof-of-work fallback was retired: spam bots solved it, and nearly all
+ * the leads it delivered were marked spam in the CRM.
+ */
+export async function authorizeLead(body: LeadPayload, host: string): Promise<boolean> {
   try {
-    if (body.website !== undefined && body.website !== "") return null;
+    if (body.website !== undefined && body.website !== "") return false;
     const mode = captchaMode(host, process.env);
-    if (mode === "denied") return null;
-    if (mode === "staging" && stagingTokenAccepted(mode, body.captchaToken)) return "captcha";
-    if (mode === "enterprise" && typeof body.captchaToken === "string" && await enterpriseAuthorized(body.captchaToken, host)) return "captcha";
-    return await verifyLeadProof(body) ? "fallback" : null;
-  } catch { return null; }
+    if (mode === "staging") return stagingTokenAccepted(mode, body.captchaToken);
+    return mode === "enterprise" && typeof body.captchaToken === "string" && await enterpriseAuthorized(body.captchaToken, host);
+  } catch { return false; }
 }
 
-export function upstreamPayload(body: LeadPayload, authorization: LeadAuthorization): Record<string, unknown> {
+/** Called only for an authorized lead, so every delivered lead is labelled as having passed reCAPTCHA. */
+export function upstreamPayload(body: LeadPayload): Record<string, unknown> {
   const formData = Object.fromEntries(FIELD_KEYS.filter((key) => body.form_data[key] !== undefined).map((key) => [key, body.form_data[key]]));
-  formData.spamCheck = authorization === "captcha" ? "Passed reCAPTCHA" : "Unverified: reCAPTCHA did not pass; passed fallback check";
+  formData.spamCheck = "Passed reCAPTCHA";
   return { form_key: body.form_key, form_data: formData, customer_id: "b002784f-9543-4362-8814-b7da19078f23", site_id: "f28d515e-437b-4f9b-96c4-bc1a79a3357c", source_provider: "website-tubroconstruction" };
 }

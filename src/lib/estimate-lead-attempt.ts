@@ -15,8 +15,8 @@ export interface EstimateLeadSubmit {
   onSettled: (outcome: AttemptOutcome) => void;
 }
 
-// postLead mints its own reCAPTCHA token and falls back to the proof of work
-// itself, so the attempt's token step carries nothing.
+// postLead mints its own reCAPTCHA token (and reports a failure to mint as the
+// attempt's error), so the attempt's token step carries nothing.
 const noToken = (): Promise<string> => Promise.resolve("");
 const sendWithoutToken = (): string => "";
 

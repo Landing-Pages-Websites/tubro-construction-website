@@ -1,8 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { loadModule } from "./module-loader.mjs";
-import { prove } from "./lead-proof-fixture.mjs";
-import { verifyLeadProof } from "../src/lib/leadProof.ts";
 
 const fields = { name: "Local Test", email: "Test@Example.com", phone: "2532162633", projectDetails: "Local intercepted request", projectType: "Kitchen or bathroom remodel", consent: true };
 
@@ -12,34 +10,43 @@ function client({ captchaFails = false, serverFails = false, deliveryFails = fal
     assert.equal(url, "/api/lead");
     const body = options.body && JSON.parse(options.body);
     requests.push({ method: options.method || "GET", body });
-    if (!body) return Response.json({ issuedAt: String(Date.now()) });
+    assert.ok(body, "the client never fetches a proof-of-work challenge");
     if (serverFails && body.captchaToken) return Response.json({ code: "verification_failed", error: "Failed CAPTCHA" }, { status: 403 });
     if (deliveryFails) return Response.json({ error: "Delivery unavailable" }, { status: 502 });
     return Response.json({ ok: true });
   };
   const moduleMocks = {
     "./recaptcha-client": { mintCaptchaToken: async () => { if (captchaFails) throw new Error("Blocked script"); return "real-client-token"; } },
-    "./leadProof": { solveLeadProof: async (payload, issuedAt) => prove(payload, issuedAt).powNonce },
   };
   const window = { location: { search: "?utm_source=local-test&utm_campaign=repair&gclid=local-click" } };
   return { api: loadModule("src/lib/lead-client.ts", { fetch, window, URLSearchParams, moduleMocks }), requests };
 }
 
-test("client fallback covers script failure and server CAPTCHA failure without recycling the failed token", async () => {
-  for (const config of [{ captchaFails: true }, { serverFails: true }]) {
-    const { api, requests } = client(config);
-    await api.postLead("schedule_estimate", fields, "/schedule-an-estimate");
-    const last = requests.at(-1).body;
-    assert.equal("captchaToken" in last, false);
-    assert.equal(await verifyLeadProof(last), true);
-    assert.equal(last.form_data.email, fields.email);
-    assert.equal(last.form_data.utmSource, "local-test");
-    assert.equal(last.form_data.utmCampaign, "repair");
-    assert.equal(last.form_data.gclid, "local-click");
-    assert.equal(last.website, "");
-    assert.equal("website" in last.form_data, false);
-    assert.equal(requests.length, config.serverFails ? 3 : 2);
-  }
+test("client sends the minted reCAPTCHA token with the form and tracking fields", async () => {
+  const { api, requests } = client();
+  await api.postLead("schedule_estimate", fields, "/schedule-an-estimate");
+  assert.equal(requests.length, 1);
+  const sent = requests[0].body;
+  assert.equal(sent.captchaToken, "real-client-token");
+  assert.equal("powNonce" in sent, false);
+  assert.equal(sent.form_data.email, fields.email);
+  assert.equal(sent.form_data.utmSource, "local-test");
+  assert.equal(sent.form_data.utmCampaign, "repair");
+  assert.equal(sent.form_data.gclid, "local-click");
+  assert.equal(sent.website, "");
+  assert.equal("website" in sent.form_data, false);
+});
+
+test("without a reCAPTCHA token the client sends nothing and asks the visitor to retry", async () => {
+  const { api, requests } = client({ captchaFails: true });
+  await assert.rejects(api.postLead("schedule_estimate", fields, "/schedule-an-estimate"), /refresh the page and try again/);
+  assert.equal(requests.length, 0);
+});
+
+test("a server CAPTCHA refusal is shown, never retried with a fallback submission", async () => {
+  const { api, requests } = client({ serverFails: true });
+  await assert.rejects(api.postLead("schedule_estimate", fields, "/schedule-an-estimate"), /Failed CAPTCHA/);
+  assert.equal(requests.length, 1);
 });
 
 test("client never retries uncertain lead delivery as a new fallback submission", async () => {

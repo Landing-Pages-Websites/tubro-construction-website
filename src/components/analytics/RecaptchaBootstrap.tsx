@@ -10,7 +10,7 @@ export function RecaptchaBootstrap(): null {
     if (!isEnterpriseSiteKey(SITE_KEY)) return;
     const prepare = (event: Event): void => {
       if (!(event.target instanceof Element) || !event.target.closest("form")) return;
-      void loadRecaptcha().catch(() => { /* The submit path offers the payload-bound proof fallback. */ });
+      void loadRecaptcha().catch(() => { /* The submit path retries the load and tells the visitor if it still fails. */ });
     };
     document.addEventListener("focusin", prepare);
     return () => document.removeEventListener("focusin", prepare);

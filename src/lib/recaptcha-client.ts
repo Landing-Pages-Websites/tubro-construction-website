@@ -41,5 +41,5 @@ export async function mintCaptchaToken(): Promise<string> {
     const token = await Promise.race([enterprise.execute(SITE_KEY, { action: "lead_submit" }), new Promise<never>((_, reject) => window.setTimeout(() => reject(new Error("Verification timed out.")), LOAD_TIMEOUT))]);
     if (!token) throw new Error("Verification returned no token.");
     return token;
-  } catch { throw new Error("Verification is unavailable. Trying the secure fallback."); }
+  } catch { throw new Error("Verification is unavailable."); }
 }
