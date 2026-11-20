@@ -140,6 +140,7 @@ export const NAV_SERVICES = [
 ] as const;
 
 export const NAV_COMPANY = [
+  { href: "/commercial", label: "Commercial" },
   { href: "/recent-projects", label: "Recent Projects" },
   { href: "/about-us", label: "About Us" },
   { href: "/service-areas", label: "Service Areas" },
