@@ -206,4 +206,12 @@ export const CITY_PROFILES: Record<string, CityProfile> = {
       "Tell us which everyday activities your Sammamish remodel should support, whether that means cooking, gathering, or getting ready. The purpose of the space helps define the work.",
     photos: ["dark", "bright", "shaker", "bath"],
   },
+  redmond: {
+    intro:
+      "A kitchen that keeps up with busy days, a bathroom that feels calm, a home that fits how you live now. Tubro helps Redmond homeowners plan residential remodels with upfront pricing and a free estimate.",
+    planningTitle: "Start with how the space should work.",
+    planningBody:
+      "For your Redmond project, tell us which rooms you want to change and what gets in the way today. Whether you are working from home, cooking for family, or making room to grow, the way you use the space helps shape the scope.",
+    photos: ["bright", "bath", "dark", "deck"],
+  },
 };

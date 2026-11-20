@@ -31,6 +31,7 @@ const CITY_NAMES: Record<string, string> = {
   snoqualmie: "Snoqualmie",
   "north-bend": "North Bend",
   sammamish: "Sammamish",
+  redmond: "Redmond",
 };
 
 /** Sitemap order is contractual: this array mirrors sitemap.json exactly, "/" first. */
@@ -73,18 +74,32 @@ const CITY_ORDER = [
   "sammamish",
 ] as const;
 
-export const CITY_ROUTES: CityRoute[] = CITY_ORDER.map((citySlug) => ({
-  path: `/service-area/home-remodeling-${citySlug}`,
-  slug: `service-area--home-remodeling-${citySlug}`,
-  title: `Home Remodeling in ${CITY_NAMES[citySlug]}, WA`,
-  city: CITY_NAMES[citySlug],
-  citySlug,
-}));
+function cityRoute(citySlug: string): CityRoute {
+  return {
+    path: `/service-area/home-remodeling-${citySlug}`,
+    slug: `service-area--home-remodeling-${citySlug}`,
+    title: `Home Remodeling in ${CITY_NAMES[citySlug]}, WA`,
+    city: CITY_NAMES[citySlug],
+    citySlug,
+  };
+}
+
+export const CITY_ROUTES: CityRoute[] = CITY_ORDER.map(cityRoute);
+
+/**
+ * City pages built after the approved sitemap (Rich confirmed these cities on
+ * November 6, 2026). Kept out of SITE_ROUTES, which is bound to the generated
+ * design-artifact set; the city route, sitemap and lead allowlist add them.
+ */
+export const ADDED_CITY_ROUTES: CityRoute[] = ["redmond"].map(cityRoute);
+
+/** Every served city page: the sitemap cities, then the added ones. */
+export const ALL_CITY_ROUTES: CityRoute[] = [...CITY_ROUTES, ...ADDED_CITY_ROUTES];
 
 export const SERVICE_CITIES: CityRoute[] = [
   "Kent", "Auburn", "Renton", "Sumner", "Tacoma", "Buckley", "Bellevue", "Issaquah", "Puyallup", "Covington", "Sammamish", "Snoqualmie", "Black Diamond", "Enumclaw", "North Bend", "Ravensdale", "Bonney Lake", "Maple Valley", "Seattle", "Redmond",
 ].map((city) => {
-  const existing = CITY_ROUTES.find((route) => route.city === city);
+  const existing = ALL_CITY_ROUTES.find((route) => route.city === city);
   const citySlug = city.toLowerCase().replaceAll(" ", "-");
   return existing ?? { city, citySlug, path: "/schedule-an-estimate", slug: citySlug, title: "Book a free estimate in " + city };
 });
