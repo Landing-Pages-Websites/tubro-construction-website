@@ -2,8 +2,6 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { loadModule } from "./module-loader.mjs";
-import { prove } from "./lead-proof-fixture.mjs";
-import { verifyLeadProof } from "../src/lib/leadProof.ts";
 
 // Shape-only fixture, not a provisioned Google key.
 const siteKey = "6L0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_-";
@@ -84,7 +82,7 @@ test("invalid public keys never execute even a preloaded Enterprise or mint an a
       const h = clientBrowser(key, { loaded });
       const api = h.load("src/lib/recaptcha-client.ts");
       await assert.rejects(api.loadRecaptcha(), /not configured/, String(key));
-      await assert.rejects(api.mintCaptchaToken(), /secure fallback/, String(key));
+      await assert.rejects(api.mintCaptchaToken(), /Verification is unavailable/, String(key));
       assert.equal(h.executions.length, 0);
       assert.equal(h.scripts.length, 0);
     }
@@ -146,25 +144,14 @@ test("provider readiness gates execution", async () => {
   assert.equal(h.executions.length, 1);
 });
 
-test("invalid keys and real-key client failures reach the existing payload-bound proof fallback", async () => {
+test("invalid keys and real-key client failures send nothing and ask the visitor to retry", async () => {
   const cases = [...invalidKeys.map(key => [key, {}]), [siteKey, { executeFails: true }], [siteKey, { emptyToken: true }],
     [siteKey, { loaded: false, loadFails: true }], [siteKey, { loaded: false, timesOut: true }], [siteKey, { timesOut: true }]];
   for (const [key, options] of cases) {
     const h = clientBrowser(key, options); const requests = [];
-    h.globals.moduleMocks["./leadProof"] = { solveLeadProof: async (payload, issuedAt) => prove(payload, issuedAt).powNonce };
-    h.globals.fetch = async (url, options) => {
-      assert.equal(url, "/api/lead");
-      const body = options.body && JSON.parse(options.body);
-      requests.push({ method: options.method || "GET", body });
-      return Response.json(body ? { ok: true } : { issuedAt: String(Date.now()) });
-    };
-    await h.load("src/lib/lead-client.ts").postLead("schedule_estimate", fields, "/schedule-an-estimate");
-    assert.deepEqual(requests.map(request => request.method), ["GET", "POST"]);
-    const body = requests[1].body;
-    assert.equal("captchaToken" in body, false);
-    assert.equal(await verifyLeadProof(body), true);
-    assert.equal(await verifyLeadProof({ ...body, form_data: { ...body.form_data, email: "changed@example.com" } }), false);
-    assert.equal(body.form_data.utmSource, "local-test");
+    h.globals.fetch = async (url, init) => { requests.push({ url, init }); return Response.json({ ok: true }); };
+    await assert.rejects(h.load("src/lib/lead-client.ts").postLead("schedule_estimate", fields, "/schedule-an-estimate"), /refresh the page and try again/);
+    assert.equal(requests.length, 0, String(key));
     assert.equal(h.executions.length, key === siteKey && options.loaded !== false ? 1 : 0);
     if (options.loaded === false) assert.equal(h.scripts[0].removed, true);
   }
@@ -179,31 +166,16 @@ test("client import graph and sources contain no server policy or staging bypass
   }
 });
 
-test("staging client fallback reaches the durable claim boundary and requires marked receiver success", async () => {
+test("staging accepts only the sanctioned sentinel and never forwards an unverified post", async () => {
   const host = "tubro-construction-website-local-test-mega-websites.vercel.app";
   const key = "recaptcha-staging-bypass-key";
-  for (const accepted of [true, false]) {
-    const h = clientBrowser(key, { loaded: false }); const claims = [];
-    const env = { VERCEL_ENV: "preview", VERCEL_URL: host, NEXT_PUBLIC_RECAPTCHA_SITE_KEY: key, LEAD_PROOF_CLAIM_TOKEN: "a".repeat(64) };
-    const route = loadModule("app/api/lead/route.ts", { process: { env }, fetch: async (url, options) => {
-      assert.equal(url, "https://analytics.gomega.ai/submission/submit");
-      claims.push(JSON.parse(options.body));
-      return Response.json(accepted ? { ok: true, proof_claim: "claimed", id: "local-only" } : { ok: true });
-    } });
-    h.globals.moduleMocks["./leadProof"] = { solveLeadProof: async (payload, issuedAt) => prove(payload, issuedAt).powNonce };
-    h.globals.fetch = async (url, options) => {
-      assert.equal(url, "/api/lead");
-      const request = new Request(`https://${host}${url}`, options);
-      return options.method === "POST" ? route.POST(request) : route.GET(request);
-    };
-    const submission = h.load("src/lib/lead-client.ts").postLead("schedule_estimate", fields, "/schedule-an-estimate");
-    if (accepted) await submission;
-    else await assert.rejects(submission, /confirm|send|delivery/i);
-    assert.equal(claims.length, 1);
-    assert.match(claims[0].proof_claim.issued_at, /^\d{13}$/);
-    assert.match(claims[0].proof_claim.nonce, /^\d+$/);
-    assert.equal(claims[0].form_data.spamCheck, "Unverified: reCAPTCHA did not pass; passed fallback check");
-    assert.equal("captchaToken" in claims[0], false);
-    assert.equal(h.scripts.length, 0); assert.equal(h.executions.length, 0);
-  }
+  const env = { VERCEL_ENV: "preview", VERCEL_URL: host, NEXT_PUBLIC_RECAPTCHA_SITE_KEY: key };
+  const delivered = [];
+  const route = loadModule("app/api/lead/route.ts", { process: { env }, fetch: async (url, options) => { delivered.push(JSON.parse(options.body)); return Response.json({ ok: true }); } });
+  const post = (extra) => route.POST(new Request(`https://${host}/api/lead`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ form_key: "schedule_estimate", form_data: fields, ...extra }) }));
+  for (const extra of [{}, { captchaToken: "random" }, { powIssuedAt: String(Date.now()), powNonce: "0" }]) assert.equal((await post(extra)).status, 403);
+  assert.equal(delivered.length, 0);
+  assert.equal((await post({ captchaToken: key })).status, 200);
+  assert.equal(delivered.length, 1);
+  assert.equal(delivered[0].form_data.spamCheck, "Passed reCAPTCHA");
 });

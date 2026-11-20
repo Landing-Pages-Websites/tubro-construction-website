@@ -34,11 +34,8 @@ export type CaptchaUnavailableReason =
  * Reported once per settled attempt, never from a timer that can outlive it:
  * a lead that was sent must not also count here.
  *
- * What it costs the visitor depends on the provider. On Turnstile `/api/lead`
- * fails closed, so the submission never leaves the browser and this counter is
- * the only trace of a lost lead. On reCAPTCHA the proof-of-work fallback
- * delivers it instead (lib/captcha/leadVerification.ts), labelled as
- * unverified, so here it measures how often reCAPTCHA could not vouch.
+ * `/api/lead` fails closed on both providers, so the submission never leaves
+ * the browser and this counter is the only trace of a lost lead.
  *
  * Best-effort by construction. It is called from a form the visitor is trying
  * to submit, so it must never throw, never block and never be the reason a
