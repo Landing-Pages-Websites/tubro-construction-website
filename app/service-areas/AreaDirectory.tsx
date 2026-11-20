@@ -7,9 +7,9 @@ import styles from "./service-areas.module.css";
 
 // Rich's confirmed service cities, November 6, 2026. Newcastle is no longer a
 // served city, and Fairwood has a local page but stays off this directory.
-// Seattle and Puyallup are confirmed cities with no local page yet, so they
-// appear as plain text until a verified destination exists. Redmond's local
-// page was added November 20, 2026.
+// Puyallup is a confirmed city with no local page yet, so it appears as plain
+// text until a verified destination exists. Redmond's and Seattle's local
+// pages were added November 20, 2026.
 const CONFIRMED_PAGE_SLUGS = new Set([
   "kent",
   "auburn",
@@ -29,9 +29,9 @@ const CONFIRMED_PAGE_SLUGS = new Set([
   "bonney-lake",
   "maple-valley",
   "redmond",
+  "seattle",
 ]);
 const PLAIN_TEXT_CITIES: CityRoute[] = [
-  { city: "Seattle", citySlug: "seattle", path: "", slug: "seattle", title: "" },
   { city: "Puyallup", citySlug: "puyallup", path: "", slug: "puyallup", title: "" },
 ];
 

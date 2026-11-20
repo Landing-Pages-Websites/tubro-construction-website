@@ -214,4 +214,12 @@ export const CITY_PROFILES: Record<string, CityProfile> = {
       "For your Redmond project, tell us which rooms you want to change and what gets in the way today. Whether you are working from home, cooking for family, or making room to grow, the way you use the space helps shape the scope.",
     photos: ["bright", "bath", "dark", "deck"],
   },
+  seattle: {
+    intro:
+      "Make the most of every square foot at home. Tubro helps Seattle homeowners plan kitchen, bathroom, and whole-home remodels with clear communication, upfront pricing, and a free estimate.",
+    planningTitle: "Make every room earn its place.",
+    planningBody:
+      "For your Seattle remodel, tell us which spaces feel tight, dated, or hard to use, and what you want them to do better. Storage, light, and how rooms connect are useful starting points for the conversation.",
+    photos: ["shaker", "bath", "island", "deck"],
+  },
 };
