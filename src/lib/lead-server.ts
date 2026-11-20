@@ -2,7 +2,7 @@ import { captchaMode, stagingTokenAccepted, STAGING_SENTINEL } from "./lead-poli
 import { verifyLeadProof } from "./leadProof";
 import { validateLeadFields, type FieldRequirements } from "./lead-validation";
 import { PROJECT_TYPES } from "./content";
-import { SITE_ROUTES } from "./routes";
+import { ADDED_CITY_ROUTES, SITE_ROUTES } from "./routes";
 import { formKeyForSlug } from "./form-keys";
 
 export type LeadPayload = { form_key: string; form_data: Record<string, unknown>; [key: string]: unknown };
@@ -13,7 +13,7 @@ const HANDYMAN_FORM_KEY = formKeyForSlug("handyman");
 const HANDYMAN_TYPES = ["Handyman"];
 const NO_CONSENT_KEYS = new Set(["homepage_estimate", "estimate_bathroom_remodeling"]);
 const FORM_SLUGS = new Set(["about-us", "bathroom-remodeling", "careers", "contact", "general-contractor", "custom-home-services", "schedule-an-estimate"]);
-const FORM_KEYS = new Set(["homepage_estimate", HANDYMAN_FORM_KEY, ...SITE_ROUTES.filter((route) => FORM_SLUGS.has(route.slug) || route.path.startsWith("/service-area/")).map((route) => formKeyForSlug(route.slug))]);
+const FORM_KEYS = new Set(["homepage_estimate", HANDYMAN_FORM_KEY, ...[...SITE_ROUTES, ...ADDED_CITY_ROUTES].filter((route) => FORM_SLUGS.has(route.slug) || route.path.startsWith("/service-area/")).map((route) => formKeyForSlug(route.slug))]);
 const PAYLOAD_KEYS = new Set(["form_key", "form_data", "captchaToken", "powIssuedAt", "powNonce", "website", "customer_id", "site_id", "source_provider"]);
 const FIELD_KEYS = ["name", "email", "phone", "projectDetails", "projectType", "projectCity", "consent", "resumeFileName", "pageVariant", "utmSource", "utmMedium", "utmCampaign", "utmTerm", "utmContent", "gclid", "fbclid"];
 
