@@ -33,6 +33,7 @@ const CITY_NAMES: Record<string, string> = {
   sammamish: "Sammamish",
   redmond: "Redmond",
   seattle: "Seattle",
+  puyallup: "Puyallup",
 };
 
 /** Sitemap order is contractual: this array mirrors sitemap.json exactly, "/" first. */
@@ -92,7 +93,7 @@ export const CITY_ROUTES: CityRoute[] = CITY_ORDER.map(cityRoute);
  * November 6, 2026). Kept out of SITE_ROUTES, which is bound to the generated
  * design-artifact set; the city route, sitemap and lead allowlist add them.
  */
-export const ADDED_CITY_ROUTES: CityRoute[] = ["redmond", "seattle"].map(cityRoute);
+export const ADDED_CITY_ROUTES: CityRoute[] = ["redmond", "seattle", "puyallup"].map(cityRoute);
 
 /** Every served city page: the sitemap cities, then the added ones. */
 export const ALL_CITY_ROUTES: CityRoute[] = [...CITY_ROUTES, ...ADDED_CITY_ROUTES];
