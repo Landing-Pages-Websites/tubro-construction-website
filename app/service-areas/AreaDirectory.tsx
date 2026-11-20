@@ -1,15 +1,13 @@
 import { ArrowRight } from "lucide-react";
 import type { ReactElement } from "react";
-import { ALL_CITY_ROUTES, type CityRoute } from "@/lib/routes";
+import { ALL_CITY_ROUTES } from "@/lib/routes";
 import { CityLinks } from "./CityLinks";
 import { ConstructionDrawing } from "./ConstructionDrawing";
 import styles from "./service-areas.module.css";
 
 // Rich's confirmed service cities, November 6, 2026. Newcastle is no longer a
 // served city, and Fairwood has a local page but stays off this directory.
-// Puyallup is a confirmed city with no local page yet, so it appears as plain
-// text until a verified destination exists. Redmond's and Seattle's local
-// pages were added November 20, 2026.
+// Redmond's, Seattle's and Puyallup's local pages were added November 20, 2026.
 const CONFIRMED_PAGE_SLUGS = new Set([
   "kent",
   "auburn",
@@ -30,14 +28,12 @@ const CONFIRMED_PAGE_SLUGS = new Set([
   "maple-valley",
   "redmond",
   "seattle",
+  "puyallup",
 ]);
-const PLAIN_TEXT_CITIES: CityRoute[] = [
-  { city: "Puyallup", citySlug: "puyallup", path: "", slug: "puyallup", title: "" },
-];
 
 const PIERCE_CITIES = new Set(["tacoma", "sumner", "bonney-lake", "buckley", "puyallup"]);
 const confirmedRoutes = ALL_CITY_ROUTES.filter(({ citySlug }) => CONFIRMED_PAGE_SLUGS.has(citySlug));
-const directoryCities = [...confirmedRoutes, ...PLAIN_TEXT_CITIES];
+const directoryCities = confirmedRoutes;
 const kingCities = directoryCities.filter(({ citySlug }) => !PIERCE_CITIES.has(citySlug));
 const pierceCities = directoryCities.filter(({ citySlug }) => PIERCE_CITIES.has(citySlug));
 

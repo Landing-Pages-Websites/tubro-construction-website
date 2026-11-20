@@ -222,4 +222,12 @@ export const CITY_PROFILES: Record<string, CityProfile> = {
       "For your Seattle remodel, tell us which spaces feel tight, dated, or hard to use, and what you want them to do better. Storage, light, and how rooms connect are useful starting points for the conversation.",
     photos: ["shaker", "bath", "island", "deck"],
   },
+  puyallup: {
+    intro:
+      "Bring new life to the rooms you use every day. Tubro helps Puyallup homeowners plan kitchen, bathroom, and whole-home remodels with upfront pricing, personal project management, and a free estimate.",
+    planningTitle: "Start with what you want to change.",
+    planningBody:
+      "For your Puyallup project, tell us which rooms or outdoor spaces you are thinking about and what is not working today. A short list of priorities helps the team review the scope with you.",
+    photos: ["island", "dark", "bright", "deck"],
+  },
 };
