@@ -113,6 +113,16 @@ function readHeader(header: string): Record<string, string> {
   }));
 }
 
+/** Decorative or third-party body graphics that are not photos and take no logo stamp. */
+const UNSTAMPED_BODY_IMAGES = new Set(["/images/blog/legacy-23e50d70eadffc2b.png"]);
+const LOCAL_BODY_IMAGE = /<img\b[^>]*\bsrc="(\/images\/[^"]+)"[^>]*>/g;
+
+/** Wraps each local body photo so the Tubro logo is stamped in its lower-right corner. */
+function stampBodyPhotos(html: string): string {
+  return html.replace(LOCAL_BODY_IMAGE, (tag: string, src: string) =>
+    UNSTAMPED_BODY_IMAGES.has(src) ? tag : `<span class="brand-stamped">${tag}<span class="brand-stamp" aria-hidden="true"></span></span>`);
+}
+
 function renderLegacyBody(markdown: string): { bodyHtml: string; sections: BlogSection[] } {
   const sections: BlogSection[] = [];
   const html = sanitizeHtml(marked.parse(markdown, { async: false }), {
@@ -125,7 +135,7 @@ function renderLegacyBody(markdown: string): { bodyHtml: string; sections: BlogS
     sections.push({ id, heading: sanitizeHtml(content, { allowedTags: [], allowedAttributes: {} }) });
     return `<h2 id="${id}">${content}</h2>`;
   });
-  return { bodyHtml, sections };
+  return { bodyHtml: stampBodyPhotos(bodyHtml), sections };
 }
 
 /** Full authored HTML exports keep their original contents navigation and attributes. */
@@ -135,7 +145,7 @@ function renderAuthoredBody(markdown: string, contents: string): { bodyHtml: str
     allowedAttributes: { h2: ["id"], h3: ["id"], a: ["href", "title", "rel", "target"], p: ["data-mega-cta"], img: ["src", "alt", "title"], th: ["colspan", "rowspan", "scope"], td: ["colspan", "rowspan"], ol: ["start"] },
     allowedSchemes: ["https", "http", "mailto", "tel"],
   });
-  return { bodyHtml, sections: JSON.parse(contents) as BlogSection[] };
+  return { bodyHtml: stampBodyPhotos(bodyHtml), sections: JSON.parse(contents) as BlogSection[] };
 }
 
 function readPost(file: string): BlogPost {

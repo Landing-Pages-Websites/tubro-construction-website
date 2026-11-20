@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { ReactElement } from "react";
 import { blogPosts } from "@/lib/blog-posts";
+import { BrandStamp } from "./BrandStamp";
 import styles from "./articles.module.css";
 
 export function BlogGrid(): ReactElement {
@@ -12,7 +13,7 @@ export function BlogGrid(): ReactElement {
       <div className={styles.grid}>{blogPosts.map((post) => (
         <article key={post.slug} className={styles.card}>
           <Link href={post.canonicalPath} className={styles.cardLink}>
-            {post.image && <div className={styles.cardImage}><Image src={post.image} alt={post.imageAlt} fill sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 90vw" /></div>}
+            {post.image && <div className={styles.cardImage}><Image src={post.image} alt={post.imageAlt} fill sizes="(min-width: 900px) 30vw, (min-width: 600px) 45vw, 90vw" /><BrandStamp /></div>}
             <div className={styles.cardCopy}><p className={styles.label}>{post.category}</p><h3>{post.title}</h3><p>{post.description}</p>{post.publishedDate && <time className={styles.cardDate} dateTime={post.publishedDate}>{new Date(`${post.publishedDate}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}</time>}<span className={styles.readLink}>Read the guide <ArrowUpRight size={20} aria-hidden="true" /></span></div>
           </Link>
         </article>
