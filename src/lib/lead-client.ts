@@ -1,17 +1,9 @@
 import { mintCaptchaToken } from "./recaptcha-client";
 import type { LeadFields } from "./lead-validation";
+import { leadAttribution } from "./attribution";
 
-const TRACKED_PARAMS = { utm_source: "utmSource", utm_medium: "utmMedium", utm_campaign: "utmCampaign", utm_term: "utmTerm", utm_content: "utmContent", gclid: "gclid", fbclid: "fbclid" };
 const POST_TIMEOUT_MS = 60_000; // Covers the server's reCAPTCHA assessment (8 s) and its single receiver attempt (25 s).
 export type LeadResult = { ok?: boolean; ignored?: boolean; code?: string; error?: string };
-
-function collectTracking(): Record<string, string> {
-  const params = new URLSearchParams(window.location.search);
-  return Object.fromEntries(Object.entries(TRACKED_PARAMS).flatMap(([source, target]) => {
-    const value = params.get(source);
-    return value ? [[target, value.slice(0, 500)]] : [];
-  }));
-}
 
 const UNVERIFIED_MESSAGE = "We couldn't verify this request. Please refresh the page and try again.";
 
@@ -32,7 +24,7 @@ async function send(payload: Record<string, unknown>, token: string): Promise<{ 
 export async function postLead(formKey: string, fields: LeadFields, pageVariant: string): Promise<LeadResult> {
   try {
     const { website = "", ...formFields } = fields;
-    const payload = { form_key: formKey, form_data: { ...formFields, pageVariant, ...collectTracking() }, website };
+    const payload = { form_key: formKey, form_data: { ...formFields, pageVariant, ...leadAttribution() }, website };
     const outcome = await send(payload, await captchaToken());
     if (!outcome.response.ok || outcome.result.ok !== true) throw new Error(outcome.result.error || "We couldn't send your request. Please try again.");
     return outcome.result;

@@ -7,6 +7,7 @@ import { MobileEstimateCta } from "@/components/shared/MobileEstimateCta";
 import { SiteTracking } from "@/components/analytics/SiteTracking";
 import { siteMetadata, businessSchema } from "@/lib/seo";
 import { RecaptchaBootstrap } from "@/components/analytics/RecaptchaBootstrap";
+import { AttributionCapture } from "@/components/analytics/AttributionCapture";
 import { megaPreviewNavScript } from "@/mega-preview/preview_nav.mjs";
 
 const GTM_CONTAINER_ID = "GTM-WZRPX472";
@@ -77,6 +78,7 @@ export default function RootLayout({
         <nav aria-label="Skip navigation"><a className="skip-link" href="#main-content">Skip to main content</a></nav>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} />
         <RecaptchaBootstrap />
+        <AttributionCapture />
         {children}
         <Suspense fallback={null}><MobileEstimateCta /></Suspense>
         <Suspense fallback={null}><SiteTracking /></Suspense>

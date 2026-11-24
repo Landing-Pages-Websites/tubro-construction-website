@@ -15,7 +15,7 @@ const FORM_SLUGS = new Set(["about-us", "bathroom-remodeling", "careers", "conta
 const FORM_KEYS = new Set(["homepage_estimate", HANDYMAN_FORM_KEY, ...[...SITE_ROUTES, ...ADDED_CITY_ROUTES].filter((route) => FORM_SLUGS.has(route.slug) || route.path.startsWith("/service-area/")).map((route) => formKeyForSlug(route.slug))]);
 /** powIssuedAt/powNonce are still accepted from pages cached before the proof-of-work fallback was retired, so they get the same 403 as any unverified post. */
 const PAYLOAD_KEYS = new Set(["form_key", "form_data", "captchaToken", "powIssuedAt", "powNonce", "website", "customer_id", "site_id", "source_provider"]);
-const FIELD_KEYS = ["name", "email", "phone", "projectDetails", "projectType", "projectCity", "consent", "resumeFileName", "pageVariant", "utmSource", "utmMedium", "utmCampaign", "utmTerm", "utmContent", "gclid", "fbclid"];
+const FIELD_KEYS = ["name", "email", "phone", "projectDetails", "projectType", "projectCity", "consent", "resumeFileName", "pageVariant", "utmSource", "utmMedium", "utmCampaign", "utmTerm", "utmContent", "utmPlatform", "gclid", "fbclid", "fbc"];
 
 function projectTypesFor(formKey: string): readonly string[] {
   if (formKey === "careers_application") return CAREER_TYPES;
