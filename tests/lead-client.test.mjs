@@ -22,7 +22,7 @@ function client({ captchaFails = false, serverFails = false, deliveryFails = fal
   const sessionStorage = { getItem: (key) => store.get(key) ?? null, setItem: (key, value) => store.set(key, String(value)) };
   const window = { location: { search: "?utm_source=local-test&utm_campaign=repair&gclid=local-click" }, sessionStorage };
   const document = { cookie: "" };
-  return { api: loadModule("src/lib/lead-client.ts", { fetch, window, document, URLSearchParams, moduleMocks }), requests, window };
+  return { api: loadModule("src/lib/lead-client.ts", { fetch, window, document, URLSearchParams, moduleMocks }), requests, window, document };
 }
 
 test("client sends the minted reCAPTCHA token with the form and tracking fields", async () => {
@@ -56,6 +56,21 @@ test("a lead sent from an untagged form page carries the session's first-touch a
   assert.equal(later.utmPlatform, "fb_feed");
   assert.equal(later.fbclid, "IwAR0abc");
   assert.match(later.fbc, /^fb\.1\.\d+\.IwAR0abc$/);
+});
+
+test("the outgoing lead carries the real _fbc cookie when the pixel sets it after landing", async () => {
+  const { api, requests, window, document } = client();
+  window.location.search = "?utm_source=meta&utm_campaign=qa123&fbclid=IwAR0abc";
+  await api.postLead("contact", fields, "/contact");
+  assert.match(requests[0].body.form_data.fbc, /^fb\.1\.\d+\.IwAR0abc$/);
+  document.cookie = "_fbc=fb.1.1700000000000.IwAR0abc";
+  window.location.search = "";
+  await api.postLead("schedule_estimate", fields, "/schedule-an-estimate");
+  const sent = requests[1].body.form_data;
+  assert.equal(sent.fbc, "fb.1.1700000000000.IwAR0abc");
+  assert.equal(sent.fbclid, "IwAR0abc");
+  assert.equal(sent.utmSource, "meta");
+  assert.equal(sent.utmCampaign, "qa123");
 });
 
 test("without a reCAPTCHA token the client sends nothing and asks the visitor to retry", async () => {

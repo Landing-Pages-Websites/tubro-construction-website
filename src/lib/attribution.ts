@@ -69,12 +69,22 @@ function writeStored(fields: AttributionFields): void {
   }
 }
 
-/** Meta's click cookie when the pixel set it, else the documented fb.1.<ms>.<fbclid> form of the click id. */
+/** The click id inside an _fbc value (fb.<subdomain>.<ms>.<fbclid>). */
+function fbcClickId(fbc: string): string {
+  return fbc.split(".").slice(3).join(".");
+}
+
+/**
+ * Meta's own _fbc cookie whenever it is present for this click (the pixel often
+ * writes it after the first capture), else the stored value, else the
+ * documented fb.1.<ms>.<fbclid> form of the click id. A cookie from a different
+ * click never replaces the session's first-touch click.
+ */
 function withFbc(fields: AttributionFields): AttributionFields {
-  if (fields[FBC_KEY]) return fields;
-  const cookie = readCookie(FBC_COOKIE);
-  if (cookie) return { ...fields, [FBC_KEY]: clip(cookie) };
   const fbclid = fields[FBCLID_KEY];
+  const cookie = readCookie(FBC_COOKIE);
+  if (cookie && (!fbclid || fbcClickId(cookie).startsWith(fbclid))) return { ...fields, [FBC_KEY]: clip(cookie) };
+  if (fields[FBC_KEY]) return fields;
   return fbclid ? { ...fields, [FBC_KEY]: clip(`fb.1.${Date.now()}.${fbclid}`) } : fields;
 }
 

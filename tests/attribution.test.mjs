@@ -69,3 +69,24 @@ test("values are clipped to the server's 500-character field limit", () => {
   const { api } = browser({ search: `?utm_campaign=${"x".repeat(900)}` });
   assert.equal(api.leadAttribution().utmCampaign.length, 500);
 });
+
+test("a _fbc cookie the pixel writes after landing replaces the derived value", () => {
+  const { api, window, document } = browser({ search: AD_LANDING });
+  api.rememberAttribution();
+  assert.match(api.leadAttribution().fbc, /^fb\.1\.\d+\.IwAR0abc$/);
+  document.cookie = "_fbc=fb.3.1795557631078.IwAR0abc.AQYAAQMD";
+  window.location.search = "";
+  const fields = api.leadAttribution();
+  assert.equal(fields.fbc, "fb.3.1795557631078.IwAR0abc.AQYAAQMD");
+  assert.equal(fields.fbclid, "IwAR0abc");
+  assert.equal(fields.utmSource, "meta");
+});
+
+test("a _fbc cookie from a different click does not replace the first-touch click", () => {
+  const { api, document } = browser({ search: AD_LANDING });
+  api.rememberAttribution();
+  document.cookie = "_fbc=fb.1.1600000000000.OtherClick";
+  const fields = api.leadAttribution();
+  assert.match(fields.fbc, /^fb\.1\.\d+\.IwAR0abc$/);
+  assert.equal(fields.fbclid, "IwAR0abc");
+});
