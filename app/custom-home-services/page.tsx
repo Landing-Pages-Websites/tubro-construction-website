@@ -9,6 +9,7 @@ import { resolveSectionImages } from "@/lib/section-images";
 import { CustomHomeHero } from "./CustomHomeHero";
 import { CustomHomePlanning } from "./CustomHomePlanning";
 import { CustomHomeProcess } from "./CustomHomeProcess";
+import { CustomHomeCabinetryPricing } from "./CustomHomeCabinetryPricing";
 import { CustomHomeGallery } from "./CustomHomeGallery";
 import { CustomHomeEstimate } from "./CustomHomeEstimate";
 import { CustomHomeMotion } from "./CustomHomeMotion";
@@ -49,6 +50,7 @@ export default function Page(): ReactElement {
         <CustomHomeHero section={hero} images={resolveSectionImages(SLUG, hero)} />
         <CustomHomePlanning section={planning} />
         <CustomHomeProcess section={process} />
+        <CustomHomeCabinetryPricing />
         <CustomHomeGallery section={gallery} images={resolveSectionImages(SLUG, gallery)} />
         <CustomHomeEstimate section={estimate} />
       </main>

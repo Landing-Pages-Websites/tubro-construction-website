@@ -72,6 +72,16 @@
 .steps h3 { margin-top: 6px; font-size: 23px; font-weight: 600; letter-spacing: -.025em; }
 .steps p { font-size: 14px; line-height: 1.85; color: #485847; margin-top: 10px; }
 .steps li > svg { width: 30px; height: 30px; margin-top: 12px; stroke: #749478; stroke-width: 1; }
+.cabinetryPricing { display: grid; grid-template-columns: .9fr 1.1fr; gap: 10%; padding: 100px 7%; background: #fdfcf9; }
+.cabinetryPricingIntro h2 { margin: 18px 0 24px; max-width: 520px; }
+.cabinetryPricingIntro .body { max-width: 500px; }
+.cabinetryPricingDetails { align-self: center; }
+.cabinetryPricingLead { margin: 0 0 18px; font-size: 17px; font-weight: 600; }
+.cabinetryPricingDetails ul { margin: 0 0 24px; padding: 0; list-style: none; }
+.cabinetryPricingDetails li { padding: 18px 0 18px 28px; border-top: 1px solid #d8ddd0; font-size: 14px; line-height: 1.85; color: #55534c; position: relative; }
+.cabinetryPricingDetails li::before { content: ""; position: absolute; left: 0; top: 27px; width: 8px; height: 8px; border: 1px solid var(--color-action); }
+.cabinetryPricingDetails li strong { color: var(--color-action-deep); }
+.cabinetryPricingDetails .textLink { margin-top: 18px; }
 .gallery { position: relative; display: grid; grid-template-columns: 1.2fr .8fr; gap: 0 7%; padding: 110px 7% 100px; }
 .galleryIntro { max-width: 560px; padding-right: 24px; }
 .galleryIntro h2 { margin: 16px 0 22px; }
@@ -131,7 +141,7 @@
   .elevation { width: 290px; left: -15px; bottom: 15px; }
   .promiseBar { align-items: flex-start; }
   .promiseBar ul { gap: 15px 25px; }
-  .planning, .process, .gallery, .faq, .estimate { gap: 6%; padding-inline: 5%; }
+  .planning, .process, .cabinetryPricing, .gallery, .faq, .estimate { gap: 6%; padding-inline: 5%; }
   .steps li { gap: 18px; grid-template-columns: 50px 1fr; }
   .stepNumber { width: 50px; height: 50px; }
   .steps::before { left: 24px; }
@@ -152,7 +162,7 @@
   .explore { margin-top: 20px; }
   .promiseBar { flex-direction: column; gap: 16px; }
   .promiseBar ul { width: 100%; justify-content: space-between; }
-  .planning, .process, .gallery, .faq, .estimate { padding-block: 75px; }
+  .planning, .process, .cabinetryPricing, .gallery, .faq, .estimate { padding-block: 75px; }
   .planningList p { font-size: 14px; }
   .planningList > div { padding-block: 23px; }
   .materialPhoto > div { height: 460px; }
@@ -184,7 +194,7 @@
   .promiseBar > span { font-size: 19px; }
   .promiseBar ul { justify-content: start; gap: 14px 24px; }
   .promiseBar li { font-size: 14px; }
-  .planning, .process, .gallery, .faq, .estimate { display: block; padding: 62px 6%; }
+  .planning, .process, .cabinetryPricing, .gallery, .faq, .estimate { display: block; padding: 62px 6%; }
   .page h2 { font-size: 35px; line-height: 1.2; }
   .eyebrow { font-size: 14px; }
   .body { font-size: 15px; line-height: 1.85; }
@@ -198,6 +208,7 @@
   .steps::before { bottom: 68px; }
   .steps li { padding-block: 25px; gap: 20px; }
   .steps h3 { font-size: 22px; }
+  .cabinetryPricingDetails { margin-top: 38px; }
   .galleryIntro { padding-right: 0; }
   .galleryIntro .textLink { margin-bottom: 25px; }
   .materialPhoto { padding-top: 15px; margin-left: 16%; }
