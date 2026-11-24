@@ -69,22 +69,29 @@ function writeStored(fields: AttributionFields): void {
   }
 }
 
-/** The click id inside an _fbc value (fb.<subdomain>.<ms>.<fbclid>). */
-function fbcClickId(fbc: string): string {
-  return fbc.split(".").slice(3).join(".");
+/**
+ * True when an _fbc value (fb.<subdomain>.<ms>.<fbclid>[.<appendix>]) is for
+ * exactly this click id. Meta may append a dotted suffix after the click id,
+ * so the click id must be the whole remainder or end at a dot.
+ */
+function isFbcForClick(fbc: string, fbclid: string): boolean {
+  const click = fbc.split(".").slice(3).join(".");
+  return click === fbclid || click.startsWith(`${fbclid}.`);
 }
 
 /**
- * Meta's own _fbc cookie whenever it is present for this click (the pixel often
- * writes it after the first capture), else the stored value, else the
- * documented fb.1.<ms>.<fbclid> form of the click id. A cookie from a different
- * click never replaces the session's first-touch click.
+ * The session's fbc. Meta's own _fbc cookie for the first-touch click replaces
+ * a derived value (the pixel often writes it after the first capture). Any
+ * other cookie never replaces an fbc already kept for the session; with no
+ * fbc yet, a UTM-only landing takes the cookie it first sees, and a click id
+ * alone gets the documented fb.1.<ms>.<fbclid> form.
  */
 function withFbc(fields: AttributionFields): AttributionFields {
   const fbclid = fields[FBCLID_KEY];
   const cookie = readCookie(FBC_COOKIE);
-  if (cookie && (!fbclid || fbcClickId(cookie).startsWith(fbclid))) return { ...fields, [FBC_KEY]: clip(cookie) };
+  if (cookie && fbclid && isFbcForClick(cookie, fbclid)) return { ...fields, [FBC_KEY]: clip(cookie) };
   if (fields[FBC_KEY]) return fields;
+  if (cookie && !fbclid) return { ...fields, [FBC_KEY]: clip(cookie) };
   return fbclid ? { ...fields, [FBC_KEY]: clip(`fb.1.${Date.now()}.${fbclid}`) } : fields;
 }
 
@@ -102,12 +109,18 @@ export function rememberAttribution(): void {
   }
 }
 
-/** The values a lead should carry: the session's first touch, else this page's own URL. */
+/**
+ * The values a lead should carry: the session's first touch, else this page's
+ * own URL. An fbc first observed now is kept for the rest of the session, so a
+ * later click's cookie cannot replace it.
+ */
 export function leadAttribution(): AttributionFields {
   try {
     rememberAttribution();
-    const fields = readStored() ?? fromUrl(window.location.search);
-    return Object.keys(fields).length > 0 ? withFbc(fields) : {};
+    const stored = readStored();
+    const fields = withFbc(stored ?? fromUrl(window.location.search));
+    if (stored && fields[FBC_KEY] !== stored[FBC_KEY]) writeStored(fields);
+    return Object.keys(fields).length > 0 ? fields : {};
   } catch {
     return {};
   }

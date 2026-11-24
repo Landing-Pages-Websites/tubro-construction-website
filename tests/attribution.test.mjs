@@ -90,3 +90,28 @@ test("a _fbc cookie from a different click does not replace the first-touch clic
   assert.match(fields.fbc, /^fb\.1\.\d+\.IwAR0abc$/);
   assert.equal(fields.fbclid, "IwAR0abc");
 });
+
+test("a _fbc click id that only shares a prefix with the first-touch click is not used", () => {
+  const { api, document } = browser({ search: "?utm_source=meta&fbclid=abc" });
+  api.rememberAttribution();
+  document.cookie = "_fbc=fb.1.1700000000000.abcdef";
+  assert.match(api.leadAttribution().fbc, /^fb\.1\.\d+\.abc$/);
+});
+
+test("on a UTM-only landing the first _fbc seen is kept when a later click changes the cookie", () => {
+  const { api, window, document } = browser({ search: "?utm_source=meta&utm_campaign=first", cookie: "_fbc=fb.1.1700000000000.ClickA" });
+  api.rememberAttribution();
+  document.cookie = "_fbc=fb.1.1800000000000.ClickB";
+  window.location.search = "";
+  assert.equal(api.leadAttribution().fbc, "fb.1.1700000000000.ClickA");
+});
+
+test("on a UTM-only landing a cookie first seen later is kept for the rest of the session", () => {
+  const { api, document } = browser({ search: "?utm_source=meta" });
+  api.rememberAttribution();
+  assert.equal("fbc" in api.leadAttribution(), false);
+  document.cookie = "_fbc=fb.1.1700000000000.ClickA";
+  assert.equal(api.leadAttribution().fbc, "fb.1.1700000000000.ClickA");
+  document.cookie = "_fbc=fb.1.1800000000000.ClickB";
+  assert.equal(api.leadAttribution().fbc, "fb.1.1700000000000.ClickA");
+});
