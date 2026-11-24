@@ -18,8 +18,11 @@ function client({ captchaFails = false, serverFails = false, deliveryFails = fal
   const moduleMocks = {
     "./recaptcha-client": { mintCaptchaToken: async () => { if (captchaFails) throw new Error("Blocked script"); return "real-client-token"; } },
   };
-  const window = { location: { search: "?utm_source=local-test&utm_campaign=repair&gclid=local-click" } };
-  return { api: loadModule("src/lib/lead-client.ts", { fetch, window, URLSearchParams, moduleMocks }), requests };
+  const store = new Map();
+  const sessionStorage = { getItem: (key) => store.get(key) ?? null, setItem: (key, value) => store.set(key, String(value)) };
+  const window = { location: { search: "?utm_source=local-test&utm_campaign=repair&gclid=local-click" }, sessionStorage };
+  const document = { cookie: "" };
+  return { api: loadModule("src/lib/lead-client.ts", { fetch, window, document, URLSearchParams, moduleMocks }), requests, window };
 }
 
 test("client sends the minted reCAPTCHA token with the form and tracking fields", async () => {
@@ -35,6 +38,24 @@ test("client sends the minted reCAPTCHA token with the form and tracking fields"
   assert.equal(sent.form_data.gclid, "local-click");
   assert.equal(sent.website, "");
   assert.equal("website" in sent.form_data, false);
+});
+
+test("a lead sent from an untagged form page carries the session's first-touch attribution", async () => {
+  const { api, requests, window } = client();
+  window.location.search = "";
+  await api.postLead("schedule_estimate", fields, "/schedule-an-estimate");
+  const first = requests[0].body.form_data;
+  assert.equal(first.utmSource, undefined, "nothing stored before a tagged page view");
+  window.location.search = "?utm_source=meta&utm_campaign=120200&utm_platform=fb_feed&fbclid=IwAR0abc";
+  await api.postLead("contact", fields, "/contact");
+  window.location.search = "";
+  await api.postLead("schedule_estimate", fields, "/schedule-an-estimate");
+  const later = requests[2].body.form_data;
+  assert.equal(later.utmSource, "meta");
+  assert.equal(later.utmCampaign, "120200");
+  assert.equal(later.utmPlatform, "fb_feed");
+  assert.equal(later.fbclid, "IwAR0abc");
+  assert.match(later.fbc, /^fb\.1\.\d+\.IwAR0abc$/);
 });
 
 test("without a reCAPTCHA token the client sends nothing and asks the visitor to retry", async () => {

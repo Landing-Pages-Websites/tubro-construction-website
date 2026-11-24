@@ -133,7 +133,7 @@ test("a solved proof of work no longer delivers a lead, with or without a failed
 
 test("a verified lead is forwarded once, labelled as passing reCAPTCHA, without verification material", async () => {
   const api = boundary(verifiedEnv, passing, () => Response.json({ ok: true, id: "local-lead-id" }));
-  const response = await api.post({ ...minted, form_data: { ...payload.form_data, utmSource: "qa", gclid: "local-click" } }, host);
+  const response = await api.post({ ...minted, form_data: { ...payload.form_data, utmSource: "qa", gclid: "local-click", utmPlatform: "Facebook_Mobile_Feed", fbc: "fb.1.1700000000000.IwAR0abc" } }, host);
   assert.equal(response.status, 200);
   assert.deepEqual(await response.json(), { ok: true, id: "local-lead-id" });
   assert.equal(api.requests.length, 2);
@@ -141,6 +141,8 @@ test("a verified lead is forwarded once, labelled as passing reCAPTCHA, without 
   assert.equal(delivered.body.form_data.spamCheck, "Passed reCAPTCHA");
   assert.equal(delivered.body.form_data.utmSource, "qa");
   assert.equal(delivered.body.form_data.gclid, "local-click");
+  assert.equal(delivered.body.form_data.utmPlatform, "Facebook_Mobile_Feed");
+  assert.equal(delivered.body.form_data.fbc, "fb.1.1700000000000.IwAR0abc");
   assert.equal(JSON.stringify(delivered.headers), JSON.stringify({ "Content-Type": "application/json" }));
   for (const key of ["captchaToken", "powIssuedAt", "powNonce", "proof_claim", "recipients", "token"]) assert.equal(key in delivered.body, false);
 });
