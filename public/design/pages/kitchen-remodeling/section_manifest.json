@@ -204,6 +204,56 @@
       }
     },
     {
+      "id": "03-cost-planning",
+      "name": "cost-planning",
+      "source_blueprint_sections": [
+        "cost-planning"
+      ],
+      "functional_goal": "Advance the route intent with source-grounded content.",
+      "narrative_job": "Explain the estimate factors homeowners can review before requesting kitchen remodeling work.",
+      "composition": "content-annotated-material-callouts",
+      "composition_grammar": "alternating annotated details and material callout layout",
+      "motif_role": "crop_mark",
+      "focal_point": "What affects the cost of a kitchen remodel?",
+      "eye_path": "Start at the estimate factors, follow the measured crop mark, then move through the estimate explanation and action.",
+      "weight": "quiet",
+      "background": "white",
+      "frame": "refs/03-planning-details.png",
+      "content": {
+        "eyebrow": "Kitchen Remodeling in King & Pierce Counties",
+        "headline": "What affects the cost of a kitchen remodel?",
+        "body": "Every kitchen remodel is different. Tubro Construction builds an upfront estimate around the work your space needs, the materials you choose, and how you want the finished kitchen to function. We talk through:\n\nBefore work begins, we confirm the scope and selections and prepare a detailed estimate for your kitchen. That gives you a clearer view of what is included before construction starts, rather than relying on a one-size-fits-all price. Request a free estimate to discuss your project.",
+        "bullets": [
+          "Scope: layout changes, demolition, structural work, plumbing, electrical, and other preparation.",
+          "Cabinetry: stock, semi-custom, or custom cabinets, plus storage features and hardware.",
+          "Countertops: material, edge details, backsplash coordination, and installation.",
+          "Appliances: which appliances stay, which are replaced, their sizes, and installation needs.",
+          "Flooring and tile: repairs or replacement, materials, patterns, and the areas to be finished.",
+          "Lighting: task, ambient, and accent lighting, along with the electrical work needed.",
+          "Design choices: sinks, faucets, paint, trim, and the finish details that bring the room together."
+        ],
+        "steps": [],
+        "cta": "",
+        "secondary_cta": "",
+        "items": [],
+        "options": []
+      },
+      "imagery": {
+        "sources": [
+          "sources/drive/0126001_kitchen 01.jpg"
+        ],
+        "labels": [
+          "Kitchen Detail"
+        ],
+        "rule": "Caption tabs identify source roles only; no unsupported project location, result, or testimonial is implied."
+      },
+      "source_constraints": [],
+      "edge_contracts": {
+        "top": "Enter as alternating annotated details and material callout layout; exclude global navigation.",
+        "bottom": "Exit cleanly into the next content frame; no footer or global chrome."
+      }
+    },
+    {
       "id": "04-process-faq",
       "name": "process-faq",
       "source_blueprint_sections": [
@@ -336,6 +386,7 @@
       "01-hero": "loud",
       "02-project-gallery": "loud",
       "03-planning-details": "quiet",
+      "03-cost-planning": "quiet",
       "04-process-faq": "quiet",
       "05-estimate-cta": "loud"
     },
@@ -353,6 +404,10 @@
         "band": "white"
       },
       {
+        "section": "03-cost-planning",
+        "band": "white"
+      },
+      {
         "section": "04-process-faq",
         "band": "sage"
       },
@@ -364,6 +419,7 @@
     "composition_sequence": [
       "hero-architectural-stepped-split",
       "gallery-room-scale-single-focal-detail-strip",
+      "content-annotated-material-callouts",
       "content-annotated-material-callouts",
       "process-compact-numbered-strip",
       "cta-centered-estimate-brief-peripheral-proof"

@@ -57,14 +57,21 @@ export function ContentAnnotatedMaterialCallouts({
               </div>
             )}
             <ol className="mt-9 space-y-6">
-              {callouts.map((label) => (
-                <li key={label} className="relative pl-7">
-                  <span aria-hidden="true" className="absolute top-1.5 left-0 size-3 rounded-full bg-action" />
-                  {/* Leader hairline: spans the exact grid gap back to the photo edge. */}
-                  <span aria-hidden="true" className="absolute top-[11px] right-full hidden h-0.5 w-14 bg-action lg:block" />
-                  <p className="font-fjalla text-base leading-relaxed text-ink/85">{label}</p>
-                </li>
-              ))}
+              {callouts.map((label) => {
+                const separator = label.indexOf(":");
+                const labelName = separator > 0 ? label.slice(0, separator + 1) : "";
+                const labelCopy = separator > 0 ? label.slice(separator + 1).trimStart() : label;
+                return (
+                  <li key={label} className="relative pl-7">
+                    <span aria-hidden="true" className="absolute top-1.5 left-0 size-3 rounded-full bg-action" />
+                    {/* Leader hairline: spans the exact grid gap back to the photo edge. */}
+                    <span aria-hidden="true" className="absolute top-[11px] right-full hidden h-0.5 w-14 bg-action lg:block" />
+                    <p className="font-fjalla text-base leading-relaxed text-ink/85">
+                      {labelName && <strong>{labelName}</strong>} {labelCopy}
+                    </p>
+                  </li>
+                );
+              })}
             </ol>
             {supporting.length > 0 && <LedgerList items={supporting} className="mt-9" />}
             {(section.content.cta || section.content.secondary_cta) && (

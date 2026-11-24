@@ -37,11 +37,14 @@ export function SectionIntro({
       >
         {section.content.headline}
       </Heading>
-      {section.content.body && (
-        <p className={`mt-5 max-w-xl font-fjalla text-base leading-relaxed sm:text-lg ${bodyColor}`}>
-          {section.content.body}
+      {section.content.body && section.content.body.split(/\n\n+/).map((paragraph, index) => (
+        <p
+          key={`${headingId}-body-${index}`}
+          className={`${index === 0 ? "mt-5" : "mt-3"} max-w-xl font-fjalla text-base leading-relaxed sm:text-lg ${bodyColor}`}
+        >
+          {paragraph}
         </p>
-      )}
+      ))}
     </div>
   );
 }
