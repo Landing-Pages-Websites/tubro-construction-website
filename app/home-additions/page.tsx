@@ -5,6 +5,7 @@ import { resolveSectionImages } from "@/lib/section-images";
 import { contextualLinks, ctaHref } from "@/lib/section-links";
 import { COMPOSITION_REGISTRY } from "@/components/sections/registry";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { PriorityCityLinks } from "@/components/shared/PriorityCityLinks";
 import { SiteFooter } from "@/components/shared/SiteFooter";
 import { SiteMotion } from "@/components/shared/SiteMotion";
 import { siteMetadata } from "@/lib/seo";
@@ -79,6 +80,7 @@ export default function Page(): ReactElement {
             </Fragment>
           );
         })}
+        <PriorityCityLinks />
       </main>
       <SiteFooter />
     </div>
