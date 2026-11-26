@@ -251,3 +251,22 @@
   .a-room-label h3 { font-size: 18px; }
   .a-room-label p { font-size: 14px; }
 }
+
+/* Color pass after Rich's earlier site: solid green bands and gold accents instead of all-white sections. */
+.variant-a { --a-band:#0a6f33; --a-forest:#225a27; --a-gold:#f2dc6b; --a-mist:#f1f1ee; }
+.variant-a .a-proof { background:var(--a-band); color:#fff; }
+.variant-a .a-proof h2,.variant-a .a-proof li,.variant-a .a-proof li > span:first-child,.variant-a .a-proof p { color:#fff; }
+.variant-a .a-proof p > span { color:var(--a-gold); }
+.variant-a .a-proof .bg-action,.a-proof ul:first-child li > span:last-child::after { background:#fff; }
+.variant-a .a-proof .bg-ink\/25 { background:rgba(255,255,255,.45); }
+.variant-a .a-proof .border-action { border-color:#fff; }
+.a-proof::before,.a-proof::after { border-color:#fff; }
+.a-rooms { background:var(--a-mist); }
+.a-process { background:var(--a-forest); color:#fff; }
+.a-process h2,.a-process h3,.a-step-body,.a-process-reassurance { color:#fff; }
+.a-step-number { color:var(--a-gold); }
+.a-process-route { stroke:var(--a-gold); }
+.a-process-route circle { fill:var(--a-gold); }
+.a-process ol { border-color:var(--a-gold); }
+.a-process li::before { background:var(--a-gold); }
+.variant-a .a-process :focus-visible { outline-color:#fff; }
