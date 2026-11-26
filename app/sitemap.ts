@@ -4,7 +4,7 @@ import { blogPosts, legacyPages } from "@/lib/blog-posts";
 import { SITE_URL as BASE_URL } from "@/lib/seo";
 
 /** Added outside SITE_ROUTES, which is bound to the generated design-artifact set. */
-const EXTRA_PATHS = ["/handyman", "/aging-in-place", "/commercial", "/stairs", ...ADDED_CITY_ROUTES.map((route) => route.path)];
+const EXTRA_PATHS = ["/handyman", "/aging-in-place", "/commercial", "/stairs", "/doors", ...ADDED_CITY_ROUTES.map((route) => route.path)];
 
 /**
  * Stored article dates are older than later edits to those same files, so they
