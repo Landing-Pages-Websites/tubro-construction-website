@@ -7,26 +7,16 @@ import { SITE_URL as BASE_URL } from "@/lib/seo";
 const EXTRA_PATHS = ["/handyman", "/aging-in-place", "/commercial", "/stairs", ...ADDED_CITY_ROUTES.map((route) => route.path)];
 
 /**
- * Article modification dates come from the post record (dateModified, else the
- * published date). Service, city, and utility pages have no stored modification
- * date, so they stay undated rather than sharing one invented timestamp.
+ * Stored article dates are older than later edits to those same files, so they
+ * are not reliable modification dates. Omit lastmod until a date is maintained
+ * with the content it describes.
  */
-function articleLastModified(value: string): string | undefined {
-  const trimmed = value.trim();
-  if (!trimmed) return undefined;
-  const parsed = new Date(trimmed);
-  if (Number.isNaN(parsed.getTime())) return undefined;
-  return parsed.toISOString();
-}
 
 /** Core pages retain their order, followed by published articles. */
 export default function sitemap(): MetadataRoute.Sitemap {
   return [...SITE_ROUTES.map((route) => ({
     url: `${BASE_URL}${route.path}`,
-  })), ...EXTRA_PATHS.map((path) => ({ url: `${BASE_URL}${path}` })), ...[...blogPosts, ...legacyPages].map((post) => {
-    const lastModified = articleLastModified(post.dateModified || post.publishedDate);
-    return lastModified
-      ? { url: `${BASE_URL}${post.canonicalPath}`, lastModified }
-      : { url: `${BASE_URL}${post.canonicalPath}` };
-  })];
+  })), ...EXTRA_PATHS.map((path) => ({ url: `${BASE_URL}${path}` })), ...[...blogPosts, ...legacyPages].map((post) => ({
+    url: `${BASE_URL}${post.canonicalPath}`,
+  }))];
 }
