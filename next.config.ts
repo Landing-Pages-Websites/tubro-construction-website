@@ -64,6 +64,14 @@ const nextConfig: NextConfig = {
   // Required for the PostHog proxy: its API calls can use trailing slashes,
   // which Next would otherwise redirect (dropping the POST body).
   skipTrailingSlashRedirect: true,
+  async headers() {
+    return [{
+      // These photos have no content hash. Vercel otherwise sends max-age 0,
+      // and the image optimizer copies that lifetime onto every resized photo.
+      source: "/images/:path*",
+      headers: [{ key: "Cache-Control", value: "public, max-age=86400, must-revalidate" }],
+    }];
+  },
 };
 
 export default withMegaPreview(nextConfig);
