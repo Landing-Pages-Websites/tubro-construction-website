@@ -12,7 +12,12 @@ import { megaPreviewNavScript } from "@/mega-preview/preview_nav.mjs";
 
 const GTM_CONTAINER_ID = "GTM-WZRPX472";
 const CTM_SCRIPT_SRC = "https://572388.tctm.co/t.js";
-const GTM_BOOTSTRAP = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_CONTAINER_ID}');`;
+const OPTIMIZER_SCRIPT_SRC = "https://cdn.gomega.ai/scripts/optimizer.min.js";
+const REVIEW_BRIDGE_SCRIPT_SRC = "https://app.gomega.ai/review-bridge/latest/review-bridge.js";
+// Loads the same four tags the head used to inject immediately. Waiting until
+// the first paint (or the first tap) keeps GTM, CallTrackingMetrics, the MEGA
+// optimizer, and the review bridge off the mobile main thread during LCP.
+const DEFERRED_TRACKING = `(function(){var started=false;var tags={optimizer:${JSON.stringify(OPTIMIZER_SCRIPT_SRC)},reviewBridge:${JSON.stringify(REVIEW_BRIDGE_SCRIPT_SRC)},gtm:"https://www.googletagmanager.com/gtm.js?id=${GTM_CONTAINER_ID}",callTracking:${JSON.stringify(CTM_SCRIPT_SRC)}};function inject(src,defer){var s=document.createElement("script");s.src=src;s.async=!defer;if(defer)s.defer=true;document.head.appendChild(s);}function start(){if(started)return;started=true;["pointerdown","keydown","touchstart"].forEach(function(e){window.removeEventListener(e,start);});window.MEGA_TAG_CONFIG={siteKey:"9408e00b76f9qp21"};window.API_ENDPOINT="https://optimizer.gomega.ai";window.TRACKING_API_ENDPOINT="https://events-api.gomega.ai";inject(tags.optimizer,false);inject(tags.reviewBridge,true);window.dataLayer=window.dataLayer||[];window.dataLayer.push({"gtm.start":new Date().getTime(),event:"gtm.js"});inject(tags.gtm,false);inject(tags.callTracking,false);}["pointerdown","keydown","touchstart"].forEach(function(e){window.addEventListener(e,start,{passive:true});});function arm(){var run=function(){if(window.requestIdleCallback)window.requestIdleCallback(start,{timeout:1500});else window.setTimeout(start,1200);};if(window.requestAnimationFrame)window.requestAnimationFrame(function(){window.requestAnimationFrame(run);});else run();}if(document.fonts&&document.fonts.ready)document.fonts.ready.then(arm,arm);else window.addEventListener("load",arm);})();`;
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -55,15 +60,7 @@ export default function RootLayout({
     <html lang="en" className={`${poppins.variable} ${poppinsDeferred.variable} ${fjallaOne.variable}`}>
       <head>
         {navScript ? <script dangerouslySetInnerHTML={{ __html: navScript }} /> : null}
-        <script dangerouslySetInnerHTML={{ __html: `window.MEGA_TAG_CONFIG={siteKey:"9408e00b76f9qp21"};window.API_ENDPOINT="https://optimizer.gomega.ai";window.TRACKING_API_ENDPOINT="https://events-api.gomega.ai";` }} />
-        <script src="https://cdn.gomega.ai/scripts/optimizer.min.js" async />
-        <script
-          src="https://app.gomega.ai/review-bridge/latest/review-bridge.js"
-          crossOrigin="anonymous"
-          defer
-        />
-        <script dangerouslySetInnerHTML={{ __html: GTM_BOOTSTRAP }} />
-        <script src={CTM_SCRIPT_SRC} async />
+        <script dangerouslySetInnerHTML={{ __html: DEFERRED_TRACKING }} />
       </head>
       <body>
         <noscript>

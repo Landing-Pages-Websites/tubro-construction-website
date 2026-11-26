@@ -30,6 +30,11 @@ const nextConfig: NextConfig = {
     ...trackingClientEnv(),
   },
   images: {
+    // Hashed /_next/static/media files already cache for a year. Photos served
+    // from /images inherit the source file's max-age of 0, so the optimizer
+    // was telling browsers to revalidate every optimized photo. One day is
+    // the longest cache this deployment controls for those responses.
+    minimumCacheTTL: 60 * 60 * 24,
     remotePatterns: [{
       // MEGA-published article hero images for this customer only.
       protocol: "https",
