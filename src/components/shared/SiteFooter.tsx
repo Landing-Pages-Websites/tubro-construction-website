@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { BadgeCheck, Clock, Mail, MapPin, Phone } from "lucide-react";
 import type { ReactElement } from "react";
 import { BRAND } from "@/lib/content";
 import { IMAGES } from "@/lib/images";
@@ -79,6 +79,16 @@ export function SiteFooter(): ReactElement {
             <li className="flex items-center gap-2.5">
               <MapPin className="size-4 shrink-0 text-action" aria-hidden="true" />
               {BRAND.serviceArea}
+            </li>
+            <li className="flex items-center gap-2.5">
+              <BadgeCheck className="size-4 shrink-0 text-action" aria-hidden="true" />
+              <a
+                href="https://secure.lni.wa.gov/verify/Detail.aspx?LIC=TUBROCI900DR&SAW=&UBI=602996932"
+                className="inline-flex min-h-11 items-center hover:text-ink"
+                rel="noopener noreferrer"
+              >
+                {BRAND.contractorRegistration}
+              </a>
             </li>
           </ul>
         </div>
