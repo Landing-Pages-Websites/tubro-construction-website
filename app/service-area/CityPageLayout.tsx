@@ -15,6 +15,24 @@ import { CITY_PROFILES } from "./city-content";
 import { BonneyLakeSchema } from "./BonneyLakeSchema";
 import styles from "./city.module.css";
 
+function cityServiceSchema(route: CityRoute) {
+  const pageUrl = `https://www.tubroconstruction.com${route.path}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${pageUrl}#service`,
+    name: `Home remodeling in ${route.city}, Washington`,
+    serviceType: "Home remodeling",
+    description: `Home remodeling in ${route.city}, Washington, from Tubro Construction. The team plans kitchens, bathrooms, additions, and whole-home remodeling, with free estimates and upfront pricing.`,
+    url: pageUrl,
+    provider: { "@id": "https://www.tubroconstruction.com/#organization" },
+    areaServed: {
+      "@type": "City",
+      name: `${route.city}, Washington`,
+    },
+  };
+}
+
 const BONNEY_LAKE_SCHEMA = {
   "@context": "https://schema.org",
   "@graph": [
@@ -89,6 +107,10 @@ export function CityPageLayout({ route }: { route: CityRoute }): ReactElement {
     <div className={styles.frame} data-motion-variant="a">
 
       <SiteHeader />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(cityServiceSchema(route)) }}
+      />
       {route.citySlug === "bonney-lake" ? (
         <script
           type="application/ld+json"

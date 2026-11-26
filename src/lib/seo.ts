@@ -21,9 +21,45 @@ export function siteMetadata(title: string, description: string, path: string, i
   };
 }
 
+/**
+ * Confirmed public facts only.
+ * Phone, email, and Monday–Friday 7:00 a.m.–4:00 p.m. hours are visible in the site footer.
+ * The eight cities are the audit's priority service cities and are linked from live city pages.
+ * No street address: the public site shows a service area, not a storefront. The Maple Valley
+ * PMB is a mailing address, and directory copies are not a confirmed public location.
+ * No geo, priceRange, or sameAs: those are not independently confirmed on the site.
+ */
+export const PRIORITY_SERVICE_CITIES = [
+  "Auburn, Washington",
+  "Black Diamond, Washington",
+  "Covington, Washington",
+  "Enumclaw, Washington",
+  "Issaquah, Washington",
+  "Kent, Washington",
+  "Maple Valley, Washington",
+  "Renton, Washington",
+] as const;
+
 export const businessSchema = {
-  "@context": "https://schema.org", "@type": ["LocalBusiness", "Organization"],
-  "@id": `${SITE_URL}/#organization`, name: BRAND.name, url: SITE_URL,
-  telephone: "+12532162633", email: BRAND.email, logo: `${SITE_URL}${SOCIAL_IMAGE}`,
-  areaServed: ["King County, Washington", "Pierce County, Washington"],
+  "@context": "https://schema.org",
+  "@type": ["GeneralContractor", "HomeAndConstructionBusiness", "LocalBusiness", "Organization"],
+  "@id": `${SITE_URL}/#organization`,
+  name: BRAND.name,
+  url: SITE_URL,
+  telephone: "+12532162633",
+  email: BRAND.email,
+  logo: `${SITE_URL}${SOCIAL_IMAGE}`,
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "07:00",
+      closes: "16:00",
+    },
+  ],
+  areaServed: [
+    ...PRIORITY_SERVICE_CITIES,
+    "King County, Washington",
+    "Pierce County, Washington",
+  ],
 };
