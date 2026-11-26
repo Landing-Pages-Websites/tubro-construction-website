@@ -137,6 +137,7 @@ export const NAV_SERVICES = [
   { href: "/custom-home-services", label: "Custom Home Services" },
   { href: "/handyman", label: "Handyman" },
   { href: "/aging-in-place", label: "Aging in Place & Accessibility" },
+  { href: "/stairs", label: "Stairs" },
 ] as const;
 
 export const NAV_COMPANY = [
