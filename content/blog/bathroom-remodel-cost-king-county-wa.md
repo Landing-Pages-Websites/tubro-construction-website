@@ -13,7 +13,7 @@ description: "See realistic King County bathroom remodel cost ranges, walk-in sh
 canonicalPath: "https://www.tubroconstruction.com/blog/bathroom-remodel-cost-king-county-wa"
 ---
 
-If you are researching **bathroom remodel cost in King County, WA**, a realistic early planning range is about $8,000 to $40,000 or more, depending on the scope. A focused update may stay near the lower end, while a full renovation with layout changes, extensive tile, premium finishes, or concealed repairs can move well above the upper end. These are planning benchmarks, not a quote for a specific home. For broader planning context, review Tubro Construction's [Western Washington bathroom cost guide](https://www.tubroconstruction.com/bathroom-remodel-cost-western-washington).
+If you are researching **bathroom remodel cost in King County, WA**, a realistic early planning range is about $8,000 to $40,000 or more, depending on the scope. A focused update may stay near the lower end, while a full renovation with layout changes, extensive tile, premium finishes, or concealed repairs can move well above the upper end. These are planning benchmarks, not a quote for a specific home. For broader planning context, review Tubro Construction's [Western Washington bathroom cost guide](https://www.tubroconstruction.com/bathroom-remodel-cost-in-western-washington).
 
 **[Schedule a free estimate with Tubro Construction](https://www.tubroconstruction.com/schedule-an-estimate) to discuss your King County bathroom, priorities, and project scope.**
 
@@ -23,7 +23,7 @@ There is no single average bathroom remodel cost for every King County home. Tub
 
 Those ranges are adapted from Tubro Construction's published [Maple Valley bathroom remodel cost guide](https://www.tubroconstruction.com/how-much-does-a-bathroom-remodel-cost-in-maple-valley-wa). They give King County homeowners a useful starting point without pretending that a bathroom in Bellevue, Renton, Auburn, or another community can be priced from square footage alone.
 
-For a broader overview of bathroom planning in King and Pierce Counties, see Tubro Construction's [Bathroom Remodeling in Western Washington: Costs, Options, and How to Plan](https://www.tubroconstruction.com/bathroom-remodel-cost-western-washington). This King County cluster article narrows the discussion to local budget planning, walk-in shower scope, and the information that helps an estimator prepare a useful proposal.
+For a broader overview of bathroom planning in King and Pierce Counties, see Tubro Construction's [Bathroom Remodeling in Western Washington: Costs, Options, and How to Plan](https://www.tubroconstruction.com/bathroom-remodel-cost-in-western-washington). This King County cluster article narrows the discussion to local budget planning, walk-in shower scope, and the information that helps an estimator prepare a useful proposal.
 
 ## Bathroom remodel cost breakdown: focused, mid-range, and major projects
 

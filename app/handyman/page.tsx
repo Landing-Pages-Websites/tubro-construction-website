@@ -3,6 +3,7 @@ import type { ReactElement } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { PriorityCityLinks } from "@/components/shared/PriorityCityLinks";
 import { SiteFooter } from "@/components/shared/SiteFooter";
 import { PhoneCta } from "@/components/sections/PhoneCta";
 import { LeadForm } from "@/components/sections/LeadForm";
@@ -117,6 +118,7 @@ export default function Page(): ReactElement {
             <a className={styles.secondary} href={`mailto:${BRAND.email}`}>Email {BRAND.email}</a>
           </div>
         </section>
+        <PriorityCityLinks />
       </main>
       <SiteFooter />
     </div>

@@ -27,7 +27,9 @@ export function siteMetadata(title: string, description: string, path: string, i
  * The eight cities are the audit's priority service cities and are linked from live city pages.
  * No street address: the public site shows a service area, not a storefront. The Maple Valley
  * PMB is a mailing address, and directory copies are not a confirmed public location.
- * No geo, priceRange, or sameAs: those are not independently confirmed on the site.
+ * No geo or priceRange: those are not independently confirmed on the site.
+ * sameAs lists the Google, Houzz, and Nextdoor profiles verified November 26, 2026
+ * as Tubro Construction (remodeling), phone (253) 216-2633. No carpet-cleaning profile.
  */
 export const PRIORITY_SERVICE_CITIES = [
   "Auburn, Washington",
@@ -61,5 +63,10 @@ export const businessSchema = {
     ...PRIORITY_SERVICE_CITIES,
     "King County, Washington",
     "Pierce County, Washington",
+  ],
+  sameAs: [
+    "https://maps.google.com/maps?cid=4189534280358030411",
+    "https://www.houzz.com/professionals/general-contractors/tubro-construction-pfvwus-pf~668266200",
+    "https://nextdoor.com/pages/tubro-construction-ravensdale-wa/",
   ],
 };

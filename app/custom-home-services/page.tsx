@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactElement } from "react";
 import { siteMetadata } from "@/lib/seo";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { PriorityCityLinks } from "@/components/shared/PriorityCityLinks";
 import { SiteFooter } from "@/components/shared/SiteFooter";
 import { SiteMotion } from "@/components/shared/SiteMotion";
 import { loadManifest } from "@/lib/manifest";
@@ -53,6 +54,7 @@ export default function Page(): ReactElement {
         <CustomHomeCabinetryPricing />
         <CustomHomeGallery section={gallery} images={resolveSectionImages(SLUG, gallery)} />
         <CustomHomeEstimate section={estimate} />
+        <PriorityCityLinks />
       </main>
       <SiteFooter />
     </div>

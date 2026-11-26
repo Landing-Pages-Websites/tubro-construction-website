@@ -2,6 +2,7 @@ import type { ReactElement } from "react";
 import { routeForSlug } from "@/lib/routes";
 import { PageSections } from "@/components/sections/PageSections";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { PriorityCityLinks } from "@/components/shared/PriorityCityLinks";
 import { SiteFooter } from "@/components/shared/SiteFooter";
 import { SiteMotion } from "@/components/shared/SiteMotion";
 
@@ -16,6 +17,7 @@ export function DesignedPage({ slug }: { slug: string }): ReactElement {
       <SiteHeader />
       <main id="main-content" tabIndex={-1}>
         <PageSections slug={slug} path={route.path} />
+        <PriorityCityLinks />
       </main>
       <SiteFooter />
     </div>

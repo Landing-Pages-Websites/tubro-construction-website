@@ -5,6 +5,7 @@ import type { ReactElement } from "react";
 import { BRAND } from "@/lib/content";
 import { IMAGES } from "@/lib/images";
 import { NAV_COMPANY, NAV_FOOTER_EXTRA, NAV_SERVICES } from "@/lib/routes";
+import { VERIFIED_PROFILE_LINKS } from "@/lib/profiles";
 
 const FOOTER_LINK =
   "inline-flex min-h-11 min-w-11 items-center font-poppins text-sm text-ink/70 transition-colors hover:text-ink";
@@ -83,9 +84,24 @@ export function SiteFooter(): ReactElement {
         </div>
       </div>
       <div className="border-t border-ink/10">
-        <p className="mx-auto max-w-7xl px-5 py-5 font-poppins text-sm text-ink/70 sm:px-8">
-          Veteran-owned · Founded in 2010 · © 2026 {BRAND.name}
-        </p>
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-5 py-5 sm:px-8">
+          <p className="font-poppins text-sm text-ink/70">
+            Veteran-owned · Founded in 2010 · © 2026 {BRAND.name}
+          </p>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Tubro Construction profiles">
+            {VERIFIED_PROFILE_LINKS.map((profile) => (
+              <li key={profile.href}>
+                <a
+                  href={profile.href}
+                  className="inline-flex min-h-11 items-center font-poppins text-sm font-semibold text-ink/70 hover:text-ink"
+                  rel="noopener noreferrer"
+                >
+                  {profile.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </footer>
   );

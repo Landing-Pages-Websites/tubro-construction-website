@@ -13,7 +13,7 @@ description: "Learn what to look for in a veteran owned remodeling contractor, f
 canonicalPath: "https://www.tubroconstruction.com/blog/veteran-owned-remodeling-contractor"
 ---
 
-When you search for a veteran owned remodeling contractor, you may be looking for more than a label. You want a company that communicates clearly, keeps its word, manages details, and treats your home with respect. Veteran ownership can be a meaningful part of that story. But it should be one part of a larger evaluation that includes licensing, scope, pricing, project management, and references. For the full evaluation framework, start with Tubro's [guide to hiring a remodeling contractor in Western Washington](https://www.tubroconstruction.com/how-to-hire-a-remodeling-contractor-western-washington).
+When you search for a veteran owned remodeling contractor, you may be looking for more than a label. You want a company that communicates clearly, keeps its word, manages details, and treats your home with respect. Veteran ownership can be a meaningful part of that story. But it should be one part of a larger evaluation that includes licensing, scope, pricing, project management, and references. For the full evaluation framework, start with Tubro's [guide to hiring a remodeling contractor in Western Washington](https://www.tubroconstruction.com/blog/how-to-hire-a-remodeling-contractor-western-washington).
 
 **[Schedule a free estimate with Tubro Construction](https://www.tubroconstruction.com/schedule-an-estimate) to discuss your remodeling goals in Western Washington.**
 
@@ -69,7 +69,7 @@ Tubro Construction works with homeowners in Pierce County and across Western Was
 
 If you are comparing companies near Joint Base Lewis-McChord or elsewhere in Pierce County, keep the evaluation practical. Ask whether the contractor works in your area, how site visits are handled, who manages subcontractors, and how decisions are documented. A veteran-owned identity may help you find a values-aligned company, but the estimate and project process should confirm whether the fit is right.
 
-For the broader trust framework, read the planned [guide to hiring a remodeling contractor in Western Washington](https://www.tubroconstruction.com/how-to-hire-a-remodeling-contractor-western-washington). It covers questions, red flags, estimates, and communication factors that apply to any contractor comparison.
+For the broader trust framework, read the planned [guide to hiring a remodeling contractor in Western Washington](https://www.tubroconstruction.com/blog/how-to-hire-a-remodeling-contractor-western-washington). It covers questions, red flags, estimates, and communication factors that apply to any contractor comparison.
 
 ## Why Homeowners Choose Veteran-Owned Contractors in Western Washington
 
