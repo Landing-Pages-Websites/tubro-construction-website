@@ -8,6 +8,9 @@ export const BRAND = {
   emailDomain: "tubroconstruction.com",
   hours: "Monday–Friday, 7:00 a.m.–4:00 p.m.",
   serviceArea: "King and Pierce Counties",
+  // WA L&I contractor registration, active as of November 26, 2026.
+  // License TUBROCI900DR, effective through April 23, 2028. Not a street address.
+  contractorRegistration: "WA Contractor Reg. TUBROCI900DR",
   discount:
     "Active-duty military members and first responders receive 5% off.",
   careersNote: "Looking to build a career? Resumes are welcome by email at",
