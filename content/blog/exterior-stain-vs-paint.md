@@ -1,6 +1,6 @@
 ---
 slug: "exterior-stain-vs-paint"
-title: "Stain or Paint for Exterior Wood? A Homeowner's Decision Guide"
+title: "Stain or Paint for Exterior Wood?"
 description: "Compare exterior wood stain and paint by existing finish, grain visibility, surface use, preparation scope, sample approval, and future maintenance."
 category: "Painting & exteriors"
 image: "/images/projects/0425021_exterior stain 01.jpg"

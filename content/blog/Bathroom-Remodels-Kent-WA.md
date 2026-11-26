@@ -2,14 +2,14 @@
 id: "item_ptnrv0nzhbtdxx73yr7pde8z9w"
 slug: "Bathroom-Remodels-Kent-WA"
 title: "Bathroom Remodels in Kent, WA"
-description: "Discover unparalleled craftsmanship with Tubro Construction, the leading home remodeling company in Kent, WA Call 253-352-4578 to transform your home!"
+description: "Discover unparalleled craftsmanship with Tubro Construction, the leading home remodeling company in Kent, WA. Call 253-216-2633 to transform your home!"
 canonicalPath: "/Bathroom-Remodels-Kent-WA"
 kind: "page"
 sourceUrl: "https://www.tubroconstruction.com/Bathroom-Remodels-Kent-WA"
 ---
 
 <span></span>
-<h2><span>Premier Home Remodeling Company in Maple Valley, Washington</span><span><br/></span></h2>
+<h2><span>Premier Bathroom Remodeling Company in Kent, Washington</span><span><br/></span></h2>
 <a href="/contact"> <span> <span></span>
 </span>
 <span>CONTACT US</span>
@@ -30,9 +30,9 @@ Oops, there was an error sending your message.<br/>Please try again later.
 
 <span></span>
 <h2><span>Bathroom Remodels in Kent, WA</span><span><br/></span></h2>
-<a href="tel:253-352-4578"> <span> <span></span>
+<a href="tel:+12532162633" aria-label="Call 253-216-2633"> <span> <span></span>
 </span>
-<span>253-352-4578</span>
+<span>253-216-2633</span>
 </a>
 
 <p><span><span>REQUEST A</span>
@@ -247,9 +247,9 @@ All Locations
 </ul>
 
 
-<a href="tel:"> <span> <span></span>
+<a href="tel:+12532162633" aria-label="Call 253-216-2633"> <span> <span></span>
 </span>
-<span>Call Us</span>
+<span>Call 253-216-2633</span>
 </a>
 
 

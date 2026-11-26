@@ -1,7 +1,7 @@
 ---
 id: "item_z5y2fc08x6xjgbv5eprn181a98"
 slug: "how-to-maximize-natural-light-when-remodeling-your-auburn-home"
-title: "How to Maximize Natural Light When Remodeling Your Auburn Home"
+title: "Bring More Natural Light Into an Auburn Remodel"
 date: "2025-12-31T16:00:05"
 dateModified: "2026-03-20T07:19:09"
 description: "Discover smart ways to bring more daylight into your Auburn home remodel. From windows to colors, learn how to create a brighter, more inviting space."

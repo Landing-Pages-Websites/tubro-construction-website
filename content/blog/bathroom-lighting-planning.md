@@ -1,6 +1,6 @@
 ---
 slug: "bathroom-lighting-planning"
-title: "Bathroom Lighting: Plan the Mirror, Room, and Controls Together"
+title: "Plan Bathroom Lighting Before You Remodel"
 description: "Make bathroom lighting decisions around mirror tasks, brightness, light appearance, fixture placement, and controls before electrical work begins."
 category: "Bathroom remodeling"
 image: "/images/projects/0825041_bathroom 09.jpg"

@@ -1,10 +1,10 @@
 ---
 id: "item_ngvzrpms6ah53j9ek66h75qv44"
 slug: "what-you-need-to-know-about-replacing-your-homes-carpet-with-luxury-vinyl-plank-flooring"
-title: "What You Need to Know About Replacing Your Home’s Carpet with Luxury Vinyl Plank Flooring"
+title: "Replacing Carpet with Luxury Vinyl Plank"
 date: "2023-07-28T07:28:49"
 dateModified: "2026-03-20T07:19:12"
-description: "Experience luxury underfoot with our exquisite collection of luxury vinyl planks. Indulge in the timeless elegance of hardwood or the natural look of stone, all while enjoying the durability and easy maintenance of vinyl"
+description: "What to know before replacing carpet with luxury vinyl plank, including water resistance, feel underfoot, and where it fits."
 category: "Remodeling journal"
 image: "/images/blog/legacy-f2212d1c981af519.jpg"
 imageAlt: "What You Need to Know About Replacing Your Home’s Carpet with Luxury Vinyl Plank Flooring"

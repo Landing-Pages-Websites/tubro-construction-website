@@ -1,6 +1,6 @@
 ---
 slug: "remodeling-material-selection-checklist"
-title: "A Remodeling Material Selection Checklist That Prevents Guesswork"
+title: "A Remodel Material Selection Checklist"
 description: "Organize remodeling finishes with a shared selection record covering product details, samples, care requirements, compatibility, and order approvals."
 category: "Planning your remodel"
 image: "/images/projects/0325011_kitchen 02.jpg"

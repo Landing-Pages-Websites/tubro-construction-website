@@ -1,10 +1,10 @@
 ---
 id: "item_eqdpf2etghstyggh4amc8hzswc"
 slug: "how-to-choose-the-right-general-contractor-near-bellevue-and-tacoma"
-title: "How to Choose the Right General Contractor Near Bellevue and Tacoma"
+title: "Choosing a Contractor Near Bellevue and Tacoma"
 date: "2025-11-20T16:00:06"
 dateModified: "2026-03-20T07:19:08"
-description: "Learn how to choose the right general contractor near Bellevue and Tacoma. From credentials to communication, discover the steps to hiring a trusted remodeling partner."
+description: "How to choose a general contractor near Bellevue or Tacoma: credentials, communication, scope, and references that matter."
 category: "Remodeling journal"
 image: "/images/blog/legacy-9ea32d1939b5e2bf.jpg"
 imageAlt: "How to Choose the Right General Contractor Near Bellevue and Tacoma"

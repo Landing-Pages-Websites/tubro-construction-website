@@ -1,10 +1,10 @@
 ---
 id: "item_rwqzct4tx0nd1s20aq9dzaky7w"
 slug: "how-to-prepare-your-issaquah-home-for-a-full-interior-and-exterior-paint-job"
-title: "How to Prepare Your Issaquah Home for a Full Interior and Exterior Paint Job"
+title: "Prepare an Issaquah Home for Painting"
 date: "2026-02-02T16:00:04"
 dateModified: "2026-03-20T07:19:07"
-description: "Learn how to prepare your Issaquah home for a full interior and exterior paint job. From decluttering and repairs to power washing and protection, here’s what to do."
+description: "How to prepare an Issaquah home for interior and exterior painting, from repairs and washing to protecting floors and plants."
 category: "Remodeling journal"
 image: "/images/blog/legacy-6a80aa6ec00e3546.jpg"
 imageAlt: "How to Prepare Your Issaquah Home for a Full Interior and Exterior Paint Job"

@@ -81,14 +81,12 @@ export const CITY_PROFILES: Record<string, CityProfile> = {
   },
   renton: {
     intro:
-      "Kitchen remodeling in Renton starts with how you want your home to work. Tubro Construction helps homeowners plan thoughtful layout, cabinetry, countertop, and finish updates with clear communication, upfront pricing, and a free estimate.",
-    planningTitle: "Plan your Renton kitchen around daily life.",
+      "Home remodeling in Renton starts with how you want your home to work. Tubro Construction helps homeowners plan kitchens, bathrooms, additions, and painting with clear communication, upfront pricing, and a free estimate.",
+    planningTitle: "Plan your Renton remodel around daily life.",
     planningBody:
-      "Tell us how you use your kitchen now, what feels difficult, and what you want to change. Storage, circulation, surfaces, and the overall layout are useful starting points for a conversation about your Renton kitchen remodel.",
+      "Tell us which rooms you use now, what feels difficult, and what you want to change. Kitchens, bathrooms, additions, and finishes are useful starting points for a conversation about your Renton home remodel.",
     photos: ["shaker", "dark", "bright", "bath"],
-    heroHeading: "Kitchen Remodeling in Renton, WA",
     heroCtaLabel: "Request a Free Estimate",
-    servicesIntroVariant: "kitchen",
   },
   kent: {
     intro:

@@ -1,10 +1,10 @@
 ---
 id: "item_qrrz5qhbxa659g0km8y7swpcac"
 slug: "a-step-by-step-guide-to-bathroom-remodels-in-renton-what-to-expect"
-title: "A Step-by-Step Guide to Bathroom Remodels in Renton: What to Expect"
+title: "Bathroom Remodel Steps in Renton"
 date: "2025-11-30T16:00:02"
 dateModified: "2026-03-20T07:19:07"
-description: "Discover what to expect during a bathroom remodel in Renton. From planning and permits to tile work and finishing touches, here’s the complete step-by-step process."
+description: "What a Renton bathroom remodel involves, from planning and permits through tile, fixtures, and the finishing work."
 category: "Remodeling journal"
 image: "/images/blog/legacy-1a7038791067201b.jpg"
 imageAlt: "A Step-by-Step Guide to Bathroom Remodels in Renton: What to Expect"

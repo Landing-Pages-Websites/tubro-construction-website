@@ -1,6 +1,6 @@
 ---
 slug: "exterior-painting-weather-window"
-title: "Planning an Exterior Painting Weather Window in Western Washington"
+title: "Exterior Painting Weather in Western Washington"
 description: "Understand how product instructions, surface conditions, rain, dew, and overnight temperatures shape an exterior painting schedule in Western Washington."
 category: "Painting & exteriors"
 image: "/images/projects/0426023_exterior paint 01.jpg"

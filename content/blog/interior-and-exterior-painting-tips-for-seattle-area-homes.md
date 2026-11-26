@@ -1,10 +1,10 @@
 ---
 id: "item_xhjdkpry6p346spvws2398spfg"
 slug: "interior-and-exterior-painting-tips-for-seattle-area-homes"
-title: "Interior and Exterior Painting Tips for Western Washington Homes"
+title: "Painting Tips for Western Washington Homes"
 date: "2025-12-02T16:00:00"
 dateModified: "2026-03-20T07:19:07"
-description: "Discover the best interior and exterior painting tips for Western Washington homes. Learn how to choose colors, finishes, and products that stand up to the Western Washington climate."
+description: "Interior and exterior painting tips for Western Washington homes, including color, finish, and products that handle damp weather."
 category: "Remodeling journal"
 image: "/images/blog/legacy-bd05c2a7f9bbf1a0.jpg"
 imageAlt: "Interior and Exterior Painting Tips for Western Washington Homes"

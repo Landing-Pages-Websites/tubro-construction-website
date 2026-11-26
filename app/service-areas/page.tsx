@@ -15,8 +15,8 @@ import styles from "./service-areas.module.css";
 
 
 export const metadata: Metadata = siteMetadata(
-  "Commercial General Contractor in Western Washington | Tubro",
-  "Tubro Construction is a veteran-owned commercial general contractor serving King and Pierce Counties. Explore remodeling, then request a free estimate.",
+  "Home Remodeling Service Areas | Tubro Construction",
+  "Find home remodeling in the King and Pierce County cities Tubro Construction serves, including kitchens, bathrooms, additions, and painting. Request a free estimate.",
   "/service-areas",
 );
 

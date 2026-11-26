@@ -96,7 +96,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   const { embed } = await searchParams;
   return {
     ...designedPageMetadata(SLUG),
-    description: "Explore Tubro Construction remodeling projects and learn how we help Western Washington property owners plan commercial remodels and interior fit-outs.",
+    description: "See Tubro Construction kitchen, bathroom, and home remodeling projects in King and Pierce Counties, then request a free estimate for your home.",
     ...(embed === "realwork" ? { robots: { index: false, follow: false } } : {}),
   };
 }
