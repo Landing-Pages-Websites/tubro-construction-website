@@ -38,7 +38,7 @@ export async function generateMetadata({
       ? "Home remodeling Kent homeowners can plan with Tubro Construction: kitchens, bathrooms, upfront pricing and a personal project manager. Request a free estimate."
       : route.citySlug === "auburn"
         ? "Looking for home remodeling contractors in Auburn, WA? Tubro Construction plans kitchens, bathrooms, additions and more with free estimates."
-        : `Plan your home remodel in ${route.city}, Washington with Tubro Construction. Explore local kitchen, bathroom and renovation services and request a free estimate.`;
+        : `Plan your ${route.city} home remodel with Tubro Construction. Explore kitchen, bathroom, and renovation services, then request a free estimate.`;
   return siteMetadata(title, description, route.path);
 }
 

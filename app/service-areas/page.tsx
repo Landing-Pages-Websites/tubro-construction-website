@@ -16,7 +16,7 @@ import styles from "./service-areas.module.css";
 
 export const metadata: Metadata = siteMetadata(
   "Home Remodeling Service Areas | Tubro Construction",
-  "Find home remodeling in the King and Pierce County cities Tubro Construction serves, including kitchens, bathrooms, additions, and painting. Request a free estimate.",
+  "Home remodeling across King and Pierce Counties. Find your city, then plan a kitchen, bathroom, addition, or painting project and request a free estimate.",
   "/service-areas",
 );
 
