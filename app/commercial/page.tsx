@@ -3,6 +3,7 @@ import type { ReactElement } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Phone } from "lucide-react";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { PriorityCityLinks } from "@/components/shared/PriorityCityLinks";
 import { SiteFooter } from "@/components/shared/SiteFooter";
 import { BRAND } from "@/lib/content";
 import { siteMetadata } from "@/lib/seo";
@@ -111,6 +112,7 @@ export default function Page(): ReactElement {
           <p>Tell us what you&rsquo;re considering and we&rsquo;ll discuss the right next step.</p>
           <EstimateActions cta="commercial-footer" />
         </section>
+        <PriorityCityLinks />
       </main>
       <SiteFooter />
     </div>

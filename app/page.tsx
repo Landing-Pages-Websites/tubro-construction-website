@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import type { ReactElement } from "react";
 import "./home.css";
 import "./home-motion.css";
+import { PriorityCityLinks } from "@/components/shared/PriorityCityLinks";
 import { SiteFooter } from "@/components/shared/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { HeroA } from "@/components/variant-a/HeroA";
@@ -33,6 +34,7 @@ export default function HomePage(): ReactElement {
         <ProcessA />
         <GalleryA />
         <EstimateA />
+        <PriorityCityLinks />
       </main>
       <SiteFooter />
     </div>
