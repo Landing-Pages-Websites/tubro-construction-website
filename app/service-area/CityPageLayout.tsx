@@ -8,6 +8,7 @@ import { CityProcess } from "./CityProcess";
 import { CityServices } from "./CityServices";
 import { CityProjects } from "./CityProjects";
 import { CityQuestions } from "./CityQuestions";
+import { CityLocalGuides } from "./CityLocalGuides";
 import { CityEstimate } from "./CityEstimate";
 import { CityMoreAreas } from "./CityMoreAreas";
 import { CityMotion } from "./CityMotion";
@@ -126,6 +127,7 @@ export function CityPageLayout({ route }: { route: CityRoute }): ReactElement {
         <CityServices city={route.city} profile={profile} />
         <CityProjects profile={profile} />
         <CityQuestions city={route.city} profile={profile} />
+        <CityLocalGuides city={route.city} citySlug={route.citySlug} />
         <CityEstimate route={route} />
         <CityMoreAreas citySlug={route.citySlug} />
       </main>
